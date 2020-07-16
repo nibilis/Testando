@@ -5,6 +5,8 @@
   box-sizing: border-box;
 }
 
+
+
 /*SEÇÃO 1*/
 body {
   /*IMPORTANTE POIS MUDA A BORDA LATERAL DO SITE TD */
@@ -50,8 +52,9 @@ header h2{
   justify-content: flex-start;
   font-size: 70%;
 }
-.logo { /* Posição da imagem do Logo e do texto "Testando" */
-  padding-top: 2.2em;
+.logo { /* Posição da imagem do Logo e do imagem-texto "Testando" */
+  width: 150%;
+  padding-top: 2em;
   position: relative;
   margin-left: 6%;
 }
@@ -60,12 +63,8 @@ header h2{
   -webkit-filter: drop-shadow(12px 12px 8px rgba(0, 0, 0, 0.16));
   filter: drop-shadow(12px 12px 8px rgba(0, 0, 0, 0.16));
 }
-.img-icones { /* Imagem ícones agrupados */
-  width: 35%;
-  margin-right: -50%;
-  transform: translate(145%, -87%);
-  object-fit: cover;
-  object-position: center;
+.icones img { /* Imagem ícones agrupados */
+  object-position: right;
 }
 a{
   text-decoration: none;
@@ -88,12 +87,29 @@ a{
   object-position: right;
   float: right;
 }
-.botao1,
-.botao2 { /* Cadastre-se e Login*/
+.logo a { /* Cadastre-se e Login*/
+  background-color: #FFBC2B;
   position: relative;
-  left: 300%;
-  width: 5%;
-  top: -20%;
+  margin-left: 30%;
+  text-decoration: none;
+  height: 30%;
+  border-radius: 80px 80px;
+  color: whitesmoke;
+  font-size: 1.6em;
+  font-family: 'Muli';
+  border-style: none;
+  width: 50%;
+  padding-bottom: 10%;
+  padding-top: 3%;
+  padding-left: 3%;
+  padding-right: 3%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-top: -60%;
+  object-position: right;
+  float: right;
+  margin-right: -150%;
 }
 
 /*SEÇÃO 2*/
@@ -187,7 +203,7 @@ a{
 .conjuntoamarelo{
   position: relative;
   margin-top: 3%;
-  margin-left: 50%;
+  margin-left: 20%;
 }
 .texto-secao2amarelo{
   margin-top: -53%;
@@ -300,7 +316,7 @@ mark {background-color: #F8E197;}
 }
 
 .bolinhas-direita1{
-    margin-left: 69.5%;
+    float: right;
     margin-top: -25%;
 }
 
