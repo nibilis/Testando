@@ -1,0 +1,21 @@
+/* RESET DA PÁGINA */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  background-size: auto 100vh;
+}
+
+#h1
+{
+  font-family: 'Roboto Slab', 'Sans Serif';
+  font-size: 80px;
+}
+
+#logo {
+  width: 10%;
+  justify-content: center;
+}
