@@ -63,7 +63,7 @@ a {
     margin-left: 140%;
     position: relative;
 }
-.img-nome-logo */{ /* "Testando" *//*
+.img-nome-logo {*/ /* "Testando" *//*
   position: absolute;
   margin-right: 3%;
   margin-top: 3%;
