@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela de Login</title>
-    <link rel="stylesheet" href="csstestando/login.css">
+    <link rel="stylesheet" href="css-login/login.css">
     <!-- Materialize -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
@@ -14,26 +14,25 @@
   </head>
 
   <body>
-
     <div class="row">
-      <div class="col s s12">
+      <div class="col s s12 center-align">
         <img class= "responsive-img" id = "logo" src ="images-login/LogoTestandoNome.png">
       </div>
 
-      <div class=" col s s2">
-          <img class= "responsive-img" id = "cadeado"src ="images-login/lock.png">
+      <div class=" col s s3 center-align">
+          <img class= "responsive-img" id = "user"src ="images-login/user_roxo_borda_preta.png">
       </div>
 
-      <div class="input-field col s s10 center-align">
+      <div class="input-field col s s10 center-align" id="prontuario">
           <input placeholder="Prontuário" id="Prontuário" type="text" class="validate">
       </div>
 
 
-      <div class="col s s2 center-align">
-          <img class= "responsive-img" id = "user"src ="images-login/user_roxo_borda_preta.png">
+      <div class="col s s3 center-align">
+          <img class= "responsive-img" id = "cadeado"src ="images-login/lock.png">
       </div>
 
-      <div class="input-field col s s10 center-align">
+      <div class="input-field col s s10 center-align" id="senha">
           <input placeholder="Senha" id="Senha" type="text" class="validate">
       </div>
 
@@ -43,7 +42,7 @@
           <p>
             <label>
               <input type="checkbox"  />
-              <span>Lembrar de mim?</span>
+              <span>Lembrar de mim</span>
             </label>
           </p>
         </form>
@@ -51,21 +50,22 @@
       </div>
 
       <div class="col s s12 center-align" id = "login">
-          <a href="https://www.youtube.com/watch?v=m2B6ayYla3g" class="waves-effect waves-light btn yellow darken-2 hoverable center-align">Login</a>
+          <a href="https://www.youtube.com/watch?v=m2B6ayYla3g" class="waves-effect waves-light btn yellow darken-2 hoverable" id = "btnLogin">Login</a>
       </div>
 
       <div class="col s s12 center-align" id= "esqsenha">
-          <a href="https://www.youtube.com/watch?v=m2B6ayYla3g" class="">Esqueceu sua senha?</a>
+          <a href="https://www.youtube.com/watch?v=m2B6ayYla3g" class="" id = "btnEsqsenha">Esqueceu sua senha?</a>
       </div>
 
-      <div class="col s s12 deep-purple lighten-2 ">
-        <img class= "responsive-img" id = "boldire"src ="images-login/bolinhadirecel.png">
-          <h1 class = "flow-text center-align" id = "texto"> Não tem um login ainda? </h1>
-            <a href="https://www.youtube.com/watch?v=m2B6ayYla3g" class="waves-effect waves-light btn yellow darken-2 hoverable" id = "cadastrese">Cadastre&#8209;se</a>
-        <img class= "responsive-img" id = "bolesq"src ="images-login/bolinhaesqcel.png">
-      </div>
+      <div class="col s s12 deep-purple lighten-2 center-align hide-on-med-and-up" id = "divRoxa">
+        <img class= "responsive-img" id = "bolesq" src ="images-login/bolinhadirecel.png">
+          <h1 class = "flow-text center-align" id = "texto">Não tem um login ainda?</h1>
+            <a href="https://www.youtube.com/watch?v=m2B6ayYla3g" class="waves-effect waves-light btn yellow darken-2 hoverable" id = "btnCadastrese">Cadastre-se</a>
+        <img class= "responsive-img" id = "boldire" src ="images-login/bolinhaesqcel.png">
 
     </div>
+
+
 
     <!-- JQuery CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
