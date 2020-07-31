@@ -5,9 +5,99 @@
   box-sizing: border-box;
 }
 
+/* Definições gerais (melhor não mexer)*/
 body {
   height: 100vh;
   background-size: auto 100vh;
+}
+
+a {
+  height: 50%;
+  justify-content: center;
+  align-content: center;
+}
+
+/*Começo da primeira parte*/
+#logo {
+  margin-top: 5%;
+  width: 45%;
+}
+
+#cadeado {
+  width: 40%;
+  justify-content: center;
+  margin-top: 33%;
+  float:right;
+}
+
+#prontuario{
+  width: 60vw;
+}
+
+#user {
+  width: 40%;
+  justify-content: center;
+  margin-top: 33%;
+  float:right;
+}
+
+#senha{
+  width: 60vw;
+}
+
+#login{
+  margin-top: 5%;
+}
+
+#btnLogin {
+  border-radius: 20px;
+  font-family: Muli;
+  text-transform: none;
+  font-size: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+#esqsenha{
+  margin-top: 3%;
+  margin-bottom: 10%;
+}
+
+#btnEsqsenha{
+  margin-top: 3%;
+  margin-bottom: 10%;
+  color:#8D8989;
+}
+
+@media (min-width: 500px){
+
+  #cadeado {
+    width: 27%;
+    justify-content: center;
+    margin-top: 20%;
+    float:right;
+  }
+
+  #prontuario{
+    width: 60vw;
+  }
+
+  #user {
+    width: 27%;
+    justify-content: center;
+    margin-top: 20%;
+    float:right;
+  }
+
+  #senha{
+    width: 60vw;
+  }
+
+}
+
+/*Começo da segunda parte*/
+#divRoxa {
+  width: 100vw;
 }
 
 #texto{
@@ -16,53 +106,89 @@ body {
   font-family: Muli;
   justify-content: center;
   align-content: center;
-
 }
 
-#cadastrese{
-  margin-left: 32%;
-  background-color: black;
-}
-
-
-#logo {
-  width: 50%;
-}
-
-#cadeado {
-  width: 100%;
-  justify-content: center;
-  margin-top: 40%;
-}
-
-#user {
-  width: 100%;
-  justify-content: center;
-  margin-top: 40%;
-}
-
-#bolesq {
-  width: 30%;
-
+#btnCadastrese{
+  border-radius: 20px;
+  font-family: Muli;
+  text-transform: none;
+  font-size: 20px;
 }
 
 #boldire {
-  width: 30%;
+  width: 20%;
+  margin-left: 81.7%;
 }
 
-#checkbox{
+#bolesq {
+  width: 20%;
+  margin-left: -86%;
 }
 
-#login{
-  margin-top: 5%;
-  border-radius: 80px 80px;
-  border-left: 2px solid;
-  border-right: 2px solid;
-  border-top: 2px solid;
-  border-bottom: 2px solid;
+@media (max-width: 450px){
+  #boldire {
+    width: 20%;
+    margin-left: 82.3%;
+  }
 }
 
-#esqsenha{
-  margin-top: 3%;
-  margin-bottom: 10%;
+/*Computador*/
+
+@media (min-width: 990px){
+  #logo {
+    margin-top: 5%;
+    width: 20%;
+    float: right;
+    margin-right: 22%;
+  }
+
+  #cadeado {
+    width: 20%;
+    justify-content: center;
+    margin-top: 0%;
+    float:right;
+  }
+
+  #prontuario{
+    width: 60vw;
+  }
+
+  #user {
+    width:20%;
+    justify-content: center;
+    margin-top: 0%;
+    float:right;
+  }
+
+  #senha{
+    width: 60vw;
+  }
+
+  #login{
+    margin-top: 5%;
+  }
+
+  #btnLogin {
+    border-radius: 20px;
+    font-family: Muli;
+    text-transform: none;
+    font-size: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  #esqsenha{
+    margin-top: 3%;
+    margin-bottom: 10%;
+  }
+
+  #btnEsqsenha{
+    margin-top: 3%;
+    margin-bottom: 10%;
+    color:#8D8989;
+  }
+
+  #checkbox{
+
+  }
 }
