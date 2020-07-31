@@ -4,6 +4,23 @@
   padding: 0;
   box-sizing: border-box;
 }
+header h2{
+  font-size: 3em;
+
+}
+
+header h1, h2{
+  font-family: 'Muli';
+  color: whitesmoke;
+  position: relative;
+  line-height: 100%;
+  top:10%;
+}
+
+.img-logo { /* Imagem folhas saindo do computador*/
+  -webkit-filter: drop-shadow(12px 12px 8px rgba(0, 0, 0, 0.16));
+  filter: drop-shadow(12px 12px 8px rgba(0, 0, 0, 0.16));
+}
 
 a {
   text-decoration: none;
@@ -13,4 +30,8 @@ a {
   font-family: 'Muli';
   border-style: none;
   text-align: center;
+}
+.rectangle h2{
+  font-size: 80%;
+  color: #49779D;
 }
