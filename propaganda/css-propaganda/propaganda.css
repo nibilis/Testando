@@ -5,8 +5,19 @@
   box-sizing: border-box;
 }
 
+body {
+  /*IMPORTANTE POIS MUDA A BORDA LATERAL DO SITE TD */
+  /*#9684D3, #9785D3, #E3C7E3, #F8E197, #F8E197, #E3C7E3, #9785D3*/
+  background: linear-gradient(to bottom, #9684D3, #9785D3, #9785D3, #E3C7E3, #E3C7E3, #E3C7E3, #F8E197, #F8E197, #F8E197, #F8E197, #F8E197, #F8E197, #F8E197, #F8E197, #F8E197, #E3C7E3, #9785D3,  #9785D3, #9684D3);
+  font-family: Arial;
+  height: 1000vh;
+  width: auto; /* 100% da largura da tela do usuário (mas não ta indo kk) */
+  font-size: 30px;
+}
+
 header h2{
   font-size: 3em;
+  margin-bottom: 10%;
 }
 
 header h1, h2{
@@ -30,8 +41,128 @@ a {
   font-family: 'Muli';
   border-style: none;
   text-align: center;
+  margin-right: 3%;
 }
-.rectangle h2{
-  font-size: 80%;
+
+
+.rectangle h2 {
+  font-family: 'Muli';
+  border-left: 6px solid #7569B8;
+  border-right: 6px solid #7569B8;
+  border-top: 6px solid #7569B8;
+  border-bottom: 6px solid #7569B8;
+  border-radius: 80px;
+  background-color: whitesmoke;
   color: #49779D;
+  text-align: center;
+  line-height: 1.8em;
+  font-size: 1.5em;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-bottom: 2em;
+}
+
+.conjuntoroxo{
+  position: absolute;
+}
+
+.roxo {/* Retângulozinho roxo que antecede a frase */
+  float: right;
+  position: relative;
+  margin-top: 13%;
+  left: -2%;
+  width: 4%; /*não consigo colocar height, se conseguirem agradeço*/
+}
+.texto-secao2roxo h4 {
+  font-family: 'Muli';
+  float: right;
+  position: relative;
+  width: 30%;
+  margin-right: 10%;
+  font-size: 1.4em;
+  color: #707070;
+  margin-top: 13%;
+}
+
+.texto-secao2roxo h5 {
+  color: #707070;
+  font-family: 'Muli';
+  left: 23%;
+  line-height: 1.3em;
+  font-size: 0.8em;
+  position: relative;
+  padding-top: 45%;
+}
+
+.comeceja{
+  left: 20%;
+  top: 300%;
+}
+
+.comeceja a {
+  text-decoration: none;
+  border-radius: 80px 80px;
+  color: whitesmoke;
+  font-family: 'Muli';
+  border-style: none;
+  position: relative;
+  left: 45%;
+  margin-top: 4%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.conjuntoamarelo {
+  width: 50%;
+  position: relative;
+  left: 50%;
+  margin-top: 5%;
+}
+
+.amarelo{
+  float: left;
+  width: 4.7%; /*não consigo colocar height, se conseguirem agradeço*/
+  margin-left: 3%;
+}
+/*============================================
+
+ Arrumar h4 e h5 (não estão ficando no lugar
+ por causa da responsividade do h4, ou do
+ ajuste de tela)
+
+==============================================*/
+
+.texto-secao2amarelo h4 {
+  font-family: 'Muli';
+  font-size: 1.4em;
+  margin-left: 3%;
+  color: #707070;
+  margin-left: 10%;
+  width: 35%;
+}
+
+.texto-secao2amarelo h5 {
+  color: #707070;
+  font-family: 'Muli';
+  line-height: 1.5em;
+  font-size: 0.8em;
+  width: 70%;
+  position: relative;
+  margin-top: 4%;
+  left: 14%;
+  text-align: justify;
+}
+
+.comeceja2 a {
+  text-decoration: none;
+  border-radius: 80px 80px;
+  color: whitesmoke;
+  font-family: 'Muli';
+  border-style: none;
+  position: relative;
+  left: 40%;
+  margin-top: 4%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  background-color: #9684D3;
 }
