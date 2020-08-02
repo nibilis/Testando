@@ -16,8 +16,7 @@ body {
 }
 
 header h2{
-  font-size: 3em;
-  margin-bottom: 10%;
+  margin-bottom: 15%;
 }
 
 header h1, h2{
@@ -44,59 +43,52 @@ a {
   margin-right: 3%;
 }
 
-
 .rectangle h2 {
   font-family: 'Muli';
-  border-left: 6px solid #7569B8;
-  border-right: 6px solid #7569B8;
-  border-top: 6px solid #7569B8;
-  border-bottom: 6px solid #7569B8;
-  border-radius: 80px;
+  border: 3px solid #7569B8;
+  border-radius: 20px;
   background-color: whitesmoke;
   color: #49779D;
   text-align: center;
-  line-height: 1.8em;
-  font-size: 1.5em;
+  line-height: 1.5em;
+  font-size: 1.1em;
   margin-left: 1em;
   margin-right: 1em;
-  margin-bottom: 2em;
+  margin-bottom: 3em;
 }
 
 .conjuntoroxo{
-  position: absolute;
+  position: relative;
 }
 
 .roxo {/* Retângulozinho roxo que antecede a frase */
+  width: 2%;
+  margin-top: 14%;
+  margin-left: 2%;
   float: right;
-  position: relative;
-  margin-top: 13%;
-  left: -2%;
-  width: 4%; /*não consigo colocar height, se conseguirem agradeço*/
 }
 .texto-secao2roxo h4 {
   font-family: 'Muli';
   float: right;
   position: relative;
-  width: 30%;
-  margin-right: 10%;
-  font-size: 1.4em;
+  margin-left: 2%;
+  margin-top: 12%;
+  width: 49%;
+  font-size: 0.8em;
   color: #707070;
-  margin-top: 13%;
 }
 
 .texto-secao2roxo h5 {
   color: #707070;
   font-family: 'Muli';
-  left: 23%;
   line-height: 1.3em;
-  font-size: 0.8em;
-  position: relative;
-  padding-top: 45%;
+  font-size: 0.7em;
+  margin-left: 20%;
+  margin-top: -13%;
 }
 
 .comeceja{
   left: 20%;
-  top: 300%;
 }
 
 .comeceja a {
@@ -105,52 +97,43 @@ a {
   color: whitesmoke;
   font-family: 'Muli';
   border-style: none;
+  margin-left: 35%;
   position: relative;
-  left: 45%;
-  margin-top: 4%;
   padding-top: 2%;
   padding-bottom: 2%;
 }
 
 .conjuntoamarelo {
-  width: 50%;
   position: relative;
-  left: 50%;
+  left: 55%;
   margin-top: 5%;
 }
 
 .amarelo{
   float: left;
-  width: 4.7%; /*não consigo colocar height, se conseguirem agradeço*/
-  margin-left: 3%;
+  width: 2%; /*não consigo colocar height, se conseguirem agradeço (nicole: só funciona no html)*/
+  margin-left: 2%;
+  margin-top: 1.5%;
 }
-/*============================================
-
- Arrumar h4 e h5 (não estão ficando no lugar
- por causa da responsividade do h4, ou do
- ajuste de tela)
-
-==============================================*/
 
 .texto-secao2amarelo h4 {
   font-family: 'Muli';
-  font-size: 1.4em;
-  margin-left: 3%;
+  font-size: 0.8em;
+  margin-left: 5%;
+  margin-top: 5%;
   color: #707070;
-  margin-left: 10%;
-  width: 35%;
+  width: 50%;
 }
 
 .texto-secao2amarelo h5 {
   color: #707070;
   font-family: 'Muli';
-  line-height: 1.5em;
-  font-size: 0.8em;
-  width: 70%;
+  line-height: 1.3em;
+  font-size: 0.7em;
+  width: 90%;
   position: relative;
-  margin-top: 4%;
-  left: 14%;
-  text-align: justify;
+  margin-top: 10%;
+  margin-left: 5%;
 }
 
 .comeceja2 a {
@@ -159,10 +142,65 @@ a {
   color: whitesmoke;
   font-family: 'Muli';
   border-style: none;
-  position: relative;
-  left: 40%;
+  margin-left: 35%;
   margin-top: 4%;
+  margin-bottom: 10%;
   padding-top: 2%;
   padding-bottom: 2%;
   background-color: #9684D3;
+}
+
+/* SECAO 3 */
+.branco1 img,
+.branco2 img,
+.branco3 img{
+  width: 30%;
+  /* superior | direita | inferior | esquerda */
+  margin: -10% 0% 0% 7%;
+}
+.white{
+  /* superior | direita | inferior | esquerda */
+  margin: 20% 0% 0% 10%;
+}
+.white h1{
+  text-align: center;
+  font-size: 1em;
+}
+.white p{
+  text-align: center;
+  color: #707070;
+  font-family: 'Muli';
+}
+
+ /*SEÇÃO 4 */
+ .quadradoamarelotutorial{
+ width: 50vw;
+ border: 5px solid whitesmoke;
+ margin-left: 15%;
+}
+.quadradoroxotutorial{
+  width: 50vw;
+  border: 5px solid whitesmoke;
+  /* superior | direita | inferior | esquerda */
+  margin: -25% 0% 0% 40%;
+}
+.tutorial h1{
+  color: whitesmoke;
+  font-family: 'Muli';
+  font-size: 0.6em;
+  margin-left: 4%;
+  position: relative;
+}
+.tutorial img{
+  width: 25%;
+}
+
+/* SEÇÃO 5*/
+.rodape h1{
+  color: whitesmoke;
+  font-family: 'Muli';
+  font-size: 2em;
+}
+.rodape p{
+  font-size: 1em;
 }
