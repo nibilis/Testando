@@ -10,7 +10,7 @@ body {
   /*#9684D3, #9785D3, #E3C7E3, #F8E197, #F8E197, #E3C7E3, #9785D3*/
   background: linear-gradient(to bottom, #9684D3, #9785D3, #9785D3, #E3C7E3, #E3C7E3, #E3C7E3, #F8E197, #F8E197, #F8E197, #F8E197, #F8E197, #F8E197, #F8E197, #F8E197, #F8E197, #E3C7E3, #9785D3,  #9785D3, #9684D3);
   font-family: Arial;
-  height: 1000vh;
+  height: 500vh;
   width: auto; /* 100% da largura da tela do usuário (mas não ta indo kk) */
   font-size: 30px;
 }
@@ -62,7 +62,7 @@ a {
 }
 
 .roxo {/* Retângulozinho roxo que antecede a frase */
-  width: 2%;
+  width: 2.5%;
   margin-top: 14%;
   margin-left: 2%;
   float: right;
@@ -72,9 +72,10 @@ a {
   float: right;
   position: relative;
   margin-left: 2%;
-  margin-top: 12%;
-  width: 49%;
-  font-size: 0.8em;
+  margin-right: 10%;
+  margin-top: 14%;
+  width: 35%;
+  font-size: 1.1em;
   color: #707070;
 }
 
@@ -83,7 +84,7 @@ a {
   font-family: 'Muli';
   line-height: 1.3em;
   font-size: 0.7em;
-  margin-left: 20%;
+  margin-left: 23%;
   margin-top: -13%;
 }
 
@@ -101,6 +102,7 @@ a {
   position: relative;
   padding-top: 2%;
   padding-bottom: 2%;
+  margin-top: 4%;
 }
 
 .conjuntoamarelo {
@@ -111,18 +113,17 @@ a {
 
 .amarelo{
   float: left;
-  width: 2%; /*não consigo colocar height, se conseguirem agradeço (nicole: só funciona no html)*/
+  width: 2.5%; /*não consigo colocar height, se conseguirem agradeço (nicole: só funciona no html)*/
   margin-left: 2%;
-  margin-top: 1.5%;
 }
 
 .texto-secao2amarelo h4 {
   font-family: 'Muli';
-  font-size: 0.8em;
-  margin-left: 5%;
-  margin-top: 5%;
+  font-size: 1.1em;
+  margin-left: 7%;
+  margin-top: 7%;
   color: #707070;
-  width: 50%;
+  width: 40%;
 }
 
 .texto-secao2amarelo h5 {
@@ -130,10 +131,10 @@ a {
   font-family: 'Muli';
   line-height: 1.3em;
   font-size: 0.7em;
-  width: 90%;
+  width: 75%;
   position: relative;
-  margin-top: 10%;
-  margin-left: 5%;
+  margin-top: 9.5%;
+  margin-left: 10%;
 }
 
 .comeceja2 a {
@@ -172,17 +173,26 @@ a {
   font-family: 'Muli';
 }
 
+.parteamarela a{
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
  /*SEÇÃO 4 */
  .quadradoamarelotutorial{
+-webkit-filter: drop-shadow(12px 8px 12px rgba(0, 0, 0, 0.5));
  width: 50vw;
  border: 5px solid whitesmoke;
  margin-left: 15%;
+ position: absolute;
 }
 .quadradoroxotutorial{
+  -webkit-filter: drop-shadow(12px 12px 8px rgba(0, 0, 0, 0.5));
   width: 50vw;
   border: 5px solid whitesmoke;
   /* superior | direita | inferior | esquerda */
-  margin: -25% 0% 0% 40%;
+  margin: 10% 0% 0% 40%;
+  position: absolute;
 }
 .tutorial h1{
   color: whitesmoke;
@@ -195,12 +205,41 @@ a {
   width: 25%;
 }
 
+.video-container{
+  -webkit-filter: drop-shadow(8px 12px 12px rgba(0, 0, 0, 1));
+  width: 60vw;
+  margin-left: 20%;
+  margin-top: 25%;
+  position: absolute;
+}
+
 /* SEÇÃO 5*/
+
+.rodape {
+  float: left;
+  width: 100%;
+  height: 0%;
+  border-top: whitesmoke solid;
+  font-family: 'Muli';
+  color: whitesmoke;
+  margin-top: 2%;
+  position: relative;
+}
+
+.rodape img {
+  margin-top: 20%;
+  margin-left: 2%;
+  width: 2%;
+}
+
 .rodape h1{
   color: whitesmoke;
   font-family: 'Muli';
-  font-size: 2em;
+  margin-top: -95%;
+  margin-left: 10%;
 }
 .rodape p{
-  font-size: 1em;
+  margin-top: 5%;
+  font-size: 50%;
+  text-align: left;
 }
