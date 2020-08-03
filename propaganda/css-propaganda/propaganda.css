@@ -8,11 +8,26 @@
 body {
   /*IMPORTANTE POIS MUDA A BORDA LATERAL DO SITE TD */
   /*#9684D3, #9785D3, #E3C7E3, #F8E197, #F8E197, #E3C7E3, #9785D3*/
-  background: linear-gradient(to bottom, #9684D3, #9785D3, #9785D3, #E3C7E3, #E3C7E3, #E3C7E3, #F8E197, #F8E197, #F8E197, #F8E197, #F8E197, #F8E197, #F8E197, #F8E197, #F8E197, #E3C7E3, #9785D3,  #9785D3, #9684D3);
+  background: linear-gradient(to bottom, #9684D3, #9785D3, #9785D3, #9785D3, #E3C7E3, #E3C7E3, #F8E197, #F8E197, #F8E197, #F8E197, #F8E197, #F8E197, #F8E197, #F8E197, #F8E197, #E3C7E3, #E3C7E3, #9684D3, #9684D3);
   font-family: Arial;
-  height: 500vh;
+  height: 340vh;
   width: auto; /* 100% da largura da tela do usuário (mas não ta indo kk) */
   font-size: 30px;
+}
+
+@media(min-width: 990px){
+  .img-logo { /* Imagem folhas saindo do computador*/
+    width: 70%;
+  }
+  .img-nome-logo{
+    width: 20%;
+  }
+  .a{
+    width: 20%;
+  }
+  header img{
+    margin-top: -20%;
+  }
 }
 
 header h2{
@@ -30,6 +45,7 @@ header h1, h2{
 .img-logo { /* Imagem folhas saindo do computador*/
   -webkit-filter: drop-shadow(12px 12px 8px rgba(0, 0, 0, 0.16));
   filter: drop-shadow(12px 12px 8px rgba(0, 0, 0, 0.16));
+  width: 25%;
 }
 
 a {
@@ -74,8 +90,8 @@ a {
   margin-left: 2%;
   margin-right: 10%;
   margin-top: 14%;
-  width: 35%;
-  font-size: 1.1em;
+  width: 36%;
+  font-size: 0.8em;
   color: #707070;
 }
 
@@ -84,7 +100,7 @@ a {
   font-family: 'Muli';
   line-height: 1.3em;
   font-size: 0.7em;
-  margin-left: 23%;
+  margin-left: 20%;
   margin-top: -13%;
 }
 
@@ -119,11 +135,11 @@ a {
 
 .texto-secao2amarelo h4 {
   font-family: 'Muli';
-  font-size: 1.1em;
+  font-size: 0.8em;
   margin-left: 7%;
   margin-top: 7%;
   color: #707070;
-  width: 40%;
+  width: 41%;
 }
 
 .texto-secao2amarelo h5 {
@@ -131,7 +147,7 @@ a {
   font-family: 'Muli';
   line-height: 1.3em;
   font-size: 0.7em;
-  width: 75%;
+  width: 88%;
   position: relative;
   margin-top: 9.5%;
   margin-left: 10%;
@@ -180,14 +196,14 @@ a {
 
  /*SEÇÃO 4 */
  .quadradoamarelotutorial{
--webkit-filter: drop-shadow(12px 8px 12px rgba(0, 0, 0, 0.5));
+-webkit-filter: drop-shadow(-10px -10px 8px rgba(0, 0, 0, 0.2));
  width: 50vw;
  border: 5px solid whitesmoke;
  margin-left: 15%;
  position: absolute;
 }
 .quadradoroxotutorial{
-  -webkit-filter: drop-shadow(12px 12px 8px rgba(0, 0, 0, 0.5));
+  -webkit-filter: drop-shadow(12px 12px 8px rgba(0, 0, 0, 0.3));
   width: 50vw;
   border: 5px solid whitesmoke;
   /* superior | direita | inferior | esquerda */
@@ -206,40 +222,39 @@ a {
 }
 
 .video-container{
-  -webkit-filter: drop-shadow(8px 12px 12px rgba(0, 0, 0, 1));
+  -webkit-filter: drop-shadow(8px 12px 8px rgba(0, 0, 0, 0.3));
   width: 60vw;
-  margin-left: 20%;
-  margin-top: 25%;
+  left: 20%;
+  margin-top: 35%;
   position: absolute;
 }
 
-/* SEÇÃO 5*/
-
 .rodape {
-  float: left;
   width: 100%;
-  height: 0%;
+  height: 100%;
   border-top: whitesmoke solid;
   font-family: 'Muli';
   color: whitesmoke;
-  margin-top: 2%;
+  margin-top: 30%;
+}
+.rodape h1{
+  margin-top: -115%;
   position: relative;
+  margin-left: 15%;
+  margin-bottom: 2%;
+
+}
+
+.rodape p {
+  position: relative;
+  margin-top: 20%;
+  margin-left: 10%;
+  line-height: 14px;
+  width: 94%;
 }
 
 .rodape img {
-  margin-top: 20%;
-  margin-left: 2%;
-  width: 2%;
-}
+  margin-top: 10%;
 
-.rodape h1{
-  color: whitesmoke;
-  font-family: 'Muli';
-  margin-top: -95%;
-  margin-left: 10%;
-}
-.rodape p{
-  margin-top: 5%;
-  font-size: 50%;
-  text-align: left;
+  width: 2.5%;
 }
