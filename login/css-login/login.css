@@ -135,6 +135,15 @@ a {
 /*Computador*/
 
 @media (min-width: 990px){
+
+#degrade{
+  height:100%;
+  width: 40%;
+  float: left;
+  background: #8579C3;
+}
+
+
   #logo {
     margin-top: 5%;
     width: 20%;
