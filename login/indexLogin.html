@@ -15,34 +15,59 @@
 
   <body>
 
-    <div class="hide-in-medium-and-down" id="degrade"> </div>
+    <div class="hide-on-med-and-down center align" id="degrade">
+      <h1>Não tem um login ainda?</h1>
+      <div class="center-align" id = "cadastresepc">
+          <a href="https://www.youtube.com/watch?v=m2B6ayYla3g" class="waves-effect waves-light btn white hoverable" id = "btnCadastresepc">Cadastre-se</a>
+      </div>
+    </div>
 
     <div class="row">
 
-      <div class="col  s12 l2 center-align">
+      <div class="col  s12 center-align hide-on-large-only">
         <img class= "responsive-img" id = "logo" src ="images-login/LogoTestandoNome.png">
       </div>
 
-      <div class=" col  s3 l2 center-align">
+      <div class="col  l7 center-align hide-on-med-and-down">
+        <img class= "responsive-img" id = "logopc" src ="images-login/LogoTestandoNome.png">
+      </div>
+
+      <div class=" col  s3 center-align hide-on-large-only">
           <img class= "responsive-img" id = "user"src ="images-login/user_roxo_borda_preta.png">
       </div>
 
+      <div class=" col  l2 center-align hide-on-med-and-down">
+          <img class= "responsive-img" id = "userpc"src ="images-login/user_roxo_borda_preta.png">
+      </div>
 
-      <div class="input-field col  s10 l4 center-align" id="prontuario">
+      <div class="input-field col  s10 center-align hide-on-large-only" id="prontuario">
+          <input placeholder="Prontuário" id="Prontuário" type="text" class="validate">
+      </div>
+
+      <div class="input-field col l4 center-align hide-on-med-and-down" >
           <input placeholder="Prontuário" id="Prontuário" type="text" class="validate">
       </div>
 
 
-      <div class="col  s3 l2 center-align">
+      <div class="col  s3  center-align hide-on-large-only">
           <img class= "responsive-img" id = "cadeado"src ="images-login/lock.png">
       </div>
 
-      <div class="input-field col  s10 l4 center-align" id="senha">
+      <div class="col  l2 center-align hide-on-med-and-down">
+          <img class= "responsive-img" id = "cadeadopc"src ="images-login/lock.png">
+      </div>
+
+
+      <div class="input-field col  s10 center-align hide-on-large-only" id="senha">
+          <input placeholder="Senha" id="Senha" type="text" class="validate">
+      </div>
+
+      <div class="input-field col  l4 center-align hide-on-med-and-down">
           <input placeholder="Senha" id="Senha" type="text" class="validate">
       </div>
 
 
-      <div class="col  s12 l6 center-align" id="checkbox">
+      <div class="col s12 center-align hide-on-large-only" id="checkbox">
 
         <form action="#">
           <p>
@@ -55,13 +80,35 @@
 
       </div>
 
-      <div class="col  s12 l6 center-align" id = "login">
+      <div class="col l6 center-align hide-on-med-and-down" id="checkboxpc">
+
+        <form action="#">
+          <p>
+            <label>
+              <input type="checkbox"  />
+              <span>Lembrar de mim</span>
+            </label>
+          </p>
+        </form>
+
+      </div>
+
+      <div class="col  s12 center-align hide-on-large-only" id = "login">
           <a href="https://www.youtube.com/watch?v=m2B6ayYla3g" class="waves-effect waves-light btn yellow darken-2 hoverable" id = "btnLogin">Login</a>
       </div>
 
-      <div class="col  s12 l6 center-align" id= "esqsenha">
+      <div class="col l6 center-align hide-on-med-and-down" id = "loginpc">
+          <a href="https://www.youtube.com/watch?v=m2B6ayYla3g" class="waves-effect waves-light btn yellow darken-2 hoverable" id = "btnLoginpc">Login</a>
+      </div>
+
+      <div class="col  s12 center-align hide-on-large-only" id= "esqsenha">
           <a href="https://www.youtube.com/watch?v=m2B6ayYla3g" class="" id = "btnEsqsenha">Esqueceu sua senha?</a>
       </div>
+
+      <div class="col l6 center-align hide-on-med-and-down" id= "esqsenhapc">
+          <a href="https://www.youtube.com/watch?v=m2B6ayYla3g" class="" id = "btnEsqsenha">Esqueceu sua senha?</a>
+      </div>
+
 
       <div class="col  s12 deep-purple lighten-2 center-align hide-on-med-and-up" id = "divRoxa">
         <img class= "responsive-img" id = "bolesq" src ="images-login/bolinhadirecel.png">

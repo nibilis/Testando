@@ -18,15 +18,47 @@ a {
 }
 
 /*Começo da primeira parte*/
+#degrade h1{
+  font-family: Muli;
+  color: white;
+  font-size: 31px;
+  margin-top:80%;
+}
+#btnCadastresepc {
+  border-radius: 20px;
+  border-color: #FFBC2B;
+  border-style: solid;
+  font-family: Muli;
+  color: #FFBC2B;
+  text-transform: none;
+  font-size: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
 #logo {
   margin-top: 5%;
   width: 45%;
+}
+
+#logopc {
+  margin-top: 15%;
+  margin-left: 10%;
+  margin-bottom: 10%;
+  width: 35%;
 }
 
 #cadeado {
   width: 40%;
   justify-content: center;
   margin-top: 33%;
+  float:right;
+}
+
+#cadeadopc {
+  width: 25%;
+  justify-content: center;
+  margin-top: 15%;
   float:right;
 }
 
@@ -41,12 +73,29 @@ a {
   float:right;
 }
 
+#userpc {
+  width: 25%;
+  justify-content: center;
+  margin-top: 15%;
+  float:right;
+}
+
 #senha{
   width: 60vw;
 }
 
 #login{
   margin-top: 5%;
+}
+
+#loginpc{
+  margin-top: 4%;
+  margin-left: 7%;
+}
+
+#checkboxpc{
+  margin-top: 0%;
+  margin-left: 7%;
 }
 
 #btnLogin {
@@ -58,9 +107,25 @@ a {
   padding-right: 25px;
 }
 
+#btnLoginpc {
+  border-radius: 25px;
+  font-family: Muli;
+  text-transform: none;
+  font-size: 25px;
+  padding-left: 30px;
+  padding-right: 30px;
+
+}
+
 #esqsenha{
   margin-top: 3%;
   margin-bottom: 10%;
+}
+
+#esqsenhapc{
+  margin-top: 2%;
+  margin-bottom: 10%;
+  margin-left: 7%;
 }
 
 #btnEsqsenha{
