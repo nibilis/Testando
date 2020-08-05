@@ -1,0 +1,14 @@
+/* RESET DA PÁGINA */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#dashboard{
+  background-color: #8579C3;
+}
+
+#logo{
+  width: 500%;
+}
