@@ -5,10 +5,51 @@
   box-sizing: border-box;
 }
 
-#dashboard{
+/*Dashboard para o celular*/
+#dashboardcel{
   background-color: #8579C3;
 }
 
-#logo{
-  width: 500%;
+#logocel{
+  width: 80%;
+  float: right;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  margin-right: -30%;
+}
+
+#nomelogocel {
+  width: 100%;
+  float: right;
+  margin-top: 25%;
+  margin-bottom: 25%;
+  margin-right: -40%;
+}
+
+#menucel{
+  width: 60%;
+  margin-top: 56%;
+  margin-bottom: 54%;
+  margin-left: 35%;
+}
+
+
+/*Dashboard para o computador*/
+
+#nav-pc{
+  margin-top: 2.5%;
+  margin-right: 30%;
+}
+
+#dashboardpc{
+  background-color: #8579C3;
+  height: 200%;
+}
+
+#logopc{
+  width: 25%;
+}
+
+#nomelogopc {
+  width: 60%;
 }
