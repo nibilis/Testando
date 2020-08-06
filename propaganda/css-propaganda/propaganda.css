@@ -100,14 +100,6 @@ body {
  }
 
  /*SEÇÃO 2 COMPUTADOR*/
-
- .rectangle {
-   width: 100%;
-   height: 11%;
-   position: relative;
-   margin-top: -10%;
- }
-
  .rectangle h2 {
    font-family: 'Muli';
    border-left: 6px solid #7569B8;
@@ -123,32 +115,157 @@ body {
    padding-left: 0.2em;
    padding-right: 0.2em;
    padding-bottom: 0.6em;
-   margin-top: 6.5em;
+   margin-top: 3em;
    margin-left: 1em;
    margin-right: 1em;
    margin-bottom: 2em;
  }
-}
 
-@media (min-width ){
-  .rectangle h2{
+/*não esquecer de colocar @media no retângulo 1024 até 1440 px*/
+
+ .conjuntoroxo{
+   position: relative;
+   width: 39%;
+ }
+
+ .roxo {/* Retângulozinho roxo que antecede a frase */
+   width: 1%;
+   margin-top: 11.5%;
+   float: right;
+ }
+
+ .texto-secao2roxo h4 {
+   font-family: 'Muli';
+   float: right;
+   position: relative;
+   margin-left: 1%;
+   margin-right: 15%;
+   margin-top: 11%;
+   width: 36%;
+   font-size: 1.5em;
+   color: #707070;
+ }
+
+ .texto-secao2roxo h5 {
+   color: #707070;
+   font-family: 'Muli';
+   line-height: 1.3em;
+   font-size: 0.9em;
+   margin-left: 46.5%;
+   margin-top: -26%;
+   width: 40%;
+ }
+
+ .comeceja{
+   left: 20%;
+ }
+
+ .comeceja h3{
+     color: #1F2967;
+     font-family: 'Muli';
+     font-size: 1.2em;
+     margin-left: 35%;
+     margin-top: 5%;
+ }
+
+ .comeceja a {
+   text-decoration: none;
+   border-radius: 80px 80px;
+   color: whitesmoke;
+   font-family: 'Muli';
+   border-style: none;
+   margin-left: 42%;
+   position: relative;
+   padding-left: 3%;
+   padding-right: 3%;
+   padding-top: 1%;
+   padding-bottom: 1%;
+ }
+
+ .conjuntoamarelo {
+   position: relative;
+   left: 60%;
+   margin-top: 5%;
+   width: 39%;
+ }
+
+ .amarelo{
+   float: left;
+   width: 1%;
+   margin-left: 5%;
+   margin-bottom: 10%;
+ }
+
+ .texto-secao2amarelo h4 {
+   font-family: 'Muli';
+   font-size: 1.5em;
+   margin-left: 7%;
+   margin-top: 7%;
+   color: #707070;
+   width: 36%;
+ }
+
+ .texto-secao2amarelo h5 {
+   color: #707070;
+   font-family: 'Muli';
+   line-height: 1.3em;
+   font-size: 0.9em;
+   width: 40%;
+   position: relative;
+   margin-top: 2%;
+   margin-left: 7%;
+ }
+
+  .textocentral2-secao2{
+    color: #1F2967;
     font-family: 'Muli';
-    border-left: 6px solid #7569B8;
-    border-right: 6px solid #7569B8;
-    border-top: 6px solid #7569B8;
-    border-bottom: 6px solid #7569B8;
-    border-radius: 80px;
-    background-color: whitesmoke;
-    color: pink;
-    text-align: center;
-    line-height: 1.8em;
-    font-size: 1.5em;
-    padding-bottom: 0.6em;
-    margin-top: 6.5em;
-    margin-left: 1em;
-    margin-right: 1em;
-    margin-bottom: 2em;
+    font-size: 1.2em;
+    margin-left: 35%;
+    margin-top: 5%;
   }
+
+ .comeceja2 a {
+   text-decoration: none;
+   border-radius: 80px 80px;
+   color: whitesmoke;
+   font-family: 'Muli';
+   border-style: none;
+   margin-left: 35%;
+   margin-top: 4%;
+   margin-bottom: 10%;
+   padding-top: 2%;
+   padding-bottom: 2%;
+   background-color: #9684D3;
+   width: 30%;
+ }
+
+ /* SECAO 3 COMPUTADOR*/
+ .branco1 img,
+ .branco2 img,
+ .branco3 img{
+   width: 30%;
+   /* superior | direita | inferior | esquerda */
+   margin: -10% 0% 0% 7%;
+ }
+ .white{
+   /* superior | direita | inferior | esquerda */
+   margin: 20% 0% 0% 10%;
+ }
+ .white h1{
+   text-align: center;
+   font-size: 1em;
+ }
+ .white p{
+   text-align: center;
+   color: #707070;
+   font-family: 'Muli';
+ }
+
+ .parteamarela a{
+   padding-top: 1%;
+   padding-bottom: 1%;
+ }
+
 }
 
 /*RESPONSIVIDADE CELULAR*/
@@ -235,6 +352,7 @@ a {
 
 .conjuntoroxo{
   position: relative;
+  width: 45%;
 }
 
 .roxo {/* Retângulozinho roxo que antecede a frase */
@@ -262,6 +380,7 @@ a {
   font-size: 0.7em;
   margin-left: 20%;
   margin-top: -13%;
+  width: 80%;
 }
 
 .comeceja{
@@ -279,12 +398,14 @@ a {
   padding-top: 2%;
   padding-bottom: 2%;
   margin-top: 4%;
+  width: 30%;
 }
 
 .conjuntoamarelo {
   position: relative;
   left: 55%;
   margin-top: 5%;
+  width: 45%;
 }
 
 .amarelo{
@@ -325,6 +446,7 @@ a {
   padding-top: 2%;
   padding-bottom: 2%;
   background-color: #9684D3;
+  width: 30%;
 }
 
 /* SECAO 3 CELULAR*/
