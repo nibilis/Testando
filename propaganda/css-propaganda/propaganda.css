@@ -16,7 +16,6 @@ body {
 }
 
 /*RESPONSIVIDADE COMPUTADOR*/
-
 @media(min-width: 990px){
 
   body {
@@ -129,7 +128,7 @@ body {
    margin-top: 3em;
    margin-left: 1em;
    margin-right: 1em;
-   margin-bottom: 2em;
+   margin-bottom: 6%;
  }
 
 /*não esquecer de colocar @media no retângulo 1024 até 1440 px*/
@@ -139,7 +138,7 @@ body {
 
  .conjuntoroxo{
    position: relative;
-   width: 45%;
+   width: 40%;
  }
 
  .roxo {/* Retângulozinho roxo que antecede a frase */
@@ -154,7 +153,7 @@ body {
    position: relative;
    margin-left: 1%;
    margin-right: 10%;
-   margin-top: 11%;
+   margin-top: 11.5%;
    width: 36%;
    font-size: 1.3em;
    color: #707070;
@@ -166,7 +165,7 @@ body {
    line-height: 1.3em;
    font-size: 0.9em;
    margin-left: 52%;
-   margin-top: -30%;
+   margin-top: -26.5%;
    width: 40%;
  }
 
@@ -179,7 +178,7 @@ body {
      font-family: 'Muli';
      font-size: 1.2em;
      margin-left: 36%;
-     margin-top: 10%;
+     margin-top: 4.5%;
  }
 
  .comeceja a {
@@ -189,7 +188,6 @@ body {
    font-family: 'Muli';
    border-style: none;
    margin-left: 46%;
-   margin-top: 2%;
    position: relative;
    padding-left: 3%;
    padding-right: 3%;
@@ -199,9 +197,9 @@ body {
 
  .conjuntoamarelo {
    position: relative;
-   left: 55%;
-   margin-top: 5%;
-   width: 45%;
+   left: 60%;
+   margin-top: 8.5%;
+   width: 40%;
  }
 
  .amarelo{
@@ -226,7 +224,7 @@ body {
    font-size: 0.9em;
    width: 40%;
    position: relative;
-   margin-top: 4%;
+   margin-top: 2%;
    margin-left: 8%;
  }
 
@@ -235,7 +233,7 @@ body {
     font-family: 'Muli';
     font-size: 1.2em;
     margin-left: 25%;
-    margin-top: 10%;
+    margin-top: 9%;
     width: 50%;
   }
 
@@ -245,8 +243,7 @@ body {
    color: whitesmoke;
    font-family: 'Muli';
    border-style: none;
-   margin-left: 40%;
-   margin-top: 1.5%;
+   margin-left: 39%;
    margin-bottom: 10%;
    padding-left: 3%;
    padding-right: 3%;
@@ -256,7 +253,6 @@ body {
  }
 
  /* SECAO 3 COMPUTADOR*/
-
  .parteamarela {
    height: 28%;s
  }
@@ -291,10 +287,111 @@ body {
    margin-top: 3%;
    margin-left: 42.3%;
  }
+
+ /*SEÇÃO 4 COMPUTADOR*/
+ .logo-sombra {
+   width: 20%;
+   margin-left: 14%;
+ }
+
+ .bolinhas-esquerda1 { width: 25%; }
+ .bolinhas-esquerda2 {
+   margin-top: 60%;
+   width: 10%;}
+
+ .bolinhas-direita1 {
+   width: 25%;
+   float: right;
+ }
+
+   .bolinhas-direita2{
+    float: right;
+    width: 25%;
+    margin-top: 100%;
+  }
+
+ .textobolinhas h1{
+   color: #635963;
+   font-family: 'Muli';
+   font-size: 1.5em;
+    /* superior | direita | inferior | esquerda */
+   margin: 7% 0% 5% 8%;
+ }
+ .quadradoamarelotutorial{
+-webkit-filter: drop-shadow(-10px -10px 8px rgba(0, 0, 0, 0.2));
+ width: 40vw;
+ height: 50vh;
+ border: 5px solid whitesmoke;
+ margin-left: 15%;
+ position: absolute;
+}
+.quadradoroxotutorial{
+  background-color: #7C70BF;
+  -webkit-filter: drop-shadow(12px 12px 8px rgba(0, 0, 0, 0.3));
+  width: 40vw;
+  height: 50vh;
+  border: 5px solid whitesmoke;
+  /* superior | direita | inferior | esquerda */
+  margin: 10% 0% 0% 40%;
+  position: absolute;
+}
+.tutorial h1{
+  color: whitesmoke;
+  font-family: 'Muli';
+  font-size: 1.3em;
+  margin-left: 4%;
+  position: relative;
+}
+.tutorial img { width: 25%; }
+
+.tutorial a{
+  width: 30%;
+  margin-left: 9%;
+  margin-top: -10%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+.video-container{
+  -webkit-filter: drop-shadow(8px 12px 8px rgba(0, 0, 0, 0.3));
+  width: 50vw;
+  height: 20vh;
+  left: 20%;
+  margin-top: 20%;
+  position: absolute;
+}
+
+/*SEÇÃO 5 COMPUTADOR*/
+.rodape {
+  width: 100%;
+  height: 100%;
+  border-top: whitesmoke solid;
+  font-family: 'Muli';
+  color: whitesmoke;
+  margin-top: 30%;
+}
+.rodape h1{
+  margin-top: -115%;
+  position: relative;
+  margin-left: 15%;
+  margin-bottom: 2%;
+
+}
+
+.rodape p {
+  position: relative;
+  margin-top: 20%;
+  margin-left: 10%;
+  line-height: 14px;
+  width: 94%;
+}
+
+.rodape img {
+  margin-top: 10%;
+  width: 2.5%;
+}
 }
 
 /*RESPONSIVIDADE CELULAR*/
-
 @media (max-width: 990px){
   /*SEÇÃO 1 CELULAR*/
 .login{
@@ -505,9 +602,28 @@ a {
 }
 
  /*SEÇÃO 4 CELULAR*/
+ .logo-sombra { width: 25%; }
+ .bolinhas-esquerda1 { width: 35%; }
+ .bolinhas-esquerda2 { margin-top: 60%; }
+
+ .bolinhas-direita1 {
+   width: 35%;
+   float: right;}
+
+.bolinhas-direita2{
+  float: right;
+  margin-top: 100%;}
+
+ .textobolinhas h1{
+   color: #635963;
+   font-family: 'Muli';
+   font-size: 1em;
+   margin: 10% 0% 5% 8%;
+ }
  .quadradoamarelotutorial{
 -webkit-filter: drop-shadow(-10px -10px 8px rgba(0, 0, 0, 0.2));
  width: 50vw;
+ height: 30vh;
  border: 5px solid whitesmoke;
  margin-left: 15%;
  position: absolute;
@@ -515,11 +631,14 @@ a {
 .quadradoroxotutorial{
   -webkit-filter: drop-shadow(12px 12px 8px rgba(0, 0, 0, 0.3));
   width: 50vw;
+  height: 40vh;
   border: 5px solid whitesmoke;
   /* superior | direita | inferior | esquerda */
   margin: 10% 0% 0% 40%;
   position: absolute;
+  background-color: #7C70BF;
 }
+
 .tutorial h1{
   color: whitesmoke;
   font-family: 'Muli';
@@ -527,10 +646,18 @@ a {
   margin-left: 4%;
   position: relative;
 }
+
 .tutorial img{
   width: 25%;
 }
 
+.tutorial a{
+  width: 30%;
+  margin-left: 9%;
+  margin-top: -10%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
 .video-container{
   -webkit-filter: drop-shadow(8px 12px 8px rgba(0, 0, 0, 0.3));
   width: 60vw;
@@ -540,7 +667,6 @@ a {
 }
 
 /*SEÇÃO 5 CELULAR*/
-
 .rodape {
   width: 100%;
   height: 100%;
