@@ -18,6 +18,17 @@ body {
 /*RESPONSIVIDADE COMPUTADOR*/
 
 @media(min-width: 990px){
+
+  body {
+    /*IMPORTANTE POIS MUDA A BORDA LATERAL DO SITE TD */
+    /*#9684D3, #9785D3, #E3C7E3, #F8E197, #F8E197, #E3C7E3, #9785D3*/
+    background: linear-gradient(to bottom, #9684D3, #9785D3, #9785D3, #E3C7E3, #E3C7E3, #F8E197, #F8E197, #F8E197, #F8E197, #F8E197, #F8E197, #F8E197, #F8E197, #F8E197, #E3C7E3, #E3C7E3, #9684D3, #9684D3);
+    font-family: Arial;
+    height: 340vh;
+    width: auto; /* 100% da largura da tela do usuário (mas não ta indo kk) */
+    font-size: 30px;
+  }
+
   /* SEÇÃO 1 COMPUTADOR*/
   a {
     text-decoration: none;
@@ -122,10 +133,13 @@ body {
  }
 
 /*não esquecer de colocar @media no retângulo 1024 até 1440 px*/
+  .texto-secao2roxo{
+    margin-top: 15%;
+  }
 
  .conjuntoroxo{
    position: relative;
-   width: 39%;
+   width: 45%;
  }
 
  .roxo {/* Retângulozinho roxo que antecede a frase */
@@ -139,10 +153,10 @@ body {
    float: right;
    position: relative;
    margin-left: 1%;
-   margin-right: 15%;
+   margin-right: 10%;
    margin-top: 11%;
    width: 36%;
-   font-size: 1.5em;
+   font-size: 1.3em;
    color: #707070;
  }
 
@@ -151,8 +165,8 @@ body {
    font-family: 'Muli';
    line-height: 1.3em;
    font-size: 0.9em;
-   margin-left: 46.5%;
-   margin-top: -26%;
+   margin-left: 52%;
+   margin-top: -30%;
    width: 40%;
  }
 
@@ -164,8 +178,8 @@ body {
      color: #1F2967;
      font-family: 'Muli';
      font-size: 1.2em;
-     margin-left: 35%;
-     margin-top: 5%;
+     margin-left: 36%;
+     margin-top: 10%;
  }
 
  .comeceja a {
@@ -174,7 +188,8 @@ body {
    color: whitesmoke;
    font-family: 'Muli';
    border-style: none;
-   margin-left: 42%;
+   margin-left: 46%;
+   margin-top: 2%;
    position: relative;
    padding-left: 3%;
    padding-right: 3%;
@@ -184,25 +199,24 @@ body {
 
  .conjuntoamarelo {
    position: relative;
-   left: 60%;
+   left: 55%;
    margin-top: 5%;
-   width: 39%;
+   width: 45%;
  }
 
  .amarelo{
    float: left;
    width: 1%;
-   margin-left: 5%;
-   margin-bottom: 10%;
+   margin-left: 8%;
  }
 
  .texto-secao2amarelo h4 {
    font-family: 'Muli';
-   font-size: 1.5em;
-   margin-left: 7%;
-   margin-top: 7%;
+   font-size: 1.3em;
+   margin-left: 10%;
+   margin-top: 4%;
    color: #707070;
-   width: 36%;
+   width: 40%;
  }
 
  .texto-secao2amarelo h5 {
@@ -212,16 +226,17 @@ body {
    font-size: 0.9em;
    width: 40%;
    position: relative;
-   margin-top: 2%;
-   margin-left: 7%;
+   margin-top: 4%;
+   margin-left: 8%;
  }
 
   .textocentral2-secao2{
     color: #1F2967;
     font-family: 'Muli';
     font-size: 1.2em;
-    margin-left: 35%;
-    margin-top: 5%;
+    margin-left: 25%;
+    margin-top: 10%;
+    width: 50%;
   }
 
  .comeceja2 a {
@@ -230,16 +245,22 @@ body {
    color: whitesmoke;
    font-family: 'Muli';
    border-style: none;
-   margin-left: 35%;
-   margin-top: 4%;
+   margin-left: 40%;
+   margin-top: 1.5%;
    margin-bottom: 10%;
-   padding-top: 2%;
-   padding-bottom: 2%;
+   padding-left: 3%;
+   padding-right: 3%;
+   padding-top: 1%;
+   padding-bottom: 1%;
    background-color: #9684D3;
-   width: 30%;
  }
 
  /* SECAO 3 COMPUTADOR*/
+
+ .parteamarela {
+   height: 28%;s
+ }
+
  .branco1 img,
  .branco2 img,
  .branco3 img{
@@ -259,13 +280,17 @@ body {
    text-align: center;
    color: #707070;
    font-family: 'Muli';
+   font-size: 0.6em;
  }
 
  .parteamarela a{
    padding-top: 1%;
    padding-bottom: 1%;
+   width: 15%;
+   background-color: #9684D3;
+   margin-top: 3%;
+   margin-left: 42.3%;
  }
-
 }
 
 /*RESPONSIVIDADE CELULAR*/
@@ -474,6 +499,9 @@ a {
 .parteamarela a{
   padding-top: 2%;
   padding-bottom: 2%;
+  width: 35%;
+  background-color: #9684D3;
+  margin: 7% 0% 7% 32%;
 }
 
  /*SEÇÃO 4 CELULAR*/
