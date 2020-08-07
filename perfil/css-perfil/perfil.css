@@ -37,19 +37,53 @@
 /*Dashboard para o computador*/
 
 #nav-pc{
-  margin-top: 2.5%;
-  margin-right: 30%;
+  margin-right: 38%;
+  font-family: muli;
+  margin-top: 2.0%;
+  height: 50%;
+}
+
+#questao{
+line-height:25px;
+text-align: center;
+
+}
+
+#documento{
+  line-height:25px;
+  text-align: center;
+}
+
+#salvos{
+
+  text-align: center;
+
+}
+
+
+#linha1{
+  margin-top: -200%;
+}
+
+#linha2{
+  margin-top:%;
 }
 
 #dashboardpc{
   background-color: #8579C3;
   height: 200%;
+
 }
 
 #logopc{
-  width: 25%;
+  width: 13%;
+  margin-top: 0.5%;
+  margin-bottom: 1%;
+  margin-left: 2%;
 }
 
 #nomelogopc {
-  width: 60%;
+  width: 17%;
+  margin-top: 4.5%;
+  margin-bottom: 5.5%;
 }
