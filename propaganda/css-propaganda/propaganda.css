@@ -294,20 +294,24 @@ body {
    margin-left: 14%;
  }
 
- .bolinhas-esquerda1 { width: 25%; }
+ .bolinhas-esquerda1 {
+   width: 25%;
+ }
+
  .bolinhas-esquerda2 {
-   margin-top: 60%;
-   width: 10%;}
+   width: 20%;
+   margin-top: 30%;
+   }
 
  .bolinhas-direita1 {
-   width: 25%;
+   width: 22%;
    float: right;
  }
 
-   .bolinhas-direita2{
+  .bolinhas-direita2{
     float: right;
-    width: 25%;
-    margin-top: 100%;
+    width: 20%;
+    margin-top: 45%;
   }
 
  .textobolinhas h1{
@@ -315,24 +319,24 @@ body {
    font-family: 'Muli';
    font-size: 1.5em;
     /* superior | direita | inferior | esquerda */
-   margin: 7% 0% 5% 8%;
+   margin: 7% 0% 2% 8%;
  }
  .quadradoamarelotutorial{
 -webkit-filter: drop-shadow(-10px -10px 8px rgba(0, 0, 0, 0.2));
- width: 40vw;
- height: 50vh;
+ width: 30vw;
+ height: 40vh;
  border: 5px solid whitesmoke;
- margin-left: 15%;
+ margin-left: 20%;
  position: absolute;
 }
 .quadradoroxotutorial{
   background-color: #7C70BF;
   -webkit-filter: drop-shadow(12px 12px 8px rgba(0, 0, 0, 0.3));
-  width: 40vw;
+  width: 35vw;
   height: 50vh;
   border: 5px solid whitesmoke;
   /* superior | direita | inferior | esquerda */
-  margin: 10% 0% 0% 40%;
+  margin: 7% 0% 0% 40%;
   position: absolute;
 }
 .tutorial h1{
@@ -342,21 +346,19 @@ body {
   margin-left: 4%;
   position: relative;
 }
-.tutorial img { width: 25%; }
 
 .tutorial a{
-  width: 30%;
-  margin-left: 9%;
-  margin-top: -10%;
+  width: 25%;
+  margin-left: 16%;
+  margin-top: -35%;
   padding-top: 1%;
   padding-bottom: 1%;
 }
 .video-container{
   -webkit-filter: drop-shadow(8px 12px 8px rgba(0, 0, 0, 0.3));
-  width: 50vw;
-  height: 20vh;
-  left: 20%;
-  margin-top: 20%;
+  width: 40vw;
+  left: 25%;
+  margin-top: 15%;
   position: absolute;
 }
 
@@ -367,27 +369,64 @@ body {
   border-top: whitesmoke solid;
   font-family: 'Muli';
   color: whitesmoke;
-  margin-top: 30%;
+  margin-top: 10%;
 }
-.rodape h1{
-  margin-top: -115%;
+
+.contatos{
+  font-size: 0.77em;
+  margin-left:-5%;
+  margin-top: -30%;
   position: relative;
-  margin-left: 15%;
   margin-bottom: 2%;
-
 }
 
-.rodape p {
+.ajuda{
+  font-size: 0.77em;
+  width:70%;
+  margin-top: -30%;
+  position: relative;
+  margin-bottom: 2%;
+}
+
+.saibasobre{
+  font-size: 0.77em;
+  width: 100%;
+  margin-left: -25%;
+  margin-top: -30%;
+  position: relative;
+  margin-bottom: 2%;
+}
+
+.pcontatos{
+  font-size: 0.65em;
   position: relative;
   margin-top: 20%;
-  margin-left: 10%;
+  margin-left: 15%;
+  line-height: 14px;
+  width: 94%;
+}
+
+.pajuda {
+  font-size: 0.5em;
+  position: relative;
+  margin-top: 20%;
+  margin-left: 5%;
+  line-height: 14px;
+  width: 94%;
+}
+
+.psaibasobre{
+  font-size: 0.5em;
+  margin-top: 10%;
+  position: relative;
+  margin-top: 20%;
   line-height: 14px;
   width: 94%;
 }
 
 .rodape img {
-  margin-top: 10%;
-  width: 2.5%;
+  margin-top: 2%;
+  width: 0.9%;
 }
 }
 
@@ -634,7 +673,7 @@ a {
   height: 40vh;
   border: 5px solid whitesmoke;
   /* superior | direita | inferior | esquerda */
-  margin: 10% 0% 0% 40%;
+  margin: 10% 0% 0% 42%;
   position: absolute;
   background-color: #7C70BF;
 }
@@ -661,8 +700,9 @@ a {
 .video-container{
   -webkit-filter: drop-shadow(8px 12px 8px rgba(0, 0, 0, 0.3));
   width: 60vw;
+  height: 20em;
   left: 20%;
-  margin-top: 35%;
+  margin-top: 30%;
   position: absolute;
 }
 
@@ -675,18 +715,56 @@ a {
   color: whitesmoke;
   margin-top: 30%;
 }
-.rodape h1{
+
+.contatos{
+  font-size: 0.77em;
+  margin-left:-5%;
   margin-top: -115%;
   position: relative;
-  margin-left: 15%;
   margin-bottom: 2%;
-
 }
 
-.rodape p {
+.ajuda{
+  font-size: 0.77em;
+  width:70%;
+  margin-top: -115%;
+  position: relative;
+  margin-bottom: 2%;
+}
+
+.saibasobre{
+  font-size: 0.77em;
+  width: 130%;
+  margin-left: -25%;
+  margin-top: -115%;
+  position: relative;
+  margin-bottom: 2%;
+}
+
+.pcontatos{
+  font-size: 0.65em;
   position: relative;
   margin-top: 20%;
-  margin-left: 10%;
+  margin-left: 15%;
+  line-height: 14px;
+  width: 94%;
+}
+
+.pajuda {
+  font-size: 0.5em;
+  position: relative;
+  margin-top: 20%;
+  margin-left: 5%;
+  line-height: 14px;
+  width: 94%;
+}
+
+.psaibasobre{
+  font-size: 0.5em;
+  margin-top: 10%;
+  position: relative;
+  margin-top: 20%;
+  margin-left: 5%;
   line-height: 14px;
   width: 94%;
 }
