@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <!-- Font web de ícones -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- CSS compilado e minificado -->
+  <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" media="screen,projection"/>
+  <meta name="viewport">
+  <title>Testando.com</title>
+  <link rel="stylesheet" href="css-cadastro/cadastro.css">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Muli:wght@700&display=swap" rel="stylesheet">
+  <!--ícone no navegador-->
+  <link rel="shortcut icon" href="./images-propaganda/favicon (1).ico" >
+  <meta name="theme-color" content="black">
+</head>
+
+<body>
+  <!--LINHA LATERAL ROXA-->
+  <div class="row" style="margin-bottom: 0px;">
+      <div class="linha_lateral col s1"><br></div>
+  </div>
+
+<!--LOGO-->
+  <div class="logo">
+    <img class="img-logo responsive-img" src="./images-cadastro/LogoTestandoNome.png">
+  </div>
+
+<!--CAMPOS-->
+
+<!--CAMPO "NOME"-->
+  <div class="chips"></div>
+  <div class="nome" ></div>
+
+<!--CAMPO "PRONTUÁRIO"-->
+   <div class="chips"></div>
+   <div class="prontuario" ></div>
+
+
+
+<!-- JQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- JavaScript Materialize compilado e minificado -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+
+<!--INICIALIZAÇÃO DO CAMPO "NOME"-->
+<script>
+  $('.nome').chips({
+    placeholder: 'Como deseja ser chamado(a)?',
+    secondaryPlaceholder: '+Tag',
+  });
+  $('.chips-autocomplete').chips({
+    autocompleteOptions: {
+      data: {
+        'Apple': null,
+        'Microsoft': null,
+        'Google': null
+      },
+      limit: Infinity,
+      minLength: 1
+    }
+  });
+</script>
+
+<!--INICIALIZAÇÃO DO CAMPO "PRONTUÁRIO"-->
+<script>
+  $('.prontuario').chips({
+    placeholder: 'Prontuário',
+    secondaryPlaceholder: '+Tag',
+  });
+  $('.chips-autocomplete').chips({
+    autocompleteOptions: {
+      data: {
+        'Apple': null,
+        'Microsoft': null,
+        'Google': null
+      },
+      limit: Infinity,
+      minLength: 1
+    }
+  });
+</script>
+
+</body>
+</html>

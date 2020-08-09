@@ -1,0 +1,46 @@
+/* RESET DA PÁGINA */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  height: 200vh;
+  width: auto;
+  font-size: 30px;
+}
+
+.linha_lateral {
+  background: linear-gradient(to bottom, #D0C7FC,#8F83CD, #8F83CD, #7C6FBF);
+  height: 200vh;
+}
+
+.img-logo {
+  width: 35%;
+  position: absolute;
+  top: 6%;
+  left: 35%;
+}
+
+/*CAMPOS*/
+
+.nome{
+    width: 80%;
+    color: #8D8989;
+    background-color: #DEE2E5;
+    border-radius: 80px 80px;
+    position: absolute;
+    top: 35%;
+    left: 13%;
+}
+
+.prontuario{
+  width: 80%;
+  color: #8D8989;
+  background-color: #DEE2E5;
+  border-radius: 80px 80px;
+  position: absolute;
+  top:46%;
+  left: 13%;
+}
