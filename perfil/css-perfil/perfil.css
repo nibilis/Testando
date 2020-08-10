@@ -37,9 +37,9 @@
 /*Dashboard para o computador*/
 
 #nav-pc{
-  margin-right: 40%;
+  margin-right: 27%;
   font-family: muli;
-  margin-top: 2.0%;
+  margin-top: 5.5%;
   height: 50%;
 }
 
@@ -75,7 +75,7 @@
 
 #logopc{
   width: 13%;
-  margin-top: 0.5%;
+  margin-top: 2%;
   margin-bottom: 1%;
   margin-left: 2%;
 }
@@ -84,4 +84,44 @@
   width: 17%;
   margin-top: 4.5%;
   margin-bottom: 5.5%;
+}
+
+@media (min-width: 1100px)
+{
+  #nav-pc{
+    margin-right: 27%;
+    font-family: muli;
+    margin-top: 4.7%;
+    height: 50%;
+  }
+}
+
+@media (min-width: 1300px)
+{
+  #nav-pc{
+    margin-right: 33%;
+    font-family: muli;
+    margin-top: 4.0%;
+    height: 50%;
+  }
+}
+
+@media (min-width: 1600px)
+{
+  #nav-pc{
+    margin-right: 34%;
+    font-family: muli;
+    margin-top: 3.5%;
+    height: 50%;
+  }
+}
+
+@media (min-width: 1800px)
+{
+  #nav-pc{
+    margin-right: 37%;
+    font-family: muli;
+    margin-top: 3%;
+    height: 50%;
+  }
 }
