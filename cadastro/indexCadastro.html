@@ -28,16 +28,28 @@
     <img class="img-logo responsive-img" src="./images-cadastro/LogoTestandoNome.png">
   </div>
 
+
 <!--CAMPOS-->
 
-<!--CAMPO "NOME"-->
-  <div class="chips"></div>
-  <div class="nome" ></div>
+<div class="input-field col s6" id="nome">
+  <input placeholder="Como deseja de ser chamado(a)?" id="first_name" type="text" class="validate">
+</div>
 
-<!--CAMPO "PRONTUÁRIO"-->
-   <div class="chips"></div>
-   <div class="prontuario" ></div>
+<div class="input-field col s6" id="prontuario">
+  <input placeholder="Prontuário" id="codigo" type="text" class="validate">
+</div>
 
+<div class="input-field col s6" id="cpf">
+  <input placeholder="CPF" id="numero" type="text" class="validate">
+</div>
+
+<div class="input-field col s6" id="email">
+  <input placeholder="E-mail" id="endereço" type="text" class="validate">
+</div>
+
+<div>
+    <a class="flow-text waves-effect yellow darken-2 waves-light hoverable cadastrese" href="https://www.google.com.br" target="_self">Cadastre&#8209;se</a>
+</div>
 
 
 <!-- JQuery CDN -->
@@ -47,43 +59,6 @@
 
 
 
-<!--INICIALIZAÇÃO DO CAMPO "NOME"-->
-<script>
-  $('.nome').chips({
-    placeholder: 'Como deseja ser chamado(a)?',
-    secondaryPlaceholder: '+Tag',
-  });
-  $('.chips-autocomplete').chips({
-    autocompleteOptions: {
-      data: {
-        'Apple': null,
-        'Microsoft': null,
-        'Google': null
-      },
-      limit: Infinity,
-      minLength: 1
-    }
-  });
-</script>
-
-<!--INICIALIZAÇÃO DO CAMPO "PRONTUÁRIO"-->
-<script>
-  $('.prontuario').chips({
-    placeholder: 'Prontuário',
-    secondaryPlaceholder: '+Tag',
-  });
-  $('.chips-autocomplete').chips({
-    autocompleteOptions: {
-      data: {
-        'Apple': null,
-        'Microsoft': null,
-        'Google': null
-      },
-      limit: Infinity,
-      minLength: 1
-    }
-  });
-</script>
 
 </body>
 </html>

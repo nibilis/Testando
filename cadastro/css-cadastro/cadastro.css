@@ -25,22 +25,45 @@ body{
 
 /*CAMPOS*/
 
-.nome{
-    width: 80%;
-    color: #8D8989;
-    background-color: #DEE2E5;
-    border-radius: 80px 80px;
-    position: absolute;
-    top: 35%;
-    left: 13%;
+.placeholder{
+  position: relative;
 }
 
-.prontuario{
+#nome{
   width: 80%;
   color: #8D8989;
-  background-color: #DEE2E5;
-  border-radius: 80px 80px;
   position: absolute;
-  top:46%;
+  top: 35%;
+  left: 13%;
+}
+
+::-webkit-input-placeholder {
+   color: Black;
+   font-size: 70%;
+   font-family: 'Muli';
+}
+#email{
+  width: 80%;
+  color: #8D8989;
+  position: absolute;
+  top: 40%;
+  left: 13%;
+
+}
+
+#prontuario{
+  width: 80%;
+  color: #8D8989;
+  position: absolute;
+  top: 45%;
+  left: 13%;
+
+}
+
+#cpf{
+  width: 80%;
+  color: #8D8989;
+  position: absolute;
+  top: 50%;
   left: 13%;
 }
