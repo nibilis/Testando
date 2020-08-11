@@ -24,46 +24,106 @@ body{
 }
 
 /*CAMPOS*/
-
-.placeholder{
+.placeholder {
   position: relative;
 }
 
-#nome{
-  width: 80%;
-  color: #8D8989;
-  position: absolute;
-  top: 35%;
-  left: 13%;
-}
-
 ::-webkit-input-placeholder {
-   color: Black;
+   color: #8D8989;
    font-size: 70%;
    font-family: 'Muli';
 }
-#email{
-  width: 80%;
-  color: #8D8989;
-  position: absolute;
-  top: 40%;
-  left: 13%;
 
+#nome {
+  width: 80%;
+  position: absolute;
+  top: 37%;
+  left: 13%;
 }
 
-#prontuario{
+#prontuario {
   width: 80%;
   color: #8D8989;
   position: absolute;
-  top: 45%;
+  top: 44%;
   left: 13%;
-
 }
 
-#cpf{
+#cpf {
   width: 80%;
   color: #8D8989;
   position: absolute;
-  top: 50%;
+  top: 51%;
   left: 13%;
+}
+
+#email {
+  width: 80%;
+  color: #8D8989;
+  position: absolute;
+  top: 58%;
+  left: 13%;
+}
+
+#materia {
+  width: 80%;
+  color: #8D8989;
+  position: absolute;
+  top: 65%;
+  left: 13%;
+}
+
+#estado {
+  width: 40%;
+  color: #8D8989;
+  position: absolute;
+  top: 72%;
+  left: 25%;
+}
+
+#cidade {
+  width: 40%;
+  color: #8D8989;
+  position: absolute;
+  top: 72%;
+  left: 60%;
+}
+
+#endereço {
+  width: 80%;
+  color: #8D8989;
+  position: absolute;
+  top: 80%;
+  left: 13%;
+}
+
+#senha {
+  width: 80%;
+  color: #8D8989;
+  position: absolute;
+  top: 87%;
+  left: 13%;
+}
+
+#confirmasenha {
+  width: 80%;
+  color: #8D8989;
+  position: absolute;
+  top: 95%;
+  left: 13%;
+}
+
+a {
+  text-decoration: none;
+  border-radius: 80px 80px;
+  color: whitesmoke;
+  font-family: 'Muli';
+  border-style: none;
+  text-align: center;
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  margin-left: 40%;
+  margin-top: -100%;
 }
