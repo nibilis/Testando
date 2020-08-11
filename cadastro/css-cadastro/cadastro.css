@@ -6,14 +6,15 @@
 }
 
 body{
-  height: 200vh;
+  height: 150vh;
   width: auto;
   font-size: 30px;
 }
 
 .linha_lateral {
   background: linear-gradient(to bottom, #D0C7FC,#8F83CD, #8F83CD, #7C6FBF);
-  height: 200vh;
+  height: 150vh;
+  margin-bottom: -9.55%;
 }
 
 .img-logo {
@@ -29,13 +30,15 @@ body{
 }
 
 ::-webkit-input-placeholder {
-   color: #8D8989;
-   font-size: 70%;
+   color: purple;
+   font-size: 100%;
    font-family: 'Muli';
 }
 
 #nome {
   width: 80%;
+  font-size: 1%;
+  font-family: 'Muli';
   position: absolute;
   top: 37%;
   left: 13%;
@@ -74,30 +77,22 @@ body{
 }
 
 #estado {
-  width: 40%;
-  color: #8D8989;
-  position: absolute;
-  top: 72%;
-  left: 25%;
-}
-
-#cidade {
-  width: 40%;
-  color: #8D8989;
-  position: absolute;
-  top: 72%;
-  left: 60%;
-}
-
-#endereço {
-  width: 80%;
+  width: 35%;
   color: #8D8989;
   position: absolute;
   top: 80%;
   left: 13%;
 }
 
-#senha {
+#cidade {
+  width: 35%;
+  color: #8D8989;
+  position: absolute;
+  top: 80%;
+  left: 57.5%;
+}
+
+#endereço {
   width: 80%;
   color: #8D8989;
   position: absolute;
@@ -105,12 +100,23 @@ body{
   left: 13%;
 }
 
+#senha {
+  width: 80%;
+  color: #8D8989;
+  position: absolute;
+  top: 94%;
+  left: 13%;
+}
+
 #confirmasenha {
   width: 80%;
   color: #8D8989;
   position: absolute;
-  top: 95%;
+  top: 101%;
   left: 13%;
+}
+.sla {
+  font-size: 1%;
 }
 
 a {
@@ -125,5 +131,5 @@ a {
   padding-top: 1%;
   padding-bottom: 1%;
   margin-left: 40%;
-  margin-top: -100%;
+  margin-top: -10%;
 }

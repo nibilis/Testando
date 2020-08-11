@@ -44,31 +44,50 @@
 </div>
 
 <div class="input-field col s6" id="email">
-  <input placeholder="E-mail" id="emails" type="text" class="validate">
+   <input id="email" placeholder="E-mail" type="email" class="validate">
 </div>
 
 <div class="input-field col s6" id="materia">
-  <input placeholder="Materias que leciona" id="materias" type="text" class="validate">
-</div>
+    <div class="chips chips-placeholder"></div>
+  </div>
 
 <div class="input-field col s12" id="estado">
-    <select>
-      <option value="" disabled selected>Estado</option>
-      <option value="1">Option 1</option>
-      <option value="2">Option 2</option>
-      <option value="3">Option 3</option>
-      <option value="4">Option 4</option>
-      <option value="5">Option 5</option>
-      <option value="6">Option 6</option>
-      <option value="7">Option 7</option>
-      <option value="8">Option 8</option>
-      <option value="9">Option 9</option>
+    <select class="sla">
+      <option value="" disabled selected>Selecione</option>
+      <option value="1">Acre</option>
+      <option value="2">Alagoas</option>
+      <option value="3">Amapá</option>
+      <option value="4">Amazonas</option>
+      <option value="5">Bahia</option>
+      <option value="6">Ceará</option>
+      <option value="7">Distrito Federal</option>
+      <option value="8">Espírito Santo</option>
+      <option value="9">Goiás</option>
+      <option value="10">Maranhão</option>
+      <option value="11">Mato Grosso</option>
+      <option value="12">Mato Grosso do Sul</option>
+      <option value="13">Minais Gerais</option>
+      <option value="14">Pará</option>
+      <option value="15">Paraíba</option>
+      <option value="16">Paraná</option>
+      <option value="17">Pernambuco</option>
+      <option value="18">Piauí</option>
+      <option value="19">Rio de Janeiro</option>
+      <option value="20">Rio Grande do Norte</option>
+      <option value="21">Rio Grande do Sul</option>
+      <option value="22">Rondônia</option>
+      <option value="23">Roraima</option>
+      <option value="24">Santa Catarina</option>
+      <option value="25">São Paulo</option>
+      <option value="26">Sergipe</option>
+      <option value="27">Tocantins</option>
     </select>
-    <label>Materialize Select</label>
+    <label>Estados</label>
   </div>
 
   <div class="input-field col s12" id="cidade">
       <select>
+        <option value="" disabled selected>Selecione</option>
         <optgroup label="Estado 1">
           <option value="1">Cidade 1</option>
           <option value="2">Cidade 2</option>
@@ -86,7 +105,7 @@
           <option value="8">Cidade 8</option>
         </optgroup>
       </select>
-      <label>Optgroups</label>
+      <label>Cidades</label>
     </div>
 
     <div class="input-field col s6" id="endereço">
@@ -120,6 +139,15 @@
   });
 </script>
 
+<!-- INICIALIZAÇÃO DO CAMPO "MATERIAS QUE LECIONA" -->
+<script>
+$('.chips-placeholder').chips({
+   placeholder: 'Materias que leciona',
+   secondaryPlaceholder: '+Materia',
+ });
+
+
+</script>
 
 </body>
 </html>
