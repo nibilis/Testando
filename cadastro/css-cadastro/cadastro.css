@@ -39,13 +39,14 @@ body{
   position: absolute;
   top: 30%;
   left: 13%;
+
 }
 
 #prontuario {
-  width: 80%;
+  width: 80%; vai dar barra de rolagem
   color: #8D8989;
   position: absolute;
-  top: 35%;
+  top: 37%;
   left: 13%;
 }
 
@@ -53,23 +54,23 @@ body{
   width: 80%;
   color: #8D8989;
   position: absolute;
-  top: 40%;
+  top: 44%;
   left: 13%;
 }
 
 #email {
-  width: 80%;
+  width: 89%;
   color: #8D8989;
   position: absolute;
-  top: 45%;
-  left: 7.5%;
+  top: 51%;
+  left: 7%;
 }
 
 #materia {
   width: 80%;
   color: #8D8989;
   position: absolute;
-  top: 50%;
+  top: 58%;
   left: 13%;
 }
 
@@ -77,7 +78,7 @@ body{
   width: 35%;
   color: #8D8989;
   position: absolute;
-  top: 50%;
+  top: 62%;
   left: 13%;
 }
 
@@ -85,15 +86,16 @@ body{
   width: 35%;
   color: #8D8989;
   position: absolute;
-  top: 50%;
+  top: 62.7%;
   left: 57.5%;
+  font-size: 100%;
 }
 
 #endereço {
   width: 80%;
   color: #8D8989;
   position: absolute;
-  top: 55%;
+  top: 69%;
   left: 13%;
 }
 
@@ -101,7 +103,7 @@ body{
   width: 80%;
   color: #8D8989;
   position: absolute;
-  top: 60%;
+  top: 76%;
   left: 13%;
 }
 
@@ -109,13 +111,10 @@ body{
   width: 80%;
   color: #8D8989;
   position: absolute;
-  top: 65%;
+  top: 83%;
   left: 13%;
 }
 
-.sla {
-  font-size: 1%;
-}
 
 .cadastro {
   position: absolute;
@@ -123,16 +122,28 @@ body{
   border-radius: 80px 80px;
   color: whitesmoke;
   font-family: 'Muli';
+   font-size: 120%;
   border-style: none;
   text-align: center;
-  padding-left: 3%;
-  padding-right: 3%;
-  padding-top: 1%;
-  padding-bottom: 1%;
-  margin-left: 40%;
-  margin-top: 180%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  margin-left: 36%;
+  margin-top: 195%;
 }
 
 .select-wrapper input.select-dropdown {
-  font-size: 100%;
+  font-size: 130%;
+  color: #8D8989;
+  font-family: 'Muli';
 }
+
+.select-wrapper+label {
+    position: absolute;
+    top: -26px;
+    font-size: 110%;
+    margin-top: -10%;
+    color: #8D8989;
+    font-family: 'Muli';
+  }
