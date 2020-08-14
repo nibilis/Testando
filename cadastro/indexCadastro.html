@@ -43,15 +43,18 @@
 </div>
 
 <div class="input-field col s6" id="prontuario">
-  <input class="flow-text" placeholder="Prontuário" id="codigo" type="text" class="validate" style="font-size: 75%;">
+  <input placeholder="Prontuário" id="codigo" type="text" data-length="9" class="validate" style="font-size: 75%;">
 </div>
 
 <div class="input-field col s6" id="cpf">
-  <input class="flow-text" placeholder="CPF" id="numero" type="text" class="validate" required maxlength="11" style="font-size: 75%;">
+  <input data-length="11" placeholder="CPF" id="numero" type="number" class="validate"  style="font-size: 75%;">
 </div>
 
 <div class="input-field col s6" id="email">
-   <input class="flow-text" id="email" placeholder="E-mail" type="email" class="validate" style="font-size: 75%;">
+    <input type="email" id="email" placeholder="E-mail" class="validate" style="font-size: 75%;">
+    <label  for="email"></label>
+  <!-- <input class="flow-text" id="email" placeholder="E-mail" type="email" class="validate" style="font-size: 75%;">
+   <label data-error="E-mail inválido" for="email"></label>-->
 </div>
 
 <div class="input-field col s6" id="materia">
@@ -59,7 +62,7 @@
   </div>
 
 <div class="input-field col s12" id="estado">
-    <select class="flow-text" class="estado" >
+  <select>
       <option value="" disabled selected>Selecione</option>
       <option value="1">Acre</option>
       <option value="2">Alagoas</option>
@@ -89,7 +92,7 @@
       <option value="26">Sergipe</option>
       <option value="27">Tocantins</option>
     </select>
-    <label style="left: -0.2%; margin-top: -23%;">Estados</label> 
+    <label style="left: -0.2%; margin-top: -23%;">Estados</label>
   </div>
 
   <div class="flow-text" class="input-field col s12" id="cidade" >
