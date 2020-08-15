@@ -21,7 +21,7 @@ body{
 .img-logo {
   width: 35%;
   position: absolute;
-  top: 6%;
+  top: 3%;
   left: 35%;
 }
 
@@ -37,7 +37,7 @@ body{
   width: 80%;
   font-family: 'Muli';
   position: absolute;
-  top: 30%;
+  top: 27%;
   left: 13%;
 }
 
@@ -45,7 +45,7 @@ body{
   width: 80%; vai dar barra de rolagem
   color: #8D8989;
   position: absolute;
-  top: 37%;
+  top: 34%;
   left: 13%;
 }
 
@@ -53,7 +53,7 @@ body{
   width: 80%;
   color: #8D8989;
   position: absolute;
-  top: 44%;
+  top: 41%;
   left: 13%;
 }
 
@@ -61,23 +61,32 @@ body{
   width: 89%;
   color: #8D8989;
   position: absolute;
-  top: 51%;
+  top: 48%;
   left: 7%;
+}
+
+.chips-placeholder {
+  width: 80%;
 }
 
 #materia {
   width: 80%;
   color: #8D8989;
   position: absolute;
-  top: 58%;
+  top: 55%;
   left: 13%;
+}
+
+.chips .input {
+  font-size: 70%;
+  width: 80% !important; /*precisa colocar o important para tirar a formatação do materialize*/
 }
 
 #estado {
   width: 35%;
   color: #8D8989;
   position: absolute;
-  top: 62%;
+  top: 66%;
   left: 13%;
 }
 
@@ -85,7 +94,7 @@ body{
   width: 35%;
   color: #8D8989;
   position: absolute;
-  top: 62.7%;
+  top: 66.7%;
   left: 57.5%;
   font-size: 100%;
 }
@@ -94,7 +103,7 @@ body{
   width: 80%;
   color: #8D8989;
   position: absolute;
-  top: 69%;
+  top: 72%;
   left: 13%;
 }
 
@@ -102,7 +111,7 @@ body{
   width: 80%;
   color: #8D8989;
   position: absolute;
-  top: 76%;
+  top: 79%;
   left: 13%;
 }
 
@@ -110,10 +119,9 @@ body{
   width: 80%;
   color: #8D8989;
   position: absolute;
-  top: 83%;
+  top: 86%;
   left: 13%;
 }
-
 
 .cadastro {
   position: absolute;
@@ -121,19 +129,19 @@ body{
   border-radius: 80px 80px;
   color: whitesmoke;
   font-family: 'Muli';
-   font-size: 120%;
+  font-size: 120%;
   border-style: none;
   text-align: center;
-  padding-left: 5%;
-  padding-right: 5%;
-  padding-top: 3%;
-  padding-bottom: 3%;
+  padding-left: 4%;
+  padding-right: 4%;
+  padding-top: 2%;
+  padding-bottom: 2%;
   margin-left: 36%;
-  margin-top: 195%;
+  margin-top: 165%;
 }
 
 .select-wrapper input.select-dropdown {
-  font-size: 130%;
+  font-size: 125%;
   color: #8D8989;
   font-family: 'Muli';
 }
@@ -141,7 +149,7 @@ body{
 .select-wrapper+label {
     position: absolute;
     top: -26px;
-    font-size: 110%;
+    font-size: 105%;
     margin-top: -10%;
     color: #8D8989;
     font-family: 'Muli';

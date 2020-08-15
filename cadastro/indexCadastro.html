@@ -39,29 +39,29 @@
 <!--CAMPOS-->
 
 <div class="input-field col s6" id="nome">
-  <input class="flow-text algumacoisa" placeholder="Como deseja de ser chamado(a)?" id="first_name" type="text" class="validate" style="font-size: 80%;">
+  <input class="flow-text algumacoisa" placeholder="Como deseja de ser chamado(a)?" id="first_name" type="text" class="validate" style="font-size: 70%;">
 </div>
 
 <div class="input-field col s6" id="prontuario">
-  <input placeholder="Prontuário" id="codigo" type="text" data-length="9" class="validate" style="font-size: 75%;">
+  <input placeholder="Prontuário" id="codigo" type="text" data-length="9" class="validate" style="font-size: 70%;">
 </div>
 
 <div class="input-field col s6" id="cpf">
-  <input data-length="11" placeholder="CPF" id="numero" type="number" class="validate"  style="font-size: 75%;">
+  <input data-length="11" placeholder="CPF" id="numero" type="number" class="validate"  style="font-size: 70%;">
 </div>
 
 <div class="input-field col s6" id="email">
-    <input type="email" id="email" placeholder="E-mail" class="validate" style="font-size: 75%;">
+    <input type="email" id="email" placeholder="E-mail" class="validate" style="font-size: 70%;">
     <label  for="email"></label>
   <!-- <input class="flow-text" id="email" placeholder="E-mail" type="email" class="validate" style="font-size: 75%;">
    <label data-error="E-mail inválido" for="email"></label>-->
 </div>
 
 <div class="input-field col s6" id="materia">
-    <div class="flow-text" class="chips chips-placeholder" type="text" class="validate" style="font-size: 75%;"></div>
-  </div>
+    <div class=" chips-placeholder" type="text" class="validate"></div>
+</div>
 
-<div class="input-field col s12" id="estado">
+<div class="input-field col s6" id="estado">
   <select>
       <option value="" disabled selected>Selecione</option>
       <option value="1">Acre</option>
@@ -95,7 +95,7 @@
     <label style="left: -0.2%; margin-top: -23%;">Estados</label>
   </div>
 
-  <div class="flow-text" class="input-field col s12" id="cidade" >
+  <div class="flow-text" class="input-field col s6" id="cidade" >
       <select>
         <option value="" disabled selected>Selecione</option>
         <optgroup label="Estado 1">
@@ -119,15 +119,15 @@
     </div>
 
     <div class="input-field col s6" id="endereço">
-      <input class="flow-text" placeholder="Endereço" id="localização" type="text" class="validate"  style="font-size: 75%;">
+      <input class="flow-text" placeholder="Endereço" id="localização" type="text" class="validate"  style="font-size: 70%;">
     </div>
 
     <div class="input-field col s6" id="senha">
-      <input class="flow-text" placeholder="Senha" id="senhas" type="password" class="validate"  style="font-size: 75%;">
+      <input class="flow-text" placeholder="Senha" id="senhas" type="password" class="validate"  style="font-size: 70%;">
     </div>
 
     <div class="input-field col s6" id="confirmasenha">
-      <input class="flow-text" placeholder="Confirmação de senha" id="confirmasenhas" type="password" class="validate"  style="font-size: 75%;">
+      <input class="flow-text" placeholder="Confirmação de senha" id="confirmasenhas" type="password" class="validate"  style="font-size: 70%;">
     </div>
 
 
@@ -149,7 +149,7 @@
 
 <!-- INICIALIZAÇÃO DO CAMPO "MATERIAS QUE LECIONA" -->
 <script>
-$('.chips-placeholder').chips({
+$('#materia').chips({
    placeholder: 'Materias que leciona',
    secondaryPlaceholder: '+Materia',
  });
