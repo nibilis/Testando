@@ -5,10 +5,13 @@
   box-sizing: border-box;
 }
 
+@media (min-width: 320px){
+
 body{
-  height: 100vh;
+  min-height: 100%;
   width: auto;
   font-size: 30px;
+  position: absolute;
 }
 
 .linha_lateral {
@@ -19,7 +22,7 @@ body{
 }
 
 .img-logo {
-  width: 35%;
+  width: 305px;
   position: fixed;
   top: 3%;
   left: 35%;
@@ -31,21 +34,14 @@ body{
    color: #8D8989;
    font-size: 180%;
    font-family: 'Muli';
+
 }
 
 #nome {
   width: 80%;
   font-family: 'Muli';
   position: fixed;
-  top: 27%;
-  left: 13%;
-}
-
-#prontuario {
-  width: 80%; vai dar barra de rolagem
-  color: #8D8989;
-  position: fixed;
-  top: 34%;
+  top: 25%;
   left: 13%;
 }
 
@@ -53,15 +49,15 @@ body{
   width: 80%;
   color: #8D8989;
   position: fixed;
-  top: 40.5%;
+  top: 31%;
   left: 13%;
 }
 
 #email {
-  width: 89%;
+  width: 80%;
   color: #8D8989;
   position: fixed;
-  top: 48%;
+  top: 39%;
   left: 13%;
 }
 
@@ -73,7 +69,7 @@ body{
   width: 80%;
   color: #8D8989;
   position: fixed;
-  top: 53%;
+  top: 45%;
   left: 13%;
 }
 
@@ -86,7 +82,7 @@ body{
   width: 35%;
   color: #8D8989;
   position: fixed;
-  top: 66%;
+  top: 57%;
   left: 13%;
 }
 
@@ -94,8 +90,8 @@ body{
   width: 35%;
   color: #8D8989;
   position: fixed;
-  top: 66.7%;
-  left: 57.5%;
+  top: 57.79%;
+  left: 55%;
   font-size: 100%;
 }
 
@@ -103,7 +99,7 @@ body{
   width: 80%;
   color: #8D8989;
   position: fixed;
-  top: 72%;
+  top: 63%;
   left: 13%;
 }
 
@@ -111,7 +107,7 @@ body{
   width: 80%;
   color: #8D8989;
   position: fixed;
-  top: 79%;
+  top: 69%;
   left: 13%;
 }
 
@@ -119,7 +115,7 @@ body{
   width: 80%;
   color: #8D8989;
   position: fixed;
-  top: 86%;
+  top: 75%;
   left: 13%;
 }
 
@@ -136,8 +132,8 @@ body{
   padding-right: 4%;
   padding-top: 2%;
   padding-bottom: 2%;
-  margin-left: 36%;
-  margin-top: 165%;
+  margin-left: 39.5%;
+  margin-top: 145%;
 }
 
 .select-wrapper input.select-dropdown {
@@ -148,9 +144,8 @@ body{
 
 .select-wrapper+label {
     position: absolute;
-    top: -26px;
     font-size: 105%;
-    margin-top: -10%;
     color: #8D8989;
     font-family: 'Muli';
   }
+}
