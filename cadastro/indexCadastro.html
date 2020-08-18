@@ -5,8 +5,8 @@
   <!-- Font web de ícones -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- CSS compilado e minificado -->
-  <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" media="screen,projection"/>
-  <meta name="viewport">
+  <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" media="screen"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Testando.com</title>
   <link rel="stylesheet" href="css-cadastro/cadastro.css">
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
@@ -19,34 +19,29 @@
 
 <body>
 
-  <!--LINHA LATERAL ROXA-->
+  <!--LOGO-->
+    <div class="logo">
+      <img class="img-logo responsive-img hide-on-large-only center-align" src="../images/LogoTestandoNome.png">
+    </div>
 
+  <!--LINHA LATERAL ROXA-->
 
   <div class="row" style="margin-bottom: 0px;">
       <div class="linha_lateral col s1"><br></div>
   </div>
 
-<!--LOGO-->
-  <div class="logo">
-    <img class="img-logo responsive-img hide-on-large-only" src="../images/LogoTestandoNome.png">
-  </div>
-
-
-    <div>
-        <a class="cadastro flow-text waves-effect yellow darken-2 waves-light hoverable" href="../perfil/indexPerfil.html" target="_self">Cadastrar</a>
-    </div>
 <!--CAMPOS-->
 
 <div class="input-field col s6" id="nome">
-  <input class="flow-text algumacoisa" placeholder="Como deseja de ser chamado(a)?" id="first_name" type="text" class="validate" style="font-size: 70%;">
+  <input class="flow-text validate" placeholder="Como deseja de ser chamado(a)?" id="first_name" type="text">
 </div>
 
 <div class="input-field col s6" id="cpf">
-  <input data-length="11" placeholder="CPF" id="numero" type="number" class="validate"  style="font-size: 70%;">
+  <input data-length="11" placeholder="CPF" id="numero" type="number" class="validate" >
 </div>
 
-<div class="input-field col s6" id="email">
-    <input type="email" id="email" placeholder="E-mail" class="validate" style="font-size: 70%;">
+<div class="input-field col s6 " id="email">
+    <input type="email" id="email" placeholder="E-mail" class="validate">
   <!-- <input class="flow-text" id="email" placeholder="E-mail" type="email" class="validate" style="font-size: 75%;">
    <label data-error="E-mail inválido" for="email"></label>-->
 </div>
@@ -113,18 +108,19 @@
     </div>
 
     <div class="input-field col s6" id="endereço">
-      <input class="flow-text" placeholder="Endereço" id="localização" type="text" class="validate"  style="font-size: 70%;">
+      <input class="flow-text" placeholder="Endereço" id="localização" type="text" class="validate">
     </div>
 
     <div class="input-field col s6" id="senha">
-      <input class="flow-text" placeholder="Senha" id="senhas" type="password" class="validate"  style="font-size: 70%;">
+      <input class="flow-text" placeholder="Senha" id="senhas" type="password" class="validate">
     </div>
 
     <div class="input-field col s6" id="confirmasenha">
-      <input class="flow-text" placeholder="Confirmação de senha" id="confirmasenhas" type="password" class="validate"  style="font-size: 70%;">
+      <input class="flow-text" placeholder="Confirmação de senha" id="confirmasenhas" type="password" class="validate">
     </div>
-
-
+    <div>
+        <a class="cadastro flow-text waves-effect yellow darken-2 waves-light hoverable" href="../perfil/indexPerfil.html" target="_self">Cadastrar</a>
+    </div>
 
 
 <!-- JQuery CDN -->
