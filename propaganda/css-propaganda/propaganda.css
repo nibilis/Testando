@@ -8,7 +8,7 @@
 /*RESPONSIVIDADE COMPUTADOR*/
 @media (min-width: 990px){
   body {
-    background: linear-gradient(to bottom, #9684D3, #9785D3, #9785D3, #9785D3, #9785D3, #E3C7E3, #E3C7E3, #E3C7E3, #F8E197,  #F8E197, #F8E197, #F8E197, #F8E197, #F8E197, #F8E197, #F8E197, #E3C7E3, #E3C7E3, #9684D3, #9785D3, #9785D3);
+    background: linear-gradient(to bottom, #9684D3, #9785D3, #9785D3, #9785D3, #9785D3, #9785D3, #E3C7E3, #E3C7E3, #E3C7E3, #E3C7E3, #F8E197, #F8E197, #F8E197, #F8E197, #F8E197, #F8E197, #F8E197, #F8E197, #E3C7E3, #E3C7E3, #9684D3, #9785D3, #9785D3);
     height: 340vh;
     width: auto;
     font-size: 30px;
@@ -71,7 +71,7 @@
  }
 
  .icones img{
-   width: 30%;
+   width: 31%;
    float: right;
    margin-right: 2.5%;
  }
@@ -85,12 +85,12 @@
  }
 
  .icones h1{
-   font-size: 2.0em;
-   margin-top: 5%;
+   font-size: 2em;
+   margin-top: 9%;
    width: 70%;
  }
  .icones h2 {
-   margin-bottom: 15%;
+   margin-bottom: 25%;
    font-size: 1em;
    width: 60%;
  }
@@ -239,7 +239,7 @@
 
  /* SECAO 3 COMPUTADOR*/
  .parteamarela {
-   height: 24%;
+   height: 21%;
  }
 
  .branco1 img,
@@ -321,6 +321,140 @@
 
 @media(min-width: 1200px){
 
+  .icones h1{
+    font-size: 2.4em;
+    margin-top: 3%;
+    width: 70%;
+  }
+  .icones h2 {
+    margin-bottom: 25%;
+    font-size: 1em;
+    width: 50%;
+  }
+
+  .login{
+    margin-top: -15%;
+    font-size: 1em;
+    float: right;
+    width: 12%;
+    padding-left: 2%;
+    padding-right: 3%;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    margin-left: 4%;
+  }
+
+  .cadastrese{
+      margin-top: -15%;
+      font-size: 1em;
+      width: 9%;
+      float: right;
+      padding-left: 2%;
+      padding-right: 14%;
+      padding-bottom: 1%;
+      padding-top: 1%;
+      margin-right: 18%;
+  }
+  /*SEÇÃO 2 COMPUTADOR*/
+  .rectangle h2 {
+    font-family: 'Muli';
+    border: 6px solid #7569B8;
+    border-radius: 50px;
+    background-color: whitesmoke;
+    color: #49779D;
+    text-align: center;
+    line-height: 1.5em;
+    font-size: 3em;
+    padding-left: 0.1em;
+    padding-right: 0.1em;
+    padding-bottom: 0.4em;
+    margin-top: 3em;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 1%;
+  }
+
+  .texto-secao2roxo h4 {
+    font-family: 'Muli';
+    float: right;
+    position: relative;
+    margin-left: 1%;
+    margin-right: 15%;
+    margin-top: 11.5%;
+    width: 36%;
+    font-size: 1.6em;
+    color: #707070;
+  }
+
+  .texto-secao2roxo h5 {
+    color: #707070;
+    font-family: 'Muli';
+    line-height: 1.3em;
+    font-size: 1.2em;
+    margin-left: 46.5%;
+    margin-top: -28%;
+    width: 40%;
+  }
+
+  .comeceja h3{
+      color: #1F2967;
+      font-family: 'Muli';
+      font-size: 1.5em;
+      margin-left: 36%;
+      margin-top: 6.5%;
+      margin-bottom: 2%;
+  }
+
+  .texto-secao2amarelo h4 {
+    font-family: 'Muli';
+    font-size: 1.6em;
+    margin-left: 10%;
+    margin-top: 4%;
+    color: #707070;
+    width: 50%;
+  }
+
+  .texto-secao2amarelo h5 {
+    color: #707070;
+    font-family: 'Muli';
+    line-height: 1.3em;
+    font-size: 1.2em;
+    width: 50%;
+    position: relative;
+    margin-top: 2%;
+    margin-left: 8%;
+  }
+
+   .textocentral2-secao2{
+     color: #1F2967;
+     font-family: 'Muli';
+     font-size: 1.5em;
+     margin-left: 15%;
+     margin-top: 9%;
+     width: 70%;
+   }
+
+   /* SEÇÃO 3*/
+   .parteamarela {
+     height: 30%;
+   }
+
+   .white{
+     /* superior | direita | inferior | esquerda */
+     margin: 20% 10% 0% 10%;
+   }
+
+   .white h1{
+     text-align: center;
+     font-size: 1.3em;
+   }
+   .white p{
+     text-align: center;
+     color: #707070;
+     font-family: 'Muli';
+     font-size: 0.9em;
+   }
+  /* SEÇÃO 4 */
   #textoquadradoamarelo{
     margin-top: 18%;
     margin-left: 10%;
@@ -722,7 +856,7 @@ a {
 }
 .white{
   /* superior | direita | inferior | esquerda */
-  margin: 20% 0% 0% 10%;
+  margin: 20% 10% 0% 10%;
 }
 .white h1{
   text-align: center;
@@ -838,8 +972,8 @@ a {
   font-size: 1em;
   width:70%;
   margin-top: -50%;
-  position: relative;
   margin-bottom: 2%;
+  position: relative;
 }
 
 .saibasobre{
