@@ -7,7 +7,7 @@
   <!-- CSS compilado e minificado -->
   <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" media="screen"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Testando.com</title>
+  <title>Testando</title>
   <link rel="stylesheet" href="css-cadastro/cadastro.css">
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
@@ -21,33 +21,31 @@
 
   <!--LOGO-->
     <div class="logo">
-      <img class="img-logo responsive-img hide-on-large-only center-align" src="../images/LogoTestandoNome.png">
+      <img class="img-logo responsive-img hide-on-large-only " src="../images/LogoTestandoNome.png">
     </div>
 
   <!--LINHA LATERAL ROXA-->
-
-  <div class="row" style="margin-bottom: 0px;">
-      <div class="linha_lateral col s1"><br></div>
+  <div class="row">
+      <div class="linha_lateral col s1"></div>
   </div>
 
 <!--CAMPOS-->
-
 <div class="input-field col s6" id="nome">
   <input class="flow-text validate" placeholder="Como deseja de ser chamado(a)?" id="first_name" type="text">
 </div>
 
 <div class="input-field col s6" id="cpf">
-  <input data-length="11" placeholder="CPF" id="numero" type="number" class="validate" >
+  <input class="flow-text validate" placeholder="CPF" id="numero" type="number" data-length="11" >
 </div>
 
 <div class="input-field col s6 " id="email">
-    <input type="email" id="email" placeholder="E-mail" class="validate">
   <!-- <input class="flow-text" id="email" placeholder="E-mail" type="email" class="validate" style="font-size: 75%;">
    <label data-error="E-mail inválido" for="email"></label>-->
+    <input class="flow-text validate" placeholder="E-mail" id="email" type="email">
 </div>
 
 <div class="input-field col s6" id="materia">
-    <div class=" chips-placeholder" type="text" class="validate"></div>
+    <div class="chips-placeholder validate" type="text"></div>
 </div>
 
 <div class="input-field col s6" id="estado">
@@ -81,10 +79,10 @@
       <option value="26">Sergipe</option>
       <option value="27">Tocantins</option>
     </select>
-    <label style="left: -0.2%; margin-top: -22%;">Estados</label>
+    <label>Estados</label>
   </div>
 
-  <div class="flow-text" class="input-field col s6" id="cidade" >
+  <div class="input-field col s6" id="cidade" >
       <select>
         <option value="" disabled selected>Selecione</option>
         <optgroup label="Estado 1">
@@ -104,20 +102,22 @@
           <option value="8">Cidade 8</option>
         </optgroup>
       </select>
-      <label style="margin-top: -18%;">Cidades</label>
+      <label>Cidades</label>
     </div>
 
     <div class="input-field col s6" id="endereço">
-      <input class="flow-text" placeholder="Endereço" id="localização" type="text" class="validate">
+      <input class="flow-text validate" placeholder="Endereço" id="localização" type="text">
     </div>
 
     <div class="input-field col s6" id="senha">
-      <input class="flow-text" placeholder="Senha" id="senhas" type="password" class="validate">
+      <input class="flow-text validate" placeholder="Senha" id="senhas" type="password">
     </div>
 
     <div class="input-field col s6" id="confirmasenha">
-      <input class="flow-text" placeholder="Confirmação de senha" id="confirmasenhas" type="password" class="validate">
+      <input class="flow-text validate" placeholder="Confirmação de senha" id="confirmasenhas" type="password">
     </div>
+
+
     <div>
         <a class="cadastro flow-text waves-effect yellow darken-2 waves-light hoverable" href="../perfil/indexPerfil.html" target="_self">Cadastrar</a>
     </div>

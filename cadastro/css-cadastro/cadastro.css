@@ -5,13 +5,12 @@
   box-sizing: border-box;
 }
 
-@media (min-width: 320px){
+@media (max-width: 990px){
 
 body{
   height: 100vh;
   width: auto;
   font-size: 30px;
-  position: absolute;
 }
 
 .linha_lateral {
@@ -20,9 +19,9 @@ body{
 }
 
 .img-logo {
-  width: 200px;
-  top: 3%;
-  left: 35%;
+  width: 150px;
+
+  margin-left: 40%;
 }
 
 /*CAMPOS*/
@@ -75,8 +74,7 @@ body{
 #cidade {
   width: 35%;
   color: #8D8989;
-  left: 55%;
-  font-size: 100%;
+  left: 13%;
 }
 
 #endereço {
@@ -109,18 +107,108 @@ body{
   padding-right: 5%;
   padding-top: 3%;
   padding-bottom: 3%;
+  position: relative;
 }
 
 .select-wrapper input.select-dropdown {
-
   color: #8D8989;
   font-family: 'Muli';
 }
 
 .select-wrapper+label {
-    position: absolute;
-
     color: #8D8989;
     font-family: 'Muli';
+    font-size: 1em;
+  }
+}
+
+@media (min-width: 990px){
+  .cadastro {
+    text-decoration: none;
+    border-radius: 80px 80px;
+    color: whitesmoke;
+    font-family: 'Muli';
+    font-size: 100%;
+    border-style: none;
+    text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    /* superior | direita | inferior | esquerda */
+    margin: 5% 0% 3% 42%;
+  }
+
+  /*CAMPOS*/
+  ::-webkit-input-placeholder {
+     color: #8D8989;
+     font-size: 180%;
+     font-family: 'Muli';
+  }
+
+  #nome {
+    width: 80%;
+    font-family: 'Muli';
+    color: #8D8989;
+    left: 13%;
+  }
+
+  #cpf {
+    width: 80%;
+    color: #8D8989;
+    left: 13%;
+  }
+
+  #email {
+    width: 89.5%;
+    color: #8D8989;
+    left: 13%;
+  }
+
+  .chips-placeholder {
+    width: 80%;
+  }
+
+  #materia {
+    width: 80%;
+    color: #8D8989;
+    left: 13%;
+  }
+
+  .chips .input {
+    width: 80% !important; /*precisa colocar o important para tirar a formatação do materialize*/
+  }
+
+  #estado {
+    width: 35%;
+    color: #8D8989;
+    left: 13%;
+  }
+
+  #cidade {
+    width: 35%;
+    color: #8D8989;
+    left: 13%;
+    float: right;
+    /* superior | direita | inferior | esquerda */
+    margin: -5.5% 20% 0% 0%;
+  }
+
+  #endereço {
+    width: 80%;
+    color: #8D8989;
+    left: 13%;
+}
+
+  #senha {
+    width: 80%;
+    color: #8D8989;
+    left: 13%;
+  }
+
+  #confirmasenha {
+    width: 80%;
+    color: #8D8989;
+    left: 13%;
   }
 }
