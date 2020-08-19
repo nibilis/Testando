@@ -237,7 +237,7 @@
    background-color: #9684D3;
  }
 
- /* SECAO 3 COMPUTADOR*/
+ /*SECAO 3 COMPUTADOR*/
  .parteamarela {
    height: 21%;
  }
@@ -404,7 +404,6 @@
       margin-top: 6.5%;
       margin-bottom: 2%;
   }
-
   .texto-secao2amarelo h4 {
     font-family: 'Muli';
     font-size: 1.6em;
@@ -484,7 +483,6 @@
 }
 
 @media(min-width: 1500px){
-
   .quadradoamarelotutorial{
  -webkit-filter: drop-shadow(-10px -10px 8px rgba(0, 0, 0, 0.2));
   width: 500px;
@@ -662,7 +660,7 @@
     width: auto;
     font-size: 30px;
   }
-/*SEÇÃO 1 CELULAR 375px*/
+/*SEÇÃO 1 CELULAR*/
 .login{
      margin-top: -20%;
      float: right;
@@ -730,7 +728,7 @@ a {
   margin-right: 3%;
 }
 
-/*SEÇÃO 2 CELULAR 375px*/
+/*SEÇÃO 2 CELULAR*/
 .rectangle h2 {
   font-family: 'Muli';
   border: 3px solid #7569B8;
@@ -846,7 +844,7 @@ a {
   width: 30%;
 }
 
-/* SECAO 3 CELULAR 375px*/
+/* SECAO 3 CELULAR*/
 .branco1 img,
 .branco2 img,
 .branco3 img{
@@ -877,7 +875,7 @@ a {
   margin: 7% 0% 7% 32%;
 }
 
- /*SEÇÃO 4 CELULAR 375px*/
+ /*SEÇÃO 4 CELULAR*/
  .logo-sombra { width: 30%; }
  .bolinhas-esquerda1 { width: 35%; }
  .bolinhas-esquerda2 { margin-top: 60%; }
@@ -950,7 +948,7 @@ a {
   position: absolute;
 }
 
-/*SEÇÃO 5 CELULAR 375px*/
+/*SEÇÃO 5 CELULAR*/
 .rodape {
   width: 100%;
   height: 100%;
