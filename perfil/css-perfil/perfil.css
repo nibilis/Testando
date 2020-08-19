@@ -30,8 +30,8 @@ border-radius: 80px 80px;
   margin-right: -40%;
 }
 
-#menucel{
-  width: 60%;
+.material-icons {
+  color: white;
   margin-top: 56%;
   margin-bottom: 54%;
   margin-left: 35%;
