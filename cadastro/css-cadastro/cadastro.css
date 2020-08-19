@@ -14,7 +14,7 @@ body{
 }
 
 .linha_lateral {
-  background: linear-gradient(to bottom, #D0C7FC,#8F83CD, #8F83CD, #7C6FBF);
+  background: linear-gradient(to bottom, #D0C7FC,#8F83CD, #8F83CD, );
   height: 100vh;
 }
 
@@ -66,13 +66,11 @@ body{
 }
 
 #estado {
-  width: 35%;
   color: #8D8989;
   left: 13%;
 }
 
 #cidade {
-  width: 35%;
   color: #8D8989;
   left: 13%;
 }
@@ -84,13 +82,13 @@ body{
 }
 
 #senha {
-  width: 80%;
+  width: 35%;
   color: #8D8989;
   left: 13%;
 }
 
 #confirmasenha {
-  width: 80%;
+  width: 35%;
   color: #8D8989;
   left: 13%;
 }
@@ -123,12 +121,21 @@ body{
 }
 
 @media (min-width: 990px){
+  .row{
+    margin-bottom: inherit;
+  }
+
+  .linha_lateral {
+    background: linear-gradient(to bottom, #D0C7FC,#8F83CD, #8F83CD, #7C6FBF);
+    height: 111vh;
+  }
+
   .cadastro {
     text-decoration: none;
     border-radius: 80px 80px;
     color: whitesmoke;
     font-family: 'Muli';
-    font-size: 100%;
+    font-size: 1.7em;
     border-style: none;
     text-align: center;
     padding-left: 5%;
@@ -136,7 +143,7 @@ body{
     padding-top: 2%;
     padding-bottom: 2%;
     /* superior | direita | inferior | esquerda */
-    margin: 5% 0% 3% 42%;
+    margin: 5% 0% 0% 36.5%;
   }
 
   /*CAMPOS*/
@@ -151,18 +158,22 @@ body{
     font-family: 'Muli';
     color: #8D8989;
     left: 13%;
+    margin-right: -20%;
+    margin-top: 4%;
   }
 
   #cpf {
     width: 80%;
     color: #8D8989;
     left: 13%;
+    margin-right: -20%;
   }
 
   #email {
     width: 89.5%;
     color: #8D8989;
     left: 13%;
+    margin-right: -20%;
   }
 
   .chips-placeholder {
@@ -173,6 +184,7 @@ body{
     width: 80%;
     color: #8D8989;
     left: 13%;
+    margin-right: -20%;
   }
 
   .chips .input {
@@ -180,35 +192,46 @@ body{
   }
 
   #estado {
-    width: 35%;
     color: #8D8989;
     left: 13%;
   }
 
   #cidade {
-    width: 35%;
     color: #8D8989;
     left: 13%;
-    float: right;
-    /* superior | direita | inferior | esquerda */
-    margin: -5.5% 20% 0% 0%;
   }
 
   #endereço {
     width: 80%;
     color: #8D8989;
     left: 13%;
+    margin-right: -20%;
 }
 
   #senha {
     width: 80%;
     color: #8D8989;
     left: 13%;
+    margin-right: -20%;
   }
 
   #confirmasenha {
     width: 80%;
     color: #8D8989;
     left: 13%;
+    margin-right: -20%;
   }
+
+  .select-wrapper+label {
+      color: #7C6FBF;
+      font-family: 'Muli';
+      font-size: 1.5em;
+    }
+
+    .select-wrapper input.select-dropdown {
+      color: #8D8989;
+      font-family: 'Muli';
+      margin-top: 5%;
+      font-size: 2em;
+    }
 }
