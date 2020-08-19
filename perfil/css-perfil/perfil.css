@@ -66,26 +66,26 @@ border-radius: 80px 80px;
   text-align: center;
   font-size: 20px;
   position: absolute;
-  margin-left: -30%;
+  margin-left: -21%;
 }
 
 #salvos{
   text-align: center;
   font-size: 20px;
   position: absolute;
-  margin-left: -20%;
+  margin-left: -6.5%;
 }
 
 #linha1{
-  margin-top: 1%;
+  margin-top: -1%;
   position: absolute;
-  margin-left: -20%;
+  margin-left: -22%;
 }
 
 #linha2{
-  margin-top: 1%;
+  margin-top: -1%;
   position: absolute;
-  margin-left: -30%;
+  margin-left: -7%;
 }
 
 #dashboardpc{
@@ -119,6 +119,43 @@ border-radius: 80px 80px;
     margin-top: 0%;
     margin-bottom:5%;
   }
+
+  #questao{
+    line-height:25px;
+    text-align: center;
+    font-size: 20px;
+    position: absolute;
+    margin-left: -41%;
+
+  }
+
+  #documento{
+    line-height:25px;
+    text-align: center;
+    font-size: 20px;
+    position: absolute;
+    margin-left: -22%;
+  }
+
+  #salvos{
+    text-align: center;
+    font-size: 20px;
+    position: absolute;
+    margin-left: -5%;
+  }
+
+  #linha1{
+    margin-top: -1%;
+    position: absolute;
+    margin-left: -27%;
+  }
+
+  #linha2{
+    margin-top: -1%;
+    position: absolute;
+    margin-left: -7%;
+  }
+
 }
 
 @media (min-width: 1366px)
@@ -134,6 +171,42 @@ border-radius: 80px 80px;
     width: 12%;
     margin-top: 0%;
     margin-bottom:5%;
+  }
+
+  #questao{
+    line-height:25px;
+    text-align: center;
+    font-size: 20px;
+    position: absolute;
+    margin-left: -37%;
+
+  }
+
+  #documento{
+    line-height:25px;
+    text-align: center;
+    font-size: 20px;
+    position: absolute;
+    margin-left: -18%;
+  }
+
+  #salvos{
+    text-align: center;
+    font-size: 20px;
+    position: absolute;
+    margin-left: 1%;
+  }
+
+  #linha1{
+    margin-top: -1%;
+    position: absolute;
+    margin-left: -23%;
+  }
+
+  #linha2{
+    margin-top: -1%;
+    position: absolute;
+    margin-left: -3%;
   }
 }
 
@@ -154,6 +227,42 @@ border-radius: 80px 80px;
     font-family: 'muli';
     margin-top: 4.0%;
     height: 50%;
+  }
+
+  #questao{
+    line-height:30px;
+    text-align: center;
+    font-size: 40px;
+    position: absolute;
+    margin-left: -37%;
+
+  }
+
+  #documento{
+    line-height:30px;
+    text-align: center;
+    font-size: 40px;
+    position: absolute;
+    margin-left: -18%;
+  }
+
+  #salvos{
+    text-align: center;
+    font-size: 30px;
+    position: absolute;
+    margin-left: 2%;
+  }
+
+  #linha1{
+    margin-top: -1%;
+    position: absolute;
+    margin-left: -23%;
+  }
+
+  #linha2{
+    margin-top: -1%;
+    position: absolute;
+    margin-left: -3%;
   }
 }
 
@@ -179,6 +288,23 @@ border-radius: 80px 80px;
     margin-top: 0%;
     margin-bottom:4.5%;
   }
+
+  #questao{
+    line-height:25px;
+    text-align: center;
+    font-size: 20px;
+    position: absolute;
+    margin-left: -35%;
+
+  }
+
+  #documento{
+    line-height:25px;
+    text-align: center;
+    font-size: 20px;
+    position: absolute;
+    margin-left: -17%;
+  }
 }
 
 @media (min-width: 1800px)
@@ -188,6 +314,19 @@ border-radius: 80px 80px;
     font-family: 'muli';
     margin-top: 3%;
     height: 50%;
+  }
+
+  #logopc{
+    width: 8%;
+    margin-top: 0.7%;
+    margin-bottom: 1%;
+    margin-left: 2%;
+  }
+
+  #nomelogopc {
+    width: 12%;
+    margin-top: 0%;
+    margin-bottom: 3.5%;
   }
 }
 

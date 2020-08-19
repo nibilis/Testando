@@ -23,7 +23,7 @@
       <div class= "row hide-on-large-only" id= "dashboardcel">
 
         <div class="col s2">
-            <img class= "responsive-img" id = "menucel" src ="../images/menu.png">
+            <img class= "responsive-img" id ="menucel" src ="../images/menu.png">
         </div>
         <div class="col s1">
         </div>
@@ -48,12 +48,30 @@
               <li><a href="adddocumento.html" id= "documento">Adicionar <br> documento</a>
                 <img class= "responsive-img" id = "linha1" src ="../images/linha.png" style= "margin-bottom: 12%"></li>
               <li><a href="salvos.html" id= "salvos">Salvos</a>
-                 <img class= "responsive-img" id = "linha1" src ="../images/linha.png" style= "margin-bottom: 32%"></li>
+                 <img class= "responsive-img" id = "linha2" src ="../images/linha.png" style= "margin-bottom: 32%"></li>
             </ul>
 
           </div>
         </nav>
 
+        <nav> <!-- conteudo dentro do navbar  --> </nav>
+
+        <ul id="slide-out" class="hide-on-large-only sidenav">
+          <li><div class="user-view">
+            <div class="background">
+              <img src="../images/logo.png">
+            </div>
+            <a href="#user"><img class="circle" src="images/yuna.jpg"></a>
+            <a href="#name"><span class="white-text name">John Doe</span></a>
+            <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
+          </div></li>
+          <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+          <li><a href="#!">Second Link</a></li>
+          <li><div class="divider"></div></li>
+          <li><a class="subheader">Subheader</a></li>
+          <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+        </ul>
+        <a href="#menucel" data-target="slide-out" class="sidenav-trigger">botão</a>
 
 
       </div>
@@ -62,6 +80,13 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <!-- JavaScript Materialize compilado e minificado -->
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    </body>
 
+  <script>
+  //INICIALIZAÇÃO MENU CELULAR
+
+  $(document).ready(function(){
+    $('.sidenav').sidenav();});
+  </script>
+
+    </body>
   </html>
