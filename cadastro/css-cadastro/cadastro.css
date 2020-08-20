@@ -8,7 +8,7 @@
 @media (max-width: 990px){
 
 body{
-  height: 115vh;
+  height: 140vh;
   width: auto;
   font-size: 30px;
 }
@@ -17,7 +17,7 @@ body{
 
 .linha_lateral {
   background: linear-gradient(to bottom, #D0C7FC,#8F83CD, #8F83CD, #7C6FBF);
-  height: 125vh;
+  height: 140vh;
 }
 
 .img-logo {
@@ -68,24 +68,33 @@ body{
 #nome {
   width: 80%;
   font-family: 'Muli';
-  margin-left: 5%;
+  /* superior | direita | inferior | esquerda */
+  margin: 3% 0% 0% 5%;
 }
 
 #email{
-  width: 85%;
   color: #8D8989;
-  margin-left: 5%;
+  /* superior | direita | inferior | esquerda */
+  margin: 0% 0% 0% 2.8%;
 }
 
-#materia, #cpf, #endereço, #senha, #confirmasenha {
+#materia{
+  color: #8D8989;
+  /* superior | direita | inferior | esquerda */
+  margin: 0% 0% 0% 8%;
+}
+
+#cpf, #endereço, #senha, #confirmasenha {
   width: 80%;
   color: #8D8989;
-  margin-left: 5%;
+  /* superior | direita | inferior | esquerda */
+  margin: 0% 0% 0% 5%;
 }
 
 #cidade, #estado {
   color: #8D8989;
-  margin-left: 5%;
+  /* superior | direita | inferior | esquerda */
+  margin: 10% 0% 0% 5%;
 }
 }
 
@@ -94,7 +103,7 @@ body{
 
   .linha_lateral {
     background: linear-gradient(to bottom, #D0C7FC,#8F83CD, #8F83CD, #7C6FBF);
-    height: 111vh;
+    height: 158vh;
   }
 
   .cadastro {
