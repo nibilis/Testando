@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Ticket</title>
+    <link rel="stylesheet" href="css-Ticket/Ticket.css">
+    <!-- Materialize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Muli:wght@700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../images/favicon (1).ico" >
+  </head>
+
+  <body>
+
+    <nav class="hide-on-med-and-down navbar-fixed" id="retanguloroxo">
+      <div class="nav-wrapper hide-on-med-and-down" id="dashboardpc">
+
+         <img class= "responsive-img" id = "logopc" src ="../images/logo.png"> <img class= "responsive-img" id = "nomelogopc" src ="../images/TestandoNome.png"> </a>
+        <ul id="nav-pc" class=" right">
+        </ul>
+
+      </div>
+    </nav>
+
+    <div class="row">
+
+          <div class="input-field col s12 l7 center-align">
+            <select>
+              <option value="" disabled selected>Escolha uma solicitação</option>
+              <option value="1">Seu site é um lixo</option>
+              <option value="2">Botão da tela de login ta feio</option>
+              <option value="3">Vocês são chatos</option>
+            </select>
+            <label>Tipo de solicitação</label>
+          </div>
+
+          <div class="input-field col s12 l7 center-align">
+            <input placeholder="Escolha o título" id="first_name" type="text" class="validate">
+            <label for="first_name">Título</label>
+          </div>
+
+          <div class="input-field col s12 l7 center-align">
+            <textarea placeholder="Descreva sua solicitação" id="textarea1" class="materialize-textarea"></textarea>
+            <label for="textarea1">Descrição</label>
+          </div>
+
+          <div class="input-field col s12 l7 center-align">
+            <form action="#">
+              <div class="file-field input-field">
+                <div class="btn">
+                  <span>Arquivo</span>
+                  <input type="file" multiple>
+                </div>
+                <div class="file-path-wrapper">
+                  <input class="file-path validate" type="text" placeholder="Anexar arquivo">
+                </div>
+              </div>
+            </form>
+            </div>
+
+            <div class="col  s12 l7 center-align" id = "Enviar">
+                <a href="https://www.youtube.com/watch?v=m2B6ayYla3g" class="waves-effect waves-light btn yellow darken-2 hoverable" id = "btnEnviar">Enviar</a>
+            </div>
+
+    </div>
+
+
+
+
+    <!-- JQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- JavaScript Materialize compilado e minificado -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+
+    $(document).ready(function(){
+    $('select').formSelect();
+  });
+
+  </script>
+
+  </body>
+
+</html>

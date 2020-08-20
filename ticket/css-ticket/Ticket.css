@@ -1,0 +1,38 @@
+
+#btnEnviar {
+  border-radius: 20px;
+  font-family: Muli;
+  text-transform: none;
+  font-size: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+#retanguloroxo {
+  -webkit-filter: drop-shadow(12px 12px 8px rgba(0, 0, 0, 0.3));
+}
+
+#nav-pc{
+  margin-right: 27%;
+  font-family: 'muli';
+  margin-top: 5.5%;
+  height: 50%;
+
+}
+
+#dashboardpc{
+  background-color: #8579C3;
+  height: 250%;
+}
+
+#logopc{
+  width: 13%;
+  margin-top: 1.7%;
+  margin-bottom: 1%;
+  margin-left: 2%;
+}
+
+#nomelogopc {
+  width: 17%;
+  margin-top: 4.5%;
+  margin-bottom: 5.5%;
+}
