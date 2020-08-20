@@ -8,89 +8,21 @@
 @media (max-width: 990px){
 
 body{
-  height: 100vh;
+  height: 115vh;
   width: auto;
   font-size: 30px;
 }
 
+.row { margin: inherit; }
+
 .linha_lateral {
-  background: linear-gradient(to bottom, #D0C7FC,#8F83CD, #8F83CD, );
-  height: 100vh;
+  background: linear-gradient(to bottom, #D0C7FC,#8F83CD, #8F83CD, #7C6FBF);
+  height: 125vh;
 }
 
 .img-logo {
-  width: 150px;
-
-  margin-left: 40%;
-}
-
-/*CAMPOS*/
-
-::-webkit-input-placeholder {
-   color: #8D8989;
-   font-size: 180%;
-   font-family: 'Muli';
-
-}
-
-#nome {
-  width: 100%;
-  font-family: 'Muli';
-}
-
-#cpf {
-  width: 80%;
-  color: #8D8989;
-  left: 13%;
-}
-
-#email {
-  width: 80%;
-  color: #8D8989;
-  left: 13%;
-}
-
-.chips-placeholder {
-  width: 80%;
-}
-
-#materia {
-  width: 80%;
-  color: #8D8989;
-  left: 13%;
-}
-
-.chips .input {
-
-  width: 80% !important; /*precisa colocar o important para tirar a formatação do materialize*/
-}
-
-#estado {
-  color: #8D8989;
-  left: 13%;
-}
-
-#cidade {
-  color: #8D8989;
-  left: 13%;
-}
-
-#endereço {
-  width: 80%;
-  color: #8D8989;
-  left: 13%;
-}
-
-#senha {
-  width: 35%;
-  color: #8D8989;
-  left: 13%;
-}
-
-#confirmasenha {
-  width: 35%;
-  color: #8D8989;
-  left: 13%;
+  width: 130px;
+  margin-left: 25%;
 }
 
 .cadastro {
@@ -98,32 +30,67 @@ body{
   border-radius: 80px 80px;
   color: whitesmoke;
   font-family: 'Muli';
-  font-size: 120%;
+  font-size: 0.7em;
   border-style: none;
   text-align: center;
   padding-left: 5%;
   padding-right: 5%;
-  padding-top: 3%;
-  padding-bottom: 3%;
-  position: relative;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  /* superior | direita | inferior | esquerda */
+  margin: 5% 0% 0% 22%;
+}
+
+/*CAMPOS*/
+::-webkit-input-placeholder {
+   color: #8D8989;
+   font-size: 110%;
+   font-family: 'Muli';
+}
+
+.chips .input {
+  width: 80% !important;
+  /*precisa colocar o important para tirar a formatação do materialize*/
 }
 
 .select-wrapper input.select-dropdown {
   color: #8D8989;
   font-family: 'Muli';
+  font-size: 0.6em;
 }
 
 .select-wrapper+label {
-    color: #8D8989;
+    color: #7C6FBF;
     font-family: 'Muli';
-    font-size: 1em;
+    font-size: 0.5em;
   }
+
+#nome {
+  width: 80%;
+  font-family: 'Muli';
+  margin-left: 5%;
+}
+
+#email{
+  width: 85%;
+  color: #8D8989;
+  margin-left: 5%;
+}
+
+#materia, #cpf, #endereço, #senha, #confirmasenha {
+  width: 80%;
+  color: #8D8989;
+  margin-left: 5%;
+}
+
+#cidade, #estado {
+  color: #8D8989;
+  margin-left: 5%;
+}
 }
 
 @media (min-width: 990px){
-  .row{
-    margin-bottom: inherit;
-  }
+  .row { margin: inherit; }
 
   .linha_lateral {
     background: linear-gradient(to bottom, #D0C7FC,#8F83CD, #8F83CD, #7C6FBF);
@@ -153,85 +120,85 @@ body{
      font-family: 'Muli';
   }
 
+  .chips-placeholder {
+    width: 90%;
+  }
+
+  .chips .input {
+      width: 80% !important; /*precisa colocar o important para tirar a formatação do materialize*/
+  }
+
+  .select-wrapper+label {
+    color: #7C6FBF;
+    font-family: 'Muli';
+    font-size: 1.5em;
+  }
+
+  .select-wrapper input.select-dropdown {
+    color: #8D8989;
+    font-family: 'Muli';
+    margin-top: 5%;
+    font-size: 2em;
+  }
+
   #nome {
-    width: 80%;
+    width: 90%;
     font-family: 'Muli';
     color: #8D8989;
-    left: 13%;
+    left: 7%;
     margin-right: -20%;
     margin-top: 4%;
   }
 
   #cpf {
-    width: 80%;
+    width: 90%;
     color: #8D8989;
-    left: 13%;
+    left: 7%;
     margin-right: -20%;
   }
 
   #email {
     width: 89.5%;
     color: #8D8989;
-    left: 13%;
+    left: 7%;
     margin-right: -20%;
-  }
-
-  .chips-placeholder {
-    width: 80%;
   }
 
   #materia {
-    width: 80%;
+    width: 90%;
     color: #8D8989;
-    left: 13%;
+    left: 7%;
     margin-right: -20%;
-  }
-
-  .chips .input {
-    width: 80% !important; /*precisa colocar o important para tirar a formatação do materialize*/
   }
 
   #estado {
     color: #8D8989;
-    left: 13%;
+    left: 7%;
   }
 
   #cidade {
     color: #8D8989;
-    left: 13%;
+    left: 7%;
   }
 
   #endereço {
-    width: 80%;
+    width: 90%;
     color: #8D8989;
-    left: 13%;
+    left: 7%;
     margin-right: -20%;
 }
 
   #senha {
-    width: 80%;
+    width: 90%;
     color: #8D8989;
-    left: 13%;
+    left: 7%;
     margin-right: -20%;
   }
 
   #confirmasenha {
-    width: 80%;
+    width: 90%;
     color: #8D8989;
-    left: 13%;
+    left: 7%;
     margin-right: -20%;
   }
-
-  .select-wrapper+label {
-      color: #7C6FBF;
-      font-family: 'Muli';
-      font-size: 1.5em;
-    }
-
-    .select-wrapper input.select-dropdown {
-      color: #8D8989;
-      font-family: 'Muli';
-      margin-top: 5%;
-      font-size: 2em;
-    }
 }
