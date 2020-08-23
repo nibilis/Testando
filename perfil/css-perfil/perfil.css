@@ -4,14 +4,16 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+body {
+  height: 150vh;
+}
 /*Dashboard para o celular*/
 #dashboardcel{
   background-color: #8579C3;
 }
 
 a {
-border-radius: 80px 80px;
+border-radius: 10px 10px;
 }
 
 #logocel{
@@ -42,7 +44,95 @@ border-radius: 80px 80px;
   width: 60%;
   position: absolute;
   margin-left: 13%;
-  margin-top: 7%
+  margin-top: 15%
+}
+
+#links_menucel {
+  position: absolute;
+  margin-top: 100%;
+}
+
+#divider {
+  margin-left: 0%;
+  width: 100%;
+  margin-top: 0px;
+}
+
+#saves,
+#document,
+#question,
+#perfil {
+  font-family: 'Muli';
+  font-size: 120%;
+  height: 5%;
+  width: 100%;
+  padding-left: 0%;
+  padding-right: 0%;
+}
+
+#amarelo_pequeno {
+  position: absolute;
+  margin-left: -8%;
+  margin-top: -8%;
+}
+
+#roxo {
+  position: absolute;
+  margin-left: 81.5%;
+  margin-top: 60%;
+}
+
+#roxo_claro {
+  position: absolute;
+  margin-left: -10%;
+  margin-top: 200%;
+}
+
+#amarelo_grande {
+  position: absolute;
+  margin-left: 62%;
+  margin-top: 240%;
+  width: 30%;
+}
+
+@media (min-width: 400px){
+
+  #logo {
+    width: 60%;
+    position: absolute;
+    margin-left: 13%;
+    margin-top: 30%
+  }
+
+  #links_menucel {
+    position: absolute;
+    margin-top: 120%;
+  }
+
+  #saves,
+  #document,
+  #question,
+  #perfil {
+    font-family: 'Muli';
+    line-height: 400%;
+    font-size: 120%;
+    height: 5%;
+    width: 100%;
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+
+  #roxo_claro {
+    position: absolute;
+    margin-left: -10%;
+    margin-top: 240%;
+  }
+
+  #amarelo_grande {
+    position: absolute;
+    margin-left: 62%;
+    margin-top: 280%;
+  }
 }
 
 
@@ -50,6 +140,7 @@ border-radius: 80px 80px;
 
 #retanguloroxo {
   -webkit-filter: drop-shadow(12px 12px 8px rgba(0, 0, 0, 0.3));
+
 }
 
 #nav-pc{
@@ -57,7 +148,6 @@ border-radius: 80px 80px;
   font-family: 'muli';
   margin-top: 5.5%;
   height: 50%;
-
 }
 
 #questao{
@@ -443,4 +533,5 @@ border-radius: 80px 80px;
       position: absolute;
       margin-left: -1%;
     }
+
 }

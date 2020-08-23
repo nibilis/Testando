@@ -24,14 +24,28 @@
       <div class= "row hide-on-large-only" id= "dashboardcel">
 
         <div class="col s2">
-          <ul id="slide-out" class="hide-on-large-only sidenav" style="width:200px;">
+          <ul id="slide-out" id="fechar" class="hide-on-large-only sidenav" style="width:200px;">
             <li><div class="user-view">
               <div class="sanduiche">
                 <img src="../images/logoTestandoNome.png" id="logo">
+                <a href="#" data-target="fechar" class="menu sidenav-trigger"><i class=" material-icons" style="position: absolute; color: #8579C3; font-size: 220%; margin-top: 0px; margin-left: 70%;">menu</i></a>
+                <img src="../images/circulo_amarelo_pequeno.png" id="amarelo_pequeno">
+                <img src="../images/circulo_roxo.png" id="roxo">
+                <img src="../images/circulo_roxo_claro.png" id="roxo_claro">
+                <img src="../images/circulo_amarelo_grande.png" id="amarelo_grande">
+                <ul id="links_menucel">
+                  <li><a id="perfil" class=" waves-effect center-align" href="#!">Perfil</a></li>
+                  <li><div id="divider" class="divider"></div></li>
+                  <li><a id="question" class=" waves-effect center-align" href="#!">Adicionar Questão</a></li>
+                  <li><div id="divider" class="divider"></div></li>
+                  <li><a id="document" class="waves-effect center-align" href="#!">Adicionar Documento</a></li>
+                  <li><div id="divider" class="divider"></div></li>
+                  <li><a id="saves" class="waves-effect center-align" href="#!">Salvos</a></li>
+                </ul>
               </div>
             </div>
           </ul>
-          <a href="#" data-target="slide-out" class="sidenav-trigger"><i class=" material-icons" style="font-size: 220%;">menu</i></a>
+          <a href="#" data-target="slide-out" class="menu sidenav-trigger"><i class=" material-icons" style="font-size: 220%;">menu</i></a>
 
         </div>
         <div class="col s1">
@@ -73,6 +87,10 @@
   $(document).ready(function(){
     $('.sidenav').sidenav();});
   </script>
+
+  <script>
+  instance.close(#fechar);
+</script>
 
     </body>
   </html>
