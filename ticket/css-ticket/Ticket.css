@@ -8,6 +8,7 @@
 /* Definições gerais (melhor não mexer)*/
 body {
   height: 100vh;
+  width: auto;
   background-size: auto 100vh;
 }
 
@@ -294,6 +295,35 @@ a {
   margin-left: 6%;
 
 }
+
+::-webkit-input-placeholder {
+   color: #8D8989;
+   font-size: 110%;
+   font-family: 'Muli';
+}
+
+.chips .input {
+  width: 80% !important;
+  /*precisa colocar o important para tirar a formatação do materialize*/
+}
+
+.select-wrapper+label {
+    color: #7C6FBF;
+    font-family: 'Muli';
+    font-size: 0.5em;
+  }
+
+  textarea.materialize-textarea {
+    color: black;
+    font-family: 'Muli';
+  }
+
+  .validate{
+    color: black;
+    font-family: 'Muli';
+  }
+
+
 
 #Ticketcel{
   margin-bottom: 20%;
