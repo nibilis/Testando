@@ -20,6 +20,37 @@ a {
 
 /* COMPUTADOR */
 
+
+::-webkit-input-placeholder {
+   color: #8D8989;
+   font-size: 110%;
+   font-family: 'Muli';
+}
+
+.chips .input {
+  width: 80% !important;
+  /*precisa colocar o important para tirar a formatação do materialize*/
+}
+
+.select-wrapper input.select-dropdown {
+  color: #8D8989;
+  font-family: 'Muli';
+  font-size: 0.6em;
+}
+
+.select-wrapper+label {
+    color: #7C6FBF;
+    font-family: 'Muli';
+    font-size: 0.5em;
+  }
+
+  textarea.materialize-textarea {
+    color: black;
+    font-family: 'Muli';
+  }
+
+
+
 #btnEnviar {
   border-radius: 20px;
   font-family: Muli;
@@ -270,6 +301,22 @@ a {
 
 /* CELULAR */
 
+.chips .input {
+  width: 80% !important;
+  /*precisa colocar o important para tirar a formatação do materialize*/
+}
+
+  textarea.materialize-textarea {
+    color: black;
+    font-family: 'Muli';
+  }
+
+  .validate{
+    color: black;
+    font-family: 'Muli';
+  }
+
+
 #dashboardcel{
   background-color: #8579C3;
   height: 150%;
@@ -280,6 +327,11 @@ a {
   margin-top: 1.8%;
   margin-bottom: 1%;
 
+}
+
+#Enviarcel{
+  margin-top: 10%;
+  margin-bottom: 15%;
 }
 
 #nomelogocel {
@@ -296,34 +348,6 @@ a {
 
 }
 
-::-webkit-input-placeholder {
-   color: #8D8989;
-   font-size: 110%;
-   font-family: 'Muli';
-}
-
-.chips .input {
-  width: 80% !important;
-  /*precisa colocar o important para tirar a formatação do materialize*/
-}
-
-.select-wrapper+label {
-    color: #7C6FBF;
-    font-family: 'Muli';
-    font-size: 0.5em;
-  }
-
-  textarea.materialize-textarea {
-    color: black;
-    font-family: 'Muli';
-  }
-
-  .validate{
-    color: black;
-    font-family: 'Muli';
-  }
-
-
 
 #Ticketcel{
   margin-bottom: 20%;
@@ -331,4 +355,135 @@ a {
   color: #695D67;
   font-size: 35px;
   font-family: 'Muli';
+}
+
+@media (max-width: 414px){
+
+  #formcel{
+
+    margin-top: 25%;
+    margin-left: 6.5%;
+
+  }
+
+  #Ticketcel{
+    margin-bottom: 20%;
+    margin-left: 15%;
+    color: #695D67;
+    font-size: 35px;
+    font-family: 'Muli';
+  }
+
+  #logocel{
+    width: 19%;
+    margin-top: 1.3%;
+    margin-bottom: 1%;
+
+  }
+
+  #nomelogocel {
+    width: 30%;
+    margin-top: 1.8%;
+    margin-bottom: 7.5%;
+    margin-left: 45%;
+  }
+
+}
+
+@media (max-width: 411px){
+
+  #formcel{
+
+    margin-top: 25%;
+    margin-left: 6.5%;
+
+  }
+
+  #Ticketcel{
+    margin-bottom: 20%;
+    margin-left: 14%;
+    color: #695D67;
+    font-size: 35px;
+    font-family: 'Muli';
+  }
+
+  #logocel{
+    width: 19%;
+    margin-top: 1.3%;
+    margin-bottom: 1%;
+
+  }
+
+  #nomelogocel {
+    width: 30%;
+    margin-top: 1.8%;
+    margin-bottom: 7.5%;
+    margin-left: 45%;
+  }
+
+}
+
+@media (max-width: 375px){
+
+  #formcel{
+
+    margin-top: 25%;
+    margin-left: 6.5%;
+
+  }
+
+  #Ticketcel{
+    margin-bottom: 20%;
+    margin-left: 14%;
+    color: #695D67;
+    font-size: 32px;
+    font-family: 'Muli';
+  }
+
+  #logocel{
+    width: 19%;
+    margin-top: 1.8%;
+    margin-bottom: 1%;
+
+  }
+
+  #nomelogocel {
+    width: 30%;
+    margin-top: 1.8%;
+    margin-bottom: 7.5%;
+    margin-left: 45%;
+  }
+}
+
+@media (max-width: 320px){
+
+  #formcel{
+
+    margin-top: 25%;
+    margin-left: 6.5%;
+
+  }
+
+  #Ticketcel{
+    margin-bottom: 20%;
+    margin-left: 8%;
+    color: #695D67;
+    font-size: 32px;
+    font-family: 'Muli';
+  }
+
+  #logocel{
+    width: 23%;
+    margin-top: 1.8%;
+    margin-bottom: 1%;
+
+  }
+
+  #nomelogocel {
+    width: 30%;
+    margin-top: 1.3%;
+    margin-bottom: 9%;
+    margin-left: 45%;
+  }
+
 }
