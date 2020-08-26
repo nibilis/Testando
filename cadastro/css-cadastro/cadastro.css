@@ -72,16 +72,16 @@ body{
   margin: 3% 0% 0% 5%;
 }
 
-#email{
-  color: #8D8989;
-  /* superior | direita | inferior | esquerda */
-  margin: 0% 0% 0% 2.8%;
-}
-
 #materia{
   color: #8D8989;
   /* superior | direita | inferior | esquerda */
   margin: 0% 0% 0% 8%;
+}
+
+#email{
+  color: #8D8989;
+  /* superior | direita | inferior | esquerda */
+  margin: 0% 0% 0% 2.8%;
 }
 
 #cpf, #endereço, #senha, #confirmasenha {
@@ -98,12 +98,22 @@ body{
 }
 }
 
+@media (min-width: 400px){
+  .row { margin: inherit; }
+  body{ height: 145vh; }
+  .linha_lateral {
+    background: linear-gradient(to bottom, #D0C7FC,#8F83CD, #8F83CD, #7C6FBF);
+    height: 145vh;
+  }
+}
+
 @media (min-width: 990px){
   .row { margin: inherit; }
+  body { height: 115vh; }
 
   .linha_lateral {
     background: linear-gradient(to bottom, #D0C7FC,#8F83CD, #8F83CD, #7C6FBF);
-    height: 158vh;
+    height: 115vh;
   }
 
   .cadastro {
@@ -155,29 +165,25 @@ body{
     font-family: 'Muli';
     color: #8D8989;
     left: 7%;
-    margin-right: -20%;
-    margin-top: 4%;
+    margin-top: 7%;
   }
 
   #cpf {
     width: 90%;
     color: #8D8989;
     left: 7%;
-    margin-right: -20%;
-  }
-
-  #email {
-    width: 89.5%;
-    color: #8D8989;
-    left: 7%;
-    margin-right: -20%;
   }
 
   #materia {
     width: 90%;
     color: #8D8989;
     left: 7%;
-    margin-right: -20%;
+  }
+
+  #email {
+    width: 89.5%;
+    color: #8D8989;
+    left: 7%;
   }
 
   #estado {
@@ -194,20 +200,28 @@ body{
     width: 90%;
     color: #8D8989;
     left: 7%;
-    margin-right: -20%;
 }
 
   #senha {
     width: 90%;
     color: #8D8989;
     left: 7%;
-    margin-right: -20%;
   }
 
   #confirmasenha {
     width: 90%;
     color: #8D8989;
     left: 7%;
-    margin-right: -20%;
+  }
+}
+
+@media (min-width: 1200px){
+  .row { margin: inherit; }
+
+  body { height: 110vh; }
+
+  .linha_lateral {
+    background: linear-gradient(to bottom, #D0C7FC,#8F83CD, #8F83CD, #7C6FBF);
+    height: 110vh;
   }
 }

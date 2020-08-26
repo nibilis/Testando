@@ -38,14 +38,14 @@
   <input class="flow-text validate" placeholder="CPF" id="numero" type="number" data-length="11" >
 </div>
 
+<div class="input-field col s9 l8" id="materia">
+    <div class="chips-placeholder validate" type="text"></div>
+</div>
+
 <div class="input-field col s9 l10 " id="email">
   <!-- <input class="flow-text" id="email" placeholder="E-mail" type="email" class="validate" style="font-size: 75%;">
    <label data-error="E-mail inválido" for="email"></label>-->
     <input class="flow-text validate" placeholder="E-mail" id="email" type="email">
-</div>
-
-<div class="input-field col s9 l10" id="materia">
-    <div class="chips-placeholder validate" type="text"></div>
 </div>
 
 <div class="input-field col s8 l4" id="estado">
@@ -141,8 +141,8 @@
 <!-- INICIALIZAÇÃO DO CAMPO "MATERIAS QUE LECIONA" -->
 <script>
 $('#materia').chips({
-   placeholder:'Materias que leciona',
-   secondaryPlaceholder: '+Materia',
+   placeholder:'Matérias que leciona',
+   secondaryPlaceholder:'+Matéria',
  });
 
 
