@@ -8,7 +8,7 @@
 @media (max-width: 990px){
 
 body{
-  height: 140vh;
+  height: 135vh;
   width: auto;
   font-size: 30px;
 }
@@ -17,12 +17,12 @@ body{
 
 .linha_lateral {
   background: linear-gradient(to bottom, #D0C7FC,#8F83CD, #8F83CD, #7C6FBF);
-  height: 140vh;
+  height: 135vh;
 }
 
 .img-logo {
   width: 130px;
-  margin-left: 25%;
+  margin-left: 20%;
 }
 
 .cadastro {
@@ -30,7 +30,7 @@ body{
   border-radius: 80px 80px;
   color: whitesmoke;
   font-family: 'Muli';
-  font-size: 0.7em;
+  font-size: 0.5em;
   border-style: none;
   text-align: center;
   padding-left: 5%;
@@ -110,6 +110,11 @@ body{
 @media (min-width: 990px){
   .row { margin: inherit; }
   body { height: 115vh; }
+
+  .img-logo{
+    width: 200px;
+
+  }
 
   .linha_lateral {
     background: linear-gradient(to bottom, #D0C7FC,#8F83CD, #8F83CD, #7C6FBF);

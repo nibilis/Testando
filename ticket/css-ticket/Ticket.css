@@ -20,9 +20,9 @@ a {
 
 /* COMPUTADOR */
 
-
+/*CAMPOS*/
 ::-webkit-input-placeholder {
-   color: #8D8989;
+   color: #8D8989 !important;
    font-size: 110%;
    font-family: 'Muli';
 }
@@ -39,17 +39,21 @@ a {
 }
 
 .select-wrapper+label {
-    color: #7C6FBF;
+    color: #8D8989;
     font-family: 'Muli';
     font-size: 0.5em;
   }
+
+
 
   textarea.materialize-textarea {
     color: black;
     font-family: 'Muli';
   }
 
+#titulopc{
 
+}
 
 #btnEnviar {
   border-radius: 20px;
