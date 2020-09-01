@@ -24,11 +24,16 @@
       <div class= "row hide-on-large-only" id= "dashboardcel">
 
         <div class="col s2">
-          <ul id="slide-out" id="fechar" class="hide-on-large-only sidenav" style="width:200px;">
+          <ul id="slide-out" class="hide-on-large-only sidenav" style="width:200px;">
             <li><div class="user-view">
               <div class="sanduiche">
                 <img src="../images/logoTestandoNome.png" id="logo">
-                <a href="#" data-target="fechar" class="menu sidenav-trigger"><i class=" material-icons" style="position: absolute; color: #8579C3; font-size: 220%; margin-top: 0px; margin-left: 70%;">menu</i></a>
+
+                <ul id="slide-out" class="sidenavClose">
+      <li><a class="sidenav-close" href="#!"><i class="material-icons" style="position: absolute; color: green; font-size: 220%;">menu</i></a></li>
+  </ul>
+  <a href="#" data-target="slide-out" class="sidenav-trigger"></a>
+
                 <img src="../images/circulo_amarelo_pequeno.png" id="amarelo_pequeno">
                 <img src="../images/circulo_roxo.png" id="roxo">
                 <img src="../images/circulo_roxo_claro.png" id="roxo_claro">
@@ -68,9 +73,9 @@
             <ul id="nav-pc" class=" right">
               <li><a href="addquestao.html" id= "questao" >Adicionar <br> questão</a></li>
               <li><a href="adddocumento.html" id= "documento">Adicionar <br> documento</a>
-                <img class= "responsive-img" id = "linha1" src ="../images/linha.png" style= "margin-bottom: 12%"></li>
+                <img class= "responsive-img" id = "linha1" src ="../images/linha.png"></li>
               <li><a href="salvos.html" id= "salvos">Salvos</a>
-                 <img class= "responsive-img" id = "linha2" src ="../images/linha.png" style= "margin-bottom: 32%"></li>
+                 <img class= "responsive-img" id = "linha2" src ="../images/linha.png"></li>
             </ul>
 
           </div>
@@ -90,7 +95,7 @@
   </script>
 
   <script>
-  instance.close(#fechar);
+  instance.close();
 </script>
 
     </body>
