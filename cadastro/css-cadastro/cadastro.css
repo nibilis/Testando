@@ -108,17 +108,19 @@ body{
 }
 
 @media (min-width: 990px){
-  .row { margin: inherit; }
   body { height: 115vh; }
+
+
 
   .img-logo{
     width: 200px;
-
+    margin-top: 3%;
+    margin-left: 37%;
   }
 
   .linha_lateral {
     background: linear-gradient(to bottom, #D0C7FC,#8F83CD, #8F83CD, #7C6FBF);
-    height: 115vh;
+    height: 170vh;
   }
 
   .cadastro {
@@ -129,12 +131,12 @@ body{
     font-size: 1.7em;
     border-style: none;
     text-align: center;
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-top: 2%;
-    padding-bottom: 2%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    padding-top: 1%;
+    padding-bottom: 1%;
     /* superior | direita | inferior | esquerda */
-    margin: 5% 0% 0% 36.5%;
+    margin: 7% 0% 0% 36.5%;
   }
 
   /*CAMPOS*/
@@ -144,9 +146,6 @@ body{
      font-family: 'Muli';
   }
 
-  .chips-placeholder {
-    width: 90%;
-  }
 
   .chips .input {
       width: 80% !important; /*precisa colocar o important para tirar a formatação do materialize*/
@@ -165,68 +164,112 @@ body{
     font-size: 2em;
   }
 
-  #nome {
-    width: 90%;
-    font-family: 'Muli';
-    color: #8D8989;
-    left: 7%;
-    margin-top: 7%;
-  }
-
-  #cpf {
-    width: 90%;
-    color: #8D8989;
-    left: 7%;
-  }
-
-  #materia {
-    width: 90%;
-    color: #8D8989;
-    left: 7%;
-  }
-
-  #email {
-    width: 89.5%;
-    color: #8D8989;
-    left: 7%;
-  }
-
-  #estado {
-    color: #8D8989;
-    left: 7%;
-  }
-
-  #cidade {
-    color: #8D8989;
-    left: 7%;
-  }
-
-  #endereço {
-    width: 90%;
-    color: #8D8989;
-    left: 7%;
+#nome, #materia, #cpf, #endereço, #senha, #confirmasenha, #estado{
+  margin-left: 12%;
+  margin-top: 3%;
+}
+#nome{
+  margin-top: 5%;
 }
 
-  #senha {
-    width: 90%;
-    color: #8D8989;
-    left: 7%;
-  }
-
-  #confirmasenha {
-    width: 90%;
-    color: #8D8989;
-    left: 7%;
-  }
+#cidade{
+  margin-top: 3%;
 }
 
-@media (min-width: 1200px){
+#email{
+  margin-left: 7%;
+  margin-top: 3%;
+}
+
+
+}
+
+
+
+@media (min-width: 1280px){
   .row { margin: inherit; }
 
   body { height: 110vh; }
 
   .linha_lateral {
     background: linear-gradient(to bottom, #D0C7FC,#8F83CD, #8F83CD, #7C6FBF);
-    height: 110vh;
+    height: 180vh;
   }
+
+  .img-logo{
+    width: 220px;
+    margin-top: 3%;
+    margin-left: 37%;
+  }
+
+}
+
+@media (min-height: 1000px)
+{
+  .row { margin: inherit; }
+
+  body { height: 110vh; }
+
+  .linha_lateral {
+    background: linear-gradient(to bottom, #D0C7FC,#8F83CD, #8F83CD, #7C6FBF);
+    height: 140vh;
+  }
+
+}
+
+@media (min-height: 765px)
+{
+  .row { margin: inherit; }
+
+  body { height: 110vh; }
+
+  .linha_lateral {
+    background: linear-gradient(to bottom, #D0C7FC,#8F83CD, #8F83CD, #7C6FBF);
+    height: 190vh;
+  }
+
+}
+
+
+@media (min-height: 900px)
+{
+  .row { margin: inherit; }
+
+  body { height: 110vh; }
+
+  .linha_lateral {
+    background: linear-gradient(to bottom, #D0C7FC,#8F83CD, #8F83CD, #7C6FBF);
+    height: 175vh;
+  }
+
+}
+
+
+@media (min-height: 1080px)
+{
+  .row { margin: inherit; }
+
+  .img-logo{
+    width: 300px;
+    margin-top: 3%;
+    margin-left: 37%;
+  }
+
+  body { height: 110vh; }
+
+  .linha_lateral {
+    background: linear-gradient(to bottom, #D0C7FC,#8F83CD, #8F83CD, #7C6FBF);
+    height: 155vh;
+  }
+
+}
+
+@media (min-width: 1600px){
+
+  .img-logo{
+    width: 250px;
+    margin-top: 3%;
+    margin-left: 37%;
+  }
+
 }
