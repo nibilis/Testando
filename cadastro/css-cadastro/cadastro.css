@@ -65,47 +65,198 @@ body{
     font-size: 0.5em;
   }
 
-#nome {
-  width: 80%;
-  font-family: 'Muli';
-  /* superior | direita | inferior | esquerda */
-  margin: 3% 0% 0% 5%;
 }
 
-#materia{
-  color: #8D8989;
-  /* superior | direita | inferior | esquerda */
-  margin: 0% 0% 0% 8%;
-}
 
-#email{
-  color: #8D8989;
-  /* superior | direita | inferior | esquerda */
-  margin: 0% 0% 0% 2.8%;
-}
+@media (min-width: 320px){
 
-#cpf, #endereço, #senha, #confirmasenha {
-  width: 80%;
-  color: #8D8989;
-  /* superior | direita | inferior | esquerda */
-  margin: 0% 0% 0% 5%;
-}
 
-#cidade, #estado {
-  color: #8D8989;
-  /* superior | direita | inferior | esquerda */
-  margin: 10% 0% 0% 5%;
-}
-}
+  #nome, #cpf, #endereço, #senha, #confirmasenha, #estado{
+    margin-left: 3%;
+    margin-top: 2%;
+  }
+  #confirmasenha{
+    margin-top: -2%;
+    width: 83%;
+  }
 
-@media (min-width: 400px){
-  .row { margin: inherit; }
-  body{ height: 145vh; }
-  .linha_lateral {
-    background: linear-gradient(to bottom, #D0C7FC,#8F83CD, #8F83CD, #7C6FBF);
-    height: 145vh;
+  #senha{
+    margin-top: -2%;
+    width: 83%;
+  }
+
+  #nome
+  {
+    width: 82%;
+  }
+
+  #cpf{
+    margin-top: -2%;
+    width: 81%;
+  }
+
+  #materia{
+    margin-top: -2%;
+    margin-left: 7%;
+    width: 75%;
+  }
+
+  #nome{
+    margin-top: 5%;
+  }
+
+  #cidade{
+    margin-top: 3%;
+    margin-left: 3%;
+    width: 84%;
+  }
+
+  #email{
+    margin-left: 1.5%;
+    width: 90%;
+    margin-top: 1%;
+  }
+
+  #endereço{
+    margin-top: -2%;
+    width: 83%;
+  }
+
+
+
+  .cadastro {
+    text-decoration: none;
+    border-radius: 80px 80px;
+    color: whitesmoke;
+    font-family: 'Muli';
+    font-size: 0.5em;
+    border-style: none;
+    text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    /* superior | direita | inferior | esquerda */
+    margin: 5% 0% 0% 30%;
+  }
+
+  .img-logo {
+    width: 130px;
+    margin-left: 25%;
   }
 }
+
+@media (min-width: 375px){
+
+  .img-logo {
+    width: 130px;
+    margin-left: 27%;
+  }
+
+  .linha_lateral {
+    background: linear-gradient(to bottom, #D0C7FC,#8F83CD, #8F83CD, #7C6FBF);
+    height: 100vh;
+  }
+}
+
+@media (min-width: 360px){
+
+  .img-logo {
+    width: 130px;
+    margin-left: 27%;
+  }
+}
+
+@media (min-width: 411px){
+
+  .img-logo {
+    width: 130px;
+    margin-left: 30%;
+  }
+}
+
+@media (min-height: 568px){
+
+  .img-logo {
+    width: 130px;
+    margin-left: 27%;
+  }
+
+  .linha_lateral {
+    background: linear-gradient(to bottom, #D0C7FC,#8F83CD, #8F83CD, #7C6FBF);
+    height: 155vh;
+  }
+}
+
+@media (min-height: 640px){
+
+  .linha_lateral {
+    background: linear-gradient(to bottom, #D0C7FC,#8F83CD, #8F83CD, #7C6FBF);
+    height: 140vh;
+  }
+}
+
+    @media (min-height: 731px){
+
+    .linha_lateral {
+      background: linear-gradient(to bottom, #D0C7FC,#8F83CD, #8F83CD, #7C6FBF);
+      height: 150vh;
+    }
+
+    #nome, #cpf, #endereço, #senha, #confirmasenha, #estado{
+      margin-left: 3%;
+      margin-top: 4%;
+    }
+    #confirmasenha{
+      width: 83%;
+    }
+
+    #senha{
+      width: 83%;
+    }
+
+    #nome
+    {
+      width: 82%;
+    }
+
+    #cpf{
+      width: 81%;
+    }
+
+    #materia{
+      margin-top: 4%;
+      margin-left: 7%;
+      width: 75%;
+    }
+
+    #nome{
+      margin-top: 5%;
+    }
+
+    #cidade{
+      margin-top: 8%;
+      margin-left: 3%;
+      width: 84%;
+    }
+
+    #estado{
+      margin-top: 8%;
+    }
+
+    #email{
+      margin-left: 1.5%;
+      width: 90%;
+      margin-top: 4%;
+    }
+
+    #endereço{
+      width: 83%;
+    }
+}
+
+
+/*computador*/
 
 @media (min-width: 990px){
   body { height: 115vh; }
