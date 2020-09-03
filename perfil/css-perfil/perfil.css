@@ -141,7 +141,14 @@ border-radius: 10px 10px;
 
 #retanguloroxo {
   -webkit-filter: drop-shadow(12px 12px 8px rgba(0, 0, 0, 0.3));
+}
 
+#perfil {
+  width: 10%;
+  height: 95%;
+  position: absolute;
+  margin-right: -20%;
+  margin-top: -5%;
 }
 
 #nav-pc{
@@ -187,7 +194,6 @@ border-radius: 10px 10px;
 
 #linha2{
   height: 65%;
-  width: 0.175%;
   margin-top: -4%;
   position: absolute;
   margin-left: -7%;
