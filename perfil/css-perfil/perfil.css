@@ -12,6 +12,10 @@ body {
   background-color: #8579C3;
 }
 
+#oi {
+ -webkit-filter: drop-shadow(12px 8px 6px rgba(0, 0, 0, 0.3));
+}
+
 a {
 border-radius: 10px 10px;
 }
@@ -578,6 +582,13 @@ border-radius: 10px 10px;
     position: absolute;
     margin-left: -10%;
   }
+}
 
+/*TELA DE PERFIL*/
 
+#img-perfil {
+  width: 25%;
+
+  margin-left: 5%;
+  margin-top: 10%;
 }
