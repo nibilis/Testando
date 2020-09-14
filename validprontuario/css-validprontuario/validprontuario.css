@@ -1,18 +1,412 @@
 #barrapesq{
   background-color: white;
+  margin-left: 25%;
+  margin-top: 3%;
 }
 
 
 #botaopesq{
   margin-left: 1%;
-  border-radius: 2000px;
+  border-radius: 5000px;
   color: black;
   height: 3%;
-  width: 4%;
+  width: 4.2%;
 }
 
 #icone{
 
-  padding-left: -5%;
+  margin-left: -30%;
+
+}
+
+#botaoadd{
+
+  float: left;
+  margin-left: 20%;
+  margin-top: -3%;
+}
+
+@media (min-width: 320px){
+
+  #barrapesq{
+    background-color: white;
+    margin-left: 25%;
+    margin-top: 3%;
+  }
+
+
+  #botaopesq{
+    margin-left: 1%;
+    border-radius: 5000px;
+    color: black;
+    height: 3%;
+    width: 8%;
+  }
+
+  #icone{
+
+    margin-left: -30%;
+
+  }
+
+  #botaoadd{
+
+    float: left;
+    margin-left: 18%;
+    margin-top: -5.3%;
+  }
+
+}
+
+@media (min-width: 360px){
+
+  #barrapesq{
+    background-color: white;
+    margin-left: 25%;
+    margin-top: 3%;
+  }
+
+
+  #botaopesq{
+    margin-left: 5%;
+    border-radius: 5000px;
+    color: black;
+    size: 20%;
+  }
+
+  #icone{
+
+    margin-left: -30%;
+
+  }
+
+  #botaoadd{
+
+    float: left;
+    margin-left: 10%;
+    margin-top: -13%;
+  }
+
+}
+
+@media (min-width: 375px){
+
+  #barrapesq{
+    background-color: white;
+    margin-left: 25%;
+    margin-top: 3%;
+  }
+
+
+  #botaopesq{
+    margin-left: 1%;
+    border-radius: 5000px;
+    color: black;
+    height: 3%;
+    width: 8%;
+  }
+
+  #icone{
+
+    margin-left: -30%;
+
+  }
+
+  #botaoadd{
+
+    float: left;
+    margin-left: 18%;
+    margin-top: -5.3%;
+  }
+
+}
+
+@media (min-width: 411px){
+
+  #barrapesq{
+    background-color: white;
+    margin-left: 25%;
+    margin-top: 3%;
+  }
+
+
+  #botaopesq{
+    margin-left: 1%;
+    border-radius: 5000px;
+    color: black;
+    height: 3%;
+    width: 8%;
+  }
+
+  #icone{
+
+    margin-left: -30%;
+
+  }
+
+  #botaoadd{
+
+    float: left;
+    margin-left: 18%;
+    margin-top: -5.3%;
+  }
+
+}
+
+@media (min-width: 414px){
+
+  #barrapesq{
+    background-color: white;
+    margin-left: 25%;
+    margin-top: 3%;
+  }
+
+
+  #botaopesq{
+    margin-left: 1%;
+    border-radius: 5000px;
+    color: black;
+    height: 3%;
+    width: 8%;
+  }
+
+  #icone{
+
+    margin-left: -30%;
+
+  }
+
+  #botaoadd{
+
+    float: left;
+    margin-left: 18%;
+    margin-top: -5.3%;
+  }
+
+}
+
+@media (min-width: 1024px){
+
+  #barrapesq{
+    background-color: white;
+    margin-left: 25%;
+    margin-top: 3%;
+  }
+
+
+  #botaopesq{
+    margin-left: 1%;
+    border-radius: 5000px;
+    color: black;
+    height: 3%;
+    width: 8%;
+  }
+
+  #icone{
+
+    margin-left: -30%;
+
+  }
+
+  #botaoadd{
+
+    float: left;
+    margin-left: 18%;
+    margin-top: -5.3%;
+  }
+
+}
+
+
+@media (min-width: 1280px){
+
+  #barrapesq{
+    background-color: white;
+    margin-left: 25%;
+    margin-top: 3%;
+  }
+
+
+  #botaopesq{
+    margin-left: 1%;
+    border-radius: 5000px;
+    color: black;
+    height: 3%;
+    width: 4.2%;
+  }
+
+  #icone{
+
+    margin-left: -30%;
+
+  }
+
+  #botaoadd{
+
+    float: left;
+    margin-left: 20%;
+    margin-top: -4.5%;
+  }
+
+}
+
+
+@media (min-width: 1366px){
+
+  #barrapesq{
+    background-color: white;
+    margin-left: 25%;
+    margin-top: 3%;
+  }
+
+
+  #botaopesq{
+    margin-left: 1%;
+    border-radius: 5000px;
+    color: black;
+    height: 3%;
+    width: 6%;
+  }
+
+  #icone{
+
+    margin-left: -30%;
+
+  }
+
+  #botaoadd{
+
+    float: left;
+    margin-left: 20%;
+    margin-top: -4%;
+  }
+
+}
+
+@media (min-width: 1440px){
+
+  #barrapesq{
+    background-color: white;
+    margin-left: 25%;
+    margin-top: 3%;
+  }
+
+
+  #botaopesq{
+    margin-left: 1%;
+    border-radius: 5000px;
+    color: black;
+    height: 3%;
+    width: 5.6%;
+  }
+
+  #icone{
+
+    margin-left: -30%;
+
+  }
+
+  #botaoadd{
+
+    float: left;
+    margin-left: 20%;
+    margin-top: -4%;
+  }
+
+}
+
+@media (min-width: 1600px){
+
+  #barrapesq{
+    background-color: white;
+    margin-left: 25%;
+    margin-top: 3%;
+  }
+
+
+  #botaopesq{
+    margin-left: 1%;
+    border-radius: 5000px;
+    color: black;
+    height: 3%;
+    width: 5%;
+  }
+
+  #icone{
+
+    margin-left: -30%;
+
+  }
+
+  #botaoadd{
+
+    float: left;
+    margin-left: 20%;
+    margin-top: -4%;
+  }
+
+}
+
+@media (min-width: 1680px){
+
+  #barrapesq{
+    background-color: white;
+    margin-left: 25%;
+    margin-top: 3%;
+  }
+
+
+  #botaopesq{
+    margin-left: 1%;
+    border-radius: 5000px;
+    color: black;
+    height: 3%;
+    width: 5%;
+  }
+
+  #icone{
+
+    margin-left: -30%;
+
+  }
+
+  #botaoadd{
+
+    float: left;
+    margin-left: 20%;
+    margin-top: -3.5%;
+  }
+
+}
+
+@media (min-width: 1920px){
+
+  #barrapesq{
+    background-color: white;
+    margin-left: 25%;
+    margin-top: 3%;
+  }
+
+
+  #botaopesq{
+    margin-left: 1%;
+    border-radius: 5000px;
+    color: black;
+    height: 3%;
+    width: 4.2%;
+  }
+
+  #icone{
+
+    margin-left: -30%;
+
+  }
+
+  #botaoadd{
+
+    float: left;
+    margin-left: 20%;
+    margin-top: -3%;
+  }
 
 }
