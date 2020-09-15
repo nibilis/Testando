@@ -24,7 +24,9 @@
   margin-top: -3%;
 }
 
-@media (min-width: 320px){
+/*CELULAR*/
+
+@media (max-width: 320px){
 
   #barrapesq{
     background-color: white;
@@ -33,20 +35,24 @@
   }
 
   #botaopesq{
+    margin-top: 5%;
+    margin-left: 5%;
     border-radius: 5000px;
     color: black;
     height: 3%;
-    width: 8%;
+    width: 27%;
   }
 
   #icone{
-    margin-left: -30%;
+
+    margin-left: -15%;
+
   }
 
   #botaoadd{
     float: left;
-    margin-left: 18%;
-    margin-top: -5.3%;
+    margin-left: 8%;
+    margin-top: -17%;
   }
 
   #campos{
@@ -58,7 +64,7 @@
   }
 }
 
-@media (min-width: 360px){
+@media (max-width: 360px){
 
   #barrapesq{
     background-color: white;
@@ -68,15 +74,16 @@
 
 
   #botaopesq{
+    margin-top: 5%;
     margin-left: 5%;
     border-radius: 5000px;
     color: black;
-    size: 20%;
+    Width: 24%;
   }
 
   #icone{
 
-    margin-left: -30%;
+    margin-left: -15%;
 
   }
 
@@ -84,12 +91,12 @@
 
     float: left;
     margin-left: 10%;
-    margin-top: -13%;
+    margin-top: -16%;
   }
 
 }
 
-@media (min-width: 375px){
+@media (max-width: 375px){
 
   #barrapesq{
     background-color: white;
@@ -99,29 +106,28 @@
 
 
   #botaopesq{
-    margin-left: 1%;
+    margin-left: 4%;
     border-radius: 5000px;
     color: black;
     height: 3%;
-    width: 8%;
+    width: 23%;
   }
 
   #icone{
 
-    margin-left: -30%;
-
+    margin-left: -15
   }
 
   #botaoadd{
 
     float: left;
-    margin-left: 18%;
-    margin-top: -5.3%;
+    margin-left: 10%;
+    margin-top: -15%;
   }
 
 }
 
-@media (min-width: 411px){
+@media (max-width: 411px){
 
   #barrapesq{
     background-color: white;
@@ -131,29 +137,29 @@
 
 
   #botaopesq{
-    margin-left: 1%;
+    margin-left: 3%;
     border-radius: 5000px;
     color: black;
     height: 3%;
-    width: 8%;
+    width: 20%;
   }
 
   #icone{
 
-    margin-left: -30%;
+    margin-left: -20%;
 
   }
 
   #botaoadd{
 
     float: left;
-    margin-left: 18%;
-    margin-top: -5.3%;
+    margin-left: 11%;
+    margin-top: -14%;
   }
 
 }
 
-@media (min-width: 414px){
+@media (max-width: 414px){
 
   #barrapesq{
     background-color: white;
@@ -163,27 +169,31 @@
 
 
   #botaopesq{
-    margin-left: 1%;
+    margin-top: -2%
+    margin-left: 4%;
     border-radius: 5000px;
     color: black;
     height: 3%;
-    width: 8%;
+    width: 21%;
   }
 
   #icone{
 
-    margin-left: -30%;
+    margin-left: -15%;
 
   }
 
   #botaoadd{
 
     float: left;
-    margin-left: 18%;
-    margin-top: -5.3%;
+    margin-left: 11%;
+    margin-top: -14%;
   }
 
 }
+
+
+/*COMPUTADOR*/
 
 @media (min-width: 1024px){
 
@@ -217,7 +227,6 @@
 
 }
 
-
 @media (min-width: 1280px){
 
   #barrapesq{
@@ -249,7 +258,6 @@
   }
 
 }
-
 
 @media (min-width: 1366px){
 
