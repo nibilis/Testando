@@ -9,11 +9,8 @@ body {
 }
 /*Dashboard para o celular*/
 #dashboardcel{
-  background-color: #8579C3;
-}
+background-color: #8579C3;
 
-#oi {
- -webkit-filter: drop-shadow(12px 8px 6px rgba(0, 0, 0, 0.3));
 }
 
 a {
@@ -584,11 +581,63 @@ border-radius: 10px 10px;
   }
 }
 
-/*TELA DE PERFIL*/
+/*TELA DE PERFIL CELULAR*/
 
 #img-perfil {
   width: 25%;
-
   margin-left: 5%;
-  margin-top: 10%;
+  margin-top: 6%;
+}
+
+#nome-perfil {
+  font-family: 'Muli';
+  font-size: 100%;
+  color: #8D8D8D;
+  position: absolute;
+  float: left;
+  margin-top: -24%;
+  margin-left: 35%;
+}
+
+span {
+  color: black;
+}
+
+#materia-perfil {
+  font-family: 'Muli';
+  font-size: 100%;
+  color: #8D8D8D;
+  float: left;
+  margin-top: 1%;
+  margin-left: 5%;
+}
+
+#sair {
+  font-family: 'Muli';
+  font-size: 100%;
+  position: absolute;
+  margin-top: 50%;
+  color: #DD636E;
+  margin-left: -15%;
+}
+
+#sair2 {
+  color: #DD636E;
+  margin-left: -100%;
+  margin-top: -10%;
+  position: absolute;
+}
+
+#divisão {
+  margin-top: 30%;
+  style: none;
+  width: 90%;
+  margin-left: 5%;
+  background-color: #8B8B8B;
+}
+
+#compartilhar {
+  width: 25%;
+  margin-left: 10%;
+  margin-top: 5%;
 }

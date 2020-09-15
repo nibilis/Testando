@@ -57,7 +57,7 @@
         </div>
         <div class="col s1">
         </div>
-        <div class="col s4" id="oi">
+        <div class="col s4" >
           <img class= "responsive-img" id = "nomelogocel" src ="../images/TestandoNome.png">
         </div>
         <div class="col s3">
@@ -81,10 +81,34 @@
         </nav>
       </div>
 
-      <!--TELA DE PERFIL-->
+      <!--TELA DE PERFIL CELULAR-->
 
       <div>
         <img class= "responsive-img" id = "img-perfil" src ="../images/Icone.png"></li>
+        <p id="nome-perfil"> Nome: <span>Vinícius de Oliveira Bithencourt dos Santos Silva Barbosa</span> </p>
+        <p id="materia-perfil"> Matérias que leciona: <span>Matemática, Filosofia, Sociologia </span> </p>
+        <a id="sair" href="../login/indexLogin.html"><i class="material-icons" id="sair2">exit_to_app</i> Sair </a>
+      </div>
+
+      <div>
+        <div id="divisão" class="divider" ></div>
+        <img class= "responsive-img" id = "compartilhar" src ="../images/compartilhar.png"></li>
+
+        <!-- Modal Trigger -->
+          <a class="waves-effect waves-light modal-trigger" href="#comp">Compartilhar</a>
+
+          <!-- Modal Structure -->
+          <div id="comp" class="modal">
+            <div class="modal-content">
+              
+              <h6 style="text-align: center;"><b>Link do tutorial no Youtube</b></h6>
+              <p style="text-align: center; margin-top: 10%;">https://youtu.be/Z9jrIKcTwxU</p>
+            </div>
+            <div class="modal-footer">
+              <a href="#!" id="copiar"class="modal-close waves-effect waves-green btn-flat">Copiar</a>
+              <a href="https://youtu.be/Z9jrIKcTwxU" class="modal-close waves-effect waves-green btn-flat">Acessar</a>
+            </div>
+          </div>
 
       </div>
 
@@ -103,6 +127,20 @@
   <script>
   instance.close();
 </script>
+
+
+<script>
+//POP UP TUTORIAL
+
+    $(document).ready(function(){
+    $('.modal').modal();
+    });
+</script>
+
+  <script>
+
+  </script>
+
 
     </body>
   </html>
