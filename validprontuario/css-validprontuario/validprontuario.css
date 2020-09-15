@@ -14,13 +14,11 @@
 }
 
 #icone{
-
   margin-left: -30%;
 
 }
 
 #botaoadd{
-
   float: left;
   margin-left: 20%;
   margin-top: -3%;
@@ -34,9 +32,7 @@
     margin-top: 3%;
   }
 
-
   #botaopesq{
-    margin-left: 1%;
     border-radius: 5000px;
     color: black;
     height: 3%;
@@ -44,18 +40,22 @@
   }
 
   #icone{
-
     margin-left: -30%;
-
   }
 
   #botaoadd{
-
     float: left;
     margin-left: 18%;
     margin-top: -5.3%;
   }
 
+  #campos{
+    background-color: green;
+  }
+
+  #nome, #prontuario, #cpf{
+    width: 32.5%;
+  }
 }
 
 @media (min-width: 360px){
