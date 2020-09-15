@@ -6,11 +6,9 @@
 
 
 #botaopesq{
+  background-color: #7C6FBF;
   margin-left: 1%;
-  border-radius: 5000px;
   color: black;
-  height: 3%;
-  width: 4.2%;
 }
 
 #icone{
@@ -21,7 +19,18 @@
 #botaoadd{
   float: left;
   margin-left: 20%;
-  margin-top: -3%;
+}
+
+#nome, #prontuario, #cpf{
+  margin-top: 5%;
+  width: 30%;
+}
+
+#nome { margin-left: 3%; }
+
+::-webkit-input-placeholder {
+   text-align: center;
+   font-family: 'Muli';
 }
 
 /*CELULAR*/
@@ -37,31 +46,15 @@
   #botaopesq{
     margin-top: 5%;
     margin-left: 5%;
-    border-radius: 5000px;
-    color: black;
-    height: 3%;
-    width: 27%;
   }
 
-  #icone{
-
-    margin-left: -15%;
-
-  }
+  #icone { margin-left: -15%; }
 
   #botaoadd{
     float: left;
     margin-left: 8%;
-    margin-top: -17%;
   }
 
-  #campos{
-    background-color: green;
-  }
-
-  #nome, #prontuario, #cpf{
-    width: 32.5%;
-  }
 }
 
 @media (max-width: 360px){
@@ -81,14 +74,9 @@
     Width: 24%;
   }
 
-  #icone{
-
-    margin-left: -15%;
-
-  }
+  #icone { margin-left: -15%; }
 
   #botaoadd{
-
     float: left;
     margin-left: 10%;
     margin-top: -16%;
@@ -113,18 +101,15 @@
     width: 23%;
   }
 
-  #icone{
-
-    margin-left: -15
-  }
+  #icone { margin-left: -15; }
 
   #botaoadd{
-
     float: left;
     margin-left: 10%;
     margin-top: -15%;
   }
 
+  #nome { margin-left: 3.5%; }
 }
 
 @media (max-width: 411px){
@@ -144,14 +129,9 @@
     width: 20%;
   }
 
-  #icone{
-
-    margin-left: -20%;
-
-  }
+  #icone { margin-left: -20%; }
 
   #botaoadd{
-
     float: left;
     margin-left: 11%;
     margin-top: -14%;
@@ -177,14 +157,9 @@
     width: 21%;
   }
 
-  #icone{
-
-    margin-left: -15%;
-
-  }
+  #icone { margin-left: -15%; }
 
   #botaoadd{
-
     float: left;
     margin-left: 11%;
     margin-top: -14%;
@@ -212,11 +187,7 @@
     width: 8%;
   }
 
-  #icone{
-
-    margin-left: -30%;
-
-  }
+  #icone { margin-left: -30%; }
 
   #botaoadd{
 
@@ -224,7 +195,15 @@
     margin-left: 18%;
     margin-top: -5.3%;
   }
+  #nome {
+    margin-left: 12.5%;
+    width: 45%;
+  }
 
+  #prontuario, #cpf{
+    margin-top: 5%;
+    width: 15%;
+  }
 }
 
 @media (min-width: 1280px){
@@ -244,14 +223,9 @@
     width: 4.2%;
   }
 
-  #icone{
-
-    margin-left: -30%;
-
-  }
+  #icone { margin-left: -30%; }
 
   #botaoadd{
-
     float: left;
     margin-left: 20%;
     margin-top: -4.5%;
@@ -276,14 +250,9 @@
     width: 6%;
   }
 
-  #icone{
-
-    margin-left: -30%;
-
-  }
+  #icone { margin-left: -30%; }
 
   #botaoadd{
-
     float: left;
     margin-left: 20%;
     margin-top: -4%;
@@ -308,14 +277,9 @@
     width: 5.6%;
   }
 
-  #icone{
-
-    margin-left: -30%;
-
-  }
+  #icone { margin-left: -30%; }
 
   #botaoadd{
-
     float: left;
     margin-left: 20%;
     margin-top: -4%;
@@ -340,14 +304,9 @@
     width: 5%;
   }
 
-  #icone{
-
-    margin-left: -30%;
-
-  }
+  #icone { margin-left: -30%; }
 
   #botaoadd{
-
     float: left;
     margin-left: 20%;
     margin-top: -4%;
@@ -372,14 +331,9 @@
     width: 5%;
   }
 
-  #icone{
-
-    margin-left: -30%;
-
-  }
+  #icone { margin-left: -30%; }
 
   #botaoadd{
-
     float: left;
     margin-left: 20%;
     margin-top: -3.5%;
@@ -404,14 +358,9 @@
     width: 4.2%;
   }
 
-  #icone{
-
-    margin-left: -30%;
-
-  }
+  #icone { margin-left: -30%; }
 
   #botaoadd{
-
     float: left;
     margin-left: 20%;
     margin-top: -3%;
