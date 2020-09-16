@@ -2,15 +2,18 @@
   background-color: white;
   margin-left: 25%;
   margin-top: 3%;
-  font-family: 'Muli';
 }
+
 
 #botaopesq{
   background-color: #7C6FBF;
+  margin-left: 1%;
+  color: black;
 }
 
 #icone{
   margin-left: -30%;
+
 }
 
 #botaoadd{
@@ -21,7 +24,6 @@
 #nome, #prontuario, #cpf{
   margin-top: 5%;
   width: 30%;
-  font-family: 'Muli';
 }
 
 #nome { margin-left: 3%; }
@@ -29,7 +31,6 @@
 ::-webkit-input-placeholder {
    text-align: center;
    font-family: 'Muli';
-   color: #8D8989;
 }
 
 /*CELULAR*/
@@ -69,6 +70,7 @@
     margin-top: 5%;
     margin-left: 5%;
     border-radius: 5000px;
+    color: black;
     Width: 24%;
   }
 
@@ -94,6 +96,7 @@
   #botaopesq{
     margin-left: 4%;
     border-radius: 5000px;
+    color: black;
     height: 3%;
     width: 23%;
   }
@@ -121,6 +124,7 @@
   #botaopesq{
     margin-left: 3%;
     border-radius: 5000px;
+    color: black;
     height: 3%;
     width: 20%;
   }
@@ -135,7 +139,7 @@
 
 }
 
-@media (max-width: 450px){
+@media (max-width: 414px){
 
   #barrapesq{
     background-color: white;
@@ -143,20 +147,22 @@
     margin-top: 3%;
   }
 
+
   #botaopesq{
-    margin-top: 2%;
+    margin-top: -2%
     margin-left: 4%;
     border-radius: 5000px;
+    color: black;
     height: 3%;
     width: 21%;
   }
 
-  #icone { margin-left: -13%; }
+  #icone { margin-left: -15%; }
 
   #botaoadd{
     float: left;
     margin-left: 11%;
-    margin-top: -12.5%;
+    margin-top: -14%;
   }
 
 }
@@ -176,6 +182,7 @@
   #botaopesq{
     margin-left: 1%;
     border-radius: 5000px;
+    color: black;
     height: 3%;
     width: 8%;
   }
@@ -211,6 +218,7 @@
   #botaopesq{
     margin-left: 1%;
     border-radius: 5000px;
+    color: black;
     height: 3%;
     width: 4.2%;
   }
@@ -237,6 +245,7 @@
   #botaopesq{
     margin-left: 1%;
     border-radius: 5000px;
+    color: black;
     height: 3%;
     width: 6%;
   }
@@ -263,6 +272,7 @@
   #botaopesq{
     margin-left: 1%;
     border-radius: 5000px;
+    color: black;
     height: 3%;
     width: 5.6%;
   }
@@ -289,6 +299,7 @@
   #botaopesq{
     margin-left: 1%;
     border-radius: 5000px;
+    color: black;
     height: 3%;
     width: 5%;
   }
@@ -315,6 +326,7 @@
   #botaopesq{
     margin-left: 1%;
     border-radius: 5000px;
+    color: black;
     height: 3%;
     width: 5%;
   }
@@ -341,6 +353,7 @@
   #botaopesq{
     margin-left: 1%;
     border-radius: 5000px;
+    color: black;
     height: 3%;
     width: 4.2%;
   }
