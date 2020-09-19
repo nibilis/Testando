@@ -5,6 +5,19 @@
   box-sizing: border-box;
 }
 
+/*CELULAR*/
+@media (min-width: 411px) and (min-height: 731px){
+   .linha_lateral {
+      height: 135vh!important;
+    }
+}
+
+@media (min-width: 320px) and (min-height: 568px){
+  .linha_lateral {
+     height: 160vh!important;
+   }
+}
+
 @media (max-width: 990px){
 
 body{
@@ -17,7 +30,7 @@ body{
 
 .linha_lateral {
   background: linear-gradient(to bottom, #D0C7FC,#8F83CD, #8F83CD, #7C6FBF);
-  height: 135vh;
+
 }
 
 .img-logo {
@@ -30,7 +43,7 @@ body{
   border-radius: 80px 80px;
   color: whitesmoke;
   font-family: 'Muli';
-  font-size: 0.5em;
+  font-size: 1.7em;
   border-style: none;
   text-align: center;
   padding-left: 5%;
@@ -38,7 +51,7 @@ body{
   padding-top: 2%;
   padding-bottom: 2%;
   /* superior | direita | inferior | esquerda */
-  margin: 5% 0% 0% 22%;
+  margin: 2% 0% 0% 22%;
 }
 
 /*CAMPOS*/
@@ -50,6 +63,7 @@ body{
 
 .chips .input {
   width: 80% !important;
+  margin-left: -2%;
   /*precisa colocar o important para tirar a formatação do materialize*/
 }
 
@@ -65,6 +79,50 @@ body{
     font-size: 0.5em;
   }
 
+#nome {
+  width: 80% !important;
+}
+
+#cpf{
+  margin-top: 2% !important;
+width: 80% !important;
+}
+
+#materia{
+  margin-top: 2% !important;
+  margin-left: 4% !important;
+  width: 78.5% !important;
+}
+
+#email{
+margin-top: 2% !important;
+}
+
+#estado{
+margin-top: 2% !important;
+width: 80% !important;
+}
+
+#cidade{
+margin-top: 2% !important;
+width: 80% !important;
+}
+
+#endereço{
+margin-top: 2% !important;
+width: 80% !important;
+}
+
+#senha{
+margin-top: 2% !important;
+width: 80% !important;
+}
+
+#confirmasenha{
+margin-top: 2% !important;
+width: 80% !important;
+}
+
 }
 
 
@@ -77,28 +135,28 @@ body{
   }
   #confirmasenha{
     margin-top: -2%;
-    width: 83%;
+    width: 80%;
   }
 
   #senha{
     margin-top: -2%;
-    width: 83%;
+    width: 80%;
   }
 
   #nome
   {
-    width: 82%;
+    width: 80%;
   }
 
   #cpf{
     margin-top: -2%;
-    width: 81%;
+    width: 80%;
   }
 
   #materia{
-    margin-top: -2%;
-    margin-left: 7%;
-    width: 75%;
+    margin-top: -1.5%;
+    margin-left: 4.5%;
+    width: 77%;
   }
 
   #nome{
@@ -108,21 +166,23 @@ body{
   #cidade{
     margin-top: 3%;
     margin-left: 3%;
-    width: 84%;
+    width: 80%;
+  }
+
+  #estado{
+    width: 80%;
   }
 
   #email{
     margin-left: 1.5%;
-    width: 90%;
-    margin-top: 1%;
+    width: 89.5%;
+    margin-top: 0.5%;
   }
 
   #endereço{
     margin-top: -2%;
-    width: 83%;
+    width: 80%;
   }
-
-
 
   .cadastro {
     text-decoration: none;
@@ -175,93 +235,10 @@ body{
   }
 }
 
-@media (min-height: 568px){
-
-  .img-logo {
-    width: 130px;
-    margin-left: 27%;
-  }
-
-  .linha_lateral {
-    background: linear-gradient(to bottom, #D0C7FC,#8F83CD, #8F83CD, #7C6FBF);
-    height: 155vh;
-  }
-}
-
-@media (min-height: 640px){
-
-  .linha_lateral {
-    background: linear-gradient(to bottom, #D0C7FC,#8F83CD, #8F83CD, #7C6FBF);
-    height: 140vh;
-  }
-}
-
-    @media (min-height: 731px){
-
-    .linha_lateral {
-      background: linear-gradient(to bottom, #D0C7FC,#8F83CD, #8F83CD, #7C6FBF);
-      height: 150vh;
-    }
-
-    #nome, #cpf, #endereço, #senha, #confirmasenha, #estado{
-      margin-left: 3%;
-      margin-top: 4%;
-    }
-    #confirmasenha{
-      width: 83%;
-    }
-
-    #senha{
-      width: 83%;
-    }
-
-    #nome
-    {
-      width: 82%;
-    }
-
-    #cpf{
-      width: 81%;
-    }
-
-    #materia{
-      margin-top: 4%;
-      margin-left: 7%;
-      width: 75%;
-    }
-
-    #nome{
-      margin-top: 5%;
-    }
-
-    #cidade{
-      margin-top: 8%;
-      margin-left: 3%;
-      width: 84%;
-    }
-
-    #estado{
-      margin-top: 8%;
-    }
-
-    #email{
-      margin-left: 1.5%;
-      width: 90%;
-      margin-top: 4%;
-    }
-
-    #endereço{
-      width: 83%;
-    }
-}
-
-
 /*computador*/
 
 @media (min-width: 990px){
   body { height: 115vh; }
-
-
 
   .img-logo{
     width: 200px;
@@ -271,7 +248,142 @@ body{
 
   .linha_lateral {
     background: linear-gradient(to bottom, #D0C7FC,#8F83CD, #8F83CD, #7C6FBF);
-    height: 170vh;
+    height: 190vh!important;
+
+  }
+
+  .cadastro {
+    text-decoration: none;
+    border-radius: 80px 80px;
+    color: whitesmoke;
+    font-family: 'Muli';
+    font-size: 1em;
+    border-style: none;
+    text-align: center;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    /* superior | direita | inferior | esquerda */
+    margin: 2% 0% 0% 35%;
+  }
+
+  /*CAMPOS*/
+  ::-webkit-input-placeholder {
+     color: #8D8989;
+     font-size: 180%;
+     font-family: 'Muli';
+  }
+
+  .chips .input {
+      width: 80% !important; /*precisa colocar o important para tirar a formatação do materialize*/
+      margin-left: -1%;
+  }
+
+  .select-wrapper+label {
+    color: #7C6FBF;
+    font-family: 'Muli';
+    font-size: 1em;
+  }
+
+  .select-wrapper input.select-dropdown {
+    color: #8D8989;
+    font-family: 'Muli';
+    margin-top: 5%;
+    font-size: 1em;
+  }
+
+
+#nome{
+  margin-top: 5%;
+}
+
+#estado {
+  margin-top: 5%;
+  width: 82%;
+}
+
+#cidade {
+  margin-top: 5%;
+  width: 82%;
+}
+
+}
+
+@media (min-width: 1024px){
+
+  .row:after{
+    content: none;
+  }
+  .select-wrapper+label {
+    color: #7C6FBF;
+    font-family: 'Muli';
+    font-size: 1.8em;
+  }
+
+  .select-wrapper input.select-dropdown {
+    color: #8D8989;
+    font-family: 'Muli';
+    margin-top: 5%;
+    font-size: 1.8em;
+  }
+
+  .cadastro {
+    font-size: 1.7em;
+  }
+
+  #nome {
+    width: 80% !important;
+  }
+
+  #cpf{
+    margin-top: 2% !important;
+  width: 80% !important;
+  }
+
+  #materia{
+    margin-top: 2% !important;
+    margin-left: 4% !important;
+    width: 78.5% !important;
+  }
+
+  #email{
+  margin-top: 2% !important;
+  }
+
+  #estado{
+  margin-top: 2% !important;
+  width: 80% !important;
+  }
+
+  #cidade{
+  margin-top: 2% !important;
+  width: 80% !important;
+  }
+
+  #endereço{
+  margin-top: 2% !important;
+  width: 80% !important;
+  }
+
+  #senha{
+  margin-top: 2% !important;
+  width: 80% !important;
+  }
+
+  #confirmasenha{
+  margin-top: 2% !important;
+  width: 80% !important;
+  }
+
+  }
+}
+
+@media (min-width: 1280px){
+
+  .linha_lateral {
+    background: linear-gradient(to bottom, #D0C7FC,#8F83CD, #8F83CD, #7C6FBF);
+    height: 200vh !important;
   }
 
   .cadastro {
@@ -287,64 +399,7 @@ body{
     padding-top: 1%;
     padding-bottom: 1%;
     /* superior | direita | inferior | esquerda */
-    margin: 7% 0% 0% 36.5%;
-  }
-
-  /*CAMPOS*/
-  ::-webkit-input-placeholder {
-     color: #8D8989;
-     font-size: 180%;
-     font-family: 'Muli';
-  }
-
-
-  .chips .input {
-      width: 80% !important; /*precisa colocar o important para tirar a formatação do materialize*/
-  }
-
-  .select-wrapper+label {
-    color: #7C6FBF;
-    font-family: 'Muli';
-    font-size: 1.5em;
-  }
-
-  .select-wrapper input.select-dropdown {
-    color: #8D8989;
-    font-family: 'Muli';
-    margin-top: 5%;
-    font-size: 2em;
-  }
-
-#nome, #materia, #cpf, #endereço, #senha, #confirmasenha, #estado{
-  margin-left: 12%;
-  margin-top: 3%;
-}
-#nome{
-  margin-top: 5%;
-}
-
-#cidade{
-  margin-top: 3%;
-}
-
-#email{
-  margin-left: 7%;
-  margin-top: 3%;
-}
-
-
-}
-
-
-
-@media (min-width: 1280px){
-  .row { margin: inherit; }
-
-  body { height: 110vh; }
-
-  .linha_lateral {
-    background: linear-gradient(to bottom, #D0C7FC,#8F83CD, #8F83CD, #7C6FBF);
-    height: 180vh;
+    margin: 2% 0% 0% 42%;
   }
 
   .img-logo{
@@ -352,75 +407,40 @@ body{
     margin-top: 3%;
     margin-left: 37%;
   }
-
 }
 
-@media (min-height: 1000px)
-{
-  .row { margin: inherit; }
-
-  body { height: 110vh; }
-
+@media (min-width: 1366px){
   .linha_lateral {
     background: linear-gradient(to bottom, #D0C7FC,#8F83CD, #8F83CD, #7C6FBF);
-    height: 140vh;
+    height: 215vh !important;
   }
 
 }
 
-@media (min-height: 765px)
-{
-  .row { margin: inherit; }
-
-  body { height: 110vh; }
-
+@media (min-width: 1440px){
   .linha_lateral {
     background: linear-gradient(to bottom, #D0C7FC,#8F83CD, #8F83CD, #7C6FBF);
-    height: 190vh;
+    height: 220vh !important;
   }
-
-}
-
-
-@media (min-height: 900px)
-{
-  .row { margin: inherit; }
-
-  body { height: 110vh; }
-
-  .linha_lateral {
-    background: linear-gradient(to bottom, #D0C7FC,#8F83CD, #8F83CD, #7C6FBF);
-    height: 175vh;
-  }
-
-}
-
-
-@media (min-height: 1080px)
-{
-  .row { margin: inherit; }
-
-  .img-logo{
-    width: 300px;
-    margin-top: 3%;
-    margin-left: 37%;
-  }
-
-  body { height: 110vh; }
-
-  .linha_lateral {
-    background: linear-gradient(to bottom, #D0C7FC,#8F83CD, #8F83CD, #7C6FBF);
-    height: 155vh;
-  }
-
 }
 
 @media (min-width: 1600px){
+
+  .linha_lateral {
+    background: linear-gradient(to bottom, #D0C7FC,#8F83CD, #8F83CD, #7C6FBF);
+    height: 220vh !important;
+  }
 
   .img-logo{
     width: 250px;
     margin-top: 3%;
     margin-left: 37%;
   }
-
 }
+
+@media (min-width: 1800px){
+
+  .linha_lateral {
+    background: linear-gradient(to bottom, #D0C7FC,#8F83CD, #8F83CD, #7C6FBF);
+    height: 230vh !important;
+  }
