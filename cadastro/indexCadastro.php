@@ -1,3 +1,9 @@
+<?php
+    require_once'../Classes/professores.php';
+    $u = new Usuario;
+    //Adicionando as classes
+ ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -30,22 +36,24 @@
         </div>
 
 <!--CAMPOS-->
-<div class="input-field col s10 l8" id="nome">
-  <input class="flow-text validate" placeholder="Como se chama?" id="first_name" type="text" style="color:black; font-family: 'Muli';">
+<form method="POST">
+
+<div class="input-field col s10 l8" id="nome" >
+  <input class="flow-text validate" placeholder="Como se chama?" id="first_name" type="text" style="color:black; font-family: 'Muli';" name="nome">
 </div>
 
-<div class="input-field col s10 l8" id="cpf">
-  <input class="flow-text validate" placeholder="CPF" id="numero" type="number" data-length="11" >
+<div class="input-field col s10 l8" id="cpf" >
+  <input class="flow-text validate" placeholder="CPF" id="numero" type="number" data-length="11" name="CPF">
 </div>
 
-<div class="input-field col s10 l8" id="materia">
+<div class="input-field col s10 l8" id="materia" name="">
     <div class="chips-placeholder validate" type="text"></div>
 </div>
 
 <div class="input-field col s9 l8 " id="email">
   <!-- <input class="flow-text" id="email" placeholder="E-mail" type="email" class="validate" style="font-size: 75%;">
    <label data-error="E-mail inválido" for="email"></label>-->
-    <input class="flow-text validate" placeholder="E-mail" id="email" type="email">
+    <input class="flow-text validate" placeholder="E-mail" id="email" type="email" name="email">
 </div>
 
 <div class="input-field col s10 l4" id="estado">
@@ -106,21 +114,62 @@
     </div>
 
     <div class="input-field col s9 l8" id="endereço">
-      <input class="flow-text validate" placeholder="Endereço" id="localização" type="text">
+      <input class="flow-text validate" placeholder="Endereço" id="localização" type="text" name="endereço">
     </div>
 
     <div class="input-field col s9 l8" id="senha">
-      <input class="flow-text validate" placeholder="Senha" id="senhas" type="password">
+      <input class="flow-text validate" placeholder="Senha" id="senhas" type="password" name="senha">
     </div>
 
     <div class="input-field col s9 l8" id="confirmasenha">
-      <input class="flow-text validate" placeholder="Confirmação de senha" id="confirmasenhas" type="password">
-    </div>
+      <input class="flow-text validate" placeholder="Confirmação de senha" id="confirmasenhas" type="password" name="confSenha">
+  </div>
 
+  <div>
+      <input class="cadastro flow-text waves-effect yellow darken-2 waves-light hoverable" type="submit" value"Cadastrar">
+  </div>
+</form>
+<?php
+//verificar se clicou no botão
+if(isset($_POST['nome'])){
 
-    <div>
-        <a class="cadastro flow-text waves-effect yellow darken-2 waves-light hoverable" href="../perfil/indexPerfil.html" target="_self">Cadastrar</a>
-    </div>
+  $nome = addslashes($_POST['nome']);
+  $CPF = addslashes($_POST['CPF']);
+  $email = addslashes($_POST['email']);
+  $endereço = addslashes($_POST['endereço']);
+  $senha = addslashes($_POST['senha']);
+  $confSenha = addslashes($_POST['confSenha']);
+//verificar se esta preenchido
+  if(!empty($nome) && !empty($CPF) && !empty($email) && !empty($endereço) && !empty($senha) && !empty($confSenha) )
+  {
+      $u->conectar("projeto_testando", "localhost", "root", "");
+      if($u->msgErro == ""){
+        if($senha == $confSenha)
+        {
+          if($u->cadastrar($nome, $CPF, $email, $endereço, $senha))
+          {
+            echo "Cadastrado com sucesso!";
+          }
+          else{
+            echo "email ja cadastrado";
+          }
+        }
+        else{
+          echo "Senha incorreta";
+        }
+
+      }
+      else {
+        echo "Erro: ".$u->msgErro;
+      }
+  }
+  else{
+    echo "Preencha todos os campos";
+  }
+}
+
+  ?>
+
     </div>
 
 
