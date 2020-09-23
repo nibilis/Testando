@@ -47,6 +47,8 @@
                   <li><a id="document" class="waves-effect center-align" href="#!">Adicionar Documento</a></li>
                   <li><div id="divider" class="divider"></div></li>
                   <li><a id="saves" class="waves-effect center-align" href="#!">Salvos</a></li>
+                  <li><div id="divider" class="divider"></div></li>
+                  <a id="sair" href="../login/indexLogin.html"><i class="material-icons" id="sair2">exit_to_app</i> Sair </a>
                 </ul>
               </div>
             </div>
@@ -77,8 +79,10 @@
                 <img class= "responsive-img" id = "linha1" src ="../images/linha.png"></li>
               <li><a id= "salvos" href="#!">Salvos</a>
                  <img class= "responsive-img" id = "linha2" src ="../images/linha.png"></li>
+
             </ul>
           </div>
+
         </nav>
       </div>
 
@@ -86,9 +90,9 @@
 
       <div>
         <img class= "responsive-img" id = "img-perfil" src ="../images/Icone.png"></li>
-        <p id="nome-perfil"> Nome: <span>Vinícius de Oliveira Bithencourt dos Santos Silva Barbosa</span> </p>
+        <p id="nome-perfil" style="overflow: hidden; text-overflow: ellipsis;"> Nome: <span>Vinícius de Oliveira Bithencourt dos Santos Silva Barbosa</span> </p>
         <p id="materia-perfil"> Matérias que leciona: <span>Matemática, Filosofia, Sociologia </span> </p>
-        <a id="sair" href="../login/indexLogin.html"><i class="material-icons" id="sair2">exit_to_app</i> Sair </a>
+
       </div>
 
       <div>
@@ -98,7 +102,6 @@
 
         <!-- Modal Trigger -->
           <a class="waves-effect waves-light modal-trigger center-align" id="compartilhartexto" href="#comp">Compartilhar</a>
-        <!-- -->
 
           <h1 id="compartilhardescricao">Gostou? Repasse  para seus amigos!</h1>
 
@@ -134,8 +137,8 @@
               <p style="text-align: center; margin-top: 10%;">https://youtu.be/Z9jrIKcTwxU</p>
             </div>
             <div class="modal-footer">
-              <a href="#!" id="copiar" class="modal-close waves-effect waves-green btn-flat">Copiar</a>
-              <a href="https://youtu.be/Z9jrIKcTwxU" class="modal-close waves-effect waves-green btn-flat">Acessar</a>
+              <input href="https://youtu.be/Z9jrIKcTwxU" /><a  id="copiar" class="modal-close center-align waves-effect yellow darken-2 btn-flat">Copiar</a>
+              <a href="https://youtu.be/Z9jrIKcTwxU" class="modal-close center-align waves-effect yellow darken-2 btn-flat">Acessar</a>
             </div>
           </div>
 
@@ -153,23 +156,31 @@
     $('.sidenav').sidenav();});
   </script>
 
-  <script>
-  instance.close();
+<script>
+   instance.close();
 </script>
 
 
 <script>
 //POP UP TUTORIAL
-
     $(document).ready(function(){
     $('.modal').modal();
     });
 </script>
 
-  <script>
+<script>
+// COPIAR PARA A ÁREA DE TRANSFERENCIA
+  <button>Copiar</button>
+</script>
 
-  </script>
-
+<script>
+// COPIAR PARA A ÁREA DE TRANSFERÊNCIA 2
+   document.querySelector("button").addEventListener("click",
+   function (event) {
+        document.querySelector("input").select()
+        document.execCommand('copy')
+   })
+</script>
 
     </body>
   </html>
