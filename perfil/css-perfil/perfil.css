@@ -745,6 +745,147 @@ span {
   text-align: center;
 }
 
+/*TELA DE PERFIL COMPUTADOR*/
+
+@media (min-width:1024px){
+
+
+#img-perfil {
+  width: 15%;
+  margin-left: -35%;
+  margin-top: 10%;
+}
+
+#nome-perfil {
+  font-family: 'Muli';
+  font-size: 100%;
+  color: #8D8D8D;
+  position: absolute;
+  float: left;
+  margin-top: -10%;
+  margin-left: 25%;
+}
+
+span {
+  color: black;
+}
+
+#materia-perfil {
+  font-family: 'Muli';
+  font-size: 100%;
+  color: #8D8D8D;
+  float: left;
+  margin-top: 30%;
+  margin-left: 5%;
+}
+
+#sair {
+  font-family: 'Muli';
+  font-size: 100%;
+  position: absolute;
+  margin-top: 15%;
+  color: #DD636E;
+  margin-left: 50%;
+}
+
+#sair2 {
+  color: #DD636E;
+  margin-left: -100%;
+  margin-top: 40%;
+  position: absolute;}
+
+#compartilhar {
+  width: 15%;
+  margin-left: 70%;
+  margin-top: 15%;
+}
+
+#compartilhartexto{
+
+  color: #6E60B8;
+  font-style: bold;
+  font-family: 'Mulish', sans-serif;
+  font-size: 22px;
+  margin-left: 70%;
+  margin-top: 0%;
+
+}
+
+#compartilhardescricao{
+
+  color: #695D67;
+  font-family: 'Muli';
+  font-size: 15px;
+  width: 40%;
+  margin-right: -100%;
+  margin-left: 44%;
+  margin-top: 0%;
+  text-align: center;
+
+
+}
+
+#ajuda {
+  width: 15%;
+  margin-left: 40%;
+  margin-top: -30%;
+}
+
+#ajudatexto{
+
+  color: #6E60B8;
+  font-style: bold;
+  font-family: 'Mulish', sans-serif;
+  font-size: 22px;
+  margin-left: 23%;
+  margin-top: 0%;
+
+}
+
+#ajudadescricao{
+
+  color: #695D67;
+  font-family: 'Muli';
+  font-size: 15px;
+  width: 40%;
+  margin-right: -100%;
+  margin-left: 45%;
+  margin-top: 0%;
+  text-align: center;
+
+}
+
+#tutorial {
+  width: 15%;
+  margin-left: 11%;
+  margin-top: -70%;
+}
+
+#tutorialtexto{
+
+  color: #6E60B8;
+  font-style: bold;
+  font-family: 'Mulish', sans-serif;
+  font-size: 22px;
+  margin-left: 18%;
+  margin-top: 0%;
+
+}
+
+#tutorialdescricao{
+
+  color: #695D67;
+  font-family: 'Muli';
+  font-size: 15px;
+  width: 50%;
+  margin-right: -100%;
+  margin-left: 40%;
+  margin-top: 0%;
+  text-align: center;
+}
+}
+
+
 /*MODAL*/
 
 #comp a{

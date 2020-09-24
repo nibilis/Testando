@@ -97,7 +97,7 @@
 
       <div>
         <!-- Compartilhar -->
-        <div id="divisão" class="divider" ></div>
+        <div id="divisão" class="divider hide-on-large-only" ></div>
         <img class= "responsive-img" id = "compartilhar" src ="../images/compartilhar.png"></li>
 
         <!-- Modal Trigger -->
@@ -107,7 +107,7 @@
 
           <!-- Ajuda -->
 
-          <div id="divisão2" class="divider" ></div>
+          <div id="divisão2" class="divider  hide-on-large-only" ></div>
 
           <img class= "responsive-img" id = "ajuda" src ="../images/ajuda.png"></li>
 
@@ -119,7 +119,7 @@
 
             <!-- Tutorial -->
 
-            <div id="divisão3" class="divider" ></div>
+            <div id="divisão3" class="divider  hide-on-large-only" ></div>
 
             <img class= "responsive-img" id = "tutorial" src ="../images/tutorial.png"></li>
 
@@ -134,13 +134,16 @@
             <div class="modal-content">
 
               <h6 style="text-align: center;"><b>Link do tutorial no Youtube</b></h6>
-              <p style="text-align: center; margin-top: 10%;">https://youtu.be/Z9jrIKcTwxU</p>
+              <p disabled id="disabled" value="https://youtu.be/Z9jrIKcTwxU" type="text" class="validate" style="text-align: center; margin-top: 10%;">https://youtu.be/Z9jrIKcTwxU</p>
+              <label for="disabled"></label>
+
             </div>
             <div class="modal-footer">
-              <input href="https://youtu.be/Z9jrIKcTwxU" /><a  id="copiar" class="modal-close center-align waves-effect yellow darken-2 btn-flat">Copiar</a>
+              <button  id="copiar" class="modal-close center-align waves-effect yellow darken-2 btn-flat">Copiar</button>
               <a href="https://youtu.be/Z9jrIKcTwxU" class="modal-close center-align waves-effect yellow darken-2 btn-flat">Acessar</a>
             </div>
           </div>
+
 
       </div>
 
@@ -169,18 +172,17 @@
 </script>
 
 <script>
-// COPIAR PARA A ÁREA DE TRANSFERENCIA
-  <button>Copiar</button>
+document.querySelector("button").addEventListener("click",
+function (event) {
+
+        document.querySelector("p").focus()
+        document.execCommand('selectAll', false, null)
+        document.execCommand('copy')
+        selectObject.value
+})
 </script>
 
-<script>
-// COPIAR PARA A ÁREA DE TRANSFERÊNCIA 2
-   document.querySelector("button").addEventListener("click",
-   function (event) {
-        document.querySelector("input").select()
-        document.execCommand('copy')
-   })
-</script>
+
 
     </body>
   </html>
