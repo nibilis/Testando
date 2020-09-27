@@ -794,93 +794,95 @@ span {
   margin-top: 40%;
   position: absolute;}
 
-#compartilhar {
-  width: 15%;
-  margin-left: 70%;
-  margin-top: 15%;
+  #divisão4{
+
+    margin-top: 10%;
+    style: none;
+    width: 90%;
+    margin-left: 5%;
+    background-color: #8B8B8B;
+  }
+
+#compartilharpc {
+  width: 16%;
+  float: right;
+  margin-right: 15%;
+  margin-top: 5%;
 }
 
-#compartilhartexto{
+#compartilhartextopc{
 
   color: #6E60B8;
   font-style: bold;
   font-family: 'Mulish', sans-serif;
-  font-size: 22px;
-  margin-left: 70%;
-  margin-top: 0%;
-
+  font-size: 25px;
+  margin-left: 69%;
+  margin-top: -5.7%;
 }
 
-#compartilhardescricao{
+#compartilhardescricaopc{
 
   color: #695D67;
   font-family: 'Muli';
   font-size: 15px;
   width: 40%;
-  margin-right: -100%;
-  margin-left: 44%;
-  margin-top: 0%;
+
   text-align: center;
 
 
 }
 
-#ajuda {
-  width: 15%;
-  margin-left: 40%;
-  margin-top: -30%;
+#ajudapc {
+  width: 13%;
+  margin-left: 14%;
+  margin-right: 14%;
+  margin-top: 5%;
 }
 
-#ajudatexto{
+#ajudatextopc{
 
   color: #6E60B8;
   font-style: bold;
   font-family: 'Mulish', sans-serif;
-  font-size: 22px;
-  margin-left: 23%;
-  margin-top: 0%;
-
+  font-size: 25px;
+  margin-left: 20.5%;
+  margin-top: 5%;
 }
 
-#ajudadescricao{
+#ajudadescricaopc{
 
   color: #695D67;
   font-family: 'Muli';
   font-size: 15px;
   width: 40%;
-  margin-right: -100%;
-  margin-left: 45%;
-  margin-top: 0%;
+
   text-align: center;
 
 }
 
-#tutorial {
-  width: 15%;
-  margin-left: 11%;
-  margin-top: -70%;
+#tutorialpc {
+  width: 13%;
+  float: left;
+  margin-left: 15%;
+  margin-top: 5%;
 }
 
-#tutorialtexto{
+#tutorialtextopc{
 
   color: #6E60B8;
   font-style: bold;
   font-family: 'Mulish', sans-serif;
-  font-size: 22px;
-  margin-left: 18%;
-  margin-top: 0%;
-
+  font-size: 25px;
+  margin-left: 16.5%;
+  margin-top: 5%;
 }
 
-#tutorialdescricao{
+#tutorialdescricaopc{
 
   color: #695D67;
   font-family: 'Muli';
   font-size: 15px;
   width: 50%;
-  margin-right: -100%;
-  margin-left: 40%;
-  margin-top: 0%;
   text-align: center;
 }
 }
