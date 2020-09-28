@@ -749,21 +749,24 @@ span {
 
 @media (min-width:1024px){
 
+  body {
+    height: 100vh;
+  }
 
 #img-perfil {
   width: 15%;
-  margin-left: -35%;
+  margin-left: 10%;
   margin-top: 10%;
 }
 
 #nome-perfil {
   font-family: 'Muli';
-  font-size: 100%;
+  font-size: 125%;
   color: #8D8D8D;
   position: absolute;
   float: left;
-  margin-top: -10%;
-  margin-left: 25%;
+  margin-left: 27%;
+  margin-top: -11%;
 }
 
 span {
@@ -772,11 +775,11 @@ span {
 
 #materia-perfil {
   font-family: 'Muli';
-  font-size: 100%;
+  font-size: 125%;
   color: #8D8D8D;
   float: left;
-  margin-top: 30%;
-  margin-left: 5%;
+  margin-left: 27%;
+  margin-top: -7%;
 }
 
 #sair {
@@ -796,7 +799,7 @@ span {
 
   #divisão4{
 
-    margin-top: 10%;
+    margin-top: 7%;
     style: none;
     width: 90%;
     margin-left: 5%;
@@ -804,9 +807,9 @@ span {
   }
 
 #compartilharpc {
-  width: 16%;
+  width: 13%;
   float: right;
-  margin-right: 15%;
+  margin-right: 14%;
   margin-top: 5%;
 }
 
@@ -816,7 +819,7 @@ span {
   font-style: bold;
   font-family: 'Mulish', sans-serif;
   font-size: 25px;
-  margin-left: 69%;
+  margin-left: 71%;
   margin-top: -5.7%;
 }
 
@@ -824,17 +827,16 @@ span {
 
   color: #695D67;
   font-family: 'Muli';
-  font-size: 15px;
+  font-size: 18px;
   width: 40%;
-
   text-align: center;
-
-
+  margin-left: 59%;
+  margin-top: -6%;
 }
 
 #ajudapc {
-  width: 13%;
-  margin-left: 14%;
+  width: 11%;
+  margin-left: 18%;
   margin-right: 14%;
   margin-top: 5%;
 }
@@ -845,23 +847,23 @@ span {
   font-style: bold;
   font-family: 'Mulish', sans-serif;
   font-size: 25px;
-  margin-left: 20.5%;
-  margin-top: 5%;
+  margin-left: 21%;
+  margin-top: 3%;
 }
 
 #ajudadescricaopc{
 
   color: #695D67;
   font-family: 'Muli';
-  font-size: 15px;
+  font-size: 18px;
   width: 40%;
-
   text-align: center;
-
+  margin-left: 29.5%;
+  margin-top: -6%;
 }
 
 #tutorialpc {
-  width: 13%;
+  width: 11%;
   float: left;
   margin-left: 15%;
   margin-top: 5%;
@@ -873,17 +875,163 @@ span {
   font-style: bold;
   font-family: 'Mulish', sans-serif;
   font-size: 25px;
-  margin-left: 16.5%;
-  margin-top: 5%;
+  margin-left: 15%;
+  margin-top: 3%;
 }
 
 #tutorialdescricaopc{
 
   color: #695D67;
   font-family: 'Muli';
-  font-size: 15px;
+  font-size: 18px;
   width: 50%;
   text-align: center;
+  margin-left: -5.5%;
+  margin-top: 0%;
+}
+}
+
+@media (min-width:1280px){
+
+  body {
+    height: 100vh;
+  }
+
+#img-perfil {
+  width: 13%;
+  margin-left: 10%;
+  margin-top: 10%;
+}
+
+#nome-perfil {
+  font-family: 'Muli';
+  font-size: 125%;
+  color: #8D8D8D;
+  position: absolute;
+  float: left;
+  margin-left: 27%;
+  margin-top: -11%;
+}
+
+span {
+  color: black;
+}
+
+#materia-perfil {
+  font-family: 'Muli';
+  font-size: 125%;
+  color: #8D8D8D;
+  float: left;
+  margin-left: 27%;
+  margin-top: -7%;
+}
+
+#sair {
+  font-family: 'Muli';
+  font-size: 100%;
+  position: absolute;
+  margin-top: 15%;
+  color: #DD636E;
+  margin-left: 50%;
+}
+
+#sair2 {
+  color: #DD636E;
+  margin-left: -100%;
+  margin-top: 40%;
+  position: absolute;}
+
+  #divisão4{
+
+    margin-top: 7%;
+    style: none;
+    width: 90%;
+    margin-left: 5%;
+    background-color: #8B8B8B;
+  }
+
+#compartilharpc {
+  width: 13%;
+  float: right;
+  margin-right: 14%;
+  margin-top: 5%;
+}
+
+#compartilhartextopc{
+
+  color: #6E60B8;
+  font-style: bold;
+  font-family: 'Mulish', sans-serif;
+  font-size: 25px;
+  margin-left: 71%;
+  margin-top: -5.7%;
+}
+
+#compartilhardescricaopc{
+
+  color: #695D67;
+  font-family: 'Muli';
+  font-size: 18px;
+  width: 40%;
+  text-align: center;
+  margin-left: 59%;
+  margin-top: -6%;
+}
+
+#ajudapc {
+  width: 11%;
+  margin-left: 18%;
+  margin-right: 14%;
+  margin-top: 5%;
+}
+
+#ajudatextopc{
+
+  color: #6E60B8;
+  font-style: bold;
+  font-family: 'Mulish', sans-serif;
+  font-size: 25px;
+  margin-left: 21%;
+  margin-top: 3%;
+}
+
+#ajudadescricaopc{
+
+  color: #695D67;
+  font-family: 'Muli';
+  font-size: 18px;
+  width: 40%;
+  text-align: center;
+  margin-left: 29.5%;
+  margin-top: -6%;
+}
+
+#tutorialpc {
+  width: 11%;
+  float: left;
+  margin-left: 15%;
+  margin-top: 5%;
+}
+
+#tutorialtextopc{
+
+  color: #6E60B8;
+  font-style: bold;
+  font-family: 'Mulish', sans-serif;
+  font-size: 25px;
+  margin-left: 15%;
+  margin-top: 3%;
+}
+
+#tutorialdescricaopc{
+
+  color: #695D67;
+  font-family: 'Muli';
+  font-size: 18px;
+  width: 50%;
+  text-align: center;
+  margin-left: -5.5%;
+  margin-top: 0%;
 }
 }
 
