@@ -910,7 +910,7 @@ span {
   position: absolute;
   float: left;
   margin-left: 27%;
-  margin-top: -11%;
+  margin-top: -9%;
 }
 
 span {
@@ -923,7 +923,7 @@ span {
   color: #8D8D8D;
   float: left;
   margin-left: 27%;
-  margin-top: -7%;
+  margin-top: -6%;
 }
 
 #sair {
@@ -943,7 +943,7 @@ span {
 
   #divisão4{
 
-    margin-top: 7%;
+    margin-top: 4%;
     style: none;
     width: 90%;
     margin-left: 5%;
@@ -963,8 +963,8 @@ span {
   font-style: bold;
   font-family: 'Mulish', sans-serif;
   font-size: 25px;
-  margin-left: 71%;
-  margin-top: -5.7%;
+  margin-left: 72%;
+  margin-top: -5.5%;
 }
 
 #compartilhardescricaopc{
@@ -974,13 +974,13 @@ span {
   font-size: 18px;
   width: 40%;
   text-align: center;
-  margin-left: 59%;
-  margin-top: -6%;
+  margin-left: 58%;
+  margin-top: -5%;
 }
 
 #ajudapc {
   width: 11%;
-  margin-left: 18%;
+  margin-left: 19%;
   margin-right: 14%;
   margin-top: 5%;
 }
@@ -991,8 +991,8 @@ span {
   font-style: bold;
   font-family: 'Mulish', sans-serif;
   font-size: 25px;
-  margin-left: 21%;
-  margin-top: 3%;
+  margin-left: 24.5%;
+  margin-top: 2%;
 }
 
 #ajudadescricaopc{
@@ -1003,7 +1003,7 @@ span {
   width: 40%;
   text-align: center;
   margin-left: 29.5%;
-  margin-top: -6%;
+  margin-top: -4.7%;
 }
 
 #tutorialpc {
@@ -1020,7 +1020,7 @@ span {
   font-family: 'Mulish', sans-serif;
   font-size: 25px;
   margin-left: 15%;
-  margin-top: 3%;
+  margin-top: 2%;
 }
 
 #tutorialdescricaopc{
@@ -1031,7 +1031,7 @@ span {
   width: 50%;
   text-align: center;
   margin-left: -5.5%;
-  margin-top: 0%;
+  margin-top: -1%;
 }
 }
 

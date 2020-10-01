@@ -135,12 +135,11 @@
             <div class="modal-content">
 
               <h6 style="text-align: center;"><b>Link do tutorial no Youtube</b></h6>
-              <p disabled id="disabled" value="https://youtu.be/Z9jrIKcTwxU" type="text" class="validate" style="text-align: center; margin-top: 10%;">https://youtu.be/Z9jrIKcTwxU</p>
-              <label for="disabled"></label>
 
             </div>
             <div class="modal-footer">
-              <button  id="copiar" class="modal-close center-align waves-effect yellow darken-2 btn-flat">Copiar</button>
+              <h6 class="text" style="text-align: center;">https://youtu.be/Z9jrIKcTwxU</h6>
+              <button id="copy">Copiar</button>
               <a href="https://youtu.be/Z9jrIKcTwxU" class="modal-close center-align waves-effect yellow darken-2 btn-flat">Acessar</a>
             </div>
           </div>
@@ -189,14 +188,13 @@
 </script>
 
 <script>
-document.querySelector("button").addEventListener("click",
-function (event) {
+let btn = document.querySelector('#copy');
+btn.addEventListener('click', function(e) {
+  let textArea = document.querySelector('.text');
+  textArea.select();
+  document.execCommand('copy');
 
-        document.querySelector("p").focus()
-        document.execCommand('selectAll', false, null)
-        document.execCommand('copy')
-        selectObject.value
-})
+});
 </script>
 
 
