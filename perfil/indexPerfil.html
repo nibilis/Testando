@@ -133,18 +133,20 @@
           <!-- Modal Structure -->
           <div id="tutor" class="modal">
             <div class="modal-content">
-
               <h6 style="text-align: center;"><b>Link do tutorial no Youtube</b></h6>
-
+              <!--EM MANUTENÇÃO--><a><img id="close-btn" class= "responsive-img " src ="../images/fechar.png"></a>
             </div>
             <div class="modal-footer">
-              <h6 class="text">Texto para copiar</h6>
-              <button id="copy">Copiar</button>
+              <input id="inputTest" style="text-align: center;" value="https://youtu.be/Z9jrIKcTwxU"/>
+              <button style="margin-top: 5%; margin-bottom: 5%;" class="waves-effect waves-light yellow darken-2 btn" onclick="copiarTexto()">Copiar</button>
               <!--
+              <textarea class="text" style="text-align: center;">https://youtu.be/Z9jrIKcTwxU</textarea>
+              <button class="modal-close center-align waves-effect yellow darken-2 btn" id="copy">Copiar</button>
+
               <h6 class="text" style="text-align: center;">https://youtu.be/Z9jrIKcTwxU</h6>
               <button class="waves-effect waves-light yellow darken-2 btn" id="copy">Copiar</button>
             -->
-              <a href="https://youtu.be/Z9jrIKcTwxU" class="modal-close center-align waves-effect yellow darken-2 btn">Acessar</a>
+              <a href="https://youtu.be/Z9jrIKcTwxU" style="margin-left: 9%; margin-right: 10%; margin-top: 5%; margin-bottom: 5%;" class="modal-close center-align waves-effect yellow darken-2 btn">Acessar</a>
             </div>
           </div>
 
@@ -191,7 +193,9 @@
     });
 </script>
 
-<script>
+
+<!--<script>
+//COPIAR
 let btn = document.querySelector('#copy');
 btn.addEventListener('click', function(e) {
   let textArea = document.querySelector('.text');
@@ -199,6 +203,31 @@ btn.addEventListener('click', function(e) {
   document.execCommand('copy');
 
 });
+</script>-->
+
+<script>
+//COPIAR
+        let copiarTexto = () =>{
+            //captura o elemento input
+            const inputTest = document.querySelector("#inputTest");
+
+            //seleciona todo o texto do elemento
+            inputTest.select();
+            //executa o comando copy
+            //aqui é feito o ato de copiar para a area de trabalho com base na seleção
+            document.execCommand('copy');
+        };
+    </script>
+
+
+<script>
+//BOTÂO FECHAR
+function closeHandler() {
+  Enabler.reportManualClose();
+  Enabler.close();
+}
+
+document.getElementById('close-btn').addEventListener('click', closeHandler, false);
 </script>
 
 
