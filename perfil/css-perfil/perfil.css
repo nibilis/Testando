@@ -1612,6 +1612,154 @@ span {
 }
 }
 
+<<<<<<< Updated upstream
+=======
+
+@media (min-width:1920px){
+
+  body {
+    height: 100vh;
+  }
+
+#img-perfil {
+  width: 11%;
+  margin-left: 10%;
+  margin-top: 5%;
+}
+
+#nome-perfil {
+  font-family: 'Muli';
+  font-size: 145%;
+  color: #8D8D8D;
+  position: absolute;
+  float: left;
+  margin-left: 25%;
+  margin-top: -7.5%;
+}
+
+span {
+  color: black;
+}
+
+#materia-perfil {
+  font-family: 'Muli';
+  font-size: 145%;
+  color: #8D8D8D;
+  float: left;
+  margin-left: 25%;
+  margin-top: -5.5%;
+}
+
+#sair {
+  font-family: 'Muli';
+  font-size: 100%;
+  position: absolute;
+  margin-top: 15%;
+  color: #DD636E;
+  margin-left: 50%;
+}
+
+#sair2 {
+  color: #DD636E;
+  margin-left: -100%;
+  margin-top: 40%;
+  position: absolute;}
+
+  #divisão4{
+
+    margin-top: 3%;
+    style: none;
+    width: 90%;
+    margin-left: 5%;
+    background-color: #8B8B8B;
+  }
+
+#compartilharpc {
+  width: 12%;
+  float: right;
+  margin-right: 14%;
+  margin-top: 4%;
+}
+
+#compartilhartextopc{
+
+  color: #6E60B8;
+  font-style: bold;
+  font-family: 'Mulish', sans-serif;
+  font-size: 25px;
+  margin-left: 74%;
+  margin-top: -3.9%;
+}
+
+#compartilhardescricaopc{
+
+  color: #695D67;
+  font-family: 'Muli';
+  font-size: 18px;
+  width: 40%;
+  text-align: center;
+  margin-left: 59%;
+  margin-top: -3.9%;
+}
+
+#ajudapc {
+  width: 10%;
+  margin-left: 19%;
+  margin-right: 14%;
+  margin-top: 4%;
+}
+
+#ajudatextopc{
+
+  color: #6E60B8;
+  font-style: bold;
+  font-family: 'Mulish', sans-serif;
+  font-size: 25px;
+  margin-left: 24.5%;
+  margin-top: 2%;
+}
+
+#ajudadescricaopc{
+
+  color: #695D67;
+  font-family: 'Muli';
+  font-size: 18px;
+  width: 40%;
+  text-align: center;
+  margin-left: 28.8%;
+  margin-top: -3.8%;
+}
+
+#tutorialpc {
+  width: 10%;
+  float: left;
+  margin-left: 15%;
+  margin-top: 4%;
+}
+
+#tutorialtextopc{
+
+  color: #6E60B8;
+  font-style: bold;
+  font-family: 'Mulish', sans-serif;
+  font-size: 25px;
+  margin-left: 15.7%;
+  margin-top: 2%;
+}
+
+#tutorialdescricaopc{
+
+  color: #695D67;
+  font-family: 'Muli';
+  font-size: 18px;
+  width: 50%;
+  text-align: center;
+  margin-left: -5.5%;
+  margin-top: -1%;
+}
+}
+
+>>>>>>> Stashed changes
 /*MODAL*/
 
 .modal .modal-footer{
