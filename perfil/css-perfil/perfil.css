@@ -889,6 +889,39 @@ span {
   margin-left: -5.5%;
   margin-top: 0%;
 }
+#comp img{
+  margin-left: 95%!important;
+}
+
+#tutor img{
+  width: 7%;
+  position: absolute;
+  margin-left: 73%!important;
+  margin-top: -18%;
+}
+
+#comp,
+#tutor{
+  width: 30%;
+}
+
+#tutor a{
+  border-radius: 70px 70px;
+  color: white;
+  margin-left: 10%!important;
+  margin-right: 14%!important;
+  margin-top: 5%!important;
+  margin-bottom: 5%!important;
+}
+
+#comp button,
+#tutor button{
+  border-radius: 70px 70px;
+  color: white;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
 }
 
 @media (min-width:1280px){
@@ -1033,6 +1066,16 @@ span {
   margin-left: -5.5%;
   margin-top: -1%;
 }
+
+#comp img,
+#tutor img{
+  margin-top: -13%!important;
+}
+
+#tutor a{
+  margin-right: 20%!important;
+}
+
 }
 
 @media (min-width:1366px){
@@ -1176,6 +1219,41 @@ span {
   text-align: center;
   margin-left: -5.5%;
   margin-top: -1%;
+}
+/*botão e x*/
+#comp img{
+  margin-left: 99%!important;
+}
+
+#tutor img{
+  width: 7%;
+  position: absolute;
+  margin-left: 70%!important;
+  margin-top: -12%;
+}
+
+#comp,
+#tutor{
+  width: 30%;
+}
+
+#tutor a{
+  border-radius: 70px 70px;
+  color: white;
+  margin-left: 15%!important;
+  margin-right: 18%!important;
+  margin-top: 5%!important;
+  margin-bottom: 5%!important;
+}
+
+#comp button{
+  margin-right: 37%!important;
+}
+#tutor button{
+  border-radius: 70px 70px;
+  color: white;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 }
 
@@ -1465,6 +1543,24 @@ span {
   margin-left: -5.5%;
   margin-top: -1%;
 }
+
+#comp img,
+#tutor img{
+  margin-top: -10%!important;
+}
+
+#tutor a{
+  margin-right: 20%!important;
+}
+
+#comp button {
+  margin-right: 40%!important;
+}
+
+#tutor button{
+  margin-left: 26%!important;
+}
+
 }
 
 
@@ -1664,7 +1760,6 @@ span {
   position: absolute;}
 
   #divisão4{
-
     margin-top: 3%;
     style: none;
     width: 90%;
@@ -1680,7 +1775,6 @@ span {
 }
 
 #compartilhartextopc{
-
   color: #6E60B8;
   font-style: bold;
   font-family: 'Mulish', sans-serif;
@@ -1690,7 +1784,6 @@ span {
 }
 
 #compartilhardescricaopc{
-
   color: #695D67;
   font-family: 'Muli';
   font-size: 18px;
@@ -1708,7 +1801,6 @@ span {
 }
 
 #ajudatextopc{
-
   color: #6E60B8;
   font-style: bold;
   font-family: 'Mulish', sans-serif;
@@ -1718,7 +1810,6 @@ span {
 }
 
 #ajudadescricaopc{
-
   color: #695D67;
   font-family: 'Muli';
   font-size: 18px;
@@ -1736,7 +1827,6 @@ span {
 }
 
 #tutorialtextopc{
-
   color: #6E60B8;
   font-style: bold;
   font-family: 'Mulish', sans-serif;
@@ -1746,7 +1836,6 @@ span {
 }
 
 #tutorialdescricaopc{
-
   color: #695D67;
   font-family: 'Muli';
   font-size: 18px;
@@ -1754,6 +1843,41 @@ span {
   text-align: center;
   margin-left: -6%;
   margin-top: -1%;
+}
+/*botão e x*/
+#comp img{
+  width: 6%!important;
+  margin-left: 100%!important;
+}
+
+#tutor img{
+  width: 6%!important;
+  position: absolute;
+  margin-left: 87%!important;
+  margin-top: -9%;
+}
+
+#comp,
+#tutor{
+  width: 30%;
+}
+
+#tutor a{
+  border-radius: 70px 70px;
+  color: white;
+  margin-left: 1%!important;
+  margin-right: 27%!important;
+  margin-top: 5%!important;
+  margin-bottom: 5%!important;
+}
+
+#comp button,
+#tutor button{
+  border-radius: 70px 70px;
+  color: white;
+  margin-top: 9%;
+  margin-bottom: 5%;
+  margin-right: 7%;
 }
 }
 
@@ -1776,107 +1900,20 @@ span {
 
 }
 
+#comp #copiar,
 #tutor #copiar {
   margin-left: -20%;
 }
 
+#comp img,
 #tutor img{
   width: 9%;
   position: absolute;
-  margin-left: 80%;
+  margin-left: 95%;
   margin-top: -18%;
 }
 
-a #close-btn {
-/*EM MANUTENÇÃO*/
-}
-
-@media (min-width: 1024px){
-  #tutor img{
-    width: 7%;
-    position: absolute;
-    margin-left: 75%;
-    margin-top: -18%;
-  }
-
-  #tutor{
-    width: 30%;
-  }
-
-  #tutor a{
-    border-radius: 70px 70px;
-    color: white;
-    margin-left: 10%!important;
-    margin-right: 14%!important;
-    margin-top: 5%!important;
-    margin-bottom: 5%!important;
-  }
-
-  #tutor button{
-    border-radius: 70px 70px;
-    color: white;
-    margin-top: 5%;
-    margin-bottom: 5%;
-}
-
-
-
-@media (min-width: 1300px){
-  #tutor img{
-    width: 7%;
-    position: absolute;
-    margin-left: 85%;
-    margin-top: -12%;
-  }
-
-  #tutor{
-    width: 30%;
-  }
-
-  #tutor a{
-    border-radius: 70px 70px;
-    color: white;
-    margin-left: 15%!important;
-    margin-right: 18%!important;
-    margin-top: 5%!important;
-    margin-bottom: 5%!important;
-  }
-
-  #tutor button{
-    border-radius: 70px 70px;
-    color: white;
-    margin-top: 5%;
-    margin-bottom: 5%;
-}
-@media (min-width: 1920px){
-
-  #tutor img{
-    width: 7%;
-    position: absolute;
-    margin-left: 85%;
-    margin-top: -9%;
-  }
-
-  #tutor{
-    width: 30%;
-  }
-
-  #tutor a{
-    border-radius: 70px 70px;
-    color: white;
-    margin-left: 1%!important;
-    margin-right: 27%!important;
-    margin-top: 5%!important;
-    margin-bottom: 5%!important;
-  }
-
-  #tutor button{
-    border-radius: 70px 70px;
-    color: white;
-    margin-top: 9%;
-    margin-bottom: 5%;
-    margin-right: 7%;
-}
-
-
+#comp button{
+  margin-right: 34%;
+  border-radius: 70px 70px;
 }

@@ -101,52 +101,53 @@
         <div id="divisão" class="divider hide-on-large-only" ></div>
         <img class= "responsive-img hide-on-large-only" id = "compartilhar" src ="../images/compartilhar.png"></li>
 
-        <!-- Modal Trigger -->
+        <!-- Modal Trigger COMP-->
           <a class="waves-effect waves-light modal-trigger center-align hide-on-large-only" id="compartilhartexto" href="#comp">Compartilhar</a>
-
           <h1 class= "hide-on-large-only" id="compartilhardescricao">Gostou? Repasse  para seus amigos!</h1>
 
           <!-- Ajuda -->
 
           <div id="divisão2" class="divider  hide-on-large-only" ></div>
-
           <img class= "responsive-img hide-on-large-only" id = "ajuda" src ="../images/ajuda.png"></li>
 
-          <!-- Modal Trigger -->
-            <a class="waves-effect waves-light modal-trigger center-align hide-on-large-only" id="ajudatexto" href="#ajuda">Ajuda</a>
-          <!-- -->
-
+          <!-- Modal Trigger AJUDA-->
+            <a class="waves-effect waves-light modal-trigger center-align hide-on-large-only" id="ajudatexto" href="../login/indexLogin.html">Ajuda</a>
             <h1 class= "hide-on-large-only" id="ajudadescricao">Alguma atitude inesperada do site? Nos contacte!</h1>
 
             <!-- Tutorial -->
 
             <div id="divisão3" class="divider  hide-on-large-only" ></div>
-
             <img class= "responsive-img hide-on-large-only" id = "tutorial" src ="../images/tutorial.png"></li>
 
-            <!-- Modal Trigger -->
+            <!-- Modal Trigger TUTOR-->
               <a class="waves-effect waves-light modal-trigger center-align hide-on-large-only" id="tutorialtexto" href="#tutor">Tutorial</a>
-            <!-- -->
-
               <h1 class= "hide-on-large-only" id="tutorialdescricao">Aprenda a mexer como um profissional!</h1>
 
           <!-- Modal Structure -->
+
+          <!--Tutorial-->
           <div id="tutor" class="modal">
             <div class="modal-content">
               <h6 style="text-align: center;"><b>Link do tutorial no Youtube</b></h6>
-              <!--EM MANUTENÇÃO--><a><img id="close-btn" class= "responsive-img " src ="../images/fechar.png"></a>
+              <a><img class= "responsive-img modal-close" src ="../images/fechar.png"></a>
             </div>
             <div class="modal-footer">
               <input id="inputTest" style="text-align: center;" value="https://youtu.be/Z9jrIKcTwxU"/>
               <button style="margin-top: 5%; margin-bottom: 5%;" class="waves-effect waves-light yellow darken-2 btn" onclick="copiarTexto()">Copiar</button>
-              <!--
-              <textarea class="text" style="text-align: center;">https://youtu.be/Z9jrIKcTwxU</textarea>
-              <button class="modal-close center-align waves-effect yellow darken-2 btn" id="copy">Copiar</button>
 
-              <h6 class="text" style="text-align: center;">https://youtu.be/Z9jrIKcTwxU</h6>
-              <button class="waves-effect waves-light yellow darken-2 btn" id="copy">Copiar</button>
-            -->
               <a href="https://youtu.be/Z9jrIKcTwxU" style="margin-left: 9%; margin-right: 10%; margin-top: 5%; margin-bottom: 5%;" class="modal-close center-align waves-effect yellow darken-2 btn">Acessar</a>
+            </div>
+          </div>
+
+          <!--Compartilhar-->
+          <div id="comp" class="modal">
+            <div class="modal-content">
+              <h6 style="text-align: center;"><b>Link do Site</b></h6>
+              <a><img class= "responsive-img modal-close" src ="../images/fechar.png"></a>
+            </div>
+            <div class="modal-footer">
+              <input id="inputTest2" style="text-align: center;" value="https://moments.epic.net/"/>
+              <button style="margin-top: 5%; margin-bottom: 5%;" class="waves-effect waves-light yellow darken-2 btn" onclick="copiarTexto2()">Copiar</button>
             </div>
           </div>
 
@@ -194,17 +195,6 @@
 </script>
 
 
-<!--<script>
-//COPIAR
-let btn = document.querySelector('#copy');
-btn.addEventListener('click', function(e) {
-  let textArea = document.querySelector('.text');
-  textArea.select();
-  document.execCommand('copy');
-
-});
-</script>-->
-
 <script>
 //COPIAR
         let copiarTexto = () =>{
@@ -219,16 +209,21 @@ btn.addEventListener('click', function(e) {
         };
     </script>
 
+    <script>
+    //COPIAR
+            let copiarTexto2 = () =>{
+                //captura o elemento input
+                const inputTest = document.querySelector("#inputTest2");
 
-<script>
-//BOTÂO FECHAR
-function closeHandler() {
-  Enabler.reportManualClose();
-  Enabler.close();
-}
+                //seleciona todo o texto do elemento
+                inputTest.select();
+                //executa o comando copy
+                //aqui é feito o ato de copiar para a area de trabalho com base na seleção
+                document.execCommand('copy');
+            };
+        </script>
 
-document.getElementById('close-btn').addEventListener('click', closeHandler, false);
-</script>
+
 
 
 
