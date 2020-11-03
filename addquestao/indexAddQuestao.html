@@ -77,6 +77,11 @@
 
           <!-- Dashboard CELULAR FINAL -->
 
+          <!-- lINHA LATERAL DEGRADE-->
+
+      <div class="degrade" style="height: 100%;"></div>
+
+
           <!-- Dashboard COMPUTADOR -->
 
           <nav class="hide-on-med-and-down navbar-fixed" id="retanguloroxo">
@@ -97,33 +102,39 @@
 
           <!-- Dashboard COMPUTADOR FINAL-->
 
-
-          <!-- lINHA LATERAL DEGRADE-->
-
-      <div class="degrade" style="height: 100%;"></div>
-
       <!-- Formulário-->
-
         <h2>Adicionar Questão</h2>
-        <div class= "botao1">
-          <a href="http://www.google.com" value="ok" target="_self"><h3>Questão alternativa</h3></a></div>
-        <div class="botao2">
-          <a href="http://www.google.com" value="ok" target="_self" ><h3>Questão dissertativa</h3></a></div>
-      <section class="titulo">
-          <h3>Materia <span style="color: red;">*</span><br><br><br>Tema <span style="color: red;">*</span>
+          <a href="https://www.youtube.com/watch?v=3VTkBuxU4yk" value="ok" target="_self" class="waves-effect waves-light btn transparent">Questão alternativa</a>
+          <a href="https://www.youtube.com/watch?v=3VTkBuxU4yk" value="ok" target="_self" class="waves-effect waves-light btn transparent">Questão dissertativa</a>
+
+        <div class="input-field col s12">
+          <select>
+            <label>Matéria</label>
+            <optgroup label="Ensino médio">
+              <option value="1">Geografia</option>
+              <option value="2">História</option>
+              <option value="2">Inglês</option>
+            </optgroup>
+            <optgroup label="Ensino técnico">
+              <option value="3">Banco de dados</option>
+              <option value="4">Lógica de programação 2</option>
+              <option value="3">linguagem de programação 1</option>
+            </optgroup>
+          </select>
+        </div>
+
+        <!--<br>Tema <span style="color: red;">*</span>
             <br><br><br>Subtema <span style="color: red;">*</span><br><br><br>Enunciado <span style="color: red;">*</span></h3>
-      </section>
-        <input type="text" placeholder="&nbsp;&nbsp;Escolha uma matéria"class="caixa-de-texto" size="40"/>
-          <input type="text" placeholder="&nbsp;&nbsp;Escolha o tema" class="caixa-de-texto1" size="40"/>
-            <input type="text" placeholder="&nbsp;&nbsp;Escolha o subtema"class="caixa-de-texto2" size="40"/>
-              <input type="text" class="caixa-de-texto3" size="40"/>
-    <div class="simbolos" style="height: 8%; width:30%">
-      <p><img style="float:left" class = "img-simbolo" src="../images/Simbolo.png" width="30%">Inserir Simbolo</p>
-      <p><img style="float:left" class = "img-simbolo" src="../images/imagem.png" width="30%">Inserir Imagem</p></div>
-    <input type="checkbox" id="Privado" name="Privado" class="Privado" value="Privado">
-      <label for="Privado">Privado</label><br>
-    <input type="checkbox" id="Publico" name="Publico" class="Publico" value="Publico">
-      <label for="Publico">Publico</label><br>
+
+
+
+        <div class="simbolos" style="height: 8%; width:30%">
+          <p><img style="float:left" class = "img-simbolo" src="../images/Simbolo.png" width="30%">Inserir Simbolo</p>
+          <p><img style="float:left" class = "img-simbolo" src="../images/imagem.png" width="30%">Inserir Imagem</p></div>
+        <input type="checkbox" id="Privado" name="Privado" class="Privado" value="Privado">
+          <label for="Privado">Privado</label><br>
+        <input type="checkbox" id="Publico" name="Publico" class="Publico" value="Publico">
+          <label for="Publico">Publico</label><br>-->
 
 
       <!-- JQuery CDN -->
@@ -132,17 +143,23 @@
       <!-- JavaScript Materialize compilado e minificado -->
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-      <script>
-      //INICIALIZAÇÃO MENU CELULAR
 
+      <!--INICIALIZAÇÃO MENU (sanduiche) CELULAR (JQuery)-->
+      <script>
       $(document).ready(function(){
         $('.sidenav').sidenav();});
       </script>
-
-    <script>
+      <script>
        instance.close();
-    </script>
-    
+      </script>
+
+      <!--INICIALIZAÇÃO CAMPO LISTA MATÉRIA (JQuery)-->
+      <script>
+      $(document).ready(function(){
+        $('select').formSelect();
+          });
+      </script>
+
     </body>
 
 </html>
