@@ -74,11 +74,10 @@
             <img class= "responsive-img" id = "logocel" src ="../images/logo.png">
           </div>
         </div>
-
           <!-- Dashboard CELULAR FINAL -->
 
-          <!-- lINHA LATERAL DEGRADE-->
 
+          <!-- lINHA LATERAL DEGRADE-->
       <div class="degrade" style="height: 100%;"></div>
 
 
@@ -104,23 +103,50 @@
 
       <!-- Formulário-->
         <h2>Adicionar Questão</h2>
-          <a href="https://www.youtube.com/watch?v=3VTkBuxU4yk" value="ok" target="_self" class="waves-effect waves-light btn transparent">Questão alternativa</a>
-          <a href="https://www.youtube.com/watch?v=3VTkBuxU4yk" value="ok" target="_self" class="waves-effect waves-light btn transparent">Questão dissertativa</a>
+          <a href="https://www.youtube.com/watch?v=3VTkBuxU4yk" value="ok" target="_self" class="waves-effect waves-light btn transparent" id="escolha">Questão alternativa</a>
+          <a href="https://www.youtube.com/watch?v=3VTkBuxU4yk" value="ok" target="_self" class="waves-effect waves-light btn transparent" id="escolha">Questão dissertativa</a>
 
         <div class="input-field col s12">
           <select>
-            <label>Matéria</label>
             <optgroup label="Ensino médio">
               <option value="1">Geografia</option>
               <option value="2">História</option>
-              <option value="2">Inglês</option>
+              <option value="3">Inglês</option>
             </optgroup>
             <optgroup label="Ensino técnico">
               <option value="3">Banco de dados</option>
               <option value="4">Lógica de programação 2</option>
-              <option value="3">linguagem de programação 1</option>
+              <option value="5">linguagem de programação 1</option>
             </optgroup>
           </select>
+          <label>Matéria</label>
+        </div>
+
+        <div class="input-field col s12">
+          <select>
+            <optgroup label="Geografia">
+              <option value="1">Hidrografia</option>
+              <option value="2">Paisagem</option>
+              <option value="3">Rondônia</option>
+            </optgroup>
+          </select>
+          <label>Tema</label>
+        </div>
+
+        <div class="input-field col s12">
+          <select>
+            <optgroup label="Hidrografia">
+              <option value="1">Águas do pacífico</option>
+              <option value="2">Perca do status salino</option>
+              <option value="3">Qualificador de PH</option>
+            </optgroup>
+          </select>
+          <label>Subtema</label>
+        </div>
+
+        <div>
+          <textarea placeholder="Descreva sua solicitação" id="textarea1" class="materialize-textarea"></textarea>
+          <label for="textarea1" style= "font-family: 'Muli'; color:black;">Descrição</label>
         </div>
 
         <!--<br>Tema <span style="color: red;">*</span>

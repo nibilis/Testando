@@ -12,8 +12,14 @@ body{
 .degrade{
   width: 10%;
   float: left;
+  position: absolute;
   margin-top: -5.5% ;
   background: linear-gradient(to bottom, #D0C7FC, #8F83CD, #7C6FBF);
+}
+
+textarea.materialize-textarea {
+  color: black;
+  font-family: 'Muli';
 }
 
 
@@ -641,6 +647,18 @@ border-radius: 10px 10px;
 
 /*Dashboard para o computador final*/
 
+ #escolha{
+  width: 40%;
+  color: black;
+  border-radius: 40px 40px;
+  text-transform: capitalize;
+  font-family: 'Muli';
+  font-size: 75%;
+  border-color: black;
+  border-width: 6px;
+  padding-right: 0%;
+  padding-left: 0%;
+}
 
 
 /*W E N D E L*/
@@ -718,8 +736,9 @@ header h1{
 }
 
 body h2{
-  font-size: 230%;
+  font-size: 170%;
   position: absolute;
+  font-family: 'Muli';
   left: 18%;
   top: 28%;
 }
