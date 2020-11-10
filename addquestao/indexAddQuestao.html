@@ -108,11 +108,11 @@
 
 
         <h2>Adicionar Questão</h2>
-          <a href="https://www.youtube.com/watch?v=3VTkBuxU4yk" value="ok" target="_self" class="waves-effect waves-light btn transparent" id="alternativa">Questão alternativa</a>
-          <a href="https://www.youtube.com/watch?v=3VTkBuxU4yk" value="ok" target="_self" class="waves-effect waves-light btn transparent" id="dissertativa">Questão dissertativa</a>
+          <a href="#alternativa" value="ok" target="_self" class="waves-effect waves-light btn transparent" id="alternativa">Questão alternativa</a>
+          <a href="#dissertativa" value="ok" target="_self" class="waves-effect waves-light btn transparent" id="dissertativa">Questão dissertativa</a>
 
 
-        <div id="campo1" class="input-field col s9 center-align hide-on-large-only">
+        <div required id="campo1" class="input-field col s9 center-align hide-on-large-only">
           <select>
             <optgroup label="Ensino médio" style= "font-family: 'Muli'; font-size: 11px; float: left;">
               <option value="1">Geografia</option>
@@ -128,7 +128,7 @@
           <label>Matéria</label>
         </div>
 
-        <div id="campo2" class="input-field col s9 center-align hide-on-large-only">
+        <div required id="campo2" class="input-field col s9 center-align hide-on-large-only">
           <select>
             <optgroup label="Geografia" style= "font-family: 'Muli'; font-size: 11px; float: left;">
               <option value="1">Hidrografia</option>
@@ -139,7 +139,7 @@
           <label>Tema</label>
         </div>
 
-        <div id="campo3" class="input-field col s9 center-align hide-on-large-only">
+        <div required id="campo3" class="input-field col s9 center-align hide-on-large-only">
           <select>
             <optgroup label="Hidrografia" style= "font-family: 'Muli'; font-size: 11px; float: left;">
               <option value="1">Águas do pacífico</option>
@@ -150,12 +150,18 @@
           <label>Subtema</label>
         </div>
 
-        <div id="campo4" class="col s9 center-align hide-on-large-only">
+        <div required id="campo4" class="col s9 center-align hide-on-large-only">
           <label for="textarea1" style= "font-family: 'Muli'; font-size: 11px; float: left;">Enunciado</label>
           <textarea placeholder="Escreva seu enunciado" id="textarea1" class="materialize-textarea"></textarea>
         </div>
 
-          <div
+          <div id="simbolo_imagem">
+            <a style=" width: 20%;" class="waves-effect waves-light" href="https://youtu.be/Z9jrIKcTwxU"><img class= "responsive-img" id = "simbolo" src ="../images/omega2.png"></a>
+            <p style="color: black;">Inserir <br> Símbolo</p>
+            <a style="width: 40%;" class="waves-effect waves-light" href="https://moments.epic.net/"><img class= "responsive-img" id = "imagem" src ="../images/imagem.png"></a>
+            <p id="p2" style="color: black;">Inserir <br>  Imagem</p>
+
+          </div>
       </div>
         <!--<br>Tema <span style="color: red;">*</span>
             <br><br><br>Subtema <span style="color: red;">*</span><br><br><br>Enunciado <span style="color: red;">*</span></h3>

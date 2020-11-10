@@ -67,7 +67,9 @@ body{
 /*Dashboard para o celular*/
 #dashboardcel{
 background-color: #8579C3;
-
+width: 100%;
+height: 10%;
+margin-left: 0%;
 }
 
 a {
@@ -151,6 +153,23 @@ border-radius: 10px 10px;
   margin-left: 62%;
   margin-top: 240%;
   width: 30%;
+}
+
+#sair {
+  font-family: 'Muli';
+  font-size: 100%;
+  position: absolute;
+  margin-top: 15%;
+  color: #DD636E;
+  margin-left: 50%;
+}
+
+#sair2 {
+  color: #DD636E;
+  margin-left: -100%;
+  margin-top: 40%;
+  position: absolute;
+
 }
 
 
@@ -658,7 +677,7 @@ border-radius: 10px 10px;
 }
 
 #alternativa {
-  margin-left: 5%;
+  margin-left: 8%;
   margin-right: 2%;
 }
 
@@ -676,8 +695,41 @@ textarea.materialize-textarea {
   font-family: 'Muli';
 }
 
-#campo1, #campo2, {
-  margin-left: 30%; 
+#campo1, #campo2, #campo3, #campo4 {
+  margin-left: 6%;
+}
+
+#simbolo_imagem #p2{
+  position: absolute;
+  margin-top: -14.3%;
+  font-size: 60%;
+  width: 20%;
+  margin-left: 77%;
+}
+
+#simbolo_imagem p {
+  position: absolute;
+  margin-top: -8%;
+  font-size: 60%;
+  width: 20%;
+  margin-left: 57%;
+}
+
+#simbolo_imagem a {
+  margin-top: -20%;
+  width: 110%;
+  margin-left: 40%;
+}
+
+ #imagem {
+  width: 12%;
+  margin-left: 50%;
+  margin-top: 10%;
+}
+
+#simbolo {
+    width: 25%;
+    margin-top: 80%;
 }
 
 /*W E N D E L*/
