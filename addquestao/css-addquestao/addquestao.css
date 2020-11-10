@@ -6,20 +6,14 @@
 
 
 body{
-  height:  150vh;
+  height:  100vh;
 }
 
 .degrade{
   width: 10%;
   float: left;
-  position: absolute;
   margin-top: -5.5% ;
   background: linear-gradient(to bottom, #D0C7FC, #8F83CD, #7C6FBF);
-}
-
-textarea.materialize-textarea {
-  color: black;
-  font-family: 'Muli';
 }
 
 
@@ -647,8 +641,9 @@ border-radius: 10px 10px;
 
 /*Dashboard para o computador final*/
 
- #escolha{
-  width: 40%;
+#alternativa,
+ #dissertativa{
+  width: 35%;
   color: black;
   border-radius: 40px 40px;
   text-transform: capitalize;
@@ -658,8 +653,32 @@ border-radius: 10px 10px;
   border-width: 6px;
   padding-right: 0%;
   padding-left: 0%;
+  margin-top: 25%;
+  margin-bottom: 10%;
 }
 
+#alternativa {
+  margin-left: 5%;
+  margin-right: 2%;
+}
+
+body h2{
+  font-size: 170%;
+  position: absolute;
+  font-family: 'Muli';
+  left: 13%;
+  top: 12%;
+}
+
+
+textarea.materialize-textarea {
+  color: black;
+  font-family: 'Muli';
+}
+
+#campo1, #campo2, {
+  margin-left: 30%; 
+}
 
 /*W E N D E L*/
 header {
@@ -735,13 +754,7 @@ header h1{
   font-size: 1em;
 }
 
-body h2{
-  font-size: 170%;
-  position: absolute;
-  font-family: 'Muli';
-  left: 18%;
-  top: 28%;
-}
+
 
 .botao1,
 .botao2{

@@ -102,13 +102,19 @@
           <!-- Dashboard COMPUTADOR FINAL-->
 
       <!-- Formulário-->
-        <h2>Adicionar Questão</h2>
-          <a href="https://www.youtube.com/watch?v=3VTkBuxU4yk" value="ok" target="_self" class="waves-effect waves-light btn transparent" id="escolha">Questão alternativa</a>
-          <a href="https://www.youtube.com/watch?v=3VTkBuxU4yk" value="ok" target="_self" class="waves-effect waves-light btn transparent" id="escolha">Questão dissertativa</a>
 
-        <div class="input-field col s12">
+      <div class="row" id= "grid">
+
+
+
+        <h2>Adicionar Questão</h2>
+          <a href="https://www.youtube.com/watch?v=3VTkBuxU4yk" value="ok" target="_self" class="waves-effect waves-light btn transparent" id="alternativa">Questão alternativa</a>
+          <a href="https://www.youtube.com/watch?v=3VTkBuxU4yk" value="ok" target="_self" class="waves-effect waves-light btn transparent" id="dissertativa">Questão dissertativa</a>
+
+
+        <div id="campo1" class="input-field col s9 center-align hide-on-large-only">
           <select>
-            <optgroup label="Ensino médio">
+            <optgroup label="Ensino médio" style= "font-family: 'Muli'; font-size: 11px; float: left;">
               <option value="1">Geografia</option>
               <option value="2">História</option>
               <option value="3">Inglês</option>
@@ -122,9 +128,9 @@
           <label>Matéria</label>
         </div>
 
-        <div class="input-field col s12">
+        <div id="campo2" class="input-field col s9 center-align hide-on-large-only">
           <select>
-            <optgroup label="Geografia">
+            <optgroup label="Geografia" style= "font-family: 'Muli'; font-size: 11px; float: left;">
               <option value="1">Hidrografia</option>
               <option value="2">Paisagem</option>
               <option value="3">Rondônia</option>
@@ -133,9 +139,9 @@
           <label>Tema</label>
         </div>
 
-        <div class="input-field col s12">
+        <div id="campo3" class="input-field col s9 center-align hide-on-large-only">
           <select>
-            <optgroup label="Hidrografia">
+            <optgroup label="Hidrografia" style= "font-family: 'Muli'; font-size: 11px; float: left;">
               <option value="1">Águas do pacífico</option>
               <option value="2">Perca do status salino</option>
               <option value="3">Qualificador de PH</option>
@@ -144,11 +150,13 @@
           <label>Subtema</label>
         </div>
 
-        <div>
-          <textarea placeholder="Descreva sua solicitação" id="textarea1" class="materialize-textarea"></textarea>
-          <label for="textarea1" style= "font-family: 'Muli'; color:black;">Descrição</label>
+        <div id="campo4" class="col s9 center-align hide-on-large-only">
+          <label for="textarea1" style= "font-family: 'Muli'; font-size: 11px; float: left;">Enunciado</label>
+          <textarea placeholder="Escreva seu enunciado" id="textarea1" class="materialize-textarea"></textarea>
         </div>
 
+          <div
+      </div>
         <!--<br>Tema <span style="color: red;">*</span>
             <br><br><br>Subtema <span style="color: red;">*</span><br><br><br>Enunciado <span style="color: red;">*</span></h3>
 
