@@ -114,6 +114,7 @@
 
         <div required id="campo1" class="input-field col s9 center-align hide-on-large-only">
           <select>
+              <option value="" selected disabled>Selecione sua Matéria </option>
             <optgroup label="Ensino médio" style= "font-family: 'Muli'; font-size: 11px; float: left;">
               <option value="1">Geografia</option>
               <option value="2">História</option>
@@ -125,41 +126,43 @@
               <option value="5">linguagem de programação 1</option>
             </optgroup>
           </select>
-          <label>Matéria</label>
+          <label>Matéria <span style="color: red;">*</span></label>
         </div>
 
         <div required id="campo2" class="input-field col s9 center-align hide-on-large-only">
           <select>
+              <option value="" selected disabled>Selecione seu Tema </option>
             <optgroup label="Geografia" style= "font-family: 'Muli'; font-size: 11px; float: left;">
               <option value="1">Hidrografia</option>
               <option value="2">Paisagem</option>
               <option value="3">Rondônia</option>
             </optgroup>
           </select>
-          <label>Tema</label>
+          <label>Tema <span style="color: red;">*</span></label>
         </div>
 
         <div required id="campo3" class="input-field col s9 center-align hide-on-large-only">
           <select>
+            <option value="" selected disabled>Selecione seu Subtema </option>
             <optgroup label="Hidrografia" style= "font-family: 'Muli'; font-size: 11px; float: left;">
               <option value="1">Águas do pacífico</option>
               <option value="2">Perca do status salino</option>
               <option value="3">Qualificador de PH</option>
             </optgroup>
           </select>
-          <label>Subtema</label>
+          <label>Subtema <span style="color: red;">*</span></label>
         </div>
 
         <div required id="campo4" class="col s9 center-align hide-on-large-only">
-          <label for="textarea1" style= "font-family: 'Muli'; font-size: 11px; float: left;">Enunciado</label>
+          <label for="textarea1" style= "font-family: 'Muli'; font-size: 11px; float: left;">Enunciado <span style="color: red;">*</span></label>
           <textarea placeholder="Escreva seu enunciado" id="textarea1" class="materialize-textarea"></textarea>
         </div>
 
           <div id="simbolo_imagem">
+            <a style="width: 40%;" class="waves-effect waves-light" href="https://moments.epic.net/"><img class= "responsive-img" id = "imagem" src ="../images/imagem.png"></a>
+            <p id="p2" style="color: black;">Inserir <br> Imagem</p>
             <a style=" width: 20%;" class="waves-effect waves-light" href="https://youtu.be/Z9jrIKcTwxU"><img class= "responsive-img" id = "simbolo" src ="../images/omega2.png"></a>
             <p style="color: black;">Inserir <br> Símbolo</p>
-            <a style="width: 40%;" class="waves-effect waves-light" href="https://moments.epic.net/"><img class= "responsive-img" id = "imagem" src ="../images/imagem.png"></a>
-            <p id="p2" style="color: black;">Inserir <br>  Imagem</p>
 
           </div>
       </div>
@@ -199,7 +202,6 @@
         $('select').formSelect();
           });
       </script>
-
     </body>
 
 </html>

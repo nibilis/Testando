@@ -685,10 +685,13 @@ body h2{
   font-size: 170%;
   position: absolute;
   font-family: 'Muli';
-  left: 13%;
+  left: 19%;
   top: 12%;
 }
 
+#textarea1{
+  color: black;
+}
 
 textarea.materialize-textarea {
   color: black;
@@ -697,10 +700,14 @@ textarea.materialize-textarea {
 
 #campo1, #campo2, #campo3, #campo4 {
   margin-left: 6%;
+  width: 78%;
+}
+
+#campo4{
+  margin-bottom: 10%;
 }
 
 #simbolo_imagem #p2{
-  position: absolute;
   margin-top: -14.3%;
   font-size: 60%;
   width: 20%;
@@ -708,7 +715,6 @@ textarea.materialize-textarea {
 }
 
 #simbolo_imagem p {
-  position: absolute;
   margin-top: -8%;
   font-size: 60%;
   width: 20%;
