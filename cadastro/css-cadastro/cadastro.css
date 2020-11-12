@@ -79,6 +79,18 @@ body{
     font-size: 0.5em;
   }
 
+.select-dropdown li.optgroup>span {
+      color: rgba(0,0,0,0.4)!important;
+  }
+
+.select-dropdown li.disabled>span {
+    color: rgba(0,0,0,0.4)!important;
+  }
+
+.dropdown-content li>span {
+    color: #7C6FBF!important;
+  }
+
 #nome {
   width: 80% !important;
 }
@@ -292,6 +304,19 @@ width: 80% !important;
     margin-top: 5%;
     font-size: 1em;
   }
+
+  .select-dropdown li.optgroup>span {
+        color: rgba(0,0,0,0.4)!important;
+    }
+
+  .select-dropdown li.disabled>span {
+      color: rgba(0,0,0,0.4)!important;
+    }
+
+  .dropdown-content li>span {
+      color: #7C6FBF!important;
+    }
+  
 
 
 #nome{

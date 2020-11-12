@@ -689,13 +689,18 @@ body h2{
   top: 12%;
 }
 
+.select-wrapper input.select-dropdown {
+  color: #8D8989;
+}
+
 #textarea1{
   color: black;
 }
 
-textarea.materialize-textarea {
-  color: black;
+textarea .materialize-textarea {
   font-family: 'Muli';
+  font-size: 8%;
+  color: black;
 }
 
 #campo1, #campo2, #campo3, #campo4 {
@@ -705,38 +710,61 @@ textarea.materialize-textarea {
 
 #campo4{
   margin-bottom: 10%;
+  font-size: 20%;
 }
 
-#simbolo_imagem #p2{
-  margin-top: -14.3%;
-  font-size: 60%;
-  width: 20%;
-  margin-left: 77%;
+
+#imagemdiv #p2{
+  margin-top: -16.5%;
+  position: absolute;
+  margin-left: 81%;
+  font-size: 65%;
 }
 
-#simbolo_imagem p {
-  margin-top: -8%;
-  font-size: 60%;
-  width: 20%;
-  margin-left: 57%;
+#simbolodiv p {
+  margin-top: -22.5%;
+  position: absolute;
+  margin-left: 61%;
+  font-size: 65%;
 }
 
-#simbolo_imagem a {
+#simbolodiv a {
+  margin-top: -31%;
+  margin-left: 45%;
+}
+
+ #imagemdiv a {
   margin-top: -20%;
-  width: 110%;
-  margin-left: 40%;
+  margin-left: 63%;
+  padding-left: 2%;
 }
 
  #imagem {
-  width: 12%;
-  margin-left: 50%;
-  margin-top: 10%;
+  width: 30%;
 }
 
 #simbolo {
-    width: 25%;
-    margin-top: 80%;
+  width: 30%;
 }
+
+/*COMEÇO DOS CÓDIGOS PARA MUDAR A FORMATAÇÃO DAS CORES DOS CAMPOS DO MATERIALIZE*/
+.select-dropdown li.optgroup>span {
+    color: rgba(0,0,0,0.4)!important;
+}
+
+.dropdown-content li>span {
+  color: #7C6FBF!important;
+}
+
+.select-dropdown li.disabled>span {
+  color: rgba(0,0,0,0.4)!important;
+}
+
+.select-wrapper input.select-dropdown:focus {
+  border-bottom: 1px solid #7C6FBF!important;
+}
+/*FINAL DOS CÓDIGOS PARA MUDAR A FORMATAÇÃO DAS CORES DOS CAMPOS DO MATERIALIZE*/
+
 
 /*W E N D E L*/
 header {
@@ -811,8 +839,6 @@ header h1{
   top: 38%;
   font-size: 1em;
 }
-
-
 
 .botao1,
 .botao2{
