@@ -1,8 +1,10 @@
 <?php
-    require_once'../Classes/professores.php';
-    $u = new Usuario;
-    //Adicionando as classes
- ?>
+header('Content-Type: text/html; charset=UTF-8');
+  require_once'../Classes/CadastroUsuario.php';
+  $c = new CadastroUsuario;
+  require_once'../Classes/DataBase.php';
+  $u = new DataBase;
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -46,8 +48,8 @@
   <input class="flow-text validate" placeholder="CPF" id="numero" type="number" data-length="11" name="CPF">
 </div>
 
-<div class="input-field col s10 l8" id="materia" name="">
-    <div class="chips-placeholder validate" type="text"></div>
+<div class="input-field col s10 l8" id="materia" name="materia">
+    <div class="chips-placeholder validate" type="text" ></div>
 </div>
 
 <div class="input-field col s9 l8 " id="email">
@@ -126,28 +128,34 @@
   </div>
 
   <div>
-      <input class="cadastro flow-text waves-effect yellow darken-2 waves-light hoverable" type="submit" value"Cadastrar">
+      <input class="cadastro flow-text waves-effect yellow darken-2 waves-light hoverable" type="submit" value="Cadastrar">
   </div>
 </form>
-<?php
-//verificar se clicou no botão
-if(isset($_POST['nome'])){
 
-  $nome = addslashes($_POST['nome']);
-  $CPF = addslashes($_POST['CPF']);
-  $email = addslashes($_POST['email']);
-  $endereço = addslashes($_POST['endereço']);
-  $senha = addslashes($_POST['senha']);
-  $confSenha = addslashes($_POST['confSenha']);
-//verificar se esta preenchido
+<?php
+
+//verificar se clicou no botão
+	if(isset($_POST['nome'])){
+
+		$nome = addslashes($_POST['nome']);
+		$CPF = addslashes($_POST['CPF']);
+		/* $materia = addslashes($_POST['materia']); */
+		$email = addslashes($_POST['email']);
+		$endereço = addslashes($_POST['endereço']);
+		$senha = addslashes($_POST['senha']);
+		$confSenha = addslashes($_POST['confSenha']);
+		//verificar se esta preenchido
+/*  if(!empty($nome) && !empty($CPF) && !empty($email) && !empty($materia) && !empty($endereço) && !empty($senha) && !empty($confSenha) )*/
   if(!empty($nome) && !empty($CPF) && !empty($email) && !empty($endereço) && !empty($senha) && !empty($confSenha) )
   {
-      $u->conectar("projeto_testando", "localhost", "root", "");
+
+      $u->conectar("testando", "localhost", "root", "");
       if($u->msgErro == ""){
         if($senha == $confSenha)
         {
-          if($u->cadastrar($nome, $CPF, $email, $endereço, $senha))
+          if($c->cadastrar($nome, $CPF, $email, $endereço, $senha))
           {
+            $c->cadastrar($nome, $CPF, $email, $endereço, $senha);
             echo "Cadastrado com sucesso!";
           }
           else{
@@ -167,8 +175,7 @@ if(isset($_POST['nome'])){
     echo "Preencha todos os campos";
   }
 }
-
-  ?>
+?>
 
     </div>
 
