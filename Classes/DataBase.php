@@ -3,7 +3,7 @@
 Class DataBase{
 
   public $msgErro = "";
-  
+
   public function conectar($nome, $host, $usuario, $senha){
 
     global $pdo;

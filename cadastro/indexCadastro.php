@@ -128,7 +128,7 @@ header('Content-Type: text/html; charset=UTF-8');
   </div>
 
   <div>
-      <input class="cadastro flow-text waves-effect yellow darken-2 waves-light hoverable" type="submit" value="Cadastrar">
+      <input class="cadastro flow-text waves-effect yellow darken-2 waves-light hoverable" type="submit" value="Cadastrar" >
   </div>
 </form>
 
@@ -138,24 +138,23 @@ header('Content-Type: text/html; charset=UTF-8');
 	if(isset($_POST['nome'])){
 
 		$nome = addslashes($_POST['nome']);
-		$CPF = addslashes($_POST['CPF']);
+		$CPF_Usuario = addslashes($_POST['CPF']);
 		/* $materia = addslashes($_POST['materia']); */
 		$email = addslashes($_POST['email']);
 		$endereço = addslashes($_POST['endereço']);
 		$senha = addslashes($_POST['senha']);
 		$confSenha = addslashes($_POST['confSenha']);
 		//verificar se esta preenchido
-/*  if(!empty($nome) && !empty($CPF) && !empty($email) && !empty($materia) && !empty($endereço) && !empty($senha) && !empty($confSenha) )*/
-  if(!empty($nome) && !empty($CPF) && !empty($email) && !empty($endereço) && !empty($senha) && !empty($confSenha) )
+/*  if(!empty($nome) && !empty($CPF_Usuario) && !empty($email) && !empty($materia) && !empty($endereço) && !empty($senha) && !empty($confSenha) )*/
+  if(!empty($nome) && !empty($CPF_Usuario) && !empty($email) && !empty($endereço) && !empty($senha) && !empty($confSenha) )
   {
 
-      $u->conectar("testando", "localhost", "root", "");
+      $u->conectar("professor", "localhost", "root", "");
       if($u->msgErro == ""){
         if($senha == $confSenha)
         {
-          if($c->cadastrar($nome, $CPF, $email, $endereço, $senha))
+          if($c->cadastrar($nome, $CPF_Usuario, $email, $endereço, $senha))
           {
-            $c->cadastrar($nome, $CPF, $email, $endereço, $senha);
             echo "Cadastrado com sucesso!";
           }
           else{

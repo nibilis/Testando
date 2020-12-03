@@ -2,14 +2,14 @@
 
 Class CadastroUsuario
 {
-  private $pdo;
+  public $pdo;
 
-  public function cadastrar($nome, $CPF, $email, $endereço, $senha){
+  public function cadastrar($nome, $CPF_Usuario, $email, $endereço, $senha){
 
     global $pdo;
 
     //verificar se ja existe o email cadastrado
-    $sql = $pdo->prepare("SELECT ID_Usuario FROM usuario_professor WHERE Email =:e");
+    $sql = $pdo->prepare("SELECT ID_Usuario FROM usuario_professor WHERE Email = :e");
     $sql->bindValue(":e", $email);
     $sql->execute();
     if($sql->rowCount() > 0){
@@ -19,7 +19,7 @@ Class CadastroUsuario
       //caso nao exista, cadastrar
       $sql = $pdo->prepare("INSERT INTO usuario_professor (NickName, CPF_Usuario, Email, Endereço, Senha) VALUES (:n, :c, :e, :en, :s)");
         $sql->bindValue(":n", $nome);
-        $sql->bindValue(":c", $CPF);
+        $sql->bindValue(":c", $CPF_Usuario);
         /* $sql->bindValue(":m", $materia); */
         $sql->bindValue(":e", $email);
         $sql->bindValue(":en", $endereço);
@@ -28,6 +28,21 @@ Class CadastroUsuario
 
       return true;
     }
+
+    $sql = $pdo->prepare("SELECT Prontuario FROM professor WHERE CPF = '61349853330'");
+    $sql->bindValue(":c", $CPF_Usuario);
+    $sql->execute();
+    if($sql->rowCount() > 0){
+      $sql = $pdo->prepare("INSERT INTO usuario_professor(Prontuario_Professor) VALUES ('SP195217X')");
+      $sql->execute();
+      return true; //Tem um CPF que é igual
+      echo "DEU CERTO POHA";
+    }
+    else{
+      echo "não sei o que aconteceu";
+      return false; //Não tem CPF
+    }
+
 
   }
 
