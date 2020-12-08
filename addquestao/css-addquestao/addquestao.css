@@ -12,7 +12,7 @@ body{
 .degrade{
   width: 10%;
   float: left;
-  margin-top: -5.5% ;
+  margin-top: -5.5%;
   background: linear-gradient(to bottom, #D0C7FC, #8F83CD, #7C6FBF);
 }
 
@@ -24,6 +24,27 @@ body{
     margin-top: -6.1%;
     background: linear-gradient(to bottom, #D0C7FC, #8F83CD, #7C6FBF);
   }
+
+  #btn-alternativa,
+   #btn-dissertativa{
+    width: 35%;
+    color: black;
+    border-radius: 40px 40px;
+    text-transform: capitalize;
+    font-family: 'Muli';
+    font-size: 75%;
+    border-color: black;
+    border-width: 6px;
+    padding-right: 0%;
+    padding-left: 0%;
+    margin-top: 25%;
+    margin-bottom: 10%;
+  }
+
+  #btn-alternativa {
+    margin-left: 8%;
+    margin-right: 2%;
+  }
 }
 
 @media (min-width: 360px){
@@ -33,6 +54,9 @@ body{
     margin-top: -5.6%;
     background: linear-gradient(to bottom, #D0C7FC, #8F83CD, #7C6FBF);
   }
+
+   #alternativa, #dissertativa { display: none; }
+   #alternativa:target, #dissertativa:target { z-index: auto; }
 }
 
 @media (min-width: 375px){
@@ -61,7 +85,6 @@ body{
     background: linear-gradient(to bottom, #D0C7FC, #8F83CD, #7C6FBF);
   }
 }
-
 
 
 /*Dashboard para o celular*/
@@ -660,8 +683,8 @@ border-radius: 10px 10px;
 
 /*Dashboard para o computador final*/
 
-#alternativa,
- #dissertativa{
+#btn-alternativa,
+ #btn-dissertativa{
   width: 35%;
   color: black;
   border-radius: 40px 40px;
@@ -676,7 +699,7 @@ border-radius: 10px 10px;
   margin-bottom: 10%;
 }
 
-#alternativa {
+#btn-alternativa {
   margin-left: 8%;
   margin-right: 2%;
 }

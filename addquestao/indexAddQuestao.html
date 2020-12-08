@@ -105,12 +105,15 @@
 
       <div class="row" id= "grid">
 
-
-
         <h2>Adicionar Questão</h2>
-          <a href="#alternativa" value="ok" target="_self" class="waves-effect waves-light btn transparent" id="alternativa">Questão alternativa</a>
-          <a href="#dissertativa" value="ok" target="_self" class="waves-effect waves-light btn transparent" id="dissertativa">Questão dissertativa</a>
 
+        <p>
+          <a href="#alternativa" id="btn-alternativa" value="ok" target="_self" class="waves-effect waves-light btn transparent">Alternativa</a>
+          <a href="#dissertativa" id="btn-dissertativa" value="ok" target="_self" class="waves-effect waves-light btn transparent">Dissertativa</a>
+        </p>
+
+        <div class="items">
+        <div id="alternativa">
 
         <div required id="campo1" class="input-field col s9 center-align hide-on-large-only">
           <select>
@@ -128,6 +131,11 @@
           </select>
           <label>Matéria <span style="color: red;">*</span></label>
         </div>
+
+      </div>
+
+        <div id="dissertativa">... item 2 ... </div>
+    </div>
 
         <div required id="campo2" class="input-field col s9 center-align hide-on-large-only">
           <select>
@@ -153,19 +161,50 @@
           <label>Subtema <span style="color: red;">*</span></label>
         </div>
 
-        <div required id="campo4" class="col s9 center-align hide-on-large-only">
+        <div required id="campo4"  class="col s9 center-align hide-on-large-only">
           <label for="textarea1" style= "font-family: 'Muli'; font-size: 11px; float: left;">Enunciado <span style="color: red;">*</span></label>
           <textarea placeholder="Escreva seu enunciado" id="textarea1" class="materialize-textarea"></textarea>
         </div>
+
 
           <div id="imagemdiv">
             <a class="waves-effect waves-light" href="https://moments.epic.net/"><img class= "responsive-img" id = "imagem" src ="../images/imagem.png"></a>
             <p id="p2" style="color: black;">&nbsp;Inserir <br> Imagem</p>
           </div>
+
+<!--
+          <form action="#">
+    <div class="file-field input-field" id="imagemdiv">
+      <div class="btn">
+        <span>File</span>
+        <input type="file" multiple>
+      </div>
+      <div class="file-path-wrapper">
+        <input class="file-path validate" type="text" placeholder="Upload one or more files">
+      </div>
+    </div>
+  </form>
+  -->
+
+
           <div id="simbolodiv">
-            <a style="width: 52px;" class="waves-effect waves-light" href="https://youtu.be/Z9jrIKcTwxU"><img class= "responsive-img" id = "simbolo" src ="../images/omega2.png"></a>
-            <p style="color: black;">&nbsp;Inserir <br> Símbolo</p>
+            <!-- Modal Trigger -->
+            <a href="#simbolo1" style="width: 52px;" class="waves-effect waves-light modal-trigger"><img class= "responsive-img" id = "simbolo" src ="../images/omega2.png"></a>
+            <p href="#simbolo1" style="color: black;">&nbsp;Inserir <br> Símbolo</p>
           </div>
+
+          <!-- Modal Structure -->
+          <div id="simbolo1" class="modal">
+            <div class="modal-content">
+              <h5 style="text-align: center;">Símbolos</h5>
+              <p><br>Escolha sua opção:</p>
+            </div>
+            <div class="modal-footer">
+              <a href="#!" class="modal-close waves-effect waves-green btn-flat">Salvar</a>
+            </div>
+
+  </div>
+
       </div>
         <!--<br>Tema <span style="color: red;">*</span>
             <br><br><br>Subtema <span style="color: red;">*</span><br><br><br>Enunciado <span style="color: red;">*</span></h3>
@@ -193,7 +232,7 @@
       $(document).ready(function(){
         $('.sidenav').sidenav();});
       </script>
-      
+
 
       <!--INICIALIZAÇÃO CAMPO LISTA MATÉRIA (JQuery)-->
       <script>
@@ -202,5 +241,13 @@
           });
       </script>
     </body>
+
+    <!-- MODAL DOS SÍMBOLOS -->
+    <script>
+    $(document).ready(function(){
+    $('.modal').modal();
+    });
+
+    </script>
 
 </html>
