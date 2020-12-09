@@ -16,6 +16,12 @@ body{
   background: linear-gradient(to bottom, #D0C7FC, #8F83CD, #7C6FBF);
 }
 
+#alternativa, #dissertativa { display: none; }
+#alternativa:checked, #dissertativa:checked { z-index: auto;}
+
+.alternativa, .dissertativa {
+  display: none;
+}
 
 @media (min-width: 320px){
   .degrade{
@@ -54,9 +60,6 @@ body{
     margin-top: -5.6%;
     background: linear-gradient(to bottom, #D0C7FC, #8F83CD, #7C6FBF);
   }
-
-   #alternativa, #dissertativa { display: none; }
-   #alternativa:target, #dissertativa:target { z-index: auto; }
 }
 
 @media (min-width: 375px){
@@ -743,6 +746,7 @@ textarea .materialize-textarea {
   margin-left: 81%;
   font-size: 65%;
 }
+
 
 #simbolodiv p {
   margin-top: -22.5%;

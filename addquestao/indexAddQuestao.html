@@ -108,12 +108,19 @@
         <h2>Adicionar Questão</h2>
 
         <p>
-          <a href="#alternativa" id="btn-alternativa" value="ok" target="_self" class="waves-effect waves-light btn transparent">Alternativa</a>
-          <a href="#dissertativa" id="btn-dissertativa" value="ok" target="_self" class="waves-effect waves-light btn transparent">Dissertativa</a>
+          <button href="#alternativa" id="btn-alternativa" value="ok" target="_self" class="waves-effect waves-light btn transparent">Alternativa</button>
+          <button href="#dissertativa" id="btn-dissertativa" value="ok" target="_self" class="waves-effect waves-light btn transparent">Dissertativa</button>
         </p>
 
+  <div id="alternativa" class="alternativa red">
+    <p> muitas muitas muitas faltas de informações</p>
+  </div>
+
+  <div id="dissertativa" class="dissertativa green">
+    <p> muitas muitas muitas informações </p>
+  </div>
+
         <div class="items">
-        <div id="alternativa">
 
         <div required id="campo1" class="input-field col s9 center-align hide-on-large-only">
           <select>
@@ -132,9 +139,6 @@
           <label>Matéria <span style="color: red;">*</span></label>
         </div>
 
-      </div>
-
-        <div id="dissertativa">... item 2 ... </div>
     </div>
 
         <div required id="campo2" class="input-field col s9 center-align hide-on-large-only">
@@ -166,25 +170,27 @@
           <textarea placeholder="Escreva seu enunciado" id="textarea1" class="materialize-textarea"></textarea>
         </div>
 
+          <form action="#">
+            <div class="file-field input-field waves-effect waves-light">
+              <div class="btn">
+                <span>Imagem</span>
+                <input type="file" multiple>
+              </div>
+              <div class="file-path-wrapper">
+                <input class="file-path validate" type="text">
+              </div>
+            </div>
+          </form>
 
+<!--
           <div id="imagemdiv">
             <a class="waves-effect waves-light" href="https://moments.epic.net/"><img class= "responsive-img" id = "imagem" src ="../images/imagem.png"></a>
             <p id="p2" style="color: black;">&nbsp;Inserir <br> Imagem</p>
           </div>
 
-<!--
-          <form action="#">
-    <div class="file-field input-field" id="imagemdiv">
-      <div class="btn">
-        <span>File</span>
-        <input type="file" multiple>
-      </div>
-      <div class="file-path-wrapper">
-        <input class="file-path validate" type="text" placeholder="Upload one or more files">
-      </div>
-    </div>
-  </form>
-  -->
+-->
+
+
 
 
           <div id="simbolodiv">
@@ -247,7 +253,33 @@
     $(document).ready(function(){
     $('.modal').modal();
     });
+    </script>
 
+    <!-- CÓDIGO BOTÃO ALTERNATIVA/DISSERTATIVA -->
+    <script>
+        var btn1 = document.getElementById('btn-dissertativa');
+        var alternativa = document.querySelector('.alternativa');
+        btn1.addEventListener('click', function() {
+
+        if(alternativa.style.display === 'block') {
+            alternativa.style.display = 'none';
+        }
+        else {
+            alternativa.style.display = 'block';
+        }
+      });
+
+        var btn2 = document.getElementById('btn-alternativa');
+        var dissertativa = document.querySelector('.dissertativa');
+        btn2.addEventListener('click', function() {
+
+        if(alternativa.style.display === 'block') {
+            dissertativa.style.display = 'none';
+        }
+        else {
+            dissertativa.style.display = 'block';
+        }
+      });
     </script>
 
 </html>
