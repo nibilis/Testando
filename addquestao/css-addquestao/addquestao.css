@@ -739,27 +739,36 @@ textarea .materialize-textarea {
   font-size: 20%;
 }
 
-
+/*
 #imagemdiv #p2{
   margin-top: -16.5%;
   position: absolute;
   margin-left: 81%;
   font-size: 65%;
 }
+*/
 
+#divimagem{
+
+left: 9%;
+width: 70%;
+text-transform: capitalize;
+
+}
 
 #simbolodiv p {
-  margin-top: -22.5%;
+  margin-top: -13.5%;
   position: absolute;
-  margin-left: 61%;
+  margin-left: 80%;
   font-size: 65%;
 }
 
 #simbolodiv a {
-  margin-top: -31%;
-  margin-left: 45%;
+  margin-top: -15%;
+  margin-left: 64%;
 }
 
+/*
  #imagemdiv a {
   margin-top: -20%;
   margin-left: 63%;
@@ -769,6 +778,8 @@ textarea .materialize-textarea {
  #imagem {
   width: 30%;
 }
+
+*/
 
 #simbolo {
   width: 30%;

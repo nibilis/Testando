@@ -170,17 +170,6 @@
           <textarea placeholder="Escreva seu enunciado" id="textarea1" class="materialize-textarea"></textarea>
         </div>
 
-          <form action="#">
-            <div class="file-field input-field waves-effect waves-light">
-              <div class="btn">
-                <span>Imagem</span>
-                <input type="file" multiple>
-              </div>
-              <div class="file-path-wrapper">
-                <input class="file-path validate" type="text">
-              </div>
-            </div>
-          </form>
 
 <!--
           <div id="imagemdiv">
@@ -190,14 +179,25 @@
 
 -->
 
-
-
-
           <div id="simbolodiv">
             <!-- Modal Trigger -->
             <a href="#simbolo1" style="width: 52px;" class="waves-effect waves-light modal-trigger"><img class= "responsive-img" id = "simbolo" src ="../images/omega2.png"></a>
             <p href="#simbolo1" style="color: black;">&nbsp;Inserir <br> Símbolo</p>
           </div>
+
+
+          <form action="#">
+            <div class="file-field input-field waves-effect waves-light" id="divimagem">
+              <div class="btn">
+                <span id="spanimagem">Imagem</span>
+                <input type="file" multiple>
+              </div>
+              <div class="file-path-wrapper">
+                <input class="file-path validate" type="text">
+              </div>
+            </div>
+          </form>
+
 
           <!-- Modal Structure -->
           <div id="simbolo1" class="modal">
@@ -210,7 +210,6 @@
             </div>
 
   </div>
-
       </div>
         <!--<br>Tema <span style="color: red;">*</span>
             <br><br><br>Subtema <span style="color: red;">*</span><br><br><br>Enunciado <span style="color: red;">*</span></h3>
@@ -239,7 +238,6 @@
         $('.sidenav').sidenav();});
       </script>
 
-
       <!--INICIALIZAÇÃO CAMPO LISTA MATÉRIA (JQuery)-->
       <script>
       $(document).ready(function(){
@@ -261,7 +259,7 @@
         var alternativa = document.querySelector('.alternativa');
         btn1.addEventListener('click', function() {
 
-        if(alternativa.style.display === 'block') {
+        if (dissertativa.style.display === 'block') {
             alternativa.style.display = 'none';
         }
         else {
@@ -273,13 +271,14 @@
         var dissertativa = document.querySelector('.dissertativa');
         btn2.addEventListener('click', function() {
 
-        if(alternativa.style.display === 'block') {
+        if (alternativa.style.display === 'block') {
             dissertativa.style.display = 'none';
         }
         else {
-            dissertativa.style.display = 'block';
+            dissertativa.style.display = 'block'; //É NICOLE NÃO ACHEI UM JEITO DE COLOCAR IMAGEM NO TEXT AREA ;-;
         }
       });
+
     </script>
 
 </html>
