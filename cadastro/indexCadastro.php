@@ -149,7 +149,7 @@ header('Content-Type: text/html; charset=UTF-8');
   if(!empty($nome) && !empty($CPF_Usuario) && !empty($email) && !empty($endereço) && !empty($senha) && !empty($confSenha) )
   {
 
-      $u->conectar("professor", "localhost", "root", "");
+      $u->conectar("testando", "localhost", "root", "");
       if($u->msgErro == ""){
         if($senha == $confSenha)
         {

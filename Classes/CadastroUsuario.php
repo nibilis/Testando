@@ -29,20 +29,29 @@ Class CadastroUsuario
       return true;
     }
 
-    $sql = $pdo->prepare("SELECT Prontuario FROM professor WHERE CPF = '61349853330'");
-    $sql->bindValue(":c", $CPF_Usuario);
+  }
+
+  public function validprontuario($nome, $prontuario, $CPF){
+
+    global $pdo;
+
+    //verificar se ja existe o cpf cadastrado
+    $sql = $pdo->prepare("SELECT Prontuario FROM professor WHERE CPF = :c");
+    $sql->bindValue(":c", $CPF);
     $sql->execute();
     if($sql->rowCount() > 0){
-      $sql = $pdo->prepare("INSERT INTO usuario_professor(Prontuario_Professor) VALUES ('SP195217X')");
-      $sql->execute();
-      return true; //Tem um CPF que é igual
-      echo "DEU CERTO POHA";
+      return false; //ja esta cadastrada
     }
     else{
-      echo "não sei o que aconteceu";
-      return false; //Não tem CPF
-    }
+      //caso nao exista, cadastrar
+      $sql = $pdo->prepare("INSERT INTO professor (Nome, Prontuario, CPF) VALUES (:n, :p, :c)");
+        $sql->bindValue(":n", $nome);
+        $sql->bindValue(":p", $prontuario);
+        $sql->bindValue(":c", $CPF);
+        $sql->execute();
 
+      return true;
+    }
 
   }
 
