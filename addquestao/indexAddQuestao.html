@@ -78,7 +78,7 @@
 
 
           <!-- lINHA LATERAL DEGRADE-->
-      <div class="degrade" style="height: 100%;"></div>
+      <div class="degrade" style="height: 120%;"></div>
 
 
           <!-- Dashboard COMPUTADOR -->
@@ -101,9 +101,9 @@
 
           <!-- Dashboard COMPUTADOR FINAL-->
 
-      <!-- Formulário-->
+      <!-- Formulário Celular-->
 
-      <div class="row" id= "grid">
+      <div class="row hide-on-large-only" id= "grid">
 
         <h2>Adicionar Questão</h2>
 
@@ -111,14 +111,6 @@
           <button href="#alternativa" id="btn-alternativa" value="ok" target="_self" class="waves-effect waves-light btn transparent">Alternativa</button>
           <button href="#dissertativa" id="btn-dissertativa" value="ok" target="_self" class="waves-effect waves-light btn transparent">Dissertativa</button>
         </p>
-
-  <div id="alternativa" class="alternativa red">
-    <p> muitas muitas muitas faltas de informações</p>
-  </div>
-
-  <div id="dissertativa" class="dissertativa green">
-    <p> muitas muitas muitas informações </p>
-  </div>
 
         <div class="items">
 
@@ -188,21 +180,22 @@
 
           <form action="#">
             <div class="file-field input-field waves-effect waves-light" id="divimagem">
-              <div class="btn">
-                <span id="spanimagem">Imagem</span>
+              <div class="btn" style= "font-family: 'Muli'; color:white; background-color:#FFBC2B;">
+                <span id="spanimagem" style= "font-family: 'Muli'; color:white; background-color:#FFBC2B;">Imagem </span>
                 <input type="file" multiple>
               </div>
-              <div class="file-path-wrapper">
+              <div class="file-path-wrapper" >
                 <input class="file-path validate" type="text">
               </div>
             </div>
           </form>
 
 
-          <!-- Modal Structure -->
+          <!-- Modal Structure SÍMBOLOS -->
           <div id="simbolo1" class="modal">
             <div class="modal-content">
               <h5 style="text-align: center;">Símbolos</h5>
+              <p><br>Escolha sua opção:</p>
               <p><br>Escolha sua opção:</p>
             </div>
             <div class="modal-footer">
@@ -211,6 +204,39 @@
 
   </div>
       </div>
+
+      <div id="alternativa" class="alternativa red">
+        <p> muitas muitas muitas faltas de informações</p>
+      </div>
+
+      <div id="dissertativa" class="dissertativa green">
+        <p> muitas muitas muitas informações </p>
+
+        <div class="row center-align hide-on-large-only">
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s12">
+                  <textarea id="respostadissertativa" class="materialize-textarea"></textarea>
+                  <label for="textarea1">Resposta</label>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div required id="dificuldade" class="input-field col s9 center-align hide-on-large-only">
+            <select>
+                <option value="" selected disabled>Selecione a Dificuldade </option>
+              <optgroup label="Nível de dificuldade" style= "font-family: 'Muli'; font-size: 11px; float: left;">
+                <option value="1">Fácil</option>
+                <option value="2">Médio</option>
+                <option value="3">Difícil</option>
+              </optgroup>
+            </select>
+            <label>Dificuldade <span style="color: red;">*</span></label>
+          </div>
+
+      </div>
+
         <!--<br>Tema <span style="color: red;">*</span>
             <br><br><br>Subtema <span style="color: red;">*</span><br><br><br>Enunciado <span style="color: red;">*</span></h3>
 
@@ -223,6 +249,20 @@
           <label for="Privado">Privado</label><br>
         <input type="checkbox" id="Publico" name="Publico" class="Publico" value="Publico">
           <label for="Publico">Publico</label><br>-->
+
+      <!--Final do formulário de Celular-->
+
+      <!-- Formulário Computador-->
+
+      <div class="row hide-on-med-and-down" id= "grid">
+
+        <h2>Adicionar Questão</h2>
+
+        <p>
+          <button href="#alternativa" id="btn-alternativa" value="ok" target="_self" class="waves-effect waves-light btn transparent">Alternativa</button>
+          <button href="#dissertativa" id="btn-dissertativa" value="ok" target="_self" class="waves-effect waves-light btn transparent">Dissertativa</button>
+        </p>
+
 
 
       <!-- JQuery CDN -->
@@ -255,30 +295,29 @@
 
     <!-- CÓDIGO BOTÃO ALTERNATIVA/DISSERTATIVA -->
     <script>
-        var btn1 = document.getElementById('btn-dissertativa');
+        var btn1 = document.getElementById('btn-alternativa');
         var alternativa = document.querySelector('.alternativa');
         btn1.addEventListener('click', function() {
 
-        if (dissertativa.style.display === 'block') {
+        if (dissertativa.style.display = 'block') {
             alternativa.style.display = 'none';
         }
         else {
             alternativa.style.display = 'block';
-        }
-      });
+            }
+          });
 
-        var btn2 = document.getElementById('btn-alternativa');
+        var btn2 = document.getElementById('btn-dissertativa');
         var dissertativa = document.querySelector('.dissertativa');
         btn2.addEventListener('click', function() {
 
-        if (alternativa.style.display === 'block') {
+        if (alternativa.style.display = 'block') {
             dissertativa.style.display = 'none';
         }
         else {
-            dissertativa.style.display = 'block'; //É NICOLE NÃO ACHEI UM JEITO DE COLOCAR IMAGEM NO TEXT AREA ;-;
+            dissertativa.style.display = 'block';
         }
       });
-
     </script>
 
 </html>

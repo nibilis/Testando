@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 
-
 body{
   height:  100vh;
 }
@@ -22,6 +21,8 @@ body{
 .alternativa, .dissertativa {
   display: none;
 }
+
+/*FORMATAÇÃO CELULAR*/
 
 @media (min-width: 320px){
   .degrade{
@@ -88,6 +89,8 @@ body{
     background: linear-gradient(to bottom, #D0C7FC, #8F83CD, #7C6FBF);
   }
 }
+
+/*FINAL DA FORMATAÇÃO CELULAR*/
 
 
 /*Dashboard para o celular*/
@@ -686,6 +689,8 @@ border-radius: 10px 10px;
 
 /*Dashboard para o computador final*/
 
+/*FORMATAÇÃO CELULAR 2*/
+
 #btn-alternativa,
  #btn-dissertativa{
   width: 35%;
@@ -750,8 +755,9 @@ textarea .materialize-textarea {
 
 #divimagem{
 
-left: 9%;
-width: 70%;
+top: -10%;
+left: 10%;
+width: 70.5%;
 text-transform: capitalize;
 
 }
