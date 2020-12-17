@@ -145,7 +145,6 @@ header('Content-Type: text/html; charset=UTF-8');
 		$senha = addslashes($_POST['senha']);
 		$confSenha = addslashes($_POST['confSenha']);
 		//verificar se esta preenchido
-/*  if(!empty($nome) && !empty($CPF_Usuario) && !empty($email) && !empty($materia) && !empty($endereço) && !empty($senha) && !empty($confSenha) )*/
   if(!empty($nome) && !empty($CPF_Usuario) && !empty($email) && !empty($endereço) && !empty($senha) && !empty($confSenha) )
   {
 

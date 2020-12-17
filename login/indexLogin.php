@@ -1,3 +1,12 @@
+<?php
+
+  require_once'../Classes/CadastroUsuario.php';
+  $c = new CadastroUsuario;
+
+  require_once'../Classes/DataBase.php';
+  $u = new DataBase;
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -23,6 +32,7 @@
       </div>
     </div>
 
+<form method="POST">
     <div class="row" id = "div">
 
       <div class="col  s12 center-align hide-on-large-only">
@@ -42,11 +52,11 @@
       </div>
 
       <div class="input-field col  s10 center-align hide-on-large-only" id="prontuario">
-          <input placeholder="Prontuário" id="Prontuário" type="text" class="validate">
+          <input placeholder="Prontuário" id="Prontuário" type="text" class="validate" name="prontuario">
       </div>
 
       <div class="input-field col l4 center-align hide-on-med-and-down" >
-          <input placeholder="Prontuário" id="Prontuário" type="text" class="validate">
+          <input placeholder="Prontuário" id="Prontuário" type="text" class="validate" name="prontuario">
       </div>
 
 
@@ -60,11 +70,11 @@
 
 
       <div class="input-field col  s10 center-align hide-on-large-only" id="senha">
-          <input placeholder="Senha" id="Senha" type="text" class="validate">
+          <input placeholder="Senha" id="Senha" type="text" class="validate" name="senha">
       </div>
 
       <div class="input-field col  l4 center-align hide-on-med-and-down">
-          <input placeholder="Senha" id="Senha" type="text" class="validate">
+          <input placeholder="Senha" id="Senha" type="text" class="validate" name="senha">
       </div>
 
 
@@ -95,11 +105,11 @@
       </div>
 
       <div class="col  s12 center-align hide-on-large-only" id = "login">
-          <a href="https://www.youtube.com/watch?v=m2B6ayYla3g" class="waves-effect waves-light btn yellow darken-2 hoverable" id = "btnLogin">Login</a>
+          <input class="waves-effect waves-light btn yellow darken-2 hoverable" id="btnLogin" type="submit" value="Login" >
       </div>
 
       <div class="col l6 center-align hide-on-med-and-down" id = "loginpc">
-          <a href="https://www.youtube.com/watch?v=m2B6ayYla3g" class="waves-effect waves-light btn yellow darken-2 hoverable" id = "btnLoginpc">Login</a>
+          <input class="waves-effect waves-light btn yellow darken-2 hoverable" id="btnLogin" type="submit" value="Login" >
       </div>
 
       <div class="col  s12 center-align hide-on-large-only" id= "esqsenha">
@@ -109,7 +119,7 @@
       <div class="col l6 center-align hide-on-med-and-down" id= "esqsenhapc">
           <a href="https://www.youtube.com/watch?v=m2B6ayYla3g" class="" id = "btnEsqsenha">Esqueceu sua senha?</a>
       </div>
-
+</form>
 
       <div class="col  s12 deep-purple lighten-2 center-align hide-on-med-and-up" id = "divRoxa">
         <img class= "responsive-img" id = "bolesq" src ="../images/bolinhadirecel.png">
@@ -117,6 +127,40 @@
             <a href="https://www.youtube.com/watch?v=m2B6ayYla3g" class="waves-effect waves-light btn yellow darken-2 hoverable" id = "btnCadastrese">Cadastre-se</a>
         <img class= "responsive-img" id = "boldire" src ="../images/bolinhaesqcel.png">
     </div>
+
+<?php
+    //verificar se clicou no botão
+    	if(isset($_POST['prontuario'])){
+
+    		$prontuario = addslashes($_POST['prontuario']);
+    		$senha = addslashes($_POST['senha']);
+
+    		  //verificar se esta preenchido
+          if(!empty($prontuario) && !empty($senha))
+          {
+              $u->conectar("testando", "localhost", "root", "");
+              if($u->msgErro == "")
+              {
+                if($c->logar($prontuario, $senha))
+                {
+                    header("location: ../perfil/indexPerfil.php");
+                }
+                else
+                {
+                  echo "Prontuario e/ou senha estão incorretos";
+                }
+          }
+          else
+          {
+            echo "Erro: ".$u->msgErro;
+          }}
+        else
+        {
+            echo "Preencha todos os campos";
+        }}
+
+?>
+
 
     <!-- JQuery CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

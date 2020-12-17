@@ -1,3 +1,13 @@
+<?php
+    session_start();
+    if(!isset($_SESSION['ID_Usuario']))
+    {
+      header("location: ../login/indexLogin.php");
+      exit;
+    }
+ ?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
