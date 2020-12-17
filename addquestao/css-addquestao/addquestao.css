@@ -11,6 +11,7 @@ body{
 .degrade{
   width: 10%;
   float: left;
+  position: absolute;
   margin-top: -5.5%;
   background: linear-gradient(to bottom, #D0C7FC, #8F83CD, #7C6FBF);
 }
@@ -708,7 +709,7 @@ border-radius: 10px 10px;
 }
 
 #btn-alternativa {
-  margin-left: 8%;
+  margin-left: 16%;
   margin-right: 2%;
 }
 

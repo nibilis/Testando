@@ -26,7 +26,6 @@
     <body>
 
 
-
         <!-- Dashboard CELULAR -->
 
         <div class= "row hide-on-large-only" id= "dashboardcel">
@@ -116,7 +115,7 @@
 
         <div required id="campo1" class="input-field col s9 center-align hide-on-large-only">
           <select>
-              <option value="" selected disabled>Selecione sua Matéria </option>
+              <option value="" selected disabled>Selecione sua matéria </option>
             <optgroup label="Ensino médio" style= "font-family: 'Muli'; font-size: 11px; float: left;">
               <option value="1">Geografia</option>
               <option value="2">História</option>
@@ -135,7 +134,7 @@
 
         <div required id="campo2" class="input-field col s9 center-align hide-on-large-only">
           <select>
-              <option value="" selected disabled>Selecione seu Tema </option>
+              <option value="" selected disabled>Selecione seu tema </option>
             <optgroup label="Geografia" style= "font-family: 'Muli'; font-size: 11px; float: left;">
               <option value="1">Hidrografia</option>
               <option value="2">Paisagem</option>
@@ -147,7 +146,7 @@
 
         <div required id="campo3" class="input-field col s9 center-align hide-on-large-only">
           <select>
-            <option value="" selected disabled> Selecione seu Subtema </option>
+            <option value="" selected disabled> Selecione seu subtema </option>
             <optgroup label="Hidrografia" style= "font-family: 'Muli'; font-size: 11px; float: left;">
               <option value="1">Águas do pacífico</option>
               <option value="2">Perca do status salino</option>
@@ -161,15 +160,6 @@
           <label for="textarea1" style= "font-family: 'Muli'; font-size: 11px; float: left;">Enunciado <span style="color: red;">*</span></label>
           <textarea placeholder="Escreva seu enunciado" id="textarea1" class="materialize-textarea"></textarea>
         </div>
-
-
-<!--
-          <div id="imagemdiv">
-            <a class="waves-effect waves-light" href="https://moments.epic.net/"><img class= "responsive-img" id = "imagem" src ="../images/imagem.png"></a>
-            <p id="p2" style="color: black;">&nbsp;Inserir <br> Imagem</p>
-          </div>
-
--->
 
           <div id="simbolodiv">
             <!-- Modal Trigger -->
@@ -193,6 +183,7 @@
 
           <!-- Modal Structure SÍMBOLOS -->
           <div id="simbolo1" class="modal">
+
             <div class="modal-content">
               <h5 style="text-align: center;">Símbolos</h5>
               <p><br>Escolha sua opção:</p>
@@ -202,15 +193,17 @@
               <a href="#!" class="modal-close waves-effect waves-green btn-flat">Salvar</a>
             </div>
 
-  </div>
+          </div>
+
+          <!-- Alternativa/Dissertativa -->
+
       </div>
 
-      <div id="alternativa" class="alternativa red">
+      <div id="alternativa" class="alternativa">
         <p> muitas muitas muitas faltas de informações</p>
       </div>
 
-      <div id="dissertativa" class="dissertativa green">
-        <p> muitas muitas muitas informações </p>
+      <div id="dissertativa" class="dissertativa">
 
         <div class="row center-align hide-on-large-only">
             <form class="col s12">
@@ -223,32 +216,33 @@
             </form>
           </div>
 
-          <div required id="dificuldade" class="input-field col s9 center-align hide-on-large-only">
-            <select>
-                <option value="" selected disabled>Selecione a Dificuldade </option>
-              <optgroup label="Nível de dificuldade" style= "font-family: 'Muli'; font-size: 11px; float: left;">
-                <option value="1">Fácil</option>
-                <option value="2">Médio</option>
-                <option value="3">Difícil</option>
-              </optgroup>
-            </select>
-            <label>Dificuldade <span style="color: red;">*</span></label>
+        <div required id="dificuldade" class="input-field col s9 center-align hide-on-large-only">
+        <form action="#">
+          <label>Dificuldade <span style="color: red;">*</span></label>
+        <label>
+          <p>
+          <input name="group1" type="radio" checked />
+          <span>Fácil</span>
+          </p>
+        </label>
+
+        <label>
+          <p>
+          <input name="group1" type="radio" checked />
+          <span>Médio</span>
+          </p>
+        </label>
+
+        <label>
+          <p>
+          <input name="group1" type="radio" checked />
+          <span>Difícil</span>
+          </p>
+        </label>
+
           </div>
 
       </div>
-
-        <!--<br>Tema <span style="color: red;">*</span>
-            <br><br><br>Subtema <span style="color: red;">*</span><br><br><br>Enunciado <span style="color: red;">*</span></h3>
-
-
-
-        <div class="simbolos" style="height: 8%; width:30%">
-          <p><img style="float:left" class = "img-simbolo" src="../images/Simbolo.png" width="30%">Inserir Simbolo</p>
-          <p><img style="float:left" class = "img-simbolo" src="../images/imagem.png" width="30%">Inserir Imagem</p></div>
-        <input type="checkbox" id="Privado" name="Privado" class="Privado" value="Privado">
-          <label for="Privado">Privado</label><br>
-        <input type="checkbox" id="Publico" name="Publico" class="Publico" value="Publico">
-          <label for="Publico">Publico</label><br>-->
 
       <!--Final do formulário de Celular-->
 
