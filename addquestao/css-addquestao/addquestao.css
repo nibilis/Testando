@@ -717,7 +717,7 @@ body h2{
   font-size: 170%;
   position: absolute;
   font-family: 'Muli';
-  left: 19%;
+  left: 23.5%;
   top: 12%;
 }
 
@@ -735,8 +735,27 @@ textarea .materialize-textarea {
   color: black;
 }
 
+textarea {
+  border-bottom: 1px solid #7C6FBF!important;
+}
+
+textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #7C6FBF!important;
+  box-shadow: 0 1px 0 0 #7C6FBF!important;
+}
+
+input {
+  border-bottom: 1px solid #7C6FBF!important;
+  box-shadow: 0 0.1px 0 0 #7C6FBF!important;
+}
+
+/*.select-wrapper textarea.select-dropdown {
+  border-bottom: 1px solid #8D8989!important;
+}*/
+
+
 #campo1, #campo2, #campo3, #campo4 {
-  margin-left: 6%;
+  margin-left: 15%;
   width: 78%;
 }
 
@@ -772,7 +791,8 @@ text-transform: capitalize;
 
 #simbolodiv a {
   margin-top: -15%;
-  margin-left: 64%;
+  margin-left: 74%;
+
 }
 
 /*
