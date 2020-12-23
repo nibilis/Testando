@@ -7,8 +7,27 @@
 body{
   height:  100vh;
 }
+.degrade3 {
+  height: 400%!important;
+  width: 10%;
+  float: left;
+  position: absolute;
+  margin-top: -5.5%;
+  background: blue; /*se preocupar depois :) - yasmin que disse*/
+  display: none;
+}
 
-.degrade{
+.degrade2 {
+  height: 200%!important;
+  width: 10%;
+  float: left;
+  position: absolute;
+  margin-top: -5.5%;
+  background: red; /*se preocupar depois :) - yasmin que disse*/
+  display: none;
+}
+
+.degrade {
   width: 10%;
   float: left;
   position: absolute;
@@ -721,8 +740,9 @@ body h2{
   top: 12%;
 }
 
-.select-wrapper input.select-dropdown {
-  color: #8D8989;
+/*MUDAR CORES DAS BORDAS DO TEXTAREA E DO INPUT*/
+.select-wrapper input.select-dropdown:focus {
+  border-bottom: 1px solid rgba(0, 0, 0, 1)!important;
 }
 
 #textarea1{
@@ -735,23 +755,13 @@ textarea .materialize-textarea {
   color: black;
 }
 
-textarea {
-  border-bottom: 1px solid #7C6FBF!important;
-}
 
 textarea:focus:not([readonly]) {
-  border-bottom: 1px solid #7C6FBF!important;
-  box-shadow: 0 1px 0 0 #7C6FBF!important;
+  border-bottom: 1px solid rgba(0, 0, 0, 3)!important;
+  box-shadow: 0 0.1px 0 0 rgba(0, 0, 0, 3)!important;
 }
 
-input {
-  border-bottom: 1px solid #7C6FBF!important;
-  box-shadow: 0 0.1px 0 0 #7C6FBF!important;
-}
-
-/*.select-wrapper textarea.select-dropdown {
-  border-bottom: 1px solid #8D8989!important;
-}*/
+/*FINAL DAS CORES DAS BORDAS DO TEXTAREA E DO INPUT*/
 
 
 #campo1, #campo2, #campo3, #campo4 {
@@ -775,9 +785,9 @@ input {
 
 #divimagem{
 
-top: -10%;
-left: 10%;
-width: 70.5%;
+left: 18%;
+width: 71.5%;
+margin-top: -4%;
 text-transform: capitalize;
 
 }
@@ -825,10 +835,48 @@ text-transform: capitalize;
   color: rgba(0,0,0,0.4)!important;
 }
 
-.select-wrapper input.select-dropdown:focus {
-  border-bottom: 1px solid #7C6FBF!important;
+.select-wrapper input.select-dropdown {
+  color: #8D8989;
 }
+
 /*FINAL DOS CÓDIGOS PARA MUDAR A FORMATAÇÃO DAS CORES DOS CAMPOS DO MATERIALIZE*/
+
+/*FORMATAÇÃO COMPUTADOR*/
+
+h2 {
+  font-size: 120%;
+  margin-left: 120%;
+
+}
+
+#btn-alternativa2,
+ #btn-dissertativa2{
+  width: 25%;
+  color: black;
+  border-radius: 40px 40px;
+  text-transform: capitalize;
+  font-family: 'Muli';
+  font-size: 100%;
+  border-color: black;
+  border-width: 6px;
+  padding-right: 0%;
+  padding-left: 0%;
+  margin-top: 25%;
+  margin-bottom: 10%;
+}
+
+#btn-alternativa2 {
+  margin-left: 25%;
+  margin-right: 2%;
+}
+
+#btn-dissertativa2 {
+  margin-top: -16.1%;
+  margin-left: 60%;
+}
+
+/*FINAL DA FORMATAÇÃO COMPUTADOR*/
+
 
 
 /*W E N D E L*/
