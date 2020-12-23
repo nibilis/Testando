@@ -9,7 +9,7 @@
   $c = new CadastroUsuario;
 
   $consulta = "SELECT * FROM professor";
-  $sql = $pdo->query($consulta) or die($pdo->error);
+  $con = $pdo->query($consulta) or die($pdo->error);
 ?>
 
 <!DOCTYPE html>
@@ -73,6 +73,12 @@
           if($c->validprontuario($nome, $prontuario, $CPF))
           {
             echo "Cadastrado com sucesso!";
+            if($c->verification($CPF, $prontuario)){
+              echo "CPF existente";
+            }
+            else{
+              echo "Não existe cpf";
+            }
           }
           else{
             echo "CPF ja cadastrado";
@@ -88,15 +94,15 @@
 }
 ?>
 
-<?php while($dado = $sql->fetch_array()){  ?>
-  <div id="campos1">
-      <button class="btn-floating btn-large waves-effect waves-light" id="botaopesq"><?php echo $dado["Prontuario"]; ?></button>
-      <button class="btn-floating btn-large waves-effect waves-light" id="botaopesq"><?php echo $dado["Nome"]; ?></button>
-      <button class="btn-floating btn-large waves-effect waves-light" id="botaopesq"><?php echo $dado["CPF"]; ?></button>
-  </div><?php } ?>
 
-
-
+<?php while($dado = $con->fetch()) { ?>
+  <table class="centered  responsive-table">
+      <tbody>  <tr>
+          <td><?php echo $dado["Prontuario"];?></td>
+          <td><?php echo $dado["Nome"];?></td>
+          <td><?php echo $dado["CPF"];?></td>
+      </tr> </tbody>  
+  </table><?php } ?>
 
   </header>
 </body>

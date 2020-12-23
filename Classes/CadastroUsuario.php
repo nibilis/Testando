@@ -80,8 +80,30 @@ Class CadastroUsuario
 
       return true;
     }
+  }
+
+  public function verification($CPF, $prontuario){
+
+    global $pdo;
+
+    //verificar se existe um CPF desses na tabela usuarios
+    $sql = $pdo->prepare("SELECT ID_Usuario FROM usuario_professor WHERE CPF_Usuario = :c");
+    $sql->bindValue(":c", $CPF);
+    $sql->execute();
+    if($sql->rowCount() > 0){
+      $sql = $pdo->prepare("UPDATE usuario_professor SET Prontuario_Professor = :p WHERE CPF_Usuario = :c");
+      $sql->bindValue(":c", $CPF);
+      $sql->bindValue(":p", $prontuario);
+      $sql->execute();
+
+      return true;
+    }
+    else{
+      return false;
+    }
 
   }
+
 
   public function logar($prontuario, $senha){
 
