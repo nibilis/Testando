@@ -7,32 +7,29 @@
 body{
   height:  100vh;
 }
-.degrade3 {
-  height: 400%!important;
-  width: 10%;
-  float: left;
-  position: absolute;
-  margin-top: -5.5%;
-  background: blue; /*se preocupar depois :) - yasmin que disse*/
-  display: none;
-}
 
-.degrade2 {
-  height: 200%!important;
+.degrade, .degrade2, .degrade3 {
   width: 10%;
   float: left;
   position: absolute;
-  margin-top: -5.5%;
-  background: red; /*se preocupar depois :) - yasmin que disse*/
-  display: none;
+  background: linear-gradient(to bottom, #D0C7FC, #8F83CD, #7C6FBF);
 }
 
 .degrade {
-  width: 10%;
-  float: left;
-  position: absolute;
+  height: 120%;
   margin-top: -5.5%;
-  background: linear-gradient(to bottom, #D0C7FC, #8F83CD, #7C6FBF);
+}
+
+.degrade2 {
+  display: none;
+  margin-top: -5.5% !important;
+  height: 200% !important;
+}
+
+.degrade3 {
+  display: none;
+  margin-top: -5.5% !important;
+  height: 400% !important;
 }
 
 #alternativa, #dissertativa { display: none; }
