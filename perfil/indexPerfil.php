@@ -101,8 +101,9 @@
 
       <div>
         <img class= "responsive-img" id = "img-perfil" src ="../images/Icone.png"></li>
-        <p id="nome-perfil" style="overflow: hidden; text-overflow: ellipsis;"> Nome: <span>Vinícius de Oliveira Bithencourt dos Santos Silva Barbosa</span> </p>
+        <p id="nome-perfil" style="overflow: hidden; text-overflow: ellipsis;"> Nome: <span> <?php echo $_SESSION['ID_Usuario']; ?></span> </p>
         <p id="materia-perfil"> Matérias que leciona: <span>Matemática, Filosofia, Sociologia </span> </p>
+        <a href="../Classes/Sair.php"> Sair </a>
 
       </div>
 

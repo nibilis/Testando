@@ -1,10 +1,41 @@
 <?php
 
-  require_once'../Classes/CadastroUsuario.php';
-  $c = new CadastroUsuario;
+  require_once'../Classes/Login.php';
+  $l = new Login;
 
   require_once'../Classes/DataBase.php';
   $u = new DataBase;
+
+  //verificar se clicou no botão
+    if(isset($_POST['prontuario'])){
+
+    	$prontuario = addslashes($_POST['prontuario']);
+    	$senha = addslashes($_POST['senha']);
+
+    		 //verificar se esta preenchido
+        if(!empty($prontuario) && !empty($senha))
+        {
+            $u->conectar("testando", "localhost", "root", "");
+            if($u->msgErro == "")
+            {
+              if($l->logar($prontuario, $senha))
+              {
+                  header("location: ../perfil/indexPerfil.php");
+              }
+              else
+              {
+                echo "Prontuario e/ou senha estão incorretos";
+              }
+        }
+        else
+        {
+          echo "Erro: ".$u->msgErro;
+        }}
+      else
+      {
+          echo "Preencha todos os campos";
+      }}
+
 ?>
 
 <!DOCTYPE html>
@@ -127,41 +158,6 @@
             <a href="https://www.youtube.com/watch?v=m2B6ayYla3g" class="waves-effect waves-light btn yellow darken-2 hoverable" id = "btnCadastrese">Cadastre-se</a>
         <img class= "responsive-img" id = "boldire" src ="../images/bolinhaesqcel.png">
     </div>
-
-<?php
-    //verificar se clicou no botão
-    	if(isset($_POST['prontuario'])){
-
-    		$prontuario = addslashes($_POST['prontuario']);
-    		$senha = addslashes($_POST['senha']);
-
-    		  //verificar se esta preenchido
-          if(!empty($prontuario) && !empty($senha))
-          {
-              $u->conectar("testando", "localhost", "root", "");
-              if($u->msgErro == "")
-              {
-                if($c->logar($prontuario, $senha))
-                {
-                    header("location: ../perfil/indexPerfil.php");
-                }
-                else
-                {
-                  echo "Prontuario e/ou senha estão incorretos";
-                }
-          }
-          else
-          {
-            echo "Erro: ".$u->msgErro;
-          }}
-        else
-        {
-            echo "Preencha todos os campos";
-        }}
-
-?>
-
-
     <!-- JQuery CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- JavaScript Materialize compilado e minificado -->

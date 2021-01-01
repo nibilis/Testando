@@ -94,14 +94,15 @@
 }
 ?>
 
-
 <?php while($dado = $con->fetch()) { ?>
-  <table class="centered  responsive-table">
-      <tbody>  <tr>
+  <table class="centered responsive-table">
+      <tbody>
+        <tr>
           <td><?php echo $dado["Prontuario"];?></td>
           <td><?php echo $dado["Nome"];?></td>
           <td><?php echo $dado["CPF"];?></td>
-      </tr> </tbody>  
+        </tr>
+      </tbody>
   </table><?php } ?>
 
   </header>
