@@ -76,10 +76,8 @@
           <!-- Dashboard CELULAR FINAL -->
 
 
-          <!-- LINHA LATERAL DEGRADE-->
-      <div class="degrade" ></div> <!-- versão 1 - padrão -->
-      <div class="degrade2"></div> <!-- versão 2 - dissertativa -->
-      <div class="degrade3"></div> <!-- versão 3 - alternativa -->
+          <!-- lINHA LATERAL DEGRADE-->
+      <div class="degrade" style="height: 120%;"></div>
 
 
           <!-- Dashboard COMPUTADOR -->
@@ -109,8 +107,8 @@
         <h2>Adicionar Questão</h2>
 
         <p>
-          <button href="#alternativa" id="btn-alternativa" value="ok" target="_self" class="waves-effect waves-light btn transparent" onclick="clickAlter()">Alternativa</button>
-          <button href="#dissertativa" id="btn-dissertativa" value="ok" target="_self" class="waves-effect waves-light btn transparent" onclick="clickDissert">Dissertativa</button>
+          <button href="#alternativa" id="btn-alternativa" value="ok" target="_self" class="waves-effect waves-light btn transparent">Alternativa</button>
+          <button href="#dissertativa" id="btn-dissertativa" value="ok" target="_self" class="waves-effect waves-light btn transparent">Dissertativa</button>
         </p>
 
         <div class="items">
@@ -211,9 +209,9 @@
         <div class="row center-align hide-on-large-only">
             <form class="col s12">
               <div class="row">
-                <div class="input-field col s9">
-                  <label style="margin-left: 20%;" for="textarea1">Resposta</label>
-                  <textarea id="respostadissertativa" style="margin-left: 15%;" class="materialize-textarea"></textarea>
+                <div class="input-field col s12">
+                  <label for="textarea1">Resposta</label>
+                  <textarea id="respostadissertativa" style= "font-family: 'Muli'; font-size: 11px; float: left;" class="materialize-textarea"></textarea>
                 </div>
               </div>
             </form>
@@ -290,57 +288,38 @@
     });
     </script>
 
-    <!-- CÓDIGO BOTÃO ALTERNATIVA/DISSERTATIVA (JavaScript) -->
+    <!-- CÓDIGO BOTÃO ALTERNATIVA/DISSERTATIVA -->
     <script>
-        var btn1 = document.getElementById('btn-dissertativa');
-        var alternativa = document.querySelector('.alternativa');
-        var degrade = document.querySelector('.degrade');
-        var degrade2 = document.querySelector('.degrade2');
-        var degrade3 = document.querySelector('.degrade3');
+        var btn1 = document.getElementById('btn-alternativa');
+        var alternativa = document.querySelector('.dissertativa');
         btn1.addEventListener('click', function() {
 
         if (dissertativa.style.display = 'block') {
             alternativa.style.display = 'none';
-            degrade2.style.display = 'block';
-            degrade3.style.display = 'none';
-            degrade.style.display = 'none';
         }
         else {
             alternativa.style.display = 'block';
-            degrade3.style.display = 'block';
-            degrade.style.display = 'none';
-
             }
           });
 
-        var btn2 = document.getElementById('btn-alternativa');
-        var dissertativa = document.querySelector('.dissertativa');
-        var divdegrade = document.querySelector('.degrade');
-        var divdegrade2 = document.querySelector('.degrade2');
-        var divdegrade3 = document.querySelector('.degrade3');
+        var btn2 = document.getElementById('btn-dissertativa');
+        var dissertativa = document.querySelector('.alternativa');
         btn2.addEventListener('click', function() {
 
         if (alternativa.style.display = 'block') {
             dissertativa.style.display = 'none';
-            divdegrade2.style.display = 'none';
-            divdegrade3.style.display = 'block';
-            divdegrade.style.display = 'none';
-
         }
         else {
             dissertativa.style.display = 'block';
-            divdegrade2.style.display = 'block';
-            divdegrade.style.display = 'none';
-
         }
       });
-    </script>
+      </script>
 
-    <!-- CÓDIGO MARCAÇÃO BOTÃO ON CLICK (JavaScript) -->
-    <script>
-        function clickAlter() {
-        document.getElementById("btn-alternativa").style.color = "yellow";
-      }
-    </script>
+      <!-- CÓDIGO MARCAÇÃO BOTÃO ON CLICK (JavaScript) -->
+      <script>
+          function clickAlter() {
+          document.getElementById("btn-alternativa").disabled = true;
+        }
+      </script>
 
 </html>
