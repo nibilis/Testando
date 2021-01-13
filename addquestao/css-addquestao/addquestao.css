@@ -315,6 +315,21 @@ border-radius: 10px 10px;
   margin-left: -13%;
 }
 
+#perfil_pequeno {
+  margin-left: 85%;
+  margin-top: -8%;
+  color: white;
+  position: absolute;
+  font-family: 'Muli';
+  font-size: 20px;
+}
+
+#foto_perfil_pequeno {
+  width: 45%;
+  margin-left: -60%;
+  position: absolute;
+}
+
 #dashboardpc{
   background-color: #8579C3;
   height: 150%;
@@ -401,6 +416,21 @@ border-radius: 10px 10px;
     margin-left: -11%;
   }
 
+  #perfil_pequeno {
+    margin-left: 85%;
+    margin-top: -6.5%!important;
+    color: white;
+    position: absolute;
+    font-family: 'Muli';
+    font-size: 20px;
+  }
+
+  #foto_perfil_pequeno {
+    width: 45%;
+    margin-left: -60%;
+    position: absolute;
+  }
+
 }
 
 @media (min-width: 1100px)
@@ -458,6 +488,22 @@ border-radius: 10px 10px;
       margin-top: -3%;
       position: absolute;
       margin-left: -10%;
+    }
+
+    #perfil_pequeno {
+      margin-left: 85%;
+      margin-top: -7%;
+      color: white;
+      position: absolute;
+      font-family: 'Muli';
+      font-size: 20px;
+    }
+
+    #foto_perfil_pequeno {
+      width: 45%;
+      margin-left: -60%;
+      position: absolute;
+      margin-top: -2%;
     }
 }
 
@@ -523,6 +569,22 @@ border-radius: 10px 10px;
     margin-left: -8%;
     width: 0.2%;
   }
+
+  #perfil_pequeno {
+    margin-left: 85%;
+    margin-top: -6%!important;
+    color: white;
+    position: absolute;
+    font-family: 'Muli';
+    font-size: 20px;
+  }
+
+  #foto_perfil_pequeno {
+    width: 45%;
+    margin-left: -60%;
+    margin-top: 1%!important;
+    position: absolute;
+  }
 }
 
 @media (min-width: 1600px)
@@ -582,6 +644,23 @@ border-radius: 10px 10px;
     position: absolute;
     margin-left: -9%;
   }
+
+  #perfil_pequeno {
+    margin-left: 85%;
+    margin-top: -5%!important;
+    color: white;
+    position: absolute;
+    font-family: 'Muli';
+    font-size: 25px;
+  }
+
+  #foto_perfil_pequeno {
+    width: 45%;
+    margin-left: -60%;
+    margin-top: -5%!important;
+    position: absolute;
+    margin-top: -2%;
+  }
 }
 
 @media (min-width: 1800px)
@@ -640,6 +719,23 @@ border-radius: 10px 10px;
     margin-top: -2.5%;
     position: absolute;
     margin-left: -10%;
+  }
+
+  #perfil_pequeno {
+    margin-left: 85%;
+    margin-top: -4.3%!important;
+    color: white;
+    position: absolute;
+    font-family: 'Muli';
+    font-size: 25px;
+  }
+
+  #foto_perfil_pequeno {
+    width: 45%;
+    margin-left: -60%;
+    margin-top: -5.5%!important;
+    position: absolute;
+    margin-top: -2%;
   }
 }
 
@@ -701,6 +797,22 @@ border-radius: 10px 10px;
     margin-top: -2.5%;
     position: absolute;
     margin-left: -10%;
+  }
+
+  #perfil_pequeno {
+    margin-left: 85%;
+    margin-top: -4%!important;
+    color: white;
+    position: absolute;
+    font-family: 'Muli';
+    font-size: 25px;
+  }
+
+  #foto_perfil_pequeno {
+    width: 45%;
+    margin-left: -60%;
+    position: absolute;
+    margin-top: -2%;
   }
 }
 

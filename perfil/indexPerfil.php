@@ -32,6 +32,8 @@
 
     <body>
 
+      <!--DASHBOARD CELULAR-->
+
       <div class= "row hide-on-large-only" id= "dashboardcel">
 
         <div class="col s2">
@@ -78,7 +80,8 @@
         </div>
       </div>
 
-
+      <!--DASHBOARD COMPUTADOR-->
+      
         <nav class="hide-on-med-and-down navbar-fixed" id="retanguloroxo">
           <div class="nav-wrapper hide-on-med-and-down" id="dashboardpc">
 
