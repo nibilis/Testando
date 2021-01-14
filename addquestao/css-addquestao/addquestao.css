@@ -10,6 +10,7 @@ body{
 
 .degrade, .degrade2, .degrade3 {
   width: 10%;
+  margin-top: -5.5% !important;
   float: left;
   position: absolute;
   background: linear-gradient(to bottom, #D0C7FC, #8F83CD, #7C6FBF);
@@ -17,18 +18,15 @@ body{
 
 .degrade {
   height: 120%;
-  margin-top: -5.5%;
 }
 
 .degrade2 {
   display: none;
-  margin-top: -5.5% !important;
   height: 200% !important;
 }
 
 .degrade3 {
   display: none;
-  margin-top: -5.5% !important;
   height: 400% !important;
 }
 
