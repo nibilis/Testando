@@ -81,7 +81,7 @@
       </div>
 
       <!--DASHBOARD COMPUTADOR-->
-      
+
         <nav class="hide-on-med-and-down navbar-fixed" id="retanguloroxo">
           <div class="nav-wrapper hide-on-med-and-down" id="dashboardpc">
 
@@ -92,8 +92,12 @@
                 <img class= "responsive-img" id = "linha1" src ="../images/linha.png"></li>
               <li><a id= "salvos" href="#!">Salvos</a>
                  <img class= "responsive-img" id = "linha2" src ="../images/linha.png"></li>
-
             </ul>
+          </div>
+
+          <div class="hide-on-med-and-down" id="perfil_pequeno">
+            <img class="responsive-img" id="foto_perfil_pequeno" src="../images/Icone.png">
+            <p>Primeiro Nome</p>
           </div>
 
         </nav>
@@ -103,11 +107,10 @@
       <!--TELA DE PERFIL CELULAR-->
 
       <div>
-        <img class= "responsive-img" id = "img-perfil" src ="../images/Icone.png"></li>
-        <p id="nome-perfil" style="overflow: hidden; text-overflow: ellipsis;"> Nome: <span> <?php echo $_SESSION['ID_Usuario']; ?></span> </p>
+        <div id= "img-perfil"><?php $_Imagem=base64_encode( $_SESSION['imagem'] ); echo "<img height='100%' width='100%' src='data:image/jpeg;base64,$_Imagem'> "; ?></div>
+        <p id="nome-perfil" style="overflow: hidden; text-overflow: ellipsis;"> Nome: <span> <?php echo $_SESSION['NickName']; ?></span> </p>
         <p id="materia-perfil"> Matérias que leciona: <span>Matemática, Filosofia, Sociologia </span> </p>
         <a href="../Classes/Sair.php"> Sair </a>
-
       </div>
 
       <div>
