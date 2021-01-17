@@ -30,8 +30,14 @@ body{
   height: 400% !important;
 }
 
-#alternativa, #dissertativa { display: none; }
-#alternativa:checked, #dissertativa:checked { z-index: auto;}
+#alternativa, #dissertativa {
+  display: none;
+
+}
+
+#alternativa:checked, #dissertativa:checked {
+  z-index: auto;
+}
 
 .alternativa, .dissertativa {
   display: none;
@@ -835,8 +841,28 @@ border-radius: 10px 10px;
 }
 
 #btn-alternativa {
-  margin-left: 16%;
+  margin-left: 12%;
   margin-right: 2%;
+}
+
+.button-group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button-group > button {
+  background-color: transparent;
+  padding-top: 4.5%;
+  padding-bottom: 4%;
+  box-shadow: 0px 1.5px 3px rgba(0, 0, 0, 0.3);
+  border: none;
+}
+
+.buttonClicked {
+    background-color: #9785D3 !important;
+    box-shadow: 0px 1.5px 3px rgba(0, 0, 0, 0.3);
+    color: white!important;
+    -webkit-transition: 0.4s ease-in;
 }
 
 body h2{
@@ -950,38 +976,30 @@ text-transform: capitalize;
 
 /*FORMATAÇÃO COMPUTADOR*/
 
-h2 {
-  font-size: 120%;
-  margin-left: 120%;
+@media (min-width: 1024px) {
+  h2 {
+    font-size: 120%;
+    margin-left: 120%;
+  }
 
+  #btn-alternativa,
+   #btn-dissertativa{
+    width: 25%;
+    padding-top: 2%;
+    padding-bottom: 5%;
+    font-size: 120%;
+  }
+
+  #btn-alternativa {
+    margin-left: 25%;
+    margin-right: 2%;
+  }
+
+  #btn-dissertativa {
+    margin-top: -19.2%;
+    margin-left: 60%;
+  }
 }
-
-#btn-alternativa2,
- #btn-dissertativa2{
-  width: 25%;
-  color: black;
-  border-radius: 40px 40px;
-  text-transform: capitalize;
-  font-family: 'Muli';
-  font-size: 100%;
-  border-color: black;
-  border-width: 6px;
-  padding-right: 0%;
-  padding-left: 0%;
-  margin-top: 25%;
-  margin-bottom: 10%;
-}
-
-#btn-alternativa2 {
-  margin-left: 25%;
-  margin-right: 2%;
-}
-
-#btn-dissertativa2 {
-  margin-top: -16.1%;
-  margin-left: 60%;
-}
-
 /*FINAL DA FORMATAÇÃO COMPUTADOR*/
 
 

@@ -110,9 +110,9 @@
 
         <h2>Adicionar Questão</h2>
 
-        <p>
-          <button href="#alternativa" id="btn-alternativa" value="ok" target="_self" class="waves-effect waves-light btn transparent">Alternativa</button>
-          <button href="#dissertativa" id="btn-dissertativa" value="ok" target="_self" class="waves-effect waves-light btn transparent">Dissertativa</button>
+        <p class="button-group">
+          <button href="#alternativa" id="btn-alternativa" value="ok" target="_self" class="waves-effect waves-light transparent">Alternativa</button>
+          <button href="#dissertativa" id="btn-dissertativa" value="ok" target="_self" class="waves-effect waves-light transparent">Dissertativa</button>
         </p>
 
         <div class="items">
@@ -248,6 +248,9 @@
 
       </div>
       </div>
+
+
+
       <!--Final do formulário de Celular-->
 
 
@@ -257,8 +260,8 @@
         <h2>Adicionar Questão</h2>
 
         <p>
-          <button href="#alternativa" id="btn-alternativa2" value="ok" target="_self" class="waves-effect waves-light btn transparent">Questão alternativa</button>
-          <button href="#dissertativa" id="btn-dissertativa2" value="ok" target="_self" class="waves-effect waves-light btn transparent">Questão dissertativa</button>
+          <button href="#alternativa" id="btn-alternativa" value="ok" target="_self" class="waves-effect waves-light btn transparent">Questão alternativa</button>
+          <button href="#dissertativa" id="btn-dissertativa" value="ok" target="_self" class="waves-effect waves-light btn transparent">Questão dissertativa</button>
         </p>
 
 
@@ -291,19 +294,17 @@
     });
     </script>
 
-    <!-- CÓDIGO BOTÃO ALTERNATIVA/DISSERTATIVA (JavaScript) -->
-    <!-- CÓDIGO BOTÃO ALTERNATIVA/DISSERTATIVA (JavaScript) -->
+    <!-- CÓDIGO BOTÃO ALTERNATIVA/DISSERTATIVA -->
     <script>
         var btn1 = document.getElementById('btn-dissertativa');
         var alternativa = document.querySelector('.alternativa');
-        var btn1 = document.getElementById('btn-alternativa');
-        var alternativa = document.querySelector('.dissertativa');
         var degrade = document.querySelector('.degrade');
         var degrade2 = document.querySelector('.degrade2');
         var degrade3 = document.querySelector('.degrade3');
         btn1.addEventListener('click', function() {
 
         if (dissertativa.style.display = 'block') {
+            document.button.style.backgroundColor = "#AA0000";
             alternativa.style.display = 'none';
             degrade2.style.display = 'block';
             degrade3.style.display = 'none';
@@ -313,17 +314,51 @@
             alternativa.style.display = 'block';
             degrade3.style.display = 'block';
             degrade.style.display = 'none';
-
             }
           });
+
+       var btn2 = document.getElementById('btn-alternativa');
+       var dissertativa = document.querySelector('.dissertativa');
+       var divdegrade = document.querySelector('.degrade');
+       var divdegrade2 = document.querySelector('.degrade2');
+       var divdegrade3 = document.querySelector('.degrade3');
+       btn2.addEventListener('click', function() {
+
+       if (alternativa.style.display = 'block') {
+           dissertativa.style.display = 'none';
+           divdegrade2.style.display = 'none';
+           divdegrade3.style.display = 'block';
+           divdegrade.style.display = 'none';
+       }
+       else {
+           dissertativa.style.display = 'block';
+           divdegrade2.style.display = 'block';
+           divdegrade.style.display = 'none';
+       }
+     });
     </script>
 
 
-      <!-- CÓDIGO MARCAÇÃO BOTÃO ON CLICK (JavaScript) -->
-      <script>
-          function clickAlter() {
-          document.getElementById("btn-alternativa").disabled = true;
+
+    <!--TRANSIÇÃO COR BOTÃO ALTERNATIVA E DISSERTATIVA-->
+
+    <script>
+    let myButton = document.querySelectorAll('.button-group > button');
+
+    myButton.forEach(function(key){
+        key.addEventListener('click', function(){
+            removeStyles();
+            this.setAttribute('class', 'buttonClicked');
+        });
+    })
+
+    function removeStyles(){
+        for(let i = 0; i < myButton.length; i++){
+            document.querySelectorAll('.button-group > button')[i].removeAttribute('class');
         }
-      </script>
+    }
+    </script>
+
+
 
 </html>
