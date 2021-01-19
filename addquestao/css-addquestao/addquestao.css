@@ -27,7 +27,7 @@ body{
 
 .degrade3 {
   display: none;
-  height: 400% !important;
+  height: 200% !important;
 }
 
 #alternativa, #dissertativa {
@@ -109,6 +109,22 @@ body{
     margin-top: -4.9%;
     background: linear-gradient(to bottom, #D0C7FC, #8F83CD, #7C6FBF);
   }
+}
+
+/*CAMPOS ALTERNATIVA*/
+#dificuldade {
+  display: grid;
+  gap: 3em;
+  grid-template-columns: 120%;
+
+  }
+
+/*CAMPOS DISSERTATIVA*/
+
+#respostadissertativa
+{
+  margin-left: 15.5%;
+  width: 78%;
 }
 
 /*FINAL DA FORMATAÇÃO CELULAR*/

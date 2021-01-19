@@ -105,7 +105,7 @@
           <!-- Dashboard COMPUTADOR FINAL-->
 
 
-      <!-- Formulário Celular-->
+      <!-- Formulário CELULAR-->
       <div class="row hide-on-large-only" id= "grid">
 
         <h2>Adicionar Questão</h2>
@@ -200,61 +200,97 @@
           </div>
 
           <!-- Alternativa/Dissertativa -->
-
-      </div>
+      </div> <!-- COMEÇO alternativa -->
 
       <div id="alternativa" class="alternativa">
-        <p> muitas muitas muitas faltas de informações</p>
 
-      </div>
+        <div class="row center-align hide-on-large-only">
+            <input type="text"> <i class="material-icons">add</i> </input>
+            <input type="text"> <i class="material-icons">alarm</i> </input>
+            <input type="text"> <i class="material-icons">android</i> </input>
 
-      <div id="dissertativa" class="dissertativa">
+            <button class="material-icons">add</button>
+            <button class="material-icons red">clear</button>
+        </div>
+
+            <label for="textarea1">Resposta</label>
+            <textarea style= "font-family: 'Muli'; font-size: 11px; float: left;" class="materialize-textarea"></textarea>
+            <div required id="dificuldade" class="input-field col s10 center-align hide-on-large-only">
+            <form action="#">
+              <label>Dificuldade <span style="color: red;">*</span></label>
+
+            <label>
+              <div class="col s1">
+              <input name="group1" type="radio" checked />
+              <span>Fácil</span>
+            </div>
+            </label>
+
+            <label>
+              <div class="col s2">
+              <input name="group1" type="radio" checked />
+              <span>Médio</span>
+            </div>
+            </label>
+
+            <label>
+              <div class="col s3">
+              <input name="group1" type="radio" checked />
+              <span>Difícil</span>
+            </div>
+            </label>
+
+         </div>
+      </div> <!-- FIM - alternativa-->
+
+      <div id="dissertativa" class="dissertativa"> <!-- COMEÇO - dissertativa -->
 
         <div class="row center-align hide-on-large-only">
             <form class="col s12">
               <div class="row">
-                <div class="input-field col s12">
+                <div class="input-field col s9" id="respostadissertativa">
                   <label for="textarea1">Resposta</label>
-                  <textarea id="respostadissertativa" style= "font-family: 'Muli'; font-size: 11px; float: left;" class="materialize-textarea"></textarea>
+                  <textarea style= "font-family: 'Muli'; font-size: 11px; float: left;" class="materialize-textarea"></textarea>
                 </div>
               </div>
             </form>
 
-        <div required id="dificuldade" class="input-field col s9 center-align hide-on-large-only">
+
+
+        <div required id="dificuldade" class="input-field center-align hide-on-large-only">
         <form action="#">
           <label>Dificuldade <span style="color: red;">*</span></label>
         <label>
-          <p>
+          <div class="row">
+          <form class="col s1">
           <input name="group1" type="radio" checked />
           <span>Fácil</span>
-          </p>
+        </form>
         </label>
 
         <label>
-          <p>
+          <form class="col s2">
           <input name="group1" type="radio" checked />
           <span>Médio</span>
-          </p>
+        </form>
         </label>
 
         <label>
-          <p>
+          <form class="col s3">
           <input name="group1" type="radio" checked />
           <span>Difícil</span>
-          </p>
+        </form>
         </label>
 
           </div>
-
       </div>
       </div>
+    </div><!-- FIM - dissertativa -->
+
+      <!--Final do formulário de CELULAR-->
 
 
-
-      <!--Final do formulário de Celular-->
-
-
-      <!-- Formulário Computador-->
+      <!-- Formulário COMPUTADOR-->
       <div class="row hide-on-med-and-down" id= "grid">
 
         <h2>Adicionar Questão</h2>
@@ -304,7 +340,6 @@
         btn1.addEventListener('click', function() {
 
         if (dissertativa.style.display = 'block') {
-            document.button.style.backgroundColor = "#AA0000";
             alternativa.style.display = 'none';
             degrade2.style.display = 'block';
             degrade3.style.display = 'none';
@@ -358,7 +393,5 @@
         }
     }
     </script>
-
-
 
 </html>
