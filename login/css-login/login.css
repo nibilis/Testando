@@ -22,12 +22,14 @@ a {
 #div {
   margin-bottom: 0;
 }
+
 #degrade h1{
   font-family: 'Muli';
   color: white;
   font-size: 230%;
   margin-top:80%;
 }
+
 #btnCadastresepc {
   border-radius: 100px;
   border-color: #FFBC2B;

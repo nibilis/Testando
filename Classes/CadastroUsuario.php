@@ -44,7 +44,6 @@ Class CadastroUsuario
           $sql = $pdo->prepare("INSERT INTO usuario_professor (NickName, CPF_Usuario, Email, Endereço, Senha) VALUES (:n, :c, :e, :en, :s)");
           $sql->bindValue(":n", $nome);
           $sql->bindValue(":c", $CPF_Usuario);
-          /* $sql->bindValue(":m", $materia); */
           $sql->bindValue(":e", $email);
           $sql->bindValue(":en", $endereço);
           $sql->bindValue(":s", md5($senha));
@@ -53,8 +52,6 @@ Class CadastroUsuario
       return true;
     }
     }
-
-
 
   }
 

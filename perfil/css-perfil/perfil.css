@@ -4,9 +4,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   height: 130vh;
 }
+
+
 /*Dashboard para o celular*/
 #dashboardcel{
 background-color: #8579C3;
@@ -178,14 +181,6 @@ border-radius: 10px 10px;
   margin-left: -10%;
 }
 
-#teste{
-  margin-top: -3.75%;
-  text-align: center;
-  font-size: 20px;
-  position: absolute;
-  margin-left: -10%;
-}
-
 #linha1{
   height: 65%;
   margin-top: -4%;
@@ -222,10 +217,13 @@ border-radius: 10px 10px;
 #perfil_pequeno {
   margin-left: 85%;
   margin-top: -8%;
-  color: white;
-  position: absolute;
+  color: red;
   font-family: 'Muli';
   font-size: 20px;
+}
+
+#nome-dashboard{
+  color: white;
 }
 
 #foto_perfil_pequeno {
@@ -233,6 +231,7 @@ border-radius: 10px 10px;
   margin-left: -60%;
   position: absolute;
 }
+
 
 @media (min-width: 1200px)
 {
@@ -456,20 +455,21 @@ border-radius: 10px 10px;
   }
 
   #perfil_pequeno {
-    margin-left: 85%;
-    margin-top: -6%!important;
-    color: red;
-    position: absolute;
-    font-family: 'Muli';
-    font-size: 20px;
-  }
+      margin-left: 85%;
+      margin-top: -8.5%!important;
+      color: white;
+      position: absolute;
+      font-family: 'Muli';
+      font-size: 20px;
+    }
 
-  #foto_perfil_pequeno {
-    width: 45%;
-    margin-left: -60%;
-    margin-top: 1%!important;
-    position: absolute;
-  }
+    #foto_perfil_pequeno {
+      width: 45%;
+      margin-left: -60%;
+      margin-top: 1%!important;
+      position: absolute;
+    }
+
 }
 
 @media (min-width: 1600px)

@@ -85,7 +85,7 @@
         <nav class="hide-on-med-and-down navbar-fixed" id="retanguloroxo">
           <div class="nav-wrapper hide-on-med-and-down" id="dashboardpc">
 
-             <img class= "responsive-img" id = "logopc" src ="../images/logo.png"> <img class= "responsive-img" id = "nomelogopc" src ="../images/TestandoNome.png"> </a>
+             <img class= "responsive-img" id = "logopc" src ="../images/logo.png"> <img class= "responsive-img" id = "nomelogopc" src ="../images/TestandoNome.png">
             <ul id="nav-pc" class=" right">
               <li><a  id= "questao" href="../addquestao/indexAddQuestao.html" >Adicionar <br> questão</a></li>
               <li><a  id= "documento" href="#!">Adicionar <br> documento</a>
@@ -93,16 +93,13 @@
               <li><a id= "salvos" href="#!">Salvos</a>
                  <img class= "responsive-img" id = "linha2" src ="../images/linha.png"></li>
             </ul>
-          </div>
 
           <div class="hide-on-med-and-down" id="perfil_pequeno">
-            <img class="responsive-img" id="foto_perfil_pequeno" src="../images/Icone.png">
-            <p>Primeiro Nome</p>
+              <div class="responsive-image" id= "foto_perfil_pequeno"><?php $_Imagem=base64_encode( $_SESSION['imagem'] ); echo "<img height='100%' width='100%' src='data:image/jpeg;base64,$_Imagem'> "; ?></div>
+            <p id="nome-dashboard"><?php echo $_SESSION['NickName']; ?></p>
           </div>
-
+          </div>
         </nav>
-      </div>
-
 
       <!--TELA DE PERFIL CELULAR-->
 
