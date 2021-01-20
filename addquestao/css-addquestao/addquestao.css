@@ -115,9 +115,20 @@ body{
 #dificuldade {
   display: grid;
   gap: 3em;
-  grid-template-columns: 120%;
-
+  grid-template-columns: 100%;
   }
+
+#facil {
+  margin-left: 5%;
+}
+
+#medio {
+  margin-left: 25%;
+}
+
+#dificil {
+  margin-left: 35%;
+}
 
 /*CAMPOS DISSERTATIVA*/
 
@@ -923,15 +934,6 @@ textarea:focus:not([readonly]) {
   font-size: 20%;
 }
 
-/*
-#imagemdiv #p2{
-  margin-top: -16.5%;
-  position: absolute;
-  margin-left: 81%;
-  font-size: 65%;
-}
-*/
-
 #divimagem{
 
 left: 18%;
@@ -953,19 +955,6 @@ text-transform: capitalize;
   margin-left: 74%;
 
 }
-
-/*
- #imagemdiv a {
-  margin-top: -20%;
-  margin-left: 63%;
-  padding-left: 2%;
-}
-
- #imagem {
-  width: 30%;
-}
-
-*/
 
 #simbolo {
   width: 30%;
@@ -998,194 +987,22 @@ text-transform: capitalize;
     margin-left: 120%;
   }
 
-  #btn-alternativa,
-   #btn-dissertativa{
+  #btn-alterna-desk,
+   #btn-dissert-desk{
     width: 25%;
     padding-top: 2%;
     padding-bottom: 5%;
     font-size: 120%;
   }
 
-  #btn-alternativa {
+  #btn-alterna-desk {
     margin-left: 25%;
     margin-right: 2%;
   }
 
-  #btn-dissertativa {
+  #btn-dissert-desk {
     margin-top: -19.2%;
     margin-left: 60%;
   }
 }
 /*FINAL DA FORMATAÇÃO COMPUTADOR*/
-
-
-
-/*W E N D E L*/
-header {
-  height: 18vh;
-  display: flex;
-  background-color: #7C6FBF;
-  -webkit-filter: drop-shadow(12px 12px 8px rgba(0, 0, 0, 0.16));
-  filter: drop-shadow(12px 12px 8px rgba(0, 0, 0, 0.16));
-}
-
-li {
-  color: white;
-}
-
-.menu ul{
-  display: flex;
-  display: grid;
-  grid-template-columns: 65% 45% 75% 50% 20%;
-  margin-left: 30%;
-  list-style-type: none;
-  margin-top: 13%;
-}
-
-.menu a{
-  text-decoration: none;
-  color: white;
-  font-size: 120%;
-  line-height: 1.2em;
-}
-
-.links-topo{
-  color: white;
-  font-size: 3.8em;
-  font-family: 'Elsie', cursive;
-  position: relative;
-  bottom: 25%;
-}
-
-.img-logo {
-  height: 90%;
-  padding-left: 3%;
-  margin-top: 0.6%;
-  -webkit-filter: drop-shadow(12px 12px 8px rgba(0, 0, 0, 0.16));
-  filter: drop-shadow(12px 12px 8px rgba(0, 0, 0, 0.16));
-}
-
-.img-nome-logo {
-  height: 30%;
-  padding-right: 5%;
-  padding-left: 1.8%;
-  position: relative;
-  top: 40%;
-}
-
-.icone {
-  background-color: transparent;
-  background-size: 100%;
-  border: none;
-  color: transparent;
-  background-image: url("../images/Icone.png");
-  height: 60%;
-  width: 5%;
-  position: relative;
-  left: 35%;
-  top: 18%;
-}
-
-header h1{
-  color: white;
-  position: relative;
-  left: 37%;
-  top: 38%;
-  font-size: 1em;
-}
-
-.botao1,
-.botao2{
-    background-color: white;
-    height: 3%;
-    width: 15%;
-    border-radius: 80px 80px;
-    border-left: 2px solid;
-    border-right: 2px solid;
-    border-top: 2px solid;
-    border-bottom: 2px solid;
-    border-color: grey;
-    color: whitesmoke;
-    font-size: 1em;
-    position: relative;
-    left: 25%;
-    top: 20%;
-    display:flex;
-    justify-content: center;
-}
-
-.botao2{
-  position: relative;
-  left: 45%;
-  top: 17%;
-}
-
-a{
-  text-decoration: none;
-  color: grey;
-  padding-top: 0.1em;
-}
-
-.titulo h3{
-  color: black;
-  font-size: 1.5em;
-  position: absolute;
-  left: 23%;
-  top: 65%;
-}
-
-.caixa-de-texto,
-.caixa-de-texto1,
-.caixa-de-texto2,
-.caixa-de-texto3{
-  background-color: white;
-  height: 3.5%;
-  width: 45%;
-  border-radius: 12px 12px;
-  border-left: 1px solid;
-  border-right: 1px solid;
-  border-top: 1px solid;
-  border-bottom: 1px solid;
-  border-color: grey;
-  font-size: 1em;
-  position: relative;
-  left: 22%;
-  top: 25%;
-  display:flex;
-  justify-content: center;
-  outline: none;
-}
-
-.caixa-de-texto1{
-    top: 30%;
-}
-
-.caixa-de-texto2{
-  top: 35%;
-}
-
-.caixa-de-texto3{
-  height: 15%;
-  width: 45%;
-  top: 40%;
-  border-radius: 50px 50px;
-}
-
-.simbolos p{
-  text-align: center;
-  float: left;
-  width: 25%;
-  font-size: 90%;
-}
-
-.simbolos{
-  background-color: transparent;
-  position: relative;
-  top: 41%;
-  left: 50%;
-}
-
-.checkbox{
-  position: absolute;
-  top: 50%;
-}
