@@ -4,8 +4,8 @@ Class CadastroUsuario
 {
   public $pdo;
 
-  public function cadastrar($nome, $CPF_Usuario, $email, $endereço, $senha){
-
+  public function cadastrar($nome, $CPF_Usuario, $materia, $email, $endereço, $senha)
+  {
     global $pdo;
 
     //verificar se ja existe o email cadastrado
@@ -36,6 +36,16 @@ Class CadastroUsuario
           $sql->bindValue(":s", md5($senha));
           $sql->execute();
 
+          //verificar qual o id da materia
+          $sql = $pdo->prepare("SELECT ID_Materia FROM Materia WHERE Nome = :m");
+          $sql->bindValue(":m", $materia);
+          $materias = $sql->execute();
+
+          $sql = $pdo->prepare("INSERT INTO usuario_materia (Usuario_Professor_ID_Usuario_, Materia_ID_Materia) VALUES (:u, :m)");
+          $sql->bindValue(":u", $idUsuario);
+          $sql->bindValue(":m", $materias);
+          $sql->execute();
+
           $pdo = null;
           return true;
       }
@@ -48,11 +58,21 @@ Class CadastroUsuario
           $sql->bindValue(":en", $endereço);
           $sql->bindValue(":s", md5($senha));
           $sql->execute();
+          $idUsuario = $pdo->lastInsertId();
 
-      return true;
-    }
-    }
+          //verificar qual o id da materia
+          $sql = $pdo->prepare("SELECT ID_Materia FROM Materia WHERE Nome = :m");
+          $sql->bindValue(":m", $materia);
+          $materias = $sql->execute();
 
+          $sql = $pdo->prepare("INSERT INTO usuario_materia (Usuario_Professor_ID_Usuario_, Materia_ID_Materia) VALUES (:u, :m)");
+          $sql->bindValue(":u", $idUsuario);
+          $sql->bindValue(":m", $materias);
+          $sql->execute();
+
+          return true;
+      }
+    }
   }
 
   public function validprontuario($nome, $prontuario, $CPF){

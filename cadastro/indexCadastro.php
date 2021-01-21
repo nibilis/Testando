@@ -48,8 +48,8 @@ header('Content-Type: text/html; charset=UTF-8');
   <input class="flow-text validate" placeholder="CPF" id="numero" type="number" data-length="11" name="CPF">
 </div>
 
-<div class="input-field col s10 l8" id="materia" name="materia">
-    <div class="chips-placeholder validate" type="text" ></div>
+<div class="input-field col s10 l8" id="materia">
+    <input class="flow-text validate" type="text" name="materia">
 </div>
 
 <div class="input-field col s9 l8 " id="email">
@@ -139,20 +139,20 @@ header('Content-Type: text/html; charset=UTF-8');
 
 		$nome = addslashes($_POST['nome']);
 		$CPF_Usuario = addslashes($_POST['CPF']);
-		/* $materia = addslashes($_POST['materia']); */
+		$materia = addslashes($_POST['materia']);
 		$email = addslashes($_POST['email']);
 		$endereço = addslashes($_POST['endereço']);
 		$senha = addslashes($_POST['senha']);
 		$confSenha = addslashes($_POST['confSenha']);
 		//verificar se esta preenchido
-  if(!empty($nome) && !empty($CPF_Usuario) && !empty($email) && !empty($endereço) && !empty($senha) && !empty($confSenha) )
+  if(!empty($nome) && !empty($CPF_Usuario) && !empty($materia) && !empty($email) && !empty($endereço) && !empty($senha) && !empty($confSenha) )
   {
 
       $u->conectar("testando", "localhost", "root", "");
       if($u->msgErro == ""){
         if($senha == $confSenha)
         {
-          if($c->cadastrar($nome, $CPF_Usuario, $email, $endereço, $senha))
+          if($c->cadastrar($nome, $CPF_Usuario, $materia, $email, $endereço, $senha))
           {
             echo "Cadastrado com sucesso!";
           }
