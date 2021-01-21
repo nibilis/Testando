@@ -1,612 +1,612 @@
-<!DOCTYPE html>
-<html>
+  <!DOCTYPE html>
+  <html>
 
-    <head>
+      <head>
 
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Adicionar Questão</title>
-      <link rel="stylesheet" href="./css-addquestao/addquestao.css">
-      <link rel="shortcut icon" href="../images/favicon (1).ico" >
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Adicionar Questão</title>
+        <link rel="stylesheet" href="./css-addquestao/addquestao.css">
+        <link rel="shortcut icon" href="../images/favicon (1).ico" >
 
-      <!-- Materialize -->
+        <!-- Materialize -->
 
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-      <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css2?family=Muli:wght@700&display=swap" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@800;900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Muli:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@800;900&display=swap" rel="stylesheet">
 
-      <link rel="shortcut icon" href="../images/favicon (1).ico" >
+        <link rel="shortcut icon" href="../images/favicon (1).ico" >
 
-      </head>
+        </head>
 
-    <body>
+      <body>
 
 
-        <!-- Dashboard CELULAR -->
+          <!-- Dashboard CELULAR -->
 
-        <div class= "row hide-on-large-only" id= "dashboardcel">
+          <div class= "row hide-on-large-only" id= "dashboardcel">
 
-          <div class="col s2">
-            <ul id="slide-out" class="hide-on-large-only sidenav" style="width:200px;">
-              <li><div class="user-view">
-                <div class="sanduiche">
-                  <img src="../images/logoTestandoNome.png" id="logo">
+            <div class="col s2">
+              <ul id="slide-out" class="hide-on-large-only sidenav" style="width:200px;">
+                <li><div class="user-view">
+                  <div class="sanduiche">
+                    <img src="../images/logoTestandoNome.png" id="logo">
 
-                  <ul id="slide-out" class="sidenavClose">
-                    <li><a class="sidenav-close" href="#!" style="position: absolute;"><i class="material-icons" style="position: absolute; margin-left: 160%;font-size: 220%;">menu</i></a></li>
-                  </ul>
-                <a href="#" data-target="slide-out" class="sidenav-trigger"></a>
+                    <ul id="slide-out" class="sidenavClose">
+                      <li><a class="sidenav-close" href="#!" style="position: absolute;"><i class="material-icons" style="position: absolute; margin-left: 160%;font-size: 220%;">menu</i></a></li>
+                    </ul>
+                  <a href="#" data-target="slide-out" class="sidenav-trigger"></a>
 
-                  <img src="../images/circulo_amarelo_pequeno.png" id="amarelo_pequeno">
-                  <img src="../images/circulo_roxo.png" id="roxo">
-                  <img src="../images/circulo_roxo_claro.png" id="roxo_claro">
-                  <img src="../images/circulo_amarelo_grande.png" id="amarelo_grande">
-                  <ul id="links_menucel">
-                    <li><a id="perfil" class=" waves-effect center-align" href="../perfil/indexPerfil.html">Perfil</a></li>
-                    <li><div id="divider" class="divider"></div></li>
-                    <li><a id="question" class=" waves-effect center-align" href="../addquestao/indexAddQuestao.html">Adicionar Questão</a></li>
-                    <li><div id="divider" class="divider"></div></li>
-                    <li><a id="document" class="waves-effect center-align" href="#!">Adicionar Documento</a></li>
-                    <li><div id="divider" class="divider"></div></li>
-                    <li><a id="saves" class="waves-effect center-align" href="#!">Salvos</a></li>
-                    <li><div id="divider" class="divider"></div></li>
-                    <a id="sair" href="../login/indexLogin.html"><i class="material-icons" id="sair2">exit_to_app</i> Sair </a>
-                  </ul>
+                    <img src="../images/circulo_amarelo_pequeno.png" id="amarelo_pequeno">
+                    <img src="../images/circulo_roxo.png" id="roxo">
+                    <img src="../images/circulo_roxo_claro.png" id="roxo_claro">
+                    <img src="../images/circulo_amarelo_grande.png" id="amarelo_grande">
+                    <ul id="links_menucel">
+                      <li><a id="perfil" class=" waves-effect center-align" href="../perfil/indexPerfil.html">Perfil</a></li>
+                      <li><div id="divider" class="divider"></div></li>
+                      <li><a id="question" class=" waves-effect center-align" href="../addquestao/indexAddQuestao.html">Adicionar Questão</a></li>
+                      <li><div id="divider" class="divider"></div></li>
+                      <li><a id="document" class="waves-effect center-align" href="#!">Adicionar Documento</a></li>
+                      <li><div id="divider" class="divider"></div></li>
+                      <li><a id="saves" class="waves-effect center-align" href="#!">Salvos</a></li>
+                      <li><div id="divider" class="divider"></div></li>
+                      <a id="sair" href="../login/indexLogin.html"><i class="material-icons" id="sair2">exit_to_app</i> Sair </a>
+                    </ul>
+                  </div>
                 </div>
-              </div>
-            </ul>
-            <a href="#" data-target="slide-out" class="menu sidenav-trigger"><i class=" material-icons" style="font-size: 220%;">menu</i></a>
-          </div>
-
-          <div class="col s1">
-          </div>
-          <div class="col s1">
-          </div>
-          <div class="col s4" >
-            <img class= "responsive-img" id = "nomelogocel" src ="../images/TestandoNome.png">
-          </div>
-          <div class="col s3">
-            <img class= "responsive-img" id = "logocel" src ="../images/logo.png">
-          </div>
-        </div>
-          <!-- Dashboard CELULAR FINAL -->
-
-
-      <!-- LINHA LATERAL DEGRADE-->
-      <div class="degrade" ></div> <!-- versão 1 - padrão -->
-      <div class="degrade2"></div> <!-- versão 2 - dissertativa -->
-      <div class="degrade3"></div> <!-- versão 3 - alternativa -->
-
-
-          <!-- Dashboard COMPUTADOR -->
-          <nav class="hide-on-med-and-down navbar-fixed" id="retanguloroxo">
-            <div class="nav-wrapper hide-on-med-and-down" id="dashboardpc">
-
-               <img class= "responsive-img" id = "logopc" src ="../images/logo.png"> <img class= "responsive-img" id = "nomelogopc" src ="../images/TestandoNome.png"> </a>
-              <ul id="nav-pc" class=" right">
-                <li><a  id= "questao" href="../addquestao/indexAddQuestao.html" >Adicionar <br> questão</a></li>
-                <li><a  id= "documento" href="#!">Adicionar <br> documento</a>
-                  <img class= "responsive-img" id = "linha1" src ="../images/linha.png"></li>
-                <li><a id= "salvos" href="#!">Salvos</a>
-                   <img class= "responsive-img" id = "linha2" src ="../images/linha.png"></li>
               </ul>
+              <a href="#" data-target="slide-out" class="menu sidenav-trigger"><i class=" material-icons" style="font-size: 220%;">menu</i></a>
             </div>
 
-            <!-- foto/nome perfil -->
-            <div class="hide-on-med-and-down" id="perfil_pequeno">
-              <img class="responsive-img" id="foto_perfil_pequeno" src="../images/Icone.png">
-              <p>Primeiro Nome</p>
+            <div class="col s1">
             </div>
-          </nav>
-          <!-- Dashboard COMPUTADOR FINAL-->
+            <div class="col s1">
+            </div>
+            <div class="col s4" >
+              <img class= "responsive-img" id = "nomelogocel" src ="../images/TestandoNome.png">
+            </div>
+            <div class="col s3">
+              <img class= "responsive-img" id = "logocel" src ="../images/logo.png">
+            </div>
+          </div>
+            <!-- Dashboard CELULAR FINAL -->
 
 
-      <!-- Formulário CELULAR-->
-      <div class="row hide-on-large-only" id= "grid">
+        <!-- LINHA LATERAL DEGRADE-->
+        <div class="degrade" ></div> <!-- versão 1 - padrão -->
+        <div class="degrade2"></div> <!-- versão 2 - dissertativa -->
+        <div class="degrade3"></div> <!-- versão 3 - alternativa -->
 
-        <h2>Adicionar Questão</h2>
 
-        <p class="button-group">
-          <button href="#alternativa" id="btn-alternativa" value="ok" target="_self" class="waves-effect waves-light transparent">Alternativa</button>
-          <button href="#dissertativa" id="btn-dissertativa" value="ok" target="_self" class="waves-effect waves-light transparent">Dissertativa</button>
-        </p>
+            <!-- Dashboard COMPUTADOR -->
+            <nav class="hide-on-med-and-down navbar-fixed" id="retanguloroxo">
+              <div class="nav-wrapper hide-on-med-and-down" id="dashboardpc">
 
-        <div class="items">
+                 <img class= "responsive-img" id = "logopc" src ="../images/logo.png"> <img class= "responsive-img" id = "nomelogopc" src ="../images/TestandoNome.png"> </a>
+                <ul id="nav-pc" class=" right">
+                  <li><a  id= "questao" href="../addquestao/indexAddQuestao.html" >Adicionar <br> questão</a></li>
+                  <li><a  id= "documento" href="#!">Adicionar <br> documento</a>
+                    <img class= "responsive-img" id = "linha1" src ="../images/linha.png"></li>
+                  <li><a id= "salvos" href="#!">Salvos</a>
+                     <img class= "responsive-img" id = "linha2" src ="../images/linha.png"></li>
+                </ul>
+              </div>
 
-        <div required id="campo1" class="input-field col s9 center-align hide-on-large-only">
-          <select>
-              <option value="" selected disabled>Selecione sua matéria </option>
-            <optgroup label="Ensino médio" style= "font-family: 'Muli'; font-size: 11px; float: left;">
-              <option value="1">Geografia</option>
-              <option value="2">História</option>
-              <option value="3">Inglês</option>
-            </optgroup>
-            <optgroup label="Ensino técnico">
-              <option value="3">Banco de dados</option>
-              <option value="4">Lógica de programação 2</option>
-              <option value="5">linguagem de programação 1</option>
-            </optgroup>
-          </select>
-          <label>Matéria <span style="color: red;">*</span></label>
-        </div>
+              <!-- foto/nome perfil -->
+              <div class="hide-on-med-and-down" id="perfil_pequeno">
+                <img class="responsive-img" id="foto_perfil_pequeno" src="../images/Icone.png">
+                <p>Primeiro Nome</p>
+              </div>
+            </nav>
+            <!-- Dashboard COMPUTADOR FINAL-->
 
-    </div>
 
-        <div required id="campo2" class="input-field col s9 center-align hide-on-large-only">
-          <select>
-              <option value="" selected disabled>Selecione seu tema </option>
-            <optgroup label="Geografia" style= "font-family: 'Muli'; font-size: 11px; float: left;">
-              <option value="1">Hidrografia</option>
-              <option value="2">Paisagem</option>
-              <option value="3">Rondônia</option>
-            </optgroup>
-          </select>
-          <label>Tema <span style="color: red;">*</span></label>
-        </div>
+        <!-- Formulário CELULAR-->
+        <div class="row hide-on-large-only" id= "grid">
 
-        <div required id="campo3" class="input-field col s9 center-align hide-on-large-only">
-          <select>
-            <option value="" selected disabled> Selecione seu subtema </option>
-            <optgroup label="Hidrografia" style= "font-family: 'Muli'; font-size: 11px; float: left;">
-              <option value="1">Águas do pacífico</option>
-              <option value="2">Perca do status salino</option>
-              <option value="3">Qualificador de PH</option>
-            </optgroup>
-          </select>
-          <label>Subtema <span style="color: red;">*</span></label>
-        </div>
+          <h2>Adicionar Questão</h2>
 
-        <div required id="campo4"  class="col s9 center-align hide-on-large-only">
-          <label for="textarea1" style= "font-family: 'Muli'; font-size: 11px; float: left;">Enunciado <span style="color: red;">*</span></label>
-          <textarea placeholder="Escreva seu enunciado" id="textarea1" class="materialize-textarea"></textarea>
-        </div>
+          <p class="button-group">
+            <button href="#alternativa" id="btn-alternativa" value="ok" target="_self" class="waves-effect waves-light transparent">Alternativa</button>
+            <button href="#dissertativa" id="btn-dissertativa" value="ok" target="_self" class="waves-effect waves-light transparent">Dissertativa</button>
+          </p>
 
-          <div id="simbolodiv">
-            <!-- Modal Trigger -->
-            <a href="#simbolo1" style="width: 52px;" class="waves-effect waves-light modal-trigger"><img class= "responsive-img" id = "simbolo" src ="../images/omega2.png"></a>
-            <p href="#simbolo1" style="color: black;">&nbsp;Inserir <br> Símbolo</p>
+          <div class="items">
+
+          <div required id="campo1" class="input-field col s9 center-align hide-on-large-only">
+            <select>
+                <option value="" selected disabled>Selecione sua matéria </option>
+              <optgroup label="Ensino médio" style= "font-family: 'Muli'; font-size: 11px; float: left;">
+                <option value="1">Geografia</option>
+                <option value="2">História</option>
+                <option value="3">Inglês</option>
+              </optgroup>
+              <optgroup label="Ensino técnico">
+                <option value="3">Banco de dados</option>
+                <option value="4">Lógica de programação 2</option>
+                <option value="5">linguagem de programação 1</option>
+              </optgroup>
+            </select>
+            <label>Matéria <span style="color: red;">*</span></label>
           </div>
 
+      </div>
 
-          <form action="#">
-            <div class="file-field input-field waves-effect waves-light" id="divimagem">
-              <div class="btn" style= "font-family: 'Muli'; color:white; background-color:#FFBC2B;">
-                <span id="spanimagem" style= "font-family: 'Muli'; color:white; background-color:#FFBC2B;">Imagem </span>
-                <input type="file" multiple>
-              </div>
-              <div class="file-path-wrapper" >
-                <input class="file-path validate" type="text">
-              </div>
-            </div>
-          </form>
-
-
-          <!-- Modal Structure SÍMBOLOS -->
-          <div id="simbolo1" class="modal">
-
-            <div class="modal-content">
-              <h5 style="text-align: center;">Símbolos</h5>
-              <p><br>Escolha sua opção:</p>
-              <p><br>**Finge q aq tem um montão de símbolos :)**</p>
-            </div>
-            <div class="modal-footer">
-              <a href="#!" class="modal-close waves-effect waves-green btn-flat">Salvar</a>
-            </div>
-
+          <div required id="campo2" class="input-field col s9 center-align hide-on-large-only">
+            <select>
+                <option value="" selected disabled>Selecione seu tema </option>
+              <optgroup label="Geografia" style= "font-family: 'Muli'; font-size: 11px; float: left;">
+                <option value="1">Hidrografia</option>
+                <option value="2">Paisagem</option>
+                <option value="3">Rondônia</option>
+              </optgroup>
+            </select>
+            <label>Tema <span style="color: red;">*</span></label>
           </div>
 
-          <!-- Alternativa/Dissertativa -->
-      </div> <!-- COMEÇO alternativa -->
+          <div required id="campo3" class="input-field col s9 center-align hide-on-large-only">
+            <select>
+              <option value="" selected disabled> Selecione seu subtema </option>
+              <optgroup label="Hidrografia" style= "font-family: 'Muli'; font-size: 11px; float: left;">
+                <option value="1">Águas do pacífico</option>
+                <option value="2">Perca do status salino</option>
+                <option value="3">Qualificador de PH neutro</option>
+              </optgroup>
+            </select>
+            <label>Subtema <span style="color: red;">*</span></label>
+          </div>
 
-      <div id="alternativa" class="alternativa">
+          <div required id="campo4"  class="col s9 center-align hide-on-large-only">
+            <label for="textarea1" style= "font-family: 'Muli'; font-size: 11px; float: left;">Enunciado <span style="color: red;">*</span></label>
+            <textarea placeholder="Escreva seu enunciado" id="textarea1" class="materialize-textarea"></textarea>
+          </div>
 
-        <div class="row center-align hide-on-large-only">
-            <input type="text"> <i class="material-icons">add</i> </input>
-            <input type="text"> <i class="material-icons">alarm</i> </input>
-            <input type="text"> <i class="material-icons">android</i> </input>
+            <div id="simbolodiv">
+              <!-- Modal Trigger -->
+              <a href="#simbolo1" style="width: 52px;" class="waves-effect waves-light modal-trigger"><img class= "responsive-img" id = "simbolo" src ="../images/omega2.png"></a>
+              <p href="#simbolo1" style="color: black;">&nbsp;Inserir <br> Símbolo</p>
+            </div>
 
-            <button class="material-icons">add</button>
-            <button class="material-icons red">clear</button>
-        </div>
 
-            <label for="textarea1">Resposta</label>
-            <textarea style= "font-family: 'Muli'; font-size: 11px; float: left;" class="materialize-textarea"></textarea>
-            <div required id="dificuldade" class="input-field col s10 center-align hide-on-large-only">
             <form action="#">
-              <label>Dificuldade <span style="color: red;">*</span></label>
-
-            <label>
-              <div class="col s1">
-              <input name="group1" type="radio"  />
-              <span>Fácil</span>
-            </div>
-            </label>
-
-            <label>
-              <div class="col s2">
-              <input name="group1" type="radio"  />
-              <span>Médio</span>
-            </div>
-            </label>
-
-            <label>
-              <div class="col s3">
-              <input name="group1" type="radio" />
-              <span>Difícil</span>
-            </div>
-            </label>
-
-         </div>
-      </div> <!-- FIM - alternativa-->
-
-      <div id="dissertativa" class="dissertativa"> <!-- COMEÇO - dissertativa -->
-
-        <div class="row center-align hide-on-large-only">
-            <form class="col s12">
-              <div class="row">
-                <div class="input-field col s9" id="respostadissertativa">
-                  <label for="textarea1">Resposta</label>
-                  <textarea style= "font-family: 'Muli'; font-size: 11px; float: left;" class="materialize-textarea"></textarea>
+              <div class="file-field input-field waves-effect waves-light" id="divimagem">
+                <div class="btn" style= "font-family: 'Muli'; color:white; background-color:#FFBC2B;">
+                  <span id="spanimagem" style= "font-family: 'Muli'; color:white; background-color:#FFBC2B;">Imagem </span>
+                  <input type="file" multiple>
+                </div>
+                <div class="file-path-wrapper" >
+                  <input class="file-path validate" type="text">
                 </div>
               </div>
             </form>
 
 
-            <div required id="dificuldade" class="input-field col s10 center-align hide-on-large-only">
-            <form action="#">
-              <label>Dificuldade <span style="color: red;">*</span></label>
+            <!-- Modal Structure SÍMBOLOS -->
+            <div id="simbolo1" class="modal">
 
-            <label>
-              <div class="col s1">
-              <input name="group1" type="radio" id="facil"/>
-              <span>Fácil</span>
+              <div class="modal-content">
+                <h5 style="text-align: center;">Símbolos</h5>
+                <p><br>Escolha sua opção:</p>
+                <p><br>**Finge q aq tem um montão de símbolos :)**</p>
+              </div>
+              <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Salvar</a>
+              </div>
+
             </div>
-            </label>
 
-            <label>
-              <div class="col s2">
-              <input name="group1" type="radio" id="medio"/>
-              <span>Médio</span>
-            </div>
-            </label>
+            <!-- Alternativa/Dissertativa -->
+        </div> <!-- COMEÇO alternativa -->
 
-            <label>
-              <div class="col s3">
-              <input name="group1" type="radio" id="dificil"/>
-              <span>Difícil</span>
-            </div>
-            </label>
+        <div id="alternativa" class="alternativa">
 
-         </div>
-      </div>
-      </div>
-    </div><!-- FIM - dissertativa -->
+          <div class="row center-align hide-on-large-only">
+              <input type="text"> <i class="material-icons">add</i> </input>
+              <input type="text"> <i class="material-icons">alarm</i> </input>
+              <input type="text"> <i class="material-icons">android</i> </input>
 
-      <!--Final do formulário de CELULAR-->
-
-
-      <!-- Formulário COMPUTADOR-->
-      <div class="row hide-on-med-and-down">
-
-        <h2>Adicionar Questão</h2>
-
-        <p>
-          <button href="#alternativa" id="btn-alterna-desk" value="ok" target="_self" class="waves-effect waves-light btn transparent">Questão alternativa</button>
-          <button href="#dissertativa" id="btn-dissert-desk" value="ok" target="_self" class="waves-effect waves-light btn transparent">Questão dissertativa</button>
-        </p>
-
-        <div class="items">
-
-        <div required id="campo1" class="input-field col s9 center-align hide-on-med-and-down">
-          <select>
-              <option value="" selected disabled>Selecione sua matéria </option>
-            <optgroup label="Ensino médio" style= "font-family: 'Muli'; font-size: 11px; float: left;">
-              <option value="1">Geografia</option>
-              <option value="2">História</option>
-              <option value="3">Inglês</option>
-            </optgroup>
-            <optgroup label="Ensino técnico">
-              <option value="3">Banco de dados</option>
-              <option value="4">Lógica de programação 2</option>
-              <option value="5">linguagem de programação 1</option>
-            </optgroup>
-          </select>
-          <label>Matéria <span style="color: red;">*</span></label>
-        </div>
-
-        <div required id="campo2" class="input-field col s9 center-align hide-on-med-and-down">
-          <select>
-              <option value="" selected disabled>Selecione seu tema </option>
-            <optgroup label="Geografia" style= "font-family: 'Muli'; font-size: 11px; float: left;">
-              <option value="1">Hidrografia</option>
-              <option value="2">Paisagem</option>
-              <option value="3">Rondônia</option>
-            </optgroup>
-          </select>
-          <label>Tema <span style="color: red;">*</span></label>
-        </div>
-
-        <div required id="campo3" class="input-field col s9 center-align hide-on-med-and-down">
-          <select>
-            <option value="" selected disabled> Selecione seu subtema </option>
-            <optgroup label="Hidrografia" style= "font-family: 'Muli'; font-size: 11px; float: left;">
-              <option value="1">Águas do pacífico</option>
-              <option value="2">Perca do status salino</option>
-              <option value="3">Qualificador de PH</option>
-            </optgroup>
-          </select>
-          <label>Subtema <span style="color: red;">*</span></label>
-        </div>
-
-        <div required id="campo4"  class="col s9 center-align hide-on-med-and-down">
-          <label for="textarea1" style= "font-family: 'Muli'; font-size: 11px; float: left;">Enunciado <span style="color: red;">*</span></label>
-          <textarea placeholder="Escreva seu enunciado" id="textarea1" class="materialize-textarea"></textarea>
-        </div>
-
-          <div id="simbolodiv">
-            <!-- Modal Trigger -->
-            <a href="#simbolo1" style="width: 52px;" class="waves-effect waves-light modal-trigger"><img class= "responsive-img" id = "simbolo" src ="../images/omega2.png"></a>
-            <p href="#simbolo1" style="color: black;">&nbsp;Inserir <br> Símbolo</p>
+              <button class="material-icons">add</button>
+              <button class="material-icons red">clear</button>
           </div>
 
+              <label for="textarea1">Resposta</label>
+              <textarea style= "font-family: 'Muli'; font-size: 11px; float: left;" class="materialize-textarea"></textarea>
+              <div required id="dificuldade" class="input-field col s10 center-align hide-on-large-only">
+              <form action="#">
+                <label>Dificuldade <span style="color: red;">*</span></label>
 
-          <form action="#">
-            <div class="file-field input-field waves-effect waves-light" id="divimagem">
-              <div class="btn" style= "font-family: 'Muli'; color:white; background-color:#FFBC2B;">
-                <span id="spanimagem" style= "font-family: 'Muli'; color:white; background-color:#FFBC2B;">Imagem </span>
-                <input type="file" multiple>
+              <label>
+                <div class="col s1">
+                <input name="group1" type="radio"  />
+                <span>Fácil</span>
               </div>
-              <div class="file-path-wrapper" >
-                <input class="file-path validate" type="text">
+              </label>
+
+              <label>
+                <div class="col s2">
+                <input name="group1" type="radio"  />
+                <span>Médio</span>
               </div>
-            </div>
-          </form>
+              </label>
 
-          <!-- Modal Structure SÍMBOLOS -->
-          <div id="simbolo1" class="modal">
+              <label>
+                <div class="col s3">
+                <input name="group1" type="radio" />
+                <span>Difícil</span>
+              </div>
+              </label>
 
-            <div class="modal-content">
-              <h5 style="text-align: center;">Símbolos</h5>
-              <p><br>Escolha sua opção:</p>
-              <p><br>**Finge q aq tem um montão de símbolos :)**</p>
-            </div>
-            <div class="modal-footer">
-              <a href="#!" class="modal-close waves-effect waves-green btn-flat">Salvar</a>
-            </div>
+           </div>
+        </div> <!-- FIM - alternativa-->
 
+        <div id="dissertativa" class="dissertativa"> <!-- COMEÇO - dissertativa -->
+
+          <div class="row center-align hide-on-large-only">
+              <form class="col s12">
+                <div class="row">
+                  <div class="input-field col s9" id="respostadissertativa">
+                    <label for="textarea1">Resposta</label>
+                    <textarea style= "font-family: 'Muli'; font-size: 11px; float: left;" class="materialize-textarea"></textarea>
+                  </div>
+                </div>
+              </form>
+
+
+              <div required id="dificuldade" class="input-field col s10 center-align hide-on-large-only">
+              <form action="#">
+                <label>Dificuldade <span style="color: red;">*</span></label>
+
+              <label>
+                <div class="col s1">
+                <input name="group1" type="radio" id="facil"/>
+                <span>Fácil</span>
+              </div>
+              </label>
+
+              <label>
+                <div class="col s2">
+                <input name="group1" type="radio" id="medio"/>
+                <span>Médio</span>
+              </div>
+              </label>
+
+              <label>
+                <div class="col s3">
+                <input name="group1" type="radio" id="dificil"/>
+                <span>Difícil</span>
+              </div>
+              </label>
+
+           </div>
+        </div>
+        </div>
+      </div><!-- FIM - dissertativa -->
+
+        <!--Final do formulário de CELULAR-->
+
+
+        <!-- Formulário COMPUTADOR-->
+        <div class="row hide-on-med-and-down">
+
+          <h2>Adicionar Questão</h2>
+
+          <p>
+            <button href="#alternativa" id="btn-alterna-desk" value="ok" target="_self" class="waves-effect waves-light btn transparent">Questão alternativa</button>
+            <button href="#dissertativa" id="btn-dissert-desk" value="ok" target="_self" class="waves-effect waves-light btn transparent">Questão dissertativa</button>
+          </p>
+
+          <div class="items">
+
+          <div required id="campo1" class="input-field col s9 center-align hide-on-med-and-down">
+            <select>
+                <option value="" selected disabled>Selecione sua matéria </option>
+              <optgroup label="Ensino médio" style= "font-family: 'Muli'; font-size: 11px; float: left;">
+                <option value="1">Geografia</option>
+                <option value="2">História</option>
+                <option value="3">Inglês</option>
+              </optgroup>
+              <optgroup label="Ensino técnico">
+                <option value="3">Banco de dados</option>
+                <option value="4">Lógica de programação 2</option>
+                <option value="5">linguagem de programação 1</option>
+              </optgroup>
+            </select>
+            <label>Matéria <span style="color: red;">*</span></label>
           </div>
 
-          <!-- Alternativa/Dissertativa COMPUTADOR -->
+          <div required id="campo2" class="input-field col s9 center-align hide-on-med-and-down">
+            <select>
+                <option value="" selected disabled>Selecione seu tema </option>
+              <optgroup label="Geografia" style= "font-family: 'Muli'; font-size: 11px; float: left;">
+                <option value="1">Hidrografia</option>
+                <option value="2">Paisagem</option>
+                <option value="3">Rondônia</option>
+              </optgroup>
+            </select>
+            <label>Tema <span style="color: red;">*</span></label>
+          </div>
 
-          <!-- COMEÇO ALTERNATIVA -->
+          <div required id="campo3" class="input-field col s9 center-align hide-on-med-and-down">
+            <select>
+              <option value="" selected disabled> Selecione seu subtema </option>
+              <optgroup label="Hidrografia" style= "font-family: 'Muli'; font-size: 11px; float: left;">
+                <option value="1">Águas do pacífico</option>
+                <option value="2">Perca do status salino</option>
+                <option value="3">Qualificador de PH</option>
+              </optgroup>
+            </select>
+            <label>Subtema <span style="color: red;">*</span></label>
+          </div>
 
-      <div id="alternativa" class="alternativa">
+          <div required id="campo4"  class="col s9 center-align hide-on-med-and-down">
+            <label for="textarea1" style= "font-family: 'Muli'; font-size: 11px; float: left;">Enunciado <span style="color: red;">*</span></label>
+            <textarea placeholder="Escreva seu enunciado" id="textarea1" class="materialize-textarea"></textarea>
+          </div>
 
-        <div class="row center-align hide-on-large-only">
-            <input type="text"> <i class="material-icons">add</i> </input>
-            <input type="text"> <i class="material-icons">alarm</i> </input>
-            <input type="text"> <i class="material-icons">android</i> </input>
+            <div id="simbolodiv">
+              <!-- Modal Trigger -->
+              <a href="#simbolo1" style="width: 52px;" class="waves-effect waves-light modal-trigger"><img class= "responsive-img" id = "simbolo" src ="../images/omega2.png"></a>
+              <p href="#simbolo1" style="color: black;">&nbsp;Inserir <br> Símbolo</p>
+            </div>
 
-            <button class="material-icons">add</button>
-            <button class="material-icons red">clear</button>
-        </div>
 
-            <label for="textarea1">Resposta</label>
-            <textarea style= "font-family: 'Muli'; font-size: 11px; float: left;" class="materialize-textarea"></textarea>
-            <div required id="dificuldade" class="input-field col s10 center-align hide-on-large-only">
             <form action="#">
-              <label>Dificuldade <span style="color: red;">*</span></label>
-
-            <label>
-              <div class="col s1">
-              <input name="group1" type="radio" checked />
-              <span>Fácil</span>
-            </div>
-            </label>
-
-            <label>
-              <div class="col s2">
-              <input name="group1" type="radio" checked />
-              <span>Médio</span>
-            </div>
-            </label>
-
-            <label>
-              <div class="col s3">
-              <input name="group1" type="radio" checked />
-              <span>Difícil</span>
-            </div>
-            </label>
-
-         </div>
-      </div>
-
-      <!-- FIM - ALTERNATIVA -->
-
-      <div id="dissertativa" class="dissertativa"> <!-- COMEÇO - dissertativa -->
-
-        <div class="row center-align hide-on-large-only">
-            <form class="col s12">
-              <div class="row">
-                <div class="input-field col s9" id="respostadissertativa">
-                  <label for="textarea1">Resposta</label>
-                  <textarea style= "font-family: 'Muli'; font-size: 11px; float: left;" class="materialize-textarea"></textarea>
+              <div class="file-field input-field waves-effect waves-light" id="divimagem">
+                <div class="btn" style= "font-family: 'Muli'; color:white; background-color:#FFBC2B;">
+                  <span id="spanimagem" style= "font-family: 'Muli'; color:white; background-color:#FFBC2B;">Imagem </span>
+                  <input type="file" multiple>
+                </div>
+                <div class="file-path-wrapper" >
+                  <input class="file-path validate" type="text">
                 </div>
               </div>
             </form>
 
+            <!-- Modal Structure SÍMBOLOS -->
+            <div id="simbolo1" class="modal">
 
-        <div required id="dificuldade" class="input-field center-align hide-on-large-only">
-        <form action="#">
-          <label>Dificuldade <span style="color: red;">*</span></label>
-        <label>
-          <div class="row">
-          <form class="col s1">
-          <input name="group1" type="radio" checked />
-          <span>Fácil</span>
-        </form>
-        </label>
+              <div class="modal-content">
+                <h5 style="text-align: center;">Símbolos</h5>
+                <p><br>Escolha sua opção:</p>
+                <p><br>**Finge q aq tem um montão de símbolos :)**</p>
+              </div>
+              <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Salvar</a>
+              </div>
 
-        <label>
-          <form class="col s2">
-          <input name="group1" type="radio" checked />
-          <span>Médio</span>
-        </form>
-        </label>
+            </div>
 
-        <label>
-          <form class="col s3">
-          <input name="group1" type="radio" checked />
-          <span>Difícil</span>
-        </form>
-        </label>
+            <!-- Alternativa/Dissertativa COMPUTADOR -->
 
+            <!-- COMEÇO ALTERNATIVA -->
+
+        <div id="alternativa" class="alternativa">
+
+          <div class="row center-align hide-on-large-only">
+              <input type="text"> <i class="material-icons">add</i> </input>
+              <input type="text"> <i class="material-icons">alarm</i> </input>
+              <input type="text"> <i class="material-icons">android</i> </input>
+
+              <button class="material-icons">add</button>
+              <button class="material-icons red">clear</button>
           </div>
+
+              <label for="textarea1">Resposta</label>
+              <textarea style= "font-family: 'Muli'; font-size: 11px; float: left;" class="materialize-textarea"></textarea>
+              <div required id="dificuldade" class="input-field col s10 center-align hide-on-large-only">
+              <form action="#">
+                <label>Dificuldade <span style="color: red;">*</span></label>
+
+              <label>
+                <div class="col s1">
+                <input name="group1" type="radio" checked />
+                <span>Fácil</span>
+              </div>
+              </label>
+
+              <label>
+                <div class="col s2">
+                <input name="group1" type="radio" checked />
+                <span>Médio</span>
+              </div>
+              </label>
+
+              <label>
+                <div class="col s3">
+                <input name="group1" type="radio" checked />
+                <span>Difícil</span>
+              </div>
+              </label>
+
+           </div>
+        </div>
+
+        <!-- FIM - ALTERNATIVA -->
+
+        <div id="dissertativa" class="dissertativa"> <!-- COMEÇO - dissertativa -->
+
+          <div class="row center-align hide-on-large-only">
+              <form class="col s12">
+                <div class="row">
+                  <div class="input-field col s9" id="respostadissertativa">
+                    <label for="textarea1">Resposta</label>
+                    <textarea style= "font-family: 'Muli'; font-size: 11px; float: left;" class="materialize-textarea"></textarea>
+                  </div>
+                </div>
+              </form>
+
+
+          <div required id="dificuldade" class="input-field center-align hide-on-large-only">
+          <form action="#">
+            <label>Dificuldade <span style="color: red;">*</span></label>
+          <label>
+            <div class="row">
+            <form class="col s1">
+            <input name="group1" type="radio" checked />
+            <span>Fácil</span>
+          </form>
+          </label>
+
+          <label>
+            <form class="col s2">
+            <input name="group1" type="radio" checked />
+            <span>Médio</span>
+          </form>
+          </label>
+
+          <label>
+            <form class="col s3">
+            <input name="group1" type="radio" checked />
+            <span>Difícil</span>
+          </form>
+          </label>
+
+            </div>
+        </div>
+        </div>
       </div>
+
+      <!-- FIM - DISSERTATIVA -->
+
+      <!--Final do formulário de COMPUTADOR-->
+
       </div>
-    </div>
-
-    <!-- FIM - DISSERTATIVA -->
-
-    <!--Final do formulário de COMPUTADOR-->
-
-    </div>
 
 
-      <!-- JQuery CDN -->
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- JQuery CDN -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-      <!-- JavaScript Materialize compilado e minificado -->
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <!-- JavaScript Materialize compilado e minificado -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
 
-      <!--INICIALIZAÇÃO MENU (sanduiche) CELULAR (JQuery)-->
+        <!--INICIALIZAÇÃO MENU (sanduiche) CELULAR (JQuery)-->
+        <script>
+        $(document).ready(function(){
+          $('.sidenav').sidenav();});
+        </script>
+
+        <!--INICIALIZAÇÃO CAMPO LISTA MATÉRIA (JQuery)-->
+        <script>
+        $(document).ready(function(){
+          $('select').formSelect();
+            });
+        </script>
+      </body>
+
+      <!-- MODAL DOS SÍMBOLOS (JQuery) -->
       <script>
       $(document).ready(function(){
-        $('.sidenav').sidenav();});
+      $('.modal').modal();
+      });
       </script>
 
-      <!--INICIALIZAÇÃO CAMPO LISTA MATÉRIA (JQuery)-->
+      <!-- CÓDIGO BOTÃO ALTERNATIVA/DISSERTATIVA (mobile - JavaScript) -->
       <script>
-      $(document).ready(function(){
-        $('select').formSelect();
-          });
+          var btn1 = document.getElementById('btn-dissertativa');
+          var alternativa = document.querySelector('.alternativa');
+          var degrade = document.querySelector('.degrade');
+          var degrade2 = document.querySelector('.degrade2');
+          var degrade3 = document.querySelector('.degrade3');
+          btn1.addEventListener('click', function() {
+
+          if (dissertativa.style.display = 'block') {
+              alternativa.style.display = 'none';
+              degrade2.style.display = 'block';
+              degrade3.style.display = 'none';
+              degrade.style.display = 'none';
+          }
+          else {
+              alternativa.style.display = 'block';
+              degrade3.style.display = 'block';
+              degrade.style.display = 'none';
+              }
+            });
+
+         var btn2 = document.getElementById('btn-alternativa');
+         var dissertativa = document.querySelector('.dissertativa');
+         var divdegrade = document.querySelector('.degrade');
+         var divdegrade2 = document.querySelector('.degrade2');
+         var divdegrade3 = document.querySelector('.degrade3');
+         btn2.addEventListener('click', function() {
+
+         if (alternativa.style.display = 'block') {
+             dissertativa.style.display = 'none';
+             divdegrade2.style.display = 'none';
+             divdegrade3.style.display = 'block';
+             divdegrade.style.display = 'none';
+         }
+         else {
+             dissertativa.style.display = 'block';
+             divdegrade2.style.display = 'block';
+             divdegrade.style.display = 'none';
+         }
+       });
       </script>
-    </body>
 
-    <!-- MODAL DOS SÍMBOLOS (JQuery) -->
-    <script>
-    $(document).ready(function(){
-    $('.modal').modal();
-    });
-    </script>
+      <!-- CÓDIGO BOTÃO ALTERNATIVA/DISSERTATIVA (desktop - JavaScript) -->
+      <script>
+          var btn1 = document.getElementById('btn-dissert-desk');
+          var alternativa = document.querySelector('.alternativa');
+          var degrade = document.querySelector('.degrade');
+          var degrade2 = document.querySelector('.degrade2');
+          var degrade3 = document.querySelector('.degrade3');
+          btn1.addEventListener('click', function() {
 
-    <!-- CÓDIGO BOTÃO ALTERNATIVA/DISSERTATIVA (mobile - JavaScript) -->
-    <script>
-        var btn1 = document.getElementById('btn-dissertativa');
-        var alternativa = document.querySelector('.alternativa');
-        var degrade = document.querySelector('.degrade');
-        var degrade2 = document.querySelector('.degrade2');
-        var degrade3 = document.querySelector('.degrade3');
-        btn1.addEventListener('click', function() {
+          if (dissertativa.style.display = 'block') {
+              alternativa.style.display = 'none';
+              degrade2.style.display = 'block';
+              degrade3.style.display = 'none';
+              degrade.style.display = 'none';
+          }
+          else {
+              alternativa.style.display = 'block';
+              degrade3.style.display = 'block';
+              degrade.style.display = 'none';
+              }
+            });
 
-        if (dissertativa.style.display = 'block') {
-            alternativa.style.display = 'none';
-            degrade2.style.display = 'block';
-            degrade3.style.display = 'none';
-            degrade.style.display = 'none';
-        }
-        else {
-            alternativa.style.display = 'block';
-            degrade3.style.display = 'block';
-            degrade.style.display = 'none';
-            }
+         var btn2 = document.getElementById('btn-alterna-desk');
+         var dissertativa = document.querySelector('.dissertativa');
+         var divdegrade = document.querySelector('.degrade');
+         var divdegrade2 = document.querySelector('.degrade2');
+         var divdegrade3 = document.querySelector('.degrade3');
+         btn2.addEventListener('click', function() {
+
+         if (alternativa.style.display = 'block') {
+             dissertativa.style.display = 'none';
+             divdegrade2.style.display = 'none';
+             divdegrade3.style.display = 'block';
+             divdegrade.style.display = 'none';
+         }
+         else {
+             dissertativa.style.display = 'block';
+             divdegrade2.style.display = 'block';
+             divdegrade.style.display = 'none';
+         }
+       });
+      </script>
+
+      <!--TRANSIÇÃO COR BOTÃO ALTERNATIVA E DISSERTATIVA-->
+      <script>
+      let myButton = document.querySelectorAll('.button-group > button');
+
+      myButton.forEach(function(key){
+          key.addEventListener('click', function(){
+              removeStyles();
+              this.setAttribute('class', 'buttonClicked');
           });
+      })
 
-       var btn2 = document.getElementById('btn-alternativa');
-       var dissertativa = document.querySelector('.dissertativa');
-       var divdegrade = document.querySelector('.degrade');
-       var divdegrade2 = document.querySelector('.degrade2');
-       var divdegrade3 = document.querySelector('.degrade3');
-       btn2.addEventListener('click', function() {
+      function removeStyles(){
+          for(let i = 0; i < myButton.length; i++){
+              document.querySelectorAll('.button-group > button')[i].removeAttribute('class');
+          }
+      }
+      </script>
 
-       if (alternativa.style.display = 'block') {
-           dissertativa.style.display = 'none';
-           divdegrade2.style.display = 'none';
-           divdegrade3.style.display = 'block';
-           divdegrade.style.display = 'none';
-       }
-       else {
-           dissertativa.style.display = 'block';
-           divdegrade2.style.display = 'block';
-           divdegrade.style.display = 'none';
-       }
-     });
-    </script>
-
-    <!-- CÓDIGO BOTÃO ALTERNATIVA/DISSERTATIVA (desktop - JavaScript) -->
-    <script>
-        var btn1 = document.getElementById('btn-dissert-desk');
-        var alternativa = document.querySelector('.alternativa');
-        var degrade = document.querySelector('.degrade');
-        var degrade2 = document.querySelector('.degrade2');
-        var degrade3 = document.querySelector('.degrade3');
-        btn1.addEventListener('click', function() {
-
-        if (dissertativa.style.display = 'block') {
-            alternativa.style.display = 'none';
-            degrade2.style.display = 'block';
-            degrade3.style.display = 'none';
-            degrade.style.display = 'none';
-        }
-        else {
-            alternativa.style.display = 'block';
-            degrade3.style.display = 'block';
-            degrade.style.display = 'none';
-            }
-          });
-
-       var btn2 = document.getElementById('btn-alterna-desk');
-       var dissertativa = document.querySelector('.dissertativa');
-       var divdegrade = document.querySelector('.degrade');
-       var divdegrade2 = document.querySelector('.degrade2');
-       var divdegrade3 = document.querySelector('.degrade3');
-       btn2.addEventListener('click', function() {
-
-       if (alternativa.style.display = 'block') {
-           dissertativa.style.display = 'none';
-           divdegrade2.style.display = 'none';
-           divdegrade3.style.display = 'block';
-           divdegrade.style.display = 'none';
-       }
-       else {
-           dissertativa.style.display = 'block';
-           divdegrade2.style.display = 'block';
-           divdegrade.style.display = 'none';
-       }
-     });
-    </script>
-
-    <!--TRANSIÇÃO COR BOTÃO ALTERNATIVA E DISSERTATIVA-->
-    <script>
-    let myButton = document.querySelectorAll('.button-group > button');
-
-    myButton.forEach(function(key){
-        key.addEventListener('click', function(){
-            removeStyles();
-            this.setAttribute('class', 'buttonClicked');
-        });
-    })
-
-    function removeStyles(){
-        for(let i = 0; i < myButton.length; i++){
-            document.querySelectorAll('.button-group > button')[i].removeAttribute('class');
-        }
-    }
-    </script>
-
-</html>
+  </html>
