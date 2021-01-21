@@ -15,7 +15,7 @@
     		 //verificar se esta preenchido
         if(!empty($prontuario) && !empty($senha))
         {
-            $u->conectar("testando", "localhost", "root", "");
+            $u->conectar();
             if($u->msgErro == "")
             {
               if($l->logar($prontuario, $senha))

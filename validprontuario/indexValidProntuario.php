@@ -68,7 +68,7 @@
 
   if(!empty($nome) && !empty($prontuario) && !empty($CPF))
   {
-      $u->conectar("testando", "localhost", "root", "");
+      $u->conectar();
       if($u->msgErro == ""){
           if($c->validprontuario($nome, $prontuario, $CPF))
           {

@@ -147,8 +147,7 @@ header('Content-Type: text/html; charset=UTF-8');
 		//verificar se esta preenchido
   if(!empty($nome) && !empty($CPF_Usuario) && !empty($materia) && !empty($email) && !empty($endereço) && !empty($senha) && !empty($confSenha) )
   {
-
-      $u->conectar("testando", "localhost", "root", "");
+      $u->conectar();
       if($u->msgErro == ""){
         if($senha == $confSenha)
         {
