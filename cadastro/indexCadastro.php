@@ -1,6 +1,6 @@
 <?php
 header('Content-Type: text/html; charset=UTF-8');
-  require_once'../Classes/CadastroUsuario.php';
+  require_once'../Classes/Usuario.php';
   $c = new CadastroUsuario;
   require_once'../Classes/DataBase.php';
   $u = new DataBase;
@@ -94,9 +94,20 @@ header('Content-Type: text/html; charset=UTF-8');
     <label>Estados</label>
   </div>
 
-  <div class="input-field col s10 l8" id="cidade">
-      <input class="flow-text validate" placeholder="cidade" type="text" name="cidade">
-  </div>
+  <div class="input-field col s10 l4" id="cidade">
+
+  <select id="cidadefonte" name="cidade">
+     <option value="" disabled >Selecione</option>
+
+<?php
+  $u->conectar("testando", "localhost", "root", "");
+  $results = $city->listAll();
+
+ foreach($results as $row){ ?>
+    <option value="<?php echo $row['Cod'] ?>"><?php echo $row['Nome'] ?></option>
+<?php } ?>
+</select>
+
 
     <div class="input-field col s9 l8" id="endereço">
       <input class="flow-text validate" placeholder="Endereço" id="localização" type="text" name="endereço">
@@ -128,6 +139,7 @@ header('Content-Type: text/html; charset=UTF-8');
     $cidade = addslashes($_POST['cidade']);
 		$senha = addslashes($_POST['senha']);
 		$confSenha = addslashes($_POST['confSenha']);
+
 		//verificar se esta preenchido
   if(!empty($nome) && !empty($CPF_Usuario) && !empty($materia) && !empty($email) && !empty($cidade)&& !empty($endereço) && !empty($senha) && !empty($confSenha) )
   {

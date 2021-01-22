@@ -5,7 +5,7 @@
 
   $u->conectar("testando", "localhost", "root", "");
 
-  require_once'../Classes/CadastroUsuario.php';
+  require_once'../Classes/Usuario.php';
   $c = new CadastroUsuario;
 
   $consulta = "SELECT * FROM professor";
@@ -94,16 +94,24 @@
 }
 ?>
 
-<?php while($dado = $con->fetch()) { ?>
-  <table class="centered responsive-table">
-      <tbody>
+
+  <table class="centered responsive-table highlight">
+    <thead>
         <tr>
-          <td><?php echo $dado["Prontuario"];?></td>
+          <th>Nome</th>
+          <th>Prontuário</th>
+          <th>CPF</th>
+        </tr>
+      </thead>
+      <?php while($dado = $con->fetch()) { ?>
+      <tbody>
+      <tr>
           <td><?php echo $dado["Nome"];?></td>
+          <td><?php echo $dado["Prontuario"];?></td>
           <td><?php echo $dado["CPF"];?></td>
         </tr>
-      </tbody>
-  </table><?php } ?>
+      </tbody><?php } ?>
+    </table>
 
   </header>
 </body>
