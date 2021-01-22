@@ -221,67 +221,87 @@
 
               <label>
                 <div class="col s1">
-                <input name="group1" type="radio"  />
+                <input name="group1" class="with-gap" type="radio"  />
                 <span>Fácil</span>
               </div>
               </label>
 
               <label>
                 <div class="col s2">
-                <input name="group1" type="radio"  />
+                <input name="group1" class="with-gap" type="radio"  />
                 <span>Médio</span>
               </div>
               </label>
 
               <label>
                 <div class="col s3">
-                <input name="group1" type="radio" />
+                <input name="group1" class="with-gap" type="radio" />
                 <span>Difícil</span>
               </div>
               </label>
 
            </div>
-        </div> <!-- FIM - alternativa-->
+        </div>
+        <!-- FIM - alternativa-->
 
         <div id="dissertativa" class="dissertativa"> <!-- COMEÇO - dissertativa -->
 
           <div class="row center-align hide-on-large-only">
               <form class="col s12">
                 <div class="row">
-                  <div class="input-field col s9" id="respostadissertativa">
-                    <label for="textarea1">Resposta</label>
-                    <textarea style= "font-family: 'Muli'; font-size: 11px; float: left;" class="materialize-textarea"></textarea>
+                  <label for="textarea1" id="label_resposta" style= "font-family: 'Muli'; font-size: 11px; float: left;">Resposta <span style="color: red;">*</span></label>
+                  <textarea id="respostadissertativa" placeholder="Escreva sua resposta" class="materialize-textarea"></textarea>
                   </div>
                 </div>
               </form>
 
 
               <div required id="dificuldade" class="input-field col s10 center-align hide-on-large-only">
+              <label id="label_dificuldade" style="font-size: 85%;">Dificuldade <span style="color: red;">*</span></label>
               <form action="#">
-                <label>Dificuldade <span style="color: red;">*</span></label>
 
               <label>
                 <div class="col s1">
-                <input name="group1" type="radio" id="facil"/>
+                <input name="group1" class="with-gap" type="radio"/>
                 <span>Fácil</span>
               </div>
               </label>
 
               <label>
                 <div class="col s2">
-                <input name="group1" type="radio" id="medio"/>
+                <input name="group1" class="with-gap" type="radio"/>
                 <span>Médio</span>
               </div>
               </label>
 
               <label>
                 <div class="col s3">
-                <input name="group1" type="radio" id="dificil"/>
+                <input name="group1" class="with-gap" type="radio"/>
                 <span>Difícil</span>
               </div>
               </label>
+             </div>
+           </form>
 
-           </div>
+          <div id="priv_public">
+            <form action="#">
+
+             <label>
+               <div class="col s1">
+               <input name="group1" class="with-gap" type="radio"/>
+               <span>Público</span>
+             </div>
+             </label>
+
+             <label>
+               <div class="col s2">
+               <input name="group1" class="with-gap" type="radio"/>
+               <span>Privado</span>
+             </div>
+             </label>
+           </form>
+         </div>
+
         </div>
         </div>
       </div><!-- FIM - dissertativa -->

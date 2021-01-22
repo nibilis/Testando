@@ -8,6 +8,7 @@
     height:  100vh;
   }
 
+/*CÓDIGOS DO JAVASCRIPT*/
   .degrade, .degrade2, .degrade3 {
     width: 10%;
     margin-top: -5.5% !important;
@@ -42,6 +43,7 @@
   .alternativa, .dissertativa {
     display: none;
   }
+  /*FINAL DOS CÓDIGOS DO JAVASCRIPT*/
 
   /*FORMATAÇÃO CELULAR*/
 
@@ -111,32 +113,171 @@
     }
   }
 
-  /*CAMPOS ALTERNATIVA*/
-  #dificuldade {
-    display: grid;
-    gap: 3em;
-    grid-template-columns: 100%;
-    }
+  /*CAMPOS QUE MUDAM ALTERNATIVA*/
 
-  #facil {
-    margin-left: 5%;
+  /*FINAL DOS CAMPOS QUE MUDAM ALTERNATIVA*/
+
+  /*CAMPOS QUE MUDAM DISSERTATIVA*/
+
+  #label_resposta {
+    margin-left: 18%;
   }
-
-  #medio {
-    margin-left: 25%;
-  }
-
-  #dificil {
-    margin-left: 35%;
-  }
-
-  /*CAMPOS DISSERTATIVA*/
 
   #respostadissertativa
   {
-    margin-left: 15.5%;
+    width: 72%;
+    margin-left: 8%;
+  }
+
+  #dificuldade form{
+    display: grid;
+    gap: 3em;
+    grid-template-columns: 19% 21% 20%;
+    margin-top: 10%;
+    margin-left: 16%;
+    }
+
+    #label_dificuldade {
+      margin-left: 15%;
+      margin-top: -13%;
+    }
+
+    #priv_public form {
+      display: grid;
+      gap: 3em;
+      grid-template-columns: 30% 30% ;
+      margin-top: 20%;
+      margin-left: 25%;
+    }
+  /*FINAL DOS CAMPOS QUE MUDAM DISSERTATIVA*/
+
+  #btn-alternativa,
+   #btn-dissertativa{
+    width: 35%;
+    color: black;
+    border-radius: 40px 40px;
+    text-transform: capitalize;
+    font-family: 'Muli';
+    font-size: 75%;
+    border-color: black;
+    border-width: 6px;
+    padding-right: 0%;
+    padding-left: 0%;
+    margin-top: 25%;
+    margin-bottom: 10%;
+  }
+
+  #btn-alternativa {
+    margin-left: 12%;
+    margin-right: 2%;
+  }
+
+/*CÓDIGOS DAS CORES DOS BOTÕES QUE MUDAM*/
+  .button-group{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .button-group > button {
+    background-color: transparent;
+    padding-top: 4.5%;
+    padding-bottom: 4%;
+    box-shadow: 0px 1.5px 3px rgba(0, 0, 0, 0.3);
+    border: none;
+  }
+
+  .buttonClicked {
+      background-color: #9785D3 !important;
+      box-shadow: 0px 1.5px 3px rgba(0, 0, 0, 0.3);
+      color: white!important;
+  }
+/*FINAL DOS CÓDIGOS DAS CORES DOS BOTÕES QUE MUDAM*/
+
+  body h2{
+    font-size: 170%;
+    position: absolute;
+    font-family: 'Muli';
+    left: 23.5%;
+    top: 12%;
+  }
+
+  #campo1, #campo2, #campo3, #campo4 {
+    margin-left: 15%;
     width: 78%;
   }
+
+  #campo4{
+    margin-bottom: 10%;
+    font-size: 20%;
+  }
+
+  #divimagem{
+
+  left: 18%;
+  width: 71.5%;
+  margin-top: -4%;
+  text-transform: capitalize;
+
+  }
+
+  #simbolodiv p {
+    margin-top: -13.5%;
+    position: absolute;
+    margin-left: 80%;
+    font-size: 65%;
+  }
+
+  #simbolodiv a {
+    margin-top: -15%;
+    margin-left: 74%;
+
+  }
+
+  #simbolo {
+    width: 30%;
+  }
+
+  /*MUDAR CORES DAS BORDAS DO TEXTAREA E DO INPUT*/
+  .select-wrapper input.select-dropdown:focus {
+    border-bottom: 1px solid rgba(0, 0, 0, 1)!important;
+  }
+
+  #textarea1{
+    color: black;
+  }
+
+  textarea .materialize-textarea {
+    font-family: 'Muli';
+    font-size: 8%;
+    color: black;
+  }
+
+
+  textarea:focus:not([readonly]) {
+    border-bottom: 1px solid rgba(0, 0, 0, 3)!important;
+    box-shadow: 0 0.1px 0 0 rgba(0, 0, 0, 3)!important;
+  }
+
+  /*FINAL DAS CORES DAS BORDAS DO TEXTAREA E DO INPUT*/
+
+  /*COMEÇO DOS CÓDIGOS PARA MUDAR A FORMATAÇÃO DAS CORES DOS CAMPOS DO MATERIALIZE*/
+  .select-dropdown li.optgroup>span {
+      color: rgba(0,0,0,0.4)!important;
+  }
+
+  .dropdown-content li>span {
+    color: #7C6FBF!important;
+  }
+
+  .select-dropdown li.disabled>span {
+    color: rgba(0,0,0,0.4)!important;
+  }
+
+  .select-wrapper input.select-dropdown {
+    color: #d1d1d1;
+  }
+
+  /*FINAL DOS CÓDIGOS PARA MUDAR A FORMATAÇÃO DAS CORES DOS CAMPOS DO MATERIALIZE*/
 
   /*FINAL DA FORMATAÇÃO CELULAR*/
 
@@ -849,135 +990,7 @@
 
   /*Dashboard para o computador final*/
 
-  /*FORMATAÇÃO CELULAR 2*/
 
-  #btn-alternativa,
-   #btn-dissertativa{
-    width: 35%;
-    color: black;
-    border-radius: 40px 40px;
-    text-transform: capitalize;
-    font-family: 'Muli';
-    font-size: 75%;
-    border-color: black;
-    border-width: 6px;
-    padding-right: 0%;
-    padding-left: 0%;
-    margin-top: 25%;
-    margin-bottom: 10%;
-  }
-
-  #btn-alternativa {
-    margin-left: 12%;
-    margin-right: 2%;
-  }
-
-  .button-group{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-  }
-  .button-group > button {
-    background-color: transparent;
-    padding-top: 4.5%;
-    padding-bottom: 4%;
-    box-shadow: 0px 1.5px 3px rgba(0, 0, 0, 0.3);
-    border: none;
-  }
-
-  .buttonClicked {
-      background-color: #9785D3 !important;
-      box-shadow: 0px 1.5px 3px rgba(0, 0, 0, 0.3);
-      color: white!important;
-      -webkit-transition: 0.4s ease-in;
-  }
-
-  body h2{
-    font-size: 170%;
-    position: absolute;
-    font-family: 'Muli';
-    left: 23.5%;
-    top: 12%;
-  }
-
-  /*MUDAR CORES DAS BORDAS DO TEXTAREA E DO INPUT*/
-  .select-wrapper input.select-dropdown:focus {
-    border-bottom: 1px solid rgba(0, 0, 0, 1)!important;
-  }
-
-  #textarea1{
-    color: black;
-  }
-
-  textarea .materialize-textarea {
-    font-family: 'Muli';
-    font-size: 8%;
-    color: black;
-  }
-
-
-  textarea:focus:not([readonly]) {
-    border-bottom: 1px solid rgba(0, 0, 0, 3)!important;
-    box-shadow: 0 0.1px 0 0 rgba(0, 0, 0, 3)!important;
-  }
-
-  /*FINAL DAS CORES DAS BORDAS DO TEXTAREA E DO INPUT*/
-
-
-  #campo1, #campo2, #campo3, #campo4 {
-    margin-left: 15%;
-    width: 78%;
-  }
-
-  #campo4{
-    margin-bottom: 10%;
-    font-size: 20%;
-  }
-
-  #divimagem{
-
-  left: 18%;
-  width: 71.5%;
-  margin-top: -4%;
-  text-transform: capitalize;
-
-  }
-
-  #simbolodiv p {
-    margin-top: -13.5%;
-    position: absolute;
-    margin-left: 80%;
-    font-size: 65%;
-  }
-
-  #simbolodiv a {
-    margin-top: -15%;
-    margin-left: 74%;
-
-  }
-
-  #simbolo {
-    width: 30%;
-  }
-
-  /*COMEÇO DOS CÓDIGOS PARA MUDAR A FORMATAÇÃO DAS CORES DOS CAMPOS DO MATERIALIZE*/
-  .select-dropdown li.optgroup>span {
-      color: rgba(0,0,0,0.4)!important;
-  }
-
-  .dropdown-content li>span {
-    color: #7C6FBF!important;
-  }
-
-  .select-dropdown li.disabled>span {
-    color: rgba(0,0,0,0.4)!important;
-  }
-
-  .select-wrapper input.select-dropdown {
-    color: #8D8989;
-  }
-
-  /*FINAL DOS CÓDIGOS PARA MUDAR A FORMATAÇÃO DAS CORES DOS CAMPOS DO MATERIALIZE*/
 
   /*FORMATAÇÃO COMPUTADOR*/
 
