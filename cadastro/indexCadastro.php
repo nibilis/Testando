@@ -4,6 +4,8 @@ header('Content-Type: text/html; charset=UTF-8');
   $c = new CadastroUsuario;
   require_once'../Classes/DataBase.php';
   $u = new DataBase;
+  require_once'../Classes/Cidade.php';
+  $city = new Cidade;
 ?>
 
 <!DOCTYPE html>
@@ -92,28 +94,9 @@ header('Content-Type: text/html; charset=UTF-8');
     <label>Estados</label>
   </div>
 
-  <div class="input-field col s10 l5" id="cidade" >
-      <select id="estadofonte">
-        <option value="" disabled selected>Selecione</option>
-        <optgroup label="Estado 1">
-          <option value="1">Cidade 1</option>
-          <option value="2">Cidade 2</option>
-        </optgroup>
-        <optgroup label="Estado 2">
-          <option value="3">Cidade 3</option>
-          <option value="4">Cidade 4</option>
-        </optgroup>
-        <optgroup label="Estado 3">
-          <option value="5">Cidade 5</option>
-          <option value="6">Cidade 6</option>
-        </optgroup>
-        <optgroup label="Estado 4">
-          <option value="7">Cidade 7</option>
-          <option value="8">Cidade 8</option>
-        </optgroup>
-      </select>
-      <label>Cidades</label>
-    </div>
+  <div class="input-field col s10 l8" id="cidade">
+      <input class="flow-text validate" placeholder="cidade" type="text" name="cidade">
+  </div>
 
     <div class="input-field col s9 l8" id="endereço">
       <input class="flow-text validate" placeholder="Endereço" id="localização" type="text" name="endereço">
@@ -142,16 +125,17 @@ header('Content-Type: text/html; charset=UTF-8');
 		$materia = addslashes($_POST['materia']);
 		$email = addslashes($_POST['email']);
 		$endereço = addslashes($_POST['endereço']);
+    $cidade = addslashes($_POST['cidade']);
 		$senha = addslashes($_POST['senha']);
 		$confSenha = addslashes($_POST['confSenha']);
 		//verificar se esta preenchido
-  if(!empty($nome) && !empty($CPF_Usuario) && !empty($materia) && !empty($email) && !empty($endereço) && !empty($senha) && !empty($confSenha) )
+  if(!empty($nome) && !empty($CPF_Usuario) && !empty($materia) && !empty($email) && !empty($cidade)&& !empty($endereço) && !empty($senha) && !empty($confSenha) )
   {
       $u->conectar();
       if($u->msgErro == ""){
         if($senha == $confSenha)
         {
-          if($c->cadastrar($nome, $CPF_Usuario, $materia, $email, $endereço, $senha))
+          if($c->cadastrar($nome, $CPF_Usuario, $materia, $email, $cidade, $endereço, $senha))
           {
             echo "Cadastrado com sucesso!";
           }

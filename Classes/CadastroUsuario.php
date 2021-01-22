@@ -4,7 +4,7 @@ Class CadastroUsuario
 {
   public $pdo;
 
-  public function cadastrar($nome, $CPF_Usuario, $materia, $email, $endereço, $senha)
+  public function cadastrar($nome, $CPF_Usuario, $materia, $email, $cidade, $endereço, $senha)
   {
     global $pdo;
 
@@ -46,15 +46,31 @@ Class CadastroUsuario
           $sql->bindValue(":m", $materias);
           $sql->execute();
 
+          //verificar qual o id da cidade
+          $sql = $pdo->prepare("SELECT Cod FROM cidade WHERE Nome = :c");
+          $sql->bindValue(":c", $cidade);
+          $idCidade = $sql->execute();
+
+          $sql = $pdo->prepare("INSERT INTO usuario_professor (Cidade_Cod) VALUES (:c)");
+          $sql->bindValue(":c", $idCidade);
+          $sql->execute();
+
           $pdo = null;
           return true;
       }
         else{
+
+          //verificar qual o id da cidade
+          $sql = $pdo->prepare("SELECT Cod FROM cidade WHERE Nome = :c");
+          $sql->bindValue(":c", $cidade);
+          $idCidade = $sql->execute();
+
           //cadastrar sem prontuario
-          $sql = $pdo->prepare("INSERT INTO usuario_professor (NickName, CPF_Usuario, Email, Endereço, Senha) VALUES (:n, :c, :e, :en, :s)");
+          $sql = $pdo->prepare("INSERT INTO usuario_professor (NickName, CPF_Usuario, Email, Cidade_Cod, Endereço, Senha) VALUES (:n, :c, :e, :cid, :en, :s)");
           $sql->bindValue(":n", $nome);
           $sql->bindValue(":c", $CPF_Usuario);
           $sql->bindValue(":e", $email);
+          $sql->bindValue(":cid", $idCidade);
           $sql->bindValue(":en", $endereço);
           $sql->bindValue(":s", md5($senha));
           $sql->execute();
