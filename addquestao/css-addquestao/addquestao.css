@@ -23,7 +23,7 @@
 
   .degrade2 {
     display: none;
-    height: 200% !important;
+    height: 178% !important;
   }
 
   .degrade3 {
@@ -115,6 +115,16 @@
 
   /*CAMPOS QUE MUDAM ALTERNATIVA*/
 
+  #adicionarCampo {
+    margin-left: 15%;
+    margin-top: -13%;
+  }
+
+  #alternativa_campo {
+    margin-left: 17%;
+    width: 72%;
+  }
+
   /*FINAL DOS CAMPOS QUE MUDAM ALTERNATIVA*/
 
   /*CAMPOS QUE MUDAM DISSERTATIVA*/
@@ -143,12 +153,37 @@
     }
 
     #priv_public form {
-      display: grid;
+      /*display: grid;
       gap: 3em;
       grid-template-columns: 30% 30% ;
       margin-top: 20%;
-      margin-left: 25%;
+      margin-left: 26%;*/
+      display: grid;
+      gap: 2em;
+      grid-template-columns: 30%;
+      margin-top: 20%;
+      margin-left: 17%;
     }
+
+    #label_privacidade {
+      position: absolute;
+      margin-left: 18%;
+      margin-top: -12%;
+    }
+
+    #btn_salvar {
+      font-size: 75%;
+      padding-top: 0.5%;
+      padding-bottom: 10%;
+      font-family: 'Muli';
+      width: 30%;
+      background-color: #FFBC2B;
+      border-radius: 40px 40px;
+      margin-top: 10%;
+      margin-left: 39%;
+    }
+
+
   /*FINAL DOS CAMPOS QUE MUDAM DISSERTATIVA*/
 
   #btn-alternativa,
@@ -235,6 +270,11 @@
 
   #simbolo {
     width: 30%;
+  }
+
+  div#simbolo1.modal.open{
+    border-radius: 20px 20px;
+    border: #7C6FBF 10px solid;
   }
 
   /*MUDAR CORES DAS BORDAS DO TEXTAREA E DO INPUT*/

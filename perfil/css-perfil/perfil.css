@@ -775,6 +775,11 @@ span {
   background-color: #8B8B8B;
 }
 
+div#comp.modal.open{
+  border-radius: 20px 20px;
+  border: #7C6FBF 10px solid;
+}
+
 #compartilhar {
   width: 25%;
   margin-left: 10%;
@@ -802,8 +807,6 @@ span {
   margin-left: 44%;
   margin-top: -15%;
   text-align: center;
-
-
 }
 
 #ajuda {
@@ -820,7 +823,6 @@ span {
   font-size: 22px;
   margin-left: 23%;
   margin-top: -34%;
-
 }
 
 #ajudadescricao{
@@ -833,7 +835,11 @@ span {
   margin-left: 45%;
   margin-top: -14%;
   text-align: center;
+}
 
+div#tutor.modal.open{
+  border-radius: 20px 20px;
+  border: #7C6FBF 10px solid;
 }
 
 #tutorial {
@@ -850,7 +856,6 @@ span {
   font-size: 22px;
   margin-left: 18%;
   margin-top: -34%;
-
 }
 
 #tutorialdescricao{
