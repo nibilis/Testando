@@ -203,42 +203,25 @@
 
         </div> <!-- COMEÇO alternativa -->
 
-        <div id="alternativa" class="alternativa">
+        <div id="alternativa" class="alternativa" style="margin-top: -5%;">
 
-          <!--<div class="row center-align hide-on-large-only">
-              <input type="text"> <i class="material-icons">add</i> </input>
-              <input type="text"> <i class="material-icons">alarm</i> </input>
-              <input type="text"> <i class="material-icons">android</i> </input>
-
-              <button class="material-icons">add</button>
-              <button class="material-icons red">clear</button>
-          </div>-->
+          <div class="row center-align hide-on-large-only">
+          </div>
 
 
-
-
-
-          <!--TESTE TESTE TESTE-->
+          <!--CAMPOS ALTERNATIVA: ADD E RETIRAR-->
 
           <form action="#">
             <div id="formulario">
               <input id="alternativa_campo" type="text" placeholder="Alternativa" name="numeroDocumento" required/>
             </div>
           </form>
-          <a href="#" data-id="1" id="adicionarCampo">+</a>
-          <!--TESTE TESTE TESTE-->
+          <a href="#" data-id="1" id="adicionarCampo">+ Adicionar Campos</a>
 
 
-
-
-
-
-
-
-
-              <!--<label for="textarea1">Resposta</label>
-              <textarea required style= "font-family: 'Muli'; font-size: 11px; float: left;" class="materialize-textarea"></textarea>
-              <div required id="dificuldade" class="input-field col s10 center-align hide-on-large-only">
+              <label id="label_resposta2" for="textarea1">Resposta alternativa <span style="color: red;">*</span></label>
+              <textarea id="respostaalternativa" maxlength="1" placeholder=" Ex: A..." required style= "font-family: 'Muli'; font-size: 100%;" class="materialize-textarea"></textarea>
+              <div required id="dificuldade2" class="input-field col s10 center-align hide-on-large-only">
               <label id="label_dificuldade2" style="font-size: 85%;">Dificuldade da questão <span style="color: red;">*</span></label>
               <form action="#">
 
@@ -261,10 +244,32 @@
                 <input name="group1" class="with-gap" type="radio" />
                 <span>Difícil</span>
               </div>
-              </label>
+            </label>
+          </div>
+
+          <div required id="priv_public2">
+            <label id="label_privacidade2" style="font-size: 87%;">Privacidade da questão <span style="color: red;">*</span></label>
+            <form action="#">
+
+             <label>
+               <div class="col s1">
+               <input name="group1" class="with-gap" type="radio"/>
+               <span>Público</span>
+             </div>
+             </label>
+
+             <label>
+               <div class="col s2">
+               <input name="group1" class="with-gap" type="radio"/>
+               <span>Privado</span>
+             </div>
+             </label>
+           </form>
+         </div>
+         <button id="btn_salvar" class="waves-effect waves-light btn" type="submit" name="action">Salvar</button>
 
            </div>
-        </div>-->
+        </div>
         <!-- FIM - alternativa-->
 
         <div id="dissertativa" class="dissertativa"> <!-- COMEÇO - dissertativa -->
@@ -326,7 +331,7 @@
            </form>
          </div>
          <button id="btn_salvar" class="waves-effect waves-light btn" type="submit" name="action">Salvar</button>
-        </div>
+
         </div>
       </div><!-- FIM - dissertativa -->
 
@@ -666,7 +671,7 @@
           //Ao clicar em adicionar ele cria uma linha com novos campos
           $(botaoAdicionar).click(function () {
 
-              $('<div class="conteudoIndividual"><input id="alternativa_campo" type="text" placeholder="Alternativa" name="numeroDocumento' + i + '" required/><a href="#" class="linkRemover">X</a></div>').appendTo(divContent);
+              $('<div class="conteudoIndividual"><br><input id="alternativa_campo" type="text" placeholder="Alternativa" name="numeroDocumento' + i + '" required/><a href="#" class="linkRemover">X</a></div>').appendTo(divContent);
               $('#removehidden').remove();
               i++;
               $('<input type="hidden" name="quantidadeCampos" value="' + i + '" id="removehidden">').appendTo(divContent);

@@ -23,12 +23,12 @@
 
   .degrade2 {
     display: none;
-    height: 178% !important;
+    height: 200% !important;
   }
 
   .degrade3 {
     display: none;
-    height: 200% !important;
+    height: 250% !important;
   }
 
   #alternativa, #dissertativa {
@@ -116,14 +116,54 @@
   /*CAMPOS QUE MUDAM ALTERNATIVA*/
 
   #adicionarCampo {
-    margin-left: 15%;
-    margin-top: -13%;
+    margin-left: 18%;
   }
 
   #alternativa_campo {
-    margin-left: 17%;
+    margin-left: 18%;
     width: 72%;
+    margin-top: -10%;
   }
+
+  #dificuldade2 form{
+    display: grid;
+    gap: 3em;
+    grid-template-columns: 19% 21% 20%;
+    margin-top: 18%;
+    margin-left: 16%;
+    }
+
+    #label_resposta2 {
+      margin-left: -35%;
+      margin-top: 13%;
+      position: absolute;
+    }
+
+    #respostaalternativa {
+      width: 72%;
+      margin-left: 18%;
+      margin-top: 13%;
+      text-transform: uppercase;
+    }
+
+    #label_dificuldade2 {
+      margin-left: 15%;
+      margin-top: -15%;
+    }
+
+    #priv_public2 {
+      display: grid;
+      gap: 2em;
+      grid-template-columns: 30%;
+      margin-top: 8%;
+      margin-left: 17%;
+    }
+
+    #label_privacidade2 {
+      width: 150%;
+      margin-left: 5%;
+      margin-top: 1%;
+    }
 
   /*FINAL DOS CAMPOS QUE MUDAM ALTERNATIVA*/
 
@@ -135,7 +175,7 @@
 
   #respostadissertativa
   {
-    width: 72%;
+    width: 70%;
     margin-left: 8%;
   }
 
