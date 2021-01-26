@@ -18,17 +18,17 @@
   }
 
   .degrade {
-    height: 120%;
+    height: 100%;
   }
 
   .degrade2 {
     display: none;
-    height: 200% !important;
+    height: 170% !important;
   }
 
   .degrade3 {
     display: none;
-    height: 250% !important;
+    height: 185% !important;
   }
 
   #alternativa, #dissertativa {
@@ -53,7 +53,20 @@
       float: left;
       margin-top: -6.1%;
       background: linear-gradient(to bottom, #D0C7FC, #8F83CD, #7C6FBF);
+      height: 110%;
     }
+
+    .degrade2 {
+      display: none;
+      height: 175% !important;
+    }
+
+    .degrade3 {
+      display: none;
+      height: 200% !important;
+    }
+    }
+
 
     #btn-alternativa,
      #btn-dissertativa{
@@ -92,8 +105,21 @@
       float: left;
       margin-top: -5.5%;
       background: linear-gradient(to bottom, #D0C7FC, #8F83CD, #7C6FBF);
+      height: 100%;
+    }
+
+    .degrade2 {
+      display: none;
+      height: 160% !important;
+    }
+
+    .degrade3 {
+      display: none;
+      height: 180% !important;
     }
   }
+
+  
 
   @media (min-width: 411px){
     .degrade{
@@ -101,8 +127,20 @@
       float: left;
       margin-top: -5% ;
       background: linear-gradient(to bottom, #D0C7FC, #8F83CD, #7C6FBF);
+      height: 100%;
+    }
+
+    .degrade2 {
+      display: none;
+      height: 160% !important;
+    }
+
+    .degrade3 {
+      display: none;
+      height: 170% !important;
     }
   }
+
 
   @media (min-width: 414px){
     .degrade{
@@ -110,7 +148,20 @@
       float: left;
       margin-top: -4.9%;
       background: linear-gradient(to bottom, #D0C7FC, #8F83CD, #7C6FBF);
+      height: 100%;
     }
+
+    .degrade2 {
+      display: none;
+      height: 155% !important;
+    }
+
+    .degrade3 {
+      display: none;
+      height: 166% !important;
+    }
+
+
   }
 
   /*CAMPOS QUE MUDAM ALTERNATIVA*/
@@ -243,7 +294,7 @@
   }
 
   #btn-alternativa {
-    margin-left: 12%;
+    margin-left: 7.5%;
     margin-right: 2%;
   }
 
