@@ -672,12 +672,15 @@
           var divContent = $('#formulario');
           var botaoAdicionar = $('a[data-id="1"]');
           var i = 1;
+          //66 - B
+          var letra = 66;
 
           //Ao clicar em adicionar ele cria uma linha com novos campos
           $(botaoAdicionar).click(function () {
 
-              $('<div class="conteudoIndividual"><br><input id="alternativa_campo" type="text" placeholder="Alternativa" name="numeroDocumento' + i + '" required/><a href="#" class="linkRemover">X</a></div>').appendTo(divContent);
+              $('<div class="conteudoIndividual"><br><input id="alternativa_campo '+ String.fromCharCode(letra) +'" type="text" placeholder="Alternativa" name="numeroDocumento' + i + '" required/><a href="#" class="linkRemover">X</a></div>').appendTo(divContent);
               $('#removehidden').remove();
+              letra++;
               i++;
               $('<input type="hidden" name="quantidadeCampos" value="' + i + '" id="removehidden">').appendTo(divContent);
           });
@@ -686,6 +689,7 @@
           $('#formulario').on('click', '.linkRemover', function () {
               $(this).parents('.conteudoIndividual').remove();
               i--;
+              letra--;
           });
       });
       </script>
