@@ -212,67 +212,68 @@
           <!--CAMPOS ALTERNATIVA: ADD E RETIRAR-->
 
           <form action="#">
-            <div id="formulario">
+            <div id="formulario" class= "hide-on-large-only" >
               <input id="alternativa_campo" type="text" placeholder="Alternativa" name="numeroDocumento" required/>
             </div>
           </form>
-          <a href="#" data-id="1" id="adicionarCampo">+ Adicionar Campos</a>
+          <a href="#" data-id="1" id="adicionarCampo" class="hide-on-large-only">+ Adicionar Campos</a>
 
 
-              <label id="label_resposta2" for="textarea1">Resposta alternativa <span style="color: red;">*</span></label>
-              <textarea id="respostaalternativa" maxlength="1" placeholder=" Ex: A..." required style= "font-family: 'Muli'; font-size: 100%;" class="materialize-textarea"></textarea>
+              <label id="label_resposta2" for="textarea1" class= "hide-on-large-only">Resposta alternativa <span style="color: red;">*</span></label>
+              <textarea id="respostaalternativa" maxlength="1" placeholder=" Ex: A..." required style= "font-family: 'Muli'; font-size: 100%;" class="materialize-textarea hide-on-large-only"></textarea>
               <div required id="dificuldade2" class="input-field col s10 center-align hide-on-large-only">
               <label id="label_dificuldade2" style="font-size: 85%;">Dificuldade da questão <span style="color: red;">*</span></label>
               <form action="#">
 
               <label>
-                <div class="col s1">
+                <div class="col s1" class= "hide-on-large-only">
                 <input name="group1" class="with-gap" type="radio"  />
                 <span>Fácil</span>
               </div>
               </label>
 
               <label>
-                <div class="col s2">
+                <div class="col s2" class= "hide-on-large-only">
                 <input name="group1" class="with-gap" type="radio"  />
                 <span>Médio</span>
               </div>
               </label>
 
               <label>
-                <div class="col s3">
+                <div class="col s3" class= "hide-on-large-only">
                 <input name="group1" class="with-gap" type="radio" />
                 <span>Difícil</span>
               </div>
             </label>
           </div>
 
-          <div required id="priv_public2">
+          <div required id="priv_public2" class= "hide-on-large-only">
             <label id="label_privacidade2" style="font-size: 87%;">Privacidade da questão <span style="color: red;">*</span></label>
             <form action="#">
 
              <label>
-               <div class="col s1">
+               <div class="col s1" class= "hide-on-large-only">
                <input name="group1" class="with-gap" type="radio"/>
                <span>Público</span>
              </div>
              </label>
 
              <label>
-               <div class="col s2">
+               <div class="col s2" class= "hide-on-large-only">
                <input name="group1" class="with-gap" type="radio"/>
                <span>Privado</span>
              </div>
              </label>
            </form>
          </div>
-         <button id="btn_salvar" class="waves-effect waves-light btn" type="submit" name="action">Salvar</button>
+         <button id="btn_salvar" class="hide-on-large-only waves-effect waves-light btn" type="submit" name="action">Salvar</button>
 
            </div>
         </div>
         <!-- FIM - alternativa-->
 
-        <div id="dissertativa" class="dissertativa"> <!-- COMEÇO - dissertativa -->
+        <div id="dissertativa" class="hide-on-large-only">
+          <!-- COMEÇO - dissertativa -->
 
           <div class="row center-align hide-on-large-only">
               <form class="col s12">
@@ -289,21 +290,21 @@
               <form action="#">
 
               <label>
-                <div class="col s1">
+                <div class="col s1  hide-on-large-only">
                 <input name="group1" class="with-gap" type="radio"/>
                 <span>Fácil</span>
               </div>
               </label>
 
               <label>
-                <div  class="col s2">
+                <div  class="col s2  hide-on-large-only">
                 <input name="group1" class="with-gap" type="radio"/>
                 <span>Médio</span>
               </div>
               </label>
 
               <label>
-                <div  class="col s3">
+                <div  class="col s3  hide-on-large-only">
                 <input name="group1" class="with-gap" type="radio"/>
                 <span>Difícil</span>
               </div>
@@ -311,26 +312,30 @@
              </div>
            </form>
 
-          <div required id="priv_public">
+          <div required id="priv_public" class=" hide-on-large-only">
             <label id="label_privacidade" style="font-size: 87%;">Privacidade da questão <span style="color: red;">*</span></label>
             <form action="#">
 
              <label>
-               <div class="col s1">
+               <div class="col s1  hide-on-large-only">
                <input name="group1" class="with-gap" type="radio"/>
                <span>Público</span>
              </div>
              </label>
 
              <label>
-               <div class="col s2">
+               <div class="col s2  hide-on-large-only">
                <input name="group1" class="with-gap" type="radio"/>
                <span>Privado</span>
              </div>
+
              </label>
            </form>
+
+           <button id="btn_salvar" class=" hide-on-large-only waves-effect waves-light btn" type="submit" name="action">Salvar</button>
          </div>
-         <button id="btn_salvar" class="waves-effect waves-light btn" type="submit" name="action">Salvar</button>
+
+
 
         </div>
       </div><!-- FIM - dissertativa -->
@@ -435,7 +440,7 @@
 
         <div id="alternativa" class="alternativa">
 
-          <div class="row center-align hide-on-large-only">
+          <div class="row center-align hide-on-med-and-down">
               <input type="text"> <i class="material-icons">add</i> </input>
               <input type="text"> <i class="material-icons">alarm</i> </input>
               <input type="text"> <i class="material-icons">android</i> </input>
@@ -446,26 +451,26 @@
 
               <label for="textarea1">Resposta</label>
               <textarea style= "font-family: 'Muli'; font-size: 11px; float: left;" class="materialize-textarea"></textarea>
-              <div required id="dificuldade" class="input-field col s10 center-align hide-on-large-only">
+              <div required id="dificuldade" class="input-field col s10 center-align hide-on-med-and-down">
               <form action="#">
                 <label>Dificuldade <span style="color: red;">*</span></label>
 
               <label>
-                <div class="col s1">
+                <div class="col s1 hide-on-med-and-down">
                 <input name="group1" type="radio" checked />
                 <span>Fácil</span>
               </div>
               </label>
 
               <label>
-                <div class="col s2">
+                <div class="col s2 hide-on-med-and-down">
                 <input name="group1" type="radio" checked />
                 <span>Médio</span>
               </div>
               </label>
 
               <label>
-                <div class="col s3">
+                <div class="col s3 hide-on-med-and-down">
                 <input name="group1" type="radio" checked />
                 <span>Difícil</span>
               </div>
@@ -478,7 +483,7 @@
 
         <div id="dissertativa" class="dissertativa"> <!-- COMEÇO - dissertativa -->
 
-          <div class="row center-align hide-on-large-only">
+          <div class="row center-align hide-on-med-and-down">
               <form class="col s12">
                 <div class="row">
                   <div class="input-field col s9" id="respostadissertativa">
@@ -489,26 +494,26 @@
               </form>
 
 
-          <div required id="dificuldade" class="input-field center-align hide-on-large-only">
+          <div required id="dificuldade" class="input-field center-align hide-on-med-and-down">
           <form action="#">
             <label>Dificuldade <span style="color: red;">*</span></label>
           <label>
             <div class="row">
-            <form class="col s1">
+            <form class="col s1 hide-on-med-and-down">
             <input name="group1" type="radio" checked />
             <span>Fácil</span>
           </form>
           </label>
 
           <label>
-            <form class="col s2">
+            <form class="col s2 hide-on-med-and-down">
             <input name="group1" type="radio" checked />
             <span>Médio</span>
           </form>
           </label>
 
           <label>
-            <form class="col s3">
+            <form class="col s3 hide-on-med-and-down">
             <input name="group1" type="radio" checked />
             <span>Difícil</span>
           </form>
