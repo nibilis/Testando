@@ -272,10 +272,11 @@
         </div>
         <!-- FIM - alternativa-->
 
-        <div id="dissertativa" class="hide-on-large-only">
+        <div id="dissertativa" class="dissertativa">
           <!-- COMEÇO - dissertativa -->
 
           <div class="row center-align hide-on-large-only">
+
               <form class="col s12">
                 <div class="row">
                   <label for="textarea1" id="label_resposta" style= "font-family: 'Muli'; font-size: 11px; float: left;">Resposta <span style="color: red;">*</span></label>
@@ -337,7 +338,7 @@
 
 
 
-        </div>
+</div>
       </div><!-- FIM - dissertativa -->
 
         <!--Final do formulário de CELULAR-->
@@ -643,7 +644,7 @@
              divdegrade.style.display = 'none';
          }
        });
-      </script>
+     </script>
 
       <!--TRANSIÇÃO COR BOTÃO ALTERNATIVA E DISSERTATIVA-->
       <script>
@@ -676,20 +677,26 @@
           var letra = 66;
 
           //Ao clicar em adicionar ele cria uma linha com novos campos
-          $(botaoAdicionar).click(function () {
 
-              $('<div class="conteudoIndividual"><br><input id="alternativa_campo '+ String.fromCharCode(letra) +'" type="text" placeholder="Alternativa" name="numeroDocumento' + i + '" required/><a href="#" class="linkRemover">X</a></div>').appendTo(divContent);
-              $('#removehidden').remove();
-              letra++;
-              i++;
-              $('<input type="hidden" name="quantidadeCampos" value="' + i + '" id="removehidden">').appendTo(divContent);
-          });
+            $(botaoAdicionar).click(function () {
+
+                if(i <= 4) {
+                    $('<div class="conteudoIndividual"><br><input id="alternativa_campo '+ String.fromCharCode(letra) +'" type="text" placeholder="Alternativa" name="numeroDocumento' + i + '" required style="width:96%; margin-top: 5%;"/><a href="#" class="linkRemover">X</a></div>').appendTo(divContent);
+                    $('#removehidden').remove();
+                    letra++;
+                    i++;
+                    $('<input type="hidden" name="quantidadeCampos" value="' + i + '" id="removehidden">').appendTo(divContent);
+                }
+            });
 
           //Cliquando em remover a linha é eliminada
+
           $('#formulario').on('click', '.linkRemover', function () {
               $(this).parents('.conteudoIndividual').remove();
-              i--;
               letra--;
+              i--;
+
+
           });
       });
       </script>

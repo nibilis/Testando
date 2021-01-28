@@ -63,7 +63,7 @@
 
     .degrade3 {
       display: none;
-      height: 200% !important;
+      height: 220% !important;
     }
     }
 
@@ -170,7 +170,7 @@
     margin-left: 18%;
   }
 
-  #alternativa_campo {
+  #alternativa_campo, .conteudoIndividual {
     margin-left: 18%;
     width: 72%;
     margin-top: -10%;
