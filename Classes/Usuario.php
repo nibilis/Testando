@@ -1,6 +1,6 @@
 <?php
 
-Class CadastroUsuario
+Class Usuario
 {
   public $pdo;
 
@@ -22,13 +22,9 @@ Class CadastroUsuario
       $sql->execute();
         if($sql->rowCount() > 0){
           //Caso exista, cadastrar com o prontuario
-          //verificar qual o id da cidade
-          $sql = $pdo->prepare("SELECT Cod FROM cidade WHERE Nome = :c");
-          $sql->bindValue(":c", $cidade);
-          $sql->execute();
-          $idCidade = $sql->fetch(\PDO::FETCH_ASSOC);
 
-          $sql = $pdo->prepare("INSERT INTO usuario_professor (Prontuario_Professor, NickName, CPF_Usuario, Email, Cidade_Cod,Endereço, Senha) VALUES (:p, :n, :c, :e, :cid,:en, :s)");
+
+          $sql = $pdo->prepare("INSERT INTO usuario_professor (Prontuario_Professor, NickName, CPF_Usuario, Email, Cidade_Cod,Endereço, Senha) VALUES (:p, :n, :c, :e, :cid, :en, :s)");
           $query = $pdo->prepare("SELECT Prontuario FROM professor WHERE CPF = :c");
           $query->bindValue(":c", $CPF_Usuario);
           $query->execute();
@@ -38,7 +34,7 @@ Class CadastroUsuario
           $sql->bindValue(":n", $nome);
           $sql->bindValue(":c", $CPF_Usuario);
           $sql->bindValue(":e", $email);
-          $sql->bindValue(":cid", $idCidade["Cod"]);
+          $sql->bindValue(":cid", $cidade);
           $sql->bindValue(":en", $endereço);
           $sql->bindValue(":s", md5($senha));
           $sql->execute();
@@ -62,7 +58,7 @@ Class CadastroUsuario
         else{
 
           //cadastrar sem prontuario
-          $sql = $pdo->prepare("INSERT INTO usuario_professor (NickName, CPF_Usuario, Email, Cidade_Cod, Endereço, Senha) VALUES (:n, :c, :e, :cid :en, :s)");
+          $sql = $pdo->prepare("INSERT INTO usuario_professor (NickName, CPF_Usuario, Email, Cidade_Cod, Endereço, Senha) VALUES (:n, :c, :e, :cid, :en, :s)");
           $sql->bindValue(":n", $nome);
           $sql->bindValue(":c", $CPF_Usuario);
           $sql->bindValue(":e", $email);

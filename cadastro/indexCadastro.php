@@ -1,11 +1,13 @@
 <?php
 header('Content-Type: text/html; charset=UTF-8');
   require_once'../Classes/Usuario.php';
-  $c = new CadastroUsuario;
+  $c = new Usuario;
   require_once'../Classes/DataBase.php';
   $u = new DataBase;
   require_once'../Classes/Cidade.php';
   $city = new Cidade;
+  require_once'../Classes/Estado.php';
+  $est = new Estado;
 ?>
 
 <!DOCTYPE html>
@@ -51,7 +53,7 @@ header('Content-Type: text/html; charset=UTF-8');
 </div>
 
 <div class="input-field col s10 l8" id="materia">
-    <input class="flow-text validate" type="text" name="materia">
+    <input class="flow-text validate" placeholder="Materia" type="text" name="materia">
 </div>
 
 <div class="input-field col s9 l8 " id="email">
@@ -61,44 +63,22 @@ header('Content-Type: text/html; charset=UTF-8');
 </div>
 
 <div class="input-field col s10 l4" id="estado">
-  <select id="estadofonte">
+  <select id="estadofonte" name="estado">
       <option value="" disabled selected>Selecione</option>
-      <option value="1">Acre</option>
-      <option value="2">Alagoas</option>
-      <option value="3">Amapá</option>
-      <option value="4">Amazonas</option>
-      <option value="5">Bahia</option>
-      <option value="6">Ceará</option>
-      <option value="7">Distrito Federal</option>
-      <option value="8">Espírito Santo</option>
-      <option value="9">Goiás</option>
-      <option value="10">Maranhão</option>
-      <option value="11">Mato Grosso</option>
-      <option value="12">Mato Grosso do Sul</option>
-      <option value="13">Minais Gerais</option>
-      <option value="14">Pará</option>
-      <option value="15">Paraíba</option>
-      <option value="16">Paraná</option>
-      <option value="17">Pernambuco</option>
-      <option value="18">Piauí</option>
-      <option value="19">Rio de Janeiro</option>
-      <option value="20">Rio Grande do Norte</option>
-      <option value="21">Rio Grande do Sul</option>
-      <option value="22">Rondônia</option>
-      <option value="23">Roraima</option>
-      <option value="24">Santa Catarina</option>
-      <option value="25">São Paulo</option>
-      <option value="26">Sergipe</option>
-      <option value="27">Tocantins</option>
+      <?php
+        $u->conectar("testando", "localhost", "root", "");
+        $results = $est->listAll();
+       foreach($results as $row){ ?>
+          <option value="<?php echo $row['Sigla'] ?>"><?php echo $row['Nome'] ?></option>
+      <?php } ?>
     </select>
-    <label>Estados</label>
+    <label>Estado</label>
   </div>
 
   <div class="input-field col s10 l4" id="cidade">
 
   <select id="cidadefonte" name="cidade">
      <option value="" disabled >Selecione</option>
-
 <?php
   $u->conectar("testando", "localhost", "root", "");
   $results = $city->listAll();
@@ -107,6 +87,8 @@ header('Content-Type: text/html; charset=UTF-8');
     <option value="<?php echo $row['Cod'] ?>"><?php echo $row['Nome'] ?></option>
 <?php } ?>
 </select>
+<label>Cidade</label>
+</div>
 
 
     <div class="input-field col s9 l8" id="endereço">
@@ -135,13 +117,13 @@ header('Content-Type: text/html; charset=UTF-8');
 		$CPF_Usuario = addslashes($_POST['CPF']);
 		$materia = addslashes($_POST['materia']);
 		$email = addslashes($_POST['email']);
-		$endereço = addslashes($_POST['endereço']);
     $cidade = addslashes($_POST['cidade']);
+		$endereço = addslashes($_POST['endereço']);
 		$senha = addslashes($_POST['senha']);
 		$confSenha = addslashes($_POST['confSenha']);
 
-		//verificar se esta preenchido
-  if(!empty($nome) && !empty($CPF_Usuario) && !empty($materia) && !empty($email) && !empty($cidade)&& !empty($endereço) && !empty($senha) && !empty($confSenha) )
+	//verificar se esta preenchido
+  if(!empty($nome) && !empty($CPF_Usuario) && !empty($materia) && !empty($email) && !empty($cidade) && !empty($endereço) && !empty($senha) && !empty($confSenha))
   {
       $u->conectar();
       if($u->msgErro == ""){
