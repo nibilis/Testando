@@ -8,7 +8,7 @@
   require_once'../Classes/Usuario.php';
   $c = new CadastroUsuario;
 
-  $consulta = "SELECT * FROM professor";
+  $consulta = "SELECT * FROM professor ORDER BY Nome ASC";
   $con = $pdo->query($consulta) or die($pdo->error);
 ?>
 
@@ -34,14 +34,13 @@
 
     <div class= "row">
 
-      <form method="post" class= "col l9 s9" id="barrapesq">
+      <form method="post" class= "col l9 s9 hide" id="barrapesq">
         <input type="text" class="col l7 s7">
         <button class="btn-floating btn-large waves-effect waves-light" id="botaopesq">
           <i class="material-icons" id="icone">search</i>
         </button>
       </form>
 
- <a class="btn-floating btn-large waves-effect waves-light  teal accent-4 " id="botaoadd"><i class="material-icons">add</i></a>
     </div>
 
 <form method= "POST">
@@ -50,11 +49,9 @@
       <input class="flow-text validate" type="text" size="30" id="nome" placeholder="Nome" name="nome">
       <input class="flow-text validate" type="text" size="9" id="prontuario" placeholder="Prontuário" name="prontuario">
       <input class="flow-text validate" type="number" data-length="11" id="cpf" placeholder="CPF" name="CPF">
+      <input class="btn-floating btn-large waves-effect waves-light  teal accent-4 " id="botaoadd" type="submit" value="+">
   </div>
 
-  <div>
-      <input class="cadastro flow-text waves-effect yellow darken-2 waves-light hoverable" type="submit" value="Cadastrar" >
-  </div>
 </form>
 
 <?php
@@ -77,7 +74,7 @@
               echo "CPF existente";
             }
             else{
-              echo "Não existe cpf";
+              echo "";
             }
           }
           else{

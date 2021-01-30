@@ -106,7 +106,7 @@
       <div>
         <div id= "img-perfil"><?php $_Imagem=base64_encode( $_SESSION['imagem'] ); echo "<img height='100%' width='100%' src='data:image/jpeg;base64,$_Imagem'> "; ?></div>
         <p id="nome-perfil" style="overflow: hidden; text-overflow: ellipsis;"> Nome: <span> <?php echo $_SESSION['NickName']; ?></span> </p>
-        <p id="materia-perfil"> Matérias que leciona: <span>Matemática, Filosofia, Sociologia </span> </p>
+        <p id="materia-perfil"> Matérias que leciona: <span><?php echo $_SESSION['Nome'] ?></span> </p>
         <a href="../Classes/Sair.php"> Sair </a>
       </div>
 
@@ -125,7 +125,7 @@
           <img class= "responsive-img hide-on-large-only" id = "ajuda" src ="../images/ajuda.png"></li>
 
           <!-- Modal Trigger AJUDA-->
-            <a class="waves-effect waves-light modal-trigger center-align hide-on-large-only" id="ajudatexto" href="../login/indexLogin.html">Ajuda</a>
+            <a class="waves-effect waves-light modal-trigger center-align hide-on-large-only" id="ajudatexto" href="../ticket/indexTicket.html">Ajuda</a>
             <h1 class= "hide-on-large-only" id="ajudadescricao">Alguma atitude inesperada do site? Nos contacte!</h1>
 
             <!-- Tutorial -->
@@ -160,7 +160,7 @@
               <a><img class= "responsive-img modal-close" src ="../images/fechar.png"></a>
             </div>
             <div class="modal-footer">
-              <input id="inputTest2" style="text-align: center;" value="https://moments.epic.net/"/>
+              <input id="inputTest2" style="text-align: center;" value="https://testando.com"/>
               <button style="margin-top: 5%; margin-bottom: 5%;" class="waves-effect waves-light yellow darken-2 btn" onclick="copiarTexto2()">Copiar</button>
             </div>
           </div>
@@ -174,7 +174,7 @@
           <img class= "responsive-img hide-on-small-and-down" id = "compartilharpc" src ="../images/compartilhar.png"></li>
 
           <a class="waves-effect waves-light modal-trigger center-align hide-on-small-and-down" id="tutorialtextopc" href="#tutor">Tutorial</a>
-          <a class="waves-effect waves-light modal-trigger center-align hide-on-small-and-down" id="ajudatextopc" href="#ajuda">Ajuda</a>
+          <a class="waves-effect waves-light modal-trigger center-align hide-on-small-and-down" id="ajudatextopc" href="../ticket/indexTicket.html">Ajuda</a>
           <a class="waves-effect waves-light modal-trigger center-align hide-on-small-and-down" id="compartilhartextopc" href="#comp">Compartilhar</a>
 
           <h1 class= "hide-on-small-and-down" id="tutorialdescricaopc">Aprenda a mexer como <br>um profissional!</h1>

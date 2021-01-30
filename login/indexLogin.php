@@ -144,11 +144,11 @@
       </div>
 
       <div class="col  s12 center-align hide-on-large-only" id= "esqsenha">
-          <a href="https://www.youtube.com/watch?v=m2B6ayYla3g" class="" id = "btnEsqsenha">Esqueceu sua senha?</a>
+          <a href="https://cdn-5a7cf386f911c81674c23d48.closte.com/wp-content/uploads/2018/05/manutencao-site.png" class="" id = "btnEsqsenha">Esqueceu sua senha?</a>
       </div>
 
       <div class="col l6 center-align hide-on-med-and-down" id= "esqsenhapc">
-          <a href="https://www.youtube.com/watch?v=m2B6ayYla3g" class="" id = "btnEsqsenha">Esqueceu sua senha?</a>
+          <a href="https://cdn-5a7cf386f911c81674c23d48.closte.com/wp-content/uploads/2018/05/manutencao-site.png" class="" id = "btnEsqsenha">Esqueceu sua senha?</a>
       </div>
 </form>
 
@@ -158,6 +158,7 @@
             <a href="https://www.youtube.com/watch?v=m2B6ayYla3g" class="waves-effect waves-light btn yellow darken-2 hoverable" id = "btnCadastrese">Cadastre-se</a>
         <img class= "responsive-img" id = "boldire" src ="../images/bolinhaesqcel.png">
     </div>
+
     <!-- JQuery CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- JavaScript Materialize compilado e minificado -->
