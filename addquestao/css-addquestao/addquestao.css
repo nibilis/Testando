@@ -63,7 +63,7 @@
 
     .degrade3 {
       display: none;
-      height: 200% !important;
+      height: 220% !important;
     }
     }
 
@@ -119,7 +119,7 @@
     }
   }
 
-  
+
 
   @media (min-width: 411px){
     .degrade{
@@ -170,7 +170,7 @@
     margin-left: 18%;
   }
 
-  #alternativa_campo {
+  #alternativa_campo, .conteudoIndividual {
     margin-left: 18%;
     width: 72%;
     margin-top: -10%;
@@ -325,6 +325,9 @@
     font-family: 'Muli';
     left: 23.5%;
     top: 12%;
+    margin-top: 5%;
+    margin-bottom: 3%;
+    margin-left: -8%;
   }
 
   #campo1, #campo2, #campo3, #campo4 {
@@ -1134,19 +1137,118 @@
     #btn-alterna-desk,
      #btn-dissert-desk{
       width: 25%;
-      padding-top: 2%;
-      padding-bottom: 5%;
-      font-size: 120%;
+      padding-top: 1%;
+      padding-bottom: 4%;
+      font-size: 90%;
+      color: black;
+      border-radius: 40px 40px;
+      text-transform: capitalize;
+      font-family: 'Muli';
+      border-color: black;
+      border-width: 6px;
+      margin-bottom: 3%;
     }
 
     #btn-alterna-desk {
       margin-left: 25%;
       margin-right: 2%;
+      margin-top: 15%;
+
     }
 
     #btn-dissert-desk {
-      margin-top: -19.2%;
+      margin-top: -10.4%;
       margin-left: 60%;
     }
+
+    .degrade{
+      width: 10%;
+      float: left;
+      margin-top: -5.5%;
+      background: linear-gradient(to bottom, #D0C7FC, #8F83CD, #7C6FBF);
+      height: 110%;
+    }
+
+    .degrade2 {
+      display: none;
+      height: 160% !important;
+    }
+
+    .degrade3 {
+      display: none;
+      height: 180% !important;
+    }
+
+    #simbolodiv p {
+      margin-top: -12.6%;
+      position: absolute;
+      margin-left: 88%;
+      font-size: 65%;
+    }
+
+    #simbolodiv a {
+      margin-top: -20.6%;
+      margin-left: 85%;
+
+    }
+
+
+    #divimagem{
+
+    left: 18%;
+    width: 76.1%;
+    margin-top: -9.5%;
+    margin-left: -2%;
+    text-transform: capitalize;
+
+    }
+
+
   }
+
+    @media (min-width: 1280px) {
+
+      .degrade{
+        width: 10%;
+        float: left;
+        margin-top: -5.5%;
+        background: linear-gradient(to bottom, #D0C7FC, #8F83CD, #7C6FBF);
+        height: 120%;
+      }
+
+      .degrade2 {
+        display: none;
+        height: 160% !important;
+      }
+
+      .degrade3 {
+        display: none;
+        height: 180% !important;
+      }
+
+      #simbolodiv p {
+        margin-top: -12%;
+        position: absolute;
+        margin-left: 88%;
+        font-size: 65%;
+      }
+
+      #simbolodiv a {
+        margin-top: -19.6%;
+        margin-left: 85%;
+
+      }
+
+      #divimagem{
+
+      left: 18%;
+      width: 76.1%;
+      margin-top: -10%;
+      margin-left: -2%;
+      text-transform: capitalize;
+
+      }
+
+
+    }
   /*FINAL DA FORMATAÇÃO COMPUTADOR*/
