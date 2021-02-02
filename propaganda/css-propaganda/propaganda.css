@@ -4,7 +4,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+body { overflow-x: hidden; }
 /*RESPONSIVIDADE COMPUTADOR*/
 @media (min-width: 990px){
   body {
@@ -41,10 +41,111 @@
       width: 9%;
       float: right;
       padding-left: 2%;
-      padding-right: 16%;
+      padding-right: 15%;
       padding-bottom: 1%;
       padding-top: 1%;
       margin-right: 18%;
+  }
+
+  @media(min-width: 1024px) {
+    .cadastrese{
+        margin-top: -15%;
+        width: 9%;
+        float: right;
+        padding-left: 2%;
+        padding-right: 17%;
+        padding-bottom: 1%;
+        padding-top: 1%;
+        margin-right: 18%;
+    }
+  }
+
+  @media(min-width: 1280px) {
+    .cadastrese{
+        margin-top: -15%;
+        width: 9%;
+        float: right;
+        padding-left: 2%;
+        padding-right: 17%!important;
+        padding-bottom: 1%;
+        padding-top: 1%;
+        margin-right: 18%;
+    }
+
+    .login{
+      margin-top: -15%;
+      float: right;
+      width: 12%;
+      padding-left: 2%;
+      padding-right: 2%!important;
+      padding-bottom: 1%;
+      padding-top: 1%;
+      margin-left: 4%;
+    }
+  }
+
+  @media(min-width: 1300px) {
+    .cadastrese{
+        margin-top: -15%;
+        width: 9%;
+        float: right;
+        padding-left: 2%;
+        padding-right: 16%!important;
+        padding-bottom: 1%;
+        padding-top: 1%;
+        margin-right: 18%;
+    }
+
+    .login{
+      margin-top: -15%;
+      float: right;
+      width: 12%;
+      padding-left: 2%;
+      padding-right: 2%!important;
+      padding-bottom: 1%;
+      padding-top: 1%;
+      margin-left: 4%;
+    }
+  }
+
+  @media(min-width: 1600px) {
+    .cadastrese{
+        margin-top: -15%;
+        width: 9%;
+        float: right;
+        padding-left: 2%;
+        padding-right: 14%!important;
+        padding-bottom: 1%;
+        padding-top: 1%;
+        margin-right: 18%;
+    }
+
+    .icones img{
+      width: 31%;
+      float: right;
+      margin-right: 2.5%;
+      margin-top: -5%;
+    }
+  }
+
+  @media(min-width: 1920px) {
+    .cadastrese{
+        margin-top: -15%;
+        width: 9%;
+        float: right;
+        padding-left: 2%;
+        padding-right: 12%!important;
+        padding-bottom: 1%;
+        padding-top: 1%;
+        margin-right: 18%;
+    }
+
+    .icones img{
+      width: 31%;
+      float: right;
+      margin-right: 2.5%;
+      margin-top: -5%;
+    }
   }
 
  .img-logo{
@@ -453,6 +554,8 @@
      font-family: 'Muli';
      font-size: 0.9em;
    }
+
+
   /* SEÇÃO 4 */
   #textoquadradoamarelo{
     margin-top: 18%;
