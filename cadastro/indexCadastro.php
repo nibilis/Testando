@@ -104,7 +104,7 @@ header('Content-Type: text/html; charset=UTF-8');
   </div>
 
   <div>
-      <input class="cadastro flow-text waves-effect yellow darken-2 waves-light hoverable" type="submit" value="Cadastrar" >
+      <button class="cadastro flow-text waves-effect yellow darken-2 waves-light hoverable" type="submit">Cadastrar</button>
   </div>
 </form>
 

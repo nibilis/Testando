@@ -1,5 +1,5 @@
 <?php
-include ('CadastroUsuario.php');
+include ('Usuario.php');
 
 Class Login{
 

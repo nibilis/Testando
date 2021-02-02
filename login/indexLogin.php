@@ -136,11 +136,11 @@
       </div>
 
       <div class="col  s12 center-align hide-on-large-only" id = "login">
-          <input class="waves-effect waves-light btn yellow darken-2 hoverable" id="btnLogin" type="submit" value="Login" >
+          <button class="waves-effect waves-light btn yellow darken-2 hoverable" id="btnLogin" type="submit">Login</button>
       </div>
 
       <div class="col l6 center-align hide-on-med-and-down" id = "loginpc">
-          <input class="waves-effect waves-light btn yellow darken-2 hoverable" id="btnLogin" type="submit" value="Login" >
+          <button class="waves-effect waves-light btn yellow darken-2 hoverable" id="btnLogin" type="submit">Login</button>
       </div>
 
       <div class="col  s12 center-align hide-on-large-only" id= "esqsenha">
