@@ -1,3 +1,15 @@
+<?php
+header('Content-Type: text/html; charset=UTF-8');
+  require_once'../Classes/DataBase.php';
+  $u = new DataBase;
+  require_once'../Classes/Materia.php';
+  $m = new Materia;
+  require_once'../Classes/Questao.php';
+  $q = new Questao;
+  require_once'../Classes/Tema.php';
+  $t = new Tema;
+?>
+
   <!DOCTYPE html>
   <html>
 
@@ -354,33 +366,31 @@
             <button href="#dissertativa" id="btn-dissert-desk" value="ok" target="_self" class="waves-effect waves-light btn transparent">Questão dissertativa</button>
           </p>
 
+          <form method="POST">
           <div class="items">
 
           <div required id="campo1" class="input-field col s9 center-align hide-on-med-and-down">
-            <select>
-                <option value="" selected disabled>Selecione sua matéria </option>
-              <optgroup label="Ensino médio" style= "font-family: 'Muli'; font-size: 11px; float: left;">
-                <option value="1">Geografia</option>
-                <option value="2">História</option>
-                <option value="3">Inglês</option>
-              </optgroup>
-              <optgroup label="Ensino técnico">
-                <option value="3">Banco de dados</option>
-                <option value="4">Lógica de programação 2</option>
-                <option value="5">linguagem de programação 1</option>
-              </optgroup>
+            <select name="materia">
+              <option value="" disabled selected>Selecione a matéria</option>
+              <?php
+                $u->conectar("testando", "localhost", "root", "");
+                $results = $m->listAll();
+               foreach($results as $row){ ?>
+                  <option value="<?php echo $row['ID_Materia'] ?>"><?php echo $row['Nome'] ?></option>
+              <?php } ?>
             </select>
             <label>Matéria <span style="color: red;">*</span></label>
           </div>
 
           <div required id="campo2" class="input-field col s9 center-align hide-on-med-and-down">
-            <select>
-                <option value="" selected disabled>Selecione seu tema </option>
-              <optgroup label="Geografia" style= "font-family: 'Muli'; font-size: 11px; float: left;">
-                <option value="1">Hidrografia</option>
-                <option value="2">Paisagem</option>
-                <option value="3">Rondônia</option>
-              </optgroup>
+            <select name="tema">
+                <option value="" disabled selected>Selecione o tema</option>
+                <?php
+                  $u->conectar("testando", "localhost", "root", "");
+                  $results = $t->listAll();
+                 foreach($results as $row){ ?>
+                    <option value="<?php echo $row['ID_Tema'] ?>"><?php echo $row['Nome'] ?></option>
+                <?php } ?>
             </select>
             <label>Tema <span style="color: red;">*</span></label>
           </div>
@@ -399,7 +409,7 @@
 
           <div required id="campo4"  class="col s9 center-align hide-on-med-and-down">
             <label for="textarea1" style= "font-family: 'Muli'; font-size: 11px; float: left;">Enunciado <span style="color: red;">*</span></label>
-            <textarea placeholder="Escreva seu enunciado" id="textarea1" class="materialize-textarea"></textarea>
+            <input placeholder="Escreva seu enunciado" id="textarea1" class="materialize-textarea" name="enunciado">
           </div>
 
             <div id="simbolodiv">
@@ -432,7 +442,6 @@
               <div class="modal-footer">
                 <a href="#!" class="modal-close waves-effect waves-green btn-flat">Salvar</a>
               </div>
-
             </div>
 
             <!-- Alternativa/Dissertativa COMPUTADOR -->
@@ -528,8 +537,44 @@
       <!-- FIM - DISSERTATIVA -->
 
       <!--Final do formulário de COMPUTADOR-->
+      <div>
+          <button class="cadastro flow-text waves-effect yellow darken-2 waves-light hoverable" type="submit">Cadastrar</button>
+      </div>
+      </form>
+
+      <?php
+
+      //verificar se clicou no botão
+      	if(isset($_POST['enunciado'])){
+
+      		$materia = addslashes($_POST['materia']);
+      		$tema = addslashes($_POST['tema']);
+      		$enunciado = addslashes($_POST['enunciado']);
+
+      	//verificar se esta preenchido
+        if(!empty($materia) && !empty($tema) && !empty($enunciado))
+        {
+            $u->conectar();
+            if($u->msgErro == ""){
+
+                if($q->cadastrarQuestao($materia, $tema, $enunciado))
+                {
+                  echo "Cadastrado com sucesso!";
+                }
+            }
+            else {
+              echo "Erro: ".$u->msgErro;
+            }
+        }
+        else{
+          echo "Preencha todos os campos";
+        }
+      }
+      ?>
+
 
       </div>
+
 
 
         <!-- JQuery CDN -->
