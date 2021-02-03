@@ -32,16 +32,21 @@
 <body>
   <header>
 
-    <div class= "row">
 
-      <form method="post" class= "col l9 s9 hide" id="barrapesq">
-        <input type="text" class="col l7 s7">
-        <button class="btn-floating btn-large waves-effect waves-light" id="botaopesq">
-          <i class="material-icons" id="icone">search</i>
-        </button>
-      </form>
+    <!-- DASHBOARD COMPUTADOR -->
+    <nav class="hide-on-med-and-down navbar-fixed" id="retanguloroxo">
+      <div class="nav-wrapper hide-on-med-and-down" id="dashboardpc">
 
-    </div>
+         <img class= "responsive-img" id = "logopc" src ="../images/logo.png">
+         <img class= "responsive-img" id = "nomelogopc" src ="../images/TestandoNome.png"> </a>
+
+        <ul id="nav-pc" class=" right">
+        </ul>
+
+      </div>
+    </nav>
+
+    <!-- FINAL DASHBOARD COMPUTADOR -->
 
 <form method= "POST">
   <div id="campos">
