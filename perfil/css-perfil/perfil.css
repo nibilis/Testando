@@ -906,29 +906,14 @@ span {
   margin-top: -7%;
 }
 
-#sair {
-  font-family: 'Muli';
-  font-size: 100%;
-  position: absolute;
-  margin-top: 15%;
-  color: #DD636E;
-  margin-left: 50%;
+#divisão4{
+
+  margin-top: 7%;
+  style: none;
+  width: 90%;
+  margin-left: 5%;
+  background-color: #8B8B8B;
 }
-
-#sair2 {
-  color: #DD636E;
-  margin-left: -100%;
-  margin-top: 40%;
-  position: absolute;}
-
-  #divisão4{
-
-    margin-top: 7%;
-    style: none;
-    width: 90%;
-    margin-left: 5%;
-    background-color: #8B8B8B;
-  }
 
 #compartilharpc {
   width: 13%;
@@ -1046,6 +1031,20 @@ span {
   margin-bottom: 5%;
 }
 
+#btn-sair-pc {
+  font-family: 'Muli';
+  font-size: 100%;
+  position: absolute;
+  margin-top: 1%;
+  color: #DD636E;
+  margin-left: 12%;
+}
+
+#btn-sair2-pc{
+  color: #DD636E;
+  margin-left: -95%;
+  margin-top: 1%;
+  position: absolute;
 }
 
 @media (min-width:1280px){
@@ -1083,20 +1082,6 @@ span {
   margin-top: -6%;
 }
 
-#sair {
-  font-family: 'Muli';
-  font-size: 100%;
-  position: absolute;
-  margin-top: 15%;
-  color: #DD636E;
-  margin-left: 50%;
-}
-
-#sair2 {
-  color: #DD636E;
-  margin-left: -100%;
-  margin-top: 40%;
-  position: absolute;}
 
   #divisão4{
 
@@ -1237,20 +1222,6 @@ span {
   margin-top: -6%;
 }
 
-#sair {
-  font-family: 'Muli';
-  font-size: 100%;
-  position: absolute;
-  margin-top: 15%;
-  color: #DD636E;
-  margin-left: 50%;
-}
-
-#sair2 {
-  color: #DD636E;
-  margin-left: -100%;
-  margin-top: 40%;
-  position: absolute;}
 
   #divisão4{
 
@@ -1416,21 +1387,6 @@ span {
   margin-top: -6%;
 }
 
-#sair {
-  font-family: 'Muli';
-  font-size: 100%;
-  position: absolute;
-  margin-top: 15%;
-  color: #DD636E;
-  margin-left: 50%;
-}
-
-#sair2 {
-  color: #DD636E;
-  margin-left: -100%;
-  margin-top: 40%;
-  position: absolute;}
-
   #divisão4{
 
     margin-top: 4%;
@@ -1560,20 +1516,6 @@ span {
   margin-top: -5.5%;
 }
 
-#sair {
-  font-family: 'Muli';
-  font-size: 100%;
-  position: absolute;
-  margin-top: 15%;
-  color: #DD636E;
-  margin-left: 50%;
-}
-
-#sair2 {
-  color: #DD636E;
-  margin-left: -100%;
-  margin-top: 40%;
-  position: absolute;}
 
   #divisão4{
 
@@ -1723,21 +1665,6 @@ span {
   margin-top: -5.5%;
 }
 
-#sair {
-  font-family: 'Muli';
-  font-size: 100%;
-  position: absolute;
-  margin-top: 15%;
-  color: #DD636E;
-  margin-left: 50%;
-}
-
-#sair2 {
-  color: #DD636E;
-  margin-left: -100%;
-  margin-top: 40%;
-  position: absolute;}
-
   #divisão4{
 
     margin-top: 3%;
@@ -1867,21 +1794,6 @@ span {
   margin-left: 25%;
   margin-top: -5.5%;
 }
-
-#sair {
-  font-family: 'Muli';
-  font-size: 100%;
-  position: absolute;
-  margin-top: 15%;
-  color: #DD636E;
-  margin-left: 50%;
-}
-
-#sair2 {
-  color: #DD636E;
-  margin-left: -100%;
-  margin-top: 40%;
-  position: absolute;}
 
   #divisão4{
     margin-top: 3%;

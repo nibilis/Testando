@@ -60,7 +60,7 @@
                   <li><div id="divider" class="divider"></div></li>
                   <li><a id="saves" class="waves-effect center-align" href="#!">Salvos</a></li>
                   <li><div id="divider" class="divider"></div></li>
-                  <a id="sair" href="../login/indexLogin.html"><i class="material-icons" id="sair2">exit_to_app</i> Sair </a>
+                  <a id="sair" href="../Classes/Sair.php"><i class="material-icons" id="sair2">exit_to_app</i> Sair </a>
                 </ul>
               </div>
             </div>
@@ -87,7 +87,7 @@
 
              <img class= "responsive-img" id = "logopc" src ="../images/logo.png"> <img class= "responsive-img" id = "nomelogopc" src ="../images/TestandoNome.png">
             <ul id="nav-pc" class=" right">
-              <li><a  id= "questao" href="../addquestao/indexAddQuestao.html" >Adicionar <br> questão</a></li>
+              <li><a  id= "questao" href="../addquestao/indexAddQuestao.php" >Adicionar <br> questão</a></li>
               <li><a  id= "documento" href="#!">Adicionar <br> documento</a>
                 <img class= "responsive-img" id = "linha1" src ="../images/linha.png"></li>
               <li><a id= "salvos" href="#!">Salvos</a>
@@ -107,7 +107,7 @@
         <div id= "img-perfil"><?php $_Imagem=base64_encode( $_SESSION['imagem'] ); echo "<img height='100%' width='100%' src='data:image/jpeg;base64,$_Imagem'> "; ?></div>
         <p id="nome-perfil" style="overflow: hidden; text-overflow: ellipsis;"> Nome: <span> <?php echo $_SESSION['NickName']; ?></span> </p>
         <p id="materia-perfil"> Matérias que leciona: <span><?php echo $_SESSION['Nome'] ?></span> </p>
-        <a href="../Classes/Sair.php"> Sair </a>
+        <a id="btn-sair-pc" class=" hide-on-small-only" href="../Classes/Sair.php"><i class="material-icons" id="btn-sair2-pc">exit_to_app</i> Sair </a>
       </div>
 
       <div>
@@ -180,6 +180,7 @@
           <h1 class= "hide-on-small-and-down" id="tutorialdescricaopc">Aprenda a mexer como <br>um profissional!</h1>
           <h1 class= "hide-on-small-and-down" id="ajudadescricaopc">Alguma atitude inesperada do <br> site? Nos contacte!</h1>
           <h1 class= "hide-on-small-and-down" id="compartilhardescricaopc">Gostou? Repasse para <br>seus amigos!</h1>
+
 
 
       </div>

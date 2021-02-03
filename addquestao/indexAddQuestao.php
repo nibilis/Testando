@@ -543,7 +543,6 @@ header('Content-Type: text/html; charset=UTF-8');
       </form>
 
       <?php
-
       //verificar se clicou no botão
       	if(isset($_POST['enunciado'])){
 

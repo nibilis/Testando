@@ -364,18 +364,19 @@ width: 80% !important;
 
   #cpf{
     margin-top: 2% !important;
-  width: 80% !important;
+    width: 80% !important;
   }
 
   #materia{
-    margin-top: 2% !important;
-    margin-left: 4% !important;
-    width: 78.5% !important;
+    margin-top: -2% !important;
+    margin-left: 3% !important;
+    width: 80% !important;
   }
 
   #email{
-  margin-top: 2% !important;
+  margin-top: 1% !important;
   }
+
 
   #estado{
   margin-top: 2% !important;

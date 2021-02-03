@@ -38,6 +38,7 @@ Class Usuario
           $sql->bindValue(":en", $endereço);
           $sql->bindValue(":s", md5($senha));
           $sql->execute();
+          $idUsuario = $pdo->lastInsertId();
 
           //verificar qual o id da materia
           $sql = $pdo->prepare("SELECT ID_Materia FROM Materia WHERE Nome = :m");

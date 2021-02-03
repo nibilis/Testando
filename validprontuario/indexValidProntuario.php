@@ -6,7 +6,7 @@
   $u->conectar("testando", "localhost", "root", "");
 
   require_once'../Classes/Usuario.php';
-  $c = new CadastroUsuario;
+  $c = new Usuario;
 
   $consulta = "SELECT * FROM professor ORDER BY Nome ASC";
   $con = $pdo->query($consulta) or die($pdo->error);

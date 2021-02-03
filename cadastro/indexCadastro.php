@@ -8,6 +8,8 @@ header('Content-Type: text/html; charset=UTF-8');
   $city = new Cidade;
   require_once'../Classes/Estado.php';
   $est = new Estado;
+  require_once'../Classes/Materia.php';
+  $m = new Materia;
 ?>
 
 <!DOCTYPE html>
@@ -52,8 +54,16 @@ header('Content-Type: text/html; charset=UTF-8');
   <input class="flow-text validate" placeholder="CPF" id="numero" type="number" data-length="11" name="CPF">
 </div>
 
-<div class="input-field col s10 l8" id="materia">
-    <input class="flow-text validate" placeholder="Materia" type="text" name="materia">
+<div class="input-field col s10 l4" id="materia">
+  <select id="materiafonte" name="materia">
+      <option value="" disabled selected>Matéria que leciona</option>
+      <?php
+        $u->conectar("testando", "localhost", "root", "");
+        $results = $m->listAll();
+       foreach($results as $row){ ?>
+          <option value="<?php echo $row['ID_Materia'] ?>"><?php echo $row['Nome'] ?></option>
+      <?php } ?>
+    </select>
 </div>
 
 <div class="input-field col s9 l8 " id="email">
@@ -64,7 +74,7 @@ header('Content-Type: text/html; charset=UTF-8');
 
 <div class="input-field col s10 l4" id="estado">
   <select id="estadofonte" name="estado">
-      <option value="" disabled selected>Selecione</option>
+      <option value="" disabled selected>Selecione o seu estado</option>
       <?php
         $u->conectar("testando", "localhost", "root", "");
         $results = $est->listAll();
@@ -78,7 +88,7 @@ header('Content-Type: text/html; charset=UTF-8');
   <div class="input-field col s10 l4" id="cidade">
 
   <select id="cidadefonte" name="cidade">
-     <option value="" disabled >Selecione</option>
+     <option value="" disabled >Selecione a sua cidade</option>
 <?php
   $u->conectar("testando", "localhost", "root", "");
   $results = $city->listAll();
@@ -171,12 +181,12 @@ header('Content-Type: text/html; charset=UTF-8');
 
 
 <!-- INICIALIZAÇÃO DO CAMPO "MATERIAS QUE LECIONA" -->
-<script>
+<!--<script>
 $('#materia').chips({
    placeholder:'Matérias que leciona',
    secondaryPlaceholder:'+Matéria',
  });
 </script>
-
+-->
 </body>
 </html>
