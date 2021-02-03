@@ -2,30 +2,36 @@
 
   require_once'../Classes/Login.php';
   $l = new Login;
-
   require_once'../Classes/DataBase.php';
   $u = new DataBase;
 
   //verificar se clicou no botão
     if(isset($_POST['prontuario'])){
 
-    	$prontuario = addslashes($_POST['prontuario']);
-    	$senha = addslashes($_POST['senha']);
+      if($_POST['prontuario'] != ""){
+    	   $prontuario = addslashes($_POST['prontuario']);
+    	   $senha = addslashes($_POST['senha']);
+      }
+
+      else{
+         $prontuario = addslashes($_POST['prontuarioCel']);
+         $senha = addslashes($_POST['senhaCel']);
+      }
 
     		 //verificar se esta preenchido
         if(!empty($prontuario) && !empty($senha))
         {
-            $u->conectar();
-            if($u->msgErro == "")
+          $u->conectar();
+          if($u->msgErro == "")
+          {
+            if($l->logar($prontuario, $senha))
             {
-              if($l->logar($prontuario, $senha))
-              {
-                  header("location: ../perfil/indexPerfil.php");
-              }
-              else
-              {
-                echo "Prontuario e/ou senha estão incorretos";
-              }
+              header("location: ../perfil/indexPerfil.php");
+            }
+            else
+            {
+              echo "Prontuario e/ou senha estão incorretos";
+            }
         }
         else
         {
@@ -82,8 +88,8 @@
           <img class= "responsive-img" id = "userpc"src ="../images/user_roxo_borda_preta.png">
       </div>
 
-      <div class="input-field col  s10 center-align hide-on-large-only" id="prontuario">
-          <input placeholder="Prontuário" id="Prontuário" type="text" class="validate" name="prontuario">
+      <div class="input-field col s10 center-align hide-on-large-only" id="prontuario">
+          <input placeholder="Prontuário" id="Prontuário" type="text" class="validate" name="prontuarioCel">
       </div>
 
       <div class="input-field col l4 center-align hide-on-med-and-down" >
@@ -101,7 +107,7 @@
 
 
       <div class="input-field col  s10 center-align hide-on-large-only" id="senha">
-          <input placeholder="Senha" id="Senha" type="text" class="validate" name="senha">
+          <input placeholder="Senha" id="Senha" type="text" class="validate" name="senhaCel">
       </div>
 
       <div class="input-field col  l4 center-align hide-on-med-and-down">
@@ -150,7 +156,7 @@
       <div class="col l6 center-align hide-on-med-and-down" id= "esqsenhapc">
           <a href="https://cdn-5a7cf386f911c81674c23d48.closte.com/wp-content/uploads/2018/05/manutencao-site.png" class="" id = "btnEsqsenha">Esqueceu sua senha?</a>
       </div>
-</form>
+    </form>
 
       <div class="col  s12 deep-purple lighten-2 center-align hide-on-med-and-up" id = "divRoxa">
         <img class= "responsive-img" id = "bolesq" src ="../images/bolinhadirecel.png">
