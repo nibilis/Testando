@@ -4,9 +4,88 @@
     box-sizing: border-box;
   }
 
-  body{
-    height:  100vh;
+  body { height:  100vh; }
+
+/*CÓDIGOS QUE ATINGEM O SITE INTEIRO*/
+  #btn-alternativa,
+   #btn-dissertativa{
+    width: 35%;
+    color: black;
+    border-radius: 40px 40px;
+    text-transform: capitalize;
+    font-family: 'Muli';
+    font-size: 75%;
+    border-color: black;
+    border-width: 6px;
+    padding-right: 0%;
+    padding-left: 0%;
+    margin-top: 25%;
+    margin-bottom: 10%;
   }
+
+  #btn-alternativa {
+    margin-left: 8%;
+    margin-right: 2%;
+  }
+
+  #btn-alternativa,
+   #btn-dissertativa{
+    width: 35%;
+    color: black;
+    border-radius: 40px 40px;
+    text-transform: capitalize;
+    font-family: 'Muli';
+    font-size: 75%;
+    border-color: black;
+    border-width: 6px;
+    padding-right: 0%;
+    padding-left: 0%;
+    margin-top: 25%;
+    margin-bottom: 10%;
+  }
+
+  #btn-alternativa {
+    margin-left: 7.5%;
+    margin-right: 2%;
+  }
+
+  #campo1, #campo2, #campo3, #campo4 {
+    margin-left: 15%;
+    width: 78%;
+  }
+
+  #campo4{
+    margin-bottom: 10%;
+    font-size: 20%;
+  }
+
+  #divimagem{
+  left: 18%;
+  width: 71.5%;
+  margin-top: -4%;
+  text-transform: capitalize;
+
+  }
+
+  #simbolodiv p {
+    margin-top: -13.5%;
+    position: absolute;
+    margin-left: 80%;
+    font-size: 65%;
+  }
+
+  #simbolodiv a {
+    margin-top: -15%;
+    margin-left: 74%;
+  }
+
+  #simbolo { width: 30%; }
+
+  div#simbolo1.modal.open{
+    border-radius: 20px 20px;
+    border: #7C6FBF 10px solid;
+  }
+/* CÓDIGOS QUE ATINGEM O SITE INTEIRO FINAL */
 
 /*CÓDIGOS DO JAVASCRIPT*/
   .degrade, .degrade2, .degrade3 {
@@ -17,9 +96,7 @@
     background: linear-gradient(to bottom, #D0C7FC, #8F83CD, #7C6FBF);
   }
 
-  .degrade {
-    height: 100%;
-  }
+  .degrade { height: 100%; }
 
   .degrade2 {
     display: none;
@@ -31,144 +108,15 @@
     height: 185% !important;
   }
 
-  #alternativa, #dissertativa {
-    display: none;
+  #alternativa, #dissertativa { display: none; }
 
-  }
+  #alternativa:checked, #dissertativa:checked { z-index: auto; }
 
-  #alternativa:checked, #dissertativa:checked {
-    z-index: auto;
-  }
-
-  .alternativa, .dissertativa {
-    display: none;
-  }
+  .alternativa, .dissertativa { display: none; }
   /*FINAL DOS CÓDIGOS DO JAVASCRIPT*/
 
-  /*FORMATAÇÃO CELULAR*/
-
-  @media (min-width: 320px){
-    .degrade{
-      width: 10%;
-      float: left;
-      margin-top: -6.1%;
-      background: linear-gradient(to bottom, #D0C7FC, #8F83CD, #7C6FBF);
-      height: 110%;
-    }
-
-    .degrade2 {
-      display: none;
-      height: 175% !important;
-    }
-
-    .degrade3 {
-      display: none;
-      height: 220% !important;
-    }
-    }
-
-
-    #btn-alternativa,
-     #btn-dissertativa{
-      width: 35%;
-      color: black;
-      border-radius: 40px 40px;
-      text-transform: capitalize;
-      font-family: 'Muli';
-      font-size: 75%;
-      border-color: black;
-      border-width: 6px;
-      padding-right: 0%;
-      padding-left: 0%;
-      margin-top: 25%;
-      margin-bottom: 10%;
-    }
-
-    #btn-alternativa {
-      margin-left: 8%;
-      margin-right: 2%;
-    }
-  }
-
-  @media (min-width: 360px){
-    .degrade{
-      width: 10%;
-      float: left;
-      margin-top: -5.6%;
-      background: linear-gradient(to bottom, #D0C7FC, #8F83CD, #7C6FBF);
-    }
-  }
-
-  @media (min-width: 375px){
-    .degrade{
-      width: 10%;
-      float: left;
-      margin-top: -5.5%;
-      background: linear-gradient(to bottom, #D0C7FC, #8F83CD, #7C6FBF);
-      height: 100%;
-    }
-
-    .degrade2 {
-      display: none;
-      height: 160% !important;
-    }
-
-    .degrade3 {
-      display: none;
-      height: 180% !important;
-    }
-  }
-
-
-
-  @media (min-width: 411px){
-    .degrade{
-      width: 10%;
-      float: left;
-      margin-top: -5% ;
-      background: linear-gradient(to bottom, #D0C7FC, #8F83CD, #7C6FBF);
-      height: 100%;
-    }
-
-    .degrade2 {
-      display: none;
-      height: 160% !important;
-    }
-
-    .degrade3 {
-      display: none;
-      height: 170% !important;
-    }
-  }
-
-
-  @media (min-width: 414px){
-    .degrade{
-      width: 10%;
-      float: left;
-      margin-top: -4.9%;
-      background: linear-gradient(to bottom, #D0C7FC, #8F83CD, #7C6FBF);
-      height: 100%;
-    }
-
-    .degrade2 {
-      display: none;
-      height: 155% !important;
-    }
-
-    .degrade3 {
-      display: none;
-      height: 166% !important;
-    }
-
-
-  }
-
   /*CAMPOS QUE MUDAM ALTERNATIVA*/
-
-  #adicionarCampo {
-    margin-left: 18%;
-  }
+  #adicionarCampo { margin-left: 18%; }
 
   #alternativa_campo, .conteudoIndividual {
     margin-left: 18%;
@@ -215,14 +163,10 @@
       margin-left: 5%;
       margin-top: 1%;
     }
-
   /*FINAL DOS CAMPOS QUE MUDAM ALTERNATIVA*/
 
   /*CAMPOS QUE MUDAM DISSERTATIVA*/
-
-  #label_resposta {
-    margin-left: 18%;
-  }
+  #label_resposta { margin-left: 18%; }
 
   #respostadissertativa
   {
@@ -244,11 +188,6 @@
     }
 
     #priv_public form {
-      /*display: grid;
-      gap: 3em;
-      grid-template-columns: 30% 30% ;
-      margin-top: 20%;
-      margin-left: 26%;*/
       display: grid;
       gap: 2em;
       grid-template-columns: 30%;
@@ -273,101 +212,35 @@
       margin-top: 10%;
       margin-left: 39%;
     }
-
-
   /*FINAL DOS CAMPOS QUE MUDAM DISSERTATIVA*/
 
-  #btn-alternativa,
-   #btn-dissertativa{
-    width: 35%;
-    color: black;
-    border-radius: 40px 40px;
-    text-transform: capitalize;
-    font-family: 'Muli';
-    font-size: 75%;
-    border-color: black;
-    border-width: 6px;
-    padding-right: 0%;
-    padding-left: 0%;
-    margin-top: 25%;
-    margin-bottom: 10%;
-  }
-
-  #btn-alternativa {
-    margin-left: 7.5%;
-    margin-right: 2%;
-  }
-
-/*CÓDIGOS DAS CORES DOS BOTÕES QUE MUDAM*/
-  .button-group{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-  }
-  .button-group > button {
-    background-color: transparent;
-    padding-top: 4.5%;
-    padding-bottom: 4%;
-    box-shadow: 0px 1.5px 3px rgba(0, 0, 0, 0.3);
-    border: none;
-  }
-
-  .buttonClicked {
-      background-color: #9785D3 !important;
+  /*CÓDIGOS DAS CORES DOS BOTÕES QUE MUDAM*/
+    .button-group{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .button-group > button {
+      background-color: transparent;
+      padding-top: 4.5%;
+      padding-bottom: 4%;
       box-shadow: 0px 1.5px 3px rgba(0, 0, 0, 0.3);
-      color: white!important;
-  }
-/*FINAL DOS CÓDIGOS DAS CORES DOS BOTÕES QUE MUDAM*/
+      border: none;
+    }
 
-  #campo1, #campo2, #campo3, #campo4 {
-    margin-left: 15%;
-    width: 78%;
-  }
-
-  #campo4{
-    margin-bottom: 10%;
-    font-size: 20%;
-  }
-
-  #divimagem{
-
-  left: 18%;
-  width: 71.5%;
-  margin-top: -4%;
-  text-transform: capitalize;
-
-  }
-
-  #simbolodiv p {
-    margin-top: -13.5%;
-    position: absolute;
-    margin-left: 80%;
-    font-size: 65%;
-  }
-
-  #simbolodiv a {
-    margin-top: -15%;
-    margin-left: 74%;
-
-  }
-
-  #simbolo {
-    width: 30%;
-  }
-
-  div#simbolo1.modal.open{
-    border-radius: 20px 20px;
-    border: #7C6FBF 10px solid;
-  }
+    .buttonClicked {
+        background-color: #9785D3 !important;
+        box-shadow: 0px 1.5px 3px rgba(0, 0, 0, 0.3);
+        color: white!important;
+    }
+  /*FINAL DOS CÓDIGOS DAS CORES DOS BOTÕES QUE MUDAM*/
 
   /*MUDAR CORES DAS BORDAS DO TEXTAREA E DO INPUT*/
   .select-wrapper input.select-dropdown:focus {
     border-bottom: 1px solid rgba(0, 0, 0, 1)!important;
   }
 
-  #textarea1{
-    color: black;
-  }
+  #textarea1{ color: black; }
 
   textarea .materialize-textarea {
     font-family: 'Muli';
@@ -380,7 +253,6 @@
     border-bottom: 1px solid rgba(0, 0, 0, 3)!important;
     box-shadow: 0 0.1px 0 0 rgba(0, 0, 0, 3)!important;
   }
-
   /*FINAL DAS CORES DAS BORDAS DO TEXTAREA E DO INPUT*/
 
   /*COMEÇO DOS CÓDIGOS PARA MUDAR A FORMATAÇÃO DAS CORES DOS CAMPOS DO MATERIALIZE*/
@@ -399,13 +271,214 @@
   .select-wrapper input.select-dropdown {
     color: #d1d1d1;
   }
-
   /*FINAL DOS CÓDIGOS PARA MUDAR A FORMATAÇÃO DAS CORES DOS CAMPOS DO MATERIALIZE*/
 
+
+  /*FORMATAÇÃO CELULAR*/
+  @media (min-width: 320px){
+    .degrade{
+      width: 10%;
+      float: left;
+      margin-top: -6.1%;
+      background: linear-gradient(to bottom, #D0C7FC, #8F83CD, #7C6FBF);
+      height: 110%;
+    }
+
+    .degrade2 {
+      display: none;
+      height: 175% !important;
+    }
+
+    .degrade3 {
+      display: none;
+      height: 220% !important;
+    }
+    }
+
+  @media (min-width: 360px){
+    .degrade{
+      width: 10%;
+      float: left;
+      margin-top: -5.6%;
+      background: linear-gradient(to bottom, #D0C7FC, #8F83CD, #7C6FBF);
+    }
+  }
+
+  @media (min-width: 375px){
+    .degrade{
+      width: 10%;
+      float: left;
+      margin-top: -5.5%;
+      background: linear-gradient(to bottom, #D0C7FC, #8F83CD, #7C6FBF);
+      height: 100%;
+    }
+
+    .degrade2 {
+      display: none;
+      height: 160% !important;
+    }
+
+    .degrade3 {
+      display: none;
+      height: 180% !important;
+    }
+  }
+
+  @media (min-width: 411px){
+    .degrade{
+      width: 10%;
+      float: left;
+      margin-top: -5% ;
+      background: linear-gradient(to bottom, #D0C7FC, #8F83CD, #7C6FBF);
+      height: 100%;
+    }
+
+    .degrade2 {
+      display: none;
+      height: 160% !important;
+    }
+
+    .degrade3 {
+      display: none;
+      height: 170% !important;
+    }
+  }
+
+  @media (min-width: 414px){
+    .degrade{
+      width: 10%;
+      float: left;
+      margin-top: -4.9%;
+      background: linear-gradient(to bottom, #D0C7FC, #8F83CD, #7C6FBF);
+      height: 100%;
+    }
+
+    .degrade2 {
+      display: none;
+      height: 155% !important;
+    }
+
+    .degrade3 {
+      display: none;
+      height: 166% !important;
+    }
+  }
   /*FINAL DA FORMATAÇÃO CELULAR*/
 
 
-  /*Dashboard para o celular*/
+  /*FORMATAÇÃO COMPUTADOR*/
+  @media (min-width: 1024px) {
+    body h2{
+      font-size: 190%;
+      position: absolute;
+      font-family: 'Muli';
+      left: 23.5%;
+      top: 12%;
+      margin-top: 5%;
+      margin-left: -8%;
+    }
+
+    h2 { margin-left: 120%; }
+
+    #btn-alterna-desk,
+     #btn-dissert-desk{
+      width: 22%;
+      padding-top: 0.5%;
+      padding-bottom: 3.5%;
+      font-family: 'Muli';
+      color: black;
+      border-radius: 40px 40px;
+      border-width: 6px;
+      border-color: black;
+      text-transform: capitalize;
+    }
+
+    #btn-alterna-desk {
+      margin-left: 25%;
+      margin-right: 2%;
+      margin-top: 13%;
+    }
+
+    #btn-dissert-desk {
+      margin-left: 60%;
+      margin-top: -6.5%;
+    }
+
+    .degrade{
+      width: 10%;
+      float: left;
+      margin-top: -5.5%;
+      background: linear-gradient(to bottom, #D0C7FC, #8F83CD, #7C6FBF);
+      height: 110%;
+    }
+
+    .degrade2 {
+      display: none;
+      height: 160% !important;
+    }
+
+    .degrade3 {
+      display: none;
+      height: 180% !important;
+    }
+
+    #simbolo1 { width: 5%; }
+
+    #divimagem{
+    left: 18%;
+    width: 76.1%;
+    margin-top: -9.5%;
+    margin-left: -2%;
+    text-transform: capitalize;
+    }
+
+    #inputimg { width: 60%; }
+  }
+
+    @media (min-width: 1280px) {
+      .degrade{
+        width: 10%;
+        float: left;
+        margin-top: -5.5%;
+        background: linear-gradient(to bottom, #D0C7FC, #8F83CD, #7C6FBF);
+        height: 120%;
+      }
+
+      .degrade2 {
+        display: none;
+        height: 160% !important;
+      }
+
+      .degrade3 {
+        display: none;
+        height: 180% !important;
+      }
+
+      #simbolodiv p {
+        margin-top: -12%;
+        position: absolute;
+        margin-left: 88%;
+        font-size: 65%;
+      }
+
+      #simbolodiv a {
+        margin-top: -19.6%;
+        margin-left: 85%;
+      }
+
+      #divimagem{
+      left: 18%;
+      width: 76.1%;
+      margin-top: -10%;
+      margin-left: -2%;
+      text-transform: capitalize;
+
+      }
+    }
+  /*FINAL DA FORMATAÇÃO COMPUTADOR*/
+
+
+  /*DASHBOARD CELULAR COMEÇO*/
   #dashboardcel{
   background-color: #8579C3;
   width: 100%;
@@ -553,11 +626,9 @@
       margin-top: 280%;
     }
   }
+  /*DASHBOARD CELULAR FINAL*/
 
-  /*Dashboard para o CELULAR FINAL*/
-
-  /*Dashboard para o computador*/
-
+  /*DASHBOARD COMPUTADOR COMEÇO*/
   #retanguloroxo {
     -webkit-filter: drop-shadow(12px 12px 8px rgba(0, 0, 0, 0.3));
   }
@@ -1109,128 +1180,4 @@
       margin-top: -2%;
     }
   }
-
-  /*Dashboard para o computador final*/
-
-
-  /*FORMATAÇÃO COMPUTADOR*/
-  @media (min-width: 1024px) {
-    body h2{
-      font-size: 190%;
-      position: absolute;
-      font-family: 'Muli';
-      left: 23.5%;
-      top: 12%;
-      margin-top: 5%;
-      margin-left: -8%;
-    }
-
-    h2 {
-      margin-left: 120%;
-    }
-
-    #btn-alterna-desk,
-     #btn-dissert-desk{
-      width: 22%;
-      padding-top: 0.5%;
-      padding-bottom: 3.5%;
-      font-family: 'Muli';
-      color: black;
-      border-radius: 40px 40px;
-      border-width: 6px;
-      border-color: black;
-      text-transform: capitalize;
-    }
-
-    #btn-alterna-desk {
-      margin-left: 25%;
-      margin-right: 2%;
-      margin-top: 13%;
-    }
-
-    #btn-dissert-desk {
-      margin-left: 60%;
-      margin-top: -6.5%;
-    }
-
-    .degrade{
-      width: 10%;
-      float: left;
-      margin-top: -5.5%;
-      background: linear-gradient(to bottom, #D0C7FC, #8F83CD, #7C6FBF);
-      height: 110%;
-    }
-
-    .degrade2 {
-      display: none;
-      height: 160% !important;
-    }
-
-    .degrade3 {
-      display: none;
-      height: 180% !important;
-    }
-
-    #simbolo1{
-      width: 5%;
-    }
-
-    #divimagem{
-    left: 18%;
-    width: 76.1%;
-    margin-top: -9.5%;
-    margin-left: -2%;
-    text-transform: capitalize;
-    }
-
-    #inputimg{
-      width: 60%;
-    }
-
-  }
-
-    @media (min-width: 1280px) {
-      .degrade{
-        width: 10%;
-        float: left;
-        margin-top: -5.5%;
-        background: linear-gradient(to bottom, #D0C7FC, #8F83CD, #7C6FBF);
-        height: 120%;
-      }
-
-      .degrade2 {
-        display: none;
-        height: 160% !important;
-      }
-
-      .degrade3 {
-        display: none;
-        height: 180% !important;
-      }
-
-      #simbolodiv p {
-        margin-top: -12%;
-        position: absolute;
-        margin-left: 88%;
-        font-size: 65%;
-      }
-
-      #simbolodiv a {
-        margin-top: -19.6%;
-        margin-left: 85%;
-
-      }
-
-      #divimagem{
-
-      left: 18%;
-      width: 76.1%;
-      margin-top: -10%;
-      margin-left: -2%;
-      text-transform: capitalize;
-
-      }
-
-
-    }
-  /*FINAL DA FORMATAÇÃO COMPUTADOR*/
+  /*DASHBOARD COMPUTADOR FINAL*/

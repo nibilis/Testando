@@ -38,9 +38,13 @@ header('Content-Type: text/html; charset=UTF-8');
 
       <body>
 
+        <!-- LINHA LATERAL DEGRADE-->
+        <div class="degrade" ></div> <!-- versão 1 - padrão -->
+        <div class="degrade2"></div> <!-- versão 2 - dissertativa -->
+        <div class="degrade3"></div> <!-- versão 3 - alternativa -->
 
-          <!-- Dashboard CELULAR -->
 
+        <!-- Dashboard CELULAR COMEÇO -->
           <div class= "row hide-on-large-only" id= "dashboardcel">
 
             <div class="col s2">
@@ -63,9 +67,9 @@ header('Content-Type: text/html; charset=UTF-8');
                       <li><div id="divider" class="divider"></div></li>
                       <li><a id="question" class=" waves-effect center-align" href="../addquestao/indexAddQuestao.html">Adicionar Questão</a></li>
                       <li><div id="divider" class="divider"></div></li>
-                      <li><a id="document" class="waves-effect center-align" href="#!">Adicionar Documento</a></li>
+                      <li><a id="document" class="waves-effect center-align" href="../documento/indexDocumento.php">Adicionar Documento</a></li>
                       <li><div id="divider" class="divider"></div></li>
-                      <li><a id="saves" class="waves-effect center-align" href="#!">Salvos</a></li>
+                      <li><a id="saves" class="waves-effect center-align" href="../salvos/indexSalvos.html">Salvos</a></li>
                       <li><div id="divider" class="divider"></div></li>
                       <a id="sair" href="../login/indexLogin.html"><i class="material-icons" id="sair2">exit_to_app</i> Sair </a>
                     </ul>
@@ -86,25 +90,19 @@ header('Content-Type: text/html; charset=UTF-8');
               <img class= "responsive-img" id = "logocel" src ="../images/logo.png">
             </div>
           </div>
-            <!-- Dashboard CELULAR FINAL -->
+          <!-- Dashboard CELULAR FINAL -->
 
 
-        <!-- LINHA LATERAL DEGRADE-->
-        <div class="degrade" ></div> <!-- versão 1 - padrão -->
-        <div class="degrade2"></div> <!-- versão 2 - dissertativa -->
-        <div class="degrade3"></div> <!-- versão 3 - alternativa -->
-
-
-            <!-- Dashboard COMPUTADOR -->
+          <!-- Dashboard COMPUTADOR COMEÇO -->
             <nav class="hide-on-med-and-down navbar-fixed" id="retanguloroxo">
               <div class="nav-wrapper hide-on-med-and-down" id="dashboardpc">
 
                  <img class= "responsive-img" id = "logopc" src ="../images/logo.png"> <img class= "responsive-img" id = "nomelogopc" src ="../images/TestandoNome.png"> </a>
                 <ul id="nav-pc" class=" right">
                   <li><a  id= "questao" href="../addquestao/indexAddQuestao.html" >Adicionar <br> questão</a></li>
-                  <li><a  id= "documento" href="#!">Adicionar <br> documento</a>
+                  <li><a  id= "documento" href="../documento/indexDocumento.php">Adicionar <br> documento</a>
                     <img class= "responsive-img" id = "linha1" src ="../images/linha.png"></li>
-                  <li><a id= "salvos" href="#!">Salvos</a>
+                  <li><a id= "salvos" href="../salvos/indexSalvos.html">Salvos</a>
                      <img class= "responsive-img" id = "linha2" src ="../images/linha.png"></li>
                 </ul>
               </div>
@@ -123,54 +121,67 @@ header('Content-Type: text/html; charset=UTF-8');
 
           <h2>Adicionar Questão</h2>
 
+
+          <!-- BOTÕES ALTERNA/DISSERTA -->
           <p class="button-group">
             <button href="#alternativa" id="btn-alternativa" value="ok" target="_self" class="waves-effect waves-light transparent">Alternativa</button>
             <button href="#dissertativa" id="btn-dissertativa" value="ok" target="_self" class="waves-effect waves-light transparent">Dissertativa</button>
           </p>
 
+          <!-- CAMPOS FORMULÁRIO -->
           <div class="items">
 
-          <div required id="campo1" class="input-field col s9 center-align hide-on-large-only">
-            <select>
-                <option value="" selected disabled>Selecione sua matéria </option>
-              <optgroup label="Ensino médio" style= "font-family: 'Muli'; font-size: 11px; float: left;">
-                <option value="1">Geografia</option>
-                <option value="2">História</option>
-                <option value="3">Inglês</option>
-              </optgroup>
-              <optgroup label="Ensino técnico">
-                <option value="3">Banco de dados</option>
-                <option value="4">Lógica de programação 2</option>
-                <option value="5">linguagem de programação 1</option>
-              </optgroup>
-            </select>
-            <label>Matéria <span style="color: red;">*</span></label>
-          </div>
+            <div required id="campo1" class="input-field col s9 center-align hide-on-large-only">
+              <select>
+                  <option value="" selected disabled>Selecione sua matéria </option>
 
-      </div>
+                <optgroup label="Ensino médio" style= "font-family: 'Muli'; font-size: 11px; float: left;">
+                  <option value="1">Geografia</option>
+                  <option value="2">História</option>
+                  <option value="3">Inglês</option>
+                </optgroup>
+
+                <optgroup label="Ensino técnico">
+                  <option value="3">Banco de dados</option>
+                  <option value="4">Lógica de programação 2</option>
+                  <option value="5">linguagem de programação 1</option>
+                </optgroup>
+
+              </select>
+
+              <label>Matéria <span style="color: red;">*</span></label>
+            </div>
+
+        </div>
 
           <div required id="campo2" class="input-field col s9 center-align hide-on-large-only">
             <select>
                 <option value="" selected disabled>Selecione seu tema </option>
+
               <optgroup label="Geografia" style= "font-family: 'Muli'; font-size: 11px; float: left;">
                 <option value="1">Hidrografia</option>
                 <option value="2">Paisagem</option>
                 <option value="3">Rondônia</option>
               </optgroup>
+
             </select>
             <label>Tema <span style="color: red;">*</span></label>
+
           </div>
 
           <div required id="campo3" class="input-field col s9 center-align hide-on-large-only">
             <select>
               <option value="" selected disabled> Selecione seu subtema </option>
+
               <optgroup label="Hidrografia" style= "font-family: 'Muli'; font-size: 11px; float: left;">
                 <option value="1">Águas do pacífico</option>
                 <option value="2">Perca do status salino</option>
                 <option value="3">Qualificador de PH neutro</option>
               </optgroup>
+
             </select>
             <label>Subtema <span style="color: red;">*</span></label>
+
           </div>
 
           <div required id="campo4"  class="col s9 center-align hide-on-large-only">
@@ -178,22 +189,23 @@ header('Content-Type: text/html; charset=UTF-8');
             <textarea placeholder="Escreva seu enunciado" id="textarea1" class="materialize-textarea"></textarea>
           </div>
 
-            <div id="simbolodiv">
-              <!-- Modal Trigger -->
-              <a href="#simbolo1" style="width: 52px;" class="waves-effect waves-light modal-trigger"><img class= "responsive-img" id = "simbolo" src ="../images/omega2.png"></a>
-              <p href="#simbolo1" style="color: black;">&nbsp;Inserir <br> Símbolo</p>
-            </div>
+          <div id="simbolodiv">
+            <!-- Modal Trigger -->
+            <a href="#simbolo1" style="width: 52px;" class="waves-effect waves-light modal-trigger"><img class= "responsive-img" id = "simbolo" src ="../images/omega2.png"></a>
+            <p href="#simbolo1" style="color: black;">&nbsp;Inserir <br> Símbolo</p>
+          </div>
 
-
-            <form action="#">
+          <form action="#">
               <div class="file-field input-field waves-effect waves-light" id="divimagem">
                 <div class="btn" style= "font-family: 'Muli'; color:white; background-color:#FFBC2B;">
-                  <span id="spanimagem" style= "font-family: 'Muli'; color:white; background-color:#FFBC2B;">Imagem </span>
-                  <input type="file" multiple>
+                    <span id="spanimagem" style= "font-family: 'Muli'; color:white; background-color:#FFBC2B;">Imagem </span>
+                    <input type="file" multiple>
                 </div>
+
                 <div class="file-path-wrapper" >
                   <input class="file-path validate" type="text">
                 </div>
+
               </div>
             </form>
 
@@ -201,36 +213,34 @@ header('Content-Type: text/html; charset=UTF-8');
             <!-- Modal Structure SÍMBOLOS -->
             <div id="simbolo1" class="modal">
 
-              <div class="modal-content">
-                <h5 style="text-align: center;">Símbolos</h5>
-                <p><br>Escolha sua opção:</p>
-                <p><br>**Finge q aq tem um montão de símbolos :)**</p>
-              </div>
-              <div class="modal-footer">
-                <a href="#!" style="color: white; border-radius: 40px 40px; font-family: 'Muli'; font-size: 75%;" class="modal-close waves-effect yellow darken-2 btn-flat">Salvar</a>
-              </div>
+                <div class="modal-content">
+                  <h5 style="text-align: center;">Símbolos</h5>
+                  <p><br>Escolha sua opção:</p>
+                  <p><br>**Finge q aq tem um montão de símbolos :)**</p>
+                </div>
+
+                <div class="modal-footer">
+                  <a href="#!" style="color: white; border-radius: 40px 40px; font-family: 'Muli'; font-size: 75%;" class="modal-close waves-effect yellow darken-2 btn-flat">Salvar</a>
+                </div>
 
             </div>
 
-            <!-- Alternativa/Dissertativa -->
+            <!-- ALTERNATIVA/DISSERTATIVA -->
 
-        </div> <!-- COMEÇO alternativa -->
-
+        <!-- COMEÇO alternativa -->
         <div id="alternativa" class="alternativa" style="margin-top: -5%;">
 
-          <div class="row center-align hide-on-large-only">
-          </div>
+          <div class="row center-align hide-on-large-only"></div>
 
-
-          <!--CAMPOS ALTERNATIVA: ADD E RETIRAR-->
-
+        <!--CAMPOS ALTERNATIVA: ADD E RETIRAR-->
           <form action="#">
-            <div id="formulario" class= "hide-on-large-only" >
+
+            <div id="formulario" class= "hide-on-large-only">
               <input id="alternativa_campo" type="text" placeholder="Alternativa" name="numeroDocumento" required/>
             </div>
+
           </form>
           <a href="#" data-id="1" id="adicionarCampo" class="hide-on-large-only">+ Adicionar Campos</a>
-
 
               <label id="label_resposta2" for="textarea1" class= "hide-on-large-only">Resposta alternativa <span style="color: red;">*</span></label>
               <textarea id="respostaalternativa" maxlength="1" placeholder=" Ex: A..." required style= "font-family: 'Muli'; font-size: 100%;" class="materialize-textarea hide-on-large-only"></textarea>
@@ -240,53 +250,57 @@ header('Content-Type: text/html; charset=UTF-8');
 
               <label>
                 <div class="col s1" class= "hide-on-large-only">
-                <input name="group1" class="with-gap" type="radio"  />
-                <span>Fácil</span>
-              </div>
+                  <input name="group1" class="with-gap" type="radio"/>
+                  <span>Fácil</span>
+                </div>
               </label>
 
               <label>
                 <div class="col s2" class= "hide-on-large-only">
-                <input name="group1" class="with-gap" type="radio"  />
-                <span>Médio</span>
-              </div>
+                  <input name="group1" class="with-gap" type="radio"/>
+                  <span>Médio</span>
+                </div>
               </label>
 
               <label>
                 <div class="col s3" class= "hide-on-large-only">
-                <input name="group1" class="with-gap" type="radio" />
-                <span>Difícil</span>
-              </div>
+                  <input name="group1" class="with-gap" type="radio"/>
+                  <span>Difícil</span>
+                </div>
             </label>
+
           </div>
 
+          <!--privacidade da questão -->
           <div required id="priv_public2" class= "hide-on-large-only">
             <label id="label_privacidade2" style="font-size: 87%;">Privacidade da questão <span style="color: red;">*</span></label>
-            <form action="#">
 
+            <form action="#">
              <label>
                <div class="col s1" class= "hide-on-large-only">
-               <input name="group1" class="with-gap" type="radio"/>
-               <span>Público</span>
-             </div>
+                 <input name="group1" class="with-gap" type="radio"/>
+                 <span>Público</span>
+               </div>
              </label>
 
              <label>
                <div class="col s2" class= "hide-on-large-only">
-               <input name="group1" class="with-gap" type="radio"/>
-               <span>Privado</span>
-             </div>
+                 <input name="group1" class="with-gap" type="radio"/>
+                 <span>Privado</span>
+               </div>
              </label>
            </form>
-         </div>
-         <button id="btn_salvar" class="hide-on-large-only waves-effect waves-light btn" type="submit" name="action">Salvar</button>
 
            </div>
-        </div>
-        <!-- FIM - alternativa-->
+           <button id="btn_salvar" class="hide-on-large-only waves-effect waves-light btn" type="submit" name="action">Salvar</button>
 
+           <!-- FIM alternativa-->
+           </div>
+        <!-- fim da div formulario celular -->
+        </div>
+
+        <!-- COMEÇO dissertativa -->
         <div id="dissertativa" class="dissertativa">
-          <!-- COMEÇO - dissertativa -->
 
           <div class="row center-align hide-on-large-only">
 
@@ -294,37 +308,37 @@ header('Content-Type: text/html; charset=UTF-8');
                 <div class="row">
                   <label for="textarea1" id="label_resposta" style= "font-family: 'Muli'; font-size: 11px; float: left;">Resposta <span style="color: red;">*</span></label>
                   <textarea required id="respostadissertativa" placeholder="Escreva sua resposta" class="materialize-textarea"></textarea>
-                  </div>
                 </div>
+          </div>
               </form>
 
-
-              <div required id="dificuldade" class="input-field col s10 center-align hide-on-large-only">
+              <!-- dificuldade da questão -->
+            <div required id="dificuldade" class="input-field col s10 center-align hide-on-large-only">
               <label id="label_dificuldade" style="font-size: 85%;">Dificuldade da questão <span style="color: red;">*</span></label>
+
               <form action="#">
+                <label>
+                  <div class="col s1  hide-on-large-only">
+                    <input name="group1" class="with-gap" type="radio"/>
+                    <span>Fácil</span>
+                  </div>
+                </label>
 
-              <label>
-                <div class="col s1  hide-on-large-only">
-                <input name="group1" class="with-gap" type="radio"/>
-                <span>Fácil</span>
-              </div>
-              </label>
+                <label>
+                  <div  class="col s2  hide-on-large-only">
+                    <input name="group1" class="with-gap" type="radio"/>
+                    <span>Médio</span>
+                  </div>
+                </label>
 
-              <label>
-                <div  class="col s2  hide-on-large-only">
-                <input name="group1" class="with-gap" type="radio"/>
-                <span>Médio</span>
-              </div>
-              </label>
-
-              <label>
-                <div  class="col s3  hide-on-large-only">
-                <input name="group1" class="with-gap" type="radio"/>
-                <span>Difícil</span>
-              </div>
-              </label>
-             </div>
-           </form>
+                <label>
+                  <div  class="col s3  hide-on-large-only">
+                    <input name="group1" class="with-gap" type="radio"/>
+                    <span>Difícil</span>
+                  </div>
+                </label>
+            </div>
+              </form>
 
           <div required id="priv_public" class=" hide-on-large-only">
             <label id="label_privacidade" style="font-size: 87%;">Privacidade da questão <span style="color: red;">*</span></label>
@@ -349,10 +363,9 @@ header('Content-Type: text/html; charset=UTF-8');
            <button id="btn_salvar" class=" hide-on-large-only waves-effect waves-light btn" type="submit" name="action">Salvar</button>
          </div>
 
-
-
-</div>
-      </div><!-- FIM - dissertativa -->
+       </div>
+      <!-- FIM - dissertativa -->
+      </div>
 
         <!--Final do formulário de CELULAR-->
 
@@ -362,6 +375,7 @@ header('Content-Type: text/html; charset=UTF-8');
 
           <h2>Adicionar Questão</h2>
 
+          <!-- QUESTÕES ALTERNA/DISSERTA -->
           <p>
             <button href="#alternativa" id="btn-alterna-desk" value="ok" target="_self" class="waves-effect waves-light btn transparent">Questão alternativa</button>
             <button href="#dissertativa" id="btn-dissert-desk" value="ok" target="_self" class="waves-effect waves-light btn transparent">Questão dissertativa</button>
@@ -393,18 +407,22 @@ header('Content-Type: text/html; charset=UTF-8');
                     <option value="<?php echo $row['ID_Tema'] ?>"><?php echo $row['Nome'] ?></option>
                 <?php } ?>
             </select>
+
             <label>Tema <span style="color: red;">*</span></label>
           </div>
 
           <div required id="campo3" class="input-field col s9 center-align hide-on-med-and-down">
             <select>
               <option value="" selected disabled> Selecione seu subtema </option>
+
               <optgroup label="Hidrografia" style= "font-family: 'Muli'; font-size: 11px; float: left;">
                 <option value="1">Águas do pacífico</option>
                 <option value="2">Perca do status salino</option>
                 <option value="3">Qualificador de PH</option>
               </optgroup>
+
             </select>
+
             <label>Subtema <span style="color: red;">*</span></label>
           </div>
 
@@ -419,15 +437,16 @@ header('Content-Type: text/html; charset=UTF-8');
               <p href="#simbolo1" style="color: black;">&nbsp;Inserir <br> Símbolo</p>
             </div>
 
-
+            <!-- ADD IMG -->
             <form action="#">
               <div class="file-field input-field waves-effect waves-light" id="divimagem">
                 <div class="btn" style= "font-family: 'Muli'; color:white; background-color:#FFBC2B;">
-                  <span id="spanimagem" style= "font-family: 'Muli'; color:white; background-color:#FFBC2B;">Imagem </span>
-                  <input type="file" multiple>
+                    <span id="spanimagem" style= "font-family: 'Muli'; color:white; background-color:#FFBC2B;">Imagem </span>
+                    <input type="file" multiple>
                 </div>
+
                 <div class="file-path-wrapper" >
-                  <input id="inputimg" class="file-path validate" type="text">
+                    <input id="inputimg" class="file-path validate" type="text">
                 </div>
               </div>
             </form>
@@ -440,15 +459,16 @@ header('Content-Type: text/html; charset=UTF-8');
                 <p><br>Escolha sua opção:</p>
                 <p><br>**Finge q aq tem um montão de símbolos :)**</p>
               </div>
+
               <div class="modal-footer">
                 <a href="#!" class="modal-close waves-effect waves-green btn-flat">Salvar</a>
               </div>
+
             </div>
 
-            <!-- Alternativa/Dissertativa COMPUTADOR -->
+        <!-- Alternativa/Dissertativa COMPUTADOR -->
 
-            <!-- COMEÇO ALTERNATIVA -->
-
+        <!-- COMEÇO ALTERNATIVA -->
         <div id="alternativa" class="alternativa">
 
           <div class="row center-align hide-on-med-and-down">
@@ -460,39 +480,39 @@ header('Content-Type: text/html; charset=UTF-8');
               <button class="material-icons red">clear</button>
           </div>
 
-              <label for="textarea1">Resposta</label>
-              <textarea style= "font-family: 'Muli'; font-size: 11px; float: left;" class="materialize-textarea"></textarea>
-              <div required id="dificuldade" class="input-field col s10 center-align hide-on-med-and-down">
+            <label for="textarea1">Resposta</label>
+            <textarea style= "font-family: 'Muli'; font-size: 11px; float: left;" class="materialize-textarea"></textarea>
+            <div required id="dificuldade" class="input-field col s10 center-align hide-on-med-and-down">
+
               <form action="#">
                 <label>Dificuldade <span style="color: red;">*</span></label>
 
-              <label>
-                <div class="col s1 hide-on-med-and-down">
-                <input name="group1" type="radio" checked />
-                <span>Fácil</span>
-              </div>
-              </label>
+                <label>
+                  <div class="col s1 hide-on-med-and-down">
+                    <input name="group1" type="radio" checked />
+                    <span>Fácil</span>
+                  </div>
+                </label>
 
-              <label>
-                <div class="col s2 hide-on-med-and-down">
-                <input name="group1" type="radio" checked />
-                <span>Médio</span>
-              </div>
-              </label>
+                <label>
+                  <div class="col s2 hide-on-med-and-down">
+                    <input name="group1" type="radio" checked />
+                    <span>Médio</span>
+                  </div>
+                </label>
 
-              <label>
-                <div class="col s3 hide-on-med-and-down">
-                <input name="group1" type="radio" checked />
-                <span>Difícil</span>
-              </div>
-              </label>
-
+                <label>
+                  <div class="col s3 hide-on-med-and-down">
+                    <input name="group1" type="radio" checked />
+                    <span>Difícil</span>
+                  </div>
+                </label>
            </div>
+        <!-- FIM - ALTERNATIVA -->
         </div>
 
-        <!-- FIM - ALTERNATIVA -->
-
-        <div id="dissertativa" class="dissertativa"> <!-- COMEÇO - dissertativa -->
+        <!-- COMEÇO - dissertativa -->
+        <div id="dissertativa" class="dissertativa">
 
           <div class="row center-align hide-on-med-and-down">
               <form class="col s12">
@@ -504,38 +524,38 @@ header('Content-Type: text/html; charset=UTF-8');
                 </div>
               </form>
 
-
           <div required id="dificuldade" class="input-field center-align hide-on-med-and-down">
+
           <form action="#">
             <label>Dificuldade <span style="color: red;">*</span></label>
+
           <label>
             <div class="row">
             <form class="col s1 hide-on-med-and-down">
-            <input name="group1" type="radio" checked />
-            <span>Fácil</span>
-          </form>
+              <input name="group1" type="radio" checked/>
+              <span>Fácil</span>
+            </form>
           </label>
 
           <label>
             <form class="col s2 hide-on-med-and-down">
-            <input name="group1" type="radio" checked />
-            <span>Médio</span>
-          </form>
+              <input name="group1" type="radio" checked/>
+              <span>Médio</span>
+            </form>
           </label>
 
           <label>
             <form class="col s3 hide-on-med-and-down">
-            <input name="group1" type="radio" checked />
-            <span>Difícil</span>
-          </form>
+              <input name="group1" type="radio" checked/>
+              <span>Difícil</span>
+            </form>
           </label>
 
             </div>
-        </div>
+          </div>
+        <!-- FIM - DISSERTATIVA -->
         </div>
       </div>
-
-      <!-- FIM - DISSERTATIVA -->
 
       <!--Final do formulário de COMPUTADOR-->
       <div>
@@ -691,7 +711,8 @@ header('Content-Type: text/html; charset=UTF-8');
        });
      </script>
 
-      <!--TRANSIÇÃO COR BOTÃO ALTERNATIVA E DISSERTATIVA-->
+
+      <!--TRANSIÇÃO COR BOTÃO ALTERNATIVA E DISSERTATIVA (JavaScript)-->
       <script>
       let myButton = document.querySelectorAll('.button-group > button');
 
@@ -710,9 +731,7 @@ header('Content-Type: text/html; charset=UTF-8');
       </script>
 
 
-
-
-      <!--TESTE TESTE TESTE-->
+      <!--TESTE TESTE TESTE (nicole: funcionou?)-->
       <script>
       $(function () {
           var divContent = $('#formulario');
@@ -745,10 +764,6 @@ header('Content-Type: text/html; charset=UTF-8');
           });
       });
       </script>
-      <!--TESTE TESTE TESTE-->
-
-
-
-
+      <!--TESTE TESTE TESTE (nicole: funcionou?)-->
 
   </html>
