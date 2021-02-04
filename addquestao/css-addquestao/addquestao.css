@@ -113,7 +113,7 @@
   #alternativa:checked, #dissertativa:checked { z-index: auto; }
 
   .alternativa, .dissertativa { display: none; }
-  /*FINAL DOS CÓDIGOS DO JAVASCRIPT*/
+  /*CÓDIGOS DO JAVASCRIPT FINAL*/
 
   /*CAMPOS QUE MUDAM ALTERNATIVA*/
   #adicionarCampo { margin-left: 18%; }
@@ -190,7 +190,7 @@
     #priv_public form {
 <<<<<<< HEAD
 =======
-      
+
 >>>>>>> d60e225853e32482b57afa6a1c0d084b689fa5ca
       display: grid;
       gap: 2em;
@@ -252,14 +252,13 @@
     color: black;
   }
 
-
   textarea:focus:not([readonly]) {
     border-bottom: 1px solid rgba(0, 0, 0, 3)!important;
     box-shadow: 0 0.1px 0 0 rgba(0, 0, 0, 3)!important;
   }
   /*FINAL DAS CORES DAS BORDAS DO TEXTAREA E DO INPUT*/
 
-  /*COMEÇO DOS CÓDIGOS PARA MUDAR A FORMATAÇÃO DAS CORES DOS CAMPOS DO MATERIALIZE*/
+  /*CÓDIGOS PARA MUDAR A FORMATAÇÃO DAS CORES DOS CAMPOS DO MATERIALIZE*/
   .select-dropdown li.optgroup>span {
       color: rgba(0,0,0,0.4)!important;
   }
@@ -275,7 +274,7 @@
   .select-wrapper input.select-dropdown {
     color: #d1d1d1;
   }
-  /*FINAL DOS CÓDIGOS PARA MUDAR A FORMATAÇÃO DAS CORES DOS CAMPOS DO MATERIALIZE*/
+  /*CÓDIGOS PARA MUDAR A FORMATAÇÃO DAS CORES DOS CAMPOS DO MATERIALIZE FINAL*/
 
 
   /*FORMATAÇÃO CELULAR*/
