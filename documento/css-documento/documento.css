@@ -5,6 +5,7 @@
   box-sizing: border-box;
 }
 
+
 /*Dashboard para o celular*/
 #dashboardcel{
 background-color: #8579C3;
@@ -94,6 +95,23 @@ border-radius: 10px 10px;
   width: 30%;
 }
 
+#sair {
+  font-family: 'Muli';
+  font-size: 100%;
+  position: absolute;
+  margin-top: 15%;
+  color: #DD636E;
+  margin-left: 50%;
+}
+
+#sair2 {
+  color: #DD636E;
+  margin-left: -100%;
+  margin-top: 40%;
+  position: absolute;
+
+}
+
 
 @media (min-width: 400px){
 
@@ -133,6 +151,7 @@ border-radius: 10px 10px;
     margin-left: 62%;
     margin-top: 280%;
   }
+
 }
 
 
@@ -695,3 +714,26 @@ border-radius: 10px 10px;
     margin-top: -2%;
   }
 }
+
+
+/*FORMATAÇÃO CELULAR*/
+
+  #rodape {
+    background-color: white;
+    height: 10%;
+    box-shadow: 0px 0px 10px 1px gray;
+  }
+
+  footer {
+    position:absolute;
+    bottom:0;
+    width:100%;
+  }
+
+   #rodape ul{
+    display: grid;
+    gap: 3em;
+    grid-template-columns: 25% 25% 25%;
+    margin-left: 5%;
+    margin-top: -3%;
+  }

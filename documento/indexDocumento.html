@@ -1,11 +1,11 @@
-<?php
+<!--<?php
     session_start();
     if(!isset($_SESSION['ID_Usuario']))
     {
       header("location: ../login/indexLogin.php");
       exit;
     }
- ?>
+ ?>-->
 
 
  <!DOCTYPE html>
@@ -14,7 +14,7 @@
    <head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Perfil</title>
+     <title>Documento</title>
      <link rel="stylesheet" href="css-documento/documento.css">
      <link rel="shortcut icon" href="../images/favicon (1).ico" >
 
@@ -60,7 +60,7 @@
                    <li><div id="divider" class="divider"></div></li>
                    <li><a id="saves" class="waves-effect center-align" href="#!">Salvos</a></li>
                    <li><div id="divider" class="divider"></div></li>
-                   <a id="sair" href="../Classes/Sair.php"><i class="material-icons" id="sair2">exit_to_app</i> Sair </a>
+                   <a id="sair" href="../Classes/Sair.php"><i class="material-icons" id="sair2" >exit_to_app</i> Sair </a>
                  </ul>
                </div>
              </div>
@@ -94,13 +94,50 @@
                   <img class= "responsive-img" id = "linha2" src ="../images/linha.png"></li>
              </ul>
 
-          <a href="../perfil/indexPerfil.php" >
            <div class="hide-on-med-and-down" id="perfil_pequeno">
-              <div class="responsive-image" id= "foto_perfil_pequeno"><?php $_Imagem=base64_encode( $_SESSION['imagem'] ); echo "<img height='100%' width='100%' src='data:image/jpeg;base64,$_Imagem'> "; ?></div>
-             <p id="nome-dashboard"><?php echo $_SESSION['NickName']; ?></p></a>
+               <div class="responsive-image" id= "foto_perfil_pequeno"><?php $_Imagem=base64_encode( $_SESSION['imagem'] ); echo "<img height='100%' width='100%' src='data:image/jpeg;base64,$_Imagem'> "; ?></div>
+             <p id="nome-dashboard"><?php echo $_SESSION['NickName']; ?></p>
            </div>
            </div>
          </nav>
+
+
+         <!--FORMATAÇÃO CELULAR-->
+         <div class="rodape">
+           <footer class="page-footer " id="rodape">
+          <div class="container">
+            <div class="row">
+              <div class="col l4 offset-l2 s12">
+                <ul>
+                  <li><a href="#!"><img class= "responsive-img" id="documento1" src ="../images/documento1.png"></a></li>
+                  <li><a href="#!"><img class= "responsive-img" id="gabarito" src ="../images/gabarito.png"></a></li>
+                  <li><a href="#!"><img class= "responsive-img" id="add_questoes" src ="../images/add_questoes.png"></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+         </div>
+
+         <!--TESTE-->
+
+
+
+         <!-- JQuery CDN -->
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+         <!-- JavaScript Materialize compilado e minificado -->
+         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+     <script>
+     //INICIALIZAÇÃO MENU CELULAR
+
+     $(document).ready(function(){
+       $('.sidenav').sidenav();});
+     </script>
+
+   <script>
+      instance.close();
+   </script>
+
 
     </body>
   </html>
