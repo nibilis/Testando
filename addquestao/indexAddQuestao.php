@@ -587,7 +587,7 @@ header('Content-Type: text/html; charset=UTF-8');
             $u->conectar();
             if($u->msgErro == ""){
 
-                if($q->cadastrarQuestao($materia, $tema, $enunciado))
+                if($q->cadastrarQuestao($materia, $tema, $enunciado, $_SESSION['ID_Usuario']))
                 {
                   echo "Cadastrado com sucesso!";
                 }
