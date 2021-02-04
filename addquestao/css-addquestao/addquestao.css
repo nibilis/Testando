@@ -244,11 +244,7 @@
     }
 
     #priv_public form {
-      /*display: grid;
-      gap: 3em;
-      grid-template-columns: 30% 30% ;
-      margin-top: 20%;
-      margin-left: 26%;*/
+      
       display: grid;
       gap: 2em;
       grid-template-columns: 30%;
