@@ -40,15 +40,9 @@ Class Usuario
           $sql->execute();
           $idUsuario = $pdo->lastInsertId();
 
-          //verificar qual o id da materia
-          $sql = $pdo->prepare("SELECT ID_Materia FROM Materia WHERE Nome = :m");
-          $sql->bindValue(":m", $materia);
-          $sql->execute();
-          $idMateria = $sql->fetch(\PDO::FETCH_ASSOC);
-
           $sql = $pdo->prepare("INSERT INTO usuario_materia (Usuario_Professor_ID_Usuario_, Materia_ID_Materia) VALUES (:u, :m)");
           $sql->bindValue(":u", $idUsuario);
-          $sql->bindValue(":m", $idMateria["ID_Materia"]);
+          $sql->bindValue(":m", $Materia);
           $sql->execute();
 
           $pdo = null;
@@ -69,15 +63,9 @@ Class Usuario
           $sql->execute();
           $idUsuario = $pdo->lastInsertId();
 
-          //verificar qual o id da materia
-          $sql = $pdo->prepare("SELECT ID_Materia FROM Materia WHERE Nome = :m");
-          $sql->bindValue(":m", $materia);
-          $sql->execute();
-          $idMateria = $sql->fetch(\PDO::FETCH_ASSOC);
-
           $sql = $pdo->prepare("INSERT INTO usuario_materia (Usuario_Professor_ID_Usuario_, Materia_ID_Materia) VALUES (:u, :m)");
           $sql->bindValue(":u", $idUsuario);
-          $sql->bindValue(":m", $idMateria["ID_Materia"]);
+          $sql->bindValue(":m", $Materia);
           $sql->execute();
 
           return true;

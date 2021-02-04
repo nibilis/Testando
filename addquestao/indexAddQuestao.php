@@ -1,5 +1,12 @@
 
 <?php
+  session_start();
+    if(!isset($_SESSION['ID_Usuario']))
+    {
+      header("location: ../login/indexLogin.php");
+      exit;
+    }
+
 header('Content-Type: text/html; charset=UTF-8');
   require_once'../Classes/DataBase.php';
   $u = new DataBase;
@@ -108,11 +115,14 @@ header('Content-Type: text/html; charset=UTF-8');
               </div>
 
               <!-- foto/nome perfil -->
-              <div class="hide-on-med-and-down" id="perfil_pequeno">
-                <img class="responsive-img" id="foto_perfil_pequeno" src="../images/Icone.png">
-                <p>Primeiro Nome</p>
-              </div>
-            </nav>
+                <a href="../perfil/indexPerfil.php" >
+                  <div class="hide-on-med-and-down" id="perfil_pequeno">
+                  <div class="responsive-image" id= "foto_perfil_pequeno"><?php $_Imagem=base64_encode( $_SESSION['imagem'] ); echo "<img height='100%' width='100%' src='data:image/jpeg;base64,$_Imagem'> "; ?></div>
+                    <p id="nome-dashboard"><?php echo $_SESSION['NickName']; ?></p></a>
+                  </div>
+                  </div>
+          </nav>
+
             <!-- Dashboard COMPUTADOR FINAL-->
 
 
