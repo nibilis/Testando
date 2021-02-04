@@ -188,6 +188,10 @@
     }
 
     #priv_public form {
+<<<<<<< HEAD
+=======
+      
+>>>>>>> d60e225853e32482b57afa6a1c0d084b689fa5ca
       display: grid;
       gap: 2em;
       grid-template-columns: 30%;
