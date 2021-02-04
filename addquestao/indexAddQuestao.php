@@ -1,3 +1,4 @@
+
 <?php
 header('Content-Type: text/html; charset=UTF-8');
   require_once'../Classes/DataBase.php';
@@ -426,7 +427,7 @@ header('Content-Type: text/html; charset=UTF-8');
                   <input type="file" multiple>
                 </div>
                 <div class="file-path-wrapper" >
-                  <input class="file-path validate" type="text">
+                  <input id="inputimg" class="file-path validate" type="text">
                 </div>
               </div>
             </form>
