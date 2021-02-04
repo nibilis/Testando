@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Tela de Salvos</title>
+      <link rel="stylesheet" href="./css-salvos/salvos.css">
+      <link rel="shortcut icon" href="../images/favicon (1).ico" >
+
+      <!-- Materialize -->
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+      <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Muli:wght@700&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@800;900&display=swap" rel="stylesheet">
+
+      <link rel="shortcut icon" href="../images/favicon (1).ico" >
+
+      </head>
+
+    <body>
+  <!-- Dashboard CELULAR -->
+
+  <div class= "row hide-on-large-only" id= "dashboardcel">
+
+    <div class="col s2">
+      <ul id="slide-out" class="hide-on-large-only sidenav" style="width:200px;">
+        <li><div class="user-view">
+          <div class="sanduiche">
+            <img src="../images/logoTestandoNome.png" id="logo">
+
+            <ul id="slide-out" class="sidenavClose">
+              <li><a class="sidenav-close" href="#!" style="position: absolute;"><i class="material-icons" style="position: absolute; margin-left: 160%;font-size: 220%;">menu</i></a></li>
+            </ul>
+          <a href="#" data-target="slide-out" class="sidenav-trigger"></a>
+
+            <img src="../images/circulo_amarelo_pequeno.png" id="amarelo_pequeno">
+            <img src="../images/circulo_roxo.png" id="roxo">
+            <img src="../images/circulo_roxo_claro.png" id="roxo_claro">
+            <img src="../images/circulo_amarelo_grande.png" id="amarelo_grande">
+            <ul id="links_menucel">
+              <li><a id="perfil" class=" waves-effect center-align" href="../perfil/indexPerfil.html">Perfil</a></li>
+              <li><div id="divider" class="divider"></div></li>
+              <li><a id="question" class=" waves-effect center-align" href="../addquestao/indexAddQuestao.html">Adicionar Questão</a></li>
+              <li><div id="divider" class="divider"></div></li>
+              <li><a id="document" class="waves-effect center-align" href="#!">Adicionar Documento</a></li>
+              <li><div id="divider" class="divider"></div></li>
+              <li><a id="saves" class="waves-effect center-align" href="#!">Salvos</a></li>
+              <li><div id="divider" class="divider"></div></li>
+              <a id="sair" href="../login/indexLogin.html"><i class="material-icons" id="sair2">exit_to_app</i> Sair </a>
+            </ul>
+          </div>
+        </div>
+      </ul>
+      <a href="#" data-target="slide-out" class="menu sidenav-trigger"><i class=" material-icons" style="font-size: 220%;">menu</i></a>
+    </div>
+
+    <div class="col s1">
+    </div>
+    <div class="col s1">
+    </div>
+    <div class="col s4" >
+      <img class= "responsive-img" id = "nomelogocel" src ="../images/TestandoNome.png">
+    </div>
+    <div class="col s3">
+      <img class= "responsive-img" id = "logocel" src ="../images/logo.png">
+    </div>
+  </div>
+    <!-- Dashboard CELULAR FINAL -->
+
+    <!-- Dashboard COMPUTADOR -->
+    <nav class="hide-on-med-and-down navbar-fixed" id="retanguloroxo">
+      <div class="nav-wrapper hide-on-med-and-down" id="dashboardpc">
+
+         <img class= "responsive-img" id = "logopc" src ="../images/logo.png"> <img class= "responsive-img" id = "nomelogopc" src ="../images/TestandoNome.png"> </a>
+        <ul id="nav-pc" class=" right">
+          <li><a  id= "questao" href="../addquestao/indexAddQuestao.html" >Adicionar <br> questão</a></li>
+          <li><a  id= "documento" href="#!">Adicionar <br> documento</a>
+            <img class= "responsive-img" id = "linha1" src ="../images/linha.png"></li>
+          <li><a id= "salvos" href="#!">Salvos</a>
+             <img class= "responsive-img" id = "linha2" src ="../images/linha.png"></li>
+        </ul>
+      </div>
+
+      <!-- foto/nome perfil -->
+      <div class="hide-on-med-and-down" id="perfil_pequeno">
+        <img class="responsive-img" id="foto_perfil_pequeno" src="../images/Icone.png">
+        <p>Primeiro Nome</p>
+      </div>
+    </nav>
+    <!-- Dashboard COMPUTADOR FINAL-->
+
+    <!-- Títulos -->
+
+    <h1 class="center-align" id="titulodoc"> Meus documentos </h1>
+
+    <!-- Fim títulos -->
+
+    <!-- Documentos salvos -->
+
+    <div class="row">
+    <div class="col s12">
+      <div class="card white">
+        <div class="card-content black-text" id="backgroundcard">
+          <div class="row">
+          <div class="col s4">
+          <img class="responsive-img" id="documentoimg" src="../images/documento.png">
+          </div>
+          <div class="col s8 center">
+          <p id="documentonome"> Testando.txt</p>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- JQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- JavaScript Materialize compilado e minificado -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+
+<!--INICIALIZAÇÃO MENU (sanduiche) CELULAR (JQuery)-->
+
+<script>
+
+$(document).ready(function(){
+  $('.sidenav').sidenav();});
+
+</script>
+
+</body>
+
+</html>
