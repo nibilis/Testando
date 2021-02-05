@@ -103,22 +103,50 @@
 
 
          <!--FORMATAÇÃO CELULAR-->
-         <div class="rodape">
+
+           <div class="row hide-on-large-only">
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field">
+                  <input placeholder="Insira o nome do documento" id="nome_documento" type="text" class="validate">
+                </div>
+              </div>
+            </div>
+
+            <!--TESTE DOCUMENTO-->
+          <div class="documento1" id="documento1">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+
+            <!--TESTE GABARITO-->
+          <div class="gabarito" id="gabarito">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+
+            <!--TESTE ADD_QUESTÃO-->
+          <div class="add_questoes" id="add_questoes">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+
+
+          <!--RODAPÉ-->
+
+         <div class="rodape hide-on-large-only">
            <footer class="page-footer " id="rodape">
           <div class="container">
             <div class="row">
               <div class="col l4 offset-l2 s12">
                 <ul>
-                  <li><a href="#!"><img class= "responsive-img" id="documento1" src ="../images/documento1.png"></a></li>
-                  <li><a href="#!"><img class= "responsive-img" id="gabarito" src ="../images/gabarito.png"></a></li>
-                  <li><a href="#!"><img class= "responsive-img" id="add_questoes" src ="../images/add_questoes.png"></a></li>
+                  <li><button href="#documento1" value="ok" target="_self" id="btn-documento1" class="btn waves-effect waves-light transparent" style="height:80%; box-shadow: none;"><img class= "responsive-img" id="doc" src ="../images/documento1.png"></button></li>
+                  <li><button href="#gabarito" value="ok" target="_self" id="btn-gabarito" class="btn waves-effect waves-light transparent" style="height:80%; box-shadow: none;"><img class= "responsive-img" id="gaba" src ="../images/gabarito.png"></button></li>
+                  <li><button href="#add_questoes" value="ok" target="_self" id="btn-add_questoes" class="btn waves-effect waves-light transparent" style="height:80%; box-shadow: none;"><img class= "responsive-imgt" id="quest" src ="../images/add_questoes.png"></button></li>
                 </ul>
               </div>
             </div>
           </div>
          </div>
 
-         <!--TESTE-->
+         <!--FINAL RODAPÉ-->
 
 
 
@@ -139,5 +167,62 @@
    </script>
 
 
+   <!-- CÓDIGO BOTÃO ALTERNATIVA/DISSERTATIVA (mobile - JavaScript) -->
+   <script>
+       //DOCUMENTO
+       var btn1 = document.getElementById('btn-documento1');
+       var gabarito = document.querySelector('.gabarito');
+       var add_questoes = document.querySelector('.add_questoes');
+
+       btn1.addEventListener('click', function() {
+
+       if (documento1.style.display = 'block') {
+           gabarito.style.display = 'none';
+           add_questoes.style.display = 'none';
+       }
+
+       else {
+         documento1.style.display = 'none';
+       }
+
+         });
+
+         //GABARITO
+         var btn2 = document.getElementById('btn-gabarito');
+         var documento1 = document.querySelector('.documento1');
+         var add_questoes = document.querySelector('.add_questoes');
+
+         btn2.addEventListener('click', function() {
+
+         if (gabarito.style.display = 'block') {
+             documento1.style.display = 'none';
+             add_questoes.style.display = 'none';
+         }
+
+         else {
+           gabarito.style.display = 'none';
+         }
+           });
+
+          //ADD_QUESTÃO
+          var btn3 = document.getElementById('btn-add_questoes');
+          var documento1 = document.querySelector('.documento1');
+          var gabarito = document.querySelector('.gabarito');
+
+          btn3.addEventListener('click', function() {
+
+          if (add_questoes.style.display = 'block') {
+              documento1.style.display = 'none';
+              gabarito.style.display = 'none';
+          }
+
+          else {
+            add_questoes.style.display = 'none';
+          }
+            });
+
+   </script>
+
     </body>
+
   </html>

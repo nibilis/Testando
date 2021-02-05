@@ -741,7 +741,7 @@ header('Content-Type: text/html; charset=UTF-8');
       </script>
 
 
-      <!--TESTE TESTE TESTE (nicole: funcionou?)-->
+      <!--ADD E REMOVER CAMPOS ALTERNATIVA-->
       <script>
       $(function () {
           var divContent = $('#formulario');
@@ -774,6 +774,6 @@ header('Content-Type: text/html; charset=UTF-8');
           });
       });
       </script>
-      <!--TESTE TESTE TESTE (nicole: funcionou?)-->
+      <!--FINAL ADD E REMOVER CAMPOS ALTERNATIVA-->
 
   </html>
