@@ -25,7 +25,7 @@ header('Content-Type: text/html; charset=UTF-8');
 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Adicionar Questão</title>
+        <title>Testando.com</title>
         <link rel="stylesheet" href="./css-addquestao/addquestao.css">
         <link rel="shortcut icon" href="../images/favicon (1).ico" >
 
@@ -122,7 +122,6 @@ header('Content-Type: text/html; charset=UTF-8');
                   </div>
                   </div>
           </nav>
-
             <!-- Dashboard COMPUTADOR FINAL-->
 
 
@@ -375,23 +374,20 @@ header('Content-Type: text/html; charset=UTF-8');
 
        </div>
       <!-- FIM - dissertativa -->
-      </div>
 
-        <!--Final do formulário de CELULAR-->
+      <!--Final do formulário de CELULAR-->
 
-
-        <!-- Formulário COMPUTADOR-->
+      <!-- Formulário COMPUTADOR-->
         <div class="row hide-on-med-and-down">
 
           <h2>Adicionar Questão</h2>
 
           <!-- QUESTÕES ALTERNA/DISSERTA -->
-          <p>
-            <button href="#alternativa" id="btn-alterna-desk" value="ok" target="_self" class="waves-effect waves-light btn transparent">Questão alternativa</button>
-            <button href="#dissertativa" id="btn-dissert-desk" value="ok" target="_self" class="waves-effect waves-light btn transparent">Questão dissertativa</button>
+          <p class="button-group">
+            <button href="#alternativa-desk" id="btn-alterna-desk" value="ok" target="_self" class="waves-effect waves-light transparent">Questão alternativa</button>
+            <button href="#dissertativa-desk" id="btn-dissert-desk" value="ok" target="_self" class="waves-effect waves-light transparent">Questão dissertativa</button>
           </p>
 
-          <form method="POST">
           <div class="items">
 
           <div required id="campo1" class="input-field col s9 center-align hide-on-med-and-down">
@@ -479,7 +475,7 @@ header('Content-Type: text/html; charset=UTF-8');
         <!-- Alternativa/Dissertativa COMPUTADOR -->
 
         <!-- COMEÇO ALTERNATIVA -->
-        <div id="alternativa" class="alternativa">
+        <div id="alternativa-desk" class="alternativa-desk">
 
           <div class="row center-align hide-on-med-and-down">
               <input type="text"> <i class="material-icons">add</i> </input>
@@ -522,7 +518,7 @@ header('Content-Type: text/html; charset=UTF-8');
         </div>
 
         <!-- COMEÇO - dissertativa -->
-        <div id="dissertativa" class="dissertativa">
+        <div id="dissertativa-desk" class="dissertativa-desk">
 
           <div class="row center-align hide-on-med-and-down">
               <form class="col s12">
@@ -569,7 +565,7 @@ header('Content-Type: text/html; charset=UTF-8');
 
       <!--Final do formulário de COMPUTADOR-->
       <div>
-          <button class="cadastro flow-text waves-effect yellow darken-2 waves-light hoverable" type="submit">Cadastrar</button>
+          <button class="btn cadastro flow-text waves-effect yellow darken-2 waves-light hoverable" type="submit">Salvar</button>
       </div>
       </form>
 
@@ -602,9 +598,7 @@ header('Content-Type: text/html; charset=UTF-8');
       }
       ?>
 
-
       </div>
-
 
 
         <!-- JQuery CDN -->
@@ -681,7 +675,7 @@ header('Content-Type: text/html; charset=UTF-8');
       <!-- CÓDIGO BOTÃO ALTERNATIVA/DISSERTATIVA (desktop - JavaScript) -->
       <script>
           var btn1 = document.getElementById('btn-dissert-desk');
-          var alternativa = document.querySelector('.alternativa');
+          var alternativa = document.querySelector('.alternativa-desk');
           var degrade = document.querySelector('.degrade');
           var degrade2 = document.querySelector('.degrade2');
           var degrade3 = document.querySelector('.degrade3');
@@ -701,7 +695,7 @@ header('Content-Type: text/html; charset=UTF-8');
             });
 
          var btn2 = document.getElementById('btn-alterna-desk');
-         var dissertativa = document.querySelector('.dissertativa');
+         var dissertativa = document.querySelector('.dissertativa-desk');
          var divdegrade = document.querySelector('.degrade');
          var divdegrade2 = document.querySelector('.degrade2');
          var divdegrade3 = document.querySelector('.degrade3');

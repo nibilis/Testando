@@ -108,11 +108,11 @@
     height: 185% !important;
   }
 
-  #alternativa, #dissertativa { display: none; }
+  #alternativa, #dissertativa, #alternativa-desk, #dissertativa-desk { display: none; }
 
-  #alternativa:checked, #dissertativa:checked { z-index: auto; }
+  #alternativa:checked, #dissertativa:checked, #alternativa-desk:checked, #dissertativa-desk:checked{ z-index: auto; }
 
-  .alternativa, .dissertativa { display: none; }
+  .alternativa, .dissertativa, .alternativa-desk, .dissertativa-desk { display: none; }
   /*CÓDIGOS DO JAVASCRIPT FINAL*/
 
   /*CAMPOS QUE MUDAM ALTERNATIVA*/
@@ -188,10 +188,6 @@
     }
 
     #priv_public form {
-<<<<<<< HEAD
-=======
-
->>>>>>> d60e225853e32482b57afa6a1c0d084b689fa5ca
       display: grid;
       gap: 2em;
       grid-template-columns: 30%;
@@ -236,6 +232,7 @@
         background-color: #9785D3 !important;
         box-shadow: 0px 1.5px 3px rgba(0, 0, 0, 0.3);
         color: white!important;
+        transition: none;
     }
   /*FINAL DOS CÓDIGOS DAS CORES DOS BOTÕES QUE MUDAM*/
 
@@ -279,6 +276,18 @@
 
   /*FORMATAÇÃO CELULAR*/
   @media (min-width: 320px){
+    body h2{
+      font-size: 190%;
+      position: absolute;
+      font-family: 'Muli';
+      left: 23.5%;
+      top: 12%;
+      margin-top: 5%;
+      margin-left: -8%;
+    }
+
+    h2 { margin-left: 120%; }
+
     .degrade{
       width: 10%;
       float: left;
@@ -1166,6 +1175,7 @@
       position: absolute;
       margin-left: -10%;
     }
+
 
     #perfil_pequeno {
       margin-left: 85%;
