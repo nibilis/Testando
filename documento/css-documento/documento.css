@@ -738,6 +738,7 @@ a {
     margin-left: 20.5%;
     width: 58%;
     padding-left: 1%;
+    padding-right: 1%;
     text-overflow: ellipsis;
   }
 
@@ -803,13 +804,10 @@ a {
 
   /*FUNCIONA EM TUDO: GABARITO*/
 
-  #nome_documento2 {
-    position: absolute;
-    margin-top: -3%;
-    margin-left: 20.5%;
-    width: 58%;
-    padding-left: 1%;
-    text-overflow: ellipsis;
+  #título_gabarito {
+    color: #706f78;
+    margin-top: 0%;
+    text-align: center;
   }
 
   #gabarito textarea {
@@ -821,11 +819,6 @@ a {
     top: 23%;
     border-radius: 20px 20px;
     padding: 5% 5% 5% 5%;
-  }
-
-  textarea::placeholder {
-    text-align: center;
-    font-size: 130%;
   }
 
   #btn_salvar2 {
@@ -852,4 +845,88 @@ a {
     top: 79%;
   }
 
-/*FINAL FORMATAÇÃO CELULAR*/
+  /*FUNCIONA EM TUDO: ADD_QUESTÕES*/
+
+  #filtro_parte1 { /*matéria e tema*/
+    position: absolute;
+    display: grid;
+    gap: 3em;
+    grid-template-columns: 40% 40%;
+    margin-left: 7%;
+    top: 12%;
+  }
+
+  #filtro_parte2 { /*subtema e modalidade*/
+    position: absolute;
+    display: grid;
+    gap: 3em;
+    grid-template-columns: 40% 40%;
+    top: 65%;
+  }
+
+  #filtro_parte3 { /*dificuldade e origem*/
+    position: absolute;
+    display: grid;
+    gap: 3em;
+    grid-template-columns: 40% 40%;
+    top: 130%;
+  }
+
+  #filtro_parte4 { /*minhas questões e meus favoritos*/
+    position: absolute;
+    display: grid;
+    gap: 4.8em;
+    grid-template-columns: 40% 60%;
+    left: 7%;
+    top: 40%;
+  }
+
+  #quest_profs {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    width: 70%;
+    height: 10%;
+    border-radius: 10px 10px;
+    border: 1px solid #706f78;
+  }
+
+  #foto_prof {
+    position: absolute;
+    width: 12%;
+    top: 50%;
+    left: 5%;
+  }
+
+  /*MUDAR CORES DAS BORDAS DO TEXTAREA E DO INPUT*/
+  .select-wrapper input.select-dropdown:focus {
+    border-bottom: 1px solid rgba(0, 0, 0, 1)!important;
+  }
+
+  input{
+    border-bottom: 1px solid #d1d1d1!important;
+    -webkit-box-shadow: 0 1px 0 0 #d1d1d1!important;
+    box-shadow: 0 1px 0 0 #d1d1d1!important;
+  }
+  /*FINAL DAS CORES DAS BORDAS DO TEXTAREA E DO INPUT*/
+
+
+  /*CÓDIGOS PARA MUDAR A FORMATAÇÃO DAS CORES DOS CAMPOS DO MATERIALIZE*/
+  .select-dropdown li.optgroup>span {
+      color: rgba(0,0,0,0.4)!important;
+  }
+
+  .dropdown-content li>span {
+    color: #7C6FBF!important;
+  }
+
+  .select-dropdown li.disabled>span {
+    color: rgba(0,0,0,0.4)!important;
+  }
+
+  .select-wrapper input.select-dropdown {
+    color: #d1d1d1;
+  }
+  /*CÓDIGOS PARA MUDAR A FORMATAÇÃO DAS CORES DOS CAMPOS DO MATERIALIZE FINAL*/
+
+  /*FINAL FORMATAÇÃO CELULAR*/
