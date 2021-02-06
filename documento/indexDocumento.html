@@ -1,11 +1,11 @@
-<!--<?php
+<?php
     session_start();
     if(!isset($_SESSION['ID_Usuario']))
     {
       header("location: ../login/indexLogin.php");
       exit;
     }
- ?>-->
+ ?>
 
 
  <!DOCTYPE html>
@@ -104,26 +104,39 @@
 
          <!--FORMATAÇÃO CELULAR-->
 
+         <!-- DOCUMENTO -->
+         <div class="documento1" id="documento1">
            <div class="row hide-on-large-only">
             <form class="col s12">
               <div class="row">
                 <div class="input-field">
-                  <input placeholder="Insira o nome do documento" id="nome_documento" type="text" class="validate">
+                  <input placeholder="Insira o nome do documento" id="nome_documento" style = "text-align: center;" type="text">
                 </div>
               </div>
+              <textarea  rows="8" cols="80"></textarea>
+              <img class= "responsive-img" id = "seta_esquerda" src ="../images/seta_esquerda.png">
+              <button id="btn_salvar" class="hide-on-large-only waves-effect waves-light btn" type="submit" name="action">Salvar</button>
+              <img class= "responsive-img" id = "seta_direita" src ="../images/seta_direita.png">
             </div>
-
-            <!--TESTE DOCUMENTO-->
-          <div class="documento1" id="documento1">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           </div>
 
-            <!--TESTE GABARITO-->
+            <!-- GABARITO -->
           <div class="gabarito" id="gabarito">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <div class="row hide-on-large-only">
+             <form class="col s12">
+               <div class="row">
+                 <div class="input-field">
+                   <input placeholder="Insira o nome do documento" id="nome_documento2" style = "text-align: center;" type="text">
+                 </div>
+               </div>
+               <textarea placeholder="---- Gabarito ----" rows="8" cols="80"></textarea>
+               <img class= "responsive-img" id = "seta_esquerda2" src ="../images/seta_esquerda.png">
+               <button id="btn_salvar2" class="hide-on-large-only waves-effect waves-light btn" type="submit" name="action">Salvar</button>
+               <img class= "responsive-img" id = "seta_direita2" src ="../images/seta_direita.png">
+             </div>
           </div>
 
-            <!--TESTE ADD_QUESTÃO-->
+            <!-- ADD_QUESTÕES -->
           <div class="add_questoes" id="add_questoes">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           </div>
@@ -167,7 +180,7 @@
    </script>
 
 
-   <!-- CÓDIGO BOTÃO ALTERNATIVA/DISSERTATIVA (mobile - JavaScript) -->
+   <!-- CÓDIGO BOTÃO documento/gabarito/add_questoes (mobile - JavaScript) -->
    <script>
        //DOCUMENTO
        var btn1 = document.getElementById('btn-documento1');
