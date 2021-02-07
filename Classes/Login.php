@@ -46,9 +46,6 @@ Class Login{
         $_SESSION['imagem'] = $img['Imagem'];
       }
 
-
-
-
       return true; //logado com sucesso
     }
     else{

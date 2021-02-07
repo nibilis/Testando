@@ -5,6 +5,11 @@
       header("location: ../login/indexLogin.php");
       exit;
     }
+
+    require_once'../Classes/Questao.php';
+    $q = new Questao;
+    require_once'../Classes/DataBase.php';
+    $u = new DataBase;
  ?>
 
 
@@ -95,7 +100,7 @@
              </ul>
 
            <div class="hide-on-med-and-down" id="perfil_pequeno">
-               <div id= "foto_perfil_pequeno"><?php $_Imagem=base64_encode( $_SESSION['imagem'] ); echo "<img class="responsive-image" height='100%' width='100%' src='data:image/jpeg;base64,$_Imagem'> "; ?></div>
+               <div id= "foto_perfil_pequeno"><?php $_Imagem=base64_encode( $_SESSION['imagem'] ); echo "<img height='100%' width='100%' src='data:image/jpeg;base64,$_Imagem'> "; ?></div>
              <p id="nome-dashboard"><?php echo $_SESSION['NickName']; ?></p>
            </div>
            </div>
@@ -238,13 +243,19 @@
             </div>
 
             <!-- QUESTÕES DOS PROFESSORES -->
+
+            <?php
+            $u->conectar();
+            $results = $q->listAll();
+             foreach($results as $row){ ?>
             <img class="responsive-img" id="foto_prof" src ="../images/Icone.png">
             <div id="quest_profs">
-              <p>fhjkfhdsjkhfkjfhskjhkf</p>
+              <p><?php echo $row['ID_Questao_'] ?> <?php echo $row['Enunciado'] ?>
+              </p>
             </div>
+            <?php } ?>
           </div>
           <!-- FINAL ADD_QUESTÕES -->
-
 
 
          <!-- JQuery CDN -->

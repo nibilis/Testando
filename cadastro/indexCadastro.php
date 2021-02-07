@@ -58,7 +58,7 @@ header('Content-Type: text/html; charset=UTF-8');
   <select id="materiafonte" name="materia">
       <option value="" disabled selected>Matéria que leciona</option>
       <?php
-        $u->conectar("testando", "localhost", "root", "");
+        $u->conectar();
         $results = $m->listAll();
        foreach($results as $row){ ?>
           <option value="<?php echo $row['ID_Materia'] ?>"><?php echo $row['Nome'] ?></option>
@@ -76,7 +76,7 @@ header('Content-Type: text/html; charset=UTF-8');
   <select id="estadofonte" name="estado">
       <option value="" disabled selected>Selecione o seu estado</option>
       <?php
-        $u->conectar("testando", "localhost", "root", "");
+        $u->conectar();
         $results = $est->listAll();
        foreach($results as $row){ ?>
           <option value="<?php echo $row['Sigla'] ?>"><?php echo $row['Nome'] ?></option>
@@ -90,7 +90,7 @@ header('Content-Type: text/html; charset=UTF-8');
   <select id="cidadefonte" name="cidade">
      <option value="" disabled >Selecione a sua cidade</option>
 <?php
-  $u->conectar("testando", "localhost", "root", "");
+  $u->conectar();
   $results = $city->listAll();
 
  foreach($results as $row){ ?>

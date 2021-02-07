@@ -25,7 +25,7 @@ header('Content-Type: text/html; charset=UTF-8');
 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Testando.com</title>
+        <title>Testando</title>
         <link rel="stylesheet" href="./css-addquestao/addquestao.css">
         <link rel="shortcut icon" href="../images/favicon (1).ico" >
 
@@ -383,6 +383,7 @@ header('Content-Type: text/html; charset=UTF-8');
           <h2>Adicionar Questão</h2>
 
           <!-- QUESTÕES ALTERNA/DISSERTA -->
+          <form method="POST">
           <p class="button-group">
             <button href="#alternativa-desk" id="btn-alterna-desk" value="ok" target="_self" class="waves-effect waves-light transparent">Questão alternativa</button>
             <button href="#dissertativa-desk" id="btn-dissert-desk" value="ok" target="_self" class="waves-effect waves-light transparent">Questão dissertativa</button>

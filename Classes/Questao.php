@@ -22,5 +22,14 @@ Class Questao
 
     return true;
   }
+
+  public function listAll()
+  {
+    global $pdo;
+
+    $sql = $pdo->prepare("SELECT * FROM questao");
+    $sql->execute();
+    return $sql->fetchAll(\PDO::FETCH_ASSOC);
+  }
 }
 ?>
