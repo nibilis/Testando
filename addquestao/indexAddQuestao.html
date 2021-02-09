@@ -1,12 +1,4 @@
-
 <?php
-  session_start();
-    if(!isset($_SESSION['ID_Usuario']))
-    {
-      header("location: ../login/indexLogin.php");
-      exit;
-    }
-
 header('Content-Type: text/html; charset=UTF-8');
   require_once'../Classes/DataBase.php';
   $u = new DataBase;
@@ -25,7 +17,7 @@ header('Content-Type: text/html; charset=UTF-8');
 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Testando</title>
+        <title>Adicionar Questão</title>
         <link rel="stylesheet" href="./css-addquestao/addquestao.css">
         <link rel="shortcut icon" href="../images/favicon (1).ico" >
 
@@ -45,13 +37,9 @@ header('Content-Type: text/html; charset=UTF-8');
 
       <body>
 
-        <!-- LINHA LATERAL DEGRADE-->
-        <div class="degrade" ></div> <!-- versão 1 - padrão -->
-        <div class="degrade2"></div> <!-- versão 2 - dissertativa -->
-        <div class="degrade3"></div> <!-- versão 3 - alternativa -->
 
+          <!-- Dashboard CELULAR -->
 
-        <!-- Dashboard CELULAR COMEÇO -->
           <div class= "row hide-on-large-only" id= "dashboardcel">
 
             <div class="col s2">
@@ -70,11 +58,11 @@ header('Content-Type: text/html; charset=UTF-8');
                     <img src="../images/circulo_roxo_claro.png" id="roxo_claro">
                     <img src="../images/circulo_amarelo_grande.png" id="amarelo_grande">
                     <ul id="links_menucel">
-                      <li><a id="perfil" class=" waves-effect center-align" href="../perfil/indexPerfil.html">Perfil</a></li>
+                      <li><a id="perfil" class=" waves-effect center-align" href="../perfil/indexPerfil.php">Perfil</a></li>
                       <li><div id="divider" class="divider"></div></li>
-                      <li><a id="question" class=" waves-effect center-align" href="../addquestao/indexAddQuestao.html">Adicionar Questão</a></li>
+                      <li><a id="question" class=" waves-effect center-align" href="../addquestao/indexAddQuestao.php">Adicionar Questão</a></li>
                       <li><div id="divider" class="divider"></div></li>
-                      <li><a id="document" class="waves-effect center-align" href="../documento/indexDocumento.php">Adicionar Documento</a></li>
+                      <li><a id="document" class="waves-effect center-align" href="../documento/indexAddDocumento.html">Adicionar Documento</a></li>
                       <li><div id="divider" class="divider"></div></li>
                       <li><a id="saves" class="waves-effect center-align" href="../salvos/indexSalvos.html">Salvos</a></li>
                       <li><div id="divider" class="divider"></div></li>
@@ -97,31 +85,35 @@ header('Content-Type: text/html; charset=UTF-8');
               <img class= "responsive-img" id = "logocel" src ="../images/logo.png">
             </div>
           </div>
-          <!-- Dashboard CELULAR FINAL -->
+            <!-- Dashboard CELULAR FINAL -->
 
 
-          <!-- Dashboard COMPUTADOR COMEÇO -->
+        <!-- LINHA LATERAL DEGRADE-->
+        <div class="degrade" ></div> <!-- versão 1 - padrão -->
+        <div class="degrade2"></div> <!-- versão 2 - dissertativa -->
+        <div class="degrade3"></div> <!-- versão 3 - alternativa -->
+
+
+            <!-- Dashboard COMPUTADOR -->
             <nav class="hide-on-med-and-down navbar-fixed" id="retanguloroxo">
               <div class="nav-wrapper hide-on-med-and-down" id="dashboardpc">
 
                  <img class= "responsive-img" id = "logopc" src ="../images/logo.png"> <img class= "responsive-img" id = "nomelogopc" src ="../images/TestandoNome.png"> </a>
                 <ul id="nav-pc" class=" right">
                   <li><a  id= "questao" href="../addquestao/indexAddQuestao.html" >Adicionar <br> questão</a></li>
-                  <li><a  id= "documento" href="../documento/indexDocumento.php">Adicionar <br> documento</a>
+                  <li><a  id= "documento" href="#!">Adicionar <br> documento</a>
                     <img class= "responsive-img" id = "linha1" src ="../images/linha.png"></li>
-                  <li><a id= "salvos" href="../salvos/indexSalvos.html">Salvos</a>
+                  <li><a id= "salvos" href="#!">Salvos</a>
                      <img class= "responsive-img" id = "linha2" src ="../images/linha.png"></li>
                 </ul>
               </div>
 
               <!-- foto/nome perfil -->
-                <a href="../perfil/indexPerfil.php" >
-                  <div class="hide-on-med-and-down" id="perfil_pequeno">
-                  <div class="responsive-image" id= "foto_perfil_pequeno"><?php $_Imagem=base64_encode( $_SESSION['imagem'] ); echo "<img height='100%' width='100%' src='data:image/jpeg;base64,$_Imagem'> "; ?></div>
-                    <p id="nome-dashboard"><?php echo $_SESSION['NickName']; ?></p></a>
-                  </div>
-                  </div>
-          </nav>
+              <div class="hide-on-med-and-down" id="perfil_pequeno">
+                <img class="responsive-img" id="foto_perfil_pequeno" src="../images/Icone.png">
+                <p>Primeiro Nome</p>
+              </div>
+            </nav>
             <!-- Dashboard COMPUTADOR FINAL-->
 
 
@@ -130,67 +122,54 @@ header('Content-Type: text/html; charset=UTF-8');
 
           <h2>Adicionar Questão</h2>
 
-
-          <!-- BOTÕES ALTERNA/DISSERTA -->
           <p class="button-group">
             <button href="#alternativa" id="btn-alternativa" value="ok" target="_self" class="waves-effect waves-light transparent">Alternativa</button>
             <button href="#dissertativa" id="btn-dissertativa" value="ok" target="_self" class="waves-effect waves-light transparent">Dissertativa</button>
           </p>
 
-          <!-- CAMPOS FORMULÁRIO -->
           <div class="items">
 
-            <div required id="campo1" class="input-field col s9 center-align hide-on-large-only">
-              <select>
-                  <option value="" selected disabled>Selecione sua matéria </option>
+          <div required id="campo1" class="input-field col s9 center-align hide-on-large-only">
+            <select>
+                <option value="" selected disabled>Selecione sua matéria </option>
+              <optgroup label="Ensino médio" style= "font-family: 'Muli'; font-size: 11px; float: left;">
+                <option value="1">Geografia</option>
+                <option value="2">História</option>
+                <option value="3">Inglês</option>
+              </optgroup>
+              <optgroup label="Ensino técnico">
+                <option value="3">Banco de dados</option>
+                <option value="4">Lógica de programação 2</option>
+                <option value="5">linguagem de programação 1</option>
+              </optgroup>
+            </select>
+            <label>Matéria <span style="color: red;">*</span></label>
+          </div>
 
-                <optgroup label="Ensino médio" style= "font-family: 'Muli'; font-size: 11px; float: left;">
-                  <option value="1">Geografia</option>
-                  <option value="2">História</option>
-                  <option value="3">Inglês</option>
-                </optgroup>
-
-                <optgroup label="Ensino técnico">
-                  <option value="3">Banco de dados</option>
-                  <option value="4">Lógica de programação 2</option>
-                  <option value="5">linguagem de programação 1</option>
-                </optgroup>
-
-              </select>
-
-              <label>Matéria <span style="color: red;">*</span></label>
-            </div>
-
-        </div>
+      </div>
 
           <div required id="campo2" class="input-field col s9 center-align hide-on-large-only">
             <select>
                 <option value="" selected disabled>Selecione seu tema </option>
-
               <optgroup label="Geografia" style= "font-family: 'Muli'; font-size: 11px; float: left;">
                 <option value="1">Hidrografia</option>
                 <option value="2">Paisagem</option>
                 <option value="3">Rondônia</option>
               </optgroup>
-
             </select>
             <label>Tema <span style="color: red;">*</span></label>
-
           </div>
 
           <div required id="campo3" class="input-field col s9 center-align hide-on-large-only">
             <select>
               <option value="" selected disabled> Selecione seu subtema </option>
-
               <optgroup label="Hidrografia" style= "font-family: 'Muli'; font-size: 11px; float: left;">
                 <option value="1">Águas do pacífico</option>
                 <option value="2">Perca do status salino</option>
                 <option value="3">Qualificador de PH neutro</option>
               </optgroup>
-
             </select>
             <label>Subtema <span style="color: red;">*</span></label>
-
           </div>
 
           <div required id="campo4"  class="col s9 center-align hide-on-large-only">
@@ -198,23 +177,22 @@ header('Content-Type: text/html; charset=UTF-8');
             <textarea placeholder="Escreva seu enunciado" id="textarea1" class="materialize-textarea"></textarea>
           </div>
 
-          <div id="simbolodiv">
-            <!-- Modal Trigger -->
-            <a href="#simbolo1" style="width: 52px;" class="waves-effect waves-light modal-trigger"><img class= "responsive-img" id = "simbolo" src ="../images/omega2.png"></a>
-            <p href="#simbolo1" style="color: black;">&nbsp;Inserir <br> Símbolo</p>
-          </div>
+            <div id="simbolodiv">
+              <!-- Modal Trigger -->
+              <a href="#simbolo1" style="width: 52px;" class="waves-effect waves-light modal-trigger"><img class= "responsive-img" id = "simbolo" src ="../images/omega2.png"></a>
+              <p href="#simbolo1" style="color: black;">&nbsp;Inserir <br> Símbolo</p>
+            </div>
 
-          <form action="#">
+
+            <form action="#">
               <div class="file-field input-field waves-effect waves-light" id="divimagem">
                 <div class="btn" style= "font-family: 'Muli'; color:white; background-color:#FFBC2B;">
-                    <span id="spanimagem" style= "font-family: 'Muli'; color:white; background-color:#FFBC2B;">Imagem </span>
-                    <input type="file" multiple>
+                  <span id="spanimagem" style= "font-family: 'Muli'; color:white; background-color:#FFBC2B;">Imagem </span>
+                  <input type="file" multiple>
                 </div>
-
                 <div class="file-path-wrapper" >
                   <input class="file-path validate" type="text">
                 </div>
-
               </div>
             </form>
 
@@ -222,94 +200,93 @@ header('Content-Type: text/html; charset=UTF-8');
             <!-- Modal Structure SÍMBOLOS -->
             <div id="simbolo1" class="modal">
 
-                <div class="modal-content">
-                  <h5 style="text-align: center;">Símbolos</h5>
-                  <p><br>Escolha sua opção:</p>
-                  <p><br>**Finge q aq tem um montão de símbolos :)**</p>
-                </div>
-
-                <div class="modal-footer">
-                  <a href="#!" style="color: white; border-radius: 40px 40px; font-family: 'Muli'; font-size: 75%;" class="modal-close waves-effect yellow darken-2 btn-flat">Salvar</a>
-                </div>
+              <div class="modal-content">
+                <h5 style="text-align: center;">Símbolos</h5>
+                <p><br>Escolha sua opção:</p>
+                <p><br>Funcionalidade em desenvolvimento</p>
+              </div>
+              <div class="modal-footer">
+                <a href="#!" style="color: white; border-radius: 40px 40px; font-family: 'Muli'; font-size: 75%;" class="modal-close waves-effect yellow darken-2 btn-flat">Salvar</a>
+              </div>
 
             </div>
 
-            <!-- ALTERNATIVA/DISSERTATIVA -->
+            <!-- Alternativa/Dissertativa -->
 
-        <!-- COMEÇO alternativa -->
+        </div> <!-- COMEÇO alternativa -->
+
         <div id="alternativa" class="alternativa" style="margin-top: -5%;">
 
-          <div class="row center-align hide-on-large-only"></div>
+          <div class="row center-align hide-on-large-only">
+          </div>
 
-        <!--CAMPOS ALTERNATIVA: ADD E RETIRAR-->
+
+          <!--CAMPOS ALTERNATIVA: ADD E RETIRAR-->
+
           <form action="#">
-
-            <div id="formulario" class= "hide-on-large-only">
+            <div id="formulario" class= "hide-on-large-only" >
               <input id="alternativa_campo" type="text" placeholder="Alternativa" name="numeroDocumento" required/>
             </div>
-
           </form>
           <a href="#" data-id="1" id="adicionarCampo" class="hide-on-large-only">+ Adicionar Campos</a>
 
+
               <label id="label_resposta2" for="textarea1" class= "hide-on-large-only">Resposta alternativa <span style="color: red;">*</span></label>
               <textarea id="respostaalternativa" maxlength="1" placeholder=" Ex: A..." required style= "font-family: 'Muli'; font-size: 100%;" class="materialize-textarea hide-on-large-only"></textarea>
+
               <div required id="dificuldade2" class="input-field col s10 center-align hide-on-large-only">
               <label id="label_dificuldade2" style="font-size: 85%;">Dificuldade da questão <span style="color: red;">*</span></label>
               <form action="#">
 
               <label>
                 <div class="col s1" class= "hide-on-large-only">
-                  <input name="group1" class="with-gap" type="radio"/>
-                  <span>Fácil</span>
-                </div>
+                <input name="group1" class="with-gap" type="radio"  />
+                <span>Fácil</span>
+              </div>
               </label>
 
               <label>
                 <div class="col s2" class= "hide-on-large-only">
-                  <input name="group1" class="with-gap" type="radio"/>
-                  <span>Médio</span>
-                </div>
+                <input name="group1" class="with-gap" type="radio"  />
+                <span>Médio</span>
+              </div>
               </label>
 
               <label>
                 <div class="col s3" class= "hide-on-large-only">
-                  <input name="group1" class="with-gap" type="radio"/>
-                  <span>Difícil</span>
-                </div>
+                <input name="group1" class="with-gap" type="radio" />
+                <span>Difícil</span>
+              </div>
             </label>
-
           </div>
 
-          <!--privacidade da questão -->
           <div required id="priv_public2" class= "hide-on-large-only">
             <label id="label_privacidade2" style="font-size: 87%;">Privacidade da questão <span style="color: red;">*</span></label>
-
             <form action="#">
+
              <label>
                <div class="col s1" class= "hide-on-large-only">
-                 <input name="group1" class="with-gap" type="radio"/>
-                 <span>Público</span>
-               </div>
+               <input name="group1" class="with-gap" type="radio"/>
+               <span>Público</span>
+             </div>
              </label>
 
              <label>
                <div class="col s2" class= "hide-on-large-only">
-                 <input name="group1" class="with-gap" type="radio"/>
-                 <span>Privado</span>
-               </div>
+               <input name="group1" class="with-gap" type="radio"/>
+               <span>Privado</span>
+             </div>
              </label>
            </form>
+         </div>
+         <button id="btn_salvar" class="hide-on-large-only waves-effect waves-light btn" type="submit" name="action">Salvar</button>
 
            </div>
-           <button id="btn_salvar" class="hide-on-large-only waves-effect waves-light btn" type="submit" name="action">Salvar</button>
-
-           <!-- FIM alternativa-->
-           </div>
-        <!-- fim da div formulario celular -->
         </div>
+        <!-- FIM - alternativa-->
 
-        <!-- COMEÇO dissertativa -->
         <div id="dissertativa" class="dissertativa">
+          <!-- COMEÇO - dissertativa -->
 
           <div class="row center-align hide-on-large-only">
 
@@ -317,37 +294,37 @@ header('Content-Type: text/html; charset=UTF-8');
                 <div class="row">
                   <label for="textarea1" id="label_resposta" style= "font-family: 'Muli'; font-size: 11px; float: left;">Resposta <span style="color: red;">*</span></label>
                   <textarea required id="respostadissertativa" placeholder="Escreva sua resposta" class="materialize-textarea"></textarea>
+                  </div>
                 </div>
-          </div>
               </form>
 
-              <!-- dificuldade da questão -->
-            <div required id="dificuldade" class="input-field col s10 center-align hide-on-large-only">
+
+              <div required id="dificuldade" class="input-field col s10 center-align hide-on-large-only">
               <label id="label_dificuldade" style="font-size: 85%;">Dificuldade da questão <span style="color: red;">*</span></label>
-
               <form action="#">
-                <label>
-                  <div class="col s1  hide-on-large-only">
-                    <input name="group1" class="with-gap" type="radio"/>
-                    <span>Fácil</span>
-                  </div>
-                </label>
 
-                <label>
-                  <div  class="col s2  hide-on-large-only">
-                    <input name="group1" class="with-gap" type="radio"/>
-                    <span>Médio</span>
-                  </div>
-                </label>
+              <label>
+                <div class="col s1  hide-on-large-only">
+                <input name="group1" class="with-gap" type="radio"/>
+                <span>Fácil</span>
+              </div>
+              </label>
 
-                <label>
-                  <div  class="col s3  hide-on-large-only">
-                    <input name="group1" class="with-gap" type="radio"/>
-                    <span>Difícil</span>
-                  </div>
-                </label>
-            </div>
-              </form>
+              <label>
+                <div  class="col s2  hide-on-large-only">
+                <input name="group1" class="with-gap" type="radio"/>
+                <span>Médio</span>
+              </div>
+              </label>
+
+              <label>
+                <div  class="col s3  hide-on-large-only">
+                <input name="group1" class="with-gap" type="radio"/>
+                <span>Difícil</span>
+              </div>
+              </label>
+             </div>
+           </form>
 
           <div required id="priv_public" class=" hide-on-large-only">
             <label id="label_privacidade" style="font-size: 87%;">Privacidade da questão <span style="color: red;">*</span></label>
@@ -372,23 +349,23 @@ header('Content-Type: text/html; charset=UTF-8');
            <button id="btn_salvar" class=" hide-on-large-only waves-effect waves-light btn" type="submit" name="action">Salvar</button>
          </div>
 
-       </div>
-      <!-- FIM - dissertativa -->
+        </div>
+      </div><!-- FIM - dissertativa -->
 
-      <!--Final do formulário de CELULAR-->
+        <!--Final do formulário de CELULAR-->
 
-      <!-- Formulário COMPUTADOR-->
+
+        <!-- Formulário COMPUTADOR-->
         <div class="row hide-on-med-and-down">
 
           <h2>Adicionar Questão</h2>
 
-          <!-- QUESTÕES ALTERNA/DISSERTA -->
-          <form method="POST">
-          <p class="button-group">
-            <button href="#alternativa-desk" id="btn-alterna-desk" value="ok" target="_self" class="waves-effect waves-light transparent">Questão alternativa</button>
-            <button href="#dissertativa-desk" id="btn-dissert-desk" value="ok" target="_self" class="waves-effect waves-light transparent">Questão dissertativa</button>
+          <p>
+            <button href="#alternativa" id="btn-alterna-desk" value="ok" target="_self" class="waves-effect waves-light btn transparent">Questão alternativa</button>
+            <button href="#dissertativa" id="btn-dissert-desk" value="ok" target="_self" class="waves-effect waves-light btn transparent">Questão dissertativa</button>
           </p>
 
+          <form method="POST">
           <div class="items">
 
           <div required id="campo1" class="input-field col s9 center-align hide-on-med-and-down">
@@ -414,22 +391,18 @@ header('Content-Type: text/html; charset=UTF-8');
                     <option value="<?php echo $row['ID_Tema'] ?>"><?php echo $row['Nome'] ?></option>
                 <?php } ?>
             </select>
-
             <label>Tema <span style="color: red;">*</span></label>
           </div>
 
           <div required id="campo3" class="input-field col s9 center-align hide-on-med-and-down">
             <select>
               <option value="" selected disabled> Selecione seu subtema </option>
-
               <optgroup label="Hidrografia" style= "font-family: 'Muli'; font-size: 11px; float: left;">
                 <option value="1">Águas do pacífico</option>
                 <option value="2">Perca do status salino</option>
                 <option value="3">Qualificador de PH</option>
               </optgroup>
-
             </select>
-
             <label>Subtema <span style="color: red;">*</span></label>
           </div>
 
@@ -444,16 +417,15 @@ header('Content-Type: text/html; charset=UTF-8');
               <p href="#simbolo1" style="color: black;">&nbsp;Inserir <br> Símbolo</p>
             </div>
 
-            <!-- ADD IMG -->
+
             <form action="#">
               <div class="file-field input-field waves-effect waves-light" id="divimagem">
                 <div class="btn" style= "font-family: 'Muli'; color:white; background-color:#FFBC2B;">
-                    <span id="spanimagem" style= "font-family: 'Muli'; color:white; background-color:#FFBC2B;">Imagem </span>
-                    <input type="file" multiple>
+                  <span id="spanimagem" style= "font-family: 'Muli'; color:white; background-color:#FFBC2B;">Imagem </span>
+                  <input type="file" multiple>
                 </div>
-
                 <div class="file-path-wrapper" >
-                    <input id="inputimg" class="file-path validate" type="text">
+                  <input class="file-path validate" type="text">
                 </div>
               </div>
             </form>
@@ -464,91 +436,92 @@ header('Content-Type: text/html; charset=UTF-8');
               <div class="modal-content">
                 <h5 style="text-align: center;">Símbolos</h5>
                 <p><br>Escolha sua opção:</p>
-                <p><br>**Finge q aq tem um montão de símbolos :)**</p>
+                <p><br>Funcionalidade em desenvolvimento</p>
               </div>
-
               <div class="modal-footer">
                 <a href="#!" class="modal-close waves-effect waves-green btn-flat">Salvar</a>
               </div>
-
             </div>
 
-        <!-- Alternativa/Dissertativa COMPUTADOR -->
+            <!-- Alternativa/Dissertativa COMPUTADOR -->
 
         <!-- COMEÇO ALTERNATIVA -->
-        <div id="alternativa-desk" class="alternativa-desk">
+        <div id="alternativa" class="alternativa-desk">
 
           <div class="row center-align hide-on-med-and-down">
-              <input type="text"> <i class="material-icons">add</i> </input>
-              <input type="text"> <i class="material-icons">alarm</i> </input>
-              <input type="text"> <i class="material-icons">android</i> </input>
+              <input type="text"> <i class="material-icons">add</i>
+              <input type="text"> <i class="material-icons">alarm</i>
+              <input type="text"> <i class="material-icons">android</i>
 
               <button class="material-icons">add</button>
               <button class="material-icons red">clear</button>
           </div>
 
-            <label for="textarea1">Resposta</label>
-            <textarea style= "font-family: 'Muli'; font-size: 11px; float: left;" class="materialize-textarea"></textarea>
-            <div required id="dificuldade" class="input-field col s10 center-align hide-on-med-and-down">
+              <label for="textarea1">Resposta</label>
+              <textarea style= "font-family: 'Muli'; font-size: 11px; float: left;" class="materialize-textarea"></textarea>
 
+              <div required id="dificuldade-desk2" class="input-field col s10 center-align hide-on-med-and-down">
               <form action="#">
                 <label>Dificuldade <span style="color: red;">*</span></label>
 
-                <label>
-                  <div class="col s1 hide-on-med-and-down">
-                    <input name="group1" type="radio" checked />
-                    <span>Fácil</span>
-                  </div>
-                </label>
+              <label>
+                <div class="col s1 hide-on-med-and-down">
+                <input name="group1" type="radio" checked/>
+                <span>Fácil</span>
+              </div>
+              </label>
 
-                <label>
-                  <div class="col s2 hide-on-med-and-down">
-                    <input name="group1" type="radio" checked />
-                    <span>Médio</span>
-                  </div>
-                </label>
+              <label>
+                <div class="col s2 hide-on-med-and-down">
+                <input name="group1" type="radio" checked/>
+                <span>Médio</span>
+              </div>
+              </label>
 
-                <label>
-                  <div class="col s3 hide-on-med-and-down">
-                    <input name="group1" type="radio" checked />
-                    <span>Difícil</span>
-                  </div>
-                </label>
+              <label>
+                <div class="col s3 hide-on-med-and-down">
+                <input name="group1" type="radio" checked/>
+                <span>Difícil</span>
+              </div>
+              </label>
+
+           <button class="cadastro btn flow-text waves-effect yellow darken-2 waves-light hoverable" type="submit">Salvar</button>
            </div>
         <!-- FIM - ALTERNATIVA -->
         </div>
 
         <!-- COMEÇO - dissertativa -->
-        <div id="dissertativa-desk" class="dissertativa-desk">
+        <div id="dissertativa" class="dissertativa-desk">
 
           <div class="row center-align hide-on-med-and-down">
               <form class="col s12">
                 <div class="row">
-                  <div class="input-field col s9" id="respostadissertativa">
+                  <div class="input-field col s9" id="respostadissertativa-desk">
                     <label for="textarea1">Resposta</label>
                     <textarea style= "font-family: 'Muli'; font-size: 11px; float: left;" class="materialize-textarea"></textarea>
                   </div>
                 </div>
               </form>
 
-          <div required id="dificuldade" class="input-field center-align hide-on-med-and-down">
 
+          <div required id="dificuldade-desk" class="input-field center-align hide-on-med-and-down">
           <form action="#">
-            <label>Dificuldade <span style="color: red;">*</span></label>
 
+            <label>Dificuldade <span style="color: red;">*</span></label>
           <label>
+
             <div class="row">
             <form class="col s1 hide-on-med-and-down">
-              <input name="group1" type="radio" checked/>
-              <span>Fácil</span>
-            </form>
+            <input name="group1" type="radio" checked/>
+            <span>Fácil</span>
+          </form>
           </label>
 
           <label>
             <form class="col s2 hide-on-med-and-down">
-              <input name="group1" type="radio" checked/>
-              <span>Médio</span>
-            </form>
+            <input name="group1" type="radio" checked/>
+            <span>Médio</span>
+          </form>
           </label>
 
           <label>
@@ -559,16 +532,34 @@ header('Content-Type: text/html; charset=UTF-8');
           </label>
 
             </div>
-          </div>
-        <!-- FIM - DISSERTATIVA -->
         </div>
-      </div>
 
-      <!--Final do formulário de COMPUTADOR-->
-      <div>
-          <button class="btn cadastro flow-text waves-effect yellow darken-2 waves-light hoverable" type="submit">Salvar</button>
+        <div required id="priv_public-desk" class=" hide-on-large-only">
+          <label id="label_privacidade-desk" style="font-size: 87%;">Privacidade da questão <span style="color: red;">*</span></label>
+          <form action="#">
+
+           <label>
+             <div class="col s1  hide-on-large-only">
+               <input name="group1" class="with-gap" type="radio"/>
+               <span>Público</span>
+             </div>
+           </label>
+
+           <label>
+             <div class="col s2  hide-on-large-only">
+               <input name="group1" class="with-gap" type="radio"/>
+               <span>Privado</span>
+             </div>
+           </label>
+
+         </form>
+       </div>
+
+       <button class="cadastro btn flow-text waves-effect yellow darken-2 waves-light hoverable" type="submit">Salvar</button>
       </div>
-      </form>
+      <!-- FIM - DISSERTATIVA -->
+      </div>
+      <!--Final do formulário de COMPUTADOR-->
 
       <?php
       //verificar se clicou no botão
@@ -584,7 +575,7 @@ header('Content-Type: text/html; charset=UTF-8');
             $u->conectar();
             if($u->msgErro == ""){
 
-                if($q->cadastrarQuestao($materia, $tema, $enunciado, $_SESSION['ID_Usuario']))
+                if($q->cadastrarQuestao($materia, $tema, $enunciado))
                 {
                   echo "Cadastrado com sucesso!";
                 }
@@ -602,21 +593,21 @@ header('Content-Type: text/html; charset=UTF-8');
       </div>
 
 
-        <!-- JQuery CDN -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-        <!-- JavaScript Materialize compilado e minificado -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <!-- JQuery CDN -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+      <!-- JavaScript Materialize compilado e minificado -->
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-        <!--INICIALIZAÇÃO MENU (sanduiche) CELULAR (JQuery)-->
-        <script>
+      <!--INICIALIZAÇÃO MENU (sanduiche) CELULAR (JQuery)-->
+      <script>
         $(document).ready(function(){
           $('.sidenav').sidenav();});
-        </script>
+      </script>
 
         <!--INICIALIZAÇÃO CAMPO LISTA MATÉRIA (JQuery)-->
-        <script>
+      <script>
         $(document).ready(function(){
           $('select').formSelect();
             });
@@ -630,7 +621,7 @@ header('Content-Type: text/html; charset=UTF-8');
       });
       </script>
 
-      <!-- CÓDIGO BOTÃO ALTERNATIVA/DISSERTATIVA (mobile - JavaScript) -->
+      <!--CÓDIGO BOTÃO ALTERNATIVA/DISSERTATIVA (mobile - JavaScript)-->
       <script>
           var btn1 = document.getElementById('btn-dissertativa');
           var alternativa = document.querySelector('.alternativa');
@@ -672,52 +663,53 @@ header('Content-Type: text/html; charset=UTF-8');
          }
        });
       </script>
+      <!--FINAL CÓDIGO BOTÃO ALTERNATIVA/DISSERTATIVA (mobile - JavaScript)-->
 
-      <!-- CÓDIGO BOTÃO ALTERNATIVA/DISSERTATIVA (desktop - JavaScript) -->
+      <!--CÓDIGO BOTÃO ALTERNATIVA/DISSERTATIVA (desktop - JavaScript)-->
       <script>
-          var btn1 = document.getElementById('btn-dissert-desk');
-          var alternativa = document.querySelector('.alternativa-desk');
+          var btn3 = document.getElementById('btn-dissert-desk');
+          var alternativa2 = document.querySelector('.alternativa-desk');
           var degrade = document.querySelector('.degrade');
           var degrade2 = document.querySelector('.degrade2');
           var degrade3 = document.querySelector('.degrade3');
-          btn1.addEventListener('click', function() {
+          btn3.addEventListener('click', function() {
 
-          if (dissertativa.style.display = 'block') {
-              alternativa.style.display = 'none';
+          if (dissertativa2.style.display = 'block') {
+              alternativa2.style.display = 'none';
               degrade2.style.display = 'block';
               degrade3.style.display = 'none';
               degrade.style.display = 'none';
           }
           else {
-              alternativa.style.display = 'block';
+              alternativa2.style.display = 'block';
               degrade3.style.display = 'block';
               degrade.style.display = 'none';
               }
             });
 
-         var btn2 = document.getElementById('btn-alterna-desk');
-         var dissertativa = document.querySelector('.dissertativa-desk');
+         var btn4 = document.getElementById('btn-alterna-desk');
+         var dissertativa2 = document.querySelector('.dissertativa-desk');
          var divdegrade = document.querySelector('.degrade');
          var divdegrade2 = document.querySelector('.degrade2');
          var divdegrade3 = document.querySelector('.degrade3');
-         btn2.addEventListener('click', function() {
+         btn4.addEventListener('click', function() {
 
-         if (alternativa.style.display = 'block') {
-             dissertativa.style.display = 'none';
+         if (alternativa2.style.display = 'block') {
+             dissertativa2.style.display = 'none';
              divdegrade2.style.display = 'none';
              divdegrade3.style.display = 'block';
              divdegrade.style.display = 'none';
          }
          else {
-             dissertativa.style.display = 'block';
+             dissertativa2.style.display = 'block';
              divdegrade2.style.display = 'block';
              divdegrade.style.display = 'none';
          }
        });
      </script>
+     <!--FINAL CÓDIGO BOTÃO ALTERNATIVA/DISSERTATIVA (desktop - JavaScript)-->
 
-
-      <!--TRANSIÇÃO COR BOTÃO ALTERNATIVA E DISSERTATIVA (JavaScript)-->
+      <!--TRANSIÇÃO COR BOTÃO ALTERNATIVA E DISSERTATIVA-->
       <script>
       let myButton = document.querySelectorAll('.button-group > button');
 
@@ -734,9 +726,10 @@ header('Content-Type: text/html; charset=UTF-8');
           }
       }
       </script>
+      <!--FINAL TRANSIÇÃO COR BOTÃO ALTERNATIVA E DISSERTATIVA-->
 
 
-      <!--ADD E REMOVER CAMPOS ALTERNATIVA-->
+      <!--TESTE TESTE TESTE-->
       <script>
       $(function () {
           var divContent = $('#formulario');
@@ -765,10 +758,10 @@ header('Content-Type: text/html; charset=UTF-8');
               letra--;
               i--;
 
-
-          });
-      });
+              });
+            });
       </script>
-      <!--FINAL ADD E REMOVER CAMPOS ALTERNATIVA-->
+      <!--TESTE TESTE TESTE-->
+
 
   </html>

@@ -82,8 +82,8 @@
   #simbolo { width: 30%; }
 
   div#simbolo1.modal.open{
-    border-radius: 20px 20px;
-    border: #7C6FBF 10px solid;
+    border-radius: 15px 15px;
+    border: #7C6FBF 5px solid;
   }
 /* CÓDIGOS QUE ATINGEM O SITE INTEIRO FINAL */
 
@@ -115,66 +115,21 @@
   .alternativa, .dissertativa, .alternativa-desk, .dissertativa-desk { display: none; }
   /*CÓDIGOS DO JAVASCRIPT FINAL*/
 
-  /*CAMPOS QUE MUDAM ALTERNATIVA*/
-  #adicionarCampo { margin-left: 18%; }
-
-  #alternativa_campo, .conteudoIndividual {
-    margin-left: 18%;
-    width: 72%;
-    margin-top: -10%;
-  }
-
-  #dificuldade2 form{
-    display: grid;
-    gap: 3em;
-    grid-template-columns: 19% 21% 20%;
-    margin-top: 18%;
-    margin-left: 16%;
-    }
-
-    #label_resposta2 {
-      margin-left: -35%;
-      margin-top: 13%;
-      position: absolute;
-    }
-
-    #respostaalternativa {
-      width: 72%;
-      margin-left: 18%;
-      margin-top: 13%;
-      text-transform: uppercase;
-    }
-
-    #label_dificuldade2 {
-      margin-left: 15%;
-      margin-top: -15%;
-    }
-
-    #priv_public2 {
-      display: grid;
-      gap: 2em;
-      grid-template-columns: 30%;
-      margin-top: 8%;
-      margin-left: 17%;
-    }
-
-    #label_privacidade2 {
-      width: 150%;
-      margin-left: 5%;
-      margin-top: 1%;
-    }
-  /*FINAL DOS CAMPOS QUE MUDAM ALTERNATIVA*/
-
   /*CAMPOS QUE MUDAM DISSERTATIVA*/
   #label_resposta { margin-left: 18%; }
 
-  #respostadissertativa
+  #respostadissertativa /*mobile*/
   {
     width: 70%;
     margin-left: 8%;
   }
 
-  #dificuldade form{
+  #respostadissertativa-desk { /*desktop*/
+    width: 78%;
+    margin-left: 15.7%;
+  }
+
+  #dificuldade form{ /*mobile*/
     display: grid;
     gap: 3em;
     grid-template-columns: 19% 21% 20%;
@@ -182,10 +137,23 @@
     margin-left: 16%;
     }
 
-    #label_dificuldade {
+    #label_dificuldade { /*mobile*/
       margin-left: 15%;
       margin-top: -13%;
     }
+
+    #dificuldade-desk form{ /*desktop*/
+      display: grid;
+      gap: 3em;
+      grid-template-columns: 19% 21% 20%;
+      margin-top: 10%;
+      margin-left: 16%;
+      }
+
+      #label_dificuldade-desk { /*desktop*/
+        margin-left: 15%;
+        margin-top: -13%;
+      }
 
     #priv_public form {
       display: grid;
@@ -214,6 +182,66 @@
     }
   /*FINAL DOS CAMPOS QUE MUDAM DISSERTATIVA*/
 
+  /*CAMPOS QUE MUDAM ALTERNATIVA*/
+  #adicionarCampo { margin-left: 18%; }
+
+  #alternativa_campo, .conteudoIndividual {
+    margin-left: 18%;
+    width: 72%;
+    margin-top: -10%;
+  }
+
+    #label_resposta2 { /*mobile*/
+      margin-left: -39%;
+      margin-top: 13%;
+      position: absolute;
+    }
+
+    #respostaalternativa { /*mobile*/
+      width: 72%;
+      margin-left: 18%;
+      margin-top: 13%;
+      text-transform: uppercase;
+    }
+
+    #dificuldade2 form{ /*mobile*/
+      display: grid;
+      gap: 3em;
+      grid-template-columns: 19% 21% 20%;
+      margin-top: 18%;
+      margin-left: 16%;
+      }
+
+    #label_dificuldade2 { /*mobile*/
+      margin-left: 15%;
+      margin-top: -15%;
+    }
+
+    #dificuldade-desk2 form{ /*desktop*/
+      display: grid;
+      gap: 3em;
+      grid-template-columns: 19% 21% 20%;
+      margin-left: 5%;
+      }
+
+    #label_dificuldade-desk2{ /*desktop*/
+      margin-left: 15%; }
+
+    #priv_public2 { /*mobile*/
+      display: grid;
+      gap: 2em;
+      grid-template-columns: 30%;
+      margin-top: 8%;
+      margin-left: 17%;
+    }
+
+    #label_privacidade2 { /*mobile*/
+      width: 150%;
+      margin-left: 5%;
+      margin-top: 1%;
+    }
+  /*FINAL DOS CAMPOS QUE MUDAM ALTERNATIVA*/
+
   /*CÓDIGOS DAS CORES DOS BOTÕES QUE MUDAM*/
     .button-group{
         display: flex;
@@ -232,7 +260,7 @@
         background-color: #9785D3 !important;
         box-shadow: 0px 1.5px 3px rgba(0, 0, 0, 0.3);
         color: white!important;
-        transition: none;
+
     }
   /*FINAL DOS CÓDIGOS DAS CORES DOS BOTÕES QUE MUDAM*/
 

@@ -776,8 +776,8 @@ span {
 }
 
 div#comp.modal.open{
-  border-radius: 20px 20px;
-  border: #7C6FBF 10px solid;
+  border-radius: 15px 15px;
+  border: #7C6FBF 5px solid;
 }
 
 #compartilhar {
@@ -838,8 +838,8 @@ div#comp.modal.open{
 }
 
 div#tutor.modal.open{
-  border-radius: 20px 20px;
-  border: #7C6FBF 10px solid;
+  border-radius: 15px 15px;
+  border: #7C6FBF 5px solid;
 }
 
 #tutorial {
