@@ -111,8 +111,81 @@
           <div class="col s4">
           <img class="responsive-img" id="documentoimg" src="../images/documento.png">
           </div>
+
+          <!-- Nome do documento -->
           <div class="col s8 center">
           <p id="documentonome"> Testando.txt</p>
+          </div>
+
+          <!-- Botões -->
+          <div>
+
+            <!-- Modal Trigger -->
+            <a class="waves-effect waves-light btn modal-trigger" id="botao1" href="#modal1"> PDF </a>
+
+            <!-- Modal Structure -->
+            <div id="modal1" class="modal">
+              <div class="modal-content">
+                <h4 id="gerarpdf" class="center-align" >Gerar PDF</h4>
+
+                  <div class="row">
+                  <div class="input-field col s12">
+                      <input id="input_text" type="number" data-length="1">
+                        <label id="labelversoes"for="input_text">Insira o número de versões:</label>
+                  </div>
+                  </div>
+
+                   <form action="#">
+                     <p class="center-align" id="gabarito"> Gerar gabarito? </p>
+                     <p>
+                       <label>
+                         <input class="with-gap" name="group1" type="radio"  />
+                         <span>Sim</span>
+                       </label>
+                     </p>
+                     <p>
+                       <label>
+                         <input class="with-gap" name="group1" type="radio"  />
+                        <span>Não</span>
+                      </label>
+                    </p>
+                   </form>
+
+              </div>
+              <div class="modal-footer">
+                <a href="#!" id="btn1salvar" class="modal-close waves-effect waves-green btn-flat">Salvar</a>
+              </div>
+            </div>
+
+            <!-- Modal Trigger 2 -->
+            <a class="waves-effect waves-light btn modal-trigger" id="botão2" href="#modal2">Moodle</a>
+
+            <!-- Modal Structure 2 -->
+            <div id="modal2" class="modal" >
+              <div class="modal-content">
+
+                <form action="#">
+                  <p class="center-align" id="XML"> Deseja baixar o documento em formato XML? </p>
+                  <p>
+                    <label>
+                      <input class="with-gap" name="group1" type="radio"  />
+                      <span>Sim</span>
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      <input class="with-gap" name="group1" type="radio"  />
+                     <span>Não</span>
+                   </label>
+                 </p>
+                </form>
+
+              </div>
+              <div class="modal-footer">
+                <a href="#!" id="btn2salvar" class="modal-close waves-effect waves-green btn-flat">Salvar</a>
+              </div>
+            </div>
+
           </div>
           </div>
         </div>
@@ -120,6 +193,36 @@
     </div>
   </div>
 
+    <!--RODAPÉ--> <!--NÃO TIRAR ESSE CÓDIGO DO LUGAR, MESMO QUE ELE DEVERIA FICAR EM ÚLTIMO POR SER O RODAPÉ-->
+
+    <div class="rodape hide-on-large-only">
+      <footer class="page-footer " id="rodape">
+        <div class="container">
+          <div class="row">
+            <div class="col l4 offset-l2 s12">
+              <ul>
+                <li><button href="#documento1" value="ok" target="_self" id="btn-documento1" class="btn waves-effect waves-light transparent" style="height:80%; box-shadow: none;"><img class= "responsive-img" id="doc" src ="../images/documento1.png"></button></li>
+                <li><button href="#gabarito" value="ok" target="_self" id="btn-gabarito" class="btn waves-effect waves-light transparent" style="height:80%; box-shadow: none;"><img class= "responsive-img" id="gaba" src ="../images/questao.png"></button></li>
+                <li><button href="#add_questoes" value="ok" target="_self" id="btn-add_questoes" class="btn waves-effect waves-light transparent" style="height:80%; box-shadow: none;"><img class= "responsive-imgt" id="quest" src ="../images/coracao.png"></button></li>
+              </ul>
+            </div>
+          </div>
+     </div>
+   </div>
+
+  <!--FINAL RODAPÉ-->
+
+        <!-- DOCUMENTOS -->
+         <div class="meusdocumentos" id="meusdocumentos"></div>
+         <!--FINAL DOCUMENTOS-->
+
+         <!-- MINHAS QUESTÕES -->
+          <div class="minhasquestoes" id="minhasquestoes"></div>
+          <!--FINAL MINHAS QUESTÕES-->
+
+          <!-- FAVORITOS -->
+          <div class="favoritados" id="favoritados"></div>
+          <!--FINAL FAVORITOS-->
 
 <!-- JQuery CDN -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -134,6 +237,67 @@
 
 $(document).ready(function(){
   $('.sidenav').sidenav();});
+
+$(document).ready(function(){
+  $('.modal').modal();
+});
+
+$(document).ready(function() {
+  $('input#input_text, textarea#textarea2').characterCounter();
+});
+
+
+       //DOCUMENTO MOBILE
+       var btn1 = document.getElementById('btn-documento1');
+       var gabarito = document.querySelector('.gabarito');
+       var add_questoes = document.querySelector('.add_questoes');
+
+       btn1.addEventListener('click', function() {
+
+       if (documento1.style.display = 'block') {
+           gabarito.style.display = 'none';
+           add_questoes.style.display = 'none';
+       }
+
+       else {
+         documento1.style.display = 'none';
+       }
+
+         });
+
+         //GABARITO MOBILE
+         var btn2 = document.getElementById('btn-gabarito');
+         var documento1 = document.querySelector('.documento1');
+         var add_questoes = document.querySelector('.add_questoes');
+
+         btn2.addEventListener('click', function() {
+
+         if (gabarito.style.display = 'block') {
+             documento1.style.display = 'none';
+             add_questoes.style.display = 'none';
+         }
+
+         else {
+           gabarito.style.display = 'none';
+         }
+           });
+
+          //ADD_QUESTÃO MOBILE
+          var btn3 = document.getElementById('btn-add_questoes');
+          var documento1 = document.querySelector('.documento1');
+          var gabarito = document.querySelector('.gabarito');
+
+          btn3.addEventListener('click', function() {
+
+          if (add_questoes.style.display = 'block') {
+              documento1.style.display = 'none';
+              gabarito.style.display = 'none';
+          }
+
+          else {
+            add_questoes.style.display = 'none';
+          }
+            });
 
 </script>
 

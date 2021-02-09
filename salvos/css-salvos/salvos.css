@@ -5,6 +5,37 @@
   box-sizing: border-box;
 }
 
+/* rodapé */
+
+  #gabarito, #add_questoes { display: none; }
+
+  #documento1 {display: block;}
+
+  #documento1:checked, #gabarito:checked, #add_questoes:checked { z-index: auto; }
+
+  .documento1, .gabarito, .add_questoes { display: none; }
+
+  #rodape {
+      background-color: white;
+      height: 10%;
+      box-shadow: 0px 0px 10px 1px gray;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+
+     #rodape ul{
+      display: grid;
+      gap: 3em;
+      grid-template-columns: 25% 25% 25%;
+      margin-left: -2%;
+    }
+
+  /* fim rodapé */
+
 #titulodoc{
   font-family: Muli;
   color: #414141;
@@ -25,7 +56,84 @@
 #backgroundcard{
   background-color: white;
   color:white;
-  
+
+}
+
+#modal1{
+  border-radius: 15px 15px;
+  border: 5px solid #7C6FBF;
+}
+
+#modal2{
+  border-radius: 15px 15px;
+  border: 5px solid #7C6FBF;
+}
+
+#botao1
+{
+  font-family: "muli";
+  color: #EC0000;
+  background-color: white;
+  margin-top: 6%;
+  margin-left: 5%;
+  border-radius: 15px 15px;
+  border: #7C6FBF ;
+}
+
+#botão2
+{
+  font-family: "muli";
+  background-color: white;
+  color: #DF6C08;
+  margin-top: 6%;
+  margin-left: 2%;
+  border-radius: 15px 15px;
+  border: #7C6FBF ;
+
+}
+
+#gerarpdf
+{
+  font-family: "muli";
+  font-size: 180%;
+  color: #414141;
+  margin-bottom: 7%;
+}
+
+#btn1salvar
+{
+  font-family: "muli";
+  color: #414141;
+}
+
+#labelversoes
+{
+  font-family: "muli";
+  font-size: 105%;
+}
+
+#btn2salvar
+{
+  font-family: "muli";
+  color: #414141;
+}
+
+#gabarito
+{
+  margin-top: -6%;
+  font-family: "muli";
+  color: #717175;
+  font-size: 130%;
+  margin-bottom: 2%;
+}
+
+#XML
+{
+  margin-top: 7%;
+  font-family: "muli";
+  color: #717175;
+  font-size: 130%;
+  margin-bottom: 2%;
 }
 
 
