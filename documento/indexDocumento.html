@@ -144,7 +144,7 @@
           </div>
           <!-- FINAL DOCUMENTO -->
 
-            <!-- GABARITO -->
+          <!-- GABARITO -->
           <div class="gabarito" id="gabarito">
             <div class="row hide-on-large-only">
              <form class="col s12">
@@ -243,17 +243,42 @@
             </div>
 
             <!-- QUESTÕES DOS PROFESSORES -->
-
-            <?php
+            <div id="scroll">
+            <!--<?php    
             $u->conectar();
             $results = $q->listAll();
-             foreach($results as $row){ ?>
+             foreach($results as $row){ ?>-->
+              <img class="responsive-img" id="foto_prof" src ="../images/Icone.png">
+              <div id="quest_profs">
+                <!--<p><?php echo $row['ID_Questao_'] ?> <?php echo $row['Enunciado'] ?>
+                </p>-->
+              </div>
+              <img class="responsive-img" id="engrenagem" src ="../images/Engrenagem.png">
+            <!--<?php } ?>-->
+            <img class="responsive-img" id="foto_prof" src ="../images/Icone.png">
+
+
+
+            <!--MENINOS, AQUI SÃO CÓDIGOS REPETIDOS DAS QUESTÕES DOS PROFS,
+            PODEM APAGAR OU FAZER O QUE QUISEREM-->
+            <div id="quest_profs">
+              <!--<p><?php echo $row['ID_Questao_'] ?> <?php echo $row['Enunciado'] ?>
+              </p>-->
+            </div>
+            <img class="responsive-img" id="engrenagem" src ="../images/Engrenagem.png">
             <img class="responsive-img" id="foto_prof" src ="../images/Icone.png">
             <div id="quest_profs">
-              <p><?php echo $row['ID_Questao_'] ?> <?php echo $row['Enunciado'] ?>
-              </p>
+              <!--<p><?php echo $row['ID_Questao_'] ?> <?php echo $row['Enunciado'] ?>
+              </p>-->
             </div>
-            <?php } ?>
+            <img class="responsive-img" id="engrenagem" src ="../images/Engrenagem.png">
+            <img class="responsive-img" id="foto_prof" src ="../images/Icone.png">
+            <div id="quest_profs">
+              <!--<p><?php echo $row['ID_Questao_'] ?> <?php echo $row['Enunciado'] ?>
+              </p>-->
+            </div>
+            <img class="responsive-img" id="engrenagem" src ="../images/Engrenagem.png">
+            </div>
           </div>
           <!-- FINAL ADD_QUESTÕES -->
 
