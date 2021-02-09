@@ -31,5 +31,26 @@ Class Questao
     $sql->execute();
     return $sql->fetchAll(\PDO::FETCH_ASSOC);
   }
+
+  public function imagem($id_usuario){
+
+    global $pdo;
+
+    $sql = $pdo->prepare("SELECT ID_Imagem FROM usuario_professor WHERE ID_Usuario = :i");
+    $sql->bindValue(":i", $id_usuario);
+    $sql->execute();
+    if($sql->rowCount() > 0){
+      $dado = $sql->fetch();
+      $image = $dado['ID_Imagem'];
+
+      $sql = $pdo->prepare("SELECT Imagem FROM imagem WHERE ID_Imagem = :i");
+      $sql->bindValue(":i", $image);
+      $sql->execute();
+      if($sql->rowCount() > 0){
+        $img = $sql->fetch();
+        $_SESSION['imagem'] = $img['Imagem'];
+      }
+  }
+}
 }
 ?>

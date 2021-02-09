@@ -244,42 +244,18 @@
 
             <!-- QUESTÕES DOS PROFESSORES -->
             <div id="scroll">
-            <!--<?php    
+            <?php
             $u->conectar();
             $results = $q->listAll();
-             foreach($results as $row){ ?>-->
-              <img class="responsive-img" id="foto_prof" src ="../images/Icone.png">
+             foreach($results as $row){
+              $q->imagem($row['ID_Usuario']);?>
+              <div class="responsive-image" id= "foto_prof"><?php $_Imagem=base64_encode( $_SESSION['imagem'] ); echo "<img height='100%' width='100%' src='data:image/jpeg;base64,$_Imagem'> "; ?></div>
               <div id="quest_profs">
-                <!--<p><?php echo $row['ID_Questao_'] ?> <?php echo $row['Enunciado'] ?>
-                </p>-->
+                <p><?php echo $row['Enunciado']?></p>
               </div>
               <img class="responsive-img" id="engrenagem" src ="../images/Engrenagem.png">
-            <!--<?php } ?>-->
-            <img class="responsive-img" id="foto_prof" src ="../images/Icone.png">
+            <?php } ?>
 
-
-
-            <!--MENINOS, AQUI SÃO CÓDIGOS REPETIDOS DAS QUESTÕES DOS PROFS,
-            PODEM APAGAR OU FAZER O QUE QUISEREM-->
-            <div id="quest_profs">
-              <!--<p><?php echo $row['ID_Questao_'] ?> <?php echo $row['Enunciado'] ?>
-              </p>-->
-            </div>
-            <img class="responsive-img" id="engrenagem" src ="../images/Engrenagem.png">
-            <img class="responsive-img" id="foto_prof" src ="../images/Icone.png">
-            <div id="quest_profs">
-              <!--<p><?php echo $row['ID_Questao_'] ?> <?php echo $row['Enunciado'] ?>
-              </p>-->
-            </div>
-            <img class="responsive-img" id="engrenagem" src ="../images/Engrenagem.png">
-            <img class="responsive-img" id="foto_prof" src ="../images/Icone.png">
-            <div id="quest_profs">
-              <!--<p><?php echo $row['ID_Questao_'] ?> <?php echo $row['Enunciado'] ?>
-              </p>-->
-            </div>
-            <img class="responsive-img" id="engrenagem" src ="../images/Engrenagem.png">
-            </div>
-          </div>
           <!-- FINAL ADD_QUESTÕES -->
 
 
