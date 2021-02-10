@@ -15,6 +15,8 @@ header('Content-Type: text/html; charset=UTF-8');
   $q = new Questao;
   require_once'../Classes/Tema.php';
   $t = new Tema;
+  require_once'../Classes/Subtema.php';
+  $s = new Subtema;
 ?>
 
   <!DOCTYPE html>
@@ -404,13 +406,14 @@ header('Content-Type: text/html; charset=UTF-8');
           </div>
 
           <div required id="campo3" class="input-field col s9 center-align hide-on-med-and-down">
-            <select>
+            <select name="subtema">
               <option value="" selected disabled> Selecione seu subtema </option>
-              <optgroup label="Hidrografia" style= "font-family: 'Muli'; font-size: 11px; float: left;">
-                <option value="1">Águas do pacífico</option>
-                <option value="2">Perca do status salino</option>
-                <option value="3">Qualificador de PH</option>
-              </optgroup>
+              <?php
+                $u->conectar();
+                $results = $s->listAll();
+               foreach($results as $row){ ?>
+                  <option value="<?php echo $row['ID_Subtema'] ?>"><?php echo $row['Nome'] ?></option>
+              <?php } ?>
             </select>
             <label>Subtema <span style="color: red;">*</span></label>
           </div>
