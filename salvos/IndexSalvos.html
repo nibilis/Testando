@@ -95,103 +95,6 @@
     </nav>
     <!-- Dashboard COMPUTADOR FINAL-->
 
-    <!-- Títulos -->
-
-    <h1 class="center-align" id="titulodoc"> Meus documentos </h1>
-
-    <!-- Fim títulos -->
-
-    <!-- Documentos salvos -->
-
-    <div class="row">
-    <div class="col s12">
-      <div class="card white">
-        <div class="card-content black-text" id="backgroundcard">
-          <div class="row">
-          <div class="col s4">
-          <img class="responsive-img" id="documentoimg" src="../images/documento.png">
-          </div>
-
-          <!-- Nome do documento -->
-          <div class="col s8 center">
-          <p id="documentonome"> Testando.txt</p>
-          </div>
-
-          <!-- Botões -->
-          <div>
-
-            <!-- Modal Trigger -->
-            <a class="waves-effect waves-light btn modal-trigger" id="botao1" href="#modal1"> PDF </a>
-
-            <!-- Modal Structure -->
-            <div id="modal1" class="modal">
-              <div class="modal-content">
-                <h4 id="gerarpdf" class="center-align" >Gerar PDF</h4>
-
-                  <div class="row">
-                  <div class="input-field col s12">
-                      <input id="input_text" type="number" data-length="1">
-                        <label id="labelversoes"for="input_text">Insira o número de versões:</label>
-                  </div>
-                  </div>
-
-                   <form action="#">
-                     <p class="center-align" id="gabarito"> Gerar gabarito? </p>
-                     <p>
-                       <label>
-                         <input class="with-gap" name="group1" type="radio"  />
-                         <span>Sim</span>
-                       </label>
-                     </p>
-                     <p>
-                       <label>
-                         <input class="with-gap" name="group1" type="radio"  />
-                        <span>Não</span>
-                      </label>
-                    </p>
-                   </form>
-
-              </div>
-              <div class="modal-footer">
-                <a href="#!" id="btn1salvar" class="modal-close waves-effect waves-green btn-flat">Salvar</a>
-              </div>
-            </div>
-
-            <!-- Modal Trigger 2 -->
-            <a class="waves-effect waves-light btn modal-trigger" id="botão2" href="#modal2">Moodle</a>
-
-            <!-- Modal Structure 2 -->
-            <div id="modal2" class="modal" >
-              <div class="modal-content">
-
-                <form action="#">
-                  <p class="center-align" id="XML"> Deseja baixar o documento em formato XML? </p>
-                  <p>
-                    <label>
-                      <input class="with-gap" name="group1" type="radio"  />
-                      <span>Sim</span>
-                    </label>
-                  </p>
-                  <p>
-                    <label>
-                      <input class="with-gap" name="group1" type="radio"  />
-                     <span>Não</span>
-                   </label>
-                 </p>
-                </form>
-
-              </div>
-              <div class="modal-footer">
-                <a href="#!" id="btn2salvar" class="modal-close waves-effect waves-green btn-flat">Salvar</a>
-              </div>
-            </div>
-
-          </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
     <!--RODAPÉ--> <!--NÃO TIRAR ESSE CÓDIGO DO LUGAR, MESMO QUE ELE DEVERIA FICAR EM ÚLTIMO POR SER O RODAPÉ-->
 
@@ -210,19 +113,236 @@
      </div>
    </div>
 
-  <!--FINAL RODAPÉ-->
+   <!--FINAL RODAPÉ-->
 
-        <!-- DOCUMENTOS -->
-         <div class="meusdocumentos" id="meusdocumentos"></div>
-         <!--FINAL DOCUMENTOS-->
+      <!-- DOCUMENTO -->
+      <div class="documento1" id="documento1">
 
-         <!-- MINHAS QUESTÕES -->
-          <div class="minhasquestoes" id="minhasquestoes"></div>
-          <!--FINAL MINHAS QUESTÕES-->
+        <!-- Títulos -->
 
-          <!-- FAVORITOS -->
-          <div class="favoritados" id="favoritados"></div>
-          <!--FINAL FAVORITOS-->
+        <h1 class="center-align" id="titulodoc"> Meus documentos </h1>
+
+        <!-- Fim títulos -->
+
+        <!-- Documentos salvos -->
+
+        <div class="row">
+        <div class="col s12">
+          <div class="card white">
+            <div class="card-content black-text" id="backgroundcard">
+              <div class="row">
+              <div class="col s4">
+              <img class="responsive-img" id="documentoimg" src="../images/documento.png">
+              </div>
+
+              <!-- Nome do documento -->
+              <div class="col s8 center">
+              <p id="documentonome"> Testando.txt</p>
+              </div>
+
+              <!-- Botões -->
+              <div>
+
+                <!-- Modal Trigger -->
+                <a class="waves-effect waves-light btn modal-trigger" id="botao1" href="#modal1"> PDF </a>
+
+                <!-- Modal Structure -->
+                <div id="modal1" class="modal">
+                  <div class="modal-content">
+                    <h4 id="gerarpdf" class="center-align" >Gerar PDF</h4>
+
+                      <div class="row">
+                      <div class="input-field col s12">
+                          <input id="input_text" type="number" data-length="1">
+                            <label id="labelversoes"for="input_text">Insira o número de versões:</label>
+                      </div>
+                      </div>
+
+                       <form action="#">
+                         <p class="center-align" id="gabarito"> Gerar gabarito? </p>
+                         <p>
+                           <label>
+                             <input class="with-gap" name="group1" type="radio"  />
+                             <span>Sim</span>
+                           </label>
+                         </p>
+                         <p>
+                           <label>
+                             <input class="with-gap" name="group1" type="radio"  />
+                            <span>Não</span>
+                          </label>
+                        </p>
+                       </form>
+
+                  </div>
+                  <div class="modal-footer">
+                    <a href="#!" id="btn1salvar" class="modal-close waves-effect waves-green btn-flat">Salvar</a>
+                  </div>
+                </div>
+
+                <!-- Modal Trigger 2 -->
+                <a class="waves-effect waves-light btn modal-trigger" id="botão2" href="#modal2">Moodle</a>
+
+                <!-- Modal Structure 2 -->
+                <div id="modal2" class="modal" >
+                  <div class="modal-content">
+
+                    <form action="#">
+                      <p class="center-align" id="XML"> Deseja baixar o documento em formato XML? </p>
+                      <p>
+                        <label>
+                          <input class="with-gap" name="group1" type="radio"  />
+                          <span>Sim</span>
+                        </label>
+                      </p>
+                      <p>
+                        <label>
+                          <input class="with-gap" name="group1" type="radio"  />
+                         <span>Não</span>
+                       </label>
+                     </p>
+                    </form>
+
+                  </div>
+                  <div class="modal-footer">
+                    <a href="#!" id="btn2salvar" class="modal-close waves-effect waves-green btn-flat">Salvar</a>
+                  </div>
+                </div>
+
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      </div>
+
+      <!-- GABARITO -->
+      <div class="gabarito" id="gabarito">
+
+        <!-- Títulos -->
+
+        <h1 class="center-align" id="tituloquest"> Minhas questões </h1>
+
+        <!-- Fim títulos -->
+
+        <!-- Documentos salvos -->
+
+        <div class="row">
+
+        <div class="col s12">
+          <div class="card white">
+            <div class="card-content black-text" id="backgroundcard">
+
+                <!-- imagem
+              <div class="col s3">
+              <img class="responsive-img" id="documentoimg" src="../images/questaosalvos.png">
+              </div>
+              -->
+
+              <!-- Matéria questão -->
+              <p id="materiaquest" style:"color: purple;"> Matemática - Trigonometria</p>
+
+              <!-- Conteudo questão -->
+              <p id="conteudoquest"> Complete a equação: sen²(x) + cos²(x) = ? </p>
+
+              <!-- Privacidade questão -->
+              <form action="#" id="privacidade">
+                <div class="row">
+                <div class="col s4">
+
+                <p id="modo"> Modo: </p>
+
+                </div>
+
+                <div class="col s4" id="publico">
+                <p>
+                  <label>
+                    <input class="with-gap" name="group1" type="radio"  />
+                    <span>Público</span>
+                  </label>
+                </p>
+                </div>
+
+                <div class="col s4">
+                <p>
+                  <label>
+                    <input class="with-gap" name="group1" type="radio"  />
+                   <span>Privado</span>
+                 </label>
+               </p>
+               </div>
+             </div>
+              </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <!-- ADD_QUESTÕES -->
+      <div class="add_questoes" id="add_questoes">
+
+        <!-- Títulos -->
+
+        <h1 class="center-align" id="tituloquest"> Minhas questões </h1>
+
+        <!-- Fim títulos -->
+
+        <!-- Documentos salvos -->
+
+        <div class="row">
+
+        <div class="col s12">
+          <div class="card white">
+            <div class="card-content black-text" id="backgroundcard">
+
+                <!-- imagem
+              <div class="col s3">
+              <img class="responsive-img" id="documentoimg" src="../images/questaosalvos.png">
+              </div>
+              -->
+
+              <!-- Matéria questão -->
+              <p id="materiaquest" style:"color: purple;"> Matemática - Trigonometria</p>
+
+              <!-- Conteudo questão -->
+              <p id="conteudoquest"> Complete a equação: sen²(x) + cos²(x) = ? </p>
+
+              <!-- Privacidade questão -->
+              <form action="#" id="privacidade">
+                <div class="row">
+                <div class="col s4">
+
+                <p id="modo"> Modo: </p>
+
+                </div>
+
+                <div class="col s4" id="publico">
+                <p>
+                  <label>
+                    <input class="with-gap" name="group1" type="radio"  />
+                    <span>Público</span>
+                  </label>
+                </p>
+                </div>
+
+                <div class="col s4">
+                <p>
+                  <label>
+                    <input class="with-gap" name="group1" type="radio"  />
+                   <span>Privado</span>
+                 </label>
+               </p>
+               </div>
+             </div>
+              </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
 <!-- JQuery CDN -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

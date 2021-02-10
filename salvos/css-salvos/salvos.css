@@ -37,16 +37,36 @@
   /* fim rodapé */
 
 #titulodoc{
-  font-family: Muli;
+  font-family: "Muli";
   color: #414141;
   font-size: 220%;
 }
 
+#tituloquest{
+  margin-top: 17%;
+  font-family: "Muli";
+  color: #414141;
+  font-size: 175%;
+}
+
 #documentonome{
-  font-family: Muli;
+  font-family: "Muli";
   color: #414141;
   font-size: 130%;
   margin-right:10%;
+}
+
+#materiaquest{
+  font-family: "Muli";
+  color: #7C6FBF;
+  font-size: 90%;
+  margin-bottom: 2%;
+}
+
+#conteudoquest{
+  font-family: "Muli";
+  color: #414141;
+  font-size: 110%;
 }
 
 #documentoimg{
@@ -136,6 +156,16 @@
   margin-bottom: 2%;
 }
 
+#privacidade{
+  margin-top: 5%;
+}
+
+#modo
+{
+  font-family: "muli";
+  color: #717175;
+  font-size: 98%;
+}
 
 /*Dashboard para o computador*/
 
