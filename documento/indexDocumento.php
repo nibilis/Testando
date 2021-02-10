@@ -243,7 +243,7 @@
             </div>
 
             <!-- QUESTÕES DOS PROFESSORES -->
-            <div id="scroll">
+        <div id="scroll">
             <?php
             $u->conectar();
             $results = $q->listAll();
@@ -253,8 +253,26 @@
               <div id="quest_profs">
                 <p><?php echo $row['Enunciado']?></p>
               </div>
-              <img class="responsive-img" id="engrenagem" src ="../images/Engrenagem.png">
+              <!-- Modal Trigger engrenagem -->
+                <a href="#engrenagem-modal" style="width: 52px;" class="waves-effect waves-light modal-trigger"><img class="responsive-img" id="engrenagem" src ="../images/Engrenagem.png"></a>
             <?php } ?>
+
+            <!-- Modal Structure engrenagem -->
+            <div id="engrenagem-modal" class="modal">
+
+              <div class="modal-content">
+                <div id="addquest_documento">
+                  <button id="btn_addquest" style="margin-bottom: 7%; margin-top: 10%;" class="hide-on-large-only waves-effect waves-light btn transparent" type="submit" name="action"><img class="responsive-img" id="img_addquest" src ="../images/denunciar.png"><p id="palavra_addquestao">Denunciar</p></button>
+                  <button id="btn_addquest" style="margin-bottom: 7%;" class="hide-on-large-only waves-effect waves-light btn transparent" type="submit" name="action"><img class="responsive-img" id="img_addquest" src ="../images/favoritar.png"><p id="palavra_addquestao">Favoritar</p></button>
+                  <button id="btn_addquest" style="margin-bottom: 7%;" class="hide-on-large-only waves-effect waves-light btn transparent" type="submit" name="action"><img class="responsive-img" id="img_addquest" src ="../images/avaliar.png"><p id="palavra_addquestao">Avaliar</p></button>
+                  <button id="btn_addquest" class="hide-on-large-only waves-effect waves-light btn transparent" type="submit" name="action"><img class="responsive-img" id="img_addquest" src ="../images/nivel_dificuldade.png"><p id="palavra_addquestao">Dificuldade</p></button>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+
 
           <!-- FINAL ADD_QUESTÕES -->
 
@@ -338,6 +356,13 @@
       $(document).ready(function(){
       $('select').formSelect();
       });
+   </script>
+
+   <!-- MODAL DAS ENGRENAGENS (JQuery) -->
+   <script>
+     $(document).ready(function(){
+     $('.modal').modal();
+     });
    </script>
 
 
