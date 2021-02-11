@@ -97,12 +97,11 @@
                <li><a id= "salvos" href="../salvos/indexSalvos.html">Salvos</a>
                   <img class= "responsive-img" id = "linha2" src ="../images/linha.png"></li>
              </ul>
-
-          <a href="../perfil/indexPerfil.php" >
-           <div class="hide-on-med-and-down" id="perfil_pequeno">
-               <div id= "foto_perfil_pequeno"><?php $_Imagem=base64_encode( $_SESSION['imagem'] ); echo "<img height='100%' width='100%' src='data:image/jpeg;base64,$_Imagem'> "; ?></div>
-             <p id="nome-dashboard"><?php echo $_SESSION['NickName']; ?></p></a>
-           </div>
+             <a href="../perfil/indexPerfil.php" >
+             <div class="hide-on-med-and-down" id="perfil_pequeno">
+                <div id= "foto_perfil_pequeno"><?php $_Imagem=base64_encode( $_SESSION['imagem'] ); echo "<img height='100%' width='100%' src='data:image/jpeg;base64,$_Imagem'> "; ?></div>
+                <p id="nome-dashboard"><?php echo $_SESSION['NickName']; ?></p></a>
+             </div>
            </div>
          </nav>
 
@@ -137,7 +136,7 @@
                   <input placeholder="Insira o nome do documento" id="nome_documento" style = "text-align: center;" type="text">
                 </div>
               </div>
-              <textarea  rows="8" cols="80"></textarea>
+              <div id="quadrado" rows="8" cols="80"><br></div>
               <img class= "responsive-img" id = "seta_esquerda" src ="../images/seta_esquerda.png">
               <button id="btn_salvar" class="hide-on-large-only waves-effect waves-light btn" type="submit" name="action">Salvar</button>
               <img class= "responsive-img" id = "seta_direita" src ="../images/seta_direita.png">
@@ -145,6 +144,7 @@
             </div>
           </div>
           <!-- FINAL DOCUMENTO -->
+
 
           <!-- GABARITO -->
           <div class="gabarito" id="gabarito">
@@ -155,7 +155,7 @@
                    <center><h4 id="título_gabarito">Gabarito</h4></center>
                  </div>
                </div>
-               <textarea rows="8" cols="80"></textarea>
+               <div id="quadrado" rows="8" cols="80"><br></div>
                <img class= "responsive-img" id = "seta_esquerda2" src ="../images/seta_esquerda.png">
                <button id="btn_salvar2" class="hide-on-large-only waves-effect waves-light btn" type="submit" name="action">Salvar</button>
                <img class= "responsive-img" id = "seta_direita2" src ="../images/seta_direita.png">
@@ -169,7 +169,7 @@
           <div class="add_questoes" id="add_questoes" class="hide-on-large-only">
 
             <!-- CAMPOS FILTRO -->
-            <div id="filtro_parte1">
+            <div id="filtro_parte1" class="hide-on-large-only">
               <div class="input-field" id="materia">
                 <select>
                   <option value="" disabled selected>Matéria</option>
@@ -229,7 +229,7 @@
             </div>
             </div>
             <div>
-              <form action="#" id="filtro_parte4">
+              <form action="#" id="filtro_parte4" class="hide-on-large-only">
                 <p id="quest_favorito">
                   <label>
                     <input type="checkbox"/>
@@ -258,6 +258,7 @@
               </div>
               <!-- Modal Trigger engrenagem -->
                 <a href="#engrenagem-modal" style="width: 37px;" class="waves-effect waves-light modal-trigger hide-on-large-only"><img class="responsive-img" id="engrenagem" src ="../images/Engrenagem.png"></a>
+                <button id="btn-teste" style="margin-top: 40px; margin-left: -90%;" class="hide-on-large-only waves-effect waves-light btn pink" type="submit" name="action">Teste</button>
             <?php } ?>
 
             <!-- Modal Structure engrenagem -->
@@ -272,8 +273,6 @@
                 </div>
               </div>
             </div>
-
-            <button id="btn-teste" class="hide-on-large-only waves-effect waves-light btn pink" type="submit" name="action">Teste</button>
           </div>
 
 
