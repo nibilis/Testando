@@ -40,7 +40,6 @@
        <!--DASHBOARD CELULAR-->
 
        <div class= "row hide-on-large-only" id= "dashboardcel">
-
          <div class="col s2">
            <ul id="slide-out" class="hide-on-large-only sidenav" style="width:200px;">
              <li><div class="user-view">
@@ -95,13 +94,14 @@
                <li><a  id= "questao" href="../addquestao/indexAddQuestao.php" >Adicionar <br> questão</a></li>
                <li><a  id= "documento" href="../documento/indexDocumento.php">Adicionar <br> documento</a>
                  <img class= "responsive-img" id = "linha1" src ="../images/linha.png"></li>
-               <li><a id= "salvos" href="#!">Salvos</a>
+               <li><a id= "salvos" href="../salvos/indexSalvos.html">Salvos</a>
                   <img class= "responsive-img" id = "linha2" src ="../images/linha.png"></li>
              </ul>
 
+          <a href="../perfil/indexPerfil.php" >
            <div class="hide-on-med-and-down" id="perfil_pequeno">
                <div id= "foto_perfil_pequeno"><?php $_Imagem=base64_encode( $_SESSION['imagem'] ); echo "<img height='100%' width='100%' src='data:image/jpeg;base64,$_Imagem'> "; ?></div>
-             <p id="nome-dashboard"><?php echo $_SESSION['NickName']; ?></p>
+             <p id="nome-dashboard"><?php echo $_SESSION['NickName']; ?></p></a>
            </div>
            </div>
          </nav>
@@ -128,9 +128,10 @@
 
 
          <!-- DOCUMENTO -->
+
          <div class="documento1" id="documento1">
            <div class="row hide-on-large-only">
-            <form class="col s12">
+             <form class="col s12" method="POST">
               <div class="row">
                 <div class="input-field">
                   <input placeholder="Insira o nome do documento" id="nome_documento" style = "text-align: center;" type="text">
@@ -140,6 +141,7 @@
               <img class= "responsive-img" id = "seta_esquerda" src ="../images/seta_esquerda.png">
               <button id="btn_salvar" class="hide-on-large-only waves-effect waves-light btn" type="submit" name="action">Salvar</button>
               <img class= "responsive-img" id = "seta_direita" src ="../images/seta_direita.png">
+            </form>
             </div>
           </div>
           <!-- FINAL DOCUMENTO -->
@@ -157,13 +159,14 @@
                <img class= "responsive-img" id = "seta_esquerda2" src ="../images/seta_esquerda.png">
                <button id="btn_salvar2" class="hide-on-large-only waves-effect waves-light btn" type="submit" name="action">Salvar</button>
                <img class= "responsive-img" id = "seta_direita2" src ="../images/seta_direita.png">
-             </div>
+             </form>
+            </div>
           </div>
           <!-- FINAL GABARITO -->
 
 
           <!-- ADD_QUESTÕES -->
-          <div class="add_questoes" id="add_questoes">
+          <div class="add_questoes" id="add_questoes" class="hide-on-large-only">
 
             <!-- CAMPOS FILTRO -->
             <div id="filtro_parte1">
@@ -225,8 +228,8 @@
               </div>
             </div>
             </div>
-            <div id="filtro_parte4">
-              <form action="#">
+            <div>
+              <form action="#" id="filtro_parte4">
                 <p id="quest_favorito">
                   <label>
                     <input type="checkbox"/>
@@ -243,22 +246,22 @@
             </div>
 
             <!-- QUESTÕES DOS PROFESSORES -->
-        <div id="scroll">
+        <div id="scroll" class="hide-on-large-only">
             <?php
             $u->conectar();
             $results = $q->listAll();
              foreach($results as $row){
               $q->imagem($row['ID_Usuario']);?>
-              <div class="responsive-image" id= "foto_prof"><?php $_Imagem=base64_encode( $_SESSION['imagem'] ); echo "<img height='100%' width='100%' src='data:image/jpeg;base64,$_Imagem'> "; ?></div>
+              <div class="responsive-image" id= "foto_prof"><?php $_Imagem=base64_encode( $_SESSION['imagem_usuario'] ); echo "<img height='100%' width='100%' src='data:image/jpeg;base64,$_Imagem'> "; ?></div>
               <div id="quest_profs">
                 <p><?php echo $row['Enunciado']?></p>
               </div>
               <!-- Modal Trigger engrenagem -->
-                <a href="#engrenagem-modal" style="width: 52px;" class="waves-effect waves-light modal-trigger"><img class="responsive-img" id="engrenagem" src ="../images/Engrenagem.png"></a>
+                <a href="#engrenagem-modal" style="width: 37px;" class="waves-effect waves-light modal-trigger hide-on-large-only"><img class="responsive-img" id="engrenagem" src ="../images/Engrenagem.png"></a>
             <?php } ?>
 
             <!-- Modal Structure engrenagem -->
-            <div id="engrenagem-modal" class="modal">
+            <div id="engrenagem-modal" class="modal hide-on-large-only">
 
               <div class="modal-content">
                 <div id="addquest_documento">
@@ -270,11 +273,39 @@
               </div>
             </div>
 
-
+            <button id="btn-teste" class="hide-on-large-only waves-effect waves-light btn pink" type="submit" name="action">Teste</button>
           </div>
 
 
           <!-- FINAL ADD_QUESTÕES -->
+
+          <!--Código POST documento-->
+          <?php
+          //verificar se clicou no botão
+            if(isset($_POST['nome_documento'])){
+              $nome = addslashes($_POST['nome_documento']);
+
+            //verificar se esta preenchido
+            if(!empty($nome))
+            {
+                $u->conectar();
+                if($u->msgErro == ""){
+
+                    if($q->cadastrarQuestao($nome, $_SESSION['ID_Usuario']))
+                    {
+                      echo "Documento salvo";
+                    }
+                }
+                else {
+                  echo "Erro: ".$u->msgErro;
+                }
+            }
+            else{
+              echo "Dê um nome ao documento";
+            }
+          }
+          ?>
+          <!-- FINAL código POST documento -->
 
 
          <!-- JQuery CDN -->
@@ -368,4 +399,4 @@
 
     </body>
 
-  </html>
+</html>

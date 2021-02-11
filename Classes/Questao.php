@@ -48,7 +48,7 @@ Class Questao
       $sql->execute();
       if($sql->rowCount() > 0){
         $img = $sql->fetch();
-        $_SESSION['imagem'] = $img['Imagem'];
+        $_SESSION['imagem_usuario'] = $img['Imagem'];
       }
   }
 }
