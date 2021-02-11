@@ -145,17 +145,11 @@
     #dificuldade-desk form{ /*desktop*/
       display: grid;
       gap: 3em;
-      grid-template-columns: 19% 21% 20%;
-      margin-top: 10%;
-      margin-left: 16%;
+      grid-template-columns: 22.5% 20% 20% 20%;
+      margin-left: 18.9%;
       }
 
-      #label_dificuldade-desk { /*desktop*/
-        margin-left: 15%;
-        margin-top: -13%;
-      }
-
-    #priv_public form {
+    #priv_public form { /* mobile */
       display: grid;
       gap: 2em;
       grid-template-columns: 30%;
@@ -163,10 +157,17 @@
       margin-left: 17%;
     }
 
-    #label_privacidade {
+    #label_privacidade { /* mobile */
       position: absolute;
       margin-left: 18%;
       margin-top: -12%;
+    }
+
+    #priv_public-desk form {
+      display: grid;
+      gap: 3em;
+      grid-template-columns: 22.5% 20% 20%;
+      margin-left: 35%;
     }
 
     #btn_salvar {

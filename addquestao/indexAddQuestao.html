@@ -423,13 +423,26 @@ header('Content-Type: text/html; charset=UTF-8');
             <input placeholder="Escreva seu enunciado" id="textarea1" class="materialize-textarea" name="enunciado">
           </div>
 
-            <div id="simbolodiv">
-              <!-- Modal Trigger -->
-              <a href="#simbolo1" style="width: 52px;" class="waves-effect waves-light modal-trigger"><img class= "responsive-img" id = "simbolo" src ="../images/omega2.png"></a>
-              <p href="#simbolo1" style="color: black;">&nbsp;Inserir <br> Símbolo</p>
+          <!-- Modal Trigger -->
+          <div id="simbolodiv">
+            <a href="#simbolo1" style="width: 52px;" class="waves-effect waves-light modal-trigger"><img class= "responsive-img" id = "simbolo" src ="../images/omega2.png"></a>
+            <p href="#simbolo1" style="color: black;">Inserir símbolo</p>
+          </div>
+
+          <!-- Modal Structure SÍMBOLOS -->
+          <div id="simbolo1" class="modal">
+
+            <div class="modal-content">
+              <h5 style="text-align: center;">Símbolos</h5>
+              <p><br>Escolha sua opção:</p>
+              <p><br>Funcionalidade em desenvolvimento</p>
             </div>
+            <div class="modal-footer">
+              <a href="#!" class="modal-close waves-effect waves-green btn-flat">Salvar</a>
+            </div>
+          </div>
 
-
+            <!-- IMAGEM -->
             <form action="#">
               <div class="file-field input-field waves-effect waves-light" id="divimagem">
                 <div class="btn" style= "font-family: 'Muli'; color:white; background-color:#FFBC2B;">
@@ -442,18 +455,6 @@ header('Content-Type: text/html; charset=UTF-8');
               </div>
             </form>
 
-            <!-- Modal Structure SÍMBOLOS -->
-            <div id="simbolo1" class="modal">
-
-              <div class="modal-content">
-                <h5 style="text-align: center;">Símbolos</h5>
-                <p><br>Escolha sua opção:</p>
-                <p><br>Funcionalidade em desenvolvimento</p>
-              </div>
-              <div class="modal-footer">
-                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Salvar</a>
-              </div>
-            </div>
 
             <!-- Alternativa/Dissertativa COMPUTADOR -->
 
@@ -461,10 +462,6 @@ header('Content-Type: text/html; charset=UTF-8');
         <div id="alternativa" class="alternativa-desk">
 
           <div class="row center-align hide-on-med-and-down">
-              <input type="text"> <i class="material-icons">add</i>
-              <input type="text"> <i class="material-icons">alarm</i>
-              <input type="text"> <i class="material-icons">android</i>
-
               <button class="material-icons">add</button>
               <button class="material-icons red">clear</button>
           </div>
@@ -473,42 +470,65 @@ header('Content-Type: text/html; charset=UTF-8');
               <textarea style= "font-family: 'Muli'; font-size: 11px; float: left;" class="materialize-textarea"></textarea>
 
               <div required id="dificuldade-desk2" class="input-field col s10 center-align hide-on-med-and-down">
-              <form action="#">
-                <label>Dificuldade <span style="color: red;">*</span></label>
+                <form action="#">
+
+                  <label id="label_dificuldade-desk2" style="font-size: 85%;">Dificuldade da questão <span style="color: red;">*</span></label>
 
               <label>
-                <div class="col s1 hide-on-med-and-down">
-                <input name="group1" type="radio" checked/>
-                <span>Fácil</span>
-              </div>
+                <div class="col s1" class= "hide-on-med-and-down">
+                  <input name="group1" class="with-gap" type="radio"/>
+                  <span>Fácil</span>
+                </div>
               </label>
 
               <label>
-                <div class="col s2 hide-on-med-and-down">
-                <input name="group1" type="radio" checked/>
-                <span>Médio</span>
-              </div>
+                <div class="col s2" class= "hide-on-med-and-down">
+                  <input name="group1" class="with-gap" type="radio"/>
+                  <span>Médio</span>
+                </div>
               </label>
 
               <label>
-                <div class="col s3 hide-on-med-and-down">
-                <input name="group1" type="radio" checked/>
-                <span>Difícil</span>
-              </div>
-              </label>
+                <div class="col s3" class= "hide-on-med-and-down">
+                  <input name="group1" class="with-gap" type="radio"/>
+                  <span>Difícil</span>
+                </div>
+            </label>
+          </div>
+
+          <div required id="priv_public-desk2" class="hide-on-med-and-down">
+            <label id="label_privacidade-desk2" style="font-size: 87%;">Privacidade da questão <span style="color: red;">*</span></label>
+            <form action="#">
+
+             <label>
+               <div class="col s1 hide-on-med-and-down">
+                 <input name="group1" class="with-gap" type="radio"/>
+                 <span>Público</span>
+               </div>
+             </label>
+
+             <label>
+               <div class="col s2 hide-on-med-and-down">
+                 <input name="group1" class="with-gap" type="radio"/>
+                 <span>Privado</span>
+               </div>
+             </label>
+
+           </form>
+         </div>
 
            <button class="cadastro btn flow-text waves-effect yellow darken-2 waves-light hoverable" type="submit">Salvar</button>
-           </div>
-        <!-- FIM - ALTERNATIVA -->
+        <!-- FIM ALTERNATIVA -->
         </div>
 
-        <!-- COMEÇO - dissertativa -->
+        <!-- COMEÇO DISSERTATIVA -->
         <div id="dissertativa" class="dissertativa-desk">
 
           <div class="row center-align hide-on-med-and-down">
               <form class="col s12">
                 <div class="row">
                   <div class="input-field col s9" id="respostadissertativa-desk">
+
                     <label for="textarea1">Resposta</label>
                     <textarea style= "font-family: 'Muli'; font-size: 11px; float: left;" class="materialize-textarea"></textarea>
                   </div>
@@ -516,60 +536,59 @@ header('Content-Type: text/html; charset=UTF-8');
               </form>
 
 
-          <div required id="dificuldade-desk" class="input-field center-align hide-on-med-and-down">
-          <form action="#">
+              <div required id="dificuldade-desk" class="input-field col s10 center-align hide-on-med-and-down">
+              <form action="#">
 
-            <label>Dificuldade <span style="color: red;">*</span></label>
-          <label>
+              <label id="label_dificuldade-desk" style="font-size: 85%;">Dificuldade da questão <span style="color: red;">*</span></label>
 
-            <div class="row">
-            <form class="col s1 hide-on-med-and-down">
-            <input name="group1" type="radio" checked/>
-            <span>Fácil</span>
-          </form>
-          </label>
+              <label>
+                <div class="col s1" class= "hide-on-large-only">
+                  <input name="group1" class="with-gap" type="radio"/>
+                  <span>Fácil</span>
+                </div>
+              </label>
 
-          <label>
-            <form class="col s2 hide-on-med-and-down">
-            <input name="group1" type="radio" checked/>
-            <span>Médio</span>
-          </form>
-          </label>
+              <label>
+                <div class="col s2" class= "hide-on-large-only">
+                  <input name="group1" class="with-gap" type="radio"/>
+                  <span>Médio</span>
+                </div>
+              </label>
 
-          <label>
-            <form class="col s3 hide-on-med-and-down">
-              <input name="group1" type="radio" checked/>
-              <span>Difícil</span>
-            </form>
-          </label>
-
-            </div>
+              <label>
+                <div class="col s3" class= "hide-on-large-only">
+                  <input name="group1" class="with-gap" type="radio"/>
+                  <span>Difícil</span>
+                </div>
+            </label>
+          </div>
         </div>
 
-        <div required id="priv_public-desk" class=" hide-on-large-only">
-          <label id="label_privacidade-desk" style="font-size: 87%;">Privacidade da questão <span style="color: red;">*</span></label>
+        <div required id="priv_public-desk" class="hide-on-med-and-down">
           <form action="#">
+            <label id="label_privacidade-desk" style="font-size: 87%;">Privacidade da questão <span style="color: red;">*</span></label>
 
            <label>
-             <div class="col s1  hide-on-large-only">
+             <div class="col s1 hide-on-med-and-down">
                <input name="group1" class="with-gap" type="radio"/>
                <span>Público</span>
              </div>
            </label>
 
            <label>
-             <div class="col s2  hide-on-large-only">
+             <div class="col s1 hide-on-med-and-down">
                <input name="group1" class="with-gap" type="radio"/>
                <span>Privado</span>
              </div>
            </label>
 
          </form>
+
        </div>
 
        <button class="cadastro btn flow-text waves-effect yellow darken-2 waves-light hoverable" type="submit">Salvar</button>
       </div>
-      <!-- FIM - DISSERTATIVA -->
+      <!-- FIM DISSERTATIVA -->
       </div>
       <!--Final do formulário de COMPUTADOR-->
 
