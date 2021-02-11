@@ -37,16 +37,35 @@
   /* fim rodapé */
 
 #titulodoc{
+  margin-top: -1%;
+  margin-bottom: 3%;
   font-family: "Muli";
   color: #414141;
   font-size: 220%;
 }
 
+#btnresposta{
+  box-shadow: none;
+}
+
+#respostaimg{
+  size:50%;
+}
+
 #tituloquest{
-  margin-top: 17%;
+  margin-top: 10%;
+  margin-bottom: 3%;
   font-family: "Muli";
   color: #414141;
   font-size: 175%;
+}
+
+#titulofavori{
+  margin-top: -1%;
+  margin-bottom: 3%;
+  font-family: "Muli";
+  color: #414141;
+  font-size: 220%;
 }
 
 #documentonome{
@@ -63,7 +82,22 @@
   margin-bottom: 2%;
 }
 
+#materiafavori{
+  font-family: "Muli";
+  color: #7C6FBF;
+  font-size: 98%;
+  margin-bottom: 2%;
+}
+
+
+
 #conteudoquest{
+  font-family: "Muli";
+  color: #414141;
+  font-size: 110%;
+}
+
+#conteudofavori{
   font-family: "Muli";
   color: #414141;
   font-size: 110%;
