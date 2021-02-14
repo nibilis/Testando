@@ -107,11 +107,11 @@
 
 
       <div class="input-field col  s10 center-align hide-on-large-only" id="senha">
-          <input placeholder="Senha" id="Senha" type="text" class="validate" name="senhaCel">
+          <input placeholder="Senha" id="Senha" type="password" class="validate" name="senhaCel">
       </div>
 
       <div class="input-field col  l4 center-align hide-on-med-and-down">
-          <input placeholder="Senha" id="Senha" type="text" class="validate" name="senha">
+          <input placeholder="Senha" id="Senha" type="password" class="validate" name="senha">
       </div>
 
 

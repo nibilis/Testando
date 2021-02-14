@@ -168,7 +168,7 @@
           <!-- ADD_QUESTÕES -->
           <div class="add_questoes" id="add_questoes" class="hide-on-large-only">
 
-            <!-- CAMPOS FILTRO -->
+            <!-- CAMPOS FILTRO PARTE 1-->
             <div id="filtro_parte1" class="hide-on-large-only">
               <div class="input-field" id="materia">
                 <select>
@@ -193,6 +193,8 @@
                   <option value="3">Rondônia</option>
                 </select>
               </div>
+
+            <!-- CAMPOS FILTRO PARTE 2-->
             <div id="filtro_parte2">
               <div class="input-field" id="subtema">
                 <select>
@@ -210,6 +212,8 @@
                 </select>
               </div>
             </div>
+
+            <!-- CAMPOS FILTRO PARTE 3-->
             <div id="filtro_parte3">
               <div class="input-field" id="dificuldade">
                 <select>
@@ -228,6 +232,8 @@
               </div>
             </div>
             </div>
+
+            <!-- CAMPOS FILTRO PARTE 4-->
             <div>
               <form action="#" id="filtro_parte4" class="hide-on-large-only">
                 <p id="quest_favorito">
@@ -245,6 +251,10 @@
               </form>
             </div>
 
+            <!-- TÍTULO ADD_QUESTÕES -->
+            <h5 id="título_addquest">Adicionar Questões</h5>
+
+
             <!-- QUESTÕES DOS PROFESSORES -->
         <div id="scroll" class="hide-on-large-only">
             <?php
@@ -252,10 +262,30 @@
             $results = $q->listAll();
              foreach($results as $row){
               $q->imagem($row['ID_Usuario']);?>
+              <!-- IMAGEM USUÁRIO-->
               <div class="responsive-image" id= "foto_prof"><?php $_Imagem=base64_encode( $_SESSION['imagem_usuario'] ); echo "<img height='100%' width='100%' src='data:image/jpeg;base64,$_Imagem'> "; ?></div>
-              <div id="quest_profs">
-                <p><?php echo $row['Enunciado']?></p>
-              </div>
+
+                <!-- QUESTÕES E RESPOSTA-->
+
+                <!-- TESTE-->
+                <input type="checkbox" id="switch" />
+
+                  <label class="flip-container" for="switch" >
+                    <div class="flipper">
+                      <div class="front">
+                        <div id="quest_profs">
+                          <p><?php echo $row['Enunciado']?></p>
+                        </div>
+                      </div>
+                      <div class="back">
+                        <div id="quest_profs">
+                          <p>sla porra, pesquisa</p>
+                        </div>
+                      </div>
+                    </div>
+                  </label>
+                <!-- TESTE-->
+
               <!-- Modal Trigger engrenagem -->
                 <a href="#engrenagem-modal" style="width: 37px;" class="waves-effect waves-light modal-trigger hide-on-large-only"><img class="responsive-img" id="engrenagem" src ="../images/Engrenagem.png"></a>
                 <button id="btn-teste" style="margin-top: 40px; margin-left: -90%;" class="hide-on-large-only waves-effect waves-light btn pink" type="submit" name="action">Teste</button>
@@ -266,7 +296,8 @@
 
               <div class="modal-content">
                 <div id="addquest_documento">
-                  <button id="btn_addquest" style="margin-bottom: 7%; margin-top: 10%;" class="hide-on-large-only waves-effect waves-light btn transparent" type="submit" name="action"><img class="responsive-img" id="img_addquest" src ="../images/denunciar.png"><p id="palavra_addquestao">Denunciar</p></button>
+                  <a><img class= "responsive-img modal-close" id="btn_fechar_modal" src ="../images/fechar.png"></a>
+                  <button id="btn_addquest" style="margin-bottom: 7%;" class="hide-on-large-only waves-effect waves-light btn transparent" type="submit" name="action"><img class="responsive-img" id="img_addquest" src ="../images/denunciar.png"><p id="palavra_addquestao">Denunciar</p></button>
                   <button id="btn_addquest" style="margin-bottom: 7%;" class="hide-on-large-only waves-effect waves-light btn transparent" type="submit" name="action"><img class="responsive-img" id="img_addquest" src ="../images/favoritar.png"><p id="palavra_addquestao">Favoritar</p></button>
                   <button id="btn_addquest" style="margin-bottom: 7%;" class="hide-on-large-only waves-effect waves-light btn transparent" type="submit" name="action"><img class="responsive-img" id="img_addquest" src ="../images/avaliar.png"><p id="palavra_addquestao">Avaliar</p></button>
                   <button id="btn_addquest" class="hide-on-large-only waves-effect waves-light btn transparent" type="submit" name="action"><img class="responsive-img" id="img_addquest" src ="../images/nivel_dificuldade.png"><p id="palavra_addquestao">Dificuldade</p></button>
@@ -274,7 +305,6 @@
               </div>
             </div>
           </div>
-
 
           <!-- FINAL ADD_QUESTÕES -->
 

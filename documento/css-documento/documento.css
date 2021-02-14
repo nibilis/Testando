@@ -92,8 +92,10 @@
 
   #título_gabarito {
     color: #706f78;
-    margin-top: -5%;
+    margin-top: -4%;
     margin-left: 25%;
+    font-family: 'Muli';
+    font-size: 200%;
   }
 
   #gabarito #quadrado {
@@ -167,6 +169,14 @@
     margin-top: 60%;
   }
 
+  #título_addquest {
+    margin-left: 29%;
+    width: 80%;
+    margin-top: 10%;
+    font-family: 'Muli';
+    color: #706f78;
+  }
+
   #scroll {
     position: absolute;
     overflow: auto;
@@ -180,9 +190,9 @@
 
   #quest_profs {
     margin-top: 5%;
-    margin-left: -12%;
-    width: 117%;
-    height: 80%;
+    margin-left: -25%;
+    width: 250%;
+    height: 60%;
     border-radius: 10px 10px;
     border: 1px solid #706f78;
     padding: 5% 15% 5% 5%;
@@ -199,17 +209,28 @@
 
   #engrenagem {
     width: 70%;
-    margin-top: 40%;
-    margin-left: 15%;
+    margin-top: 20%;
   }
 
-  #btn-teste {
+  #addquest_documento {
+    margin-left: 5%;
+    width: 100%;
+  }
+
+  #btn_fechar_modal {
+  width: 12%;
+  margin-left: 89%;
+  margin-top: -15%;
+  }
+
+  #btn-teste { /*botão que o wendel pediu, ele é rosa*/
     width: 5%;
   }
 
   #btn_addquest{
-    width: 85%;
+    width: 90%;
     height: 80px;
+    padding-top: 2.5%;
     border-radius: 20px 20px;
     display: grid;
     gap: 2em;
@@ -246,6 +267,51 @@
     -webkit-box-shadow: 0 1px 0 0 #d1d1d1!important;
     box-shadow: 0 1px 0 0 #d1d1d1!important;
   }
+
+
+  /*TESTE*/
+  .flip-container {
+    width: 100px;
+    height: 100px;
+    perspective: 1000px;
+  }
+
+  .front, .back{
+    position: absolute;
+
+  }
+
+  .back{
+    transform: rotateY(180deg);
+  }
+
+  .front, .back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+
+  #switch:checked ~ .flip-container .flipper {
+    transform: rotateY(180deg);
+  }
+
+  .flipper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  #switch{
+      display: none;
+  }
+  /*TESTE*/
+
+
+
+
   /*FINAL DAS CORES DAS BORDAS DO TEXTAREA E DO INPUT*/
 
 
