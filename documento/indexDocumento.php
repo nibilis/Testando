@@ -288,7 +288,26 @@
 
               <!-- Modal Trigger engrenagem -->
                 <a href="#engrenagem-modal" style="width: 37px;" class="waves-effect waves-light modal-trigger hide-on-large-only"><img class="responsive-img" id="engrenagem" src ="../images/Engrenagem.png"></a>
-                <button id="btn-teste" style="margin-top: 40px; margin-left: -90%;" class="hide-on-large-only waves-effect waves-light btn pink" type="submit" name="action">Teste</button>
+                <button id="btn-teste" style="margin-top: 40px; margin-left: -90%;" class="hide-on-large-only waves-effect waves-light btn pink" type="submit" name="action" onclick="return addUsuario();"><?php echo $row['ID_Questao_']?></button>
+                <input type="hidden" id="campo" value="<?php echo $row['ID_Questao_']?>" />
+                <script>
+                function addUsuario() {
+                  var id = document.getElementById("campo").value;
+                  $.ajax({
+                    method: "GET",
+                    url:'teste.php',
+                    data: { id: id },
+                    complete: function (response) {
+                      alert(response.responseText);
+                    },
+                    error: function () {
+                      alert('Erro');
+                    }
+                  });
+
+          return false;
+        }
+              </script>
             <?php } ?>
 
             <!-- Modal Structure engrenagem -->
