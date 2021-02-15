@@ -5,6 +5,7 @@
   box-sizing: border-box;
 }
 
+
 /*CELULAR*/
 @media (min-width: 411px) and (min-height: 731px){
    .linha_lateral {
@@ -139,8 +140,6 @@ width: 80% !important;
 
 
 @media (min-width: 320px){
-
-
   #nome, #cpf, #endereço, #senha, #confirmasenha, #estado{
     margin-left: 3%;
     margin-top: 2%;
@@ -216,6 +215,26 @@ width: 80% !important;
     width: 130px;
     margin-left: 25%;
   }
+
+  #msgSucesso p{
+    color: #28d15b;
+    font-family: 'Muli';
+  }
+
+  #msgErro p{
+    color:  #e31b36;
+    font-family: 'Muli';
+  }
+
+  #msgErro, #msgSucesso p{
+    font-size: 0.4em;
+  }
+
+  #msgErro, #msgSucesso{
+    position: absolute;
+    top: 21%;
+    right: 23%;
+  }
 }
 
 @media (min-width: 375px){
@@ -229,10 +248,15 @@ width: 80% !important;
     background: linear-gradient(to bottom, #D0C7FC,#8F83CD, #8F83CD, #7C6FBF);
     height: 100vh;
   }
+
+  #msgErro, #msgSucesso{
+    position: absolute;
+    top: 24%;
+    right: 26%;
+  }
 }
 
 @media (min-width: 360px){
-
   .img-logo {
     width: 130px;
     margin-left: 27%;
@@ -244,6 +268,12 @@ width: 80% !important;
   .img-logo {
     width: 130px;
     margin-left: 30%;
+  }
+
+  #msgErro, #msgSucesso{
+    position: absolute;
+    top: 24%;
+    right: 33%;
   }
 }
 
@@ -336,7 +366,6 @@ width: 80% !important;
 }
 
 @media (min-width: 1024px){
-
   .row:after{
     content: none;
   }
@@ -403,11 +432,19 @@ width: 80% !important;
   width: 80% !important;
   }
 
+  #msgErro, #msgSucesso{
+    position: absolute;
+    top: 43%;
+    right: 37%;
+  }
+
+  #msgErro, #msgSucesso p{
+    font-size: 1em;
   }
 }
 
-@media (min-width: 1280px){
 
+@media (min-width: 1280px){
   .linha_lateral {
     background: linear-gradient(to bottom, #D0C7FC,#8F83CD, #8F83CD, #7C6FBF);
     height: 200vh !important;
@@ -434,6 +471,12 @@ width: 80% !important;
     margin-top: 3%;
     margin-left: 37%;
   }
+
+  #msgErro, #msgSucesso{
+    position: absolute;
+    top: 50%;
+    right: 37%;
+  }
 }
 
 @media (min-width: 1366px){
@@ -442,6 +485,11 @@ width: 80% !important;
     height: 215vh !important;
   }
 
+  #msgErro, #msgSucesso{
+    position: absolute;
+    top: 42%;
+    right: 38%;
+  }
 }
 
 @media (min-width: 1440px){

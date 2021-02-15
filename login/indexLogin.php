@@ -30,7 +30,7 @@
             }
             else
             {
-              echo "Prontuario e/ou senha estão incorretos";
+              ?><div id="msgErro"><p>Prontuario e/ou senha estão incorretos!</p></div><?php
             }
         }
         else
@@ -39,7 +39,7 @@
         }}
       else
       {
-          echo "Preencha todos os campos";
+          ?><div id="msgErro"><p>Por favor preencha todos os campos!</p></div><?php
       }}
 
 ?>
@@ -114,7 +114,6 @@
           <input placeholder="Senha" id="Senha" type="password" class="validate" name="senha">
       </div>
 
-
       <div class="col s12 center-align hide-on-large-only" id="checkbox">
 
         <form action="#">
@@ -146,7 +145,7 @@
       </div>
 
       <div class="col l6 center-align hide-on-med-and-down" id = "loginpc">
-          <button class="waves-effect waves-light btn yellow darken-2 hoverable" id="btnLogin" type="submit">Login</button>
+          <button class="waves-effect waves-light btn yellow darken-2 hoverable" id="btnLogin" type="submit" >Login</button>
       </div>
 
       <div class="col  s12 center-align hide-on-large-only" id= "esqsenha">

@@ -141,23 +141,22 @@ header('Content-Type: text/html; charset=UTF-8');
         {
           if($c->cadastrar($nome, $CPF_Usuario, $materia, $email, $cidade, $endereço, $senha))
           {
-            echo "Cadastrado com sucesso!";
+            ?><div id="msgSucesso"><p id="idSucesso">Usuario cadastrado com sucesso!</p></div><?php
           }
           else{
-            echo "email ja cadastrado";
+            ?><div id="msgErro"><p>E-mail já cadastrado no sistema!</p></div><?php
           }
         }
         else{
-          echo "Senha incorreta";
+          ?><div id="msgErro"><p>Senhas incoerentes/ou incorretas</p></div><?php
         }
-
       }
       else {
-        echo "Erro: ".$u->msgErro;
+        ?><div id="msgErro"></div><?php
       }
   }
   else{
-    echo "Preencha todos os campos";
+    ?><div id="msgErro"><p>Preencha todos os campos! &nbsp</p></div><?php
   }
 }
 ?>
