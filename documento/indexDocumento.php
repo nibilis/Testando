@@ -449,12 +449,14 @@
                     <div class="flipper">
                       <div class="front">
                         <div id="quest_profs">
-                          <p><?php echo $row['Enunciado']?></p>
+                          <span class="more"><?php echo $row['Enunciado']?></span>
                         </div>
                       </div>
                       <div class="back">
                         <div id="quest_profs">
-                          <p>sla porra, pesquisa</p>
+                          <span style="text-align: justify;" class="more">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -463,30 +465,10 @@
 
               <!-- Modal Trigger engrenagem CEL -->
                 <a href="#engrenagem-modal" style="width: 37px;" class="waves-effect waves-light modal-trigger hide-on-large-only"><img class="responsive-img" id="engrenagem" src ="../images/Engrenagem.png"></a>
-<<<<<<< Updated upstream
+
                 <button id="btn-teste" style="margin-top: 40px; margin-left: -90%;" class="hide-on-large-only waves-effect waves-light btn pink" type="submit" name="action" onclick="return addUsuario();"><?php echo $row['ID_Questao_']?></button>
                 <input type="hidden" id="campo" onclick="return addUsuario();" value="<?php echo $row['ID_Questao_']?>" />
-                <script>
-                function addUsuario() {
-                  var id = document.getElementById("campo").value;
-                  $.ajax({
-                    method: "GET",
-                    url:'teste.php',
-                    data: { id: id },
-                    complete: function (response) {
-                      alert(response.responseText);
-                    },
-                    error: function () {
-                      alert('Erro');
-                    }
-                  });
 
-          return false;
-        }
-              </script>
-=======
-                <button id="btn-teste" style="margin-top: 40px;" class="hide-on-large-only waves-effect waves-light btn pink" type="submit" name="action">Teste</button>
->>>>>>> Stashed changes
             <?php } ?>
 
             <!-- Modal Structure engrenagem CEL -->
@@ -660,6 +642,46 @@
            });
     </script>
 
+    <!--LER MAIS E LER MENOS-->
+    <script>
+
+    $(document).ready(function() {
+
+        var showChar = 70;
+        var ellipsestext = "...";
+        var moretext = "Ler Mais";
+        var lesstext = "Ler Menos";
+
+
+        $('.more').each(function() {
+            var content = $(this).html();
+
+            if(content.length > showChar) {
+
+                var c = content.substr(0, showChar);
+                var h = content.substr(showChar, content.length - showChar);
+
+                var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
+
+                $(this).html(html);
+            }
+
+        });
+
+        $(".morelink").click(function(){
+            if($(this).hasClass("less")) {
+                $(this).removeClass("less");
+                $(this).html(moretext);
+            } else {
+                $(this).addClass("less");
+                $(this).html(lesstext);
+            }
+            $(this).parent().prev().toggle();
+            $(this).prev().toggle();
+            return false;
+        });
+    });
+  </script>
 
     </body>
 

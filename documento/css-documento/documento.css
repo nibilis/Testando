@@ -234,6 +234,14 @@
   }
   /*FINAL TRANSIÇÃO: MUDAR A QUESTÃO P/ RESPOSTA CEL*/
 
+  /*TESTE*/
+
+  .morecontent span {
+    display: none;
+}
+.morelink {
+    display: block;
+}
 
 /*FINAL FORMATAÇÃO COMPUTADOR*/
 
@@ -426,12 +434,13 @@
     margin-top: 5%;
     margin-left: -25%;
     width: 250%;
-    height: 60%;
+    height: 72%;
     font-size: 120%;
     color: black;
     border-radius: 10px 10px;
     border: 1px solid #706f78;
-    padding: 2% 2% 2% 2%;
+    padding: 5% 5% 5% 5%;
+    overflow: auto;
   }
 
   #foto_prof {
