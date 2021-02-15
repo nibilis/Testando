@@ -5,9 +5,242 @@
   box-sizing: border-box;
 }
 
+/*FORMATAÇÃO COMPUTADOR*/
+
+/*JAVASCRIPT CEL*/
+  #gabarito_desk { display: none; }
+
+  #documento1_desk {display: block;}
+
+  #documento1_desk:checked, #gabarito_desk:checked, { z-index: auto; }
+
+  .documento1_desk, .gabarito_desk, { display: none; }
+
+  /*DOCUMENTO*/
+  #nome_documento_desk {
+    position: absolute;
+    margin-top: 0%;
+    margin-left: 12%;
+    width: 32%;
+    padding-left: 1%;
+    padding-right: 1%;
+    text-overflow: ellipsis;
+  }
+
+  #documento1_desk #quadrado_desk {
+    position: absolute;
+    width: 40%;
+    height: 65%;
+    margin-left: 2.5%;
+    top: 24%;
+    border-radius: 20px 20px;
+    border: 1px solid #6363638c;
+    padding: 2% 2% 2% 2%;
+  }
+
+  #btn_gabarito_desk {
+    position: absolute;
+    font-size: 75%;
+    font-family: 'Muli';
+    width: 10%;
+    height: 5%;
+    border-radius: 40px 40px;
+    top: 92%;
+    left: 25%;
+    color: #5f5e60;
+  }
+
+  #btn_documento_desk {
+    position: absolute;
+    font-size: 75%;
+    font-family: 'Muli';
+    width: 10%;
+    height: 5%;
+    border-radius: 40px 40px;
+    top: 92%;
+    left: 11%;
+    color: #5f5e60;
+  }
+
+  /*GABARITO*/
+  #título_gabarito_desk {
+    position: absolute;
+    margin-top: 1%;
+    margin-left: 21%;
+    font-family: 'Muli';
+    font-size: 200%;
+    color: #706f78;
+  }
+
+  #gabarito_desk #quadrado_desk {
+    position: absolute;
+    width: 40%;
+    height: 65%;
+    margin-left: 2.5%;
+    top: 24%;
+    border-radius: 20px 20px;
+    border: 1px solid #6363638c;
+    padding: 2% 2% 2% 2%;
+  }
+
+  /*FUNCIONA EM TUDO: ADD_QUESTÕES CEL*/
+
+  #filtro_parte1_desk { /*matéria, tema e subtema*/
+    position: absolute;
+    display: grid;
+    gap: 3em;
+    grid-template-columns: 25% 25% 25%;
+    left: 50%;
+    top: 14%;
+  }
+
+  #filtro_parte2_desk { /*modalidade, dificuldade e origem*/
+    position: absolute;
+    display: grid;
+    gap: 3em;
+    grid-template-columns: 25% 25% 25%;
+    top: 22%;
+    left: 50%;
+  }
+
+  #filtro_parte3_desk { /*favoritos e minhas questões*/
+    position: absolute;
+    display: grid;
+    gap: 3em;
+    grid-template-columns: 40% 55%;
+    top: 34%;
+    left: 61%;
+  }
+
+  #scroll_desk {
+    position: absolute;
+    overflow: auto;
+    width: 50%;
+    height: 59%;
+    left: 49%;
+    top: 40%;
+    display: grid;
+    gap: 1em;
+    grid-template-columns: 12% 62% 20% 15%;
+  }
+
+  #quest_profs_desk {
+    margin-top: 5%;
+    width: 360%;
+    height: 70%;
+    font-size: 120%;
+    color: black;
+    border-radius: 10px 10px;
+    border: 1px solid #706f78;
+    padding: 2% 2% 2% 2%;
+  }
+
+  #foto_prof_desk {
+    max-width: 55px;
+    max-height: 55px;
+    width: auto;
+    height: auto;
+    margin-top: 20%;
+    margin-left: 10%;
+  }
+
+  #engrenagem_desk {
+    width: 20%;
+    margin-top: 2%;
+    margin-left: 30%;
+  }
+
+  #eng {
+    width: 150%!important;
+  }
+
+  #addquest_documento_desk {
+    margin-left: 5%;
+    width: 100%;
+  }
+
+  #btn_fechar_modal {
+  width: 12%;
+  margin-left: 89%;
+  margin-top: -15%;
+  }
+
+  #btn-teste_desk { /*botão que o wendel pediu, ele é rosa*/
+    width: 5%;
+    margin-left: -95%;
+  }
+
+  #btn_addquest_desk {
+    width: 90%;
+    height: 80px;
+    padding-top: 2.5%;
+    border-radius: 20px 20px;
+    display: grid;
+    gap: 2em;
+    grid-template-columns: 20% 60%;
+  }
+
+  #img_addquest {
+    width: 110%;
+    margin-top: 50%;
+    margin-left: 20%;
+  }
+
+  #palavra_addquestao {
+    color: #59595b;
+    font-family: 'Muli';
+    font-size: 80%;
+    margin-top: 17%;
+    margin-left: -6%;
+  }
+
+  div#engrenagem-modal.modal.open{
+    border-radius: 15px 15px;
+    border: #7C6FBF 5px solid;
+  }
+
+  /*TRANSIÇÃO: MUDAR A QUESTÃO P/ RESPOSTA CEL*/
+  .flip-container_desk {
+    width: 100px;
+    height: 100px;
+    perspective: 1000px;
+  }
+
+  .back_desk{
+    transform: rotateY(180deg);
+  }
+
+  .front_desk, .back_desk{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+
+  #switch_desk:checked ~ .flip-container_desk .flipper_desk {
+    transform: rotateY(180deg);
+  }
+
+  .flipper_desk{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  #switch_desk{
+      display: none;
+  }
+  /*FINAL TRANSIÇÃO: MUDAR A QUESTÃO P/ RESPOSTA CEL*/
+
+
+/*FINAL FORMATAÇÃO COMPUTADOR*/
+
+
 /*FORMATAÇÃO CELULAR*/
 
-/*JAVASCRIPT*/
+/*JAVASCRIPT CEL*/
   #gabarito, #add_questoes { display: none; }
 
   #documento1 {display: block;}
@@ -17,7 +250,7 @@
   .documento1, .gabarito, .add_questoes { display: none; }
 
 
-/*FUNCIONA EM TUDO: DOCUMENTO*/
+/*FUNCIONA EM TUDO: DOCUMENTO CEL*/
   html {
     width: 81%;
     }
@@ -36,7 +269,7 @@
     position: absolute;
     width: 83%;
     height: 52%;
-    margin-left: 5.8%;
+    margin-left: 5.7%;
     top: 23%;
     border-radius: 20px 20px;
     border: 1px solid #6363638c;
@@ -88,7 +321,8 @@
     margin-top: -2.5%;
   }
 
-  /*FUNCIONA EM TUDO: GABARITO*/
+
+  /*FUNCIONA EM TUDO: GABARITO CEL*/
 
   #título_gabarito {
     color: #706f78;
@@ -134,7 +368,7 @@
     top: 79%;
   }
 
-  /*FUNCIONA EM TUDO: ADD_QUESTÕES*/
+  /*FUNCIONA EM TUDO: ADD_QUESTÕES CEL*/
 
   #filtro_parte1 { /*matéria e tema*/
     position: absolute;
@@ -193,9 +427,11 @@
     margin-left: -25%;
     width: 250%;
     height: 60%;
+    font-size: 120%;
+    color: black;
     border-radius: 10px 10px;
     border: 1px solid #706f78;
-    padding: 5% 15% 5% 5%;
+    padding: 2% 2% 2% 2%;
   }
 
   #foto_prof {
@@ -225,6 +461,7 @@
 
   #btn-teste { /*botão que o wendel pediu, ele é rosa*/
     width: 5%;
+    margin-left: -95%;
   }
 
   #btn_addquest{
@@ -256,20 +493,7 @@
     border: #7C6FBF 5px solid;
   }
 
-
-  /*MUDAR CORES DAS BORDAS DO TEXTAREA E DO INPUT*/
-  .select-wrapper input.select-dropdown:focus {
-    border-bottom: 1px solid rgba(0, 0, 0, 1)!important;
-  }
-
-  input{
-    border-bottom: 1px solid #d1d1d1!important;
-    -webkit-box-shadow: 0 1px 0 0 #d1d1d1!important;
-    box-shadow: 0 1px 0 0 #d1d1d1!important;
-  }
-
-
-  /*TESTE*/
+  /*TRANSIÇÃO: MUDAR A QUESTÃO P/ RESPOSTA CEL*/
   .flip-container {
     width: 100px;
     height: 100px;
@@ -307,11 +531,19 @@
   #switch{
       display: none;
   }
-  /*TESTE*/
+  /*FINAL TRANSIÇÃO: MUDAR A QUESTÃO P/ RESPOSTA CEL*/
 
 
+  /*MUDAR CORES DAS BORDAS DO TEXTAREA E DO INPUT*/
+  .select-wrapper input.select-dropdown:focus {
+    border-bottom: 1px solid rgba(0, 0, 0, 1)!important;
+  }
 
-
+  input{
+    border-bottom: 1px solid #d1d1d1!important;
+    -webkit-box-shadow: 0 1px 0 0 #d1d1d1!important;
+    box-shadow: 0 1px 0 0 #d1d1d1!important;
+  }
   /*FINAL DAS CORES DAS BORDAS DO TEXTAREA E DO INPUT*/
 
 
@@ -439,11 +671,44 @@ a {
   margin-left: -100%;
   margin-top: 40%;
   position: absolute;
-
 }
 
 
 @media (min-width: 400px){
+
+  /*RESPONSIVIDADE TELA ADD DOCUMENTO*/
+  #rodape ul {
+    margin-left: 4%;
+    margin-top: -0.5%;
+  }
+
+  #nome_documento {
+    margin-top: -2%;
+    margin-left: 21%;
+    width: 80%;
+  }
+
+  #título_gabarito {
+      margin-top: 0%;
+      margin-left: 25%;
+  }
+
+  #quest_favorito, #my_quest {
+    font-size: 120%!important;
+  }
+
+  #título_addquest {
+    margin-top: 8%;
+  }
+
+  #img_addquest {
+    margin-top: 25%;
+  }
+
+  #palavra_addquestao {
+    margin-top: 10%;
+}
+/*RESPONSIVIDADE TELA ADD DOCUMENTO*/
 
   #logo {
     width: 60%;
@@ -575,12 +840,12 @@ a {
 }
 
 #foto_perfil_pequeno {
-  max-width: 7%;
-  max-height: 45%;
+  max-width: 5%;
+  max-height: 43%;
   width: auto;
   height: auto;
-  left: 77%;
-  margin-top: -3%;
+  left: 79%;
+  margin-top: -2%;
   position: absolute;
 }
 

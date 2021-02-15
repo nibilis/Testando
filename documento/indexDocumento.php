@@ -105,29 +105,204 @@
            </div>
          </nav>
 
+         <button id="btn_documento_desk" class=" transparent hide-on-med-and-down waves-effect waves-light btn" type="submit" name="action">Documento</button>
+         <button id="btn_gabarito_desk" class="transparent hide-on-med-and-down waves-effect waves-light btn" type="submit" name="action">Gabarito</button>
+
+         <!--RODAPÉ CEL--> <!--NÃO TIRAR ESSE CÓDIGO DO LUGAR, SE TIRAR VAI DAR ERRO PRO CELULAR-->
+         <div class="rodape hide-on-large-only">
+          <footer class="page-footer " id="rodape">
+           <div class="container">
+             <div class="row">
+               <div class="col l4 offset-l2 s12">
+                 <ul>
+                   <li><button href="#documento1" value="ok" target="_self" id="btn-documento1" class="btn waves-effect waves-light transparent" style="height:80%; box-shadow: none;"><img class= "responsive-img" id="doc" src ="../images/documento1.png"></button></li>
+                   <li><button href="#gabarito" value="ok" target="_self" id="btn-gabarito" class="btn waves-effect waves-light transparent" style="height:80%; box-shadow: none;"><img class= "responsive-img" id="gaba" src ="../images/gabarito.png"></button></li>
+                   <li><button href="#add_questoes" value="ok" target="_self" id="btn-add_questoes" class="btn waves-effect waves-light transparent" style="height:80%; box-shadow: none;"><img class= "responsive-imgt" id="quest" src ="../images/add_questoes.png"></button></li>
+                 </ul>
+               </div>
+             </div>
+           </div>
+          </footer>
+         </div>
+         <!--FINAL RODAPÉ CEL-->
+
+
+         <!--FORMATAÇÃO COMPUTADOR--> <!--não tira do lugar nicole, nem vem quer
+           ficar arrumando, dxa ele quieto aq-->
+
+
+         <!-- DOCUMENTO DESK -->
+         <div class="documento1_desk" id="documento1_desk">
+           <div class="row hide-on-med-and-down">
+             <form class="col s12" method="POST">
+              <div class="row">
+                <div class="input-field">
+                  <input placeholder="Insira o nome do documento" id="nome_documento_desk" style = "text-align: center;" type="text">
+                </div>
+              </div>
+              <div id="quadrado_desk" rows="8" cols="80"><br></div>
+            </form>
+          </div>
+        </div>
+       <!-- FINAL DOCUMENTO DESK -->
+
+      <!-- GABARITO DESK -->
+      <div class="gabarito_desk" id="gabarito_desk">
+        <div class="row hide-on-med-and-down">
+         <form class="col s12">
+           <div class="row">
+             <div class="input-field">
+               <center><h4 id="título_gabarito_desk">Gabarito</h4></center>
+             </div>
+           </div>
+           <div id="quadrado_desk" rows="8" cols="80"><br></div>
+         </form>
+        </div>
+      </div>
+      <!-- FINAL GABARITO DESK -->
+
+      <!-- ADD_QUESTÕES DESK-->
+      <div class="add_questoes_desk" id="add_questoes_desk" class="hide-on-med-and-down">
+
+        <!-- CAMPOS FILTRO PARTE 1 DESK -->
+        <div id="filtro_parte1_desk" class="hide-on-med-and-down">
+          <div class="input-field" id="materia">
+            <select>
+              <option value="" disabled selected>Matéria</option>
+              <optgroup label="Ensino médio" style= "font-family: 'Muli'; font-size: 11px; float: left;">
+                <option value="1">Matemática</option>
+                <option value="2">Biologia</option>
+                <option value="3">Geografia</option>
+              </optgroup>
+              <optgroup label="Ensino técnico" style= "font-family: 'Muli'; font-size: 11px; float: left;">
+                <option value="1">Banco de Dados</option>
+                <option value="2">Lógica de Programação</option>
+                <option value="3">Alguma matéria de algum outro curso</option>
+              </optgroup>
+            </select>
+          </div>
+          <div class="input-field" id="tema">
+            <select>
+              <option value="" disabled selected>Tema</option>
+              <option value="1">Hidrografia</option>
+              <option value="2">Paisagem</option>
+              <option value="3">Rondônia</option>
+            </select>
+          </div>
+          <div class="input-field" id="subtema">
+            <select>
+              <option value="" disabled selected>Subtema</option>
+              <option value="1">Águas do pacífico</option>
+              <option value="2">Perca do status salino</option>
+              <option value="3">Qualificador de PH neutro</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- CAMPOS FILTRO PARTE 2 DESK -->
+        <div id="filtro_parte2_desk">
+          <div class="input-field hide-on-med-and-down" id="modalidade">
+            <select>
+              <option value="" disabled selected>Modalidade</option>
+              <option value="1">Alternativa</option>
+              <option value="2">Dissertativa</option>
+            </select>
+          </div>
+          <div class="input-field hide-on-med-and-down" id="dificuldade">
+            <select>
+              <option value="" disabled selected>Dificuldade</option>
+              <option value="1">Fácil</option>
+              <option value="2">Médio</option>
+              <option value="3">Difícil</option>
+            </select>
+          </div>
+          <div class="input-field hide-on-med-and-down" id="origem">
+            <select>
+              <option value="" disabled selected>Origem</option>
+              <option value="1">Vestibular</option>
+              <option value="2">Outros professores</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- CAMPOS FILTRO PARTE 3 DESK -->
+        <div>
+          <form action="#" id="filtro_parte3_desk" class="hide-on-med-and-down">
+            <p>
+              <label>
+                <input type="checkbox"/>
+                <span id="quest_favorito" style="font-size: 100%;">Favoritos</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox"/>
+                <span id="my_quest" style="font-size: 100%;">Minhas Questões</span>
+              </label>
+            </p>
+          </form>
+        </div>
+
+        <!-- DIV QUESTÕES DOS PROFESSORES DESK -->
+        <div id="scroll_desk" class="hide-on-med-and-down">
+        <?php
+        $u->conectar();
+        $results = $q->listAll();
+         foreach($results as $row){
+          $q->imagem($row['ID_Usuario']);?>
+          <!-- IMAGEM USUÁRIO DESK -->
+          <div class="responsive-image" id= "foto_prof_desk"><?php $_Imagem=base64_encode( $_SESSION['imagem_usuario'] ); echo "<img height='100%' width='100%' src='data:image/jpeg;base64,$_Imagem'> "; ?></div>
+
+            <!-- QUESTÕES E RESPOSTA DESK -->
+
+            <!-- TRANSIÇÃO: MUDAR A QUESTÃO P/ RESPOSTA DESK -->
+            <input type="checkbox" id="switch_desk" />
+
+              <label class="flip-container_desk" for="switch_desk" >
+                <div class="flipper_desk">
+                  <div class="front_desk">
+                    <div id="quest_profs_desk">
+                      <p><?php echo $row['Enunciado']?></p>
+                    </div>
+                  </div>
+                  <div class="back_desk">
+                    <div id="quest_profs_desk">
+                      <p>sla porra, pesquisa</p>
+                    </div>
+                  </div>
+                </div>
+              </label>
+            <!-- FINAL TRANSIÇÃO: MUDAR A QUESTÃO P/ RESPOSTA DESK -->
+
+          <!-- Modal Trigger engrenagem DESK -->
+            <a id="eng" href="#engrenagem-modal_desk" style="width: 37px;" class="waves-effect waves-light modal-trigger hide-on-med-and-down"><img class="responsive-img" id="engrenagem_desk" src ="../images/Engrenagem.png"></a>
+            <button id="btn-teste_desk" style="margin-top: 40px;" class="hide-on-med-and-down waves-effect waves-light btn pink" type="submit" name="action">Teste</button>
+        <?php } ?>
+
+        <!-- Modal Structure engrenagem DESK -->
+        <div id="engrenagem-modal_desk" class="modal hide-on-med-and-down">
+
+          <div class="modal-content">
+            <div id="addquest_documento_desk">
+              <a><img class= "responsive-img modal-close" id="btn_fechar_modal" src ="../images/fechar.png"></a>
+              <button id="btn_addquest_desk" style="margin-bottom: 7%;" class="hide-on-med-and-down waves-effect waves-light btn transparent" type="submit" name="action"><img class="responsive-img" id="img_addquest" src ="../images/denunciar.png"><p id="palavra_addquestao">Denunciar</p></button>
+              <button id="btn_addquest_desk" style="margin-bottom: 7%;" class="hide-on-med-and-down waves-effect waves-light btn transparent" type="submit" name="action"><img class="responsive-img" id="img_addquest" src ="../images/favoritar.png"><p id="palavra_addquestao">Favoritar</p></button>
+              <button id="btn_addquest_desk" style="margin-bottom: 7%;" class="hide-on-med-and-down waves-effect waves-light btn transparent" type="submit" name="action"><img class="responsive-img" id="img_addquest" src ="../images/avaliar.png"><p id="palavra_addquestao">Avaliar</p></button>
+              <button id="btn_addquest_desk" class="hide-on-med-and-down waves-effect waves-light btn transparent" type="submit" name="action"><img class="responsive-img" id="img_addquest" src ="../images/nivel_dificuldade.png"><p id="palavra_addquestao">Dificuldade</p></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FINAL ADD_QUESTÕES DESK-->
+
+         <!-- FINAL FORMATAÇÃO COMPUTADOR-->
+
+
 
          <!--FORMATAÇÃO CELULAR-->
 
-         <!--RODAPÉ--> <!--NÃO TIRAR ESSE CÓDIGO DO LUGAR, MESMO QUE ELE DEVERIA FICAR EM ÚLTIMO POR SER O RODAPÉ-->
-        <div class="rodape hide-on-large-only">
-          <footer class="page-footer " id="rodape">
-         <div class="container">
-           <div class="row">
-             <div class="col l4 offset-l2 s12">
-               <ul>
-                 <li><button href="#documento1" value="ok" target="_self" id="btn-documento1" class="btn waves-effect waves-light transparent" style="height:80%; box-shadow: none;"><img class= "responsive-img" id="doc" src ="../images/documento1.png"></button></li>
-                 <li><button href="#gabarito" value="ok" target="_self" id="btn-gabarito" class="btn waves-effect waves-light transparent" style="height:80%; box-shadow: none;"><img class= "responsive-img" id="gaba" src ="../images/gabarito.png"></button></li>
-                 <li><button href="#add_questoes" value="ok" target="_self" id="btn-add_questoes" class="btn waves-effect waves-light transparent" style="height:80%; box-shadow: none;"><img class= "responsive-imgt" id="quest" src ="../images/add_questoes.png"></button></li>
-               </ul>
-             </div>
-           </div>
-         </div>
-        </div>
-        <!--FINAL RODAPÉ-->
-
-
-         <!-- DOCUMENTO -->
-
+         <!-- DOCUMENTO CEL -->
          <div class="documento1" id="documento1">
            <div class="row hide-on-large-only">
              <form class="col s12" method="POST">
@@ -143,10 +318,10 @@
             </form>
             </div>
           </div>
-          <!-- FINAL DOCUMENTO -->
+          <!-- FINAL DOCUMENTO CEL -->
 
 
-          <!-- GABARITO -->
+          <!-- GABARITO CEL -->
           <div class="gabarito" id="gabarito">
             <div class="row hide-on-large-only">
              <form class="col s12">
@@ -162,13 +337,13 @@
              </form>
             </div>
           </div>
-          <!-- FINAL GABARITO -->
+          <!-- FINAL GABARITO CEL-->
 
 
-          <!-- ADD_QUESTÕES -->
+          <!-- ADD_QUESTÕES CEL-->
           <div class="add_questoes" id="add_questoes" class="hide-on-large-only">
 
-            <!-- CAMPOS FILTRO PARTE 1-->
+            <!-- CAMPOS FILTRO PARTE 1 CEL -->
             <div id="filtro_parte1" class="hide-on-large-only">
               <div class="input-field" id="materia">
                 <select>
@@ -194,7 +369,7 @@
                 </select>
               </div>
 
-            <!-- CAMPOS FILTRO PARTE 2-->
+            <!-- CAMPOS FILTRO PARTE 2 CEL -->
             <div id="filtro_parte2">
               <div class="input-field" id="subtema">
                 <select>
@@ -213,7 +388,7 @@
               </div>
             </div>
 
-            <!-- CAMPOS FILTRO PARTE 3-->
+            <!-- CAMPOS FILTRO PARTE 3 CEL -->
             <div id="filtro_parte3">
               <div class="input-field" id="dificuldade">
                 <select>
@@ -233,41 +408,41 @@
             </div>
             </div>
 
-            <!-- CAMPOS FILTRO PARTE 4-->
+            <!-- CAMPOS FILTRO PARTE 4 CEL -->
             <div>
               <form action="#" id="filtro_parte4" class="hide-on-large-only">
-                <p id="quest_favorito">
+                <p>
                   <label>
                     <input type="checkbox"/>
-                    <span style="font-size: 100%;">Favoritos</span>
+                    <span id="quest_favorito" style="font-size: 100%;">Favoritos</span>
                   </label>
                 </p>
-                <p id="my_quest">
+                <p>
                   <label>
                     <input type="checkbox"/>
-                    <span style="font-size: 100%;">Minhas Questões</span>
+                    <span id="my_quest" style="font-size: 100%;">Minhas Questões</span>
                   </label>
                 </p>
               </form>
             </div>
 
-            <!-- TÍTULO ADD_QUESTÕES -->
-            <h5 id="título_addquest">Adicionar Questões</h5>
+            <!-- TÍTULO ADD_QUESTÕES CEL -->
+            <h5 class="hide-on-large-only" id="título_addquest">Adicionar Questões</h5>
 
 
-            <!-- QUESTÕES DOS PROFESSORES -->
+            <!-- DIV QUESTÕES DOS PROFESSORES CEL -->
         <div id="scroll" class="hide-on-large-only">
             <?php
             $u->conectar();
             $results = $q->listAll();
              foreach($results as $row){
               $q->imagem($row['ID_Usuario']);?>
-              <!-- IMAGEM USUÁRIO-->
+              <!-- IMAGEM USUÁRIO CEL -->
               <div class="responsive-image" id= "foto_prof"><?php $_Imagem=base64_encode( $_SESSION['imagem_usuario'] ); echo "<img height='100%' width='100%' src='data:image/jpeg;base64,$_Imagem'> "; ?></div>
 
-                <!-- QUESTÕES E RESPOSTA-->
+                <!-- QUESTÕES E RESPOSTA CEL -->
 
-                <!-- TESTE-->
+                <!-- TRANSIÇÃO: MUDAR A QUESTÃO P/ RESPOSTA CEL -->
                 <input type="checkbox" id="switch" />
 
                   <label class="flip-container" for="switch" >
@@ -284,10 +459,11 @@
                       </div>
                     </div>
                   </label>
-                <!-- TESTE-->
+                <!-- FINAL TRANSIÇÃO: MUDAR A QUESTÃO P/ RESPOSTA CEL -->
 
-              <!-- Modal Trigger engrenagem -->
+              <!-- Modal Trigger engrenagem CEL -->
                 <a href="#engrenagem-modal" style="width: 37px;" class="waves-effect waves-light modal-trigger hide-on-large-only"><img class="responsive-img" id="engrenagem" src ="../images/Engrenagem.png"></a>
+<<<<<<< Updated upstream
                 <button id="btn-teste" style="margin-top: 40px; margin-left: -90%;" class="hide-on-large-only waves-effect waves-light btn pink" type="submit" name="action" onclick="return addUsuario();"><?php echo $row['ID_Questao_']?></button>
                 <input type="hidden" id="campo" onclick="return addUsuario();" value="<?php echo $row['ID_Questao_']?>" />
                 <script>
@@ -308,9 +484,12 @@
           return false;
         }
               </script>
+=======
+                <button id="btn-teste" style="margin-top: 40px;" class="hide-on-large-only waves-effect waves-light btn pink" type="submit" name="action">Teste</button>
+>>>>>>> Stashed changes
             <?php } ?>
 
-            <!-- Modal Structure engrenagem -->
+            <!-- Modal Structure engrenagem CEL -->
             <div id="engrenagem-modal" class="modal hide-on-large-only">
 
               <div class="modal-content">
@@ -325,7 +504,7 @@
             </div>
           </div>
 
-          <!-- FINAL ADD_QUESTÕES -->
+          <!-- FINAL ADD_QUESTÕES CEL -->
 
           <!--Código POST documento-->
           <?php
@@ -443,6 +622,43 @@
      $('.modal').modal();
      });
    </script>
+
+
+
+   <!-- CÓDIGO BOTÃO documento/gabarito (desktop - JavaScript) -->
+   <script>
+
+       //DOCUMENTO DESK
+       var btn1_desk = document.getElementById('btn_documento_desk');
+       var gabarito_desk = document.querySelector('.gabarito_desk');
+
+       btn1_desk.addEventListener('click', function() {
+
+       if (documento1_desk.style.display = 'block') {
+           gabarito_desk.style.display = 'none';
+       }
+
+       else {
+         documento1_desk.style.display = 'none';
+       }
+
+         });
+
+         //GABARITO DESK
+         var btn2_desk = document.getElementById('btn_gabarito_desk');
+         var documento1_desk = document.querySelector('.documento1_desk');
+
+         btn2_desk.addEventListener('click', function() {
+
+         if (gabarito_desk.style.display = 'block') {
+             documento1_desk.style.display = 'none';
+         }
+
+         else {
+           gabarito_desk.style.display = 'none';
+         }
+           });
+    </script>
 
 
     </body>
