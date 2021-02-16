@@ -5,13 +5,15 @@ Class Documento
 
   public $pdo;
 
-  public function cadastrarQuestao($nome, $usuario)
+  public function cadastrarDocumento($nome, $usuario)
   {
     global $pdo;
 
+    $_SESSION['nome_documento'] = $nome;
+
     //cadastrar o documento no banco de dados
     $sql = $pdo->prepare("INSERT INTO Documento (Nome_Documento, ID_Usuario) VALUES (:d, :u)");
-    $sql->bindValue(":e", $nome);
+    $sql->bindValue(":d", $nome);
     $sql->bindValue(":u", $usuario);
     $sql->execute();
 

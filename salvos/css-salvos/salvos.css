@@ -16,23 +16,33 @@
   .documento1, .gabarito, .add_questoes { display: none; }
 
   #rodape {
-      background-color: white;
-      height: 10%;
-      box-shadow: 0px 0px 10px 1px gray;
-    }
+    background-color: white;
+    height: 11%;
+    box-shadow: 0px 0px 10px 1px gray;
+  }
 
-    footer {
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-    }
+  footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
 
-     #rodape ul{
-      display: grid;
-      gap: 3em;
-      grid-template-columns: 25% 25% 25%;
-      margin-left: -2%;
+   #rodape ul{
+    display: grid;
+    gap: 3em;
+    grid-template-columns: 25% 25% 25%;
+    margin-left: -2%;
+    margin-top: -2.5%;
+  }
+
+  @media (min-width: 400px){
+
+    /*RESPONSIVIDADE TELA ADD DOCUMENTO*/
+    #rodape ul {
+      margin-left: 4%;
+      margin-top: -0.5%;
     }
+  }
 
   /* fim rodapé */
 
@@ -101,6 +111,13 @@
   font-family: "Muli";
   color: #414141;
   font-size: 110%;
+}
+
+#favoritarimg{
+  width: 10%;
+  margin-top: -13%;
+  margin-left: -5%;
+  float: left;
 }
 
 #documentoimg{

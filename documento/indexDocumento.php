@@ -10,6 +10,8 @@
     $q = new Questao;
     require_once'../Classes/DataBase.php';
     $u = new DataBase;
+    require_once'../Classes/Documento.php';
+    $d = new Documento;
  ?>
 
 
@@ -56,7 +58,7 @@
                  <img src="../images/circulo_roxo_claro.png" id="roxo_claro">
                  <img src="../images/circulo_amarelo_grande.png" id="amarelo_grande">
                  <ul id="links_menucel">
-                   <li><a id="perfil" class=" waves-effect center-align" href="../perfil/indexPerfil.html">Perfil</a></li>
+                   <li><a id="perfil" class=" waves-effect center-align" href="../perfil/indexPerfil.php">Perfil</a></li>
                    <li><div id="divider" class="divider"></div></li>
                    <li><a id="question" class=" waves-effect center-align" href="../addquestao/indexAddQuestao.html">Adicionar Questão</a></li>
                    <li><div id="divider" class="divider"></div></li>
@@ -246,16 +248,16 @@
         <!-- DIV QUESTÕES DOS PROFESSORES DESK -->
         <div id="scroll_desk" class="hide-on-med-and-down">
         <?php
-        $u->conectar();
-        $results = $q->listAll();
-         foreach($results as $row){
-          $q->imagem($row['ID_Usuario']);?>
-          <!-- IMAGEM USUÁRIO DESK -->
-          <div class="responsive-image" id= "foto_prof_desk"><?php $_Imagem=base64_encode( $_SESSION['imagem_usuario'] ); echo "<img height='100%' width='100%' src='data:image/jpeg;base64,$_Imagem'> "; ?></div>
+          $u->conectar();
+          $results = $q->listAll();
+            foreach($results as $row){
+              $q->imagem($row['ID_Usuario']);?>
+        <!-- IMAGEM USUÁRIO DESK -->
+        <div class="responsive-image" id= "foto_prof_desk"><?php $_Imagem=base64_encode( $_SESSION['imagem_usuario'] ); echo "<img height='100%' width='100%' src='data:image/jpeg;base64,$_Imagem'> "; ?></div>
 
-            <!-- QUESTÕES E RESPOSTA DESK -->
+        <!-- QUESTÕES E RESPOSTA DESK -->
 
-            <!-- TRANSIÇÃO: MUDAR A QUESTÃO P/ RESPOSTA DESK -->
+        <!-- TRANSIÇÃO: MUDAR A QUESTÃO P/ RESPOSTA DESK -->
             <input type="checkbox" id="switch_desk" />
 
               <label class="flip-container_desk" for="switch_desk" >
@@ -308,12 +310,26 @@
              <form class="col s12" method="POST">
               <div class="row">
                 <div class="input-field">
-                  <input placeholder="Insira o nome do documento" id="nome_documento" style = "text-align: center;" type="text">
+                  <?php
+                    if(isset($_SESSION['nome_documento'])){
+                      echo $_SESSION['nome_documento'];
+                    }
+                    else{
+                      ?><input placeholder="Insira o nome do documento" id="nome_documento" style = "text-align: center;" type="text" name="nome_documento"><?php
+                    }
+                  ?>
                 </div>
               </div>
               <div id="quadrado" rows="8" cols="80"><br></div>
               <img class= "responsive-img" id = "seta_esquerda" src ="../images/seta_esquerda.png">
-              <button id="btn_salvar" class="hide-on-large-only waves-effect waves-light btn" type="submit" name="action">Salvar</button>
+              <?php
+                if(isset($_SESSION['nome_documento'])){
+                  ?><a id="btn_salvar" class="hide-on-large-only waves-effect waves-light btn"  href="../Classes/NovoDocumento.php" name="action">Criar</a><?php
+                }
+                else{
+                  ?><button id="btn_salvar" class="hide-on-large-only waves-effect waves-light btn" type="submit" name="action">Salvar</button><?php
+                }
+              ?>
               <img class= "responsive-img" id = "seta_direita" src ="../images/seta_direita.png">
             </form>
             </div>
@@ -467,8 +483,21 @@
                 <a href="#engrenagem-modal" style="width: 37px;" class="waves-effect waves-light modal-trigger hide-on-large-only"><img class="responsive-img" id="engrenagem" src ="../images/Engrenagem.png"></a>
 
                 <button id="btn-teste" style="margin-top: 40px; margin-left: -90%;" class="hide-on-large-only waves-effect waves-light btn pink" type="submit" name="action" onclick="return addUsuario();"><?php echo $row['ID_Questao_']?></button>
-                <input type="hidden" id="campo" onclick="return addUsuario();" value="<?php echo $row['ID_Questao_']?>" />
-
+                <input type="hidden" id="campo" onclick="return addUsuario();" value="<?php echo $row['ID_Questao_']?>"/>
+                <script>
+                  function addUsuario() {
+                    var id = document.getElementById("campo").value;
+                      $.ajax({
+                       method: "GET",
+                       url:'teste.php',
+                       data: { id: id },
+                       complete: function (response) {
+                         alert(response.responseText);},
+                       error: function () {
+                         alert('Erro');}
+                       });
+                  return false;}
+                </script>
             <?php } ?>
 
             <!-- Modal Structure engrenagem CEL -->
@@ -499,8 +528,7 @@
             {
                 $u->conectar();
                 if($u->msgErro == ""){
-
-                    if($q->cadastrarQuestao($nome, $_SESSION['ID_Usuario']))
+                    if($d->cadastrarDocumento($nome, $_SESSION['ID_Usuario']))
                     {
                       echo "Documento salvo";
                     }
