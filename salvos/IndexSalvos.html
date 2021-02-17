@@ -95,8 +95,9 @@
     </nav>
     <!-- Dashboard COMPUTADOR FINAL-->
 
+    <!-- MOBILE -->
 
-    <!--RODAPÉ--> <!--NÃO TIRAR ESSE CÓDIGO DO LUGAR, MESMO QUE ELE DEVERIA FICAR EM ÚLTIMO POR SER O RODAPÉ-->
+    <!--RODAPÉ-->
 
     <div class="rodape hide-on-large-only">
       <footer class="page-footer " id="rodape">
@@ -115,7 +116,8 @@
 
    <!--FINAL RODAPÉ-->
 
-      <!-- DOCUMENTO MAS NA VDD É MEUS DOCUMENTOS-->
+
+      <!-- MEUS DOCUMENTOS PARA CELULAR-->
       <div class="documento1" id="documento1">
 
         <!-- Títulos -->
@@ -126,8 +128,8 @@
 
         <!-- Documentos salvos -->
 
-        <div class="row">
-        <div class="col s12">
+        <div class="row hide-on-large-only">
+        <div class="col s12 ">
           <div class="card white">
             <div class="card-content black-text" id="backgroundcard">
               <div class="row">
@@ -139,9 +141,9 @@
               <div class="col s8 center">
               <p id="documentonome"> Testando.txt</p>
               </div>
-
-              <!-- Botões -->
               <div>
+
+                <!-- Botões -->
 
                 <!-- Modal Trigger -->
                 <a class="waves-effect waves-light btn modal-trigger" id="botao1" href="#modal1"> PDF </a>
@@ -159,7 +161,7 @@
                       </div>
 
                        <form action="#">
-                         <p class="center-align" id="gabarito"> Gerar gabarito? </p>
+                         <p class="center-align" id="gerargabarito">Gerar gabarito?</p>
                          <p>
                            <label>
                              <input class="with-gap" name="group1" type="radio"  />
@@ -219,7 +221,7 @@
 
       </div>
 
-      <!-- GABARITO mas na vdd é MINHAS QUESTOES -->
+      <!-- MINHAS QUESTOES CELULAR-->
       <div class="gabarito" id="gabarito">
 
         <!-- Títulos -->
@@ -230,7 +232,7 @@
 
         <!-- Documentos salvos -->
 
-        <div class="row">
+        <div class="row hide-on-large-only">
 
         <div class="col s12">
           <div class="card white">
@@ -248,7 +250,7 @@
       </div>
       </div>
 
-      <!-- ADD_QUESTÕES MAS NA VDD É FAVORITADOS-->
+      <!-- FAVORITADOS CELULAR-->
       <div class="add_questoes" id="add_questoes">
 
         <!-- Títulos -->
@@ -259,7 +261,7 @@
 
         <!-- Documentos salvos -->
 
-        <div class="row">
+        <div class="row hide-on-large-only">
 
         <div class="col s12">
           <div class="card white" id="cardfavoritos">
@@ -288,6 +290,203 @@
     </div>
     </div>
 
+    <!-- FINAL MOBILE -->
+
+    <!-- DESKTOP -->
+
+    <!-- "RODAPÉ"-->
+
+    <div class="rodape hide-on-med-and-down">
+      <footer class="page-footer " id="rodape2">
+        <div class="container">
+          <div class="row">
+            <div class="col l4 offset-l2 s12">
+              <ul>
+                <li><button href="#documento2" value="ok" target="_self" id="btn-documento2" class="btn waves-effect waves-light transparent" style="box-shadow: none;"><img class= "responsive-img" id="doc" src ="../images/documento1.png"></button></li>
+                <li><button href="#gabarito2" value="ok" target="_self" id="btn-gabarito2" class="btn waves-effect waves-light transparent" style="box-shadow: none;"><img class= "responsive-img" id="gaba" src ="../images/questao.png"></button></li>
+                <li><button href="#add_questoes2" value="ok" target="_self" id="btn-add_questoes2" class="btn waves-effect waves-light transparent" style="box-shadow: none;"><img class= "responsive-imgt" id="quest" src ="../images/coracao.png"></button></li>
+              </ul>
+            </div>
+          </div>
+     </div>
+   </div>
+
+   <!--FINAL "RODAPÉ""-->
+
+    <!-- MEUS DOCUMENTOS PARA COMPUTADOR-->
+    <div class="documento2" id="documento2">
+
+      <!-- Títulos -->
+
+      <h1 class="center-align" id="titulodoc2"> Meus documentos </h1>
+
+      <!-- Fim títulos -->
+
+      <!-- Documentos salvos -->
+
+      <div class="row hide-on-med-and-down">
+      <div class="col s12 ">
+        <div class="card white">
+          <div class="card-content black-text" id="backgroundcard2">
+            <div class="row">
+            <div class="col s4">
+            <img class="responsive-img" id="documentoimg2" src="../images/documento.png">
+            </div>
+
+            <!-- Nome do documento -->
+            <div class="col s8 center">
+            <p id="documentonome2"> Testando.txt</p>
+            </div>
+            <div>
+
+              <!-- Botões -->
+
+              <!-- Modal Trigger -->
+              <a class="waves-effect waves-light btn modal-trigger" id="botao1desk" href="#modal1"> PDF </a>
+
+              <!-- Modal Structure -->
+              <div id="modal1desk" class="modal">
+                <div class="modal-content">
+                  <h4 id="gerarpdf2" class="center-align" >Gerar PDF</h4>
+
+                    <div class="row">
+                    <div class="input-field col s12">
+                        <input id="input_text2" type="number" data-length="1">
+                          <label id="labelversoes2"for="input_text">Insira o número de versões:</label>
+                    </div>
+                    </div>
+
+                     <form action="#">
+                       <p class="center-align" id="gerargabarito2">Gerar gabarito?</p>
+                       <p>
+                         <label>
+                           <input class="with-gap" name="group1" type="radio"  />
+                           <span>Sim</span>
+                         </label>
+                       </p>
+                       <p>
+                         <label>
+                           <input class="with-gap" name="group1" type="radio"  />
+                          <span>Não</span>
+                        </label>
+                      </p>
+                     </form>
+
+                </div>
+                <div class="modal-footer">
+                  <a href="#!" id="btn1salvar2" class="modal-close waves-effect waves-green btn-flat">Salvar</a>
+                </div>
+              </div>
+
+              <!-- Modal Trigger 2 -->
+              <a class="waves-effect waves-light btn modal-trigger" id="botão2desk" href="#modal2">Moodle</a>
+
+              <!-- Modal Structure 2 -->
+              <div id="modal2desk" class="modal" >
+                <div class="modal-content">
+
+                  <form action="#">
+                    <p class="center-align" id="XML2"> Deseja baixar o documento em formato XML? </p>
+                    <p>
+                      <label>
+                        <input class="with-gap" name="group1" type="radio"  />
+                        <span>Sim</span>
+                      </label>
+                    </p>
+                    <p>
+                      <label>
+                        <input class="with-gap" name="group1" type="radio"  />
+                       <span>Não</span>
+                     </label>
+                   </p>
+                  </form>
+
+                </div>
+                <div class="modal-footer">
+                  <a href="#!" id="btn2salvar2" class="modal-close waves-effect waves-green btn-flat">Salvar</a>
+                </div>
+              </div>
+
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MINHAS QUESTOES COMPUTADOR-->
+    <div class="gabarito2" id="gabarito2">
+
+      <!-- Títulos -->
+
+      <h1 class="center-align" id="tituloquest2"> Minhas questões </h1>
+
+      <!-- Fim títulos -->
+
+      <!-- Documentos salvos -->
+
+      <div class="row hide-on-med-and-down">
+
+      <div class="col s12">
+        <div class="card white">
+          <div class="card-content black-text" id="backgroundcard2">
+
+            <!-- Matéria questão -->
+
+            <p id="materiaquest2" style:"color: purple;"> Matemática - Trigonometria</p>
+            <!-- Conteudo questão -->
+            <p id="conteudoquest2"> Complete a equação: sen²(x) + cos²(x) = ? </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <!-- FAVORITADOS COMPUTADOR-->
+    <div class="add_questoes2" id="add_questoes2">
+
+      <!-- Títulos -->
+
+      <h1 class="center-align" id="titulofavori2">Favoritos</h1>
+
+      <!-- Fim títulos -->
+
+      <!-- Documentos salvos -->
+
+      <div class="row hide-on-med-and-down">
+
+      <div class="col s12">
+        <div class="card white" id="cardfavoritos2">
+          <div class="card-content black-text" id="backgroundcard2" style="padding-bottom: 2%; padding-top: -1%;">
+
+            <img class="responsive-img" id="favoritarimg2" src="../images/favoritar.png">
+
+            <div class="row">
+
+            <div class="col s3">
+            <img class="responsive-img" id="iconeimg2" src="../images/icone.png">
+          </div>
+
+          <div class="col s9">
+            <!-- Matéria questão -->
+            <p id="materiafavori2" style:"color: purple;"> Matemática - Trigonometria</p>
+
+            <!-- Conteudo questão -->
+            <p id="conteudofavori2"> Complete a equação: sen²(x) + cos²(x) = ? </p>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+
+    </div>
+
+    <!-- FINAL DESKTOP -->
 
 <!-- JQuery CDN -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

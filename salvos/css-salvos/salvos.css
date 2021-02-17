@@ -37,7 +37,7 @@
 
   @media (min-width: 400px){
 
-    /*RESPONSIVIDADE TELA ADD DOCUMENTO*/
+    /*RESPONSIVIDADE rodape*/
     #rodape ul {
       margin-left: 4%;
       margin-top: -0.5%;
@@ -45,6 +45,8 @@
   }
 
   /* fim rodapé */
+
+  /*FORMATAÇÃO CELULAR*/
 
 #titulodoc{
   margin-top: -1%;
@@ -189,7 +191,7 @@
   color: #414141;
 }
 
-#gabarito
+#gerargabarito
 {
   margin-top: -6%;
   font-family: "muli";
@@ -217,6 +219,54 @@
   color: #717175;
   font-size: 98%;
 }
+
+/*FINAL FOPRMATAÇÃO CELULAR*/
+
+/* FORMATAÇÃO COMPUTADOR*/
+
+/* rodapé */
+
+  #gabarito2, #add_questoes2 { display: none; }
+
+  #documento2 {display: block;}
+
+  #documento2:checked, #gabarito2:checked, #add_questoes2:checked { z-index: auto; }
+
+  .documento2, .gabarito2, .add_questoes2 { display: none; }
+
+  #rodape2 {
+    background-color: white;
+    height: 11%;
+    box-shadow: 0px 0px 10px 1px gray;
+  }
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
+   #rodape2 ul{
+    display: grid;
+    gap: 3em;
+    grid-template-columns: 25% 25% 25%;
+    margin-left: -2%;
+    margin-top: -2.5%;
+  }
+
+  @media (min-width: 400px){
+
+    /*RESPONSIVIDADE rodape*/
+    #rodape2 ul {
+      margin-left: 4%;
+      margin-top: -0.5%;
+    }
+  }
+
+  /* fim rodapé */
+
+/*FINAL FORMATAÇÃO COMPUTADOR*/
+
 
 /*Dashboard para o computador*/
 
