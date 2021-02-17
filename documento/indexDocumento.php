@@ -278,7 +278,7 @@
 
           <!-- Modal Trigger engrenagem DESK -->
             <a id="eng" href="#engrenagem-modal_desk" style="width: 37px;" class="waves-effect waves-light modal-trigger hide-on-med-and-down"><img class="responsive-img" id="engrenagem_desk" src ="../images/Engrenagem.png"></a>
-            <button id="btn-teste_desk" style="margin-top: 40px;" class="hide-on-med-and-down waves-effect waves-light btn pink" type="submit" name="action">Teste</button>
+            <button id="btn-teste_desk" style="margin-top: 40px;" class="hide-on-med-and-down waves-effect waves-light btn transparent" type="submit" name="action"><img id="add_desk" src ="../images/mais.png"></button>
         <?php } ?>
 
         <!-- Modal Structure engrenagem DESK -->
@@ -287,17 +287,19 @@
           <div class="modal-content">
             <div id="addquest_documento_desk">
               <a><img class= "responsive-img modal-close" id="btn_fechar_modal" src ="../images/fechar.png"></a>
-              <button id="btn_addquest_desk" style="margin-bottom: 7%;" class="hide-on-med-and-down waves-effect waves-light btn transparent" type="submit" name="action"><img class="responsive-img" id="img_addquest" src ="../images/denunciar.png"><p id="palavra_addquestao">Denunciar</p></button>
-              <button id="btn_addquest_desk" style="margin-bottom: 7%;" class="hide-on-med-and-down waves-effect waves-light btn transparent" type="submit" name="action"><img class="responsive-img" id="img_addquest" src ="../images/favoritar.png"><p id="palavra_addquestao">Favoritar</p></button>
-              <button id="btn_addquest_desk" style="margin-bottom: 7%;" class="hide-on-med-and-down waves-effect waves-light btn transparent" type="submit" name="action"><img class="responsive-img" id="img_addquest" src ="../images/avaliar.png"><p id="palavra_addquestao">Avaliar</p></button>
-              <button id="btn_addquest_desk" class="hide-on-med-and-down waves-effect waves-light btn transparent" type="submit" name="action"><img class="responsive-img" id="img_addquest" src ="../images/nivel_dificuldade.png"><p id="palavra_addquestao">Dificuldade</p></button>
+              <button id="btn_addquest_desk" style="margin-bottom: 7%;" class="hide-on-med-and-down waves-effect waves-light btn transparent" type="submit" name="action"><img class="responsive-img" id="img_addquest_desk" src ="../images/denunciar.png"><p id="palavra_addquestao_desk">Denunciar</p></button>
+              <button id="btn_addquest_desk" style="margin-bottom: 7%;" class="hide-on-med-and-down waves-effect waves-light btn transparent" type="submit" name="action"><img class="responsive-img" id="img_addquest_desk" src ="../images/favoritar.png"><p id="palavra_addquestao_desk">Favoritar</p></button>
+              <button id="btn_addquest_desk" style="margin-bottom: 7%;" class="hide-on-med-and-down waves-effect waves-light btn transparent" type="submit" name="action"><img class="responsive-img" id="img_addquest_desk" src ="../images/avaliar.png"><p id="palavra_addquestao_desk">Avaliar</p></button>
+              <button id="btn_addquest_desk" class="hide-on-med-and-down waves-effect waves-light btn transparent" type="submit" name="action"><img class="responsive-img" id="img_addquest_desk" src ="../images/nivel_dificuldade.png"><p id="palavra_addquestao_desk">Dificuldade</p></button>
             </div>
           </div>
         </div>
       </div>
-
+    </div>
       <!-- FINAL ADD_QUESTÕES DESK-->
 
+      <!--BOTÃO SALVAR-->
+      <button id="btn_salvar_desk" class="hide-on-med-and-down waves-effect waves-light btn" type="submit" name="action">Salvar</button>
          <!-- FINAL FORMATAÇÃO COMPUTADOR-->
 
 
@@ -480,9 +482,8 @@
                 <!-- FINAL TRANSIÇÃO: MUDAR A QUESTÃO P/ RESPOSTA CEL -->
 
               <!-- Modal Trigger engrenagem CEL -->
-                <a href="#engrenagem-modal" style="width: 37px;" class="waves-effect waves-light modal-trigger hide-on-large-only"><img class="responsive-img" id="engrenagem" src ="../images/Engrenagem.png"></a>
-
-                <button id="btn-teste" style="margin-top: 40px; margin-left: -90%;" class="hide-on-large-only waves-effect waves-light btn pink" type="submit" name="action" onclick="return addUsuario();"><?php echo $row['ID_Questao_']?></button>
+                <a href="#engrenagem-modal" style="width: 37px;" class="waves-effect waves-light modal-trigger hide-on-large-only"><img class="responsive-img" id="engrenagem" src ="../images/Engrenagem.png"></a> <!--foi mal, eu tirei seu echo-->
+                <button id="btn-teste" style="margin-top: 40px; margin-left: -90%;" class="hide-on-large-only waves-effect waves-light btn transparent" type="submit" name="action" onclick="return addUsuario();"><img id="add" src ="../images/mais.png"></button>
                 <input type="hidden" id="campo" onclick="return addUsuario();" value="<?php echo $row['ID_Questao_']?>"/>
                 <script>
                   function addUsuario() {
