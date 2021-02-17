@@ -97,12 +97,6 @@ header('Content-Type: text/html; charset=UTF-8');
             <!-- Dashboard CELULAR FINAL -->
 
 
-        <!-- LINHA LATERAL DEGRADE-->
-        <div class="degrade" ></div> <!-- versão 1 - padrão -->
-        <div class="degrade2"></div> <!-- versão 2 - dissertativa -->
-        <div class="degrade3"></div> <!-- versão 3 - alternativa -->
-
-
             <!-- Dashboard COMPUTADOR -->
             <nav class="hide-on-med-and-down navbar-fixed" id="retanguloroxo">
               <div class="nav-wrapper hide-on-med-and-down" id="dashboardpc">
@@ -126,6 +120,11 @@ header('Content-Type: text/html; charset=UTF-8');
                 </div>
               </nav>
             <!-- Dashboard COMPUTADOR FINAL-->
+
+            <!-- LINHA LATERAL DEGRADE-->
+            <div class="degrade"></div>  <!-- versão 1 - padrão -->
+            <div class="degrade2"></div> <!-- versão 2 - dissertativa -->
+            <div class="degrade3"></div> <!-- versão 3 - alternativa -->
 
 
         <!-- Formulário CELULAR-->
@@ -437,9 +436,11 @@ header('Content-Type: text/html; charset=UTF-8');
               <p><br>Escolha sua opção:</p>
               <p><br>Funcionalidade em desenvolvimento</p>
             </div>
+
             <div class="modal-footer">
               <a href="#!" class="modal-close waves-effect waves-green btn-flat">Salvar</a>
             </div>
+
           </div>
 
             <!-- IMAGEM -->
@@ -477,27 +478,27 @@ header('Content-Type: text/html; charset=UTF-8');
               <label>
                 <div class="col s1" class= "hide-on-med-and-down">
                   <input name="group1" class="with-gap" type="radio"/>
-                  <span>Fácil</span>
+                  <span style="color:#CDF58F">Fácil</span>
                 </div>
               </label>
 
               <label>
                 <div class="col s2" class= "hide-on-med-and-down">
                   <input name="group1" class="with-gap" type="radio"/>
-                  <span>Médio</span>
+                  <span style="color: #FFC300;">Médio</span>
                 </div>
               </label>
 
               <label>
                 <div class="col s3" class= "hide-on-med-and-down">
                   <input name="group1" class="with-gap" type="radio"/>
-                  <span>Difícil</span>
+                  <span style="color:#FF5733">Difícil</span>
                 </div>
             </label>
           </div>
 
           <div required id="priv_public-desk2" class="hide-on-med-and-down">
-            <label id="label_privacidade-desk2" style="font-size: 87%;">Privacidade da questão <span style="color: red;">*</span></label>
+            <label id="label_privacidade-desk2" style="font-size: 87%;">Privacidade da questão<span style="color: red;">*</span></label>
             <form action="#">
 
              <label>
@@ -544,21 +545,21 @@ header('Content-Type: text/html; charset=UTF-8');
               <label>
                 <div class="col s1" class= "hide-on-large-only">
                   <input name="group1" class="with-gap" type="radio"/>
-                  <span>Fácil</span>
+                  <span style="color: #4DC535">Fácil</span>
                 </div>
               </label>
 
               <label>
                 <div class="col s2" class= "hide-on-large-only">
                   <input name="group1" class="with-gap" type="radio"/>
-                  <span>Médio</span>
+                  <span style="color: #FFC300;">Médio</span>
                 </div>
               </label>
 
               <label>
                 <div class="col s3" class= "hide-on-large-only">
                   <input name="group1" class="with-gap" type="radio"/>
-                  <span>Difícil</span>
+                  <span style="color:#FF5733">Difícil</span>
                 </div>
             </label>
           </div>
@@ -566,7 +567,7 @@ header('Content-Type: text/html; charset=UTF-8');
 
         <div required id="priv_public-desk" class="hide-on-med-and-down">
           <form action="#">
-            <label id="label_privacidade-desk" style="font-size: 87%;">Privacidade da questão <span style="color: red;">*</span></label>
+           <label id="label_privacidade-desk" style="font-size: 87%;">Privacidade da questão<span style="color: red;">*</span></label>
 
            <label>
              <div class="col s1 hide-on-med-and-down">
@@ -753,7 +754,7 @@ header('Content-Type: text/html; charset=UTF-8');
 
       function removeStyles(){
           for(let i = 0; i < myButton.length; i++){
-              document.querySelectorAll('.button-group > button')[i].removeAttribute('class');
+              document.querySelectorAll('.button-group > button') [i].removeAttribute('class');
           }
       }
       </script>

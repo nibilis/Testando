@@ -163,12 +163,6 @@
       margin-top: -12%;
     }
 
-    #priv_public-desk form {
-      display: grid;
-      gap: 3em;
-      grid-template-columns: 22.5% 20% 20%;
-      margin-left: 35%;
-    }
 
     #btn_salvar {
       font-size: 75%;
@@ -421,6 +415,24 @@
 
     h2 { margin-left: 120%; }
 
+    .degrade{
+      width: 10%;
+      float: left;
+      margin-top: -5.5%;
+      background: linear-gradient(to bottom, #D0C7FC, #8F83CD, #7C6FBF);
+      height: 110%;
+    }
+
+    .degrade2 {
+      display: none;
+      height: 200% !important;
+    }
+
+    .degrade3 {
+      display: none;
+      height: 210% !important;
+    }
+
     #btn-alterna-desk,
      #btn-dissert-desk{
       width: 22%;
@@ -445,29 +457,19 @@
       margin-top: -6.5%;
     }
 
-    .degrade{
-      width: 10%;
-      float: left;
-      margin-top: -5.5%;
-      background: linear-gradient(to bottom, #D0C7FC, #8F83CD, #7C6FBF);
-      height: 110%;
+    #simbolodiv p {
+      margin-left: 80%;
+      font-size: 95%;
+      color: #FFC300;
     }
 
-    .degrade2 {
-      display: none;
-      height: 160% !important;
+    #simbolodiv a {
+      margin-left: 5%;
     }
-
-    .degrade3 {
-      display: none;
-      height: 180% !important;
-    }
-
-    #simbolo1 { width: 5%; }
 
     #divimagem{
     left: 18%;
-    width: 76.1%;
+    width: 63%;
     margin-top: -9.5%;
     margin-left: -2%;
     text-transform: capitalize;
