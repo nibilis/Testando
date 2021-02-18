@@ -17,6 +17,14 @@ Class Documento
     $sql->bindValue(":u", $usuario);
     $sql->execute();
 
+    $sql = $pdo->prepare("SELECT ID_Documento FROM documento WHERE Nome_Documento = :n");
+    $sql->bindValue(":n", $nome);
+    $sql->execute();
+    if($sql->rowCount() > 0){
+      $dado = $sql->fetch();
+      $_SESSION['id_documento'] = $dado['ID_Documento'];
+    }
+
     return true;
   }
 

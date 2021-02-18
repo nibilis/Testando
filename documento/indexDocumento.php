@@ -482,16 +482,14 @@
                 <!-- FINAL TRANSIÇÃO: MUDAR A QUESTÃO P/ RESPOSTA CEL -->
 
               <!-- Modal Trigger engrenagem CEL -->
-                <a href="#engrenagem-modal" style="width: 37px;" class="waves-effect waves-light modal-trigger hide-on-large-only"><img class="responsive-img" id="engrenagem" src ="../images/Engrenagem.png"></a> <!--foi mal, eu tirei seu echo-->
-                <button id="btn-teste" style="margin-top: 40px; margin-left: -90%;" class="hide-on-large-only waves-effect waves-light btn transparent" type="submit" name="action" onclick="return addUsuario();"><img id="add" src ="../images/mais.png"></button>
-                <input type="hidden" id="campo" onclick="return addUsuario();" value="<?php echo $row['ID_Questao_']?>"/>
+                <a href="#engrenagem-modal" style="width: 37px;" class="waves-effect waves-light modal-trigger hide-on-large-only"><img class="responsive-img" id="engrenagem" src ="../images/Engrenagem.png"></a>
+                <button id="btn-teste" style="margin-top: 40px; margin-left: -90%;" class="hide-on-large-only waves-effect waves-light btn transparent" type="submit" name="action" onclick="return addUsuario(<?php echo $row['ID_Questao_']?>, <?php echo $_SESSION['id_documento']?>);"><img id="add" src ="../images/mais.png"></button>
                 <script>
-                  function addUsuario() {
-                    var id = document.getElementById("campo").value;
+                  function addUsuario(id, doc) {
                       $.ajax({
                        method: "GET",
-                       url:'teste.php',
-                       data: { id: id },
+                       url:'../Classes/Insere.php',
+                       data: { id: id, doc:doc},
                        complete: function (response) {
                          alert(response.responseText);},
                        error: function () {
