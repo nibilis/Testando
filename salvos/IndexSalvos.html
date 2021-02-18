@@ -122,7 +122,7 @@
 
         <!-- Títulos -->
 
-        <h1 class="center-align" id="titulodoc"> Meus documentos </h1>
+        <h1 class="center-align hide-on-large-only" id="titulodoc"> Meus documentos </h1>
 
         <!-- Fim títulos -->
 
@@ -226,7 +226,7 @@
 
         <!-- Títulos -->
 
-        <h1 class="center-align" id="tituloquest"> Minhas questões </h1>
+        <h1 class="center-align hide-on-large-only" id="tituloquest"> Minhas questões </h1>
 
         <!-- Fim títulos -->
 
@@ -255,7 +255,7 @@
 
         <!-- Títulos -->
 
-        <h1 class="center-align" id="titulofavori">Favoritos</h1>
+        <h1 class="center-align hide-on-large-only" id="titulofavori">Favoritos</h1>
 
         <!-- Fim títulos -->
 
@@ -300,7 +300,7 @@
       <footer class="page-footer " id="rodape2">
         <div class="container">
           <div class="row">
-            <div class="col l4 offset-l2 s12">
+            <div class="col l4 offset-l2 l12">
               <ul>
                 <li><button href="#documento2" value="ok" target="_self" id="btn-documento2" class="btn waves-effect waves-light transparent" style="box-shadow: none;"><img class= "responsive-img" id="doc" src ="../images/documento1.png"></button></li>
                 <li><button href="#gabarito2" value="ok" target="_self" id="btn-gabarito2" class="btn waves-effect waves-light transparent" style="box-shadow: none;"><img class= "responsive-img" id="gaba" src ="../images/questao.png"></button></li>
@@ -316,25 +316,28 @@
     <!-- MEUS DOCUMENTOS PARA COMPUTADOR-->
     <div class="documento2" id="documento2">
 
-      <!-- Títulos -->
+      <!-- Títulos
 
-      <h1 class="center-align" id="titulodoc2"> Meus documentos </h1>
+      <h1 class="center-align hide-on-med-and-down" id="titulodoc2"> Meus documentos </h1>
 
+      -->
       <!-- Fim títulos -->
 
       <!-- Documentos salvos -->
 
       <div class="row hide-on-med-and-down">
-      <div class="col s12 ">
+      <div class="col l4 ">
         <div class="card white">
           <div class="card-content black-text" id="backgroundcard2">
             <div class="row">
-            <div class="col s4">
+            <div class="col l3">
+
             <img class="responsive-img" id="documentoimg2" src="../images/documento.png">
+
             </div>
 
             <!-- Nome do documento -->
-            <div class="col s8 center">
+            <div class="col l9 center-align">
             <p id="documentonome2"> Testando.txt</p>
             </div>
             <div>
@@ -342,10 +345,12 @@
               <!-- Botões -->
 
               <!-- Modal Trigger -->
-              <a class="waves-effect waves-light btn modal-trigger" id="botao1desk" href="#modal1"> PDF </a>
+              <div class="col l9">
+              <a class="waves-effect waves-light btn modal-trigger center-align" id="botao1desk" href="#modal1"> PDF </a>
 
               <!-- Modal Structure -->
               <div id="modal1desk" class="modal">
+
                 <div class="modal-content">
                   <h4 id="gerarpdf2" class="center-align" >Gerar PDF</h4>
 
@@ -379,7 +384,7 @@
               </div>
 
               <!-- Modal Trigger 2 -->
-              <a class="waves-effect waves-light btn modal-trigger" id="botão2desk" href="#modal2">Moodle</a>
+              <a class="waves-effect waves-light btn modal-trigger center-align" id="botão2desk" href="#modal2">Moodle</a>
 
               <!-- Modal Structure 2 -->
               <div id="modal2desk" class="modal" >
@@ -407,19 +412,25 @@
                 </div>
               </div>
 
+              </div>
+
             </div>
             </div>
           </div>
         </div>
       </div>
+
+
     </div>
 
     <!-- MINHAS QUESTOES COMPUTADOR-->
     <div class="gabarito2" id="gabarito2">
 
-      <!-- Títulos -->
+      <!-- Títulos
 
-      <h1 class="center-align" id="tituloquest2"> Minhas questões </h1>
+      <h1 class="center-align hide-on-med-and-down" id="tituloquest2"> Minhas questões </h1>
+
+      -->
 
       <!-- Fim títulos -->
 
@@ -446,10 +457,12 @@
     <!-- FAVORITADOS COMPUTADOR-->
     <div class="add_questoes2" id="add_questoes2">
 
-      <!-- Títulos -->
+      <!-- Títulos
 
-      <h1 class="center-align" id="titulofavori2">Favoritos</h1>
+      <h1 class="center-align hide-on-med-and-down" id="titulofavori2">Favoritos</h1>
 
+      -->
+      
       <!-- Fim títulos -->
 
       <!-- Documentos salvos -->
@@ -510,6 +523,7 @@ $(document).ready(function() {
   $('input#input_text, textarea#textarea2').characterCounter();
 });
 
+//CÓDIGO BOTÃO documento/questões/favoritos (DESKTOP - JavaScript)
 
        //DOCUMENTO MOBILE
        var btn1 = document.getElementById('btn-documento1');
@@ -564,6 +578,64 @@ $(document).ready(function() {
             });
 
 </script>
+
+<!-- CÓDIGO BOTÃO documento/questões/favoritos (DESKTOP - JavaScript) -->
+
+   <script>
+
+       //DOCUMENTO DESKTOP
+       var btn1desk = document.getElementById('btn-documento2');
+       var gabarito2 = document.querySelector('.gabarito2');
+       var add_questoes2 = document.querySelector('.add_questoes2');
+
+       btn1desk.addEventListener('click', function() {
+
+       if (documento2.style.display = 'block') {
+           gabarito2.style.display = 'none';
+           add_questoes2.style.display = 'none';
+       }
+
+       else {
+         documento2.style.display = 'none';
+       }
+
+         });
+
+         //GABARITO DESKTOP
+         var btn2desk = document.getElementById('btn-gabarito2');
+         var documento2 = document.querySelector('.documento2');
+         var add_questoes2 = document.querySelector('.add_questoes2');
+
+         btn2desk.addEventListener('click', function() {
+
+         if (gabarito2.style.display = 'block') {
+             documento2.style.display = 'none';
+             add_questoes2.style.display = 'none';
+         }
+
+         else {
+           gabarito2.style.display = 'none';
+         }
+           });
+
+          //ADD_QUESTÃO DESKTOP
+          var btn3desk = document.getElementById('btn-add_questoes2');
+          var documento2 = document.querySelector('.documento12');
+          var gabarito2 = document.querySelector('.gabarito2');
+
+          btn3desk.addEventListener('click', function() {
+
+          if (add_questoes2.style.display = 'block') {
+              documento2.style.display = 'none';
+              gabarito2.style.display = 'none';
+          }
+
+          else {
+            add_questoes.style.display = 'none';
+          }
+            });
+
+   </script>
 
 </body>
 

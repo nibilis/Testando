@@ -265,6 +265,123 @@
 
   /* fim rodapé */
 
+  #documento2{
+    margin-top: 5%;
+  }
+
+  #gabarito2{
+    margin-top: 5%;
+  }
+
+  #add_questoes2{
+    margin-top: 5%;
+  }
+
+  #titulodoc2{
+
+    font-family: "Muli";
+    color: #414141;
+    font-size: 250%;
+  }
+  #tituloquest2{
+
+    font-family: "Muli";
+    color: #414141;
+    font-size: 175%;
+  }
+
+  #titulofavori2{
+
+    font-family: "Muli";
+    color: #414141;
+    font-size: 220%;
+  }
+
+  #modal1desk{
+    border-radius: 15px 15px;
+    border: 5px solid #7C6FBF;
+  }
+
+  #modal2desl{
+    border-radius: 15px 15px;
+    border: 5px solid #7C6FBF;
+  }
+
+  #botao1desk
+  {
+    font-size: 100%;
+    font-family: "muli";
+    color: #EC0000;
+    background-color: white;
+    border-radius: 15px 15px;
+    border: #7C6FBF ;
+    margin-top: 6.5%;
+    float: left;
+    margin-left: 23%;
+  }
+
+  #botão2desk
+  {
+    font-size: 100%;
+    font-family: "muli";
+    background-color: white;
+    color: #DF6C08;
+    border-radius: 15px 15px;
+    border: #7C6FBF ;
+    margin-top: 6.5%;
+    float: right;
+    margin-right: 32%;
+  }
+
+  #documentoimg2{
+    width: 100%;
+    float: right;
+  }
+
+  #documentonome2{
+    font-family: "Muli";
+    color: #414141;
+    font-size: 180%;
+    margin-right:10%;
+  }
+
+  @media (min-width: 1024px){
+
+    #documentoimg2{
+      width: 160%;
+      float: right;
+    }
+
+    #documentonome2{
+      font-family: "Muli";
+      color: #414141;
+      font-size: 150%;
+      margin-right:10%;
+    }
+
+    #botao1desk
+    {
+      font-size: 70%;
+      font-family: "muli";
+      color: #EC0000;
+      background-color: white;
+      border-radius: 15px 15px;
+      border: #7C6FBF ;
+
+    }
+
+    #botão2desk
+    {
+      font-size: 70%;
+      font-family: "muli";
+      background-color: white;
+      color: #DF6C08;
+      border-radius: 15px 15px;
+      border: #7C6FBF ;
+    }
+
+  }
+
 /*FINAL FORMATAÇÃO COMPUTADOR*/
 
 
