@@ -110,7 +110,7 @@
          <button id="btn_documento_desk" class=" transparent hide-on-med-and-down waves-effect waves-light btn" type="submit" name="action">Documento</button>
          <button id="btn_gabarito_desk" class="transparent hide-on-med-and-down waves-effect waves-light btn" type="submit" name="action">Gabarito</button>
 
-         <!--RODAPÉ CEL--> <!--NÃO TIRAR ESSE CÓDIGO DO LUGAR, SE TIRAR VAI DAR ERRO PRO CELULAR-->
+         <!--RODAPÉ CEL--> <!--NÃO TIRAR ESSE CÓDIGO DO LUGAR, SE TIRAR VAI DAR ERRO PARA O CELULAR-->
          <div class="rodape hide-on-large-only">
           <footer class="page-footer " id="rodape">
            <div class="container">
@@ -119,7 +119,14 @@
                  <ul>
                    <li><button href="#documento1" value="ok" target="_self" id="btn-documento1" class="btn waves-effect waves-light transparent" style="height:80%; box-shadow: none;"><img class= "responsive-img" id="doc" src ="../images/documento1.png"></button></li>
                    <li><button href="#gabarito" value="ok" target="_self" id="btn-gabarito" class="btn waves-effect waves-light transparent" style="height:80%; box-shadow: none;"><img class= "responsive-img" id="gaba" src ="../images/gabarito.png"></button></li>
-                   <li><button href="#add_questoes" value="ok" target="_self" id="btn-add_questoes" class="btn waves-effect waves-light transparent" style="height:80%; box-shadow: none;"><img class= "responsive-imgt" id="quest" src ="../images/add_questoes.png"></button></li>
+                   <?php
+                     if(isset($_SESSION['nome_documento'])){
+                       ?><li><button href="#add_questoes" value="ok" target="_self" id="btn-add_questoes" class="btn waves-effect waves-light transparent" style="height:80%; box-shadow: none;"><img class= "responsive-imgt" id="quest" src ="../images/add_questoes.png"></button></li><?php
+                     }
+                     else{
+                       ?><li><button onclick="alertDocumento()" class="btn waves-effect waves-light transparent" style="height:80%; box-shadow: none;"><img class= "responsive-imgt" id="quest" src ="../images/add_questoes.png"></button></li><?php
+                     }
+                   ?>
                  </ul>
                </div>
              </div>
@@ -632,6 +639,13 @@
      });
    </script>
 
+   <!-- Alert de aviso ao usuario para criar documento -->
+   <script>
+    function alertDocumento()
+    {
+      alert("Crie um documento antes de adicionar questões.");
+    }
+    </script>
 
 
    <!-- CÓDIGO BOTÃO documento/gabarito (desktop - JavaScript) -->
