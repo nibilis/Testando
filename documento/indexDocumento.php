@@ -764,7 +764,7 @@
     });
   </script>
 
-  <!--TESTE TESTE-->
+  <!-- AVALIAR MODAL - brilha brilha estrelinha -->
   <script>
     function Avaliar(estrela) {
      var url = window.location;
@@ -780,6 +780,7 @@
      var s5 = document.getElementById("s5").src;
      var avaliacao = 0;
 
+    //ESTRELA 5
     if (estrela == 5) {
      if (s5 == url + "../images/avaliar_vazio.png") {
        document.getElementById("s1").src = "../images/avaliar.png";
@@ -879,6 +880,7 @@
        avaliacao = 1;
     }}
 
+    //BTN SALVAR
     if (estrela == 0) {
      if (s0 == url + "../images/avaliar_vazio.png") {
        document.getElementById("s1").src = "../images/avaliar_vazio.png";
@@ -901,7 +903,8 @@
      document.getElementById('rating').innerHTML = avaliacao;
     }
   </script>
-  <!--TESTE TESTE-->
+
+  <!-- FINAL AVALIAR MODAL -->
 
     </body>
 
