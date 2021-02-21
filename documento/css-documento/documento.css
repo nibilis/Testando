@@ -7,7 +7,7 @@
 
 /*FORMATAÇÃO COMPUTADOR*/
 
-/*JAVASCRIPT CEL*/
+/*JAVASCRIPT*/
   #gabarito_desk { display: none; }
 
   #documento1_desk {display: block;}
@@ -83,7 +83,7 @@
     padding: 2% 2% 2% 2%;
   }
 
-  /*FUNCIONA EM TUDO: ADD_QUESTÕES CEL*/
+  /*ADD_QUESTÕES*/
 
   #filtro_parte1_desk { /*matéria, tema e subtema*/
     position: absolute;
@@ -166,7 +166,7 @@
   }
 
   #btn-teste_desk { /*botão que o wendel pediu, ele é rosa*/
-    width: 100%;
+    width: 77%;
     margin-left: -95%;
     box-shadow: none;
   }
@@ -572,10 +572,125 @@
     margin-left: -6%;
   }
 
-  div#engrenagem-modal.modal.open{
+  div#engrenagem-modal.modal.open {
     border-radius: 15px 15px;
     border: #7C6FBF 5px solid;
   }
+
+  /*MODAL DENTRO DO MODAL "DENUNCIAR", "FAVORITAR", ETC*/
+
+  /*DENUNCIAR*/
+  div#denunciar-modal.modal.open {
+    border-radius: 15px 15px;
+    border: #7C6FBF 5px solid;
+    width: 80%;
+  }
+
+  #btn_fechar_modal_denunciar {
+    width: 12%;
+    margin-left: 95%!important;
+    margin-top: -4%!important;
+}
+
+  #denunciar-modal h6 {
+    display: grid;
+    gap: 0.8em;
+    grid-template-columns: 20% 20%;
+    margin-left: -3%;
+  }
+
+  #denunciar-modal p {
+    font-family: 'Muli';
+    margin-top: -30%;
+    font-size: 120%;
+  }
+
+  #img_denunciar {
+    max-width: 45px;
+    max-height: 45px;
+    width: auto;
+    height: auto;
+    margin-top: -60%;
+  }
+
+  /*#descrição {
+    resize: none;
+    box-shadow: none;
+    border-radius: 10px 10px;
+    margin-top: 10%;
+    width: 100%;
+    height: 70px;
+    padding: 5%;
+    border-color: #acacac;
+  }
+
+  #descrição:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+  }*/
+
+  /*AVALIAR*/
+
+  div#avaliar-modal.modal.open {
+    border-radius: 15px 15px;
+    border: #7C6FBF 5px solid;
+    width: 80%;
+    height: 40%;
+  }
+
+  #btn_fechar_modal_avaliar {
+    width: 12%;
+    margin-left: 85%!important;
+    margin-top: 2%!important;
+  }
+
+  #avaliar-modal h6 {
+    display: grid;
+    gap: 0.5em;
+    grid-template-columns: 20% 70%;
+    margin-left: -3%;
+  }
+
+  #avaliar-modal p {
+    font-family: 'Muli';
+    font-size: 120%;
+    text-align: center;
+  }
+
+  #img_avaliar {
+    max-width: 45px;
+    max-height: 45px;
+    width: auto;
+    height: auto;
+    margin-left: 50%;
+    margin-top: -30%;
+  }
+
+  #div_estrela {
+    display: grid;
+    gap: 1.5em;
+    grid-template-columns: 10% 10% 10% 10% 10%;
+    border: 3px solid #706f7896;
+    border-radius: 10px;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 10%;
+    padding: 3% 0% 2% 3.5%;
+  }
+
+  #div_estrela img {
+    max-width: 30px;
+    max-height: 30px;
+    width: auto;
+    height: auto;
+  }
+
+  #div_estrela p {
+    display: none;
+  }
+
+
+  /*FINAL MODAL DENTRO DO MODAL "DENUNCIAR", "FAVORITAR", ETC*/
 
   /*TRANSIÇÃO: MUDAR A QUESTÃO P/ RESPOSTA CEL*/
   .flip-container {

@@ -512,11 +512,51 @@
               <div class="modal-content">
                 <div id="addquest_documento">
                   <a><img class= "responsive-img modal-close" id="btn_fechar_modal" src ="../images/fechar.png"></a>
-                  <button id="btn_addquest" style="margin-bottom: 7%;" class="hide-on-large-only waves-effect waves-light btn transparent" type="submit" name="action"><img class="responsive-img" id="img_addquest" src ="../images/denunciar.png"><p id="palavra_addquestao">Denunciar</p></button>
-                  <button id="btn_addquest" style="margin-bottom: 7%;" class="hide-on-large-only waves-effect waves-light btn transparent" type="submit" name="action"><img class="responsive-img" id="img_addquest" src ="../images/favoritar.png"><p id="palavra_addquestao">Favoritar</p></button>
-                  <button id="btn_addquest" style="margin-bottom: 7%;" class="hide-on-large-only waves-effect waves-light btn transparent" type="submit" name="action"><img class="responsive-img" id="img_addquest" src ="../images/avaliar.png"><p id="palavra_addquestao">Avaliar</p></button>
-                  <button id="btn_addquest" class="hide-on-large-only waves-effect waves-light btn transparent" type="submit" name="action"><img class="responsive-img" id="img_addquest" src ="../images/nivel_dificuldade.png"><p id="palavra_addquestao">Dificuldade</p></button>
+                  <button href="#denunciar-modal" id="btn_addquest" style="margin-bottom: 7%;" class="hide-on-large-only waves-effect waves-light btn transparent modal-trigger" type="submit" name="action"><img class="responsive-img" id="img_addquest" src ="../images/denunciar.png"><p id="palavra_addquestao">Denunciar</p></button>
+                  <button href="#favoritar-modal" id="btn_addquest" style="margin-bottom: 7%;" class="hide-on-large-only waves-effect waves-light btn transparent modal-trigger" type="submit" name="action"><img class="responsive-img" id="img_addquest" src ="../images/favoritar.png"><p id="palavra_addquestao">Favoritar</p></button>
+                  <button href="#avaliar-modal" id="btn_addquest" style="margin-bottom: 7%;" class="hide-on-large-only waves-effect waves-light btn transparent modal-trigger" type="submit" name="action"><img class="responsive-img" id="img_addquest" src ="../images/avaliar.png"><p id="palavra_addquestao">Avaliar</p></button>
+                  <button href="#difuculdade-modal" id="btn_addquest" class="hide-on-large-only waves-effect waves-light btn transparent modal-trigger" type="submit" name="action"><img class="responsive-img" id="img_addquest" src ="../images/nivel_dificuldade.png"><p id="palavra_addquestao">Dificuldade</p></button>
                 </div>
+              </div>
+            </div>
+
+            <!--MODAL DENUNCIAR-->
+            <div id="denunciar-modal" class="modal hide-on-large-only">
+              <div class="modal-content">
+                  <a><img class= "responsive-img modal-close" id="btn_fechar_modal_denunciar" src ="../images/fechar.png"></a>
+                  <h6><img class="responsive-img" id="img_denunciar" src ="../images/denunciar.png"><p>Denúncia</p></h6>
+
+                  <div class="input-field col s11 center-align" id="motivo" style= "margin-top: 10%; font-family: 'Muli'; color:black;">
+                    <select>
+                      <option value="" disabled selected>Motivo</option>
+                      <option value="1">Problema de ortografia</option>
+                      <option value="2">Dificuldade improcedente</option>
+                      <option value="3">Resposta incoerente ou incorreta</option>
+                    </select>
+                  </div>
+                  <div class="input-field col s11 center-align">
+                    <textarea placeholder="Comentário" id="descrição" class="materialize-textarea" style="margin-top: 5%;"></textarea>
+                  </div>
+                  <div class="col s11 center-align" id = "Enviarcel">
+                    <button href="#" class="waves-effect waves-light btn yellow darken-2 hoverable" id="btnEnviar" style="border-radius: 20px 20px; margin-top: 10%; font-family: 'Muli';">Enviar</button>
+                  </div>
+              </div>
+            </div>
+
+            <!--MODAL AVALIAR-->
+            <div id="avaliar-modal" class="modal hide-on-large-only">
+                <a><img class= "responsive-img modal-close" id="btn_fechar_modal_avaliar" src ="../images/fechar.png"></a>
+              <h6><img class="responsive-img align-center" id="img_avaliar" src ="../images/avaliar.png"><p>Avalie a questão:</p></h6>
+              <div id="div_estrela">
+                <a href="javascript:void(0)" onclick="Avaliar(1)"><img src="../images/avaliar_vazio.png" id="s1"></a>
+                <a href="javascript:void(0)" onclick="Avaliar(2)"><img src="../images/avaliar_vazio.png" id="s2"></a>
+                <a href="javascript:void(0)" onclick="Avaliar(3)"><img src="../images/avaliar_vazio.png" id="s3"></a>
+                <a href="javascript:void(0)" onclick="Avaliar(4)"><img src="../images/avaliar_vazio.png" id="s4"></a>
+                <a href="javascript:void(0)" onclick="Avaliar(5)"><img src="../images/avaliar_vazio.png" id="s5"></a>
+                <p id="rating">0</p>
+              </div>
+              <div class="col s11 center-align" id = "Enviarcel">
+                <button href="javascript:void(0)" onclick="Avaliar(0)" class="waves-effect waves-light btn yellow darken-2 hoverable" id="s0" id="btnEnviar" style="border-radius: 20px 20px; margin-top: 10%; font-family: 'Muli';">Enviar</button>
               </div>
             </div>
           </div>
@@ -723,6 +763,145 @@
         });
     });
   </script>
+
+  <!--TESTE TESTE-->
+  <script>
+    function Avaliar(estrela) {
+     var url = window.location;
+     url = url.toString()
+     url = url.split("index.html");
+     url = url[0];
+
+     var s0 = document.getElementById("s0").src;
+     var s1 = document.getElementById("s1").src;
+     var s2 = document.getElementById("s2").src;
+     var s3 = document.getElementById("s3").src;
+     var s4 = document.getElementById("s4").src;
+     var s5 = document.getElementById("s5").src;
+     var avaliacao = 0;
+
+    if (estrela == 5) {
+     if (s5 == url + "../images/avaliar_vazio.png") {
+       document.getElementById("s1").src = "../images/avaliar.png";
+       document.getElementById("s2").src = "../images/avaliar.png";
+       document.getElementById("s3").src = "../images/avaliar.png";
+       document.getElementById("s4").src = "../images/avaliar.png";
+       document.getElementById("s5").src = "../images/avaliar.png";
+       avaliacao = 5;
+     }
+
+     else {
+       document.getElementById("s1").src = "../images/avaliar.png";
+       document.getElementById("s2").src = "../images/avaliar.png";
+       document.getElementById("s3").src = "../images/avaliar.png";
+       document.getElementById("s4").src = "../images/avaliar.png";
+       document.getElementById("s5").src = "../images/avaliar.png";
+       avaliacao = 5;
+    }}
+
+     //ESTRELA 4
+    if (estrela == 4) {
+     if (s4 == url + "../images/avaliar_vazio.png") {
+       document.getElementById("s1").src = "../images/avaliar.png";
+       document.getElementById("s2").src = "../images/avaliar.png";
+       document.getElementById("s3").src = "../images/avaliar.png";
+       document.getElementById("s4").src = "../images/avaliar.png";
+       document.getElementById("s5").src = "../images/avaliar.png";
+       avaliacao = 4;
+     }
+
+     else {
+       document.getElementById("s1").src = "../images/avaliar.png";
+       document.getElementById("s2").src = "../images/avaliar.png";
+       document.getElementById("s3").src = "../images/avaliar.png";
+       document.getElementById("s4").src = "../images/avaliar.png";
+       document.getElementById("s5").src = "../images/avaliar_vazio.png";
+       avaliacao = 4;
+    }}
+
+    //ESTRELA 3
+    if (estrela == 3) {
+     if (s3 == url + "../images/avaliar_vazio.png") {
+       document.getElementById("s1").src = "../images/avaliar.png";
+       document.getElementById("s2").src = "../images/avaliar.png";
+       document.getElementById("s3").src = "../images/avaliar.png";
+       document.getElementById("s4").src = "../images/avaliar.png";
+       document.getElementById("s5").src = "../images/avaliar_vazio.png";
+       avaliacao = 3;
+     }
+
+     else {
+       document.getElementById("s1").src = "../images/avaliar.png";
+       document.getElementById("s2").src = "../images/avaliar.png";
+       document.getElementById("s3").src = "../images/avaliar.png";
+       document.getElementById("s4").src = "../images/avaliar_vazio.png";
+       document.getElementById("s5").src = "../images/avaliar_vazio.png";
+       avaliacao = 3;
+    }}
+
+    //ESTRELA 2
+    if (estrela == 2) {
+     if (s2 == url + "../images/avaliar_vazio.png") {
+       document.getElementById("s1").src = "../images/avaliar.png";
+       document.getElementById("s2").src = "../images/avaliar.png";
+       document.getElementById("s3").src = "../images/avaliar.png";
+       document.getElementById("s4").src = "../images/avaliar_vazio.png";
+       document.getElementById("s5").src = "../images/avaliar_vazio.png";
+       avaliacao = 2;
+     }
+
+     else {
+       document.getElementById("s1").src = "../images/avaliar.png";
+       document.getElementById("s2").src = "../images/avaliar.png";
+       document.getElementById("s3").src = "../images/avaliar_vazio.png";
+       document.getElementById("s4").src = "../images/avaliar_vazio.png";
+       document.getElementById("s5").src = "../images/avaliar_vazio.png";
+       avaliacao = 2;
+    }}
+
+     //ESTRELA 1
+    if (estrela == 1) {
+     if (s1 == url + "../images/avaliar_vazio.png") {
+       document.getElementById("s1").src = "../images/avaliar.png";
+       document.getElementById("s2").src = "../images/avaliar.png";
+       document.getElementById("s3").src = "../images/avaliar_vazio.png";
+       document.getElementById("s4").src = "../images/avaliar_vazio.png";
+       document.getElementById("s5").src = "../images/avaliar_vazio.png";
+       avaliacao = 1;
+     }
+
+     else {
+       document.getElementById("s1").src = "../images/avaliar.png";
+       document.getElementById("s2").src = "../images/avaliar_vazio.png";
+       document.getElementById("s3").src = "../images/avaliar_vazio.png";
+       document.getElementById("s4").src = "../images/avaliar_vazio.png";
+       document.getElementById("s5").src = "../images/avaliar_vazio.png";
+       avaliacao = 1;
+    }}
+
+    if (estrela == 0) {
+     if (s0 == url + "../images/avaliar_vazio.png") {
+       document.getElementById("s1").src = "../images/avaliar_vazio.png";
+       document.getElementById("s2").src = "../images/avaliar_vazio.png";
+       document.getElementById("s3").src = "../images/avaliar_vazio.png";
+       document.getElementById("s4").src = "../images/avaliar_vazio.png";
+       document.getElementById("s5").src = "../images/avaliar_vazio.png";
+       avaliacao = 0;
+     }
+
+     else {
+       document.getElementById("s1").src = "../images/avaliar_vazio.png";
+       document.getElementById("s2").src = "../images/avaliar_vazio.png";
+       document.getElementById("s3").src = "../images/avaliar_vazio.png";
+       document.getElementById("s4").src = "../images/avaliar_vazio.png";
+       document.getElementById("s5").src = "../images/avaliar_vazio.png";
+       avaliacao = 0;
+    }}
+
+     document.getElementById('rating').innerHTML = avaliacao;
+    }
+  </script>
+  <!--TESTE TESTE-->
 
     </body>
 
