@@ -8,11 +8,11 @@
 /*FORMATAÇÃO COMPUTADOR*/
 
 /*JAVASCRIPT*/
-  #gabarito_desk { display: none; }
+  #gabarito_desk, { display: none; }
 
   #documento1_desk {display: block;}
 
-  #documento1_desk:checked, #gabarito_desk:checked, { z-index: auto; }
+  #documento1_desk:checked, #gabarito_desk:checked { z-index: auto; }
 
   .documento1_desk, .gabarito_desk, { display: none; }
 
@@ -318,13 +318,13 @@
 /*FORMATAÇÃO CELULAR*/
 
 /*JAVASCRIPT CEL*/
-  #gabarito, #add_questoes { display: none; }
+  #gabarito, #add_questoes, #divTeste { display: none; }
 
   #documento1 {display: block;}
 
-  #documento1:checked, #gabarito:checked, #add_questoes:checked { z-index: auto; }
+  #documento1:checked, #gabarito:checked, #add_questoes:checked, #divTeste:checked { z-index: auto; }
 
-  .documento1, .gabarito, .add_questoes { display: none; }
+  .documento1, .gabarito, .add_questoes, .divTeste { display: none; }
 
 
 /*FUNCIONA EM TUDO: DOCUMENTO CEL*/

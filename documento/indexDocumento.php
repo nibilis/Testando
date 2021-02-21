@@ -513,7 +513,7 @@
                 <div id="addquest_documento">
                   <a><img class= "responsive-img modal-close" id="btn_fechar_modal" src ="../images/fechar.png"></a>
                   <button href="#denunciar-modal" id="btn_addquest" style="margin-bottom: 7%;" class="hide-on-large-only waves-effect waves-light btn transparent modal-trigger" type="submit" name="action"><img class="responsive-img" id="img_addquest" src ="../images/denunciar.png"><p id="palavra_addquestao">Denunciar</p></button>
-                  <button href="#favoritar-modal" id="btn_addquest" style="margin-bottom: 7%;" class="hide-on-large-only waves-effect waves-light btn transparent modal-trigger" type="submit" name="action"><img class="responsive-img" id="img_addquest" src ="../images/favoritar.png"><p id="palavra_addquestao">Favoritar</p></button>
+                  <button href="#favoritar-modal" onclick = "javascript: imgLetra('a');" id="btn_addquest" style="margin-bottom: 7%;" class="hide-on-large-only waves-effect waves-light btn transparent modal-trigger" type="submit" name="action"><img class="responsive-img" id="img_addquest" src ="../images/favoritar.png"><p id="palavra_addquestao">Favoritar</p></button>
                   <button href="#avaliar-modal" id="btn_addquest" style="margin-bottom: 7%;" class="hide-on-large-only waves-effect waves-light btn transparent modal-trigger" type="submit" name="action"><img class="responsive-img" id="img_addquest" src ="../images/avaliar.png"><p id="palavra_addquestao">Avaliar</p></button>
                   <button href="#difuculdade-modal" id="btn_addquest" class="hide-on-large-only waves-effect waves-light btn transparent modal-trigger" type="submit" name="action"><img class="responsive-img" id="img_addquest" src ="../images/nivel_dificuldade.png"><p id="palavra_addquestao">Dificuldade</p></button>
                 </div>
@@ -542,6 +542,10 @@
                   </div>
               </div>
             </div>
+
+            <!--TESTE-->
+            <div id = 'div_img'></div>
+            <!--TESTE-->
 
             <!--MODAL AVALIAR-->
             <div id="avaliar-modal" class="modal hide-on-large-only">
@@ -905,6 +909,21 @@
   </script>
 
   <!-- FINAL AVALIAR MODAL -->
+
+  <!--TESTE-->
+    <script language = 'javascript'>
+      function imgLetra( letra ){
+        switch( letra ) {
+          case "a":
+          document.getElementById( 'div_img' ).innerHTML = "<img src = '../images/Favoritar.png' >";
+          break;
+          case"b":
+          document.getElementById( 'div_img' ).innerHTML = "<img src = '../images/avaliar.png' >";
+        }
+      }
+    </script>
+  <!--TESTE-->
+
 
     </body>
 
