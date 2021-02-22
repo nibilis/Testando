@@ -525,14 +525,14 @@ header('Content-Type: text/html; charset=UTF-8');
         <div id="dissertativa" class="dissertativa-desk">
 
           <div class="row center-align hide-on-med-and-down">
-              <form class="col s12">
+
                 <div class="row">
                   <div class="input-field col s9" id="respostadissertativa-desk">
-                    <input placeholder=Resposta id="textarea1" class="materialize-textarea" name="resposta">
+                    <input placeholder=Resposta id="textarea1" type="text" class="materialize-textarea" name="resposta">
                   </div>
                 </div>
 
-              </form>
+
 
 
               <div required id="dificuldade-desk" class="input-field col s10 center-align hide-on-med-and-down">
@@ -613,13 +613,9 @@ header('Content-Type: text/html; charset=UTF-8');
             if($u->msgErro == ""){
               if($resposta == ""){
 
-<<<<<<< Updated upstream:addquestao/indexAddQuestao.php
                 }
-=======
->>>>>>> Stashed changes:addquestao/indexAddQuestao.html
-              }
               else {
-                if($q->cadastrarQuestaoDissertativa($materia, $tema, $enunciado, $alternativa, 1, $_SESSION['ID_Usuario']))
+                if($q->cadastrarQuestaoDissertativa($materia, $tema, $enunciado, $resposta, 1, $_SESSION['ID_Usuario']))
                 {
                   echo "Cadastrado com sucesso!";
                 }

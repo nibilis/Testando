@@ -4,7 +4,7 @@ Class Questao
 {
   public $pdo;
 
-  public function cadastrarQuestao($materia, $tema, $enunciado, $alternativa, $correta, $usuario)
+  public function cadastrarQuestaoDissertativa($materia, $tema, $enunciado, $alternativa, $correta, $usuario)
   {
     global $pdo;
 
