@@ -517,7 +517,6 @@ header('Content-Type: text/html; charset=UTF-8');
                </div>
              </label>
 
-           </form>
          </div>
 
            <button id="btn_salvar-desk" class="cadastro btn flow-text waves-effect yellow darken-2 waves-light hoverable" type="submit">Salvar</button>
@@ -596,7 +595,7 @@ header('Content-Type: text/html; charset=UTF-8');
       <!-- FIM DISSERTATIVA -->
       </div>
       <!--Final do formulário de COMPUTADOR-->
-
+      </form>
       <?php
       //verificar se clicou no botão
       	if(isset($_POST['enunciado'])){
@@ -613,13 +612,17 @@ header('Content-Type: text/html; charset=UTF-8');
             if($u->msgErro == ""){
               if($resposta == ""){
 
+<<<<<<< Updated upstream:addquestao/indexAddQuestao.php
                 }
+=======
+>>>>>>> Stashed changes:addquestao/indexAddQuestao.html
               }
               else {
                 if($q->cadastrarQuestaoDissertativa($materia, $tema, $enunciado, $alternativa, 1, $_SESSION['ID_Usuario']))
                 {
                   echo "Cadastrado com sucesso!";
                 }
+              }
             }
             else {
               echo "Erro: ".$u->msgErro;
