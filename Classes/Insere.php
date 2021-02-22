@@ -1,6 +1,15 @@
 <?php
 
-function inserirVariveis() {
+require_once'../Classes/DataBase.php';
+
+Class Insere{
+
+  public $pdo;
+
+  public function inserirDocumento(){
+
+
+  global $pdo;
   if (isset($_GET['id'])){
     $id = $_GET['id'];
 }
@@ -10,15 +19,6 @@ function inserirVariveis() {
     $doc = $_GET['doc'];
 }
   echo $doc;
-}
-
-Class Insere{
-
-  public $pdo;
-
-  public function inserirDocumento(){
-
-  global $pdo;
 
   $sql = $pdo->prepare("INSERT INTO questao_documento (Questao_ID_Questao_, Documento_ID_Documento) VALUES (:i, :d)");
   $sql->bindValue(":i", $id);
@@ -30,7 +30,7 @@ Class Insere{
 }
 
 $i = new Insere;
-
-inserirVariveis();
+$u = new DataBase;
+$u->conectar();
 $i->inserirDocumento();
  ?>

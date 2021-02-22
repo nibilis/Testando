@@ -309,8 +309,6 @@
       <button id="btn_salvar_desk" class="hide-on-med-and-down waves-effect waves-light btn" type="submit" name="action">Salvar</button>
          <!-- FINAL FORMATAÇÃO COMPUTADOR-->
 
-
-
          <!--FORMATAÇÃO CELULAR-->
 
          <!-- DOCUMENTO CEL -->
@@ -493,6 +491,7 @@
                 <button id="btn-teste" style="margin-top: 40px; margin-left: -90%;" class="hide-on-large-only waves-effect waves-light btn transparent" type="submit" name="action" onclick="return addUsuario(<?php echo $row['ID_Questao_']?>, <?php echo $_SESSION['id_documento']?>);"><img id="add" src ="../images/mais.png"></button>
                 <script>
                   function addUsuario(id, doc) {
+                    <?php $u->conectar(); ?>
                       $.ajax({
                        method: "GET",
                        url:'../Classes/Insere.php',
