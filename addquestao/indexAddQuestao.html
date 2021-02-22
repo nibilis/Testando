@@ -215,6 +215,7 @@ header('Content-Type: text/html; charset=UTF-8');
                 <p><br>Escolha sua opção:</p>
                 <p><br>Funcionalidade em desenvolvimento</p>
               </div>
+
               <div class="modal-footer">
                 <a href="#!" style="color: white; border-radius: 40px 40px; font-family: 'Muli'; font-size: 75%;" class="modal-close waves-effect yellow darken-2 btn-flat">Salvar</a>
               </div>
@@ -437,15 +438,15 @@ header('Content-Type: text/html; charset=UTF-8');
 
           <!-- Modal Trigger -->
           <div id="simbolodiv-desk">
-            <a href="#simbolo1" class="waves-effect waves-light modal-trigger">
+            <a href="#simbolo2" class="waves-effect waves-light modal-trigger">
               <img style="width: 35px;" class="responsive-img" id="simbolo" src="../images/omega2.png">
             </a>
 
-            <p href="#simbolo1">Inserir símbolo</p>
+            <p href="#simbolo2">Inserir símbolo</p>
           </div>
 
           <!-- Modal Structure SÍMBOLOS -->
-          <div id="simbolo1" class="modal">
+          <div id="simbolo2" class="modal">
 
             <div class="modal-content">
               <h5 style="text-align: center;">Símbolos</h5>
@@ -454,7 +455,7 @@ header('Content-Type: text/html; charset=UTF-8');
             </div>
 
             <div class="modal-footer">
-              <a href="#!" class="modal-close waves-effect waves-green btn-flat">Salvar</a>
+              <a href="#!" class="modal-close waves-effect yellow darken-2 btn-flat" style="color: white; border-radius: 40px 40px; font-family: 'Muli'; font-size: 75%;">Salvar</a>
             </div>
 
           </div>
@@ -510,7 +511,7 @@ header('Content-Type: text/html; charset=UTF-8');
              <label>
                <div class="col s2 hide-on-med-and-down">
                  <input name="group1" class="with-gap" type="radio"/>
-                 <span id="privado" >Privado</span>
+                 <span>Privado</span>
                </div>
              </label>
 
@@ -570,7 +571,6 @@ header('Content-Type: text/html; charset=UTF-8');
           <form action="#">
 
            <label id="label_privacidade-desk" style="font-size: 87%;">Privacidade da questão<span style="color: red;">*</span></label>
-
            <label>
              <div class="col s1 hide-on-med-and-down">
                <input name="group1" class="with-gap" type="radio"/>
@@ -578,7 +578,7 @@ header('Content-Type: text/html; charset=UTF-8');
              </div>
            </label>
 
-           <label>
+           <label id="privado_desk">
              <div class="col s1 hide-on-med-and-down">
                <input name="group1" class="with-gap" type="radio"/>
                <span>Privado</span>
