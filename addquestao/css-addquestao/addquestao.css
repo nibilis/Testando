@@ -171,9 +171,13 @@
 
     #priv_public-desk form { /*desktop*/
         display:  grid;
-        gap: 2em;
+        gap: 0.16em;
         grid-template-columns: 20% 15% 15%;
         margin-left: 17.3%;
+    }
+
+    #privado {
+      margin-left: 20%;
     }
 
     #btn_salvar { /*mobile*/

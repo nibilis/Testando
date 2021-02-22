@@ -375,7 +375,7 @@ header('Content-Type: text/html; charset=UTF-8');
             <button href="#dissertativa" id="btn-dissert-desk" value="ok" target="_self" class="waves-effect waves-light btn transparent">Questão dissertativa</button>
           </p>
 
-          <form method="POST">
+          <form method="POST"> <!--fecha no ultimo form antes do JavaScript-->
           <div class="items">
 
           <div required id="campo1" class="input-field col s9 center-align hide-on-med-and-down">
@@ -464,11 +464,6 @@ header('Content-Type: text/html; charset=UTF-8');
         <!-- COMEÇO ALTERNATIVA -->
         <div id="alternativa" class="alternativa-desk">
 
-          <div class="row center-align hide-on-med-and-down">
-              <button class="material-icons">add</button>
-              <button class="material-icons red">clear</button>
-          </div>
-
               <label for="textarea1">Resposta</label>
               <textarea style= "font-family: 'Muli'; font-size: 11px; float: left;" class="materialize-textarea"></textarea>
 
@@ -497,6 +492,8 @@ header('Content-Type: text/html; charset=UTF-8');
                   <span style="color:#FF5733">Difícil</span>
                 </div>
             </label>
+
+          </form>
           </div>
 
           <div required id="priv_public-desk2" class="hide-on-med-and-down">
@@ -513,10 +510,11 @@ header('Content-Type: text/html; charset=UTF-8');
              <label>
                <div class="col s2 hide-on-med-and-down">
                  <input name="group1" class="with-gap" type="radio"/>
-                 <span>Privado</span>
+                 <span id="privado" >Privado</span>
                </div>
              </label>
 
+           </form>
          </div>
 
            <button id="btn_salvar-desk" class="cadastro btn flow-text waves-effect yellow darken-2 waves-light hoverable" type="submit">Salvar</button>
@@ -533,6 +531,7 @@ header('Content-Type: text/html; charset=UTF-8');
                     <input placeholder=Resposta id="textarea1" class="materialize-textarea" name="resposta">
                   </div>
                 </div>
+
               </form>
 
 
@@ -563,6 +562,7 @@ header('Content-Type: text/html; charset=UTF-8');
             </label>
 
             </form>
+
           </div>
         </div>
 
@@ -588,10 +588,11 @@ header('Content-Type: text/html; charset=UTF-8');
          </form>
 
        </div>
-       </form>
 
-       <button id="btn_salvar-desk" class="cadastro btn flow-text waves-effect yellow darken-2 waves-light hoverable" type="submit">Salvar</button>
+          <button id="btn_salvar-desk" class="cadastro btn flow-text waves-effect yellow darken-2 waves-light hoverable" type="submit">Salvar</button>
       </div>
+  </form> <!--fecha formulário POST-->
+
       <!-- FIM DISSERTATIVA -->
       </div>
       <!--Final do formulário de COMPUTADOR-->
