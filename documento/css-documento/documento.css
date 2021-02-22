@@ -266,6 +266,19 @@
     left: 69%;
   }
 
+  #documento-nome-php{
+    font-family: 'Muli';
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: -2%;
+  }
+
+  #form-documento{
+    width: 120%;
+  }
+
+
+
   @media (min-width: 1300px)  {
 
     #documento1_desk #quadrado_desk {
@@ -335,7 +348,7 @@
   #nome_documento {
     position: absolute;
     margin-top: -7%;
-    margin-left: 21%;
+    margin-left: 10%;
     width: 80%;
     padding-left: 1%;
     padding-right: 1%;
