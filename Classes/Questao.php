@@ -4,7 +4,7 @@ Class Questao
 {
   public $pdo;
 
-  public function cadastrarQuestao($materia, $tema, $enunciado, $usuario)
+  public function cadastrarQuestao($materia, $tema, $enunciado, $alternativa, $correta, $usuario)
   {
     global $pdo;
 
@@ -15,9 +15,16 @@ Class Questao
     $sql->execute();
     $idQuestao = $pdo->lastInsertId();
 
+    //cadastrar a matéria da questão no banco de dados
     $sql = $pdo->prepare("INSERT INTO questao_materia (Materia_ID_Materia, Questao_ID_Questao_) VALUES (:m, :q)");
     $sql->bindValue(":m", $materia);
     $sql->bindValue(":q", $idQuestao);
+    $sql->execute();
+
+    $sql = $pdo->prepare("INSERT INTO alternativa (Questao_ID_Questao_, Texto, Correta) VALUES (:q, :t, :c)");
+    $sql->bindValue(":q", $idQuestao);
+    $sql->bindValue(":t", $alternativa);
+    $sql->bindValue(":c", $correta);
     $sql->execute();
 
     return true;
