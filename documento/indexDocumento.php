@@ -146,7 +146,7 @@
              <form class="col s12" method="POST">
               <div class="row">
                 <div class="input-field">
-                  <input placeholder="Insira o nome do documento" id="nome_documento_desk" style = "text-align: center;" type="text">
+                  <input placeholder="Insira o nome do documento" id="nome_documento_desk" style = "text-align: center;" type="text" maxlength= "25">
                 </div>
               </div>
               <div id="quadrado_desk" rows="8" cols="80"><br></div>
@@ -316,15 +316,15 @@
          <!-- DOCUMENTO CEL -->
          <div class="documento1" id="documento1">
            <div class="row hide-on-large-only">
-             <form class="col s12" method="POST">
+             <form class="col s12" method="POST" id="form-documento">
               <div class="row">
                 <div class="input-field">
                   <?php
                     if(isset($_SESSION['nome_documento'])){
-                      echo $_SESSION['nome_documento'];
+                      ?> <p id="documento-nome-php"><?php echo $_SESSION['nome_documento'];?><p> <?php
                     }
                     else{
-                      ?><input placeholder="Insira o nome do documento" id="nome_documento" style = "text-align: center;" type="text" name="nome_documento"><?php
+                      ?><input placeholder="Insira o nome do documento" id="nome_documento" style = "text-align: center;" type="text" name="nome_documento" maxlength="25"><?php
                     }
                   ?>
                 </div>
@@ -580,7 +580,7 @@
                 if($u->msgErro == ""){
                     if($d->cadastrarDocumento($nome, $_SESSION['ID_Usuario']))
                     {
-                      echo "Documento salvo";
+                      echo "";
                     }
                 }
                 else {
@@ -588,7 +588,7 @@
                 }
             }
             else{
-              echo "Dê um nome ao documento";
+              echo "";
             }
           }
           ?>
@@ -914,10 +914,10 @@
     <script language = 'javascript'>
       function imgLetra( letra ){
         switch( letra ) {
-          case "a":
+          case 'a':
           document.getElementById( 'div_img' ).innerHTML = "<img src = '../images/Favoritar.png' >";
           break;
-          case"b":
+          case 'b':
           document.getElementById( 'div_img' ).innerHTML = "<img src = '../images/avaliar.png' >";
         }
       }
