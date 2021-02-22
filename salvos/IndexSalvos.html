@@ -295,21 +295,20 @@
     <!-- DESKTOP -->
 
     <!-- "RODAPÉ"-->
-
-    <div class="rodape hide-on-med-and-down">
-      <footer class="page-footer " id="rodape2">
-        <div class="container">
-          <div class="row">
-            <div class="col l4 offset-l2 l12">
-              <ul>
-                <li><button href="#documento2" value="ok" target="_self" id="btn-documento2" class="btn waves-effect waves-light transparent" style="box-shadow: none;"><img class= "responsive-img" id="doc" src ="../images/documento1.png"></button></li>
-                <li><button href="#gabarito2" value="ok" target="_self" id="btn-gabarito2" class="btn waves-effect waves-light transparent" style="box-shadow: none;"><img class= "responsive-img" id="gaba" src ="../images/questao.png"></button></li>
-                <li><button href="#add_questoes2" value="ok" target="_self" id="btn-add_questoes2" class="btn waves-effect waves-light transparent" style="box-shadow: none;"><img class= "responsive-imgt" id="quest" src ="../images/coracao.png"></button></li>
-              </ul>
-            </div>
+    <nav class="hide-on-med-and-down transparent"style="box-shadow: none; ">
+        <div class="nav-wrapper rodape hide-on-med-and-down" style="box-shadow: none; ">
+            <div class="row" id="row23" >
+              <div class="col l12" >
+                <ul id="nav-mobile" class="center hide-on-med-and-down" style="box-shadow: none; ">
+                  <li><button href="#documento2" value="ok" target="_self" id="btn-documento2" class="btn waves-effect waves-light transparent" style="box-shadow: none; color: #414141;">Meus Documentos</button></li>
+                  <li><button href="#gabarito2" value="ok" target="_self" id="btn-gabarito2" class="btn waves-effect waves-light transparent" style="box-shadow: none; color: #414141;">Minhas Questões</button></li>
+                  <li><button href="#add_questoes2" value="ok" target="_self" id="btn-add_questoes2" class="btn waves-effect waves-light transparent" style="box-shadow: none; color: #414141;">Favoritos</button></li>
+                </ul>
+              </div>
           </div>
-     </div>
-   </div>
+        </div>
+  </nav>
+
 
    <!--FINAL "RODAPÉ""-->
 
@@ -422,6 +421,7 @@
 
 
     </div>
+      </div>
 
     <!-- MINHAS QUESTOES COMPUTADOR-->
     <div class="gabarito2" id="gabarito2">
@@ -438,7 +438,7 @@
 
       <div class="row hide-on-med-and-down">
 
-      <div class="col l12">
+      <div class="col l4">
         <div class="card white">
           <div class="card-content black-text" id="backgroundcard2">
 
@@ -471,7 +471,7 @@
 
       <div class="row hide-on-med-and-down">
 
-      <div class="col l12">
+      <div class="col l4">
         <div class="card white" id="cardfavoritos2">
           <div class="card-content black-text" id="backgroundcard2" style="padding-bottom: 2%; padding-top: -1%;">
 
@@ -499,7 +499,7 @@
   </div>
 
 
-    </div>
+
 
     <!-- FINAL DESKTOP -->
 
@@ -528,6 +528,14 @@ $(document).ready(function() {
 $(document).ready(function() {
   $('input#input_text2, textarea#textarea2').characterCounter();
 });
+
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems, options);
+  });
+
+
 
 //CÓDIGO BOTÃO documento/questões/favoritos (DESKTOP - JavaScript)
 
