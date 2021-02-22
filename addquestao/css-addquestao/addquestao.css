@@ -256,12 +256,6 @@
       margin-left: 17%;
     }
 
-    #priv_public-desk2 form{ /*desktop*/
-      display:  grid;
-      gap: 0.16em;
-      grid-template-columns: 20% 15% 15%;
-      margin-left: 17.3%;
-    }
 
     #label_privacidade2 { /*mobile*/
       width: 150%;
