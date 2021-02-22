@@ -209,10 +209,6 @@
   margin-bottom: 2%;
 }
 
-#privacidade{
-  margin-top: 5%;
-}
-
 #modo
 {
   font-family: "muli";
@@ -302,7 +298,7 @@
     border: 5px solid #7C6FBF;
   }
 
-  #modal2desl{
+  #modal2desk{
     border-radius: 15px 15px;
     border: 5px solid #7C6FBF;
   }
@@ -317,7 +313,7 @@
     border: #7C6FBF ;
     margin-top: 6.5%;
     float: left;
-    margin-left: 23%;
+
   }
 
   #botão2desk
@@ -330,7 +326,7 @@
     border: #7C6FBF ;
     margin-top: 6.5%;
     float: right;
-    margin-right: 32%;
+
   }
 
   #documentoimg2{
@@ -345,11 +341,30 @@
     margin-right:10%;
   }
 
+
+  #gerargabarito2
+  {
+    margin-top: -6%;
+    font-family: "muli";
+    color: #717175;
+    font-size: 130%;
+    margin-bottom: 2%;
+  }
+
+  #XML2
+  {
+    margin-top: 7%;
+    font-family: "muli";
+    color: #717175;
+    font-size: 130%;
+    margin-bottom: 5%;
+  }
+
   @media (min-width: 1024px){
 
     #documentoimg2{
-      width: 160%;
-      float: right;
+      margin-top: 16%;
+      width: 200%;
     }
 
     #documentonome2{
@@ -361,13 +376,13 @@
 
     #botao1desk
     {
-      font-size: 70%;
+      font-size:70%;
       font-family: "muli";
       color: #EC0000;
       background-color: white;
       border-radius: 15px 15px;
       border: #7C6FBF ;
-
+      margin-left: 10%;
     }
 
     #botão2desk
@@ -378,11 +393,125 @@
       color: #DF6C08;
       border-radius: 15px 15px;
       border: #7C6FBF ;
+      margin-right: 10%;
     }
 
   }
 
-/*FINAL FORMATAÇÃO COMPUTADOR*/
+  @media (min-width: 1280px){
+
+    #botao1desk
+    {
+      font-size:70%;
+      font-family: "muli";
+      color: #EC0000;
+      background-color: white;
+      border-radius: 15px 15px;
+      border: #7C6FBF ;
+      margin-left: 15%;
+    }
+
+    #botão2desk
+    {
+      font-size: 70%;
+      font-family: "muli";
+      background-color: white;
+      color: #DF6C08;
+      border-radius: 15px 15px;
+      border: #7C6FBF ;
+      margin-right: 15%;
+    }
+
+  }
+
+  @media (min-width: 1366px){
+
+    #botao1desk
+    {
+      font-size:70%;
+      font-family: "muli";
+      color: #EC0000;
+      background-color: white;
+      border-radius: 15px 15px;
+      border: #7C6FBF ;
+      margin-left: 20%;
+    }
+
+    #botão2desk
+    {
+      font-size: 70%;
+      font-family: "muli";
+      background-color: white;
+      color: #DF6C08;
+      border-radius: 15px 15px;
+      border: #7C6FBF ;
+      margin-right: 20%;
+    }
+
+  }
+
+  @media (min-width: 1600px){
+
+    #documentoimg2{
+      margin-top: 1%;
+      width: 200%;
+    }
+
+    #botao1desk
+    {
+      font-size:80%;
+      font-family: "muli";
+      color: #EC0000;
+      background-color: white;
+      border-radius: 15px 15px;
+      border: #7C6FBF ;
+      margin-left: 23%;
+    }
+
+    #botão2desk
+    {
+      font-size: 80%;
+      font-family: "muli";
+      background-color: white;
+      color: #DF6C08;
+      border-radius: 15px 15px;
+      border: #7C6FBF ;
+      margin-right: 23%;
+    }
+
+  }
+
+  @media (min-width: 1600px){
+
+    #documentoimg2{
+      margin-top: 1%;
+      width: 200%;
+    }
+
+    #botao1desk
+    {
+      font-size:95%;
+      font-family: "muli";
+      color: #EC0000;
+      background-color: white;
+      border-radius: 15px 15px;
+      border: #7C6FBF ;
+      margin-left: 23%;
+    }
+
+    #botão2desk
+    {
+      font-size: 95%;
+      font-family: "muli";
+      background-color: white;
+      color: #DF6C08;
+      border-radius: 15px 15px;
+      border: #7C6FBF ;
+      margin-right: 23%;
+    }
+
+  }
+  /*FINAL FORMATAÇÃO COMPUTADOR*/
 
 
 /*Dashboard para o computador*/

@@ -346,7 +346,7 @@
 
               <!-- Modal Trigger -->
               <div class="col l9">
-              <a class="waves-effect waves-light btn modal-trigger center-align" id="botao1desk" href="#modal1"> PDF </a>
+              <a class="waves-effect waves-light btn modal-trigger center-align" id="botao1desk" href="#modal1desk"> PDF </a>
 
               <!-- Modal Structure -->
               <div id="modal1desk" class="modal">
@@ -384,7 +384,7 @@
               </div>
 
               <!-- Modal Trigger 2 -->
-              <a class="waves-effect waves-light btn modal-trigger center-align" id="botão2desk" href="#modal2">Moodle</a>
+              <a class="waves-effect waves-light btn modal-trigger center-align" id="botão2desk" href="#modal2desk">Moodle</a>
 
               <!-- Modal Structure 2 -->
               <div id="modal2desk" class="modal" >
@@ -438,7 +438,7 @@
 
       <div class="row hide-on-med-and-down">
 
-      <div class="col s12">
+      <div class="col l12">
         <div class="card white">
           <div class="card-content black-text" id="backgroundcard2">
 
@@ -457,19 +457,21 @@
     <!-- FAVORITADOS COMPUTADOR-->
     <div class="add_questoes2" id="add_questoes2">
 
+
+
       <!-- Títulos
 
       <h1 class="center-align hide-on-med-and-down" id="titulofavori2">Favoritos</h1>
 
       -->
-      
+
       <!-- Fim títulos -->
 
       <!-- Documentos salvos -->
 
       <div class="row hide-on-med-and-down">
 
-      <div class="col s12">
+      <div class="col l12">
         <div class="card white" id="cardfavoritos2">
           <div class="card-content black-text" id="backgroundcard2" style="padding-bottom: 2%; padding-top: -1%;">
 
@@ -477,11 +479,11 @@
 
             <div class="row">
 
-            <div class="col s3">
+            <div class="col l3">
             <img class="responsive-img" id="iconeimg2" src="../images/icone.png">
           </div>
 
-          <div class="col s9">
+          <div class="col l9">
             <!-- Matéria questão -->
             <p id="materiafavori2" style:"color: purple;"> Matemática - Trigonometria</p>
 
@@ -521,6 +523,10 @@ $(document).ready(function(){
 
 $(document).ready(function() {
   $('input#input_text, textarea#textarea2').characterCounter();
+});
+
+$(document).ready(function() {
+  $('input#input_text2, textarea#textarea2').characterCounter();
 });
 
 //CÓDIGO BOTÃO documento/questões/favoritos (DESKTOP - JavaScript)
@@ -601,7 +607,7 @@ $(document).ready(function() {
 
          });
 
-         //GABARITO DESKTOP
+         //MINHAS QUESTÕES DESKTOP
          var btn2desk = document.getElementById('btn-gabarito2');
          var documento2 = document.querySelector('.documento2');
          var add_questoes2 = document.querySelector('.add_questoes2');
@@ -618,9 +624,9 @@ $(document).ready(function() {
          }
            });
 
-          //ADD_QUESTÃO DESKTOP
+          //FAVORITOS DESKTOP
           var btn3desk = document.getElementById('btn-add_questoes2');
-          var documento2 = document.querySelector('.documento12');
+          var documento2 = document.querySelector('.documento2');
           var gabarito2 = document.querySelector('.gabarito2');
 
           btn3desk.addEventListener('click', function() {
@@ -631,7 +637,7 @@ $(document).ready(function() {
           }
 
           else {
-            add_questoes.style.display = 'none';
+            add_questoes2.style.display = 'none';
           }
             });
 
