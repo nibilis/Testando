@@ -215,6 +215,7 @@ header('Content-Type: text/html; charset=UTF-8');
                 <p><br>Escolha sua opção:</p>
                 <p><br>Funcionalidade em desenvolvimento</p>
               </div>
+
               <div class="modal-footer">
                 <a href="#!" style="color: white; border-radius: 40px 40px; font-family: 'Muli'; font-size: 75%;" class="modal-close waves-effect yellow darken-2 btn-flat">Salvar</a>
               </div>
@@ -375,7 +376,7 @@ header('Content-Type: text/html; charset=UTF-8');
             <button href="#dissertativa" id="btn-dissert-desk" value="ok" target="_self" class="waves-effect waves-light btn transparent">Questão dissertativa</button>
           </p>
 
-          <form method="POST">
+          <form method="POST"> <!--fecha no ultimo form antes do JavaScript-->
           <div class="items">
 
           <div required id="campo1" class="input-field col s9 center-align hide-on-med-and-down">
@@ -437,15 +438,15 @@ header('Content-Type: text/html; charset=UTF-8');
 
           <!-- Modal Trigger -->
           <div id="simbolodiv-desk">
-            <a href="#simbolo1" class="waves-effect waves-light modal-trigger">
+            <a href="#simbolo2" class="waves-effect waves-light modal-trigger">
               <img style="width: 35px;" class="responsive-img" id="simbolo" src="../images/omega2.png">
             </a>
 
-            <p href="#simbolo1">Inserir símbolo</p>
+            <p href="#simbolo2">Inserir símbolo</p>
           </div>
 
           <!-- Modal Structure SÍMBOLOS -->
-          <div id="simbolo1" class="modal">
+          <div id="simbolo2" class="modal">
 
             <div class="modal-content">
               <h5 style="text-align: center;">Símbolos</h5>
@@ -454,7 +455,7 @@ header('Content-Type: text/html; charset=UTF-8');
             </div>
 
             <div class="modal-footer">
-              <a href="#!" class="modal-close waves-effect waves-green btn-flat">Salvar</a>
+              <a href="#!" class="modal-close waves-effect yellow darken-2 btn-flat" style="color: white; border-radius: 40px 40px; font-family: 'Muli'; font-size: 75%;">Salvar</a>
             </div>
 
           </div>
@@ -463,11 +464,6 @@ header('Content-Type: text/html; charset=UTF-8');
 
         <!-- COMEÇO ALTERNATIVA -->
         <div id="alternativa" class="alternativa-desk">
-
-          <div class="row center-align hide-on-med-and-down">
-              <button class="material-icons">add</button>
-              <button class="material-icons red">clear</button>
-          </div>
 
               <label for="textarea1">Resposta</label>
               <textarea style= "font-family: 'Muli'; font-size: 11px; float: left;" class="materialize-textarea"></textarea>
@@ -497,6 +493,8 @@ header('Content-Type: text/html; charset=UTF-8');
                   <span style="color:#FF5733">Difícil</span>
                 </div>
             </label>
+
+          </form>
           </div>
 
           <div required id="priv_public-desk2" class="hide-on-med-and-down">
@@ -517,6 +515,7 @@ header('Content-Type: text/html; charset=UTF-8');
                </div>
              </label>
 
+           </form>
          </div>
 
            <button id="btn_salvar-desk" class="cadastro btn flow-text waves-effect yellow darken-2 waves-light hoverable" type="submit">Salvar</button>
@@ -527,13 +526,14 @@ header('Content-Type: text/html; charset=UTF-8');
         <div id="dissertativa" class="dissertativa-desk">
 
           <div class="row center-align hide-on-med-and-down">
-              <form class="col s12">
+
                 <div class="row">
                   <div class="input-field col s9" id="respostadissertativa-desk">
-                    <input placeholder=Resposta id="textarea1" class="materialize-textarea" name="resposta">
+                    <input placeholder=Resposta id="textarea1" type="text" class="materialize-textarea" name="resposta">
                   </div>
                 </div>
-              </form>
+
+
 
 
               <div required id="dificuldade-desk" class="input-field col s10 center-align hide-on-med-and-down">
@@ -563,6 +563,7 @@ header('Content-Type: text/html; charset=UTF-8');
             </label>
 
             </form>
+
           </div>
         </div>
 
@@ -570,7 +571,6 @@ header('Content-Type: text/html; charset=UTF-8');
           <form action="#">
 
            <label id="label_privacidade-desk" style="font-size: 87%;">Privacidade da questão<span style="color: red;">*</span></label>
-
            <label>
              <div class="col s1 hide-on-med-and-down">
                <input name="group1" class="with-gap" type="radio"/>
@@ -578,7 +578,7 @@ header('Content-Type: text/html; charset=UTF-8');
              </div>
            </label>
 
-           <label>
+           <label id="privado_desk">
              <div class="col s1 hide-on-med-and-down">
                <input name="group1" class="with-gap" type="radio"/>
                <span>Privado</span>
@@ -588,10 +588,11 @@ header('Content-Type: text/html; charset=UTF-8');
          </form>
 
        </div>
-       </form>
 
-       <button id="btn_salvar-desk" class="cadastro btn flow-text waves-effect yellow darken-2 waves-light hoverable" type="submit">Salvar</button>
+          <button id="btn_salvar-desk" class="cadastro btn flow-text waves-effect yellow darken-2 waves-light hoverable" type="submit">Salvar</button>
       </div>
+  </form> <!--fecha formulário POST-->
+
       <!-- FIM DISSERTATIVA -->
       </div>
       <!--Final do formulário de COMPUTADOR-->
@@ -612,13 +613,9 @@ header('Content-Type: text/html; charset=UTF-8');
             if($u->msgErro == ""){
               if($resposta == ""){
 
-<<<<<<< Updated upstream:addquestao/indexAddQuestao.php
                 }
-=======
->>>>>>> Stashed changes:addquestao/indexAddQuestao.html
-              }
               else {
-                if($q->cadastrarQuestaoDissertativa($materia, $tema, $enunciado, $alternativa, 1, $_SESSION['ID_Usuario']))
+                if($q->cadastrarQuestaoDissertativa($materia, $tema, $enunciado, $resposta, 1, $_SESSION['ID_Usuario']))
                 {
                   echo "Cadastrado com sucesso!";
                 }

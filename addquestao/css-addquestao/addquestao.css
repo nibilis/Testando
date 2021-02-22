@@ -87,7 +87,7 @@
 
   #simbolo { width: 30%; }
 
-  div #simbolo1.modal.open{
+  div #simbolo1.modal.open, div #simbolo2.modal.open{
     border-radius: 15px 15px;
     border: #7C6FBF 5px solid;
   }
@@ -165,15 +165,19 @@
 
     #label_privacidade { /* mobile */
       position: absolute;
-      margin-left: 18%;
+      margin-left: 58%;
       margin-top: -12%;
     }
 
     #priv_public-desk form { /*desktop*/
         display:  grid;
-        gap: 2em;
+        gap: 0.16em;
         grid-template-columns: 20% 15% 15%;
         margin-left: 17.3%;
+    }
+
+    #privado_desk { /*desktop*/
+        margin-left: 27%;
     }
 
     #btn_salvar { /*mobile*/
@@ -250,6 +254,13 @@
       grid-template-columns: 30%;
       margin-top: 8%;
       margin-left: 17%;
+    }
+
+    #priv_public-desk2 form{ /*desktop*/
+      display:  grid;
+      gap: 0.16em;
+      grid-template-columns: 20% 15% 15%;
+      margin-left: 17.3%;
     }
 
     #label_privacidade2 { /*mobile*/
