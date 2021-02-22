@@ -531,9 +531,7 @@ header('Content-Type: text/html; charset=UTF-8');
               <form class="col s12">
                 <div class="row">
                   <div class="input-field col s9" id="respostadissertativa-desk">
-
-                    <label for="textarea1">Resposta</label>
-                    <textarea style= "font-family: 'Muli'; font-size: 11px; float: left;" class="materialize-textarea"></textarea>
+                    <input placeholder=Resposta id="textarea1" class="materialize-textarea" name="resposta">
                   </div>
                 </div>
               </form>
@@ -591,6 +589,7 @@ header('Content-Type: text/html; charset=UTF-8');
          </form>
 
        </div>
+       </form>
 
        <button id="btn_salvar-desk" class="cadastro btn flow-text waves-effect yellow darken-2 waves-light hoverable" type="submit">Salvar</button>
       </div>
@@ -605,14 +604,19 @@ header('Content-Type: text/html; charset=UTF-8');
       		$materia = addslashes($_POST['materia']);
       		$tema = addslashes($_POST['tema']);
       		$enunciado = addslashes($_POST['enunciado']);
+          $resposta = addslashes($_POST['resposta']);
 
       	//verificar se esta preenchido
         if(!empty($materia) && !empty($tema) && !empty($enunciado))
         {
             $u->conectar();
             if($u->msgErro == ""){
+              if($resposta == ""){
 
-                if($q->cadastrarQuestao($materia, $tema, $enunciado, $_SESSION['ID_Usuario']))
+                }
+              }
+              else {
+                if($q->cadastrarQuestaoDissertativa($materia, $tema, $enunciado, $alternativa, 1, $_SESSION['ID_Usuario']))
                 {
                   echo "Cadastrado com sucesso!";
                 }
