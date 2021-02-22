@@ -8,7 +8,7 @@
 
 /*CÓDIGOS QUE ATINGEM O SITE INTEIRO*/
   #btn-alternativa,
-   #btn-dissertativa{
+   #btn-dissertativa{ /*mobile*/
     width: 35%;
     color: black;
     border-radius: 40px 40px;
@@ -23,30 +23,24 @@
     margin-bottom: 10%;
   }
 
-  #btn-alternativa {
-    margin-left: 8%;
-    margin-right: 2%;
-  }
-
-  #btn-alternativa,
-   #btn-dissertativa{
-    width: 35%;
-    color: black;
-    border-radius: 40px 40px;
-    text-transform: capitalize;
-    font-family: 'Muli';
-    font-size: 75%;
-    border-color: black;
-    border-width: 6px;
-    padding-right: 0%;
-    padding-left: 0%;
-    margin-top: 25%;
-    margin-bottom: 10%;
-  }
-
-  #btn-alternativa {
+  #btn-alternativa { /*mobile*/
     margin-left: 7.5%;
     margin-right: 2%;
+  }
+
+  #btn-alterna-desk,
+   #btn-dissert-desk{ /*desktop*/
+    width: 40% !important;
+    font-family: 'Muli'!important;
+    color: black;
+    border-radius: 40px 40px !important;
+    border-width: 6px !important;
+    border-color: black;
+    padding-top: 2% !important;
+    padding-bottom: 6% !important;
+    /*top: / right: / bottom: / left:*/
+    margin: 17% -15% 5% 30%;
+    text-transform: capitalize !important;
   }
 
   #campo1, #campo2, #campo3, #campo4 {
@@ -64,24 +58,36 @@
   width: 71.5%;
   margin-top: -4%;
   text-transform: capitalize;
-
   }
 
-  #simbolodiv p {
-    margin-top: -13.5%;
+  #simbolodiv p { /*mobile*/
     position: absolute;
+    margin-top: -13.5%;
     margin-left: 80%;
     font-size: 65%;
   }
 
-  #simbolodiv a {
+  #simbolodiv-desk p{ /*desktop*/
+    position: absolute;
+    margin-top: -12.5%;
+    margin-left: 80%;
+    font-size: 105%;
+    color: #9e9e9e;
+  }
+
+  #simbolodiv a { /*mobile*/
     margin-top: -15%;
     margin-left: 74%;
   }
 
+  #simbolodiv-desk a { /*desktop*/
+    margin-top: -14%;
+    margin-left: 83%;
+  }
+
   #simbolo { width: 30%; }
 
-  div#simbolo1.modal.open{
+  div #simbolo1.modal.open{
     border-radius: 15px 15px;
     border: #7C6FBF 5px solid;
   }
@@ -144,7 +150,7 @@
 
     #dificuldade-desk form{ /*desktop*/
       display: grid;
-      gap: 3em;
+      gap: 2em;
       grid-template-columns: 22.5% 20% 20% 20%;
       margin-left: 18.9%;
       }
@@ -163,8 +169,14 @@
       margin-top: -12%;
     }
 
+    #priv_public-desk form { /*desktop*/
+        display:  grid;
+        gap: 2em;
+        grid-template-columns: 20% 15% 15%;
+        margin-left: 17.3%;
+    }
 
-    #btn_salvar {
+    #btn_salvar { /*mobile*/
       font-size: 75%;
       padding-top: 0.5%;
       padding-bottom: 10%;
@@ -174,6 +186,16 @@
       border-radius: 40px 40px;
       margin-top: 10%;
       margin-left: 39%;
+    }
+
+    #btn_salvar-desk { /*desktop*/
+      background-color: #FFBC2B;
+      border-radius: 40px 40px;
+      font-size: 90%;
+      font-family: 'Muli';
+      margin-left: 45%;
+      margin-top: 10%;
+      width: 15%;
     }
   /*FINAL DOS CAMPOS QUE MUDAM DISSERTATIVA*/
 
@@ -431,30 +453,6 @@
     .degrade3 {
       display: none;
       height: 210% !important;
-    }
-
-    #btn-alterna-desk,
-     #btn-dissert-desk{
-      width: 22%;
-      padding-top: 0.5%;
-      padding-bottom: 3.5%;
-      font-family: 'Muli';
-      color: black;
-      border-radius: 40px 40px;
-      border-width: 6px;
-      border-color: black;
-      text-transform: capitalize;
-    }
-
-    #btn-alterna-desk {
-      margin-left: 25%;
-      margin-right: 2%;
-      margin-top: 13%;
-    }
-
-    #btn-dissert-desk {
-      margin-left: 60%;
-      margin-top: -6.5%;
     }
 
     #simbolodiv p {

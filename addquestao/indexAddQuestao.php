@@ -370,7 +370,7 @@ header('Content-Type: text/html; charset=UTF-8');
 
           <h2>Adicionar Questão</h2>
 
-          <p>
+          <p class="button-group">
             <button href="#alternativa" id="btn-alterna-desk" value="ok" target="_self" class="waves-effect waves-light btn transparent">Questão alternativa</button>
             <button href="#dissertativa" id="btn-dissert-desk" value="ok" target="_self" class="waves-effect waves-light btn transparent">Questão dissertativa</button>
           </p>
@@ -422,10 +422,26 @@ header('Content-Type: text/html; charset=UTF-8');
             <input placeholder="Escreva seu enunciado" id="textarea1" class="materialize-textarea" name="enunciado">
           </div>
 
+          <!-- IMAGEM -->
+          <form action="#">
+            <div class="file-field input-field waves-effect waves-light" id="divimagem">
+              <div class="btn" style= "font-family: 'Muli'; color:white; background-color:#FFBC2B;">
+                <span id="spanimagem" style= "font-family: 'Muli'; color:white; background-color:#FFBC2B;">Imagem </span>
+                <input type="file" multiple>
+              </div>
+              <div class="file-path-wrapper" >
+                <input class="file-path validate" type="text">
+              </div>
+            </div>
+          </form>
+
           <!-- Modal Trigger -->
-          <div id="simbolodiv">
-            <a href="#simbolo1" style="width: 52px;" class="waves-effect waves-light modal-trigger"><img class= "responsive-img" id = "simbolo" src ="../images/omega2.png"></a>
-            <p href="#simbolo1" style="color: black;">Inserir símbolo</p>
+          <div id="simbolodiv-desk">
+            <a href="#simbolo1" class="waves-effect waves-light modal-trigger">
+              <img style="width: 35px;" class="responsive-img" id="simbolo" src="../images/omega2.png">
+            </a>
+
+            <p href="#simbolo1">Inserir símbolo</p>
           </div>
 
           <!-- Modal Structure SÍMBOLOS -->
@@ -442,20 +458,6 @@ header('Content-Type: text/html; charset=UTF-8');
             </div>
 
           </div>
-
-            <!-- IMAGEM -->
-            <form action="#">
-              <div class="file-field input-field waves-effect waves-light" id="divimagem">
-                <div class="btn" style= "font-family: 'Muli'; color:white; background-color:#FFBC2B;">
-                  <span id="spanimagem" style= "font-family: 'Muli'; color:white; background-color:#FFBC2B;">Imagem </span>
-                  <input type="file" multiple>
-                </div>
-                <div class="file-path-wrapper" >
-                  <input class="file-path validate" type="text">
-                </div>
-              </div>
-            </form>
-
 
             <!-- Alternativa/Dissertativa COMPUTADOR -->
 
@@ -518,7 +520,7 @@ header('Content-Type: text/html; charset=UTF-8');
            </form>
          </div>
 
-           <button class="cadastro btn flow-text waves-effect yellow darken-2 waves-light hoverable" type="submit">Salvar</button>
+           <button id="btn_salvar-desk" class="cadastro btn flow-text waves-effect yellow darken-2 waves-light hoverable" type="submit">Salvar</button>
         <!-- FIM ALTERNATIVA -->
         </div>
 
@@ -562,11 +564,14 @@ header('Content-Type: text/html; charset=UTF-8');
                   <span style="color:#FF5733">Difícil</span>
                 </div>
             </label>
+
+            </form>
           </div>
         </div>
 
         <div required id="priv_public-desk" class="hide-on-med-and-down">
           <form action="#">
+
            <label id="label_privacidade-desk" style="font-size: 87%;">Privacidade da questão<span style="color: red;">*</span></label>
 
            <label>
@@ -587,7 +592,7 @@ header('Content-Type: text/html; charset=UTF-8');
 
        </div>
 
-       <button class="cadastro btn flow-text waves-effect yellow darken-2 waves-light hoverable" type="submit">Salvar</button>
+       <button id="btn_salvar-desk" class="cadastro btn flow-text waves-effect yellow darken-2 waves-light hoverable" type="submit">Salvar</button>
       </div>
       <!-- FIM DISSERTATIVA -->
       </div>
