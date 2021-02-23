@@ -135,7 +135,7 @@
     margin-left: 15.7%;
   }
 
-  #dificuldade form{ /*mobile*/
+  #dificuldade #teste3{ /*mobile*/
     display: grid;
     gap: 3em;
     grid-template-columns: 19% 21% 20%;
@@ -155,7 +155,7 @@
       margin-left: 18.9%;
       }
 
-    #priv_public form { /* mobile */
+    #priv_public #teste4 { /* mobile */
       display: grid;
       gap: 2em;
       grid-template-columns: 30%;
@@ -225,7 +225,7 @@
       text-transform: uppercase;
     }
 
-    #dificuldade2 form{ /*mobile*/
+    #dificuldade2 #teste, #priv_public2 #teste2 { /*mobile*/
       display: grid;
       gap: 3em;
       grid-template-columns: 19% 21% 20%;
@@ -238,7 +238,7 @@
       margin-top: -15%;
     }
 
-    #dificuldade-desk2 form{ /*desktop*/
+    #dificuldade-desk2 { /*desktop*/
       display: grid;
       gap: 3em;
       grid-template-columns: 19% 21% 20%;

@@ -136,7 +136,7 @@ header('Content-Type: text/html; charset=UTF-8');
             <button href="#alternativa" id="btn-alternativa" value="ok" target="_self" class="waves-effect waves-light transparent">Alternativa</button>
             <button href="#dissertativa" id="btn-dissertativa" value="ok" target="_self" class="waves-effect waves-light transparent">Dissertativa</button>
           </p>
-
+          <form method="POST" action="#">
           <div class="items">
 
           <div required id="campo1" class="input-field col s9 center-align hide-on-large-only">
@@ -234,11 +234,11 @@ header('Content-Type: text/html; charset=UTF-8');
 
           <!--CAMPOS ALTERNATIVA: ADD E RETIRAR-->
 
-          <form action="#">
+
             <div id="formulario" class= "hide-on-large-only" >
               <input id="alternativa_campo" type="text" placeholder="Alternativa" name="numeroDocumento" required/>
             </div>
-          </form>
+
           <a href="#" data-id="1" id="adicionarCampo" class="hide-on-large-only">+ Adicionar Campos</a>
 
 
@@ -247,8 +247,8 @@ header('Content-Type: text/html; charset=UTF-8');
 
               <div required id="dificuldade2" class="input-field col s10 center-align hide-on-large-only">
               <label id="label_dificuldade2" style="font-size: 85%;">Dificuldade da questão <span style="color: red;">*</span></label>
-              <form action="#">
 
+              <div id="teste">
               <label>
                 <div class="col s1" class= "hide-on-large-only">
                 <input name="group1" class="with-gap" type="radio"  />
@@ -270,11 +270,12 @@ header('Content-Type: text/html; charset=UTF-8');
               </div>
             </label>
           </div>
+          </div>
 
           <div required id="priv_public2" class= "hide-on-large-only">
-            <label id="label_privacidade2" style="font-size: 87%;">Privacidade da questão <span style="color: red;">*</span></label>
-            <form action="#">
 
+              <label id="label_privacidade2" style="font-size: 87%;">Privacidade da questão <span style="color: red;">*</span></label>
+              <div id="teste2">
              <label>
                <div class="col s1" class= "hide-on-large-only">
                <input name="group1" class="with-gap" type="radio"/>
@@ -287,8 +288,9 @@ header('Content-Type: text/html; charset=UTF-8');
                <input name="group1" class="with-gap" type="radio"/>
                <span>Privado</span>
              </div>
+           </div>
              </label>
-           </form>
+
          </div>
          <button id="btn_salvar" class="hide-on-large-only waves-effect waves-light btn" type="submit" name="action">Salvar</button>
 
@@ -301,61 +303,62 @@ header('Content-Type: text/html; charset=UTF-8');
 
           <div class="row center-align hide-on-large-only">
 
-              <form class="col s12">
+
                 <div class="row">
                   <label for="textarea1" id="label_resposta" style= "font-family: 'Muli'; font-size: 11px; float: left;">Resposta <span style="color: red;">*</span></label>
                   <textarea required id="respostadissertativa" placeholder="Escreva sua resposta" class="materialize-textarea"></textarea>
                   </div>
                 </div>
-              </form>
+
 
 
               <div required id="dificuldade" class="input-field col s10 center-align hide-on-large-only">
               <label id="label_dificuldade" style="font-size: 85%;">Dificuldade da questão <span style="color: red;">*</span></label>
-              <form action="#">
 
+              <div id="teste3">
               <label>
                 <div class="col s1  hide-on-large-only">
-                <input name="group1" class="with-gap" type="radio"/>
+                <input name="dificuldade-cel" class="with-gap" type="radio"/>
                 <span>Fácil</span>
               </div>
               </label>
 
               <label>
                 <div  class="col s2  hide-on-large-only">
-                <input name="group1" class="with-gap" type="radio"/>
+                <input name="dificuldade-cel" class="with-gap" type="radio"/>
                 <span>Médio</span>
               </div>
               </label>
 
               <label>
                 <div  class="col s3  hide-on-large-only">
-                <input name="group1" class="with-gap" type="radio"/>
+                <input name="dificuldade-cel" class="with-gap" type="radio"/>
                 <span>Difícil</span>
               </div>
               </label>
-             </div>
-           </form>
+            </div>
+          </div>
+
 
           <div required id="priv_public" class=" hide-on-large-only">
             <label id="label_privacidade" style="font-size: 87%;">Privacidade da questão <span style="color: red;">*</span></label>
-            <form action="#">
 
+            <div id="teste4">
              <label>
                <div class="col s1  hide-on-large-only">
-               <input name="group1" class="with-gap" type="radio"/>
+               <input name="privacidade-cel" class="with-gap" type="radio"/>
                <span>Público</span>
              </div>
              </label>
 
              <label>
                <div class="col s2  hide-on-large-only">
-               <input name="group1" class="with-gap" type="radio"/>
+               <input name="privacidade-cel" class="with-gap" type="radio"/>
                <span>Privado</span>
              </div>
 
              </label>
-           </form>
+           </div>
 
            <button id="btn_salvar" class=" hide-on-large-only waves-effect waves-light btn" type="submit" name="action">Salvar</button>
          </div>
@@ -364,7 +367,7 @@ header('Content-Type: text/html; charset=UTF-8');
       </div><!-- FIM - dissertativa -->
 
         <!--Final do formulário de CELULAR-->
-
+      </form>
 
         <!-- Formulário COMPUTADOR-->
         <div class="row hide-on-med-and-down">

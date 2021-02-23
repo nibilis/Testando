@@ -528,9 +528,12 @@
                   <div class="input-field col s11 center-align" id="motivo" style= "margin-top: 10%; font-family: 'Muli'; color:black;">
                     <select>
                       <option value="" disabled selected>Motivo</option>
-                      <option value="1">Problema de ortografia</option>
-                      <option value="2">Dificuldade improcedente</option>
-                      <option value="3">Resposta incoerente ou incorreta</option>
+                      <option value="1">Erro ortográfico</option>
+                      <option value="2">Conteúdo incoerente ou incorreto</option>
+                      <option value="3">Conteúdo inapropriado</option>
+                      <option value="4">Dificuldade improcedente</option>
+                      <option value="5">Plágio</option>
+                      <option value="6">Outros</option>
                     </select>
                   </div>
                   <div class="input-field col s11 center-align">
