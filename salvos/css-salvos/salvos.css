@@ -424,21 +424,26 @@
     #btn-documento2{
       text-transform: capitalize;
       font-family: "Muli";
-      font-size: 150%;
+      font-size: 145%;
+      width: 150%;
     }
 
     #btn-add_questoes2{
       text-transform: capitalize;
       font-family: "Muli";
       font-size: 150%;
+      width: 150%;
+
     }
 
     #btn-gabarito2{
       text-transform: capitalize;
       font-family: "Muli";
       font-size: 150%;
+      width: 150%;
+
     }
-    
+
     #materiafavori2{
       margin-top: 2%;
       font-family: "Muli";
@@ -446,6 +451,7 @@
       font-size: 100%;
       margin-bottom: 2%;
     }
+
     #conteudofavori2{
       font-family: "Muli";
       color: #414141;
@@ -565,6 +571,7 @@
   }
 
   @media (min-width: 1600px){
+
 
     #favoritarimg2{
       width: 10%;
