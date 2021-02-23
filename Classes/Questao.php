@@ -4,14 +4,17 @@ Class Questao
 {
   public $pdo;
 
-  public function cadastrarQuestaoDissertativa($materia, $tema, $enunciado, $alternativa, $correta, $usuario)
+  public function cadastrarQuestaoDissertativa($materia, $tema, $enunciado, $resposta, $correta, $dificuldade, $privacidade, $usuario)
   {
     global $pdo;
 
     //cadastrar a questão no banco de dados
-    $sql = $pdo->prepare("INSERT INTO questao (Enunciado, ID_Usuario) VALUES (:e, :u)");
+    $sql = $pdo->prepare("INSERT INTO questao (Enunciado, ID_Usuario, PalavraChave, Privacidade, Dificuldade) VALUES (:e, :u, :r, :p, :d)");
     $sql->bindValue(":e", $enunciado);
     $sql->bindValue(":u", $usuario);
+    $sql->bindValue(":r", $resposta);
+    $sql->bindValue(":p", $privacidade);
+    $sql->bindValue(":d", $dificuldade);
     $sql->execute();
     $idQuestao = $pdo->lastInsertId();
 
@@ -23,7 +26,7 @@ Class Questao
 
     $sql = $pdo->prepare("INSERT INTO alternativa (Questao_ID_Questao_, Texto, Correta) VALUES (:q, :t, :c)");
     $sql->bindValue(":q", $idQuestao);
-    $sql->bindValue(":t", $alternativa);
+    $sql->bindValue(":t", $resposta);
     $sql->bindValue(":c", $correta);
     $sql->execute();
 

@@ -537,55 +537,51 @@ header('Content-Type: text/html; charset=UTF-8');
 
 
               <div required id="dificuldade-desk" class="input-field col s10 center-align hide-on-med-and-down">
-              <form action="#">
 
               <label id="label_dificuldade-desk" style="font-size: 85%;">Dificuldade da questão <span style="color: red;">*</span></label>
 
               <label>
                 <div class="col s1" class= "hide-on-large-only">
-                  <input name="group1" class="with-gap" type="radio"/>
+                  <input name="dificuldade-pc" class="with-gap" type="radio" value="FACIL"/>
                   <span style="color: #4DC535">Fácil</span>
                 </div>
               </label>
 
               <label>
                 <div class="col s2" class= "hide-on-large-only">
-                  <input name="group1" class="with-gap" type="radio"/>
+                  <input name="dificuldade-pc" class="with-gap" type="radio" value="MEDIO"/>
                   <span style="color: #FFC300;">Médio</span>
                 </div>
               </label>
 
               <label>
                 <div class="col s3" class= "hide-on-large-only">
-                  <input name="group1" class="with-gap" type="radio"/>
+                  <input name="dificuldade-pc" class="with-gap" type="radio" value="DIFICIL"/>
                   <span style="color:#FF5733">Difícil</span>
                 </div>
             </label>
-
-            </form>
 
           </div>
         </div>
 
         <div required id="priv_public-desk" class="hide-on-med-and-down">
-          <form action="#">
 
            <label id="label_privacidade-desk" style="font-size: 87%;">Privacidade da questão<span style="color: red;">*</span></label>
            <label>
              <div class="col s1 hide-on-med-and-down">
-               <input name="group1" class="with-gap" type="radio"/>
+               <input name="privacidade-pc" class="with-gap" type="radio" value="0"/>
                <span>Público</span>
              </div>
            </label>
 
            <label id="privado_desk">
              <div class="col s1 hide-on-med-and-down">
-               <input name="group1" class="with-gap" type="radio"/>
+               <input name="privacidade-pc" class="with-gap" type="radio" value="1"/>
                <span>Privado</span>
              </div>
            </label>
 
-         </form>
+
 
        </div>
 
@@ -605,9 +601,13 @@ header('Content-Type: text/html; charset=UTF-8');
       		$tema = addslashes($_POST['tema']);
       		$enunciado = addslashes($_POST['enunciado']);
           $resposta = addslashes($_POST['resposta']);
+          $dificuldade = addslashes($_POST['dificuldade-pc']);
+          $privacidade = addslashes($_POST['privacidade-pc']);
+
+          echo $materia, $tema, $enunciado, $resposta, $dificuldade, $privacidade;
 
       	//verificar se esta preenchido
-        if(!empty($materia) && !empty($tema) && !empty($enunciado))
+        if(!empty($materia) && !empty($tema) && !empty($enunciado) && !empty($dificuldade))
         {
             $u->conectar();
             if($u->msgErro == ""){
@@ -615,7 +615,7 @@ header('Content-Type: text/html; charset=UTF-8');
 
                 }
               else {
-                if($q->cadastrarQuestaoDissertativa($materia, $tema, $enunciado, $resposta, 1, $_SESSION['ID_Usuario']))
+                if($q->cadastrarQuestaoDissertativa($materia, $tema, $enunciado, $resposta, 1, $dificuldade, $privacidade, $_SESSION['ID_Usuario']))
                 {
                   echo "Cadastrado com sucesso!";
                 }
