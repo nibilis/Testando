@@ -7,7 +7,7 @@
 
 /*FORMATAÇÃO COMPUTADOR*/
 
-/*JAVASCRIPT*/
+/*JAVASCRIPT DESK*/
   #gabarito_desk { display: none; }
 
   #documento1_desk {display: block;}
@@ -16,7 +16,7 @@
 
   .documento1_desk, .gabarito_desk { display: none; }
 
-  /*DOCUMENTO*/
+  /*DOCUMENTO DESK*/
   #nome_documento_desk {
     position: absolute;
     margin-top: 0%;
@@ -62,7 +62,7 @@
     color: #5f5e60;
   }
 
-  /*GABARITO*/
+  /*GABARITO DESK*/
   #título_gabarito_desk {
     position: absolute;
     margin-top: 1%;
@@ -83,7 +83,7 @@
     padding: 2% 2% 2% 2%;
   }
 
-  /*ADD_QUESTÕES*/
+  /*ADD_QUESTÕES DESK*/
 
   #filtro_parte1_desk { /*matéria, tema e subtema*/
     position: absolute;
@@ -176,17 +176,20 @@
     left: -49%;
   }
 
+
   #btn_addquest_desk {
-    width: 70%;
-    height: 80px;
+    width: 75%;
+    height: 70px;
     justify-content: center;
-    margin-left: 10%;
+    margin-left: 5%;
     margin-top: -2%;
     border-radius: 20px 20px;
     display: grid;
     gap: 2em;
     grid-template-columns: 20% 60%;
   }
+
+
 
   #img_addquest_desk {
     width: 100%;
@@ -243,15 +246,116 @@
   }
   /*FINAL TRANSIÇÃO: MUDAR A QUESTÃO P/ RESPOSTA DESK*/
 
-  /*TESTE*/
+  /*LER MAIS E MENOS*/
 
-  .morecontent span {
+  /*.morecontent span {
     display: none;
   }
 
   .morelink {
       display: block;
+  }*/
+
+  /*MODAL DENTRO DO MODAL "DENUNCIAR", "FAVORITAR", ETC DESK*/
+
+  /*DENUNCIAR*/
+  div#denunciar-modal-desk.modal.open {
+    border-radius: 15px 15px;
+    border: #7C6FBF 5px solid;
+    width: 30%;
   }
+
+  #btn_fechar_modal_denunciar_desk {
+    width: 12%;
+    margin-left: 92%!important;
+    margin-top: -4%!important;
+  }
+
+  #denunciar-modal-desk h6 {
+    display: grid;
+    gap: 0.8em;
+    grid-template-columns: 20% 20%;
+    margin-left: -3%;
+  }
+
+  #denunciar-modal-desk p {
+    font-family: 'Muli';
+    margin-top: -30%;
+    font-size: 120%;
+  }
+
+  #img_denunciar_desk {
+    max-width: 45px;
+    max-height: 45px;
+    width: auto;
+    height: auto;
+    margin-top: -50%;
+    margin-left: 30%;
+  }
+
+
+  /*AVALIAR*/
+
+  div#avaliar-modal-desk.modal.open {
+    border-radius: 15px 15px;
+    border: #7C6FBF 5px solid;
+    width: 30%;
+    height: 40%;
+  }
+
+  #btn_fechar_modal_avaliar_desk {
+    width: 12%;
+    margin-left: 85%!important;
+    margin-top: 2%!important;
+  }
+
+  #avaliar-modal-desk h6 {
+    display: grid;
+    gap: 0.5em;
+    grid-template-columns: 20% 70%;
+    margin-left: -3%;
+  }
+
+  #avaliar-modal-desk p {
+    font-family: 'Muli';
+    font-size: 120%;
+    text-align: center;
+  }
+
+  #img_avaliar_desk {
+    max-width: 45px;
+    max-height: 45px;
+    width: auto;
+    height: auto;
+    margin-left: 90%;
+    margin-top: -20%;
+  }
+
+  #div_estrela_desk {
+    display: grid;
+    gap: 1.5em;
+    grid-template-columns: 10% 10% 10% 10% 10%;
+    border: 3px solid #706f7896;
+    border-radius: 10px;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 10%;
+    padding: 3% 0% 2% 8%;
+  }
+
+  #div_estrela_desk img {
+    max-width: 30px;
+    max-height: 30px;
+    width: auto;
+    height: auto;
+  }
+
+  #div_estrela_desk p {
+    display: none;
+  }
+
+
+  /*FINAL MODAL DENTRO DO MODAL "DENUNCIAR", "FAVORITAR", ETC DESK*/
 
   /*BOTÃO SALVAR*/
   #btn_salvar_desk {
@@ -280,6 +384,12 @@
 
 
   @media (min-width: 1300px)  {
+
+    #btn_addquest_desk {
+      width: 70%;
+      height: 80px;
+      margin-left: 10%;
+    }
 
     #documento1_desk #quadrado_desk {
       height: 60%;
@@ -322,6 +432,59 @@
 
     #quest_profs_desk {
       width: 390%;
+    }
+  }
+
+  @media (min-width: 1600px) {
+    #btn-teste_desk {
+      margin-left: -145%!important;
+      margin-top: 48%!important;
+    }
+
+    #btn-teste_desk {
+      width: 60%;
+    }
+
+    #quest_profs_desk {
+      width: 470%;
+    }
+
+    #filtro_parte1_desk {
+      left: 55%;
+    }
+
+    #filtro_parte2_desk {
+      left: 55%;
+    }
+  }
+
+  @media (min-width: 1800px) {
+
+    div#engrenagem-modal_desk.modal.open{
+      border-radius: 15px 15px;
+      border: #7C6FBF 5px solid;
+      width: 25%;
+    }
+
+    #btn-teste_desk {
+      margin-left: -140%!important;
+      margin-top: 47%!important;
+    }
+
+    #btn-teste_desk {
+      width: 57%;
+    }
+
+    #quest_profs_desk {
+      width: 530%;
+    }
+
+    #filtro_parte1_desk {
+      left: 56%;
+    }
+
+    #filtro_parte2_desk {
+      left: 56%;
     }
   }
 

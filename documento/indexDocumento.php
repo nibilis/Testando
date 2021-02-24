@@ -96,7 +96,7 @@
                <li><a  id= "questao" href="../addquestao/indexAddQuestao.php" >Adicionar <br> questão</a></li>
                <li><a  id= "documento" href="../documento/indexDocumento.php">Adicionar <br> documento</a>
                  <img class= "responsive-img" id = "linha1" src ="../images/linha.png"></li>
-               <li><a id= "salvos" href="../salvos/indexSalvos.html">Salvos</a>
+               <li><a id= "salvos" href="../salvos/indexSalvos.php">Salvos</a>
                   <img class= "responsive-img" id = "linha2" src ="../images/linha.png"></li>
              </ul>
              <a href="../perfil/indexPerfil.php" >
@@ -274,7 +274,7 @@
                   </div>
                   <div class="back_desk">
                     <div id="quest_profs_desk">
-                      <p>sla porra, pesquisa</p>
+                      <p>A resposta está dentro do seu coração</p>
                     </div>
                   </div>
                 </div>
@@ -292,13 +292,57 @@
           <div class="modal-content">
             <div id="addquest_documento_desk">
               <a><img class= "responsive-img modal-close" id="btn_fechar_modal" src ="../images/fechar.png"></a>
-              <button id="btn_addquest_desk" style="margin-bottom: 7%;" class="hide-on-med-and-down waves-effect waves-light btn transparent" type="submit" name="action"><img class="responsive-img" id="img_addquest_desk" src ="../images/denunciar.png"><p id="palavra_addquestao_desk">Denunciar</p></button>
-              <button id="btn_addquest_desk" style="margin-bottom: 7%;" class="hide-on-med-and-down waves-effect waves-light btn transparent" type="submit" name="action"><img class="responsive-img" id="img_addquest_desk" src ="../images/favoritar.png"><p id="palavra_addquestao_desk">Favoritar</p></button>
-              <button id="btn_addquest_desk" style="margin-bottom: 7%;" class="hide-on-med-and-down waves-effect waves-light btn transparent" type="submit" name="action"><img class="responsive-img" id="img_addquest_desk" src ="../images/avaliar.png"><p id="palavra_addquestao_desk">Avaliar</p></button>
-              <button id="btn_addquest_desk" class="hide-on-med-and-down waves-effect waves-light btn transparent" type="submit" name="action"><img class="responsive-img" id="img_addquest_desk" src ="../images/nivel_dificuldade.png"><p id="palavra_addquestao_desk">Dificuldade</p></button>
+              <button href="#denunciar-modal-desk" id="btn_addquest_desk" style="margin-bottom: 7%;" class="hide-on-med-and-down waves-effect waves-light btn transparent modal-trigger" type="submit" name="action"><img class="responsive-img" id="img_addquest_desk" src ="../images/denunciar.png"><p id="palavra_addquestao_desk">Denunciar</p></button>
+              <button href="#favoritar-modal-desk" id="btn_addquest_desk" style="margin-bottom: 7%;" class="hide-on-med-and-down waves-effect waves-light btn transparent modal-trigger" type="submit" name="action"><img class="responsive-img" id="img_addquest_desk" src ="../images/favoritar.png"><p id="palavra_addquestao_desk">Favoritar</p></button>
+              <button href="#avaliar-modal-desk" id="btn_addquest_desk" style="margin-bottom: 7%;" class="hide-on-med-and-down waves-effect waves-light btn transparent modal-trigger" type="submit" name="action"><img class="responsive-img" id="img_addquest_desk" src ="../images/avaliar.png"><p id="palavra_addquestao_desk">Avaliar</p></button>
+              <button href="#dificuldade-modal-desk" id="btn_addquest_desk" class="hide-on-med-and-down waves-effect waves-light btn transparent modal-trigger" type="submit" name="action"><img class="responsive-img" id="img_addquest_desk" src ="../images/nivel_dificuldade.png"><p id="palavra_addquestao_desk">Dificuldade</p></button>
             </div>
           </div>
         </div>
+
+        <!--MODAL DENUNCIAR DESK-->
+        <div id="denunciar-modal-desk" class="modal hide-on-med-and-down">
+          <div class="modal-content">
+              <a><img class= "responsive-img modal-close" id="btn_fechar_modal_denunciar_desk" src ="../images/fechar.png"></a>
+              <h6><img class="responsive-img" id="img_denunciar_desk" src ="../images/denunciar.png"><p>Denúncia</p></h6>
+
+              <div class="input-field col s11 center-align" id="motivo_desk" style= "margin-top: 10%; font-family: 'Muli'; color:black;">
+                <select>
+                  <option value="" disabled selected>Motivo</option>
+                  <option value="1">Erro ortográfico</option>
+                  <option value="2">Conteúdo incoerente ou incorreto</option>
+                  <option value="3">Conteúdo inapropriado</option>
+                  <option value="4">Dificuldade improcedente</option>
+                  <option value="5">Plágio</option>
+                  <option value="6">Outros</option>
+                </select>
+              </div>
+              <div class="input-field col s11 center-align">
+                <textarea placeholder="Comentário" id="descrição_desk" class="materialize-textarea" style="margin-top: 5%;"></textarea>
+              </div>
+              <div class="col s11 center-align" id="Enviarcel_desk">
+                <button href="#" class="waves-effect waves-light btn yellow darken-2 hoverable" id="btnEnviar_desk" style="border-radius: 20px 20px; margin-top: 10%; font-family: 'Muli';">Enviar</button>
+              </div>
+          </div>
+        </div>
+
+        <!--MODAL AVALIAR DESK-->
+        <div id="avaliar-modal-desk" class="modal hide-on-med-and-down">
+            <a><img class= "responsive-img modal-close" id="btn_fechar_modal_avaliar_desk" src ="../images/fechar.png"></a>
+          <h6><img class="responsive-img align-center" id="img_avaliar_desk" src ="../images/avaliar.png"><p>Avalie a questão:</p></h6>
+          <div id="div_estrela_desk">
+            <a href="javascript:void(0)" onclick="Avaliar(6)"><img src="../images/avaliar_vazio.png" id="s1_desk"></a>
+            <a href="javascript:void(0)" onclick="Avaliar(7)"><img src="../images/avaliar_vazio.png" id="s2_desk"></a>
+            <a href="javascript:void(0)" onclick="Avaliar(8)"><img src="../images/avaliar_vazio.png" id="s3_desk"></a>
+            <a href="javascript:void(0)" onclick="Avaliar(9)"><img src="../images/avaliar_vazio.png" id="s4_desk"></a>
+            <a href="javascript:void(0)" onclick="Avaliar(10)"><img src="../images/avaliar_vazio.png" id="s5_desk"></a>
+            <p id="rating_desk">0</p>
+          </div>
+          <div class="col s11 center-align" id = "Enviardesk">
+            <button href="javascript:void(0)" onclick="Avaliar(0)" class="waves-effect waves-light btn yellow darken-2 hoverable" id="s0" id="btnEnviar_desk" style="border-radius: 20px 20px; margin-top: 10%; font-family: 'Muli';">Enviar</button>
+          </div>
+        </div>
+
       </div>
     </div>
       <!-- FINAL ADD_QUESTÕES DESK-->
@@ -325,10 +369,7 @@
                   ?>
                 </div>
               </div>
-
-
-              <div id="quadrado" rows="8" cols="80"><br> <!--Colocar aqui o cabeçario para o celular -->
-                <?php $d->exibirQuestoes();?></div>
+              <div id="quadrado" rows="8" cols="80"><br></div>
               <img class= "responsive-img" id = "seta_esquerda" src ="../images/seta_esquerda.png">
               <?php
                 if(isset($_SESSION['nome_documento'])){
@@ -473,12 +514,12 @@
                     <div class="flipper">
                       <div class="front">
                         <div id="quest_profs">
-                          <span class="more"><?php echo $row['Enunciado']?></span>
+                          <span><?php echo $row['Enunciado']?></span>
                         </div>
                       </div>
                       <div class="back">
                         <div id="quest_profs">
-                          <span style="text-align: justify;" class="more">
+                          <span style="text-align: justify;">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                           </span>
                         </div>
@@ -513,7 +554,7 @@
                 <div id="addquest_documento">
                   <a><img class= "responsive-img modal-close" id="btn_fechar_modal" src ="../images/fechar.png"></a>
                   <button href="#denunciar-modal" id="btn_addquest" style="margin-bottom: 7%;" class="hide-on-large-only waves-effect waves-light btn transparent modal-trigger" type="submit" name="action"><img class="responsive-img" id="img_addquest" src ="../images/denunciar.png"><p id="palavra_addquestao">Denunciar</p></button>
-                  <button href="#favoritar-modal" onclick = "javascript: imgLetra('a');" id="btn_addquest" style="margin-bottom: 7%;" class="hide-on-large-only waves-effect waves-light btn transparent modal-trigger" type="submit" name="action"><img class="responsive-img" id="img_addquest" src ="../images/favoritar.png"><p id="palavra_addquestao">Favoritar</p></button>
+                  <button href="#favoritar-modal" id="btn_addquest" style="margin-bottom: 7%;" class="hide-on-large-only waves-effect waves-light btn transparent modal-trigger" type="submit" name="action"><img class="responsive-img" id="img_addquest" src ="../images/favoritar.png"><p id="palavra_addquestao">Favoritar</p></button>
                   <button href="#avaliar-modal" id="btn_addquest" style="margin-bottom: 7%;" class="hide-on-large-only waves-effect waves-light btn transparent modal-trigger" type="submit" name="action"><img class="responsive-img" id="img_addquest" src ="../images/avaliar.png"><p id="palavra_addquestao">Avaliar</p></button>
                   <button href="#difuculdade-modal" id="btn_addquest" class="hide-on-large-only waves-effect waves-light btn transparent modal-trigger" type="submit" name="action"><img class="responsive-img" id="img_addquest" src ="../images/nivel_dificuldade.png"><p id="palavra_addquestao">Dificuldade</p></button>
                 </div>
@@ -545,10 +586,6 @@
                   </div>
               </div>
             </div>
-
-            <!--TESTE-->
-            <div id = 'div_img'></div>
-            <!--TESTE-->
 
             <!--MODAL AVALIAR-->
             <div id="avaliar-modal" class="modal hide-on-large-only">
@@ -731,7 +768,7 @@
     </script>
 
     <!--LER MAIS E LER MENOS-->
-    <script>
+  <!--  <script>
 
     $(document).ready(function() {
 
@@ -769,7 +806,7 @@
             return false;
         });
     });
-  </script>
+  </script>-->
 
   <!-- AVALIAR MODAL - brilha brilha estrelinha -->
   <script>
@@ -913,19 +950,148 @@
 
   <!-- FINAL AVALIAR MODAL -->
 
-  <!--TESTE-->
-    <script language = 'javascript'>
-      function imgLetra( letra ){
-        switch( letra ) {
-          case 'a':
-          document.getElementById( 'div_img' ).innerHTML = "<img src = '../images/Favoritar.png' >";
-          break;
-          case 'b':
-          document.getElementById( 'div_img' ).innerHTML = "<img src = '../images/avaliar.png' >";
-        }
-      }
-    </script>
-  <!--TESTE-->
+<!-- AVALIAR MODAL - brilha brilha estrelinha DESK -->
+  <script>
+    function Avaliar(estrela) {
+     var url = window.location;
+     url = url.toString()
+     url = url.split("index.html");
+     url = url[0];
+
+     var s0_desk = document.getElementById("s0_desk").src;
+     var s1_desk = document.getElementById("s1_desk").src;
+     var s2_desk = document.getElementById("s2_desk").src;
+     var s3_desk = document.getElementById("s3_desk").src;
+     var s4_desk = document.getElementById("s4_desk").src;
+     var s5_desk = document.getElementById("s5_desk").src;
+     var avaliacao = 0;
+
+    //ESTRELA 5
+    if (estrela == 5) {
+     if (s5_desk == url + "../images/avaliar_vazio.png") {
+       document.getElementById("s1_desk").src = "../images/avaliar.png";
+       document.getElementById("s2_desk").src = "../images/avaliar.png";
+       document.getElementById("s3_desk").src = "../images/avaliar.png";
+       document.getElementById("s4_desk").src = "../images/avaliar.png";
+       document.getElementById("s5_desk").src = "../images/avaliar.png";
+       avaliacao = 5;
+     }
+
+     else {
+       document.getElementById("s1_desk").src = "../images/avaliar.png";
+       document.getElementById("s2_desk").src = "../images/avaliar.png";
+       document.getElementById("s3_desk").src = "../images/avaliar.png";
+       document.getElementById("s4_desk").src = "../images/avaliar.png";
+       document.getElementById("s5_desk").src = "../images/avaliar.png";
+       avaliacao = 5;
+    }}
+
+     //ESTRELA 4
+    if (estrela == 4) {
+     if (s4_desk == url + "../images/avaliar_vazio.png") {
+       document.getElementById("s1_desk").src = "../images/avaliar.png";
+       document.getElementById("s2_desk").src = "../images/avaliar.png";
+       document.getElementById("s3_desk").src = "../images/avaliar.png";
+       document.getElementById("s4_desk").src = "../images/avaliar.png";
+       document.getElementById("s5_desk").src = "../images/avaliar.png";
+       avaliacao = 4;
+     }
+
+     else {
+       document.getElementById("s1_desk").src = "../images/avaliar.png";
+       document.getElementById("s2_desk").src = "../images/avaliar.png";
+       document.getElementById("s3_desk").src = "../images/avaliar.png";
+       document.getElementById("s4_desk").src = "../images/avaliar.png";
+       document.getElementById("s5_desk").src = "../images/avaliar_vazio.png";
+       avaliacao = 4;
+    }}
+
+    //ESTRELA 3
+    if (estrela == 3) {
+     if (s3_desk == url + "../images/avaliar_vazio.png") {
+       document.getElementById("s1_desk").src = "../images/avaliar.png";
+       document.getElementById("s2_desk").src = "../images/avaliar.png";
+       document.getElementById("s3_desk").src = "../images/avaliar.png";
+       document.getElementById("s4_desk").src = "../images/avaliar.png";
+       document.getElementById("s5_desk").src = "../images/avaliar_vazio.png";
+       avaliacao = 3;
+     }
+
+     else {
+       document.getElementById("s1_desk").src = "../images/avaliar.png";
+       document.getElementById("s2_desk").src = "../images/avaliar.png";
+       document.getElementById("s3_desk").src = "../images/avaliar.png";
+       document.getElementById("s4_desk").src = "../images/avaliar_vazio.png";
+       document.getElementById("s5_desk").src = "../images/avaliar_vazio.png";
+       avaliacao = 3;
+    }}
+
+    //ESTRELA 2
+    if (estrela == 2) {
+     if (s2_desk == url + "../images/avaliar_vazio.png") {
+       document.getElementById("s1_desk").src = "../images/avaliar.png";
+       document.getElementById("s2_desk").src = "../images/avaliar.png";
+       document.getElementById("s3_desk").src = "../images/avaliar.png";
+       document.getElementById("s4_desk").src = "../images/avaliar_vazio.png";
+       document.getElementById("s5_desk").src = "../images/avaliar_vazio.png";
+       avaliacao = 2;
+     }
+
+     else {
+       document.getElementById("s1_desk").src = "../images/avaliar.png";
+       document.getElementById("s2_desk").src = "../images/avaliar.png";
+       document.getElementById("s3_desk").src = "../images/avaliar_vazio.png";
+       document.getElementById("s4_desk").src = "../images/avaliar_vazio.png";
+       document.getElementById("s5_desk").src = "../images/avaliar_vazio.png";
+       avaliacao = 2;
+    }}
+
+     //ESTRELA 1
+    if (estrela == 1) {
+     if (s1_desk == url + "../images/avaliar_vazio.png") {
+       document.getElementById("s1_desk").src = "../images/avaliar.png";
+       document.getElementById("s2_desk").src = "../images/avaliar.png";
+       document.getElementById("s3_desk").src = "../images/avaliar_vazio.png";
+       document.getElementById("s4_desk").src = "../images/avaliar_vazio.png";
+       document.getElementById("s5_desk").src = "../images/avaliar_vazio.png";
+       avaliacao = 1;
+     }
+
+     else {
+       document.getElementById("s1_desk").src = "../images/avaliar.png";
+       document.getElementById("s2_desk").src = "../images/avaliar_vazio.png";
+       document.getElementById("s3_desk").src = "../images/avaliar_vazio.png";
+       document.getElementById("s4_desk").src = "../images/avaliar_vazio.png";
+       document.getElementById("s5_desk").src = "../images/avaliar_vazio.png";
+       avaliacao = 1;
+    }}
+
+    //BTN SALVAR
+    if (estrela == 0) {
+     if (s0_desk == url + "../images/avaliar_vazio.png") {
+       document.getElementById("s1_desk").src = "../images/avaliar_vazio.png";
+       document.getElementById("s2_desk").src = "../images/avaliar_vazio.png";
+       document.getElementById("s3_desk").src = "../images/avaliar_vazio.png";
+       document.getElementById("s4_desk").src = "../images/avaliar_vazio.png";
+       document.getElementById("s5_desk").src = "../images/avaliar_vazio.png";
+       avaliacao = 0;
+     }
+
+     else {
+       document.getElementById("s1_desk").src = "../images/avaliar_vazio.png";
+       document.getElementById("s2_desk").src = "../images/avaliar_vazio.png";
+       document.getElementById("s3_desk").src = "../images/avaliar_vazio.png";
+       document.getElementById("s4_desk").src = "../images/avaliar_vazio.png";
+       document.getElementById("s5_desk").src = "../images/avaliar_vazio.png";
+       avaliacao = 0;
+    }}
+
+     document.getElementById('rating_desk').innerHTML = avaliacao;
+    }
+  </script>
+
+  <!-- FINAL AVALIAR MODAL DESK -->
+
 
 
     </body>
