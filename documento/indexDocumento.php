@@ -136,9 +136,7 @@
          <!--FINAL RODAPÉ CEL-->
 
 
-         <!--FORMATAÇÃO COMPUTADOR--> <!--não tira do lugar nicole, nem vem quer
-           ficar arrumando, dxa ele quieto aq-->
-
+         <!--FORMATAÇÃO COMPUTADOR-->
 
          <!-- DOCUMENTO DESK -->
          <div class="documento1_desk" id="documento1_desk">

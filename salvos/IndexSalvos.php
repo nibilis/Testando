@@ -1,3 +1,17 @@
+<?php
+    session_start();
+    if(!isset($_SESSION['ID_Usuario']))
+    {
+      header("location: ../login/indexLogin.php");
+      exit;
+    }
+
+    require_once'../Classes/Salvos.php';
+    $s = new Salvos;
+    require_once'../Classes/DataBase.php';
+    $u = new DataBase;
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -44,11 +58,11 @@
             <img src="../images/circulo_roxo_claro.png" id="roxo_claro">
             <img src="../images/circulo_amarelo_grande.png" id="amarelo_grande">
             <ul id="links_menucel">
-              <li><a id="perfil" class=" waves-effect center-align" href="../perfil/indexPerfil.html">Perfil</a></li>
+              <li><a id="perfil" class=" waves-effect center-align" href="../perfil/indexPerfil.php">Perfil</a></li>
               <li><div id="divider" class="divider"></div></li>
               <li><a id="question" class=" waves-effect center-align" href="../addquestao/indexAddQuestao.html">Adicionar Questão</a></li>
               <li><div id="divider" class="divider"></div></li>
-              <li><a id="document" class="waves-effect center-align" href="#!">Adicionar Documento</a></li>
+              <li><a id="document" class="waves-effect center-align" href="../documento/indexDocumento.php">Adicionar Documento</a></li>
               <li><div id="divider" class="divider"></div></li>
               <li><a id="saves" class="waves-effect center-align" href="#!">Salvos</a></li>
               <li><div id="divider" class="divider"></div></li>
@@ -80,7 +94,7 @@
          <img class= "responsive-img" id = "logopc" src ="../images/logo.png"> <img class= "responsive-img" id = "nomelogopc" src ="../images/TestandoNome.png"> </a>
         <ul id="nav-pc" class=" right">
           <li><a  id= "questao" href="../addquestao/indexAddQuestao.html" >Adicionar <br> questão</a></li>
-          <li><a  id= "documento" href="#!">Adicionar <br> documento</a>
+          <li><a  id= "documento" href="../documento/indexDocumento.php">Adicionar <br> documento</a>
             <img class= "responsive-img" id = "linha1" src ="../images/linha.png"></li>
           <li><a id= "salvos" href="#!">Salvos</a>
              <img class= "responsive-img" id = "linha2" src ="../images/linha.png"></li>
@@ -89,8 +103,8 @@
 
       <!-- foto/nome perfil -->
       <div class="hide-on-med-and-down" id="perfil_pequeno">
-        <img class="responsive-img" id="foto_perfil_pequeno" src="../images/Icone.png">
-        <p>Primeiro Nome</p>
+          <div class="responsive-image" id= "foto_perfil_pequeno"><?php $_Imagem=base64_encode( $_SESSION['imagem'] ); echo "<img height='100%' width='100%' src='data:image/jpeg;base64,$_Imagem'> "; ?></div>
+          <p id="nome-dashboard"><?php echo $_SESSION['NickName']; ?></p>
       </div>
     </nav>
     <!-- Dashboard COMPUTADOR FINAL-->
@@ -231,23 +245,25 @@
         <!-- Fim títulos -->
 
         <!-- Documentos salvos -->
+        <?php
+          $u->conectar();
+          $results = $s->listAll();
+          foreach($results as $row){ ?>
+          <div class="row hide-on-large-only">
+            <div class="col s12">
+              <div class="card white">
+                <div class="card-content black-text" id="backgroundcard">
 
-        <div class="row hide-on-large-only">
+                  <!-- Matéria questão -->
 
-        <div class="col s12">
-          <div class="card white">
-            <div class="card-content black-text" id="backgroundcard">
-
-              <!-- Matéria questão -->
-
-              <p id="materiaquest" style:"color: purple;"> Matemática - Trigonometria</p>
-              <!-- Conteudo questão -->
-              <p id="conteudoquest"> Complete a equação: sen²(x) + cos²(x) = ? </p>
-
+                  <p id="materiaquest" style:"color: purple;"> Matemática - Trigonometria</p>
+                  <!-- Conteudo questão -->
+                  <p id="conteudoquest2"><?php echo $row['Enunciado'] ?></p>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
+        <?php } ?>
       </div>
 
       <!-- FAVORITADOS CELULAR-->
@@ -260,34 +276,36 @@
         <!-- Fim títulos -->
 
         <!-- Documentos salvos -->
+        <?php
+          $u->conectar();
+          $results = $s->listAll();
+          foreach($results as $row){ ?>
+        <div class="row hide-on-med-and-down">
 
-        <div class="row hide-on-large-only">
+          <div class="col s12">
+            <div class="card white" id="cardfavoritos">
+              <div class="card-content black-text" id="backgroundcard" style="padding-bottom: 2%; padding-top: -1%;">
 
-        <div class="col s12">
-          <div class="card white" id="cardfavoritos">
-            <div class="card-content black-text" id="backgroundcard" style="padding-bottom: 2%; padding-top: -1%;">
+                <img class="responsive-img" id="favoritarimg" src="../images/favoritar.png">
 
-              <img class="responsive-img" id="favoritarimg" src="../images/favoritar.png">
+                <div class="row">
+                  <div class="col s3">
+                    <img class="responsive-img" id="iconeimg" src="../images/icone.png">
+                  </div>
 
-              <div class="row">
+                    <div class="col s9">
+                    <!-- Matéria questão -->
+                    <p id="materiafavori" style:"color: purple;"> Matemática - Trigonometria</p>
 
-              <div class="col s3">
-              <img class="responsive-img" id="iconeimg" src="../images/icone.png">
-            </div>
-
-            <div class="col s9">
-              <!-- Matéria questão -->
-              <p id="materiafavori" style:"color: purple;"> Matemática - Trigonometria</p>
-
-              <!-- Conteudo questão -->
-              <p id="conteudofavori"> Complete a equação: sen²(x) + cos²(x) = ? </p>
+                    <!-- Conteudo questão -->
+                    <p id="conteudofavori2"><?php echo $row['Enunciado'] ?></p>
+                    </div>
                 </div>
               </div>
+            </div>
           </div>
         </div>
-      </div>
-
-    </div>
+      <?php } ?>
     </div>
 
     <!-- FINAL MOBILE -->
@@ -435,23 +453,25 @@
       <!-- Fim títulos -->
 
       <!-- Documentos salvos -->
+      <?php
+        $u->conectar();
+        $results = $s->listAll();
+        foreach($results as $row){ ?>
+        <div class="row hide-on-med-and-down">
+          <div class="col l4">
+            <div class="card white">
+              <div class="card-content black-text" id="backgroundcard2">
 
-      <div class="row hide-on-med-and-down">
+                <!-- Matéria questão -->
 
-      <div class="col l4">
-        <div class="card white">
-          <div class="card-content black-text" id="backgroundcard2">
-
-            <!-- Matéria questão -->
-
-            <p id="materiaquest2" style:"color: purple;"> Matemática - Trigonometria</p>
-            <!-- Conteudo questão -->
-            <p id="conteudoquest2"> Complete a equação: sen²(x) + cos²(x) = ? </p>
-
+                <p id="materiaquest2" style:"color: purple;"> Matemática - Trigonometria</p>
+                <!-- Conteudo questão -->
+                <p id="conteudoquest2"><?php echo $row['Enunciado'] ?></p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
+      <?php } ?>
     </div>
 
     <!-- FAVORITADOS COMPUTADOR-->
@@ -468,35 +488,37 @@
       <!-- Fim títulos -->
 
       <!-- Documentos salvos -->
-
+      <?php
+        $u->conectar();
+        $results = $s->listAll();
+        foreach($results as $row){ ?>
       <div class="row hide-on-med-and-down">
 
-      <div class="col l4">
-        <div class="card white" id="cardfavoritos2">
-          <div class="card-content black-text" id="backgroundcard2" style="padding-bottom: 2%; padding-top: -1%;">
+        <div class="col l4">
+          <div class="card white" id="cardfavoritos2">
+            <div class="card-content black-text" id="backgroundcard2" style="padding-bottom: 2%; padding-top: -1%;">
 
-            <img class="responsive-img" id="favoritarimg2" src="../images/favoritar.png">
+              <img class="responsive-img" id="favoritarimg2" src="../images/favoritar.png">
 
-            <div class="row">
+              <div class="row">
+                <div class="col l3">
+                  <img class="responsive-img" id="iconeimg2" src="../images/icone.png">
+                </div>
 
-            <div class="col l3">
-            <img class="responsive-img" id="iconeimg2" src="../images/icone.png">
-          </div>
+                  <div class="col l9">
+                  <!-- Matéria questão -->
+                  <p id="materiafavori2" style:"color: purple;"> Matemática - Trigonometria</p>
 
-          <div class="col l9">
-            <!-- Matéria questão -->
-            <p id="materiafavori2" style:"color: purple;"> Matemática - Trigonometria</p>
-
-            <!-- Conteudo questão -->
-            <p id="conteudofavori2"> Complete a equação: sen²(x) + cos²(x) = ? </p>
+                  <!-- Conteudo questão -->
+                  <p id="conteudofavori2"><?php echo $row['Enunciado'] ?></p>
+                  </div>
+                </div>
               </div>
             </div>
+          </div>
         </div>
-      </div>
+      <?php } ?>
     </div>
-
-  </div>
-  </div>
 
 
 

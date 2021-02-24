@@ -8,13 +8,13 @@
 /*FORMATAÇÃO COMPUTADOR*/
 
 /*JAVASCRIPT*/
-  #gabarito_desk, { display: none; }
+  #gabarito_desk { display: none; }
 
   #documento1_desk {display: block;}
 
   #documento1_desk:checked, #gabarito_desk:checked { z-index: auto; }
 
-  .documento1_desk, .gabarito_desk, { display: none; }
+  .documento1_desk, .gabarito_desk { display: none; }
 
   /*DOCUMENTO*/
   #nome_documento_desk {
