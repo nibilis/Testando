@@ -325,7 +325,10 @@
                   ?>
                 </div>
               </div>
-              <div id="quadrado" rows="8" cols="80"><br></div>
+
+
+              <div id="quadrado" rows="8" cols="80"><br> <!--Colocar aqui o cabeçario para o celular -->
+                <?php $d->exibirQuestoes();?></div>
               <img class= "responsive-img" id = "seta_esquerda" src ="../images/seta_esquerda.png">
               <?php
                 if(isset($_SESSION['nome_documento'])){

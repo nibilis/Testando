@@ -40,23 +40,20 @@ Class Documento
   public function exibirQuestoes(){
 
     global $pdo;
+    $i = 0;
 
 
     if (isset($_SESSION['id_documento'])){
       $idDocumento = $_SESSION['id_documento'];
 
       //Buscar as questões cadastradas em um documento
-      $sql = $pdo->prepare("SELECT Questao_ID_Questao_ FROM questao_documento WHERE Documento_ID_Documento = :d");
+      $sql = $pdo->prepare("SELECT Enunciado FROM questao as q INNER JOIN questao_documento as qd ON qd.Documento_ID_Documento = :d AND q.ID_Questao_ = qd.Questao_ID_Questao_");
       $sql->bindValue(":d", $idDocumento);
       $sql->execute();
       if($sql->rowCount() > 0){
-        while($dado = $sql->fetch()) {
-          echo $dado['Questao_ID_Questao_'];
-          $sql = $pdo->prepare("SELECT Enunciado FROM questao WHERE ID_Questao_ = :q");
-          $sql->bindValue(":q", $dado['Questao_ID_Questao_']);
-          $sql->execute();
-          while($m = $sql->fetch()) {
-          echo $m['Enunciado'];}
+        while($m = $sql->fetch()){
+        $i++;
+        ?> <p style=""><?php echo $i.". ".$m['Enunciado']."</br>"; ?></p> <?php
         }
       }
       else{

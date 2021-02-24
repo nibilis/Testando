@@ -10,6 +10,7 @@
     $s = new Salvos;
     require_once'../Classes/DataBase.php';
     $u = new DataBase;
+    $u->conectar();
 ?>
 
 <!DOCTYPE html>
@@ -141,7 +142,9 @@
         <!-- Fim títulos -->
 
         <!-- Documentos salvos -->
-
+        <?php
+          $results = $s->listAllDocumentos();
+          foreach($results as $row){ ?>
         <div class="row hide-on-large-only">
         <div class="col s12 ">
           <div class="card white">
@@ -153,7 +156,7 @@
 
               <!-- Nome do documento -->
               <div class="col s8 center">
-              <p id="documentonome"> Testando.txt</p>
+              <p id="documentonome"><?php echo $row['Nome_Documento'];?></p>
               </div>
               <div>
 
@@ -231,6 +234,7 @@
           </div>
         </div>
       </div>
+    <?php } ?>
 
 
       </div>
@@ -246,7 +250,6 @@
 
         <!-- Documentos salvos -->
         <?php
-          $u->conectar();
           $results = $s->listAll();
           foreach($results as $row){ ?>
           <div class="row hide-on-large-only">
@@ -277,7 +280,6 @@
 
         <!-- Documentos salvos -->
         <?php
-          $u->conectar();
           $results = $s->listAll();
           foreach($results as $row){ ?>
         <div class="row hide-on-med-and-down">
@@ -340,8 +342,10 @@
     <!-- MEUS DOCUMENTOS PARA COMPUTADOR-->
     <div class="documento2" id="documento2">
 
-      <!-- Documentos salvos -->
-
+      <!-- Documentos salvos computador-->
+      <?php
+        $results = $s->listAllDocumentos();
+        foreach($results as $row){ ?>
       <div class="row hide-on-med-and-down">
       <div class="col l4 ">
         <div class="card white">
@@ -355,7 +359,7 @@
 
             <!-- Nome do documento -->
             <div class="col l9 center-align">
-            <p id="documentonome2"> Testando.txt</p>
+            <p id="documentonome2"><?php echo $row['Nome_Documento'];?></p>
             </div>
             <div>
 
@@ -431,14 +435,13 @@
 
               </div>
 
-            </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-
-
     </div>
+  <?php } ?>
       </div>
 
     <!-- MINHAS QUESTOES COMPUTADOR-->
@@ -454,7 +457,6 @@
 
       <!-- Documentos salvos -->
       <?php
-        $u->conectar();
         $results = $s->listAll();
         foreach($results as $row){ ?>
         <div class="row hide-on-med-and-down">
@@ -489,7 +491,6 @@
 
       <!-- Documentos salvos -->
       <?php
-        $u->conectar();
         $results = $s->listAll();
         foreach($results as $row){ ?>
       <div class="row hide-on-med-and-down">
