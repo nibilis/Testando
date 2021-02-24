@@ -304,8 +304,8 @@
               </div>
             </div>
           </div>
-        <?php } ?>
-      </div>
+        </div>
+      <?php } ?>
     </div>
 
     <!-- FINAL MOBILE -->
@@ -512,13 +512,13 @@
                   <!-- Conteudo questão -->
                   <p id="conteudofavori2"><?php echo $row['Enunciado'] ?></p>
                   </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       <?php } ?>
     </div>
-  </div>
 
 
 
