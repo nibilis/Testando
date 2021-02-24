@@ -248,48 +248,48 @@ header('Content-Type: text/html; charset=UTF-8');
               <div required id="dificuldade2" class="input-field col s10 center-align hide-on-large-only">
               <label id="label_dificuldade2" style="font-size: 85%;">Dificuldade da questão <span style="color: red;">*</span></label>
 
-              <div id="teste">
-              <label>
-                <div class="col s1" class= "hide-on-large-only">
+          <div id="radio_button_dificil">
+            <label>
+              <div class="col s1" class= "hide-on-large-only">
                 <input name="group1" class="with-gap" type="radio"  />
-                <span>Fácil</span>
+                <span style="color:#77de7c;" >Fácil</span>
               </div>
-              </label>
+            </label>
 
-              <label>
-                <div class="col s2" class= "hide-on-large-only">
+            <label>
+              <div class="col s2" class= "hide-on-large-only">
                 <input name="group1" class="with-gap" type="radio"  />
-                <span>Médio</span>
+                <span style="color: #FFC300;" >Médio</span>
               </div>
-              </label>
+            </label>
 
-              <label>
+            <label>
                 <div class="col s3" class= "hide-on-large-only">
                 <input name="group1" class="with-gap" type="radio" />
-                <span>Difícil</span>
+                <span style="color: #FF5733;" >Difícil</span>
               </div>
             </label>
           </div>
-          </div>
+        </div>
 
           <div required id="priv_public2" class= "hide-on-large-only">
 
               <label id="label_privacidade2" style="font-size: 87%;">Privacidade da questão <span style="color: red;">*</span></label>
-              <div id="teste2">
+            <div id="radio_button_priv">
              <label>
                <div class="col s1" class= "hide-on-large-only">
-               <input name="group1" class="with-gap" type="radio"/>
+               <input name="group2" class="with-gap" type="radio"/>
                <span>Público</span>
              </div>
              </label>
 
              <label>
                <div class="col s2" class= "hide-on-large-only">
-               <input name="group1" class="with-gap" type="radio"/>
+               <input name="group2" class="with-gap" type="radio"/>
                <span>Privado</span>
              </div>
-           </div>
              </label>
+            </div>
 
          </div>
          <button id="btn_salvar" class="hide-on-large-only waves-effect waves-light btn" type="submit" name="action">Salvar</button>
@@ -315,7 +315,7 @@ header('Content-Type: text/html; charset=UTF-8');
               <div required id="dificuldade" class="input-field col s10 center-align hide-on-large-only">
               <label id="label_dificuldade" style="font-size: 85%;">Dificuldade da questão <span style="color: red;">*</span></label>
 
-              <div id="teste3">
+              <div id="radio_button_dificil2">
               <label>
                 <div class="col s1  hide-on-large-only">
                 <input name="dificuldade-cel" class="with-gap" type="radio"/>
@@ -343,7 +343,7 @@ header('Content-Type: text/html; charset=UTF-8');
           <div required id="priv_public" class=" hide-on-large-only">
             <label id="label_privacidade" style="font-size: 87%;">Privacidade da questão <span style="color: red;">*</span></label>
 
-            <div id="teste4">
+            <div id="radio_button_priv2">
              <label>
                <div class="col s1  hide-on-large-only">
                <input name="privacidade-cel" class="with-gap" type="radio"/>
@@ -468,18 +468,28 @@ header('Content-Type: text/html; charset=UTF-8');
         <!-- COMEÇO ALTERNATIVA -->
         <div id="alternativa" class="alternativa-desk">
 
-              <label for="textarea1">Resposta</label>
-              <textarea style= "font-family: 'Muli'; font-size: 11px; float: left;" class="materialize-textarea"></textarea>
+          <!--CAMPOS ALTERNATIVA: ADD E RETIRAR-->
 
+
+          <div id="formulario_desk" class= "hide-on-med-and-down" >
+            <input id="alternativa_campo_desk" type="text" placeholder="Alternativa" name="numeroDocumento" required/>
+          </div>
+
+          <a href="#" data-id="1" id="adicionarCampo_desk" class="hide-on-med-and-down">+ Adicionar Campos</a>
+
+
+          <label id="label_resposta2_desk" for="textarea1" class= "hide-on-med-and-down">Resposta alternativa <span style="color: red;">*</span></label>
+          <textarea id="respostaalternativa_desk" maxlength="1" placeholder=" Ex: A..." required style= "font-family: 'Muli'; font-size: 100%;" class="materialize-textarea hide-on-med-and-down"></textarea>
+
+              <!--CAMPOS DIFICULDADE ALTERNATIVA-->
               <div required id="dificuldade-desk2" class="input-field col s10 center-align hide-on-med-and-down">
-                <form action="#">
 
-                  <label id="label_dificuldade-desk2" style="font-size: 85%;">Dificuldade da questão <span style="color: red;">*</span></label>
-
+                  <label id="label_dificuldade-desk2" style="font-size: 80%;">Dificuldade da questão <span style="color: red;">*</span></label>
+            <div id="radio_button_dificil_desk">
               <label>
                 <div class="col s1" class= "hide-on-med-and-down">
                   <input name="group1" class="with-gap" type="radio"/>
-                  <span style="color:#CDF58F">Fácil</span>
+                  <span style="color:#77de7c;">Fácil</span>
                 </div>
               </label>
 
@@ -496,29 +506,27 @@ header('Content-Type: text/html; charset=UTF-8');
                   <span style="color:#FF5733">Difícil</span>
                 </div>
             </label>
-
-          </form>
           </div>
+        </div>
 
           <div required id="priv_public-desk2" class="hide-on-med-and-down">
-            <label id="label_privacidade-desk2" style="font-size: 87%;">Privacidade da questão<span style="color: red;">*</span></label>
-            <form action="#">
 
+          <div id="radio_button_priv_desk">
+            <label id="label_privacidade-desk2" style="font-size: 80%; margin-left: 5%; margin-bottom: -5%;">Privacidade da questão<span style="color: red;">*</span></label>
              <label>
                <div class="col s1 hide-on-med-and-down">
-                 <input name="group1" class="with-gap" type="radio"/>
+                 <input name="group2" class="with-gap" type="radio"/>
                  <span>Público</span>
                </div>
              </label>
 
              <label>
                <div class="col s2 hide-on-med-and-down">
-                 <input name="group1" class="with-gap" type="radio"/>
+                 <input name="group2" class="with-gap" type="radio"/>
                  <span>Privado</span>
                </div>
              </label>
-
-           </form>
+           </div>
          </div>
 
            <button id="btn_salvar-desk" class="cadastro btn flow-text waves-effect yellow darken-2 waves-light hoverable" type="submit">Salvar</button>
@@ -773,7 +781,7 @@ header('Content-Type: text/html; charset=UTF-8');
       <!--FINAL TRANSIÇÃO COR BOTÃO ALTERNATIVA E DISSERTATIVA-->
 
 
-      <!--TESTE TESTE TESTE-->
+      <!-- CAMPO ALTERNATIVA: ADD E RETIRAR CEL-->
       <script>
       $(function () {
           var divContent = $('#formulario');
@@ -805,7 +813,41 @@ header('Content-Type: text/html; charset=UTF-8');
               });
             });
       </script>
-      <!--TESTE TESTE TESTE-->
+      <!-- FINAL CAMPO ALTERNATIVA: ADD E RETIRAR CEL-->
+
+      <!-- CAMPO ALTERNATIVA: ADD E RETIRAR DESK-->
+      <script>
+      $(function () {
+          var divContent_desk = $('#formulario_desk');
+          var botaoAdicionar_desk = $('a[data-id="1"]');
+          var i = 1;
+          //66 - B
+          var letra = 66;
+
+          //Ao clicar em adicionar ele cria uma linha com novos campos
+
+            $(botaoAdicionar_desk).click(function () {
+
+                if(i <= 4) {
+                    $('<div class="conteudoIndividual_desk"><br><input id="alternativa_campo_desk '+ String.fromCharCode(letra) +'" type="text" placeholder="Alternativa" name="numeroDocumento' + i + '" required style="width:98%; margin-top: 5%;"/><a href="#" class="linkRemover_desk">X</a></div>').appendTo(divContent_desk);
+                    $('#removehidden_desk').remove();
+                    letra++;
+                    i++;
+                    $('<input type="hidden" name="quantidadeCampos" value="' + i + '" id="removehidden_desk">').appendTo(divContent_desk);
+                }
+            });
+
+          //Cliquando em remover a linha é eliminada
+
+          $('#formulario_desk').on('click', '.linkRemover_desk', function () {
+              $(this).parents('.conteudoIndividual_desk').remove();
+              letra--;
+              i--;
+
+              });
+            });
+      </script>
+      <!-- FINAL CAMPO ALTERNATIVA: ADD E RETIRAR DESK-->
 
 
   </html>

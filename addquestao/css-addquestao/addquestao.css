@@ -204,17 +204,31 @@
   /*FINAL DOS CAMPOS QUE MUDAM DISSERTATIVA*/
 
   /*CAMPOS QUE MUDAM ALTERNATIVA*/
-  #adicionarCampo { margin-left: 18%; }
+  #adicionarCampo { margin-left: 18%; } /*mobile*/
 
-  #alternativa_campo, .conteudoIndividual {
+  #adicionarCampo_desk { margin-left: 16%; } /*destop*/
+
+  #alternativa_campo, .conteudoIndividual {/*mobile*/
     margin-left: 18%;
     width: 72%;
     margin-top: -10%;
   }
 
+  #alternativa_campo_desk, .conteudoIndividual_desk {/*desktop*/
+    margin-left: 16%;
+    width: 75%;
+    margin-top: -5%;
+  }
+
     #label_resposta2 { /*mobile*/
-      margin-left: -39%;
+      margin-left: -35%;
       margin-top: 13%;
+      position: absolute;
+    }
+
+    #label_resposta2_desk { /*desktop*/
+      margin-left: -13%;
+      margin-top: 5%;
       position: absolute;
     }
 
@@ -225,42 +239,59 @@
       text-transform: uppercase;
     }
 
-    #dificuldade2 #teste, #priv_public2 #teste2 { /*mobile*/
+    #respostaalternativa_desk { /*desktop*/
+      width: 75%;
+      margin-left: 16%;
+      margin-top: 5%;
+      text-transform: uppercase;
+    }
+
+
+    #dificuldade2 #radio_button_dificil { /*mobile*/
       display: grid;
       gap: 3em;
       grid-template-columns: 19% 21% 20%;
       margin-top: 18%;
       margin-left: 16%;
+      margin-bottom: 7%;
       }
+
+    #dificuldade-desk2 #radio_button_dificil_desk { /*desktop*/
+      display: grid;
+      gap: 3em;
+      grid-template-columns: 17% 20% 20%;
+      margin-top: 7%;
+      margin-left: 17%;
+    }
 
     #label_dificuldade2 { /*mobile*/
       margin-left: 15%;
       margin-top: -15%;
     }
 
-    #dificuldade-desk2 { /*desktop*/
-      display: grid;
-      gap: 3em;
-      grid-template-columns: 19% 21% 20%;
-      margin-left: 5%;
-      }
+    #label_dificuldade-desk2 { /*desktop*/
+      margin-left: 18%;
+    }
 
-    #label_dificuldade-desk2{ /*desktop*/
-      margin-left: 15%; }
-
-    #priv_public2 { /*mobile*/
+    #priv_public2 #radio_button_priv { /*mobile*/
       display: grid;
       gap: 2em;
       grid-template-columns: 30%;
-      margin-top: 8%;
-      margin-left: 17%;
+      margin-top: 5%;
+      margin-left: 16%;
     }
 
+    #priv_public-desk2 #radio_button_priv_desk { /*mobile*/
+      display: grid;
+      gap: 3em;
+      grid-template-columns: 30%;
+      margin-top: 14%;
+      margin-left: 14.8%;
+    }
 
     #label_privacidade2 { /*mobile*/
       width: 150%;
-      margin-left: 5%;
-      margin-top: 1%;
+      margin-left: 18%;
     }
   /*FINAL DOS CAMPOS QUE MUDAM ALTERNATIVA*/
 

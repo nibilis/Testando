@@ -64,7 +64,7 @@
                    <li><div id="divider" class="divider"></div></li>
                    <li><a id="document" class="waves-effect center-align" href="../documento/indexDocumento.php">Adicionar Documento</a></li>
                    <li><div id="divider" class="divider"></div></li>
-                   <li><a id="saves" class="waves-effect center-align" href="../salvos/indexSalvos.php">Salvos</a></li>
+                   <li><a id="saves" class="waves-effect center-align" href="#!">Salvos</a></li>
                    <li><div id="divider" class="divider"></div></li>
                    <a id="sair" href="../Classes/Sair.php"><i class="material-icons" id="sair2" >exit_to_app</i> Sair </a>
                  </ul>
@@ -96,7 +96,7 @@
                <li><a  id= "questao" href="../addquestao/indexAddQuestao.php" >Adicionar <br> questão</a></li>
                <li><a  id= "documento" href="../documento/indexDocumento.php">Adicionar <br> documento</a>
                  <img class= "responsive-img" id = "linha1" src ="../images/linha.png"></li>
-               <li><a id= "salvos" href="../salvos/indexSalvos.php">Salvos</a>
+               <li><a id= "salvos" href="../salvos/indexSalvos.html">Salvos</a>
                   <img class= "responsive-img" id = "linha2" src ="../images/linha.png"></li>
              </ul>
              <a href="../perfil/indexPerfil.php" >
@@ -136,9 +136,7 @@
          <!--FINAL RODAPÉ CEL-->
 
 
-         <!--FORMATAÇÃO COMPUTADOR--> <!--não tira do lugar nicole, nem vem quer
-           ficar arrumando, dxa ele quieto aq-->
-
+         <!--FORMATAÇÃO COMPUTADOR-->
 
          <!-- DOCUMENTO DESK -->
          <div class="documento1_desk" id="documento1_desk">
@@ -327,7 +325,7 @@
                   ?>
                 </div>
               </div>
-              <div id="quadrado" rows="8" cols="80"><br><?php $d->exibirQuestoes();?></div>
+              <div id="quadrado" rows="8" cols="80"><br></div>
               <img class= "responsive-img" id = "seta_esquerda" src ="../images/seta_esquerda.png">
               <?php
                 if(isset($_SESSION['nome_documento'])){
