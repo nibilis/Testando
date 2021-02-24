@@ -537,8 +537,6 @@ header('Content-Type: text/html; charset=UTF-8');
                 </div>
 
 
-
-
               <div required id="dificuldade-desk" class="input-field col s10 center-align hide-on-med-and-down">
 
               <label id="label_dificuldade-desk" style="font-size: 85%;">Dificuldade da questão <span style="color: red;">*</span></label>

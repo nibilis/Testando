@@ -135,7 +135,7 @@
     margin-left: 15.7%;
   }
 
-  #dificuldade #teste3{ /*mobile*/
+  #teste3{ /*mobile*/
     display: grid;
     gap: 3em;
     grid-template-columns: 19% 21% 20%;
@@ -148,7 +148,7 @@
       margin-top: -13%;
     }
 
-    #dificuldade-desk form{ /*desktop*/
+    #dificuldade-desk div{ /*desktop*/
       display: grid;
       gap: 2em;
       grid-template-columns: 22.5% 20% 20% 20%;
@@ -169,7 +169,7 @@
       margin-top: -12%;
     }
 
-    #priv_public-desk form { /*desktop*/
+    #priv_public-desk div{ /*desktop*/
         display:  grid;
         gap: 0.16em;
         grid-template-columns: 20% 15% 15%;
