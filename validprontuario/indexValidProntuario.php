@@ -3,7 +3,7 @@
   require_once'../Classes/DataBase.php';
   $u = new DataBase;
 
-  $u->conectar("testando", "localhost", "root", "");
+  $u->conectar();
 
   require_once'../Classes/Usuario.php';
   $c = new Usuario;

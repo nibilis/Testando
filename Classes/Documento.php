@@ -28,7 +28,6 @@ Class Documento
     return true;
   }
 
-
   public function listAll()
   {
     global $pdo;
@@ -36,6 +35,39 @@ Class Documento
     $sql = $pdo->prepare("SELECT * FROM documento");
     $sql->execute();
     return $sql->fetchAll(\PDO::FETCH_ASSOC);
+  }
+
+  public function exibirQuestoes(){
+
+    global $pdo;
+
+
+    if (isset($_SESSION['id_documento'])){
+      $idDocumento = $_SESSION['id_documento'];
+
+      //Buscar as questões cadastradas em um documento
+      $sql = $pdo->prepare("SELECT Questao_ID_Questao_ FROM questao_documento WHERE Documento_ID_Documento = :d");
+      $sql->bindValue(":d", $idDocumento);
+      $sql->execute();
+      if($sql->rowCount() > 0){
+        while($dado = $sql->fetch()) {
+          echo $dado['Questao_ID_Questao_'];
+          $sql = $pdo->prepare("SELECT Enunciado FROM questao WHERE ID_Questao_ = :q");
+          $sql->bindValue(":q", $dado['Questao_ID_Questao_']);
+          $sql->execute();
+          while($m = $sql->fetch()) {
+          echo $m['Enunciado'];}
+        }
+      }
+      else{
+        //acho que não vai precisar disso depois
+        echo "";
+      }
+    }
+    else{
+      //Para não dar o erro de variavel indefinida
+      echo "";
+    }
   }
 }
 ?>

@@ -425,23 +425,24 @@
       text-transform: capitalize;
       font-family: "Muli";
       font-size: 145%;
-      width: 150%;
+      width: 130%;
+      margin-left: 45%;
     }
 
     #btn-add_questoes2{
       text-transform: capitalize;
       font-family: "Muli";
       font-size: 150%;
-      width: 150%;
-
+      width: 130%;
+      margin-left: 15%;
     }
 
     #btn-gabarito2{
       text-transform: capitalize;
       font-family: "Muli";
       font-size: 150%;
-      width: 150%;
-
+      width: 130%;
+      margin-left: 25%;
     }
 
     #materiafavori2{
@@ -508,6 +509,31 @@
 
   @media (min-width: 1280px){
 
+    #btn-documento2{
+      text-transform: capitalize;
+      font-family: "Muli";
+      font-size: 145%;
+      width: 130%;
+      margin-left: 95%;
+    }
+
+    #btn-add_questoes2{
+      text-transform: capitalize;
+      font-family: "Muli";
+      font-size: 150%;
+      width: 130%;
+      margin-left: -10%;
+    }
+
+    #btn-gabarito2{
+      text-transform: capitalize;
+      font-family: "Muli";
+      font-size: 150%;
+      width: 130%;
+      margin-left: 45%;
+    }
+
+
     #favoritarimg2{
       width: 10%;
       margin-top: -10%;
@@ -546,6 +572,30 @@
 
   @media (min-width: 1366px){
 
+    #btn-documento2{
+      text-transform: capitalize;
+      font-family: "Muli";
+      font-size: 145%;
+      width: 130%;
+      margin-left: 95%;
+    }
+
+    #btn-add_questoes2{
+      text-transform: capitalize;
+      font-family: "Muli";
+      font-size: 150%;
+      width: 130%;
+      margin-left: -10%;
+    }
+
+    #btn-gabarito2{
+      text-transform: capitalize;
+      font-family: "Muli";
+      font-size: 150%;
+      width: 130%;
+      margin-left: 45%;
+    }
+
     #botao1desk
     {
       font-size:70%;
@@ -572,6 +622,29 @@
 
   @media (min-width: 1600px){
 
+    #btn-documento2{
+      text-transform: capitalize;
+      font-family: "Muli";
+      font-size: 145%;
+      width: 130%;
+      margin-left: 145%;
+    }
+
+    #btn-add_questoes2{
+      text-transform: capitalize;
+      font-family: "Muli";
+      font-size: 150%;
+      width: 130%;
+      margin-left: -10%;
+    }
+
+    #btn-gabarito2{
+      text-transform: capitalize;
+      font-family: "Muli";
+      font-size: 150%;
+      width: 130%;
+      margin-left: 70%;
+    }
 
     #favoritarimg2{
       width: 10%;
@@ -615,6 +688,30 @@
 
   @media (min-width: 1680px){
 
+    #btn-documento2{
+      text-transform: capitalize;
+      font-family: "Muli";
+      font-size: 145%;
+      width: 130%;
+      margin-left: 145%;
+    }
+
+    #btn-add_questoes2{
+      text-transform: capitalize;
+      font-family: "Muli";
+      font-size: 150%;
+      width: 130%;
+      margin-left: -10%;
+    }
+
+    #btn-gabarito2{
+      text-transform: capitalize;
+      font-family: "Muli";
+      font-size: 150%;
+      width: 130%;
+      margin-left: 70%;
+    }
+
     #documentoimg2{
       margin-top: 1%;
       width: 200%;
@@ -645,6 +742,30 @@
   }
 
   @media (min-width: 1920px){
+
+    #btn-documento2{
+      text-transform: capitalize;
+      font-family: "Muli";
+      font-size: 145%;
+      width: 130%;
+      margin-left: 185%;
+    }
+
+    #btn-add_questoes2{
+      text-transform: capitalize;
+      font-family: "Muli";
+      font-size: 150%;
+      width: 130%;
+      margin-left: -20%;
+    }
+
+    #btn-gabarito2{
+      text-transform: capitalize;
+      font-family: "Muli";
+      font-size: 150%;
+      width: 130%;
+      margin-left: 90%;
+    }
 
     #favoritarimg2{
       width: 8%;

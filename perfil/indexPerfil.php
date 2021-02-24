@@ -5,8 +5,7 @@
       header("location: ../login/indexLogin.php");
       exit;
     }
- ?>
-
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -58,7 +57,7 @@
                   <li><div id="divider" class="divider"></div></li>
                   <li><a id="document" class="waves-effect center-align" href="../documento/indexDocumento.php">Adicionar Documento</a></li>
                   <li><div id="divider" class="divider"></div></li>
-                  <li><a id="saves" class="waves-effect center-align" href="#!">Salvos</a></li>
+                  <li><a id="saves" class="waves-effect center-align" href="../salvos/indexSalvos.php">Salvos</a></li>
                   <li><div id="divider" class="divider"></div></li>
                   <a id="sair" href="../Classes/Sair.php"><i class="material-icons" id="sair2">exit_to_app</i> Sair </a>
                 </ul>
@@ -90,7 +89,7 @@
               <li><a  id= "questao" href="../addquestao/indexAddQuestao.php" >Adicionar <br> questão</a></li>
               <li><a  id= "documento" href="../documento/indexDocumento.php">Adicionar <br> documento</a>
                 <img class= "responsive-img" id = "linha1" src ="../images/linha.png"></li>
-              <li><a id= "salvos" href="#!">Salvos</a>
+              <li><a id= "salvos" href="../salvos/indexSalvos.php">Salvos</a>
                  <img class= "responsive-img" id = "linha2" src ="../images/linha.png"></li>
             </ul>
 
