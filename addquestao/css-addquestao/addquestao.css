@@ -130,9 +130,10 @@
     margin-left: 8%;
   }
 
-  #respostadissertativa-desk { /*desktop*/
+  #respostadissert-desk { /*desktop*/
     width: 78%;
     margin-left: 15.7%;
+    margin-top: -2%;
   }
 
   #teste3{ /*mobile*/
@@ -245,7 +246,6 @@
       margin-top: 5%;
       text-transform: uppercase;
     }
-
 
     #dificuldade2 #radio_button_dificil { /*mobile*/
       display: grid;

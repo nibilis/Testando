@@ -539,42 +539,41 @@ header('Content-Type: text/html; charset=UTF-8');
           <div class="row center-align hide-on-med-and-down">
 
                 <div class="row">
-                  <div class="input-field col s9" id="respostadissertativa-desk">
+                  <div class="input-field col s9" id="respostadissert-desk">
                     <input placeholder=Resposta id="textarea1" type="text" class="materialize-textarea" name="resposta">
                   </div>
                 </div>
 
 
               <div required id="dificuldade-desk" class="input-field col s10 center-align hide-on-med-and-down">
-
+            <div>
               <label id="label_dificuldade-desk" style="font-size: 85%;">Dificuldade da questão <span style="color: red;">*</span></label>
-
               <label>
-                <div class="col s1" class= "hide-on-large-only">
+                <div class="col s1" class= "hide-on-med-and-down">
                   <input name="dificuldade-pc" class="with-gap" type="radio" value="FACIL"/>
                   <span style="color: #4DC535">Fácil</span>
                 </div>
               </label>
 
               <label>
-                <div class="col s2" class= "hide-on-large-only">
+                <div class="col s2" class= "hide-on-med-and-down">
                   <input name="dificuldade-pc" class="with-gap" type="radio" value="MEDIO"/>
                   <span style="color: #FFC300;">Médio</span>
                 </div>
               </label>
 
               <label>
-                <div class="col s3" class= "hide-on-large-only">
+                <div class="col s3" class= "hide-on-med-and-down">
                   <input name="dificuldade-pc" class="with-gap" type="radio" value="DIFICIL"/>
                   <span style="color:#FF5733">Difícil</span>
                 </div>
             </label>
-
+          </div>
           </div>
         </div>
 
         <div required id="priv_public-desk" class="hide-on-med-and-down">
-
+          <div>
            <label id="label_privacidade-desk" style="font-size: 87%;">Privacidade da questão<span style="color: red;">*</span></label>
            <label>
              <div class="col s1 hide-on-med-and-down">
@@ -589,7 +588,7 @@ header('Content-Type: text/html; charset=UTF-8');
                <span>Privado</span>
              </div>
            </label>
-
+          </div>
 
 
        </div>
