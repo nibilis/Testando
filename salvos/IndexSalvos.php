@@ -67,7 +67,7 @@
               <li><div id="divider" class="divider"></div></li>
               <li><a id="saves" class="waves-effect center-align" href="#!">Salvos</a></li>
               <li><div id="divider" class="divider"></div></li>
-              <a id="sair" href="../login/indexLogin.html"><i class="material-icons" id="sair2">exit_to_app</i> Sair </a>
+              <a id="sair" href="../Classes/Sair.php"><i class="material-icons" id="sair2">exit_to_app</i> Sair </a>
             </ul>
           </div>
         </div>
