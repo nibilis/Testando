@@ -142,10 +142,11 @@
         <!-- Fim títulos -->
 
         <!-- Documentos salvos -->
-        <?php
-          $results = $s->listAllDocumentos();
-          foreach($results as $row){ ?>
+
         <div class="row hide-on-large-only">
+          <?php
+            $results = $s->listAllDocumentos();
+            foreach($results as $row){ ?>
         <div class="col s12 ">
           <div class="card white">
             <div class="card-content black-text" id="backgroundcard">
@@ -233,8 +234,8 @@
             </div>
           </div>
         </div>
+      <?php } ?>
       </div>
-    <?php } ?>
 
 
       </div>
@@ -249,10 +250,10 @@
         <!-- Fim títulos -->
 
         <!-- Documentos salvos -->
-        <?php
-          $results = $s->listAll();
-          foreach($results as $row){ ?>
           <div class="row hide-on-large-only">
+            <?php
+              $results = $s->listAll();
+              foreach($results as $row){ ?>
             <div class="col s12">
               <div class="card white">
                 <div class="card-content black-text" id="backgroundcard">
@@ -265,8 +266,8 @@
                 </div>
               </div>
             </div>
+            <?php } ?>
           </div>
-        <?php } ?>
       </div>
 
       <!-- FAVORITADOS CELULAR-->
@@ -279,10 +280,11 @@
         <!-- Fim títulos -->
 
         <!-- Documentos salvos -->
-        <?php
-          $results = $s->listAll();
-          foreach($results as $row){ ?>
+
         <div class="row hide-on-med-and-down">
+          <?php
+            $results = $s->listAll();
+            foreach($results as $row){ ?>
 
           <div class="col s12">
             <div class="card white" id="cardfavoritos">
@@ -306,8 +308,8 @@
               </div>
             </div>
           </div>
+          <?php } ?>
         </div>
-      <?php } ?>
     </div>
 
     <!-- FINAL MOBILE -->
@@ -343,10 +345,11 @@
     <div class="documento2" id="documento2">
 
       <!-- Documentos salvos computador-->
-      <?php
-        $results = $s->listAllDocumentos();
-        foreach($results as $row){ ?>
+
       <div class="row hide-on-med-and-down">
+        <?php
+          $results = $s->listAllDocumentos();
+          foreach($results as $row){ ?>
       <div class="col l4 ">
         <div class="card white">
           <div class="card-content black-text" id="backgroundcard2">
@@ -440,8 +443,8 @@
           </div>
         </div>
       </div>
+        <?php } ?>
     </div>
-  <?php } ?>
       </div>
 
     <!-- MINHAS QUESTOES COMPUTADOR-->

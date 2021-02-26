@@ -144,10 +144,26 @@
              <form class="col s12" method="POST">
               <div class="row">
                 <div class="input-field">
-                  <input placeholder="Insira o nome do documento" id="nome_documento_desk" style = "text-align: center;" type="text" maxlength= "25">
+                  <?php
+                    if(isset($_SESSION['nome_documento'])){
+                      ?> <p id="documento-nome-php"><?php echo $_SESSION['nome_documento'];?><p> <?php
+                    }
+                    else{
+                      ?><input placeholder="Insira o nome do documento" id="nome_documento_desk" style = "text-align: center;" name="nome_documento_desk" type="text" maxlength= "25"><?php
+                    }
+                  ?>
                 </div>
               </div>
-              <div id="quadrado_desk" rows="8" cols="80"><br></div>
+              <div id="quadrado_desk" rows="8" cols="80"><?php $u->conectar(); $d->exibirQuestoes();?><br></div>
+              <!--BOTÃO SALVAR-->
+              <?php
+                if(isset($_SESSION['nome_documento'])){
+                  ?><a id="btn_salvar_desk" class="hide-on-med-and-down waves-effect waves-light btn"  href="../Classes/NovoDocumento.php" name="action">Criar</a><?php
+                }
+                else{
+                  ?><button id="btn_salvar_desk" class="hide-on-med-and-down waves-effect waves-light btn" type="submit" name="action">Salvar</button><?php
+                }
+              ?>
             </form>
           </div>
         </div>
@@ -283,7 +299,21 @@
 
           <!-- Modal Trigger engrenagem DESK -->
             <a id="eng" href="#engrenagem-modal_desk" style="width: 37px;" class="waves-effect waves-light modal-trigger hide-on-med-and-down"><img class="responsive-img" id="engrenagem_desk" src ="../images/Engrenagem.png"></a>
-            <button id="btn-teste_desk" style="margin-top: 40px;" class="hide-on-med-and-down waves-effect waves-light btn transparent" type="submit" name="action"><img id="add_desk" src ="../images/mais.png"></button>
+            <button id="btn-teste_desk" style="margin-top: 40px;" class="hide-on-med-and-down waves-effect waves-light btn transparent" type="submit" name="action" onclick="return addUsuarioDesk(<?php echo $row['ID_Questao_']?>, <?php echo $_SESSION['id_documento']?>);"><img id="add_desk" src ="../images/mais.png"></button>
+            <script>
+              function addUsuarioDesk(id, doc) {
+                <?php $u->conectar(); ?>
+                  $.ajax({
+                   method: "GET",
+                   url:'../Classes/Insere.php',
+                   data: { id: id, doc:doc},
+                   complete: function (response) {
+                     alert(response.responseText);},
+                   error: function () {
+                     alert('Erro');}
+                   });
+              return false;}
+            </script>
         <?php } ?>
 
         <!-- Modal Structure engrenagem DESK -->
@@ -345,10 +375,8 @@
 
       </div>
     </div>
-      <!-- FINAL ADD_QUESTÕES DESK-->
+         <!-- FINAL ADD_QUESTÕES DESK-->
 
-      <!--BOTÃO SALVAR-->
-      <button id="btn_salvar_desk" class="hide-on-med-and-down waves-effect waves-light btn" type="submit" name="action">Salvar</button>
          <!-- FINAL FORMATAÇÃO COMPUTADOR-->
 
          <!--FORMATAÇÃO CELULAR-->
@@ -369,7 +397,7 @@
                   ?>
                 </div>
               </div>
-              <div id="quadrado" rows="8" cols="80"><br></div>
+              <div id="quadrado" rows="8" cols="80"><?php $d->exibirQuestoes();?><br></div>
               <img class= "responsive-img" id = "seta_esquerda" src ="../images/seta_esquerda.png">
               <?php
                 if(isset($_SESSION['nome_documento'])){
@@ -607,7 +635,7 @@
 
           <!-- FINAL ADD_QUESTÕES CEL -->
 
-          <!--Código POST documento-->
+          <!--Código POST  Celular documento-->
           <?php
           //verificar se clicou no botão
             if(isset($_POST['nome_documento'])){
@@ -632,7 +660,34 @@
             }
           }
           ?>
-          <!-- FINAL código POST documento -->
+          <!-- FINAL código POST Celular documento -->
+
+          <!--Código POST Desktop documento-->
+          <?php
+          //verificar se clicou no botão
+            if(isset($_POST['nome_documento_desk'])){
+              $nome = addslashes($_POST['nome_documento_desk']);
+
+            //verificar se esta preenchido
+            if(!empty($nome))
+            {
+                $u->conectar();
+                if($u->msgErro == ""){
+                    if($d->cadastrarDocumento($nome, $_SESSION['ID_Usuario']))
+                    {
+                      echo "cadastrou";
+                    }
+                }
+                else {
+                  echo "Erro: ".$u->msgErro;
+                }
+            }
+            else{
+              echo "";
+            }
+          }
+          ?>
+          <!-- FINAL código POST Desktop documento -->
 
 
          <!-- JQuery CDN -->

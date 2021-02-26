@@ -44,6 +44,7 @@ Class Documento
 
 
     if (isset($_SESSION['id_documento'])){
+
       $idDocumento = $_SESSION['id_documento'];
 
       //Buscar as questões cadastradas em um documento
