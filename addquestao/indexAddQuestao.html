@@ -121,10 +121,15 @@ header('Content-Type: text/html; charset=UTF-8');
               </nav>
             <!-- Dashboard COMPUTADOR FINAL-->
 
-            <!-- LINHA LATERAL DEGRADE-->
+            <!-- LINHA LATERAL DEGRADE MOBILE-->
             <div class="degrade"></div>  <!-- versão 1 - padrão -->
             <div class="degrade2"></div> <!-- versão 2 - dissertativa -->
             <div class="degrade3"></div> <!-- versão 3 - alternativa -->
+            <!-- LINHA LATERAL DEGRADE DESKTOP-->
+            <div class="degrade4"></div> <!-- versão 4 - padrão -->
+            <div class="degrade5"></div> <!-- versão 5 - dissertativa -->
+            <div class="degrade6"></div> <!-- versão 6 - alternativa -->
+
 
 
         <!-- Formulário CELULAR-->
@@ -252,21 +257,21 @@ header('Content-Type: text/html; charset=UTF-8');
             <label>
               <div class="col s1" class= "hide-on-large-only">
                 <input name="group1" class="with-gap" type="radio"  />
-                <span style="color:#77de7c;" >Fácil</span>
+                <span style="color:#77de7c;">Fácil</span>
               </div>
             </label>
 
             <label>
               <div class="col s2" class= "hide-on-large-only">
                 <input name="group1" class="with-gap" type="radio"  />
-                <span style="color: #FFC300;" >Médio</span>
+                <span style="color: #FFC300;">Médio</span>
               </div>
             </label>
 
             <label>
                 <div class="col s3" class= "hide-on-large-only">
                 <input name="group1" class="with-gap" type="radio" />
-                <span style="color: #FF5733;" >Difícil</span>
+                <span style="color: #FF5733;">Difícil</span>
               </div>
             </label>
           </div>
@@ -316,25 +321,26 @@ header('Content-Type: text/html; charset=UTF-8');
               <label id="label_dificuldade" style="font-size: 85%;">Dificuldade da questão <span style="color: red;">*</span></label>
 
               <div id="radio_button_dificil2">
+
               <label>
                 <div class="col s1  hide-on-large-only">
-                <input name="dificuldade-cel" class="with-gap" type="radio"/>
-                <span>Fácil</span>
-              </div>
+                  <input name="dificuldade-cel" class="with-gap" type="radio"/>
+                  <span style="color: #4DC535">Fácil</span>
+                </div>
               </label>
 
               <label>
                 <div  class="col s2  hide-on-large-only">
-                <input name="dificuldade-cel" class="with-gap" type="radio"/>
-                <span>Médio</span>
-              </div>
+                  <input name="dificuldade-cel" class="with-gap" type="radio"/>
+                  <span style="color: #FFC300;">Médio</span>
+                </div>
               </label>
 
               <label>
                 <div  class="col s3  hide-on-large-only">
-                <input name="dificuldade-cel" class="with-gap" type="radio"/>
-                <span>Difícil</span>
-              </div>
+                  <input name="dificuldade-cel" class="with-gap" type="radio"/>
+                  <span style="color:#FF5733">Difícil</span>
+                </div>
               </label>
             </div>
           </div>
@@ -512,7 +518,7 @@ header('Content-Type: text/html; charset=UTF-8');
           <div required id="priv_public-desk2" class="hide-on-med-and-down">
 
           <div id="radio_button_priv_desk">
-            <label id="label_privacidade-desk2" style="font-size: 80%; margin-left: 5%; margin-bottom: -5%;">Privacidade da questão<span style="color: red;">*</span></label>
+            <label id="label_privacidade-desk2" style="font-size: 80%; margin-left: 5%; margin-bottom: -5%;">Privacidade da questão <span style="color: red;">*</span></label>
              <label>
                <div class="col s1 hide-on-med-and-down">
                  <input name="group2" class="with-gap" type="radio"/>
@@ -574,7 +580,7 @@ header('Content-Type: text/html; charset=UTF-8');
 
         <div required id="priv_public-desk" class="hide-on-med-and-down">
           <div>
-           <label id="label_privacidade-desk" style="font-size: 87%;">Privacidade da questão<span style="color: red;">*</span></label>
+           <label id="label_privacidade-desk" style="font-size: 87%;">Privacidade da questão <span style="color: red;">*</span></label>
            <label>
              <div class="col s1 hide-on-med-and-down">
                <input name="privacidade-pc" class="with-gap" type="radio" value="0"/>
@@ -593,7 +599,7 @@ header('Content-Type: text/html; charset=UTF-8');
 
        </div>
 
-          <button id="btn_salvar-desk" class="cadastro btn flow-text waves-effect yellow darken-2 waves-light hoverable" type="submit">Salvar</button>
+          <button id="btn_salvar-desk2" class="cadastro btn flow-text waves-effect yellow darken-2 waves-light hoverable" type="submit">Salvar</button>
       </div>
   </form> <!--fecha formulário POST-->
 
@@ -718,41 +724,41 @@ header('Content-Type: text/html; charset=UTF-8');
       <script>
           var btn3 = document.getElementById('btn-dissert-desk');
           var alternativa2 = document.querySelector('.alternativa-desk');
-          var degrade = document.querySelector('.degrade');
-          var degrade2 = document.querySelector('.degrade2');
-          var degrade3 = document.querySelector('.degrade3');
+          var degrade4 = document.querySelector('.degrade4');
+          var degrade5 = document.querySelector('.degrade5');
+          var degrade6 = document.querySelector('.degrade6');
           btn3.addEventListener('click', function() {
 
           if (dissertativa2.style.display = 'block') {
               alternativa2.style.display = 'none';
-              degrade2.style.display = 'block';
-              degrade3.style.display = 'none';
-              degrade.style.display = 'none';
+              degrade5.style.display = 'block';
+              degrade6.style.display = 'none';
+              degrade4.style.display = 'none';
           }
           else {
               alternativa2.style.display = 'block';
-              degrade3.style.display = 'block';
-              degrade.style.display = 'none';
+              degrade6.style.display = 'block';
+              degrade4.style.display = 'none';
               }
             });
 
          var btn4 = document.getElementById('btn-alterna-desk');
          var dissertativa2 = document.querySelector('.dissertativa-desk');
-         var divdegrade = document.querySelector('.degrade');
-         var divdegrade2 = document.querySelector('.degrade2');
-         var divdegrade3 = document.querySelector('.degrade3');
+         var divdegrade4 = document.querySelector('.degrade4');
+         var divdegrade5 = document.querySelector('.degrade5');
+         var divdegrade6 = document.querySelector('.degrade6');
          btn4.addEventListener('click', function() {
 
          if (alternativa2.style.display = 'block') {
              dissertativa2.style.display = 'none';
-             divdegrade2.style.display = 'none';
-             divdegrade3.style.display = 'block';
-             divdegrade.style.display = 'none';
+             divdegrade5.style.display = 'none';
+             divdegrade6.style.display = 'block';
+             divdegrade4.style.display = 'none';
          }
          else {
              dissertativa2.style.display = 'block';
-             divdegrade2.style.display = 'block';
-             divdegrade.style.display = 'none';
+             divdegrade5.style.display = 'block';
+             divdegrade4.style.display = 'none';
          }
        });
      </script>
