@@ -123,16 +123,14 @@
     background: linear-gradient(to bottom, #D0C7FC, #8F83CD, #7C6FBF);
   }
 
-  .degrade4 { height: 100%; }
-
   .degrade5 {
     display: none;
-    height: 140% !important;
+    height: 140%;
   }
 
   .degrade6 {
     display: none;
-    height: 180% !important;
+    height: 180%;
   }
   #alternativa, #dissertativa, #alternativa-desk, #dissertativa-desk { display: none; }
 
@@ -385,7 +383,7 @@
 
 
   /*FORMATAÇÃO CELULAR*/
-  @media (min-width: 320px){
+  @media (min-width: 320px){ /* 320px X 480px */
     body h2{
       font-size: 190%;
       position: absolute;
@@ -399,52 +397,50 @@
     .degrade{
       width: 10%;
       float: left;
-      margin-top: -6.1%;
+      margin-top: -8%;
       background: linear-gradient(to bottom, #D0C7FC, #8F83CD, #7C6FBF);
-      height: 110%;
+      height: 122%;
     }
 
     .degrade2 {
       display: none;
-      height: 190% !important;
+      height: 197% !important;
     }
 
     .degrade3 {
       display: none;
-      height: 220% !important;
+      height: 215% !important;
     }
     }
 
-  @media (min-width: 360px){
+  @media (min-width: 360px){ /* 360px X 640px - Moto G4 e Galaxy S5 */
     .degrade{
       width: 10%;
       float: left;
       margin-top: -5.6%;
       background: linear-gradient(to bottom, #D0C7FC, #8F83CD, #7C6FBF);
+      height: 108%;
     }
+
+    .degrade2 { height: 166.5% !important; }
+    .degrade3 { height: 211% !important; }
   }
 
-  @media (min-width: 375px){
+  @media (min-width: 375px){ /*375px X 640px*/
     .degrade{
       width: 10%;
       float: left;
-      margin-top: -5.5%;
       background: linear-gradient(to bottom, #D0C7FC, #8F83CD, #7C6FBF);
       height: 100%;
     }
 
-    .degrade2 {
-      display: none;
-      height: 160% !important;
-    }
+    .degrade2 { height: 157% !important; }
+    .degrade3 { height: 172% !important; }
 
-    .degrade3 {
-      display: none;
-      height: 180% !important;
-    }
+    .button-group { margin-top: -2%; }
   }
 
-  @media (min-width: 411px){
+  @media (min-width: 411px){ /* AQUI, MENINA. AQUI */
     .degrade{
       width: 10%;
       float: left;
