@@ -142,7 +142,7 @@
          <div class="documento1_desk" id="documento1_desk">
            <div class="row hide-on-med-and-down">
              <form class="col s12" method="POST">
-              <div class="row">
+              <div class="row" style="width: 60%; margin-top: 4%;">
                 <div class="input-field">
                   <?php
                     if(isset($_SESSION['nome_documento'])){
@@ -361,12 +361,8 @@
             <a><img class= "responsive-img modal-close" id="btn_fechar_modal_avaliar_desk" src ="../images/fechar.png"></a>
           <h6><img class="responsive-img align-center" id="img_avaliar_desk" src ="../images/avaliar.png"><p>Avalie a questão:</p></h6>
           <div id="div_estrela_desk">
-            <a href="javascript:void(0)" onclick="Avaliar(6)"><img src="../images/avaliar_vazio.png" id="s1_desk"></a>
-            <a href="javascript:void(0)" onclick="Avaliar(7)"><img src="../images/avaliar_vazio.png" id="s2_desk"></a>
-            <a href="javascript:void(0)" onclick="Avaliar(8)"><img src="../images/avaliar_vazio.png" id="s3_desk"></a>
-            <a href="javascript:void(0)" onclick="Avaliar(9)"><img src="../images/avaliar_vazio.png" id="s4_desk"></a>
-            <a href="javascript:void(0)" onclick="Avaliar(10)"><img src="../images/avaliar_vazio.png" id="s5_desk"></a>
-            <p id="rating_desk">0</p>
+            <p>Deseja colocar quantas estrelas para esta questão? <br><br><center>(Insira no <font color="#48bf45">mínimo 1</font> e no <font color="#c71100">máximo 5</font>)</center></p>
+            <input id="input_text" type="text" maxlength="1" pattern="([1-5]{1})"/>
           </div>
           <div class="col s11 center-align" id = "Enviardesk">
             <button href="javascript:void(0)" onclick="Avaliar(0)" class="waves-effect waves-light btn yellow darken-2 hoverable" id="s0" id="btnEnviar_desk" style="border-radius: 20px 20px; margin-top: 10%; font-family: 'Muli';">Enviar</button>
@@ -1005,148 +1001,14 @@
 
   <!-- FINAL AVALIAR MODAL -->
 
-<!-- AVALIAR MODAL - brilha brilha estrelinha DESK -->
-  <script>
-    function Avaliar(estrela) {
-     var url = window.location;
-     url = url.toString()
-     url = url.split("index.html");
-     url = url[0];
-
-     var s0_desk = document.getElementById("s0_desk").src;
-     var s1_desk = document.getElementById("s1_desk").src;
-     var s2_desk = document.getElementById("s2_desk").src;
-     var s3_desk = document.getElementById("s3_desk").src;
-     var s4_desk = document.getElementById("s4_desk").src;
-     var s5_desk = document.getElementById("s5_desk").src;
-     var avaliacao = 0;
-
-    //ESTRELA 5
-    if (estrela == 5) {
-     if (s5_desk == url + "../images/avaliar_vazio.png") {
-       document.getElementById("s1_desk").src = "../images/avaliar.png";
-       document.getElementById("s2_desk").src = "../images/avaliar.png";
-       document.getElementById("s3_desk").src = "../images/avaliar.png";
-       document.getElementById("s4_desk").src = "../images/avaliar.png";
-       document.getElementById("s5_desk").src = "../images/avaliar.png";
-       avaliacao = 5;
-     }
-
-     else {
-       document.getElementById("s1_desk").src = "../images/avaliar.png";
-       document.getElementById("s2_desk").src = "../images/avaliar.png";
-       document.getElementById("s3_desk").src = "../images/avaliar.png";
-       document.getElementById("s4_desk").src = "../images/avaliar.png";
-       document.getElementById("s5_desk").src = "../images/avaliar.png";
-       avaliacao = 5;
-    }}
-
-     //ESTRELA 4
-    if (estrela == 4) {
-     if (s4_desk == url + "../images/avaliar_vazio.png") {
-       document.getElementById("s1_desk").src = "../images/avaliar.png";
-       document.getElementById("s2_desk").src = "../images/avaliar.png";
-       document.getElementById("s3_desk").src = "../images/avaliar.png";
-       document.getElementById("s4_desk").src = "../images/avaliar.png";
-       document.getElementById("s5_desk").src = "../images/avaliar.png";
-       avaliacao = 4;
-     }
-
-     else {
-       document.getElementById("s1_desk").src = "../images/avaliar.png";
-       document.getElementById("s2_desk").src = "../images/avaliar.png";
-       document.getElementById("s3_desk").src = "../images/avaliar.png";
-       document.getElementById("s4_desk").src = "../images/avaliar.png";
-       document.getElementById("s5_desk").src = "../images/avaliar_vazio.png";
-       avaliacao = 4;
-    }}
-
-    //ESTRELA 3
-    if (estrela == 3) {
-     if (s3_desk == url + "../images/avaliar_vazio.png") {
-       document.getElementById("s1_desk").src = "../images/avaliar.png";
-       document.getElementById("s2_desk").src = "../images/avaliar.png";
-       document.getElementById("s3_desk").src = "../images/avaliar.png";
-       document.getElementById("s4_desk").src = "../images/avaliar.png";
-       document.getElementById("s5_desk").src = "../images/avaliar_vazio.png";
-       avaliacao = 3;
-     }
-
-     else {
-       document.getElementById("s1_desk").src = "../images/avaliar.png";
-       document.getElementById("s2_desk").src = "../images/avaliar.png";
-       document.getElementById("s3_desk").src = "../images/avaliar.png";
-       document.getElementById("s4_desk").src = "../images/avaliar_vazio.png";
-       document.getElementById("s5_desk").src = "../images/avaliar_vazio.png";
-       avaliacao = 3;
-    }}
-
-    //ESTRELA 2
-    if (estrela == 2) {
-     if (s2_desk == url + "../images/avaliar_vazio.png") {
-       document.getElementById("s1_desk").src = "../images/avaliar.png";
-       document.getElementById("s2_desk").src = "../images/avaliar.png";
-       document.getElementById("s3_desk").src = "../images/avaliar.png";
-       document.getElementById("s4_desk").src = "../images/avaliar_vazio.png";
-       document.getElementById("s5_desk").src = "../images/avaliar_vazio.png";
-       avaliacao = 2;
-     }
-
-     else {
-       document.getElementById("s1_desk").src = "../images/avaliar.png";
-       document.getElementById("s2_desk").src = "../images/avaliar.png";
-       document.getElementById("s3_desk").src = "../images/avaliar_vazio.png";
-       document.getElementById("s4_desk").src = "../images/avaliar_vazio.png";
-       document.getElementById("s5_desk").src = "../images/avaliar_vazio.png";
-       avaliacao = 2;
-    }}
-
-     //ESTRELA 1
-    if (estrela == 1) {
-     if (s1_desk == url + "../images/avaliar_vazio.png") {
-       document.getElementById("s1_desk").src = "../images/avaliar.png";
-       document.getElementById("s2_desk").src = "../images/avaliar.png";
-       document.getElementById("s3_desk").src = "../images/avaliar_vazio.png";
-       document.getElementById("s4_desk").src = "../images/avaliar_vazio.png";
-       document.getElementById("s5_desk").src = "../images/avaliar_vazio.png";
-       avaliacao = 1;
-     }
-
-     else {
-       document.getElementById("s1_desk").src = "../images/avaliar.png";
-       document.getElementById("s2_desk").src = "../images/avaliar_vazio.png";
-       document.getElementById("s3_desk").src = "../images/avaliar_vazio.png";
-       document.getElementById("s4_desk").src = "../images/avaliar_vazio.png";
-       document.getElementById("s5_desk").src = "../images/avaliar_vazio.png";
-       avaliacao = 1;
-    }}
-
-    //BTN SALVAR
-    if (estrela == 0) {
-     if (s0_desk == url + "../images/avaliar_vazio.png") {
-       document.getElementById("s1_desk").src = "../images/avaliar_vazio.png";
-       document.getElementById("s2_desk").src = "../images/avaliar_vazio.png";
-       document.getElementById("s3_desk").src = "../images/avaliar_vazio.png";
-       document.getElementById("s4_desk").src = "../images/avaliar_vazio.png";
-       document.getElementById("s5_desk").src = "../images/avaliar_vazio.png";
-       avaliacao = 0;
-     }
-
-     else {
-       document.getElementById("s1_desk").src = "../images/avaliar_vazio.png";
-       document.getElementById("s2_desk").src = "../images/avaliar_vazio.png";
-       document.getElementById("s3_desk").src = "../images/avaliar_vazio.png";
-       document.getElementById("s4_desk").src = "../images/avaliar_vazio.png";
-       document.getElementById("s5_desk").src = "../images/avaliar_vazio.png";
-       avaliacao = 0;
-    }}
-
-     document.getElementById('rating_desk').innerHTML = avaliacao;
-    }
-  </script>
-
-  <!-- FINAL AVALIAR MODAL DESK -->
-
+  <!-- LIMITAR QUANTAS ESTRELAS COLOCAR DESK -->
+<script>
+$(document).ready(function() {
+  $("#input_text").keyup(function() {
+      $("#input_text").val(this.value.match(/[1-5]*/));
+    });
+  });
+</script>
 
 
     </body>

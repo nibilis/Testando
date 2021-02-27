@@ -18,14 +18,21 @@
 
   /*DOCUMENTO DESK*/
   #nome_documento_desk {
-    position: absolute;
-    margin-top: 0%;
-    margin-left: 12%;
-    width: 32%;
+    /* position: absolute; */
+    margin-top: -10%;
+    margin-left: 26%;
+    width: 47%;
     padding-left: 1%;
     padding-right: 1%;
     text-overflow: ellipsis;
-  }
+}
+
+  #documento-nome-php p{
+    font-family: 'Muli';
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: -2%;
+}
 
   #documento1_desk #quadrado_desk {
     position: absolute;
@@ -176,9 +183,8 @@
     left: -49%;
   }
 
-
   #btn_addquest_desk {
-    width: 75%;
+    width: 80%;
     height: 70px;
     justify-content: center;
     margin-left: 5%;
@@ -188,8 +194,6 @@
     gap: 2em;
     grid-template-columns: 20% 60%;
   }
-
-
 
   #img_addquest_desk {
     width: 100%;
@@ -258,7 +262,7 @@
 
   /*MODAL DENTRO DO MODAL "DENUNCIAR", "FAVORITAR", ETC DESK*/
 
-  /*DENUNCIAR*/
+  /*DENUNCIAR DESK*/
   div#denunciar-modal-desk.modal.open {
     border-radius: 15px 15px;
     border: #7C6FBF 5px solid;
@@ -294,19 +298,20 @@
   }
 
 
-  /*AVALIAR*/
+  /*AVALIAR DESK*/
 
   div#avaliar-modal-desk.modal.open {
     border-radius: 15px 15px;
     border: #7C6FBF 5px solid;
+    padding: 15px;
     width: 30%;
-    height: 40%;
+    height: 50%;
   }
 
   #btn_fechar_modal_avaliar_desk {
     width: 12%;
-    margin-left: 85%!important;
-    margin-top: 2%!important;
+    margin-left: 90%!important;
+    margin-top: -1%!important;
   }
 
   #avaliar-modal-desk h6 {
@@ -327,31 +332,22 @@
     max-height: 45px;
     width: auto;
     height: auto;
-    margin-left: 90%;
-    margin-top: -20%;
-  }
-
-  #div_estrela_desk {
-    display: grid;
-    gap: 1.5em;
-    grid-template-columns: 10% 10% 10% 10% 10%;
-    border: 3px solid #706f7896;
-    border-radius: 10px;
-    width: 80%;
-    margin-left: 10%;
-    margin-top: 10%;
-    padding: 3% 0% 2% 8%;
-  }
-
-  #div_estrela_desk img {
-    max-width: 30px;
-    max-height: 30px;
-    width: auto;
-    height: auto;
+    margin-left: 45%;
+    margin-top: -30%;
   }
 
   #div_estrela_desk p {
-    display: none;
+    width: 86%;
+    text-align: center;
+    margin-top: 10%;
+    margin-left: 8%;
+  }
+
+  #div_estrela_desk #input_text {
+    width: 10%;
+    margin-left: 45%;
+    text-align: center;
+    margin-top: -6%;
   }
 
 
@@ -456,6 +452,10 @@
     #filtro_parte2_desk {
       left: 55%;
     }
+
+    #img_addquest_desk {
+      margin-top: 30%!important;
+    }
   }
 
   @media (min-width: 1800px) {
@@ -464,6 +464,15 @@
       border-radius: 15px 15px;
       border: #7C6FBF 5px solid;
       width: 25%;
+    }
+
+    #nome_documento_desk {
+    margin-top: -10%;
+  }
+
+    #documento1_desk #quadrado_desk {
+      height: 59%;
+      top: 30%;
     }
 
     #btn-teste_desk {
@@ -485,6 +494,10 @@
 
     #filtro_parte2_desk {
       left: 56%;
+    }
+
+    #img_addquest_desk {
+      margin-top: 30%!important;
     }
   }
 
@@ -713,7 +726,7 @@
   margin-top: -15%;
   }
 
-  #btn-teste { /*botão que o wendel pediu, ele é rosa*/
+  #btn-teste { /*botão que o wendel pediu, ele tem um símbolo de +*/
     width: 66%;
     margin-left: -95%;
     box-shadow: none;
@@ -789,21 +802,6 @@
     margin-top: -60%;
   }
 
-  /*#descrição {
-    resize: none;
-    box-shadow: none;
-    border-radius: 10px 10px;
-    margin-top: 10%;
-    width: 100%;
-    height: 70px;
-    padding: 5%;
-    border-color: #acacac;
-  }
-
-  #descrição:focus {
-    box-shadow: 0 0 0 0;
-    outline: 0;
-  }*/
 
   /*AVALIAR*/
 
