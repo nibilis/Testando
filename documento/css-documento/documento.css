@@ -713,6 +713,10 @@
     margin-top: -2.5%;
   }
 
+  #quadrado #questões {
+    margin-bottom: 20%;
+    color: pink;
+  }
 
   /*FUNCIONA EM TUDO: GABARITO CEL*/
 

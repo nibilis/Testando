@@ -54,7 +54,7 @@ Class Documento
       if($sql->rowCount() > 0){
         while($m = $sql->fetch()){
         $i++;
-        ?> <p style=""><?php echo $i.". ".$m['Enunciado']."</br>"; ?></p> <?php
+        ?> <p style="text-align: justify;"><b><?php echo $i.". "?></b> <?php echo $m['Enunciado']."</br></br>"; ?></p> <?php
         }
       }
       else{

@@ -154,14 +154,14 @@
                   ?>
                 </div>
               </div>
-              <div id="quadrado_desk" rows="8" cols="80"><?php $u->conectar(); $d->exibirQuestoes();?><br></div>
+              <div id="quadrado_desk" style="overflow: auto;" rows="8" cols="80"><?php $u->conectar(); $d->exibirQuestoes();?><br></div>
               <!--BOTÃO SALVAR-->
               <?php
                 if(isset($_SESSION['nome_documento'])){
-                  ?><a id="btn_salvar_desk" class="hide-on-med-and-down waves-effect waves-light btn"  href="../Classes/NovoDocumento.php" name="action">Criar</a><?php
+                  ?><a id="btn_salvar_desk" class="hide-on-med-and-down waves-effect waves-light btn"  href="../Classes/NovoDocumento.php" name="action">Salvar</a><?php
                 }
                 else{
-                  ?><button id="btn_salvar_desk" class="hide-on-med-and-down waves-effect waves-light btn" type="submit" name="action">Salvar</button><?php
+                  ?><button id="btn_salvar_desk" class="hide-on-med-and-down waves-effect waves-light btn" type="submit" name="action">Criar</button><?php
                 }
               ?>
             </form>
@@ -284,11 +284,11 @@
               <label class="flip-container_desk" for="switch_desk" >
                 <div class="flipper_desk">
                   <div class="front_desk">
-                    <div id="quest_profs_desk">
+                    <div id="quest_profs_desk" style="overflow: auto;">
                       <p><?php echo $row['Enunciado']?></p>
                     </div>
                   </div>
-                  <div class="back_desk">
+                  <div class="back_desk" style="overflow: auto;">
                     <div id="quest_profs_desk">
                       <p>A resposta está dentro do seu coração</p>
                     </div>
@@ -299,7 +299,14 @@
 
           <!-- Modal Trigger engrenagem DESK -->
             <a id="eng" href="#engrenagem-modal_desk" style="width: 37px;" class="waves-effect waves-light modal-trigger hide-on-med-and-down"><img class="responsive-img" id="engrenagem_desk" src ="../images/Engrenagem.png"></a>
-            <button id="btn-teste_desk" style="margin-top: 40px;" class="hide-on-med-and-down waves-effect waves-light btn transparent" type="submit" name="action" onclick="return addUsuarioDesk(<?php echo $row['ID_Questao_']?>, <?php echo $_SESSION['id_documento']?>);"><img id="add_desk" src ="../images/mais.png"></button>
+            <?php
+              if(isset($_SESSION['nome_documento'])){
+                ?><button id="btn-teste_desk" style="margin-top: 40px;" class="hide-on-med-and-down waves-effect waves-light btn transparent" type="submit" name="action" onclick="return addUsuarioDesk(<?php echo $row['ID_Questao_']?>, <?php echo $_SESSION['id_documento']?>);"><img id="add_desk" src ="../images/mais.png"></button><?php
+              }
+              else{
+                ?><button id="btn-teste_desk" style="margin-top: 40px;" class="hide-on-med-and-down waves-effect waves-light btn transparent" type="submit" name="action" onclick="alertDocumento()"><img id="add_desk" src ="../images/mais.png"></button><?php
+              }
+            ?>
             <script>
               function addUsuarioDesk(id, doc) {
                 <?php $u->conectar(); ?>
@@ -419,14 +426,26 @@
                   ?>
                 </div>
               </div>
-              <div id="quadrado" rows="8" cols="80"><?php $d->exibirQuestoes();?><br></div>
+              <div id="quadrado" style="overflow: auto;" rows="8" cols="80">
+                <div class="row">
+                  <div class="col l7">
+                    <p>Nome:</p>
+                  </div>
+
+                  <div class="col l4">
+                    <p>Turma:</p>
+                  </div>
+
+                </div>
+                <?php $d->exibirQuestoes();?><br>
+              </div>
               <img class= "responsive-img" id = "seta_esquerda" src ="../images/seta_esquerda.png">
               <?php
                 if(isset($_SESSION['nome_documento'])){
-                  ?><a id="btn_salvar" class="hide-on-large-only waves-effect waves-light btn"  href="../Classes/NovoDocumento.php" name="action">Criar</a><?php
+                  ?><a id="btn_salvar" class="hide-on-large-only waves-effect waves-light btn"  href="../Classes/NovoDocumento.php" name="action">Salvar</a><?php
                 }
                 else{
-                  ?><button id="btn_salvar" class="hide-on-large-only waves-effect waves-light btn" type="submit" name="action">Salvar</button><?php
+                  ?><button id="btn_salvar" class="hide-on-large-only waves-effect waves-light btn" type="submit" name="action">Criar</button><?php
                 }
               ?>
               <img class= "responsive-img" id = "seta_direita" src ="../images/seta_direita.png">
@@ -563,12 +582,12 @@
                   <label class="flip-container" for="switch" >
                     <div class="flipper">
                       <div class="front">
-                        <div id="quest_profs">
+                        <div style="overflow: auto;" id="quest_profs">
                           <span><?php echo $row['Enunciado']?></span>
                         </div>
                       </div>
                       <div class="back">
-                        <div id="quest_profs">
+                        <div style="overflow: auto;" id="quest_profs">
                           <span style="text-align: justify;">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                           </span>

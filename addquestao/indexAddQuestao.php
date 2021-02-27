@@ -606,7 +606,7 @@ header('Content-Type: text/html; charset=UTF-8');
       <!-- FIM DISSERTATIVA -->
       </div>
       <!--Final do formulário de COMPUTADOR-->
-      </form>
+      
       <?php
       //verificar se clicou no botão
       	if(isset($_POST['enunciado'])){
