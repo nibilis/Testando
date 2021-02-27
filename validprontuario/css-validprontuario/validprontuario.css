@@ -1,3 +1,10 @@
+/* RESET DA PÁGINA */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /*DASHBOARD*/
 
 #retanguloroxo {
@@ -46,7 +53,8 @@
   padding-bottom: 4.2%;
   position: absolute;
   left: 58%;
-  top: 39.5%;
+  height: 4%;
+  top: 35.5%;
 }
 
 #nome, #prontuario {
@@ -63,7 +71,7 @@
 #cpf {
   position: absolute;
   margin-left: 0.3%;
-  top: 21%;
+  top: 18.9%;
 }
 
 ::-webkit-input-placeholder {

@@ -387,6 +387,10 @@ width: 80% !important;
     color: whitesmoke;
   }
 
+  #botãocadastrar{
+  margin-left: 37%;
+  }
+
   #nome {
     width: 80% !important;
   }
@@ -445,6 +449,11 @@ width: 80% !important;
 
 
 @media (min-width: 1280px){
+
+  #botãocadastrar{
+  margin-left: 38%;
+  }
+
   .linha_lateral {
     background: linear-gradient(to bottom, #D0C7FC,#8F83CD, #8F83CD, #7C6FBF);
     height: 200vh !important;
@@ -480,6 +489,11 @@ width: 80% !important;
 }
 
 @media (min-width: 1366px){
+
+  #botãocadastrar{
+  margin-left: 39%;
+  }
+
   .linha_lateral {
     background: linear-gradient(to bottom, #D0C7FC,#8F83CD, #8F83CD, #7C6FBF);
     height: 215vh !important;
@@ -493,6 +507,11 @@ width: 80% !important;
 }
 
 @media (min-width: 1440px){
+
+  #botãocadastrar{
+  margin-left: 38%;
+  }
+
   .linha_lateral {
     background: linear-gradient(to bottom, #D0C7FC,#8F83CD, #8F83CD, #7C6FBF);
     height: 220vh !important;

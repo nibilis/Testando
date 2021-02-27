@@ -88,7 +88,7 @@ header('Content-Type: text/html; charset=UTF-8');
   <div class="input-field col s10 l4" id="cidade">
 
   <select id="cidadefonte" name="cidade">
-     <option value="" disabled >Selecione a sua cidade</option>
+     <option value="" disabled selected>Selecione a sua cidade</option>
 <?php
   $u->conectar();
   $results = $city->listAll();
@@ -114,7 +114,7 @@ header('Content-Type: text/html; charset=UTF-8');
   </div>
 
   <div>
-      <button class="cadastro flow-text waves-effect yellow darken-2 waves-light hoverable" type="submit">Cadastrar</button>
+      <button class="cadastro flow-text waves-effect yellow darken-2 waves-light hoverable" id="botãocadastrar" type="submit">Cadastrar</button>
   </div>
 </form>
 

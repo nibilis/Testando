@@ -65,7 +65,7 @@
     <div class="hide-on-med-and-down center align" id="degrade">
       <h1>Não tem um login ainda?</h1>
       <div class="center-align" id = "cadastresepc">
-          <a href="../cadastro/indexCadastro.php" class="waves-effect waves-light btn white hoverable" id = "btnCadastresepc">Cadastre-se</a>
+          <a href="../cadastro/indexCadastro.php" class="waves-effect waves-light btn white hoverable center-align" id = "btnCadastresepc">Cadastre-se</a>
       </div>
     </div>
 
