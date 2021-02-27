@@ -155,10 +155,14 @@
     width: 40%;
     margin-top: 2%;
     margin-left: 50%;
+    object-fit: cover;
+    object-position: center;
   }
 
   #eng {
     width: 80%!important;
+    object-fit: cover;
+    object-position: center;
   }
 
   #addquest_documento_desk {
@@ -350,6 +354,67 @@
     margin-top: -6%;
   }
 
+  /*DIFICULDADE DESK*/
+
+  div#dificuldade-modal-desk.modal.open {
+    border-radius: 15px 15px;
+    border: #7C6FBF 5px solid;
+    padding: 15px;
+    width: 30%;
+    height: 42%;
+  }
+
+  #btn_fechar_modal_avaliar_desk {
+    width: 12%;
+    margin-left: 90%!important;
+    margin-top: -1%!important;
+  }
+
+  #dificuldade-modal-desk h6 {
+    display: grid;
+    gap: 0.5em;
+    grid-template-columns: 20% 70%;
+    margin-left: -3%;
+  }
+
+  #dificuldade-modal-desk p {
+    font-family: 'Muli';
+    font-size: 90%;
+    text-align: center;
+    width: 80%;
+    margin-left: 10%;
+  }
+
+  #img_dificuldade_desk {
+    max-width: 45px;
+    max-height: 45px;
+    width: auto;
+    height: auto;
+    margin-left: 50%;
+    margin-top: -15%;
+  }
+
+  #radio_button_dificil_desk {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: 30%;
+    margin-top: 10%;
+    margin-left: 10%;
+  }
+
+  #btn_salvar_dificil_desk {
+    position: absolute;
+    font-size: 75%;
+    padding-top: 0.5%;
+    padding-bottom: 10%;
+    font-family: 'Muli';
+    width: 30%;
+    background-color: #FFBC2B;
+    border-radius: 40px 40px;
+    top: 82%;
+    left: 35.5%;
+  }
+
 
   /*FINAL MODAL DENTRO DO MODAL "DENUNCIAR", "FAVORITAR", ETC DESK*/
 
@@ -393,7 +458,8 @@
     }
 
     #nome_documento_desk {
-      margin-top: -1%;
+      position: absolute;
+      margin-top: -5%;
     }
 
     #gabarito_desk #quadrado_desk {
@@ -416,10 +482,14 @@
     #engrenagem_desk {
       margin-left: 0%;
       width: 90%;
+      object-fit: cover;
+      object-position: center;
     }
 
     #eng {
       width: 30%!important;
+      object-fit: cover;
+      object-position: center;
     }
 
     #btn-teste_desk {
@@ -428,6 +498,19 @@
 
     #quest_profs_desk {
       width: 390%;
+    }
+
+    div#avaliar-modal-desk.modal.open {
+      height: 65%;
+    }
+
+    #img_avaliar_desk {
+      margin-left: 85%;
+    }
+
+    div#dificuldade-modal-desk.modal.open {
+      height: 55%;
+      width: 25%;
     }
   }
 
@@ -455,6 +538,35 @@
 
     #img_addquest_desk {
       margin-top: 30%!important;
+    }
+
+    #img_avaliar_desk {
+      margin-left: 120%;
+      margin-top: -20%;
+    }
+
+    div#dificuldade-modal-desk.modal.open {
+      height: 50%;
+    }
+
+    #dificuldade-modal-desk p {
+      font-size: 110%;
+    }
+
+    #img_dificuldade_desk {
+      margin-left: 80%;
+    }
+
+    #radio_button_dificil_desk {
+      font-size: 150%;
+    }
+
+    #radio_button_dificil_desk span {
+      font-size: 150%;
+    }
+
+    #btn_salvar_dificil_desk {
+      padding-bottom: 0%;
     }
   }
 
@@ -498,6 +610,20 @@
 
     #img_addquest_desk {
       margin-top: 30%!important;
+    }
+
+    div#dificuldade-modal-desk.modal.open {
+      height: 50%;
+      width: 19%;
+    }
+
+    #dificuldade-modal-desk p {
+      width: 90%;
+      margin-left: 5%;
+    }
+
+    #img_dificuldade_desk {
+      margin-left: 50%;
     }
   }
 
@@ -863,6 +989,63 @@
     display: none;
   }
 
+  /*DIFICULDADE*/
+
+  div#dificuldade-modal.modal.open {
+    border-radius: 15px 15px;
+    border: #7C6FBF 5px solid;
+    width: 80%;
+    height: 45%;
+  }
+
+  #btn_fechar_modal_avaliar {
+    width: 11%;
+  }
+
+  #dificuldade-modal h6 {
+    display: grid;
+    gap: 0.5em;
+    grid-template-columns: 20% 70%;
+    margin-left: -3%;
+  }
+
+  #dificuldade-modal p {
+    font-family: 'Muli';
+    font-size: 90%;
+    text-align: center;
+    width: 70%;
+    margin-left: 15%;
+  }
+
+  #img_dificuldade {
+    max-width: 45px;
+    max-height: 45px;
+    width: auto;
+    height: auto;
+    margin-left: 65%;
+    margin-top: -15%;
+  }
+
+  #radio_button_dificil {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: 30%;
+    margin-top: 7%;
+    margin-left: 10%;
+  }
+
+  #btn_salvar_dificil {
+    position: absolute;
+    font-size: 75%;
+    padding-top: 0.5%;
+    padding-bottom: 10%;
+    font-family: 'Muli';
+    width: 30%;
+    background-color: #FFBC2B;
+    border-radius: 40px 40px;
+    top: 82%;
+    left: 35.5%;
+}
 
   /*FINAL MODAL DENTRO DO MODAL "DENUNCIAR", "FAVORITAR", ETC*/
 
@@ -1080,7 +1263,23 @@ a {
 
   #palavra_addquestao {
     margin-top: 10%;
-}
+  }
+
+  div#avaliar-modal.modal.open {
+    height: 35%;
+  }
+
+  #div_estrela {
+    padding: 3% 0% 2% 6%;
+  }
+
+  div#dificuldade-modal.modal.open {
+    height: 36%;
+  }
+
+  #quest_profs {
+    width: 270%;
+  }
 /*RESPONSIVIDADE TELA ADD DOCUMENTO*/
 
   #logo {

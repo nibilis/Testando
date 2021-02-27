@@ -369,11 +369,37 @@
           </div>
         </div>
 
-      </div>
+        <!-- MODAL DIFICULDADE DESK -->
+        <div id="dificuldade-modal-desk" class="modal hide-on-med-and-down">
+          <a><img class= "responsive-img modal-close" id="btn_fechar_modal_avaliar_desk" src ="../images/fechar.png"></a>
+          <h6><img class="responsive-img align-center" id="img_dificuldade_desk" src ="../images/nivel_dificuldade.png"><p>Defina a dificuldade da questão:</p></h6>
+          <div id="radio_button_dificil_desk">
+            <label>
+              <div class="col s1" class= "hide-on-med-and-down">
+                <input name="group1" class="with-gap" type="radio"  />
+                <span style="color:#77de7c;">Fácil</span>
+              </div>
+            </label>
+            <label>
+              <div class="col s2" class= "hide-on-med-and-down">
+                <input name="group1" class="with-gap" type="radio"  />
+                <span style="color: #FFC300;">Médio</span>
+              </div>
+            </label>
+            <label>
+                <div class="col s3" class= "hide-on-med-and-down">
+                <input name="group1" class="with-gap" type="radio" />
+                <span style="color: #FF5733;">Difícil</span>
+              </div>
+            </label>
+          </div>
+          <button id="btn_salvar_dificil_desk" class="hide-on-med-and-down waves-effect waves-light btn" type="submit" name="action">Salvar</button>
+        </div>
     </div>
          <!-- FINAL ADD_QUESTÕES DESK-->
 
          <!-- FINAL FORMATAÇÃO COMPUTADOR-->
+
 
          <!--FORMATAÇÃO CELULAR-->
 
@@ -580,7 +606,7 @@
                   <button href="#denunciar-modal" id="btn_addquest" style="margin-bottom: 7%;" class="hide-on-large-only waves-effect waves-light btn transparent modal-trigger" type="submit" name="action"><img class="responsive-img" id="img_addquest" src ="../images/denunciar.png"><p id="palavra_addquestao">Denunciar</p></button>
                   <button href="#favoritar-modal" id="btn_addquest" style="margin-bottom: 7%;" class="hide-on-large-only waves-effect waves-light btn transparent modal-trigger" type="submit" name="action"><img class="responsive-img" id="img_addquest" src ="../images/favoritar.png"><p id="palavra_addquestao">Favoritar</p></button>
                   <button href="#avaliar-modal" id="btn_addquest" style="margin-bottom: 7%;" class="hide-on-large-only waves-effect waves-light btn transparent modal-trigger" type="submit" name="action"><img class="responsive-img" id="img_addquest" src ="../images/avaliar.png"><p id="palavra_addquestao">Avaliar</p></button>
-                  <button href="#difuculdade-modal" id="btn_addquest" class="hide-on-large-only waves-effect waves-light btn transparent modal-trigger" type="submit" name="action"><img class="responsive-img" id="img_addquest" src ="../images/nivel_dificuldade.png"><p id="palavra_addquestao">Dificuldade</p></button>
+                  <button href="#dificuldade-modal" id="btn_addquest" class="hide-on-large-only waves-effect waves-light btn transparent modal-trigger" type="submit" name="action"><img class="responsive-img" id="img_addquest" src ="../images/nivel_dificuldade.png"><p id="palavra_addquestao">Dificuldade</p></button>
                 </div>
               </div>
             </div>
@@ -626,6 +652,33 @@
               <div class="col s11 center-align" id = "Enviarcel">
                 <button href="javascript:void(0)" onclick="Avaliar(0)" class="waves-effect waves-light btn yellow darken-2 hoverable" id="s0" id="btnEnviar" style="border-radius: 20px 20px; margin-top: 10%; font-family: 'Muli';">Enviar</button>
               </div>
+            </div>
+
+            <!--MODAL DIFICULDADE-->
+            <div id="dificuldade-modal" class="modal hide-on-large-only">
+              <a><img class= "responsive-img modal-close" id="btn_fechar_modal_avaliar" src ="../images/fechar.png"></a>
+              <h6><img class="responsive-img align-center" id="img_dificuldade" src ="../images/nivel_dificuldade.png"><p>Defina a dificuldade da questão:</p></h6>
+              <div id="radio_button_dificil">
+                <label>
+                  <div class="col s1" class= "hide-on-large-only">
+                    <input name="group1" class="with-gap" type="radio"  />
+                    <span style="color:#77de7c;">Fácil</span>
+                  </div>
+                </label>
+                <label>
+                  <div class="col s2" class= "hide-on-large-only">
+                    <input name="group1" class="with-gap" type="radio"  />
+                    <span style="color: #FFC300;">Médio</span>
+                  </div>
+                </label>
+                <label>
+                    <div class="col s3" class= "hide-on-large-only">
+                    <input name="group1" class="with-gap" type="radio" />
+                    <span style="color: #FF5733;">Difícil</span>
+                  </div>
+                </label>
+              </div>
+              <button id="btn_salvar_dificil" class="hide-on-large-only waves-effect waves-light btn" type="submit" name="action">Salvar</button>
             </div>
           </div>
 
