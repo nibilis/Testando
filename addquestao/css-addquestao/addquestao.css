@@ -435,12 +435,12 @@
     }
 
     .degrade2 { height: 157% !important; }
-    .degrade3 { height: 172% !important; }
+    .degrade3 { height: 200% !important; }
 
     .button-group { margin-top: -2%; }
   }
 
-  @media (min-width: 411px){ /* AQUI, MENINA. AQUI */
+  @media (min-width: 411px){
     .degrade{
       width: 10%;
       float: left;
@@ -483,7 +483,7 @@
 
 
   /*FORMATAÇÃO COMPUTADOR*/
-  @media (min-width: 1024px) {
+  @media (min-width: 1024px) { /* 1024px X 768px*/
     body h2{
       font-size: 190%;
       position: absolute;
@@ -496,22 +496,24 @@
 
     h2 { margin-left: 120%; }
 
-    .degrade{
+    .button-group{ margin-top: 1%; }
+
+    .degrade4 {
       width: 10%;
       float: left;
-      margin-top: -5.5%;
+      margin-top: -2.5%;
       background: linear-gradient(to bottom, #D0C7FC, #8F83CD, #7C6FBF);
-      height: 110%;
+      height: 100%;
     }
 
-    .degrade2 {
+    .degrade5 {
+      display: none;
+      height: 132% !important;
+    }
+
+    .degrade6 {
       display: none;
       height: 200% !important;
-    }
-
-    .degrade3 {
-      display: none;
-      height: 210% !important;
     }
 
     #simbolodiv p {
@@ -520,9 +522,7 @@
       color: #FFC300;
     }
 
-    #simbolodiv a {
-      margin-left: 5%;
-    }
+    #simbolodiv a { margin-left: 5%; }
 
     #divimagem{
     left: 18%;
@@ -533,26 +533,33 @@
     }
 
     #inputimg { width: 60%; }
+
+    #dificuldade-desk div { margin-left: 18.2%; }
+    #priv_public-desk div { margin-left: 16.8%; }
   }
 
-    @media (min-width: 1280px) {
-      .degrade{
+    @media (min-width: 1280px) { /*1280px X 800px*/
+      .degrade4{
         width: 10%;
         float: left;
-        margin-top: -5.5%;
+        margin-top: -0.5%;
         background: linear-gradient(to bottom, #D0C7FC, #8F83CD, #7C6FBF);
-        height: 120%;
+        height: 105.5%;
       }
 
-      .degrade2 {
+      .degrade5 {
         display: none;
-        height: 160% !important;
+        height: 142% !important;
       }
 
-      .degrade3 {
+      .degrade6 {
         display: none;
-        height: 180% !important;
+        height: 206.5% !important;
       }
+
+      #label_resposta2_desk { margin-left: -10.5% }
+
+      #radio_button_priv_desk { margin-top: 12.5%; }
 
       #simbolodiv p {
         margin-top: -12%;
@@ -568,11 +575,99 @@
 
       #divimagem{
       left: 18%;
-      width: 76.1%;
+      width: 63%;
       margin-top: -10%;
       margin-left: -2%;
       text-transform: capitalize;
+      }
 
+      #dificuldade-desk div { margin-left: 16.8%; }
+      #priv_public-desk div {
+        margin-left: 16.8%;
+        grid-template-columns: 18.5% 15.5% 15%;
+      }
+
+      #btn_salvar-desk { margin-top: 3%; }
+    }
+
+
+    @media (min-width: 1366px){ /*1366px X 768px*/
+      .degrade4{
+        width: 10%;
+        float: left;
+        margin-top: -0.5%;
+        background: linear-gradient(to bottom, #D0C7FC, #8F83CD, #7C6FBF);
+        height: 110%;
+      }
+
+      .degrade5 {
+        display: none;
+        height: 148.5% !important;
+      }
+
+      .degrade6 {
+        display: none;
+        height: 217.5% !important;
+      }
+
+      #label_resposta2_desk { margin-left: -10% }
+
+      #dificuldade-desk div { margin-left: 16%; }
+      #priv_public-desk div { margin-left: 16.5%; }
+    }
+
+    @media (min-width: 1440px){ /*1440px X 900px*/
+      .degrade4{
+        width: 10%;
+        float: left;
+        margin-top: -0.5%;
+        background: linear-gradient(to bottom, #D0C7FC, #8F83CD, #7C6FBF);
+        height: 100%;
+      }
+
+      .degrade5 {
+        display: none;
+        height: 129% !important;
+      }
+
+      .degrade6 {
+        display: none;
+        height: 189% !important;
+      }
+
+      #label_resposta2_desk { margin-left: -9.5% }
+
+      #priv_public-desk div {
+        margin-left: 16.8%;
+        grid-template-columns: 17.5% 15.4% 15%;
+      }
+    }
+
+    @media (min-width: 1600px){ /*1600px X 900px*/
+      .degrade4{
+        width: 10%;
+        float: left;
+        margin-top: -0.5%;
+        background: linear-gradient(to bottom, #D0C7FC, #8F83CD, #7C6FBF);
+        height: 102%;
+      }
+
+      .degrade5 {
+        display: none;
+        height: 135% !important;
+      }
+
+      .degrade6 {
+        display: none;
+        height: 197% !important;
+      }
+
+      #label_resposta2_desk { margin-left: -8.5% }
+
+      #dificuldade-desk div { margin-left: 15%; }
+      #priv_public-desk div {
+        margin-left: 16.5%;
+        grid-template-columns: 16.5% 15.5% 15%;
       }
     }
   /*FINAL DA FORMATAÇÃO COMPUTADOR*/

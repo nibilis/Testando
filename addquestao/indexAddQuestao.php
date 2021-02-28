@@ -581,6 +581,7 @@ header('Content-Type: text/html; charset=UTF-8');
         <div required id="priv_public-desk" class="hide-on-med-and-down">
           <div>
            <label id="label_privacidade-desk" style="font-size: 87%;">Privacidade da questão <span style="color: red;">*</span></label>
+
            <label>
              <div class="col s1 hide-on-med-and-down">
                <input name="privacidade-pc" class="with-gap" type="radio" value="0"/>
