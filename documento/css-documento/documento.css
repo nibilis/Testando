@@ -25,14 +25,39 @@
     padding-left: 1%;
     padding-right: 1%;
     text-overflow: ellipsis;
-}
+  }
 
   #documento-nome-php p{
     font-family: 'Muli';
     text-align: center;
     font-size: 1.2em;
     margin-top: -2%;
-}
+  }
+
+  #cabecalho1_desk {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: 30px 90px;
+    margin-left: -3%;
+    margin-top: 5%;
+  }
+
+  #cabecalho2_desk {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: 30px 90px;
+    margin-left: -3%;
+    margin-top: -4%;
+  }
+
+  #divider2 {
+    margin-top: -5%;
+  }
+
+  #turma, #data {
+    margin-left: 200%;
+  }
+
 
   #documento1_desk #quadrado_desk {
     position: absolute;
@@ -512,6 +537,14 @@
       height: 55%;
       width: 25%;
     }
+
+    #cabecalho2_desk {
+      margin-top: -3%;
+    }
+
+    #divider2 {
+      margin-top: -3%;
+    }
   }
 
   @media (min-width: 1600px) {
@@ -567,6 +600,14 @@
 
     #btn_salvar_dificil_desk {
       padding-bottom: 0%;
+    }
+
+    #cabecalho2_desk {
+      margin-top: -1%;
+    }
+
+    #divider2 {
+      margin-top: -1%;
     }
   }
 
@@ -657,10 +698,30 @@
     text-overflow: ellipsis;
   }
 
+  #cabecalho1 {
+    display: grid;
+    gap: 10em;
+    grid-template-columns: 30px 60px;
+    margin-left: -3%;
+    margin-top: 4.5%;
+  }
+
+  #cabecalho2 {
+    display: grid;
+    gap: 10em;
+    grid-template-columns: 30px 30px;
+    margin-top: -56%;
+    margin-left: -3%;
+  }
+
+  #divider1 {
+    margin-top: -55%;
+  }
+
   #documento1 #quadrado {
     position: absolute;
     width: 83%;
-    height: 52%;
+    height: 54%;
     margin-left: 5.7%;
     top: 23%;
     border-radius: 20px 20px;
@@ -670,18 +731,18 @@
 
   #btn_salvar {
     position: absolute;
-    font-size: 75%;
+    font-size: 82%;
     padding-top: 0.5%;
     padding-bottom: 10%;
     font-family: 'Muli';
     width: 30%;
     background-color: #FFBC2B;
     border-radius: 40px 40px;
-    top: 78%;
+    top: 80%;
     left: 35.5%;
   }
 
-  #seta_esquerda {
+  /*#seta_esquerda {
     position: absolute;
     top: 79%;
     left: 14%;
@@ -691,7 +752,7 @@
     position: absolute;
     left: 76%;
     top: 79%;
-  }
+  }*/
 
   #rodape {
     background-color: white;
@@ -731,7 +792,7 @@
   #gabarito #quadrado {
     position: absolute;
     width: 83%;
-    height: 52%;
+    height: 54%;
     margin-left: 5.8%;
     top: 23%;
     border-radius: 20px 20px;
@@ -741,18 +802,18 @@
 
   #btn_salvar2 {
     position: absolute;
-    font-size: 75%;
+    font-size: 82%;
     padding-top: 0.5%;
     padding-bottom: 10%;
     font-family: 'Muli';
     width: 30%;
     background-color: #FFBC2B;
     border-radius: 40px 40px;
-    top: 78%;
+    top: 80%;
     left: 35.5%;
   }
 
-  #seta_esquerda2 {
+  /*#seta_esquerda2 {
     position: absolute;
     top: 79%;
     left: 14%;
@@ -762,7 +823,7 @@
     position: absolute;
     left: 76%;
     top: 79%;
-  }
+  }*/
 
   /*FUNCIONA EM TUDO: ADD_QUESTÕES CEL*/
 
@@ -1283,6 +1344,14 @@ a {
 
   #quest_profs {
     width: 270%;
+  }
+
+  #cabecalho2 {
+    margin-top: -49%;
+  }
+
+  #divider1 {
+    margin-top: -50%;
   }
 /*RESPONSIVIDADE TELA ADD DOCUMENTO*/
 

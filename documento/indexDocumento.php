@@ -154,7 +154,29 @@
                   ?>
                 </div>
               </div>
-              <div id="quadrado_desk" style="overflow: auto;" rows="8" cols="80"><?php $u->conectar(); $d->exibirQuestoes();?><br></div>
+              <div id="quadrado_desk" style="overflow: auto;" rows="8" cols="80">
+                <div>
+                  <p style="margin-left: -3%;"><b>Nome:</b><br></p>
+                </div>
+              <div class="row" id="cabecalho1_desk">
+                <div>
+                  <p><b>Prontuário:</b></p>
+                </div>
+                <div>
+                  <p id="turma"><b>Turma:</b></p>
+                </div>
+              </div>
+              <div class="row" id="cabecalho2_desk">
+                <div>
+                  <p><b>Professor:</b></p>
+                </div>
+                <div>
+                  <p id="data" ><b>Data:</b></p>
+                </div>
+              </div>
+              <div class="divider" id="divider2"></div>
+                <?php $u->conectar(); $d->exibirQuestoes();?><br>
+              </div>
               <!--BOTÃO SALVAR-->
               <?php
                 if(isset($_SESSION['nome_documento'])){
@@ -288,8 +310,8 @@
                       <p><?php echo $row['Enunciado']?></p>
                     </div>
                   </div>
-                  <div class="back_desk" style="overflow: auto;">
-                    <div id="quest_profs_desk">
+                  <div class="back_desk">
+                    <div id="quest_profs_desk" style="overflow: auto;">
                       <p>A resposta está dentro do seu coração</p>
                     </div>
                   </div>
@@ -427,19 +449,29 @@
                 </div>
               </div>
               <div id="quadrado" style="overflow: auto;" rows="8" cols="80">
-                <div class="row">
-                  <div class="col l7">
-                    <p>Nome:</p>
+                  <div>
+                    <p style="margin-left: -3%;"><b>Nome:</b><br></p>
                   </div>
-
-                  <div class="col l4">
-                    <p>Turma:</p>
+                <div class="row" id="cabecalho1">
+                  <div>
+                    <p><b>Prontuário:</b></p>
                   </div>
-
+                  <div>
+                    <p><b>Turma:</b></p>
+                  </div>
                 </div>
+                <div class="row" id="cabecalho2">
+                  <div>
+                    <p><b>Professor:</b></p>
+                  </div>
+                  <div>
+                    <p><b>Data:</b></p>
+                  </div>
+                </div>
+                <div class="divider" id="divider1"></div>
                 <?php $d->exibirQuestoes();?><br>
               </div>
-              <img class= "responsive-img" id = "seta_esquerda" src ="../images/seta_esquerda.png">
+              <!--<img class= "responsive-img" id = "seta_esquerda" src ="../images/seta_esquerda.png">-->
               <?php
                 if(isset($_SESSION['nome_documento'])){
                   ?><a id="btn_salvar" class="hide-on-large-only waves-effect waves-light btn"  href="../Classes/NovoDocumento.php" name="action">Salvar</a><?php
@@ -448,7 +480,7 @@
                   ?><button id="btn_salvar" class="hide-on-large-only waves-effect waves-light btn" type="submit" name="action">Criar</button><?php
                 }
               ?>
-              <img class= "responsive-img" id = "seta_direita" src ="../images/seta_direita.png">
+              <!--<img class= "responsive-img" id = "seta_direita" src ="../images/seta_direita.png">-->
             </form>
             </div>
           </div>
@@ -465,9 +497,9 @@
                  </div>
                </div>
                <div id="quadrado" rows="8" cols="80"><br></div>
-               <img class= "responsive-img" id = "seta_esquerda2" src ="../images/seta_esquerda.png">
+               <!--<img class= "responsive-img" id = "seta_esquerda2" src ="../images/seta_esquerda.png">-->
                <button id="btn_salvar2" class="hide-on-large-only waves-effect waves-light btn" type="submit" name="action">Salvar</button>
-               <img class= "responsive-img" id = "seta_direita2" src ="../images/seta_direita.png">
+               <!--<img class= "responsive-img" id = "seta_direita2" src ="../images/seta_direita.png">-->
              </form>
             </div>
           </div>
@@ -562,7 +594,6 @@
 
             <!-- TÍTULO ADD_QUESTÕES CEL -->
             <h5 class="hide-on-large-only" id="título_addquest">Adicionar Questões</h5>
-
 
             <!-- DIV QUESTÕES DOS PROFESSORES CEL -->
         <div id="scroll" class="hide-on-large-only">
