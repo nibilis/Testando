@@ -141,7 +141,7 @@ header('Content-Type: text/html; charset=UTF-8');
             <button href="#alternativa" id="btn-alternativa" value="ok" target="_self" class="waves-effect waves-light transparent">Alternativa</button>
             <button href="#dissertativa" id="btn-dissertativa" value="ok" target="_self" class="waves-effect waves-light transparent">Dissertativa</button>
           </p>
-          <form method="POST" action="#">
+          <form method="POST">
           <div class="items">
 
           <div required id="campo1" class="input-field col s9 center-align hide-on-large-only">
@@ -229,7 +229,7 @@ header('Content-Type: text/html; charset=UTF-8');
 
             <!-- Alternativa/Dissertativa -->
 
-        </div> <!-- COMEÇO alternativa -->
+        </div><!-- COMEÇO alternativa -->
 
         <div id="alternativa" class="alternativa" style="margin-top: -5%;">
 
@@ -300,7 +300,7 @@ header('Content-Type: text/html; charset=UTF-8');
          <button id="btn_salvar" class="hide-on-large-only waves-effect waves-light btn" type="submit" name="action">Salvar</button>
 
            </div>
-        </div>
+
         <!-- FIM - alternativa-->
 
         <div id="dissertativa" class="dissertativa">
@@ -370,7 +370,7 @@ header('Content-Type: text/html; charset=UTF-8');
          </div>
 
         </div>
-      </div><!-- FIM - dissertativa -->
+      <!-- FIM - dissertativa -->
 
         <!--Final do formulário de CELULAR-->
       </form>
@@ -536,7 +536,7 @@ header('Content-Type: text/html; charset=UTF-8');
          </div>
 
            <button id="btn_salvar-desk" class="cadastro btn flow-text waves-effect yellow darken-2 waves-light hoverable" type="submit">Salvar</button>
-        <!-- FIM ALTERNATIVA -->
+<!-- FIM ALTERNATIVA -->
         </div>
 
         <!-- COMEÇO DISSERTATIVA -->
@@ -606,7 +606,7 @@ header('Content-Type: text/html; charset=UTF-8');
       <!-- FIM DISSERTATIVA -->
       </div>
       <!--Final do formulário de COMPUTADOR-->
-      
+
       <?php
       //verificar se clicou no botão
       	if(isset($_POST['enunciado'])){
@@ -645,7 +645,7 @@ header('Content-Type: text/html; charset=UTF-8');
       }
       ?>
 
-      </div>
+  </div>
 
 
 

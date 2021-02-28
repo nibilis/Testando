@@ -389,6 +389,9 @@ width: 80% !important;
 
   #botãocadastrar{
   margin-left: 37%;
+  text-transform: uppercase;
+  font-family: 'Muli';
+  font-size: 120%;
   }
 
   #nome {
