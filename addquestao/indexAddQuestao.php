@@ -141,7 +141,7 @@ header('Content-Type: text/html; charset=UTF-8');
             <button href="#alternativa" id="btn-alternativa" value="ok" target="_self" class="waves-effect waves-light transparent">Alternativa</button>
             <button href="#dissertativa" id="btn-dissertativa" value="ok" target="_self" class="waves-effect waves-light transparent">Dissertativa</button>
           </p>
-          <form method="POST">
+
           <div class="items">
 
           <div required id="campo1" class="input-field col s9 center-align hide-on-large-only">
@@ -198,8 +198,6 @@ header('Content-Type: text/html; charset=UTF-8');
               <p href="#simbolo1" style="color: black;">&nbsp;Inserir <br> Símbolo</p>
             </div>
 
-
-            <form action="#">
               <div class="file-field input-field waves-effect waves-light" id="divimagem">
                 <div class="btn" style= "font-family: 'Muli'; color:white; background-color:#FFBC2B;">
                   <span id="spanimagem" style= "font-family: 'Muli'; color:white; background-color:#FFBC2B;">Imagem </span>
@@ -209,7 +207,6 @@ header('Content-Type: text/html; charset=UTF-8');
                   <input class="file-path validate" type="text">
                 </div>
               </div>
-            </form>
 
 
             <!-- Modal Structure SÍMBOLOS -->
@@ -249,7 +246,6 @@ header('Content-Type: text/html; charset=UTF-8');
 
               <label id="label_resposta2" for="textarea1" class= "hide-on-large-only">Resposta alternativa <span style="color: red;">*</span></label>
               <textarea id="respostaalternativa" maxlength="1" placeholder=" Ex: A..." required style= "font-family: 'Muli'; font-size: 100%;" class="materialize-textarea hide-on-large-only"></textarea>
-
               <div required id="dificuldade2" class="input-field col s10 center-align hide-on-large-only">
               <label id="label_dificuldade2" style="font-size: 85%;">Dificuldade da questão <span style="color: red;">*</span></label>
 
@@ -433,7 +429,7 @@ header('Content-Type: text/html; charset=UTF-8');
           </div>
 
           <!-- IMAGEM -->
-          <form action="#">
+
             <div class="file-field input-field waves-effect waves-light" id="divimagem">
               <div class="btn" style= "font-family: 'Muli'; color:white; background-color:#FFBC2B;">
                 <span id="spanimagem" style= "font-family: 'Muli'; color:white; background-color:#FFBC2B;">Imagem </span>
@@ -443,7 +439,7 @@ header('Content-Type: text/html; charset=UTF-8');
                 <input class="file-path validate" type="text">
               </div>
             </div>
-          </form>
+
 
           <!-- Modal Trigger -->
           <div id="simbolodiv-desk">
@@ -535,7 +531,6 @@ header('Content-Type: text/html; charset=UTF-8');
            </div>
          </div>
 
-           <button id="btn_salvar-desk" class="cadastro btn flow-text waves-effect yellow darken-2 waves-light hoverable" type="submit">Salvar</button>
 <!-- FIM ALTERNATIVA -->
         </div>
 
@@ -555,6 +550,7 @@ header('Content-Type: text/html; charset=UTF-8');
             <div>
               <label id="label_dificuldade-desk" style="font-size: 85%;">Dificuldade da questão <span style="color: red;">*</span></label>
               <label>
+                <div class="row">
                 <div class="col s1" class= "hide-on-med-and-down">
                   <input name="dificuldade-pc" class="with-gap" type="radio" value="FACIL"/>
                   <span style="color: #4DC535">Fácil</span>
@@ -574,6 +570,9 @@ header('Content-Type: text/html; charset=UTF-8');
                   <span style="color:#FF5733">Difícil</span>
                 </div>
             </label>
+
+            </div>
+          </div>
           </div>
           </div>
         </div>
@@ -595,58 +594,54 @@ header('Content-Type: text/html; charset=UTF-8');
                <span>Privado</span>
              </div>
            </label>
-          </div>
-
-
+         </div>
        </div>
 
-          <button id="btn_salvar-desk2" class="cadastro btn flow-text waves-effect yellow darken-2 waves-light hoverable" type="submit">Salvar</button>
+       <div>
+          <button id="btn_salvar-desk2" class="cadastro flow-text btn waves-effect yellow darken-2 waves-light hoverable" type="submit">Salvar</button>
+       </div>
       </div>
-  </form> <!--fecha formulário POST-->
+  </form>
 
-      <!-- FIM DISSERTATIVA -->
+  <?php
+  //verificar se clicou no botão
+    if(isset($_POST['enunciado'])){
+
+      $materia = addslashes($_POST['materia']);
+      $tema = addslashes($_POST['tema']);
+      $enunciado = addslashes($_POST['enunciado']);
+      /*$resposta = addslashes($_POST['resposta']);
+      $dificuldade = addslashes($_POST['dificuldade-pc']);
+      $privacidade = addslashes($_POST['privacidade-pc']);*/
+
+      echo $materia, $tema, $enunciado/*, $resposta, $dificuldade, $privacidade*/;
+
+    //verificar se esta preenchido
+    if(!empty($materia) && !empty($tema) && !empty($enunciado) /*&& !empty($dificuldade)*/)
+    {
+        $u->conectar();
+        if($u->msgErro == ""){
+          if($resposta == ""){
+
+            }
+          else {
+            if($q->cadastrarQuestaoDissertativa($materia, $tema, $enunciado/*, $resposta, 1, $dificuldade, $privacidade*/, $_SESSION['ID_Usuario']))
+            {
+              echo "Cadastrado com sucesso!";
+            }
+          }
+        }
+        else {
+          echo "Erro: ".$u->msgErro;
+        }
+    }
+    else{
+      echo "Preencha todos os campos";
+    }
+  }
+  ?>
+
       </div>
-      <!--Final do formulário de COMPUTADOR-->
-
-      <?php
-      //verificar se clicou no botão
-      	if(isset($_POST['enunciado'])){
-
-      		$materia = addslashes($_POST['materia']);
-      		$tema = addslashes($_POST['tema']);
-      		$enunciado = addslashes($_POST['enunciado']);
-          $resposta = addslashes($_POST['resposta']);
-          $dificuldade = addslashes($_POST['dificuldade-pc']);
-          $privacidade = addslashes($_POST['privacidade-pc']);
-
-          echo $materia, $tema, $enunciado, $resposta, $dificuldade, $privacidade;
-
-      	//verificar se esta preenchido
-        if(!empty($materia) && !empty($tema) && !empty($enunciado) && !empty($dificuldade))
-        {
-            $u->conectar();
-            if($u->msgErro == ""){
-              if($resposta == ""){
-
-                }
-              else {
-                if($q->cadastrarQuestaoDissertativa($materia, $tema, $enunciado, $resposta, 1, $dificuldade, $privacidade, $_SESSION['ID_Usuario']))
-                {
-                  echo "Cadastrado com sucesso!";
-                }
-              }
-            }
-            else {
-              echo "Erro: ".$u->msgErro;
-            }
-        }
-        else{
-          echo "Preencha todos os campos";
-        }
-      }
-      ?>
-
-  </div>
 
 
 
