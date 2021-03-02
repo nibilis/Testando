@@ -385,7 +385,7 @@ header('Content-Type: text/html; charset=UTF-8');
           <div class="items">
 
           <div required id="campo1" class="input-field col s9 center-align hide-on-med-and-down">
-            <select name="materia">
+            <select name="materia-pc">
               <option value="" disabled selected>Selecione a matéria</option>
               <?php
                 $u->conectar();
@@ -398,7 +398,7 @@ header('Content-Type: text/html; charset=UTF-8');
           </div>
 
           <div required id="campo2" class="input-field col s9 center-align hide-on-med-and-down">
-            <select name="tema">
+            <select name="tema-pc">
                 <option value="" disabled selected>Selecione o tema</option>
                 <?php
                   $u->conectar();
@@ -411,13 +411,13 @@ header('Content-Type: text/html; charset=UTF-8');
           </div>
 
           <div required id="campo3" class="input-field col s9 center-align hide-on-med-and-down">
-            <select name="subtema">
+            <select name="subtema-pc">
               <option value="" selected disabled> Selecione seu subtema </option>
               <?php
                 $u->conectar();
                 $results = $s->listAll();
                foreach($results as $row){ ?>
-                  <option value="<?php echo $row['ID_Subtema'] ?>"><?php echo $row['Nome'] ?></option>
+                  <option value="<?php echo $row['ID_subtema'] ?>"><?php echo $row['Nome'] ?></option>
               <?php } ?>
             </select>
             <label>Subtema <span style="color: red;">*</span></label>
@@ -425,7 +425,7 @@ header('Content-Type: text/html; charset=UTF-8');
 
           <div required id="campo4"  class="col s9 center-align hide-on-med-and-down">
             <label for="textarea1" style= "font-family: 'Muli'; font-size: 11px; float: left;">Enunciado <span style="color: red;">*</span></label>
-            <input placeholder="Escreva seu enunciado" id="textarea1" class="materialize-textarea" name="enunciado">
+            <input placeholder="Escreva seu enunciado" id="textarea1" class="materialize-textarea" name="enunciado-pc">
           </div>
 
           <!-- IMAGEM -->
@@ -474,63 +474,65 @@ header('Content-Type: text/html; charset=UTF-8');
 
 
           <div id="formulario_desk" class= "hide-on-med-and-down" >
-            <input id="alternativa_campo_desk" type="text" placeholder="Alternativa" name="numeroDocumento" required/>
+            <input id="alternativa_campo_desk" type="text" placeholder="Alternativa A" name="alternativa1"/>
           </div>
 
           <a href="#" data-id="1" id="adicionarCampo_desk" class="hide-on-med-and-down">+ Adicionar Campos</a>
 
 
           <label id="label_resposta2_desk" for="textarea1" class= "hide-on-med-and-down">Resposta alternativa <span style="color: red;">*</span></label>
-          <textarea id="respostaalternativa_desk" maxlength="1" placeholder=" Ex: A..." required style= "font-family: 'Muli'; font-size: 100%;" class="materialize-textarea hide-on-med-and-down"></textarea>
+          <textarea id="respostaalternativa_desk" maxlength="1" placeholder=" Ex: A..." name="correta" style= "font-family: 'Muli'; font-size: 100%;" class="materialize-textarea hide-on-med-and-down"></textarea>
 
               <!--CAMPOS DIFICULDADE ALTERNATIVA-->
-              <div required id="dificuldade-desk2" class="input-field col s10 center-align hide-on-med-and-down">
+              <div id="dificuldade-desk2" class="input-field col s10 center-align hide-on-med-and-down">
 
                   <label id="label_dificuldade-desk2" style="font-size: 80%;">Dificuldade da questão <span style="color: red;">*</span></label>
             <div id="radio_button_dificil_desk">
               <label>
                 <div class="col s1" class= "hide-on-med-and-down">
-                  <input name="group1" class="with-gap" type="radio"/>
+                  <input name="dificuldade-pc" class="with-gap" type="radio" value="FACIL"/>
                   <span style="color:#77de7c;">Fácil</span>
                 </div>
               </label>
 
               <label>
                 <div class="col s2" class= "hide-on-med-and-down">
-                  <input name="group1" class="with-gap" type="radio"/>
+                  <input name="dificuldade-pc" class="with-gap" type="radio" value="MEDIO"/>
                   <span style="color: #FFC300;">Médio</span>
                 </div>
               </label>
 
               <label>
                 <div class="col s3" class= "hide-on-med-and-down">
-                  <input name="group1" class="with-gap" type="radio"/>
+                  <input name="dificuldade-pc" class="with-gap" type="radio" value="DIFICIL"/>
                   <span style="color:#FF5733">Difícil</span>
                 </div>
             </label>
           </div>
         </div>
 
-          <div required id="priv_public-desk2" class="hide-on-med-and-down">
+          <div id="priv_public-desk2" class="hide-on-med-and-down">
 
           <div id="radio_button_priv_desk">
             <label id="label_privacidade-desk2" style="font-size: 80%; margin-left: 5%; margin-bottom: -5%;">Privacidade da questão <span style="color: red;">*</span></label>
              <label>
                <div class="col s1 hide-on-med-and-down">
-                 <input name="group2" class="with-gap" type="radio"/>
+                 <input name="privacidade-pc" class="with-gap" type="radio" value="0"/>
                  <span>Público</span>
                </div>
              </label>
 
              <label>
                <div class="col s2 hide-on-med-and-down">
-                 <input name="group2" class="with-gap" type="radio"/>
+                 <input name="privacidade-pc" class="with-gap" type="radio" value="1"/>
                  <span>Privado</span>
                </div>
              </label>
            </div>
          </div>
-
+         <div>
+            <button id="btn_salvar-desk2" class="cadastro flow-text btn waves-effect yellow darken-2 waves-light hoverable" type="submit">Salvar</button>
+         </div>
 <!-- FIM ALTERNATIVA -->
         </div>
 
@@ -538,19 +540,14 @@ header('Content-Type: text/html; charset=UTF-8');
         <div id="dissertativa" class="dissertativa-desk">
 
           <div class="row center-align hide-on-med-and-down">
-
-                <div class="row">
                   <div class="input-field col s9" id="respostadissert-desk">
-                    <input placeholder=Resposta id="textarea1" type="text" class="materialize-textarea" name="resposta">
+                    <input placeholder=Resposta id="textarea1" type="text" class="materialize-textarea" name="resposta-pc">
                   </div>
-                </div>
 
-
-              <div required id="dificuldade-desk" class="input-field col s10 center-align hide-on-med-and-down">
+              <div id="dificuldade-desk" class="input-field col s10 center-align hide-on-med-and-down">
             <div>
               <label id="label_dificuldade-desk" style="font-size: 85%;">Dificuldade da questão <span style="color: red;">*</span></label>
               <label>
-                <div class="row">
                 <div class="col s1" class= "hide-on-med-and-down">
                   <input name="dificuldade-pc" class="with-gap" type="radio" value="FACIL"/>
                   <span style="color: #4DC535">Fácil</span>
@@ -570,14 +567,11 @@ header('Content-Type: text/html; charset=UTF-8');
                   <span style="color:#FF5733">Difícil</span>
                 </div>
             </label>
+          </div>
+          </div>
+          </div>
 
-            </div>
-          </div>
-          </div>
-          </div>
-        </div>
-
-        <div required id="priv_public-desk" class="hide-on-med-and-down">
+        <div id="priv_public-desk" class="hide-on-med-and-down">
           <div>
            <label id="label_privacidade-desk" style="font-size: 87%;">Privacidade da questão <span style="color: red;">*</span></label>
 
@@ -600,32 +594,47 @@ header('Content-Type: text/html; charset=UTF-8');
        <div>
           <button id="btn_salvar-desk2" class="cadastro flow-text btn waves-effect yellow darken-2 waves-light hoverable" type="submit">Salvar</button>
        </div>
+     </div>
       </div>
   </form>
 
   <?php
   //verificar se clicou no botão
-    if(isset($_POST['enunciado'])){
+    if(isset($_POST['enunciado-pc'])){
 
-      $materia = addslashes($_POST['materia']);
-      $tema = addslashes($_POST['tema']);
-      $enunciado = addslashes($_POST['enunciado']);
-      /*$resposta = addslashes($_POST['resposta']);
+      $materia = addslashes($_POST['materia-pc']);
+      $tema = addslashes($_POST['tema-pc']);
+      $subtema = addslashes($_POST['subtema-pc']);
+      $enunciado = addslashes($_POST['enunciado-pc']);
+      $resposta = addslashes($_POST['resposta-pc']);
       $dificuldade = addslashes($_POST['dificuldade-pc']);
-      $privacidade = addslashes($_POST['privacidade-pc']);*/
+      $privacidade = addslashes($_POST['privacidade-pc']);
 
-      echo $materia, $tema, $enunciado/*, $resposta, $dificuldade, $privacidade*/;
+      $alt1 = addslashes($_POST['alternativa1']);
+      $alt2 = addslashes($_POST['alternativa2']);
+      $alt3 = addslashes($_POST['alternativa3']);
+      $alt4 = addslashes($_POST['alternativa4']);
+      $alt5 = addslashes($_POST['alternativa5']);
+      $correta = addslashes($_POST['correta']);
 
     //verificar se esta preenchido
-    if(!empty($materia) && !empty($tema) && !empty($enunciado) /*&& !empty($dificuldade)*/)
+    if(!empty($materia) && !empty($tema) && !empty($enunciado) && !empty($dificuldade))
     {
         $u->conectar();
         if($u->msgErro == ""){
           if($resposta == ""){
-
+              if($alt1!=""){
+                if($q->cadastrarQuestaoAlternativa($materia, $tema, $enunciado, 0, $alt1, $alt2, $alt3, $alt4, $alt5, $correta, $dificuldade, $privacidade, $_SESSION['ID_Usuario']))
+                {
+                  echo "Cadastrado com sucesso!";
+                }
+              }
+              else{
+                echo "Preencha as alternativas";
+              }
             }
           else {
-            if($q->cadastrarQuestaoDissertativa($materia, $tema, $enunciado/*, $resposta, 1, $dificuldade, $privacidade*/, $_SESSION['ID_Usuario']))
+            if($q->cadastrarQuestaoDissertativa($materia, $tema, $enunciado, 1, $resposta, 1, $dificuldade, $privacidade, $_SESSION['ID_Usuario']))
             {
               echo "Cadastrado com sucesso!";
             }
@@ -794,7 +803,7 @@ header('Content-Type: text/html; charset=UTF-8');
             $(botaoAdicionar).click(function () {
 
                 if(i <= 4) {
-                    $('<div class="conteudoIndividual"><br><input id="alternativa_campo '+ String.fromCharCode(letra) +'" type="text" placeholder="Alternativa" name="numeroDocumento' + i + '" required style="width:96%; margin-top: 5%;"/><a href="#" class="linkRemover">X</a></div>').appendTo(divContent);
+                    $('<div class="conteudoIndividual"><br><input id="alternativa_campo '+ String.fromCharCode(letra) +'" type="text" placeholder="Alternativa ' + String.fromCharCode(letra) +'" name="alternativa' + i + '"   style="width:96%; margin-top: 5%;"/><a href="#" class="linkRemover">X</a></div>').appendTo(divContent);
                     $('#removehidden').remove();
                     letra++;
                     i++;
@@ -819,7 +828,7 @@ header('Content-Type: text/html; charset=UTF-8');
       $(function () {
           var divContent_desk = $('#formulario_desk');
           var botaoAdicionar_desk = $('a[data-id="1"]');
-          var i = 1;
+          var i = 2;
           //66 - B
           var letra = 66;
 
@@ -827,8 +836,8 @@ header('Content-Type: text/html; charset=UTF-8');
 
             $(botaoAdicionar_desk).click(function () {
 
-                if(i <= 4) {
-                    $('<div class="conteudoIndividual_desk"><br><input id="alternativa_campo_desk '+ String.fromCharCode(letra) +'" type="text" placeholder="Alternativa" name="numeroDocumento' + i + '" required style="width:98%; margin-top: 5%;"/><a href="#" class="linkRemover_desk">X</a></div>').appendTo(divContent_desk);
+                if(i <= 5) {
+                    $('<div class="conteudoIndividual_desk"><br><input id="alternativa_campo_desk '+ String.fromCharCode(letra) +'" type="text" placeholder="Alternativa ' + String.fromCharCode(letra) +'" name="alternativa' + i + '"   style="width:98%; margin-top: 5%;"/><a href="#" class="linkRemover_desk">X</a></div>').appendTo(divContent_desk);
                     $('#removehidden_desk').remove();
                     letra++;
                     i++;
