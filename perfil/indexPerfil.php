@@ -51,9 +51,9 @@
                 <img src="../images/circulo_roxo_claro.png" id="roxo_claro">
                 <img src="../images/circulo_amarelo_grande.png" id="amarelo_grande">
                 <ul id="links_menucel">
-                  <li><a id="perfil" class=" waves-effect center-align" href="../perfil/indexPerfil.html">Perfil</a></li>
+                  <li><a id="perfil" class=" waves-effect center-align" href="../perfil/indexPerfil.php">Perfil</a></li>
                   <li><div id="divider" class="divider"></div></li>
-                  <li><a id="question" class=" waves-effect center-align" href="../addquestao/indexAddQuestao.html">Adicionar Questão</a></li>
+                  <li><a id="question" class=" waves-effect center-align" href="../addquestao/indexAddQuestao.php">Adicionar Questão</a></li>
                   <li><div id="divider" class="divider"></div></li>
                   <li><a id="document" class="waves-effect center-align" href="../documento/indexDocumento.php">Adicionar Documento</a></li>
                   <li><div id="divider" class="divider"></div></li>

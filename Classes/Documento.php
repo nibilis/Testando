@@ -82,22 +82,17 @@ Class Documento
       $sql = $pdo->prepare("SELECT ID_Questao_ FROM questao as q INNER JOIN questao_documento as qd ON qd.Documento_ID_Documento = :d AND q.ID_Questao_ = qd.Questao_ID_Questao_");
       $sql->bindValue(":d", $idDocumento);
       $sql->execute();
-      $dado = $sql->fetch();
-      $idQuestao = $dado['ID_Questao_'];
+      $m = $sql->fetch();
 
-      if($sql->rowCount() > 0){
+      while($sql->rowCount() > 0){
         $sql = $pdo->prepare("SELECT Texto FROM alternativa WHERE Questao_ID_Questao_ = :q AND Correta = 1");
-        $sql->bindValue(":q", $idQuestao);
+        $sql->bindValue(":q", $m[$i]);
         $sql->execute();
-        while($r = $sql->fetch()){
+        $r = $sql->fetch();
         $i++;
         ?> <p style="text-align: justify;"><b><?php echo $i.". "?></b> <?php echo $r['Texto']."</br></br>"; ?></p> <?php
+
         }
-      }
-      else{
-        //acho que não vai precisar disso depois
-        echo "";
-      }
     }
     else{
       //Para não dar o erro de variavel indefinida

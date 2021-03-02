@@ -37,7 +37,7 @@
     border-width: 6px !important;
     border-color: black;
     padding-top: 2% !important;
-    padding-bottom: 6% !important;
+    padding-bottom: 5% !important;
     /*top: / right: / bottom: / left:*/
     margin: 17% -15% 5% 30%;
     text-transform: capitalize !important;
@@ -617,6 +617,11 @@
     }
 
     @media (min-width: 1440px){ /*1440px X 900px*/
+
+      #nome-dashboard{
+        margin-top: 5%;
+      }
+
       .degrade4{
         width: 10%;
         float: left;
@@ -643,7 +648,9 @@
       }
     }
 
-    @media (min-width: 1600px){ /*1600px X 900px*/
+    @media (min-width: 1600px)
+    { /*1600px X 900px*/
+
       .degrade4{
         width: 10%;
         float: left;

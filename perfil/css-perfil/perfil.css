@@ -223,13 +223,13 @@ border-radius: 10px 10px;
 }
 
 #nome-dashboard{
-  margin-top: -20%;
+  margin-top: 0%;
   color: white;
 }
 
 #foto_perfil_pequeno {
   width: 45%;
-  margin-top: -20%;
+  margin-top: 0%;
   margin-left: -60%;
 }
 
@@ -388,7 +388,7 @@ border-radius: 10px 10px;
       width: 45%;
       margin-left: -60%;
       position: absolute;
-      margin-top: -2%;
+      margin-top: 0%;
     }
 }
 
@@ -467,7 +467,7 @@ border-radius: 10px 10px;
     #foto_perfil_pequeno {
       width: 45%;
       margin-left: -60%;
-      margin-top: 1%!important;
+      margin-top: 0%!important;
       position: absolute;
     }
 
@@ -475,6 +475,12 @@ border-radius: 10px 10px;
 
 @media (min-width: 1600px)
 {
+  #foto_perfil_pequeno {
+    width: 45%;
+    margin-top: 0%;
+    margin-left: -60%;
+  }
+
   #nav-pc{
     margin-right: 34%;
     font-family: 'muli';
@@ -729,8 +735,8 @@ span {
   font-size: 100%;
   color: #8D8D8D;
   float: left;
-  margin-top: 1%;
-  margin-left: 5%;
+  margin-top: -15%;
+  margin-left: 35%;
 }
 
 #sair {
@@ -751,7 +757,7 @@ span {
 }
 
 #divisão {
-  margin-top: 30%;
+  margin-top: 10%;
   style: none;
   width: 90%;
   margin-left: 5%;
@@ -972,6 +978,8 @@ span {
   margin-top: -6%;
 }
 
+
+
 #tutorialpc {
   width: 11%;
   float: left;
@@ -980,7 +988,6 @@ span {
 }
 
 #tutorialtextopc{
-
   color: #6E60B8;
   font-style: bold;
   font-family: 'Mulish', sans-serif;
