@@ -201,6 +201,7 @@
              </div>
            </div>
            <div id="quadrado_desk" rows="8" cols="80"><br></div>
+           <?php $u->conectar(); $d->exibirRespostas();?><br>
          </form>
         </div>
       </div>
@@ -312,7 +313,7 @@
                   </div>
                   <div class="back_desk">
                     <div id="quest_profs_desk" style="overflow: auto;">
-                      <p>A resposta está dentro do seu coração</p>
+                      <p><?php echo $q->resposta($row['ID_Questao_']);?></p>
                     </div>
                   </div>
                 </div>

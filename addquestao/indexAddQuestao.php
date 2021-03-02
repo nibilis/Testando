@@ -837,7 +837,7 @@ header('Content-Type: text/html; charset=UTF-8');
             $(botaoAdicionar_desk).click(function () {
 
                 if(i <= 5) {
-                    $('<div class="conteudoIndividual_desk"><br><input id="alternativa_campo_desk '+ String.fromCharCode(letra) +'" type="text" placeholder="Alternativa ' + String.fromCharCode(letra) +'" name="alternativa' + i + '"   style="width:98%; margin-top: 5%;"/><a href="#" class="linkRemover_desk">X</a></div>').appendTo(divContent_desk);
+                    $('<div class="conteudoIndividual_desk"><br><input id="alternativa_campo_desk '+ String.fromCharCode(letra) +'" type="text" placeholder="Alternativa ' + String.fromCharCode(letra) +'" name="alternativa' + i + '"   style="width: 98%; margin-left: 0%; margin-top: 5%;"/><a href="#" class="linkRemover_desk">X</a></div>').appendTo(divContent_desk);
                     $('#removehidden_desk').remove();
                     letra++;
                     i++;

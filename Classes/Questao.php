@@ -462,6 +462,11 @@ Class Questao
                 $sql->execute();
               }
               break;
+
+            default:
+
+              return false;
+              break;
     }
 
 
@@ -495,7 +500,25 @@ Class Questao
         $img = $sql->fetch();
         $_SESSION['imagem_usuario'] = $img['Imagem'];
       }
+    }
   }
-}
+
+  public function resposta($idQuestao){
+
+    global $pdo;
+
+    $sql = $pdo->prepare("SELECT Texto FROM alternativa WHERE Questao_ID_Questao_ = :q AND Correta = 1");
+    $sql->bindValue(":q", $idQuestao);
+    $sql->execute();
+
+    if($sql->rowCount() > 0){
+      $dado = $sql->fetch();
+      $resposta = $dado['Texto'];
+    }
+
+    return $resposta;
+
+  }
+
 }
 ?>

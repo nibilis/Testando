@@ -68,9 +68,10 @@ a {
 #cadeadopc {
   width: 25%;
   justify-content: center;
-  margin-top: 15%;
   float:right;
+  margin-top: 15%;
 }
+
 
 #prontuario{
   width: 60vw;
@@ -387,4 +388,35 @@ font-size: 100%;
       font-family: Muli;
     }
 
+}
+
+@media (min-width:1600px){
+
+  #user {
+    width: 18%;
+    justify-content: center;
+    margin-top: -5%;
+  }
+
+  #userpc {
+    width: 17%;
+    justify-content: center;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    float:right;
+  }
+
+  #cadeadopc {
+    width: 18%;
+    justify-content: center;
+    float:left;
+  }
+
+#cadeado1920 {
+  width: 18%;
+  justify-content: center;
+  float:left;
+  margin-left: -37%;
+  margin-top: 2%;
+}
 }

@@ -101,7 +101,7 @@
           <img class= "responsive-img" id = "cadeado"src ="../images/lock.png">
       </div>
 
-      <div class="col  l2 center-align hide-on-med-and-down">
+      <div class="col  l2 center-align hide-on-med-and-down" id="cadeado1920">
           <img class= "responsive-img" id = "cadeadopc"src ="../images/lock.png">
       </div>
 

@@ -216,20 +216,21 @@ border-radius: 10px 10px;
 
 #perfil_pequeno {
   margin-left: 85%;
-  margin-top: -8%;
+  margin-top: -15%;
   color: red;
   font-family: 'Muli';
   font-size: 20px;
 }
 
 #nome-dashboard{
+  margin-top: -20%;
   color: white;
 }
 
 #foto_perfil_pequeno {
   width: 45%;
+  margin-top: -20%;
   margin-left: -60%;
-  position: absolute;
 }
 
 

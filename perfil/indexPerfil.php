@@ -94,7 +94,7 @@
             </ul>
 
           <div class="hide-on-med-and-down" id="perfil_pequeno">
-              <div class="responsive-image" id= "foto_perfil_pequeno"><?php $_Imagem=base64_encode( $_SESSION['imagem'] ); echo "<img height='100%' width='100%' src='data:image/jpeg;base64,$_Imagem'> "; ?></div>
+              <div class="responsive-image" id= "foto_perfil_pequeno"><?php $_Imagem=base64_encode( $_SESSION['imagem'] ); echo "<img height='80%' width='80%' src='data:image/jpeg;base64,$_Imagem'> "; ?></div>
             <p id="nome-dashboard"><?php echo $_SESSION['NickName']; ?></p>
           </div>
           </div>
