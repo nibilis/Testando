@@ -103,17 +103,9 @@ header('Content-Type: text/html; charset=UTF-8');
 
                  <img class= "responsive-img" id = "logopc" src ="../images/logo.png"> <img class= "responsive-img" id = "nomelogopc" src ="../images/TestandoNome.png"> </a>
                 <ul id="nav-pc" class=" right">
-<<<<<<< HEAD:addquestao/indexQuestao.php
                   <li><a  id= "questao" href="../addquestao/indexQuestao.php">Adicionar <br> questão</a></li>
-
                   <li><a  id= "documento" href="../documento/indexDocumento.php">Adicionar <br> documento</a>
                     <img class= "responsive-img" id = "linha1" src ="../images/linha.png"></li>
-
-=======
-                  <li><a  id= "questao" href="../addquestao/indexAddQuestao.php" >Adicionar <br> questão</a></li>
-                  <li><a  id= "documento" href="../documento/indexDocumento.php">Adicionar <br> documento</a>
-                    <img class= "responsive-img" id = "linha1" src ="../images/linha.png"></li>
->>>>>>> d08918c426ba5e9c9c366618791ba6a120a8e0b4:addquestao/indexAddQuestao.php
                   <li><a id= "salvos" href="../salvos/indexSalvos.php">Salvos</a>
                      <img class= "responsive-img" id = "linha2" src ="../images/linha.png"></li>
                 </ul>
@@ -202,36 +194,27 @@ header('Content-Type: text/html; charset=UTF-8');
 
             <div id="simbolodiv">
               <!-- Modal Trigger -->
-              <a href="#erro-modal-desk" style="width: 52px;" class="waves-effect waves-light modal-trigger"><img class= "responsive-img" id = "simbolo" src ="../images/omega2.png"></a>
+              <a href="#erro-modal" style="width: 52px;" class="waves-effect waves-light modal-trigger"><img class= "responsive-img" id = "simbolo" src ="../images/omega2.png"></a>
               <p href="#simbolo1" style="color: black;">&nbsp;Inserir <br> Símbolo</p>
             </div>
 
-              <div class="file-field input-field waves-effect waves-light" id="divimagem">
+            <!--IMAGEM-->
+
+              <div href="#erro-modal" class="modal-trigger waves-effect waves-light" id="divimagem">
                 <div class="btn" style= "font-family: 'Muli'; color:white; background-color:#FFBC2B;">
                   <span id="spanimagem" style= "font-family: 'Muli'; color:white; background-color:#FFBC2B;">Imagem </span>
-                  <input type="file" multiple>
+                <!-- <input type="file" multiple> -->
                 </div>
                 <div class="file-path-wrapper" >
                   <input class="file-path validate" type="text">
                 </div>
               </div>
 
-
-            <!-- Modal Structure SÍMBOLOS -->
-            <div id="simbolo1" class="modal">
-
-
-                <div id="erro-modal-desk" class="modal hide-on-med-and-down">
-                <a><img class= "responsive-img modal-close" id="btn_fechar_modal_erro_desk" src ="../images/fechar.png"></a>
-                <h6><img class="responsive-img align-center" id="img_erro_desk" src ="../images/manutencao.png"><p>Funcionalidade em desenvolvimento</p></h6>
-                </div>
-
-
-              <div class="modal-footer">
-                <a href="#!" style="color: white; border-radius: 40px 40px; font-family: 'Muli'; font-size: 75%;" class="modal-close waves-effect yellow darken-2 btn-flat">Salvar</a>
+              <div id="erro-modal" class="modal hide-on-large-only">
+                <a><img class= "responsive-img modal-close" id="btn_fechar_modal_erro" src ="../images/fechar.png"></a>
+                <h6><img class="responsive-img align-center" id="img_erro" src ="../images/manutencao.png"><p>Funcionalidade em desenvolvimento</p></h6>
               </div>
 
-            </div>
 
             <!-- Alternativa/Dissertativa -->
 
@@ -443,34 +426,39 @@ header('Content-Type: text/html; charset=UTF-8');
           </div>
 
           <!-- IMAGEM -->
-
-            <div class="file-field input-field waves-effect waves-light" id="divimagem">
+            <!--Está faltando duas classes nessa div-->
+            <div href="#erro-modal-desk" class="modal-trigger waves-effect waves-light" id="divimagem">
               <div class="btn" style= "font-family: 'Muli'; color:white; background-color:#FFBC2B;">
                 <span id="spanimagem" style= "font-family: 'Muli'; color:white; background-color:#FFBC2B;">Imagem </span>
-                <input type="file" multiple>
+            <!--     <input type="textfile" multiple> -->
               </div>
-              <div class="file-path-wrapper" >
+                <div class="file-path-wrapper" >
                 <input class="file-path validate" type="text">
               </div>
             </div>
-
-
-          <!-- Modal Trigger -->
-          <div id="simbolodiv-desk">
-            <a href="#erro-modal-desk" class="waves-effect waves-light modal-trigger">
-              <img style="width: 35px;" class="responsive-img" id="simbolo" src="../images/omega2.png">
-            </a>
-
-            <p href="#simbolo2">Inserir símbolo</p>
-          </div>
-
-          <!-- Modal Structure SÍMBOLOS -->
 
             <div id="erro-modal-desk" class="modal hide-on-med-and-down">
               <a><img class= "responsive-img modal-close" id="btn_fechar_modal_erro_desk" src ="../images/fechar.png"></a>
               <h6><img class="responsive-img align-center" id="img_erro_desk" src ="../images/manutencao.png"><p>Funcionalidade em desenvolvimento</p></h6>
             </div>
 
+          <!-- Modal Trigger -->
+
+          <div id="simbolodiv-desk">
+            <a href="#erro-modal-desk" class="waves-effect waves-light modal-trigger">
+              <img style="width: 35px;" class="responsive-img" id="simbolo" src="../images/omega2.png">
+            </a>
+
+            <p href="#erro-modal-desk">Inserir símbolo</p>
+          </div>
+
+          <!-- Modal Structure SÍMBOLOS -->
+          <div class="modal-content">
+            <div id="erro-modal-desk" class="modal hide-on-med-and-down">
+              <a><img class= "responsive-img modal-close" id="btn_fechar_modal_erro_desk" src ="../images/fechar.png"></a>
+              <h6><img class="responsive-img align-center" id="img_erro_desk" src ="../images/manutencao.png"><p>Funcionalidade em desenvolvimento</p></h6>
+            </div>
+          </div>
 
             <!-- Alternativa/Dissertativa COMPUTADOR -->
 
