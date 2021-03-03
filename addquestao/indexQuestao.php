@@ -103,11 +103,17 @@ header('Content-Type: text/html; charset=UTF-8');
 
                  <img class= "responsive-img" id = "logopc" src ="../images/logo.png"> <img class= "responsive-img" id = "nomelogopc" src ="../images/TestandoNome.png"> </a>
                 <ul id="nav-pc" class=" right">
+<<<<<<< HEAD:addquestao/indexQuestao.php
                   <li><a  id= "questao" href="../addquestao/indexQuestao.php">Adicionar <br> questão</a></li>
 
                   <li><a  id= "documento" href="../documento/indexDocumento.php">Adicionar <br> documento</a>
                     <img class= "responsive-img" id = "linha1" src ="../images/linha.png"></li>
 
+=======
+                  <li><a  id= "questao" href="../addquestao/indexAddQuestao.php" >Adicionar <br> questão</a></li>
+                  <li><a  id= "documento" href="../documento/indexDocumento.php">Adicionar <br> documento</a>
+                    <img class= "responsive-img" id = "linha1" src ="../images/linha.png"></li>
+>>>>>>> d08918c426ba5e9c9c366618791ba6a120a8e0b4:addquestao/indexAddQuestao.php
                   <li><a id= "salvos" href="../salvos/indexSalvos.php">Salvos</a>
                      <img class= "responsive-img" id = "linha2" src ="../images/linha.png"></li>
                 </ul>
@@ -196,7 +202,7 @@ header('Content-Type: text/html; charset=UTF-8');
 
             <div id="simbolodiv">
               <!-- Modal Trigger -->
-              <a href="#simbolo1" style="width: 52px;" class="waves-effect waves-light modal-trigger"><img class= "responsive-img" id = "simbolo" src ="../images/omega2.png"></a>
+              <a href="#erro-modal-desk" style="width: 52px;" class="waves-effect waves-light modal-trigger"><img class= "responsive-img" id = "simbolo" src ="../images/omega2.png"></a>
               <p href="#simbolo1" style="color: black;">&nbsp;Inserir <br> Símbolo</p>
             </div>
 
@@ -214,11 +220,12 @@ header('Content-Type: text/html; charset=UTF-8');
             <!-- Modal Structure SÍMBOLOS -->
             <div id="simbolo1" class="modal">
 
-              <div class="modal-content">
-                <h5 style="text-align: center;">Símbolos</h5>
-                <p><br>Escolha sua opção:</p>
-                <p><br>Funcionalidade em desenvolvimento</p>
-              </div>
+
+                <div id="erro-modal-desk" class="modal hide-on-med-and-down">
+                <a><img class= "responsive-img modal-close" id="btn_fechar_modal_erro_desk" src ="../images/fechar.png"></a>
+                <h6><img class="responsive-img align-center" id="img_erro_desk" src ="../images/manutencao.png"><p>Funcionalidade em desenvolvimento</p></h6>
+                </div>
+
 
               <div class="modal-footer">
                 <a href="#!" style="color: white; border-radius: 40px 40px; font-family: 'Muli'; font-size: 75%;" class="modal-close waves-effect yellow darken-2 btn-flat">Salvar</a>
@@ -450,7 +457,7 @@ header('Content-Type: text/html; charset=UTF-8');
 
           <!-- Modal Trigger -->
           <div id="simbolodiv-desk">
-            <a href="#simbolo2" class="waves-effect waves-light modal-trigger">
+            <a href="#erro-modal-desk" class="waves-effect waves-light modal-trigger">
               <img style="width: 35px;" class="responsive-img" id="simbolo" src="../images/omega2.png">
             </a>
 
@@ -458,19 +465,12 @@ header('Content-Type: text/html; charset=UTF-8');
           </div>
 
           <!-- Modal Structure SÍMBOLOS -->
-          <div id="simbolo2" class="modal">
 
-            <div class="modal-content">
-              <h5 style="text-align: center;">Símbolos</h5>
-              <p><br>Escolha sua opção:</p>
-              <p><br>Funcionalidade em desenvolvimento</p>
+            <div id="erro-modal-desk" class="modal hide-on-med-and-down">
+              <a><img class= "responsive-img modal-close" id="btn_fechar_modal_erro_desk" src ="../images/fechar.png"></a>
+              <h6><img class="responsive-img align-center" id="img_erro_desk" src ="../images/manutencao.png"><p>Funcionalidade em desenvolvimento</p></h6>
             </div>
 
-            <div class="modal-footer">
-              <a href="#!" class="modal-close waves-effect yellow darken-2 btn-flat" style="color: white; border-radius: 40px 40px; font-family: 'Muli'; font-size: 75%;">Salvar</a>
-            </div>
-
-          </div>
 
             <!-- Alternativa/Dissertativa COMPUTADOR -->
 
@@ -602,7 +602,7 @@ header('Content-Type: text/html; charset=UTF-8');
           <button id="btn_salvar-desk2" class="cadastro flow-text btn waves-effect yellow darken-2 waves-light hoverable" type="submit">Salvar</button>
        </div>
      </div>
-      </div>
+    </div>
   </form>
 
   <?php
