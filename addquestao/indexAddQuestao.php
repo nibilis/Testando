@@ -142,54 +142,54 @@ header('Content-Type: text/html; charset=UTF-8');
             <button href="#dissertativa" id="btn-dissertativa" value="ok" target="_self" class="waves-effect waves-light transparent">Dissertativa</button>
           </p>
 
+          <form method="POST">
           <div class="items">
 
+          <!--<div required id="campo1" class="input-field col s9 center-align hide-on-large-only">-->
           <div required id="campo1" class="input-field col s9 center-align hide-on-large-only">
-            <select>
-                <option value="" selected disabled>Selecione sua matéria </option>
-              <optgroup label="Ensino médio" style= "font-family: 'Muli'; font-size: 11px; float: left;">
-                <option value="1">Geografia</option>
-                <option value="2">História</option>
-                <option value="3">Inglês</option>
-              </optgroup>
-              <optgroup label="Ensino técnico">
-                <option value="3">Banco de dados</option>
-                <option value="4">Lógica de programação 2</option>
-                <option value="5">linguagem de programação 1</option>
-              </optgroup>
+            <select name="materia-cel">
+              <option value="" selected disabled>Selecione sua matéria </option>
+              <?php
+                $u->conectar();
+                $results = $m->listAll();
+                foreach($results as $row){ ?>
+                  <option value="<?php echo $row['ID_Materia'] ?>"><?php echo $row['Nome'] ?></option>
+              <?php } ?>
             </select>
             <label>Matéria <span style="color: red;">*</span></label>
           </div>
 
-      </div>
-
+        <!--<div required id="campo2" class="input-field col s9 center-align hide-on-large-only">-->
           <div required id="campo2" class="input-field col s9 center-align hide-on-large-only">
-            <select>
-                <option value="" selected disabled>Selecione seu tema </option>
-              <optgroup label="Geografia" style= "font-family: 'Muli'; font-size: 11px; float: left;">
-                <option value="1">Hidrografia</option>
-                <option value="2">Paisagem</option>
-                <option value="3">Rondônia</option>
-              </optgroup>
+            <select name="tema-cel">
+              <option value="" selected disabled>Selecione seu tema </option>
+              <?php
+                $u->conectar();
+                $results = $t->listAll();
+                foreach($results as $row){ ?>
+                  <option value="<?php echo $row['ID_Tema'] ?>"><?php echo $row['Nome'] ?></option>
+                <?php } ?>
             </select>
             <label>Tema <span style="color: red;">*</span></label>
           </div>
 
+          <!--<div required id="campo3" class="input-field col s9 center-align hide-on-large-only">-->
           <div required id="campo3" class="input-field col s9 center-align hide-on-large-only">
-            <select>
+            <select name="subtema-pc">
               <option value="" selected disabled> Selecione seu subtema </option>
-              <optgroup label="Hidrografia" style= "font-family: 'Muli'; font-size: 11px; float: left;">
-                <option value="1">Águas do pacífico</option>
-                <option value="2">Perca do status salino</option>
-                <option value="3">Qualificador de PH neutro</option>
-              </optgroup>
+              <?php
+                $u->conectar();
+                $results = $s->listAll();
+               foreach($results as $row){ ?>
+                  <option value="<?php echo $row['ID_subtema'] ?>"><?php echo $row['Nome'] ?></option>
+              <?php } ?>
             </select>
             <label>Subtema <span style="color: red;">*</span></label>
           </div>
 
-          <div required id="campo4"  class="col s9 center-align hide-on-large-only">
+          <div required id="campo4" class="col s9 center-align hide-on-large-only">
             <label for="textarea1" style= "font-family: 'Muli'; font-size: 11px; float: left;">Enunciado <span style="color: red;">*</span></label>
-            <textarea placeholder="Escreva seu enunciado" id="textarea1" class="materialize-textarea"></textarea>
+            <input placeholder="Escreva seu enunciado" id="textarea1" class="materialize-textarea" name="enunciado-pc">
           </div>
 
             <div id="simbolodiv">
@@ -226,7 +226,7 @@ header('Content-Type: text/html; charset=UTF-8');
 
             <!-- Alternativa/Dissertativa -->
 
-        </div><!-- COMEÇO alternativa -->
+        <!-- COMEÇO alternativa -->
 
         <div id="alternativa" class="alternativa" style="margin-top: -5%;">
 
@@ -238,55 +238,56 @@ header('Content-Type: text/html; charset=UTF-8');
 
 
             <div id="formulario" class= "hide-on-large-only" >
-              <input id="alternativa_campo" type="text" placeholder="Alternativa" name="numeroDocumento" required/>
+              <input id="alternativa_campo" type="text" placeholder="Alternativa" name="alternativa1"/>
             </div>
 
           <a href="#" data-id="1" id="adicionarCampo" class="hide-on-large-only">+ Adicionar Campos</a>
 
 
               <label id="label_resposta2" for="textarea1" class= "hide-on-large-only">Resposta alternativa <span style="color: red;">*</span></label>
-              <textarea id="respostaalternativa" maxlength="1" placeholder=" Ex: A..." required style= "font-family: 'Muli'; font-size: 100%;" class="materialize-textarea hide-on-large-only"></textarea>
-              <div required id="dificuldade2" class="input-field col s10 center-align hide-on-large-only">
+              <textarea id="respostaalternativa" maxlength="1" placeholder=" Ex: A..." name="correta" style= "font-family: 'Muli'; font-size: 100%;" class="materialize-textarea hide-on-large-only"></textarea>
+              <div id="dificuldade2" class="input-field col s10 center-align hide-on-large-only">
               <label id="label_dificuldade2" style="font-size: 85%;">Dificuldade da questão <span style="color: red;">*</span></label>
 
           <div id="radio_button_dificil">
             <label>
               <div class="col s1" class= "hide-on-large-only">
-                <input name="group1" class="with-gap" type="radio"  />
+                <input name="dificuldade-pc" class="with-gap" type="radio" value="FACIL"/>
                 <span style="color:#77de7c;">Fácil</span>
               </div>
             </label>
 
             <label>
               <div class="col s2" class= "hide-on-large-only">
-                <input name="group1" class="with-gap" type="radio"  />
+                <input name="dificuldade-pc" class="with-gap" type="radio" value="MEDIO"/>
                 <span style="color: #FFC300;">Médio</span>
               </div>
             </label>
 
             <label>
                 <div class="col s3" class= "hide-on-large-only">
-                <input name="group1" class="with-gap" type="radio" />
+                <input name="dificuldade-pc" class="with-gap" type="radio" value="DIFICIL"/>
                 <span style="color: #FF5733;">Difícil</span>
               </div>
             </label>
           </div>
         </div>
 
-          <div required id="priv_public2" class= "hide-on-large-only">
+
+          <div id="priv_public2" class= "hide-on-large-only">
 
               <label id="label_privacidade2" style="font-size: 87%;">Privacidade da questão <span style="color: red;">*</span></label>
             <div id="radio_button_priv">
              <label>
                <div class="col s1" class= "hide-on-large-only">
-               <input name="group2" class="with-gap" type="radio"/>
+               <input name="privacidade-pc" class="with-gap" type="radio" value="0"/>
                <span>Público</span>
              </div>
              </label>
 
              <label>
                <div class="col s2" class= "hide-on-large-only">
-               <input name="group2" class="with-gap" type="radio"/>
+               <input name="privacidade-pc" class="with-gap" type="radio" value="1"/>
                <span>Privado</span>
              </div>
              </label>
@@ -307,13 +308,13 @@ header('Content-Type: text/html; charset=UTF-8');
 
                 <div class="row">
                   <label for="textarea1" id="label_resposta" style= "font-family: 'Muli'; font-size: 11px; float: left;">Resposta <span style="color: red;">*</span></label>
-                  <textarea required id="respostadissertativa" placeholder="Escreva sua resposta" class="materialize-textarea"></textarea>
+                  <textarea id="respostadissertativa" placeholder="Escreva sua resposta" class="materialize-textarea"></textarea>
                   </div>
                 </div>
 
 
 
-              <div required id="dificuldade" class="input-field col s10 center-align hide-on-large-only">
+              <div id="dificuldade" class="input-field col s10 center-align hide-on-large-only">
               <label id="label_dificuldade" style="font-size: 85%;">Dificuldade da questão <span style="color: red;">*</span></label>
 
               <div id="radio_button_dificil2">
@@ -342,7 +343,7 @@ header('Content-Type: text/html; charset=UTF-8');
           </div>
 
 
-          <div required id="priv_public" class=" hide-on-large-only">
+          <div id="priv_public" class=" hide-on-large-only">
             <label id="label_privacidade" style="font-size: 87%;">Privacidade da questão <span style="color: red;">*</span></label>
 
             <div id="radio_button_priv2">
@@ -366,10 +367,14 @@ header('Content-Type: text/html; charset=UTF-8');
          </div>
 
         </div>
+      </div>
+      </form>
+
+    </div>
       <!-- FIM - dissertativa -->
 
         <!--Final do formulário de CELULAR-->
-      </form>
+
 
         <!-- Formulário COMPUTADOR-->
         <div class="row hide-on-med-and-down">
@@ -381,7 +386,7 @@ header('Content-Type: text/html; charset=UTF-8');
             <button href="#dissertativa" id="btn-dissert-desk" value="ok" target="_self" class="waves-effect waves-light btn transparent">Questão dissertativa</button>
           </p>
 
-          <form method="POST"> <!--fecha no ultimo form antes do JavaScript-->
+          <<form method="POST"> <!--fecha no ultimo form antes do JavaScript-->
           <div class="items">
 
           <div required id="campo1" class="input-field col s9 center-align hide-on-med-and-down">
@@ -649,9 +654,7 @@ header('Content-Type: text/html; charset=UTF-8');
     }
   }
   ?>
-
       </div>
-
 
 
       <!-- JQuery CDN -->

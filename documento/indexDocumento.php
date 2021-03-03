@@ -200,8 +200,9 @@
                <center><h4 id="título_gabarito_desk">Gabarito</h4></center>
              </div>
            </div>
-           <div id="quadrado_desk" rows="8" cols="80"><br></div>
-           <?php $u->conectar(); $d->exibirRespostas();?><br>
+           <div id="quadrado_desk" rows="8" cols="80"><br>
+             <?php $u->conectar(); $d->exibirRespostas();?><br>
+           </div>
          </form>
         </div>
       </div>
