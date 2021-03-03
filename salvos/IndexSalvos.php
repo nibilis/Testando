@@ -20,7 +20,7 @@
 
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Tela de Salvos</title>
+      <title>Testando</title>
       <link rel="stylesheet" href="./css-salvos/salvos.css">
       <link rel="shortcut icon" href="../images/favicon (1).ico" >
 
@@ -61,13 +61,13 @@
             <ul id="links_menucel">
               <li><a id="perfil" class=" waves-effect center-align" href="../perfil/indexPerfil.php">Perfil</a></li>
               <li><div id="divider" class="divider"></div></li>
-              <li><a id="question" class=" waves-effect center-align" href="../addquestao/indexAddQuestao.php">Adicionar Questão</a></li>
+              <li><a id="question" class=" waves-effect center-align" href="../addquestao/indexQuestao.php">Adicionar Questão</a></li>
               <li><div id="divider" class="divider"></div></li>
               <li><a id="document" class="waves-effect center-align" href="../documento/indexDocumento.php">Adicionar Documento</a></li>
               <li><div id="divider" class="divider"></div></li>
-              <li><a id="saves" class="waves-effect center-align" href="#!">Salvos</a></li>
+              <li><a id="saves" class="waves-effect center-align" href="../salvos/indexSalvos.php">Salvos</a></li>
               <li><div id="divider" class="divider"></div></li>
-              <a id="sair" href="../Classes/Sair.php"><i class="material-icons" id="sair2">exit_to_app</i> Sair </a>
+              <a id="sair" href="../login/indexLogin.php"><i class="material-icons" id="sair2">exit_to_app</i> Sair </a>
             </ul>
           </div>
         </div>
@@ -94,10 +94,10 @@
 
          <img class= "responsive-img" id = "logopc" src ="../images/logo.png"> <img class= "responsive-img" id = "nomelogopc" src ="../images/TestandoNome.png"> </a>
         <ul id="nav-pc" class=" right">
-          <li><a  id= "questao" href="../addquestao/indexAddQuestao.php" >Adicionar <br> questão</a></li>
+          <li><a  id= "questao" href="../addquestao/indexQuestao.php" >Adicionar <br> questão</a></li>
           <li><a  id= "documento" href="../documento/indexDocumento.php">Adicionar <br> documento</a>
             <img class= "responsive-img" id = "linha1" src ="../images/linha.png"></li>
-          <li><a id= "salvos" href="#!">Salvos</a>
+          <li><a id= "salvos" href="../salvos/indexSalvos.php">Salvos</a>
              <img class= "responsive-img" id = "linha2" src ="../images/linha.png"></li>
         </ul>
       </div>

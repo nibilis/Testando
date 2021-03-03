@@ -13,7 +13,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil</title>
+    <title>Testando</title>
     <link rel="stylesheet" href="css-perfil/perfil.css">
     <link rel="shortcut icon" href="../images/favicon (1).ico" >
 
@@ -53,13 +53,13 @@
                 <ul id="links_menucel">
                   <li><a id="perfil" class=" waves-effect center-align" href="../perfil/indexPerfil.php">Perfil</a></li>
                   <li><div id="divider" class="divider"></div></li>
-                  <li><a id="question" class=" waves-effect center-align" href="../addquestao/indexAddQuestao.php">Adicionar Questão</a></li>
+                  <li><a id="question" class=" waves-effect center-align" href="../addquestao/indexQuestao.php">Adicionar Questão</a></li>
                   <li><div id="divider" class="divider"></div></li>
                   <li><a id="document" class="waves-effect center-align" href="../documento/indexDocumento.php">Adicionar Documento</a></li>
                   <li><div id="divider" class="divider"></div></li>
                   <li><a id="saves" class="waves-effect center-align" href="../salvos/indexSalvos.php">Salvos</a></li>
                   <li><div id="divider" class="divider"></div></li>
-                  <a id="sair" href="../Classes/Sair.php"><i class="material-icons" id="sair2">exit_to_app</i> Sair </a>
+                  <a id="sair" href="../login/indexLogin.php"><i class="material-icons" id="sair2">exit_to_app</i> Sair </a>
                 </ul>
               </div>
             </div>
@@ -86,7 +86,7 @@
 
              <img class= "responsive-img" id = "logopc" src ="../images/logo.png"> <img class= "responsive-img" id = "nomelogopc" src ="../images/TestandoNome.png">
             <ul id="nav-pc" class=" right">
-              <li><a  id= "questao" href="../addquestao/indexAddQuestao.php" >Adicionar <br> questão</a></li>
+              <li><a  id= "questao" href="../addquestao/indexQuestao.php" >Adicionar <br> questão</a></li>
               <li><a  id= "documento" href="../documento/indexDocumento.php">Adicionar <br> documento</a>
                 <img class= "responsive-img" id = "linha1" src ="../images/linha.png"></li>
               <li><a id= "salvos" href="../salvos/indexSalvos.php">Salvos</a>
@@ -106,7 +106,7 @@
         <div id= "img-perfil"><?php $_Imagem=base64_encode( $_SESSION['imagem'] ); echo "<img height='100%' width='100%' src='data:image/jpeg;base64,$_Imagem'> "; ?></div>
         <p id="nome-perfil" style="overflow: hidden; text-overflow: ellipsis;"> Nome: <span> <?php echo $_SESSION['NickName']; ?></span> </p>
         <p id="materia-perfil"> Matérias que leciona: <span><?php echo $_SESSION['Nome'] ?></span> </p>
-        <a id="btn-sair-pc" class=" hide-on-small-only" href="../Classes/Sair.php"><i class="material-icons" id="btn-sair2-pc">exit_to_app</i> Sair </a>
+        <a id="btn-sair-pc" class=" hide-on-small-only" href="../login/indexLogin.php"><i class="material-icons" id="btn-sair2-pc">exit_to_app</i> Sair </a>
       </div>
 
       <div>
