@@ -93,6 +93,113 @@
   }
 /* CÓDIGOS QUE ATINGEM O SITE INTEIRO FINAL */
 
+/*MODAL ERRO DESK*/
+
+  div#ferro-modal-desk.modal.open {
+    border-radius: 15px 15px;
+    border: #7C6FBF 5px solid;
+    padding: 15px;
+    width: 30%;
+    height: 25%;
+  }
+
+  #btn_fechar_modal_erro_desk {
+    width: 12%;
+    margin-left: 90%!important;
+    margin-top: -1%!important;
+  }
+
+  #erro-modal-desk h6 {
+    display: grid;
+    gap: 0.5em;
+    grid-template-columns: 20% 70%;
+    margin-left: -3%;
+  }
+
+  #erro-modal-desk p {
+    font-family: 'Muli';
+    font-size: 120%;
+    text-align: center;
+    line-height: 150%;
+    margin-left: 6.7%;
+  }
+
+  #img_erro_desk {
+    max-width: 55px;
+    max-height: 55px;
+    width: auto;
+    height: auto;
+    margin-left: 20%;
+  }
+
+  @media (min-width: 1440px) {
+    #btn_fechar_modal_erro_desk {
+      width: 9%;
+      margin-left: 92%!important;
+    }
+
+    div#erro-modal-desk.modal.open {
+      width: 25%;
+    }
+
+    #img_erro_desk {
+      margin-left: 40%!important;
+    }
+}
+
+
+<!--MODAL ERRO CEL-->
+        <div id="erro-modal-desk" class="modal hide-on-lrge-only">
+          <a><img class= "responsive-img modal-close" id="btn_fechar_modal_erro" src ="../images/fechar.png"></a>
+          <h6><img class="responsive-img align-center" id="img_erro" src ="../images/manutencao.png"><p>Funcionalidade em desenvolvimento</p></h6>
+        </div>
+
+
+/*MODAL ERRO CEL*/
+
+  div#erro-modal.modal.open {
+    border-radius: 15px 15px;
+    border: #7C6FBF 5px solid;
+    padding: 15px;
+    width: 80%;
+    height: 25%;
+  }
+
+  #btn_fechar_modal_erro {
+    width: 12%;
+    margin-left: 90%!important;
+    margin-top: -1%!important;
+  }
+
+  #erro-modal h6 {
+    display: grid;
+    gap: 0.5em;
+    grid-template-columns: 20% 70%;
+    margin-left: -3%;
+  }
+
+  #erro-modal p {
+    font-family: 'Muli';
+    font-size: 110%;
+    text-align: center;
+    line-height: 150%;
+    margin-left: 11%;
+}
+
+  #img_erro{
+    max-width: 55px;
+    max-height: 55px;
+    width: auto;
+    height: auto;
+    margin-left: 20%;
+  }
+
+  @media (min-width: 400px) {
+    #img_erro {
+      margin-left: 45%;
+    }
+}
+
 /*CÓDIGOS DO JAVASCRIPT*/
 /*DEGRADE MOBILE*/
   .degrade, .degrade2, .degrade3 {
@@ -216,8 +323,9 @@
       font-size: 90%;
       font-family: 'Muli';
       margin-left: 45%;
-      margin-top: 8%;
-      width: 15%;
+      margin-top: 4%;
+      margin-bottom: 5%;
+      width: 10%;
     }
   /*FINAL DOS CAMPOS QUE MUDAM DISSERTATIVA*/
 
@@ -340,6 +448,7 @@
         background-color: #9785D3 !important;
         box-shadow: 0px 1.5px 3px rgba(0, 0, 0, 0.3);
         color: white!important;
+        padding-bottom: -5%;
 
     }
   /*FINAL DOS CÓDIGOS DAS CORES DOS BOTÕES QUE MUDAM*/
@@ -627,17 +736,17 @@
         float: left;
         margin-top: -0.5%;
         background: linear-gradient(to bottom, #D0C7FC, #8F83CD, #7C6FBF);
-        height: 100%;
+        height: 120%;
       }
 
       .degrade5 {
         display: none;
-        height: 129% !important;
+        height: 160% !important;
       }
 
       .degrade6 {
         display: none;
-        height: 189% !important;
+        height: 220% !important;
       }
 
       #label_resposta2_desk { margin-left: -9.5% }
