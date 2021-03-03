@@ -4,7 +4,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body { overflow-x: hidden; }
+
 /*RESPONSIVIDADE COMPUTADOR*/
 @media (min-width: 990px){
   body {
@@ -14,7 +16,7 @@ body { overflow-x: hidden; }
     font-size: 30px;
   }
 
-  /* SEÇÃO 1 COMPUTADOR*/
+  /*SEÇÃO 1 COMPUTADOR*/
   a {
     text-decoration: none;
     border-radius: 80px 80px;
@@ -101,11 +103,32 @@ body { overflow-x: hidden; }
       float: right;
       width: 12%;
       padding-left: 2%;
-      padding-right: 2%!important;
+      padding-right: 2% !important;
       padding-bottom: 1%;
       padding-top: 1%;
       margin-left: 4%;
     }
+  }
+
+  @media (min-width: 1440px) { /*1440px X 900px*/
+    #cadastrar { padding-left: 3%;}
+    .img-nome-logo { width: 75% !important;}
+
+    .icones img { margin-top: -3%; }
+    .icones h2 {
+      margin-bottom: 25%;
+      line-height: 1.3;
+      font-size: 1em;
+      width: 65%;
+    }
+
+    .conjuntoroxo { margin-top: 1.3% !important; }
+    .comeceja h3 {
+      margin-bottom: 3% !important;}
+
+    .conjuntoamarelo, .texto-secao2amarelo h4 { margin-top: 10% !important;}
+
+    .parteamarela { height: 27% !important; }
   }
 
   @media(min-width: 1600px) {
@@ -114,7 +137,7 @@ body { overflow-x: hidden; }
         width: 9%;
         float: right;
         padding-left: 2%;
-        padding-right: 12.2%!important;
+        padding-right: 12.2% !important;
         padding-bottom: 1%;
         padding-top: 1%;
         margin-right: 18%;
