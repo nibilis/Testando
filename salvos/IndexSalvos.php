@@ -61,7 +61,7 @@
             <ul id="links_menucel">
               <li><a id="perfil" class=" waves-effect center-align" href="../perfil/indexPerfil.php">Perfil</a></li>
               <li><div id="divider" class="divider"></div></li>
-              <li><a id="question" class=" waves-effect center-align" href="../addquestao/indexAddQuestao.html">Adicionar Questão</a></li>
+              <li><a id="question" class=" waves-effect center-align" href="../addquestao/indexAddQuestao.php">Adicionar Questão</a></li>
               <li><div id="divider" class="divider"></div></li>
               <li><a id="document" class="waves-effect center-align" href="../documento/indexDocumento.php">Adicionar Documento</a></li>
               <li><div id="divider" class="divider"></div></li>
@@ -94,7 +94,7 @@
 
          <img class= "responsive-img" id = "logopc" src ="../images/logo.png"> <img class= "responsive-img" id = "nomelogopc" src ="../images/TestandoNome.png"> </a>
         <ul id="nav-pc" class=" right">
-          <li><a  id= "questao" href="../addquestao/indexAddQuestao.html" >Adicionar <br> questão</a></li>
+          <li><a  id= "questao" href="../addquestao/indexAddQuestao.php" >Adicionar <br> questão</a></li>
           <li><a  id= "documento" href="../documento/indexDocumento.php">Adicionar <br> documento</a>
             <img class= "responsive-img" id = "linha1" src ="../images/linha.png"></li>
           <li><a id= "salvos" href="#!">Salvos</a>

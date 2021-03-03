@@ -386,6 +386,12 @@
           </div>
         </div>
 
+        <!--MODAL FAVORITAR DESK-->
+        <div id="favoritar-modal-desk" class="modal hide-on-med-and-down">
+          <a><img class= "responsive-img modal-close" id="btn_fechar_modal_favoritar_desk" src ="../images/fechar.png"></a>
+          <h6><img class="responsive-img align-center" id="img_favoritar_desk" src ="../images/manutencao.png"><p>Funcionalidade em desenvolvimento</p></h6>
+        </div>
+
         <!--MODAL AVALIAR DESK-->
         <div id="avaliar-modal-desk" class="modal hide-on-med-and-down">
             <a><img class= "responsive-img modal-close" id="btn_fechar_modal_avaliar_desk" src ="../images/fechar.png"></a>
@@ -423,7 +429,7 @@
               </div>
             </label>
           </div>
-          <button id="btn_salvar_dificil_desk" class="hide-on-med-and-down waves-effect waves-light btn" type="submit" name="action">Salvar</button>
+          <button id="btn_salvar_dificil_desk" class="hide-on-med-and-down waves-effect waves-light btn" type="submit" name="action">Enviar</button>
         </div>
     </div>
          <!-- FINAL ADD_QUESTÕES DESK-->
@@ -687,6 +693,12 @@
                   </div>
               </div>
             </div>
+
+            <!--MODAL FAVORITAR-->
+        <div id="favoritar-modal" class="modal hide-on-lrge-only">
+          <a><img class= "responsive-img modal-close" id="btn_fechar_modal_favoritar" src ="../images/fechar.png"></a>
+          <h6><img class="responsive-img align-center" id="img_favoritar" src ="../images/manutencao.png"><p>Funcionalidade em desenvolvimento</p></h6>
+        </div>
 
             <!--MODAL AVALIAR-->
             <div id="avaliar-modal" class="modal hide-on-large-only">

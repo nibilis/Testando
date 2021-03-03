@@ -58,7 +58,6 @@
     margin-left: 200%;
   }
 
-
   #documento1_desk #quadrado_desk {
     position: absolute;
     width: 40%;
@@ -164,7 +163,7 @@
     color: black;
     border-radius: 10px 10px;
     border: 1px solid #706f78;
-    padding: 2% 2% 2% 2%;
+    padding: 5% 5% 5% 5%;
   }
 
   #foto_prof_desk {
@@ -326,6 +325,80 @@
     margin-left: 30%;
   }
 
+  /*FAVORITAR DESK*/
+
+  div#favoritar-modal-desk.modal.open {
+    border-radius: 15px 15px;
+    border: #7C6FBF 5px solid;
+    padding: 15px;
+    width: 30%;
+    height: 25%;
+  }
+
+  #btn_fechar_modal_favoritar_desk {
+    width: 12%;
+    margin-left: 90%!important;
+    margin-top: -1%!important;
+  }
+
+  #favoritar-modal-desk h6 {
+    display: grid;
+    gap: 0.5em;
+    grid-template-columns: 20% 70%;
+    margin-left: -3%;
+  }
+
+  #favoritar-modal-desk p {
+    font-family: 'Muli';
+    font-size: 120%;
+    text-align: center;
+    line-height: 150%;
+    margin-left: 6.7%;
+  }
+
+  #img_favoritar_desk {
+    max-width: 55px;
+    max-height: 55px;
+    width: auto;
+    height: auto;
+    margin-left: 20%;
+  }
+
+  @media (min-width: 1440px) {
+    #btn_fechar_modal_favoritar_desk {
+      width: 9%;
+      margin-left: 92%!important;
+    }
+
+    div#favoritar-modal-desk.modal.open {
+      width: 25%;
+    }
+
+    #img_favoritar_desk {
+      margin-left: 40%!important;
+    }
+
+    /**/
+
+    /*DIFICULDADE DESK*/
+    div#dificuldade-modal-desk.modal.open {
+      height: 45%!important;
+    }
+
+    #dificuldade-modal-desk p {
+    font-size: 100%!important;
+    }
+
+    /*AVALIAR DESK*/
+    div#avaliar-modal-desk.modal.open {
+      height: 56%!important;
+    }
+
+    /*TAMANHO QUADRADO QUESTÕES*/
+    #quest_profs_desk {
+      width: 430%!important;
+    }
+  }
 
   /*AVALIAR DESK*/
 
@@ -992,6 +1065,51 @@
     height: auto;
     margin-top: -60%;
   }
+
+  /*FAVORITAR*/
+
+  div#favoritar-modal.modal.open {
+    border-radius: 15px 15px;
+    border: #7C6FBF 5px solid;
+    padding: 15px;
+    width: 80%;
+    height: 25%;
+  }
+
+  #btn_fechar_modal_favoritar {
+    width: 12%;
+    margin-left: 90%!important;
+    margin-top: -1%!important;
+  }
+
+  #favoritar-modal h6 {
+    display: grid;
+    gap: 0.5em;
+    grid-template-columns: 20% 70%;
+    margin-left: -3%;
+  }
+
+  #favoritar-modal p {
+    font-family: 'Muli';
+    font-size: 110%;
+    text-align: center;
+    line-height: 150%;
+    margin-left: 11%;
+}
+
+  #img_favoritar {
+    max-width: 55px;
+    max-height: 55px;
+    width: auto;
+    height: auto;
+    margin-left: 20%;
+  }
+
+  @media (min-width: 400px) {
+    #img_favoritar {
+      margin-left: 45%;
+    }
+}
 
 
   /*AVALIAR*/
