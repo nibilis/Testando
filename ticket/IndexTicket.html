@@ -29,6 +29,8 @@
       </div>
     </nav>
 
+
+
     <!-- FORMULÁRIO COMPUTADOR -->
 
     <div class="row hide-on-med-and-down" id="form">
@@ -69,15 +71,8 @@
             </form>
             </div>
 
-            <div class="col l8 center-align hide-on-med-and-down" id = "Enviar">
-                <a href="#erro-modal-desk" class="waves-effect waves-light btn yellow darken-2 hoverable" id = "btnEnviar">Enviar</a>
-                <!--MODAL ERRO DESK-->
-                <div class="modal-content">
-                  <div id="erro-modal-desk" class="modal hide-on-med-and-down">
-                    <a><img class= "responsive-img modal-close" id="btn_fechar_modal_erro_desk" src ="../images/fechar.png"></a>
-                    <h6><img class="responsive-img align-center" id="img_erro_desk" src ="../images/manutencao.png"><p>Funcionalidade em desenvolvimento</p></h6>
-                  </div>
-                </div>
+            <div class="col l8 center-align" id = "Enviar">
+                <a href="../perfil/indexPerfil.php" class="waves-effect waves-light btn yellow darken-2 hoverable" id = "btnEnviar">Enviar</a>
             </div>
 
     </div>
@@ -94,34 +89,30 @@
 
       </div>
     </nav>
-    <!-- Sair da tela -->
-
-      <a id="sair" class="hide-on-small-only" href="../perfil/indexPerfil.php" style="float: right; margin-top: -42%; margin-right: 2%;"><img class= "responsive-img" id = "xis" src ="../images/fechar.png"></a>
-      <a id="sair2" class="hide-on-large-only" href="../perfil/indexPerfil.php" style="float: right; width:7%; margin-top: 12%; margin-right: 3%;"><img class= "responsive-img" id = "xis" src ="../images/fechar.png"></a>
 
     <!-- FORMULÁRIO CELULAR -->
 
     <div class="row hide-on-med-and-up" id="formcel">
           <h1 id="Ticketcel"> Envie um ticket</h1>
 
-          <div class="input-field col s11 center-align" id="solicitacao" style= "font-family: 'Muli'; color:black;">
+          <div class="input-field col s11 center-align" id="solicitação" style= "font-family: 'Muli'; color:black;">
             <select>
               <option value="" disabled selected>Escolha uma solicitação</option>
-              <option value="1">Informações pessoais incorretas</option>
-              <option value="2">Questões não estão sendo salvas</option>
-              <option value="3">Foto de perfil não está aparecendo</option>
+              <option value="1">Não consigo me cadastrar no sistema</option>
+              <option value="2">Meu documento não está salvando minhas questões</option>
+              <option value="3">Minha foto de perfil não está aparecendo</option>
               <option value="4">Outro</option>
             </select>
             <label style= "font-family: 'Muli'; color:black;">Tipo de solicitação</label>
           </div>
 
           <div class="input-field col s11 center-align">
-            <input placeholder="Escolha o título" id="titulo" type="text" class="validate" >
+            <input placeholder="Escolha o título" id="titulo" type="text" class="validate">
             <label for="titulo" style= "font-family: 'Muli'; color:black;">Título</label>
           </div>
 
           <div class="input-field col s11 center-align">
-            <textarea placeholder="Descreva sua solicitação" id="descrição" class="materialize-textarea" ></textarea>
+            <textarea placeholder="Descreva sua solicitação" id="descrição" class="materialize-textarea"></textarea>
             <label for="textarea1" style= "font-family: 'Muli'; color:black;">Descrição</label>
           </div>
 
@@ -139,22 +130,15 @@
             </form>
             </div>
 
-
-
-            <div class="col s11 center-align hide-on-large-only" id = "Enviarcel">
-                <a href="#erro-modal" class="waves-effect waves-light btn yellow darken-2 hoverable" id = "btnEnviarce">Enviar</a>
-              <!--MODAL ERRO CEL-->
-              <div class="modal-content">
-                <div id="erro-modal" class="modal hide-on-med-and-up">
-                  <a><img class= "responsive-img modal-close" id="btn_fechar_modal_erro_desk" src ="../images/fechar.png"></a>
-                  <h6><img class="responsive-img center-align" id="img_erro_desk" src ="../images/manutencao.png"><p>Funcionalidade em desenvolvimento</p></h6>
-                </div>
-              </div>
-
+            <div class="col s11 center-align" id = "Enviarcel">
+                <a href="https://www.youtube.com/watch?v=m2B6ayYla3g" class="waves-effect waves-light btn yellow darken-2 hoverable" id = "btnEnviarce">Enviar</a>
+            </div>
 
     </div>
 
+    <a id="sair" class="hide-on-med-and-up" href="../perfil/indexPerfil.php" style=" width: 7%; height: 3%; float: left; margin-top: -180%; margin-left: 1%;"><img class= "responsive-img" id = "xis" src ="../images/fechar.png"></a>
 
+    <a id="sair" class="hide-on-small-only" href="../perfil/indexPerfil.php" style=" width: 3%; float: left; margin-top: -42%; margin-left: 1%;"><img class= "responsive-img" id = "xis" src ="../images/fechar.png"></a>
 
     <!-- JQuery CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -167,12 +151,7 @@
     $('select').formSelect();
   });
 
-  $(document).ready(function(){
-  $('.modal').modal();
-  });
-
   </script>
-
 
   </body>
 

@@ -262,6 +262,109 @@
 
 /*FINAL FOPRMATAÇÃO CELULAR*/
 
+
+/*MODAL ERRO DESK*/
+
+  div#ferro-modal-desk.modal.open {
+    border-radius: 15px 15px;
+    border: #7C6FBF 5px solid;
+    padding: 15px;
+    width: 30%;
+    height: 25%;
+  }
+
+  #btn_fechar_modal_erro_desk {
+    width: 12%;
+    margin-left: 90%!important;
+    margin-top: -1%!important;
+  }
+
+  #erro-modal-desk h6 {
+    display: grid;
+    gap: 0.5em;
+    grid-template-columns: 20% 70%;
+    margin-left: -3%;
+  }
+
+  #erro-modal-desk p {
+    font-family: 'Muli';
+    font-size: 120%;
+    text-align: center;
+    line-height: 150%;
+    margin-left: 6.7%;
+  }
+
+  #img_erro_desk {
+    max-width: 55px;
+    max-height: 55px;
+    width: auto;
+    height: auto;
+    margin-left: 20%;
+  }
+
+  @media (min-width: 1440px) {
+    #btn_fechar_modal_erro_desk {
+      width: 9%;
+      margin-left: 92%!important;
+    }
+
+    div#erro-modal-desk.modal.open {
+      width: 25%;
+    }
+
+    #img_erro_desk {
+      margin-left: 40%!important;
+    }
+}
+
+
+/*MODAL ERRO CEL*/
+
+  div#erro-modal.modal.open {
+    border-radius: 15px 15px;
+    border: #7C6FBF 5px solid;
+    padding: 15px;
+    width: 80%;
+    height: 25%;
+  }
+
+  #btn_fechar_modal_erro {
+    width: 12%;
+    margin-left: 90%!important;
+    margin-top: -1%!important;
+  }
+
+  #erro-modal h6 {
+    display: grid;
+    gap: 0.5em;
+    grid-template-columns: 20% 70%;
+    margin-left: -3%;
+  }
+
+  #erro-modal p {
+    font-family: 'Muli';
+    font-size: 110%;
+    text-align: center;
+    line-height: 150%;
+    margin-left: 11%;
+}
+
+  #img_erro{
+    max-width: 55px;
+    max-height: 55px;
+    width: auto;
+    height: auto;
+    margin-left: 20%;
+  }
+
+  @media (min-width: 400px) {
+    #img_erro {
+      margin-left: 45%;
+    }
+}
+
+
+
 /* FORMATAÇÃO COMPUTADOR*/
 
 /* rodapé */

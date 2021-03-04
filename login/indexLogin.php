@@ -126,28 +126,30 @@
           <input placeholder="Senha" id="Senha" type="password" class="validate" name="senha">
       </div>
 
-      <!--LEMBRAR DE MIM-->
+
       <div class="col s12 center-align hide-on-large-only" id="checkbox">
-        <form action="#">
-          <p>
-            <label>
-              <input type="checkbox"  />
-              <span>Lembrar de mim</span>
-            </label>
-          </p>
-        </form>
+          <a href="#erro-modal" class="waves-effect waves-light modal-trigger" id = "btnEsqsenha" style="margin-bottom: 0%; height: 5%;">Lembrar de mim</a>
       </div>
 
-      <!--LEMBRAR DE MIM DESK-->
-      <div class="col l6 center-align hide-on-med-and-down" id="checkboxpc">
-        <form action="#">
-          <p>
-            <label>
-              <input type="checkbox"  />
-              <span>Lembrar de mim</span>
-            </label>
-          </p>
-        </form>
+      <!-- Modal Structure SÍMBOLOS -->
+      <div class="modal-content">
+        <div id="erro-modal" class="modal hide-on-large-only">
+          <a><img class= "responsive-img modal-close" id="btn_fechar_modal_erro" src ="../images/fechar.png"></a>
+          <h6><img class="responsive-img align-center" id="img_erro" src ="../images/manutencao.png"><p>Funcionalidade em desenvolvimento</p></h6>
+        </div>
+      </div>
+
+
+      <div class="col l6 center-align hide-on-med-and-down" id="checkbox" style="margin-left: 6.8%; height: 5%;">
+          <a href="#erro-modal-desk" class="waves-effect waves-light modal-trigger" id = "btnEsqsenha" style="margin-bottom: 0%;">Lembrar de mim</a>
+      </div>
+
+      <!-- Modal Structure SÍMBOLOS -->
+      <div class="modal-content">
+        <div id="erro-modal-desk" class="modal hide-on-med-and-down">
+          <a><img class= "responsive-img modal-close" id="btn_fechar_modal_erro-desk" src ="../images/fechar.png"></a>
+          <h6><img class="responsive-img align-center" id="img_erro-desk" src ="../images/manutencao.png"><p>Funcionalidade em desenvolvimento</p></h6>
+        </div>
       </div>
 
       <!--BOTÃO LOGIN-->
@@ -160,20 +162,28 @@
           <button class="waves-effect waves-light btn yellow darken-2 hoverable" id="btnLogin" type="submit" >Login</button>
       </div>
 
-      <!--ESQUECEU SUA SENHA-->
-      <div class="col  s12 center-align hide-on-large-only" id= "esqsenha">
+      <div class="col  s12 center-align hide-on-large-only" id= "esqsenha" style="height: 5%; margin-bottom:4%;">
           <a href="#erro-modal" class="waves-effect waves-light modal-trigger" id = "btnEsqsenha">Esqueceu sua senha?</a>
       </div>
 
-      <!--MODAL ERRO CEL-->
+      <!-- Modal Structure SÍMBOLOS -->
+      <div class="modal-content">
         <div id="erro-modal" class="modal hide-on-large-only">
           <a><img class= "responsive-img modal-close" id="btn_fechar_modal_erro" src ="../images/fechar.png"></a>
           <h6><img class="responsive-img align-center" id="img_erro" src ="../images/manutencao.png"><p>Funcionalidade em desenvolvimento</p></h6>
         </div>
+      </div>
 
-      <!--ESQUECEU SUA SENHA DESK-->
-      <div class="col l6 center-align hide-on-med-and-down" id= "esqsenhapc">
-          <a href="#erro-modal-desk" class="waves-effect waves-light modal-trigger" id="btnEsqsenha">Esqueceu sua senha?</a>
+      <div class="col l6 center-align hide-on-med-and-down" id= "esqsenhapc" style="height: 5%; margin-top:0%;">
+          <a href="#erro-modal-desk" class="waves-effect waves-light modal-trigger" id = "btnEsqsenha">Esqueceu sua senha?</a>
+      </div>
+
+      <!-- Modal Structure  -->
+      <div class="modal-content">
+        <div id="erro-modal-desk" class="modal hide-on-med-and-down">
+          <a><img class= "responsive-img modal-close" id="btn_fechar_modal_erro_desk" src ="../images/fechar.png"></a>
+          <h6><img class="responsive-img align-center" id="img_erro-desk" src ="../images/manutencao.png"><p>Funcionalidade em desenvolvimento</p></h6>
+        </div>
       </div>
 
       <!--MODAL ERRO DESK-->
@@ -199,12 +209,11 @@
     <!-- JavaScript Materialize compilado e minificado -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-  <script>
-    //MODAL
+    <script>
     $(document).ready(function(){
-      $('.modal').modal();
+    $('.modal').modal();
     });
-  </script>
+    </script>
 
   </body>
 </html>

@@ -112,22 +112,7 @@
 
     <!-- MOBILE -->
 
-    <!--RODAPÉ-->
 
-    <div class="rodape hide-on-large-only">
-      <footer class="page-footer " id="rodape">
-        <div class="container">
-          <div class="row">
-            <div class="col l4 offset-l2 s12">
-              <ul>
-                <li><button href="#documento1" value="ok" target="_self" id="btn-documento1" class="btn waves-effect waves-light transparent" style="height:80%; box-shadow: none;"><img class= "responsive-img" id="doc" src ="../images/documento1.png"></button></li>
-                <li><button href="#gabarito" value="ok" target="_self" id="btn-gabarito" class="btn waves-effect waves-light transparent" style="height:80%; box-shadow: none;"><img class= "responsive-img" id="gaba" src ="../images/questao.png"></button></li>
-                <li><button href="#add_questoes" value="ok" target="_self" id="btn-add_questoes" class="btn waves-effect waves-light transparent" style="height:80%; box-shadow: none;"><img class= "responsive-imgt" id="quest" src ="../images/coracao.png"></button></li>
-              </ul>
-            </div>
-          </div>
-     </div>
-   </div>
 
    <!--FINAL RODAPÉ-->
 
@@ -235,9 +220,20 @@
                 </div>
 
                 <!-- Modal Trigger 2 -->
-                <a class="waves-effect waves-light btn modal-trigger" id="botão2" href="#modal2">Moodle</a>
 
-                <!-- Modal Structure 2 -->
+
+
+                    <a href="#erro-modal" class="waves-effect waves-light btn modal-trigger hide-on-large-only" id="botão2" href="#modal2">Moodle</a>
+
+                <!-- Modal Structure SÍMBOLOS -->
+                <div class="modal-content">
+                  <div id="erro-modal" class="modal hide-on-large-only">
+                    <a><img class= "responsive-img modal-close" id="btn_fechar_modal_erro" src ="../images/fechar.png"></a>
+                    <h6><img class="responsive-img align-center" id="img_erro" src ="../images/manutencao.png"><p>Funcionalidade em desenvolvimento</p></h6>
+                  </div>
+                </div>
+
+                <!-- Modal Structure 2
                 <div id="modal2" class="modal" >
                   <div class="modal-content">
 
@@ -262,6 +258,7 @@
                     <a href="#!" id="btn2salvar" class="modal-close waves-effect waves-green btn-flat">Salvar</a>
                   </div>
                 </div>
+                -->
 
               </div>
               </div>
@@ -443,9 +440,17 @@
               </div>
 
               <!-- Modal Trigger 2 -->
-              <a class="waves-effect waves-light btn modal-trigger center-align" id="botão2desk" href="#modal2desk">Moodle</a>
+              <a href="#erro-modal-desk" class="waves-effect waves-light btn modal-trigger center-align hide-on-med-and-down" id="botão2desk" href="#modal2desk" >Moodle</a>
 
-              <!-- Modal Structure 2 -->
+          <!-- Modal Structure SÍMBOLOS -->
+          <div class="modal-content">
+            <div id="erro-modal-desk" class="modal hide-on-med-and-down">
+              <a><img class= "responsive-img modal-close" id="btn_fechar_modal_erro_desk" src ="../images/fechar.png"></a>
+              <h6><img class="responsive-img align-center" id="img_erro_desk" src ="../images/manutencao.png"><p>Funcionalidade em desenvolvimento</p></h6>
+            </div>
+          </div>
+
+              <!-- Modal Structure 2
               <div id="modal2desk" class="modal" >
                 <div class="modal-content">
 
@@ -470,7 +475,7 @@
                   <a href="#!" id="btn2salvar2" class="modal-close waves-effect waves-green btn-flat">Salvar</a>
                 </div>
               </div>
-
+              -->
               </div>
 
               </div>
@@ -486,9 +491,7 @@
     <div class="gabarito2" id="gabarito2">
 
       <!-- Títulos
-
       <h1 class="center-align hide-on-med-and-down" id="tituloquest2"> Minhas questões </h1>
-
       -->
 
       <!-- Fim títulos -->
@@ -520,9 +523,7 @@
 
 
       <!-- Títulos
-
       <h1 class="center-align hide-on-med-and-down" id="titulofavori2">Favoritos</h1>
-
       -->
 
       <!-- Fim títulos -->
@@ -563,6 +564,7 @@
 
 
     <!-- FINAL DESKTOP -->
+
 
 <!-- JQuery CDN -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -712,12 +714,23 @@ $(document).ready(function() {
 
    </script>
 
-   <script>
-     //MODAL
-     $(document).ready(function(){
-       $('.modal').modal();
-     });
-   </script>
+   <!--RODAPÉ-->
+
+   <div class="rodape hide-on-large-only">
+     <footer class="page-footer " id="rodape" style="position: fixed;">
+       <div class="container">
+         <div class="row">
+           <div class="col l4 offset-l2 s12">
+             <ul>
+               <li><button href="#documento1" value="ok" target="_self" id="btn-documento1" class="btn waves-effect waves-light transparent" style="height:80%; box-shadow: none;"><img class= "responsive-img" id="doc" src ="../images/documento1.png"></button></li>
+               <li><button href="#gabarito" value="ok" target="_self" id="btn-gabarito" class="btn waves-effect waves-light transparent" style="height:80%; box-shadow: none;"><img class= "responsive-img" id="gaba" src ="../images/questao.png"></button></li>
+               <li><button href="#add_questoes" value="ok" target="_self" id="btn-add_questoes" class="btn waves-effect waves-light transparent" style="height:80%; box-shadow: none;"><img class= "responsive-imgt" id="quest" src ="../images/coracao.png"></button></li>
+             </ul>
+           </div>
+         </div>
+    </div>
+  </div>
+
 
 </body>
 

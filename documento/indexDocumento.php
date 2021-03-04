@@ -101,7 +101,7 @@
              </ul>
              <a href="../perfil/indexPerfil.php" >
              <div class="hide-on-med-and-down" id="perfil_pequeno">
-                <div id= "foto_perfil_pequeno"><?php $_Imagem=base64_encode( $_SESSION['imagem'] ); echo "<img height='100%' width='100%' src='data:image/jpeg;base64,$_Imagem'> "; ?></div>
+                <div id= "foto_perfil_pequeno"><?php $_Imagem=base64_encode( $_SESSION['imagem'] ); echo "<img height='66%' width='66%' src='data:image/jpeg;base64,$_Imagem'> "; ?></div>
                 <p id="nome-dashboard"><?php echo $_SESSION['NickName']; ?></p></a>
              </div>
            </div>
@@ -174,7 +174,7 @@
                   <p id="data" ><b>Data:</b></p>
                 </div>
               </div>
-              <div class="divider" id="divider2"></div>
+              <div class="divider" id="divider2" style="margin-bottom: 4%;"></div>
                 <?php $u->conectar(); $d->exibirQuestoes();?><br>
               </div>
               <!--BOTÃO SALVAR-->
@@ -384,8 +384,13 @@
               <div class="col s11 center-align" id="Enviarcel_desk">
                 <button href="#erro-modal-desk" class="waves-effect waves-light btn yellow darken-2 hoverable modal-trigger" id="btnEnviar_desk" style="border-radius: 20px 20px; margin-top: 10%; font-family: 'Muli';">Enviar</button>
               </div>
+            </div>
+
+              </div>
+
           </div>
         </div>
+
 
         <!--MODAL FAVORITAR DESK-->
         <div id="favoritar-modal-desk" class="modal hide-on-med-and-down">

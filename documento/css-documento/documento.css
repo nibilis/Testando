@@ -673,6 +673,7 @@
     }
   }
 
+
   @media (min-width: 1600px) {
     #btn-teste_desk {
       margin-left: -145%!important;
@@ -1947,8 +1948,12 @@ a {
     width: auto;
     height: auto;
     left: 77%;
-    margin-top: -1%;
+    margin-top: -0.5%;
     position: absolute;
+  }
+
+  #perfil_pequeno{
+    width: 1%;
   }
 
 }
