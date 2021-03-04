@@ -78,26 +78,20 @@ Class Documento
 
       $idDocumento = $_SESSION['id_documento'];
 
-      //Buscar as questões cadastradas em um documento
-      $sql = $pdo->prepare("SELECT ID_Questao_ FROM questao as q INNER JOIN questao_documento as qd ON qd.Documento_ID_Documento = :d AND q.ID_Questao_ = qd.Questao_ID_Questao_");
+      $sql = $pdo->prepare("SELECT Texto FROM alternativa as alt INNER JOIN questao as q ON alt.Questao_ID_Questao_ = q.ID_Questao_ AND q.ID_Questao_ IN (SELECT Questao_ID_Questao_ FROM questao_documento WHERE Documento_ID_Documento = :d)");
       $sql->bindValue(":d", $idDocumento);
       $sql->execute();
-      $m = $sql->fetch();
-
-      while($sql->rowCount() > 0){
-        $sql = $pdo->prepare("SELECT Texto FROM alternativa WHERE Questao_ID_Questao_ = :q AND Correta = 1");
-        $sql->bindValue(":q", $m[$i]);
-        $sql->execute();
-        $r = $sql->fetch();
+      if($sql->rowCount() > 0){
+        while($m = $sql->fetch()){
         $i++;
-        ?> <p style="text-align: justify;"><b><?php echo $i.". "?></b> <?php echo $r['Texto']."</br></br>"; ?></p> <?php
-
+        ?> <p style="text-align: justify;"><b><?php echo $i.". "?></b> <?php echo $m['Texto']."</br></br>"; ?></p> <?php
         }
-    }
-    else{
-      //Para não dar o erro de variavel indefinida
-      echo "";
-    }
+      }
+      else{
+        //acho que não vai precisar disso depois
+        echo "";
+      }
   }
+}
 }
 ?>

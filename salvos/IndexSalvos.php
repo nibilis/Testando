@@ -88,6 +88,7 @@
   </div>
     <!-- Dashboard CELULAR FINAL -->
 
+
     <!-- Dashboard COMPUTADOR -->
     <nav class="hide-on-med-and-down navbar-fixed" id="retanguloroxo">
       <div class="nav-wrapper hide-on-med-and-down" id="dashboardpc">
@@ -565,6 +566,22 @@
 
     <!-- FINAL DESKTOP -->
 
+    <!--RODAPÉ-->
+
+    <div class="rodape hide-on-large-only">
+      <footer class="page-footer " id="rodape" style="position: fixed;">
+        <div class="container">
+          <div class="row">
+            <div class="col l4 offset-l2 s12">
+              <ul>
+                <li><button href="#documento1" value="ok" target="_self" id="btn-documento1" class="btn waves-effect waves-light transparent" style="height:80%; box-shadow: none;"><img class= "responsive-img" id="doc" src ="../images/documento1.png"></button></li>
+                <li><button href="#gabarito" value="ok" target="_self" id="btn-gabarito" class="btn waves-effect waves-light transparent" style="height:80%; box-shadow: none;"><img class= "responsive-img" id="gaba" src ="../images/questao.png"></button></li>
+                <li><button href="#add_questoes" value="ok" target="_self" id="btn-add_questoes" class="btn waves-effect waves-light transparent" style="height:80%; box-shadow: none;"><img class= "responsive-imgt" id="quest" src ="../images/coracao.png"></button></li>
+              </ul>
+            </div>
+          </div>
+     </div>
+    </div>
 
 <!-- JQuery CDN -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -714,22 +731,7 @@ $(document).ready(function() {
 
    </script>
 
-   <!--RODAPÉ-->
 
-   <div class="rodape hide-on-large-only">
-     <footer class="page-footer " id="rodape" style="position: fixed;">
-       <div class="container">
-         <div class="row">
-           <div class="col l4 offset-l2 s12">
-             <ul>
-               <li><button href="#documento1" value="ok" target="_self" id="btn-documento1" class="btn waves-effect waves-light transparent" style="height:80%; box-shadow: none;"><img class= "responsive-img" id="doc" src ="../images/documento1.png"></button></li>
-               <li><button href="#gabarito" value="ok" target="_self" id="btn-gabarito" class="btn waves-effect waves-light transparent" style="height:80%; box-shadow: none;"><img class= "responsive-img" id="gaba" src ="../images/questao.png"></button></li>
-               <li><button href="#add_questoes" value="ok" target="_self" id="btn-add_questoes" class="btn waves-effect waves-light transparent" style="height:80%; box-shadow: none;"><img class= "responsive-imgt" id="quest" src ="../images/coracao.png"></button></li>
-             </ul>
-           </div>
-         </div>
-    </div>
-  </div>
 
 
 </body>
