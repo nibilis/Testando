@@ -95,7 +95,7 @@
 
 /*MODAL ERRO DESK*/
 
-  div#ferro-modal-desk.modal.open {
+  div#erro-modal-desk.modal.open {
     border-radius: 15px 15px;
     border: #7C6FBF 5px solid;
     padding: 15px;

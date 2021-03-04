@@ -35,5 +35,15 @@ Class Salvos
     $sql->execute();
     return $sql->fetchAll(\PDO::FETCH_ASSOC);
   }
+
+  public function gerarPDF($versoes, $gabarito, $idDocumento){
+    global $pdo;
+
+    $_SESSION['id_documento'] = $idDocumento;
+    $_SESSION['versoes'] = $versoes;
+    $_SESSION['gabarito'] = $gabarito;
+
+    return true;
+  }
 }
 ?>

@@ -144,6 +144,7 @@
         <!-- Documentos salvos -->
 
         <div class="row hide-on-large-only">
+          <form method="POST">
           <?php
             $results = $s->listAllDocumentos();
             foreach($results as $row){ ?>
@@ -173,31 +174,63 @@
 
                       <div class="row">
                       <div class="input-field col s12">
-                          <input id="input_text" type="number" data-length="1">
+                          <input id="input_text" type="number" data-length="1" name="versoes">
                             <label id="labelversoes"for="input_text">Insira o número de versões:</label>
                       </div>
                       </div>
 
-                       <form action="#">
                          <p class="center-align" id="gerargabarito">Gerar gabarito?</p>
                          <p>
                            <label>
-                             <input class="with-gap" name="group1" type="radio"  />
+                             <input class="with-gap" name="gabarito" type="radio" value="1"/>
                              <span>Sim</span>
                            </label>
                          </p>
                          <p>
                            <label>
-                             <input class="with-gap" name="group1" type="radio"  />
+                             <input class="with-gap" name="gabarito" type="radio" value="0"/>
                             <span>Não</span>
                           </label>
                         </p>
-                       </form>
 
                   </div>
                   <div class="modal-footer">
-                    <a href="#!" id="btn1salvar" class="modal-close waves-effect waves-green btn-flat">Salvar</a>
+                    <button id="btn1salvar" class="modal-close waves-effect waves-green btn-flat" type="submit" >Salvar</button>
                   </div>
+
+                  <?php
+
+                  if(isset($_POST['versoes'])){
+
+                    $versoes = addslashes($_POST['versoes']);
+                    $gabarito = addslashes($_POST['gabarito']);
+                    $idDocumento = $row['ID_Documento'];
+
+                    //verificar se esta preenchido
+                  if(!empty($versoes) && !empty($gabarito) && !empty($idDocumento))
+
+                      $u->conectar();
+                      if($u->msgErro == ""){
+                          if($s->gerarPDF($versoes, $gabarito, $idDocumento))
+                          {
+                            header("location: PDF.php");
+                          }
+                          else{
+                            echo "Algo está errado";
+                          }
+                      }
+                      else {
+                        echo "Erro: ".$u->msgErro;
+                      }
+                  }
+                  else{
+                    echo "Preencha todos os campos";
+                  }
+
+
+
+                  ?>
+
                 </div>
 
                 <!-- Modal Trigger 2 -->
@@ -235,6 +268,7 @@
           </div>
         </div>
       <?php } ?>
+    </form>
       </div>
 
 
