@@ -43,6 +43,9 @@ header('Content-Type: text/html; charset=UTF-8');
           <img class="img-logo responsive-img" src="../images/LogoTestandoNome.png">
         </div>
 
+        <a id="sair" class="hide-on-small-only" href="../propaganda/index.html" style="float: right; margin-top: -17%; margin-right: 1%;"><img class= "responsive-img" id = "xis" src ="../images/fechar.png"></a>
+        <a id="sair2" class="hide-on-large-only" href="../propaganda/index.html" style="float: right; width:7%; margin-top: -38%; margin-right: 3%;"><img class= "responsive-img" id = "xis" src ="../images/fechar.png"></a>
+
 <!--CAMPOS-->
 <form method="POST">
 

@@ -36,10 +36,10 @@
     border-radius: 40px 40px !important;
     border-width: 6px !important;
     border-color: black;
-    padding-top: 2%;
-    padding-bottom: 5%;
     /*top: / right: / bottom: / left:*/
     margin: 17% -15% 5% 30%;
+    padding-top: 2%;
+    padding-bottom: 5%;
     text-transform: capitalize !important;
   }
 
@@ -528,12 +528,14 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        padding-top: 2%;
+        padding-bottom: -2%;
     }
 
     .button-group > button {
       background-color: transparent;
-      padding-top: 4.5%;
-      padding-bottom: 4%;
+      padding-top: 2%;
+      padding-bottom: 2%;
       box-shadow: 0px 1.5px 3px rgba(0, 0, 0, 0.3);
       border: none;
     }
@@ -542,7 +544,7 @@
         background-color: #9785D3 !important;
         box-shadow: 0px 1.5px 3px rgba(0, 0, 0, 0.3);
         color: white!important;
-        padding-bottom: 80%!important;
+        padding-bottom: 2%!important;
     }
   /*FINAL DOS CÓDIGOS DAS CORES DOS BOTÕES QUE MUDAM*/
 

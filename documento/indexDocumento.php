@@ -101,7 +101,7 @@
              </ul>
              <a href="../perfil/indexPerfil.php" >
              <div class="hide-on-med-and-down" id="perfil_pequeno">
-                <div id= "foto_perfil_pequeno"><?php $_Imagem=base64_encode( $_SESSION['imagem'] ); echo "<img height='100%' width='100%' src='data:image/jpeg;base64,$_Imagem'> "; ?></div>
+                <div id= "foto_perfil_pequeno"><?php $_Imagem=base64_encode( $_SESSION['imagem'] ); echo "<img height='66%' width='66%' src='data:image/jpeg;base64,$_Imagem'> "; ?></div>
                 <p id="nome-dashboard"><?php echo $_SESSION['NickName']; ?></p></a>
              </div>
            </div>
@@ -174,7 +174,7 @@
                   <p id="data" ><b>Data:</b></p>
                 </div>
               </div>
-              <div class="divider" id="divider2"></div>
+              <div class="divider" id="divider2" style="margin-bottom: 4%;"></div>
                 <?php $u->conectar(); $d->exibirQuestoes();?><br>
               </div>
               <!--BOTÃO SALVAR-->
@@ -382,10 +382,22 @@
                 <textarea placeholder="Comentário" id="descrição_desk" class="materialize-textarea" style="margin-top: 5%;"></textarea>
               </div>
               <div class="col s11 center-align" id="Enviarcel_desk">
-                <button href="#" class="waves-effect waves-light btn yellow darken-2 hoverable" id="btnEnviar_desk" style="border-radius: 20px 20px; margin-top: 10%; font-family: 'Muli';">Enviar</button>
+                <a href="#erro-modal-desk" class="waves-effect waves-light btn yellow darken-2 hoverable hide-on-med-and-down" id="btnEnviar_desk" style="border-radius: 20px 20px; margin-top: 10%; font-family: 'Muli';">Enviar</a>
+
+
+            <!-- Modal Structure SÍMBOLOS -->
+            <div class="modal-content">
+              <div id="erro-modal-desk" class="modal hide-on-med-and-down">
+                <a><img class= "responsive-img modal-close" id="btn_fechar_modal_erro_desk" src ="../images/fechar.png"></a>
+                <h6><img class="responsive-img align-center" id="img_erro_desk" src ="../images/manutencao.png"><p>Funcionalidade em desenvolvimento</p></h6>
               </div>
+            </div>
+
+              </div>
+
           </div>
         </div>
+
 
         <!--MODAL FAVORITAR DESK-->
         <div id="favoritar-modal-desk" class="modal hide-on-med-and-down">

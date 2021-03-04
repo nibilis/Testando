@@ -118,30 +118,30 @@
           <input placeholder="Senha" id="Senha" type="password" class="validate" name="senha">
       </div>
 
+
       <div class="col s12 center-align hide-on-large-only" id="checkbox">
-
-        <form action="#">
-          <p>
-            <label>
-              <input type="checkbox"  />
-              <span>Lembrar de mim</span>
-            </label>
-          </p>
-        </form>
-
+          <a href="#erro-modal" class="waves-effect waves-light modal-trigger" id = "btnEsqsenha" style="margin-bottom: 0%; height: 5%;">Lembrar de mim</a>
       </div>
 
-      <div class="col l6 center-align hide-on-med-and-down" id="checkboxpc">
+      <!-- Modal Structure SÍMBOLOS -->
+      <div class="modal-content">
+        <div id="erro-modal" class="modal hide-on-large-only">
+          <a><img class= "responsive-img modal-close" id="btn_fechar_modal_erro" src ="../images/fechar.png"></a>
+          <h6><img class="responsive-img align-center" id="img_erro" src ="../images/manutencao.png"><p>Funcionalidade em desenvolvimento</p></h6>
+        </div>
+      </div>
 
-        <form action="#">
-          <p>
-            <label>
-              <input type="checkbox"  />
-              <span>Lembrar de mim</span>
-            </label>
-          </p>
-        </form>
 
+      <div class="col l6 center-align hide-on-med-and-down" id="checkbox" style="margin-left: 6.8%; height: 5%;">
+          <a href="#erro-modal-desk" class="waves-effect waves-light modal-trigger" id = "btnEsqsenha" style="margin-bottom: 0%;">Lembrar de mim</a>
+      </div>
+
+      <!-- Modal Structure SÍMBOLOS -->
+      <div class="modal-content">
+        <div id="erro-modal-desk" class="modal hide-on-med-and-down">
+          <a><img class= "responsive-img modal-close" id="btn_fechar_modal_erro-desk" src ="../images/fechar.png"></a>
+          <h6><img class="responsive-img align-center" id="img_erro-desk" src ="../images/manutencao.png"><p>Funcionalidade em desenvolvimento</p></h6>
+        </div>
       </div>
 
       <div class="col  s12 center-align hide-on-large-only" id = "login">
@@ -152,19 +152,35 @@
           <button class="waves-effect waves-light btn yellow darken-2 hoverable" id="btnLogin" type="submit" >Login</button>
       </div>
 
-      <div class="col  s12 center-align hide-on-large-only" id= "esqsenha">
-          <a href="https://cdn-5a7cf386f911c81674c23d48.closte.com/wp-content/uploads/2018/05/manutencao-site.png" class="" id = "btnEsqsenha">Esqueceu sua senha?</a>
+      <div class="col  s12 center-align hide-on-large-only" id= "esqsenha" style="height: 5%; margin-bottom:4%;">
+          <a href="#erro-modal" class="waves-effect waves-light modal-trigger" id = "btnEsqsenha">Esqueceu sua senha?</a>
       </div>
 
-      <div class="col l6 center-align hide-on-med-and-down" id= "esqsenhapc">
-          <a href="https://cdn-5a7cf386f911c81674c23d48.closte.com/wp-content/uploads/2018/05/manutencao-site.png" class="" id = "btnEsqsenha">Esqueceu sua senha?</a>
+      <!-- Modal Structure SÍMBOLOS -->
+      <div class="modal-content">
+        <div id="erro-modal" class="modal hide-on-large-only">
+          <a><img class= "responsive-img modal-close" id="btn_fechar_modal_erro" src ="../images/fechar.png"></a>
+          <h6><img class="responsive-img align-center" id="img_erro" src ="../images/manutencao.png"><p>Funcionalidade em desenvolvimento</p></h6>
+        </div>
+      </div>
+
+      <div class="col l6 center-align hide-on-med-and-down" id= "esqsenhapc" style="height: 5%; margin-top:0%;">
+          <a href="#erro-modal-desk" class="waves-effect waves-light modal-trigger" id = "btnEsqsenha">Esqueceu sua senha?</a>
+      </div>
+
+      <!-- Modal Structure  -->
+      <div class="modal-content">
+        <div id="erro-modal-desk" class="modal hide-on-med-and-down">
+          <a><img class= "responsive-img modal-close" id="btn_fechar_modal_erro_desk" src ="../images/fechar.png"></a>
+          <h6><img class="responsive-img align-center" id="img_erro-desk" src ="../images/manutencao.png"><p>Funcionalidade em desenvolvimento</p></h6>
+        </div>
       </div>
     </form>
 
       <div class="col  s12 deep-purple lighten-2 center-align hide-on-med-and-up" id = "divRoxa">
         <img class= "responsive-img" id = "bolesq" src ="../images/bolinhadirecel.png">
           <h1 class = "flow-text center-align" id = "texto">Não tem um login ainda?</h1>
-            <a href="https://www.youtube.com/watch?v=m2B6ayYla3g" class="waves-effect waves-light btn yellow darken-2 hoverable" id = "btnCadastrese">Cadastre-se</a>
+            <a href="../cadastro/indexCadastro.php" class="waves-effect waves-light btn yellow darken-2 hoverable" id = "btnCadastrese">Cadastre-se</a>
         <img class= "responsive-img" id = "boldire" src ="../images/bolinhaesqcel.png">
     </div>
 
@@ -172,5 +188,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- JavaScript Materialize compilado e minificado -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+    $(document).ready(function(){
+    $('.modal').modal();
+    });
+    </script>
+
   </body>
 </html>
