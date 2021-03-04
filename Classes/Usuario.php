@@ -42,7 +42,7 @@ Class Usuario
 
           $sql = $pdo->prepare("INSERT INTO usuario_materia (Usuario_Professor_ID_Usuario_, Materia_ID_Materia) VALUES (:u, :m)");
           $sql->bindValue(":u", $idUsuario);
-          $sql->bindValue(":m", $Materia);
+          $sql->bindValue(":m", $materia);
           $sql->execute();
 
           $pdo = null;
@@ -65,7 +65,7 @@ Class Usuario
 
           $sql = $pdo->prepare("INSERT INTO usuario_materia (Usuario_Professor_ID_Usuario_, Materia_ID_Materia) VALUES (:u, :m)");
           $sql->bindValue(":u", $idUsuario);
-          $sql->bindValue(":m", $Materia);
+          $sql->bindValue(":m", $materia);
           $sql->execute();
 
           return true;

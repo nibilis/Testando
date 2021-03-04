@@ -283,7 +283,7 @@
 
         <!-- Fim títulos -->
 
-        <!-- Documentos salvos -->
+        <!-- Minhas questões salvas -->
           <div class="row hide-on-large-only">
             <?php
               $results = $s->listAll();
@@ -313,11 +313,11 @@
 
         <!-- Fim títulos -->
 
-        <!-- Documentos salvos -->
+        <!-- Favoritos salvos -->
 
         <div class="row hide-on-med-and-down">
           <?php
-            $results = $s->listAll();
+            $results = $s->listAllFavoritos();
             foreach($results as $row){ ?>
 
           <div class="col s12">
@@ -492,7 +492,7 @@
 
       <!-- Fim títulos -->
 
-      <!-- Documentos salvos -->
+      <!-- Minhas questões salvos -->
       <?php
         $results = $s->listAll();
         foreach($results as $row){ ?>
@@ -526,9 +526,9 @@
 
       <!-- Fim títulos -->
 
-      <!-- Documentos salvos -->
+      <!-- Favoritos salvos desktop -->
       <?php
-        $results = $s->listAll();
+        $results = $s->listAllFavoritos();
         foreach($results as $row){ ?>
       <div class="row hide-on-med-and-down">
 

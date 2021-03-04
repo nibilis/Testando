@@ -5,6 +5,10 @@
   require_once'../Classes/DataBase.php';
   $u = new DataBase;
 
+  session_start();
+  unset($_SESSION["nome_documento"]);
+  unset($_SESSION["id_documento"]);
+
   //verificar se clicou no botão
     if(isset($_POST['prontuario'])){
 
