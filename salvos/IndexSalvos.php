@@ -172,12 +172,12 @@
                   <div class="modal-content">
                     <h4 id="gerarpdf" class="center-align" >Gerar PDF</h4>
 
-                      <div class="row">
+                    <div class="row">
                       <div class="input-field col s12">
-                          <input id="input_text" type="number" data-length="1" name="versoes">
-                            <label id="labelversoes"for="input_text">Insira o número de versões:</label>
+                        <input id="input_text" type="number" data-length="1" name="versoes">
+                        <label id="labelversoes"for="input_text">Insira o número de versões:</label>
                       </div>
-                      </div>
+                    </div>
 
                          <p class="center-align" id="gerargabarito">Gerar gabarito?</p>
                          <p>
@@ -197,6 +197,7 @@
                   <div class="modal-footer">
                     <button id="btn1salvar" class="modal-close waves-effect waves-green btn-flat" type="submit" >Salvar</button>
                   </div>
+
 
                   <?php
 
@@ -709,6 +710,13 @@ $(document).ready(function() {
           }
             });
 
+   </script>
+
+   <script>
+     //MODAL
+     $(document).ready(function(){
+       $('.modal').modal();
+     });
    </script>
 
 </body>

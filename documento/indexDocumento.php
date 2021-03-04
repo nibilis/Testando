@@ -382,7 +382,7 @@
                 <textarea placeholder="Comentário" id="descrição_desk" class="materialize-textarea" style="margin-top: 5%;"></textarea>
               </div>
               <div class="col s11 center-align" id="Enviarcel_desk">
-                <button href="#" class="waves-effect waves-light btn yellow darken-2 hoverable" id="btnEnviar_desk" style="border-radius: 20px 20px; margin-top: 10%; font-family: 'Muli';">Enviar</button>
+                <button href="#erro-modal-desk" class="waves-effect waves-light btn yellow darken-2 hoverable modal-trigger" id="btnEnviar_desk" style="border-radius: 20px 20px; margin-top: 10%; font-family: 'Muli';">Enviar</button>
               </div>
           </div>
         </div>
@@ -402,7 +402,7 @@
             <input id="input_text" type="text" maxlength="1" pattern="([1-5]{1})"/>
           </div>
           <div class="col s11 center-align" id = "Enviardesk">
-            <button href="javascript:void(0)" onclick="Avaliar(0)" class="waves-effect waves-light btn yellow darken-2 hoverable" id="s0" id="btnEnviar_desk" style="border-radius: 20px 20px; margin-top: 10%; font-family: 'Muli';">Enviar</button>
+            <button href="#erro-modal-desk" onclick="Avaliar(0)" class="waves-effect waves-light btn yellow darken-2 hoverable modal-trigger" id="s0" id="btnEnviar_desk" style="border-radius: 20px 20px; margin-top: 10%; font-family: 'Muli';">Enviar</button>
           </div>
         </div>
 
@@ -430,9 +430,15 @@
               </div>
             </label>
           </div>
-          <button id="btn_salvar_dificil_desk" class="hide-on-med-and-down waves-effect waves-light btn" type="submit" name="action">Enviar</button>
+          <button id="btn_salvar_dificil_desk" href="#erro-modal-desk" class="hide-on-med-and-down waves-effect waves-light btn modal-trigger" type="submit" name="action">Enviar</button>
         </div>
-    </div>
+
+        <!--MODAL ERRO DESK-->
+        <div id="erro-modal-desk" class="modal hide-on-med-and-down">
+          <a><img class= "responsive-img modal-close" id="btn_fechar_modal_erro_desk" src ="../images/fechar.png"></a>
+          <h6><img class="responsive-img align-center" id="img_erro_desk" src ="../images/manutencao.png"><p>Funcionalidade em desenvolvimento</p></h6>
+        </div>
+      </div>
          <!-- FINAL ADD_QUESTÕES DESK-->
 
          <!-- FINAL FORMATAÇÃO COMPUTADOR-->
@@ -690,7 +696,7 @@
                     <textarea placeholder="Comentário" id="descrição" class="materialize-textarea" style="margin-top: 5%;"></textarea>
                   </div>
                   <div class="col s11 center-align" id = "Enviarcel">
-                    <button href="#" class="waves-effect waves-light btn yellow darken-2 hoverable" id="btnEnviar" style="border-radius: 20px 20px; margin-top: 10%; font-family: 'Muli';">Enviar</button>
+                    <button href="#erro-modal" class="waves-effect waves-light btn yellow darken-2 hoverable modal-trigger" id="btnEnviar" style="border-radius: 20px 20px; margin-top: 10%; font-family: 'Muli';">Enviar</button>
                   </div>
               </div>
             </div>
@@ -714,7 +720,7 @@
                 <p id="rating">0</p>
               </div>
               <div class="col s11 center-align" id = "Enviarcel">
-                <button href="javascript:void(0)" onclick="Avaliar(0)" class="waves-effect waves-light btn yellow darken-2 hoverable" id="s0" id="btnEnviar" style="border-radius: 20px 20px; margin-top: 10%; font-family: 'Muli';">Enviar</button>
+                <button href="#erro-modal" onclick="Avaliar(0)" class="waves-effect waves-light btn yellow darken-2 hoverable modal-trigger" id="s0" id="btnEnviar" style="border-radius: 20px 20px; margin-top: 10%; font-family: 'Muli';">Enviar</button>
               </div>
             </div>
 
@@ -742,7 +748,13 @@
                   </div>
                 </label>
               </div>
-              <button id="btn_salvar_dificil" class="hide-on-large-only waves-effect waves-light btn" type="submit" name="action">Salvar</button>
+              <button href="#erro-modal" id="btn_salvar_dificil" class="hide-on-large-only waves-effect waves-light btn modal-trigger" type="submit" name="action">Salvar</button>
+            </div>
+
+            <!--MODAL ERRO CEL-->
+            <div id="erro-modal" class="modal hide-on-large-only">
+              <a><img class= "responsive-img modal-close" id="btn_fechar_modal_erro" src ="../images/fechar.png"></a>
+              <h6><img class="responsive-img align-center" id="img_erro" src ="../images/manutencao.png"><p>Funcionalidade em desenvolvimento</p></h6>
             </div>
           </div>
 
