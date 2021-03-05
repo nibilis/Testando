@@ -107,8 +107,10 @@
            </div>
          </nav>
 
+      <p class="button-group">
          <button id="btn_documento_desk" class=" transparent hide-on-med-and-down waves-effect waves-light btn" type="submit" name="action">Documento</button>
          <button id="btn_gabarito_desk" class="transparent hide-on-med-and-down waves-effect waves-light btn" type="submit" name="action">Gabarito</button>
+       </p>
 
          <!--RODAPÉ CEL--> <!--NÃO TIRAR ESSE CÓDIGO DO LUGAR, SE TIRAR VAI DAR ERRO PARA O CELULAR-->
          <div class="rodape hide-on-large-only">
@@ -200,7 +202,7 @@
                <center><h4 id="título_gabarito_desk">Gabarito</h4></center>
              </div>
            </div>
-           <div id="quadrado_desk" rows="8" cols="80"><br>
+           <div id="quadrado_desk" style="overflow: auto;" rows="8" cols="80"><br>
              <?php $u->conectar(); $d->exibirRespostas();?><br>
            </div>
          </form>
@@ -496,7 +498,7 @@
                   ?><a id="btn_salvar" class="hide-on-large-only waves-effect waves-light btn"  href="../Classes/NovoDocumento.php" name="action">Salvar</a><?php
                 }
                 else{
-                  ?><button id="btn_salvar" class="hide-on-large-only waves-effect waves-light btn" type="submit" name="action">Criar</button><?php
+                  ?><a id="btn_salvar" class="hide-on-large-only waves-effect waves-light btn" type="submit" name="action">Criar</a><?php
                 }
               ?>
               <!--<img class= "responsive-img" id = "seta_direita" src ="../images/seta_direita.png">-->
@@ -515,7 +517,7 @@
                    <center><h4 id="título_gabarito">Gabarito</h4></center>
                  </div>
                </div>
-               <div id="quadrado" rows="8" cols="80"><br></div>
+               <div id="quadrado" style="overflow: auto;" rows="8" cols="80"><br></div>
                <!--<img class= "responsive-img" id = "seta_esquerda2" src ="../images/seta_esquerda.png">-->
                <button id="btn_salvar2" class="hide-on-large-only waves-effect waves-light btn" type="submit" name="action">Salvar</button>
                <!--<img class= "responsive-img" id = "seta_direita2" src ="../images/seta_direita.png">-->
@@ -1143,6 +1145,25 @@ $(document).ready(function() {
     });
   });
 </script>
+
+<!--TRANSIÇÃO COR BOTÃO DOCUMENTO E GARABITO-->
+<script>
+let myButton = document.querySelectorAll('.button-group > button');
+
+myButton.forEach(function(key){
+    key.addEventListener('click', function(){
+        removeStyles();
+        this.setAttribute('class', 'buttonClicked');
+    });
+})
+
+function removeStyles(){
+    for(let i = 0; i < myButton.length; i++){
+        document.querySelectorAll('.button-group > button') [i].removeAttribute('class');
+    }
+}
+</script>
+<!--FINAL TRANSIÇÃO COR BOTÃO DOCUMENTO E GARABITO-->
 
     </body>
 
