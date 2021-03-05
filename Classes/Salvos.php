@@ -33,9 +33,11 @@ Class Salvos
     $sql = $pdo->prepare("SELECT Questao_ID_Questao_ FROM favoritar WHERE Usuario_Professor_ID_Usuario = :i");
     $sql->bindValue(":i", $idUsuario);
     $sql->execute();
-    if($sql->rowCount() > 0){
-      $dado = $sql->fetch();
-      $idquest = $dado['Questao_ID_Questao_'];
+
+    $result = $sql->fetchAll(\PDO::FETCH_ASSOC);
+
+    foreach($result as $row){
+      $idquest = $row['Questao_ID_Questao_'];
       $sql = $pdo->prepare("SELECT * FROM questao WHERE ID_Questao_ = :id");
       $sql->bindValue(":id", $idquest);
       $sql->execute();

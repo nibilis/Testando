@@ -498,10 +498,10 @@
       <!-- Fim títulos -->
 
       <!-- Minhas questões salvos -->
-      <?php
-        $results = $s->listAll();
-        foreach($results as $row){ ?>
         <div class="row hide-on-med-and-down">
+          <?php
+            $results = $s->listAll();
+            foreach($results as $row){ ?>
           <div class="col l4">
             <div class="card white">
               <div class="card-content black-text" id="backgroundcard2">
@@ -514,8 +514,8 @@
               </div>
             </div>
           </div>
-        </div>
-      <?php } ?>
+        <?php } ?>
+      </div>
     </div>
 
     <!-- FAVORITADOS COMPUTADOR-->
@@ -530,36 +530,36 @@
       <!-- Fim títulos -->
 
       <!-- Favoritos salvos desktop -->
-      <?php
-        $results = $s->listAllFavoritos();
-        foreach($results as $row){ ?>
+
       <div class="row hide-on-med-and-down">
+        <?php
+          $results = $s->listAllFavoritos();
+          foreach($results as $row){ ?>
+          <div class="col l4">
+            <div class="card white" id="cardfavoritos2">
+              <div class="card-content black-text" id="backgroundcard2" style="padding-bottom: 2%; padding-top: -1%;">
 
-        <div class="col l4">
-          <div class="card white" id="cardfavoritos2">
-            <div class="card-content black-text" id="backgroundcard2" style="padding-bottom: 2%; padding-top: -1%;">
+                <img class="responsive-img" id="favoritarimg2" src="../images/favoritar.png">
 
-              <img class="responsive-img" id="favoritarimg2" src="../images/favoritar.png">
+                <div class="row">
+                  <div class="col l3">
+                    <img class="responsive-img" id="iconeimg2" src="../images/icone.png">
+                  </div>
 
-              <div class="row">
-                <div class="col l3">
-                  <img class="responsive-img" id="iconeimg2" src="../images/icone.png">
-                </div>
+                    <div class="col l9">
+                    <!-- Matéria questão -->
+                    <p id="materiafavori2" style:"color: purple;"> Matemática - Trigonometria</p>
 
-                  <div class="col l9">
-                  <!-- Matéria questão -->
-                  <p id="materiafavori2" style:"color: purple;"> Matemática - Trigonometria</p>
-
-                  <!-- Conteudo questão -->
-                  <p id="conteudofavori2"><?php echo $row['Enunciado'] ?></p>
+                    <!-- Conteudo questão -->
+                    <p id="conteudofavori2"><?php echo $row['Enunciado']; ?></p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          <?php } ?>
         </div>
-      <?php } ?>
-    </div>
+      </div>
 
 
 
