@@ -293,7 +293,7 @@
 
                   <!-- Matéria questão -->
 
-                  <p id="materiaquest" style:"color: purple;"> Matemática - Trigonometria</p>
+                  <p id="materiaquest" style:"color: purple;"> Matéria - Tema</p>
                   <!-- Conteudo questão -->
                   <p id="conteudoquest2"><?php echo $row['Enunciado'] ?></p>
                 </div>
@@ -332,7 +332,7 @@
 
                     <div class="col s9">
                     <!-- Matéria questão -->
-                    <p id="materiafavori" style:"color: purple;"> Matemática - Trigonometria</p>
+                    <p id="materiafavori" style:"color: purple;"> Matéria - Tema</p>
 
                     <!-- Conteudo questão -->
                     <p id="conteudofavori2"><?php echo $row['Enunciado'] ?></p>
@@ -508,7 +508,7 @@
 
                 <!-- Matéria questão -->
 
-                <p id="materiaquest2" style:"color: purple;"> Matemática - Trigonometria</p>
+                <p id="materiaquest2" style:"color: purple;"> Matéria - Tema</p>
                 <!-- Conteudo questão -->
                 <p id="conteudoquest2"><?php echo $row['Enunciado'] ?></p>
               </div>
@@ -548,7 +548,7 @@
 
                     <div class="col l9">
                     <!-- Matéria questão -->
-                    <p id="materiafavori2" style:"color: purple;"> Matemática - Trigonometria</p>
+                    <p id="materiafavori2" style:"color: purple;"> Matéria - Tema</p>
 
                     <!-- Conteudo questão -->
                     <p id="conteudofavori2"><?php echo $row['Enunciado']; ?></p>
