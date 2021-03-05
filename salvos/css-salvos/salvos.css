@@ -136,6 +136,11 @@
   border: 5px solid #7C6FBF;
 }
 
+div#modal1.modal.open {
+  width: 25%;
+  height: 20%!important;
+}
+
 #modal2{
   border-radius: 15px 15px;
   border: 5px solid #7C6FBF;
@@ -503,6 +508,12 @@
   #modal1desk{
     border-radius: 15px 15px;
     border: 5px solid #7C6FBF;
+  }
+
+  div#modal1desk.modal.open {
+    width: 40%;
+    height: 55%!important;
+
   }
 
   #modal2desk{

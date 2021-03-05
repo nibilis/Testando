@@ -435,8 +435,13 @@
                      </form>
 
                 </div>
-                <div class="modal-footer">
-                  <a href="#!" id="btn1salvar2" class="modal-close waves-effect waves-green btn-flat">Salvar</a>
+                <div class="center-align">
+                  <a href="#!" id="btn1salvar2" class="modal-close waves-effect waves-light btn-flat">Salvar opções</a>
+                </div>
+
+                <div>
+                  <h4 id="gerarpdf2" class="center-align">Aperte no botão abaixo para gerar o PDF</h4>
+                  <button href="#!" id="btn1salvar2" class="modal-close waves-effect waves-light btn-flat">Criar PDF</button>
                 </div>
               </div>
 
