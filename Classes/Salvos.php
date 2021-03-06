@@ -30,19 +30,10 @@ Class Salvos
     global $pdo;
     $idUsuario = $_SESSION['ID_Usuario'];
 
-    $sql = $pdo->prepare("SELECT Questao_ID_Questao_ FROM favoritar WHERE Usuario_Professor_ID_Usuario = :i");
+    $sql = $pdo->prepare("SELECT Enunciado FROM questao AS q INNER JOIN favoritar AS f ON q.ID_Questao_ = f.Questao_ID_Questao_ WHERE f.Usuario_Professor_ID_Usuario = :i");
     $sql->bindValue(":i", $idUsuario);
     $sql->execute();
-
-    $result = $sql->fetchAll(\PDO::FETCH_ASSOC);
-
-    foreach($result as $row){
-      $idquest = $row['Questao_ID_Questao_'];
-      $sql = $pdo->prepare("SELECT * FROM questao WHERE ID_Questao_ = :id");
-      $sql->bindValue(":id", $idquest);
-      $sql->execute();
-      return $sql->fetchAll(\PDO::FETCH_ASSOC);
-    }
+    return $sql->fetchAll(\PDO::FETCH_ASSOC);
   }
 
   public function gerarPDF($versoes, $gabarito, $idDocumento){

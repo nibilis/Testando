@@ -457,7 +457,7 @@
               <!-- Modal Trigger 2 -->
               <a href="#erro-modal-desk" class="waves-effect waves-light btn modal-trigger center-align hide-on-med-and-down" id="botão2desk" href="#modal2desk" >Moodle</a>
 
-          <!-- Modal Structure SÍMBOLOS -->
+          <!-- Modal Structure -->
           <div class="modal-content">
             <div id="erro-modal-desk" class="modal hide-on-med-and-down">
               <a><img class= "responsive-img modal-close" id="btn_fechar_modal_erro_desk" src ="../images/fechar.png"></a>
@@ -470,7 +470,7 @@
                 <div class="modal-content">
 
                   <form action="#">
-                    <p class="center-align" id="XML2"> Deseja baixar o documento em formato XML? </p>
+                    <p class="center-align" id="XML2"> Deseja baixar o docunto em formato XML? </p>
                     <p>
                       <label>
                         <input class="with-gap" name="group1" type="radio"  />
@@ -551,7 +551,7 @@
           foreach($results as $row){ ?>
           <div class="col l4">
             <div class="card white" id="cardfavoritos2">
-              <div class="card-content black-text" id="backgroundcard2" style="padding-bottom: 2%; padding-top: -1%;">
+              <div class="card-content black-text" id="backgroundcard2" style="padding-bottom: 2%; padding-top: -1%;  overflow-y: scroll; height: 30%;">
 
                 <img class="responsive-img" id="favoritarimg2" src="../images/favoritar.png">
 
