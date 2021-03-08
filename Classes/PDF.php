@@ -81,9 +81,9 @@ global $pdo;
 $i = 0;
 $letra = 65;
 
-if (isset($_SESSION['id_documento'])){
+if (isset($_SESSION['documento'])){
 
-  $idDocumento = $_SESSION['id_documento'];
+  $idDocumento = $_SESSION['documento'];
 
   //Buscar as questões cadastradas em um documento
   $sql = $pdo->prepare("SELECT * FROM questao as q INNER JOIN questao_documento as qd ON qd.Documento_ID_Documento = :d AND q.ID_Questao_ = qd.Questao_ID_Questao_");
@@ -143,9 +143,9 @@ if ($_SESSION["gabarito"]==1){
   global $pdo;
   $i = 0;
 
-  if (isset($_SESSION['id_documento'])){
+  if (isset($_SESSION['documento'])){
 
-    $idDocumento = $_SESSION['id_documento'];
+    $idDocumento = $_SESSION['documento'];
 
     $sql = $pdo->prepare("SELECT Texto FROM alternativa as alt INNER JOIN questao as q ON alt.Questao_ID_Questao_ = q.ID_Questao_ AND q.ID_Questao_ IN (SELECT Questao_ID_Questao_ FROM questao_documento WHERE Documento_ID_Documento = :d) WHERE Correta = 1");
     $sql->bindValue(":d", $idDocumento);

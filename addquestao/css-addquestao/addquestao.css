@@ -38,8 +38,9 @@
     border-color: black;
     /*top: / right: / bottom: / left:*/
     margin: 20% -15% 2% 30%;
-    padding-top: 3%;
+    padding-top: 2%;
     padding-bottom: 6%;
+    font-size: 100%;
     text-transform: capitalize !important;
   }
 
@@ -530,7 +531,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-    }
+      }
 
     .button-group > button {
       background-color: transparent;
