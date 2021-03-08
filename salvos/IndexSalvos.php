@@ -534,7 +534,7 @@
           foreach($results as $row){ ?>
           <div class="col l4">
             <div class="card white" id="cardfavoritos2">
-              <div class="card-content black-text" id="backgroundcard2" style="padding-bottom: 2%; padding-top: -1%;  overflow-y: scroll; height: 30%;">
+              <div class="card-content black-text" id="backgroundcard2" style="padding-bottom: 2%; padding-top: -1%;">
 
                 <img class="responsive-img" id="favoritarimg2" src="../images/favoritar.png">
 
