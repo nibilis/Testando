@@ -96,7 +96,7 @@ if (isset($_SESSION['id_documento'])){
     if($row['Dissertativa']==0){
       $i++;
       $letra = 65;
-      $html ='<span style="text-align:justify;"><b>' .$i.'.'. '</b> '.$row["Enunciado"].'</br></br></p><br></span>';
+      $html ='<br><span style="text-align:justify;"><b>' .$i.'.'. '</b> '.$row["Enunciado"].'</br></br></p><br></span>';
       $pdf->writeHTMLCell(0, 0, '', '', $html, 0, 1, 0, true, '', true);
 
       $sql = $pdo->prepare("SELECT Texto FROM alternativa as alt INNER JOIN questao as q ON alt.Questao_ID_Questao_ = q.ID_Questao_ AND q.ID_Questao_ IN (SELECT Questao_ID_Questao_ FROM questao_documento WHERE Documento_ID_Documento = :d) WHERE Questao_ID_Questao_ = :q");
@@ -105,7 +105,7 @@ if (isset($_SESSION['id_documento'])){
       $sql->execute();
       if($sql->rowCount() > 0){
         while($m = $sql->fetch()){
-          $html ="<p style=text-align: justify;><b>". chr($letra).") </b>".$m['Texto']."</br></br></p>";
+          $html ="<p style=text-align: justify;><b>". chr($letra).") </b>".$m['Texto']."</p>";
           $pdf->writeHTMLCell(0, 0, '', '', $html, 0, 1, 0, true, '', true);
           $letra++;
         }
@@ -114,7 +114,7 @@ if (isset($_SESSION['id_documento'])){
 
     else{
       $i++;
-      $html ='<span style="text-align:justify;"><b>' .$i.".". "</b> ".$row["Enunciado"]."</br></br></p><br></span>";
+      $html ='<span style="text-align:justify;"><b><br>' .$i.".". "</b> ".$row["Enunciado"]."</br></br></p><br></span>";
       $pdf->writeHTMLCell(0, 0, '', '', $html, 0, 1, 0, true, '', true);
     }
 
@@ -128,6 +128,17 @@ if ($_SESSION["gabarito"]==1){
 
   //adicionando a página do gabarito
   $pdf->addPage();
+
+  //titulo do gabarito
+  $pdf->SetFont('helvetica', '', 18, '', true);
+  $pdf->setCellHeightRatio(1.1);
+  $html = "
+  <h1>Gabarito</h1>
+  <br>
+  <br>
+  ";
+  //inserindo o titulo no documento
+  $pdf->writeHTMLCell(0, 0, '', '', $html, 0, 1, 0, true, 'C', true);
 
   global $pdo;
   $i = 0;

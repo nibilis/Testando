@@ -410,7 +410,7 @@
 
               <!-- Modal Trigger -->
               <div class="col l9">
-              <a class="waves-effect waves-light btn modal-trigger center-align" id="botao1desk" href="#modal1desk"> PDF </a>
+              <button class="waves-effect waves-light btn modal-trigger center-align" target="_blank" id="botao1desk" href="../Classes/PDF.php"> PDF </button>
 
               <!-- Modal Structure -->
               <div id="modal1desk" class="modal">
