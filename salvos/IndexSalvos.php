@@ -410,7 +410,7 @@
 
               <!-- Modal Trigger -->
               <div class="col l9">
-              <button class="waves-effect waves-light btn modal-trigger center-align" target="_blank" id="botao1desk" href="../Classes/PDF.php"> PDF </button>
+              <a class="waves-effect waves-light btn modal-trigger center-align" id="botao1desk" href="#modal1desk"> PDF </a>
 
               <!-- Modal Structure -->
               <div id="modal1desk" class="modal">
@@ -551,7 +551,7 @@
           foreach($results as $row){ ?>
           <div class="col l4">
             <div class="card white" id="cardfavoritos2">
-              <div class="card-content black-text" id="backgroundcard2" style="padding-bottom: 2%; padding-top: -1%;  overflow-y: scroll; height: 30%;">
+              <div class="card-content black-text" id="backgroundcard2" style="padding-bottom: 2%; padding-top: -1%;">
 
                 <img class="responsive-img" id="favoritarimg2" src="../images/favoritar.png">
 

@@ -767,7 +767,7 @@
 
           <!-- FINAL ADD_QUESTÕES CEL -->
 
-          <!--Código POST  Celular documento-->
+          <!--Código POST Celular documento-->
           <?php
           //verificar se clicou no botão
             if(isset($_POST['nome_documento'])){
