@@ -191,40 +191,6 @@
                       </div>
                     </div>
 
-
-                  <?php
-
-                  if(isset($_POST['versoes'])){
-
-                    $versoes = addslashes($_POST['versoes']);
-                    $gabarito = addslashes($_POST['gabarito']);
-                    $idDocumento = $row['ID_Documento'];
-
-                    //verificar se esta preenchido
-                  if(!empty($versoes) && !empty($gabarito) && !empty($idDocumento))
-
-                      $u->conectar();
-                      if($u->msgErro == ""){
-                          if($s->gerarPDF($versoes, $gabarito, $idDocumento))
-                          {
-                            header("location: PDF.php");
-                          }
-                          else{
-                            echo "Algo está errado";
-                          }
-                      }
-                      else {
-                        echo "Erro: ".$u->msgErro;
-                      }
-                  }
-                  else{
-                    echo "Preencha todos os campos";
-                  }
-
-
-
-                  ?>
-
                 </div>
 
                 <!-- Modal Trigger 2 -->
@@ -410,10 +376,27 @@
 
               <!-- Modal Trigger -->
               <div class="col l9">
-              <button class="waves-effect waves-light btn modal-trigger center-align" target="_blank" id="botao1desk" href="../Classes/PDF.php"> PDF </button>
+              <a class="waves-effect waves-light btn modal-trigger center-align" target="_blank" id="botao1desk" onclick="return gerarPdfDesk(<?php echo $row['ID_Documento']?>);" href="../Classes/TCPDF/PDF.php"> PDF </a>
+
+              <script async=false>
+                function gerarPdfDesk(id) {
+                  <?php $u->conectar(); ?>
+                     $.ajax({
+                     method: "GET",
+                     url:'../Classes/PDF.php',
+                     data: { id: id},
+                     complete: function (response) {
+                       alert(response.responseText);
+                     return true;},
+                     error: function () {
+                       alert('Erro');}
+                     });
+                     return true;
+                }
+              </script>
 
               <!-- Modal Structure -->
-              <div id="modal1desk" class="modal">
+              <!--<div id="modal1desk" class="modal">
 
                 <div class="modal-content">
                   <h4 id="gerarpdf2" class="center-align" >Gerar PDF</h4>
@@ -452,7 +435,7 @@
                     <button href="#!" id="criarpdf" class="hide-on-med-and-down center-align modal-close waves-effect waves-light btn">Criar PDF</button>
                   </div>
                 </div>
-              </div>
+              </div> -->
 
               <!-- Modal Trigger 2 -->
               <a href="#erro-modal-desk" class="waves-effect waves-light btn modal-trigger center-align hide-on-med-and-down" id="botão2desk" href="#modal2desk" >Moodle</a>
