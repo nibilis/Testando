@@ -145,10 +145,10 @@
               <a><img class= "responsive-img modal-close" src ="../images/fechar.png"></a>
             </div>
             <div class="modal-footer">
-              <input id="inputTest" style="text-align: center;" value="https://youtu.be/Z9jrIKcTwxU"/>
+              <input id="inputTest" style="text-align: center;" value="https://youtu.be/wBDsELGFSLs"/>
               <button style="margin-top: 5%; margin-bottom: 5%;" class="waves-effect waves-light yellow darken-2 btn" onclick="copiarTexto()">Copiar</button>
 
-              <a href="https://youtu.be/Z9jrIKcTwxU" style="margin-left: 9%; margin-right: 10%; margin-top: 5%; margin-bottom: 5%;" class="modal-close center-align waves-effect yellow darken-2 btn">Acessar</a>
+              <a href="https://youtu.be/wBDsELGFSLs" target="_blank" style="margin-left: 9%; margin-right: 10%; margin-top: 5%; margin-bottom: 5%;" class="modal-close center-align waves-effect yellow darken-2 btn">Acessar</a>
             </div>
           </div>
 

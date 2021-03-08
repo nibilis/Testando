@@ -136,6 +136,11 @@
   border: 5px solid #7C6FBF;
 }
 
+div#modal1.modal.open {
+  width: 25%;
+  height: 20%!important;
+}
+
 #modal2{
   border-radius: 15px 15px;
   border: 5px solid #7C6FBF;
@@ -197,6 +202,35 @@
   color: #717175;
   font-size: 130%;
   margin-bottom: 2%;
+}
+
+#gerarpdf3cel {
+  margin-top: 10%;
+  margin-bottom: 10%;
+  font-family: "muli";
+  font-size: 120%;
+  color: #717171;
+}
+
+#criarpdfdesk {
+  font-size: 75%;
+  font-family: 'Muli';
+  width: 20%;
+  height: 6%;
+  padding-top: 0.7% !important;
+  background-color: #FFBC2B;
+  border-radius: 40px 40px;
+  margin-bottom: 10%;
+}
+
+#btn1salvar2desk {
+  font-size: 75%;
+  font-family: 'Muli';
+  width: 30%;
+  height: 6%;
+  padding-top: 0.7% !important;
+  background-color: #FFBC2B;
+  border-radius: 40px 40px;
 }
 
 #XML
@@ -265,7 +299,7 @@
 
 /*MODAL ERRO DESK*/
 
-  div#ferro-modal-desk.modal.open {
+  div#erro-modal-desk.modal.open {
     border-radius: 15px 15px;
     border: #7C6FBF 5px solid;
     padding: 15px;
@@ -436,6 +470,40 @@
     font-size: 150%;
   }
 
+  div#modal1desk.modal.open {
+    width: 40%;
+    height: 60%!important;
+  }
+
+  #gerarpdf3 {
+    margin-top: 10%;
+    margin-bottom: 10%;
+    font-family: "muli";
+    font-size: 120%;
+    color: #717171;
+  }
+
+  #criarpdf {
+    font-size: 75%;
+    font-family: 'Muli';
+    width: 20%;
+    height: 6%;
+    padding-top: 0.7% !important;
+    background-color: #FFBC2B;
+    border-radius: 40px 40px;
+    margin-bottom: 10%;
+  }
+
+  #btn1salvar2 {
+    font-size: 75%;
+    font-family: 'Muli';
+    width: 30%;
+    height: 6%;
+    padding-top: 0.7% !important;
+    background-color: #FFBC2B;
+    border-radius: 40px 40px;
+  }
+
   #materiafavori2{
     font-family: "Muli";
     color: #7C6FBF;
@@ -494,6 +562,7 @@
     font-size: 100%;
     margin-bottom: 2%;
   }
+
   #conteudoquest2{
     font-family: "Muli";
     color: #414141;
@@ -505,7 +574,7 @@
     border: 5px solid #7C6FBF;
   }
 
-  #modal2desk{
+  #modal2desk {
     border-radius: 15px 15px;
     border: 5px solid #7C6FBF;
   }
@@ -520,7 +589,6 @@
     border: #7C6FBF ;
     margin-top: 6.5%;
     float: left;
-
   }
 
   #botão2desk

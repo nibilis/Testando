@@ -105,14 +105,16 @@ a {
     margin-left: 20%;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: 1300px) {
     #btn_fechar_modal_erro_desk {
-      width: 9%;
-      margin-left: 92%!important;
+      width: 7%;
+      margin-right: -92% !important;
     }
 
     div#erro-modal-desk.modal.open {
       width: 25%;
+      height: 20%!important;
+
     }
 
     #img_erro_desk {

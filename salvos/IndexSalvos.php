@@ -135,15 +135,15 @@
             $results = $s->listAllDocumentos();
             foreach($results as $row){ ?>
         <div class="col s12 ">
-          <div class="card white">
-            <div class="card-content black-text" id="backgroundcard">
-              <div class="row">
-              <div class="col s4">
-              <img class="responsive-img" id="documentoimg" src="../images/documento.png">
+          <div class=" hide-on-large-only card white">
+            <div class="hide-on-large-only card-content black-text" id="backgroundcard">
+              <div class="hide-on-large-only row">
+              <div class="hide-on-large-only col s4">
+              <img class="hide-on-large-only responsive-img" id="documentoimg" src="../images/documento.png">
               </div>
 
               <!-- Nome do documento -->
-              <div class="col s8 center">
+              <div class="hide-on-large-only col s8 center">
               <p id="documentonome"><?php echo $row['Nome_Documento'];?></p>
               </div>
               <div>
@@ -151,21 +151,21 @@
                 <!-- Botões -->
 
                 <!-- Modal Trigger -->
-                <a class="waves-effect waves-light btn modal-trigger" id="botao1" href="#modal1"> PDF </a>
+                <a class="hide-on-large-only waves-effect waves-light btn modal-trigger" id="botao1" href="#modal1"> PDF </a>
 
                 <!-- Modal Structure -->
                 <div id="modal1" class="modal">
-                  <div class="modal-content">
-                    <h4 id="gerarpdf" class="center-align" >Gerar PDF</h4>
+                  <div class="hide-on-large-only modal-content">
+                    <h4 id="gerarpdf" class="hide-on-large-only center-align" >Gerar PDF</h4>
 
-                    <div class="row">
-                      <div class="input-field col s12">
+                    <div class="hide-on-large-only row">
+                      <div class="hide-on-large-only input-field col s12">
                         <input id="input_text" type="number" data-length="1" name="versoes">
                         <label id="labelversoes"for="input_text">Insira o número de versões:</label>
                       </div>
                     </div>
 
-                         <p class="center-align" id="gerargabarito">Gerar gabarito?</p>
+                         <p class="hide-on-large-only center-align" id="gerargabarito">Gerar gabarito?</p>
                          <p>
                            <label>
                              <input class="with-gap" name="gabarito" type="radio" value="1"/>
@@ -178,45 +178,18 @@
                             <span>Não</span>
                           </label>
                         </p>
+                      </div>
+                    </div>
+                    <div class="center-align">
+                      <button href="#!" id="btn1salvar2desk" class="hide-on-large-only modal-close waves-effect waves-light btn">Salvar opções</button>
+                    </div>
 
-                  </div>
-                  <div class="modal-footer">
-                    <button id="btn1salvar" class="modal-close waves-effect waves-green btn-flat" type="submit" >Salvar</button>
-                  </div>
-
-
-                  <?php
-
-                  if(isset($_POST['versoes'])){
-
-                    $versoes = addslashes($_POST['versoes']);
-                    $gabarito = addslashes($_POST['gabarito']);
-                    $idDocumento = $row['ID_Documento'];
-
-                    //verificar se esta preenchido
-                  if(!empty($versoes) && !empty($gabarito) && !empty($idDocumento))
-
-                      $u->conectar();
-                      if($u->msgErro == ""){
-                          if($s->gerarPDF($versoes, $gabarito, $idDocumento))
-                          {
-                            header("location: PDF.php");
-                          }
-                          else{
-                            echo "Algo está errado";
-                          }
-                      }
-                      else {
-                        echo "Erro: ".$u->msgErro;
-                      }
-                  }
-                  else{
-                    echo "Preencha todos os campos";
-                  }
-
-
-
-                  ?>
+                    <div>
+                      <h4 id="gerarpdf3cel" class="hide-on-large-only center-align">Aperte no botão abaixo para gerar o PDF</h4>
+                      <div class="center-align">
+                        <button href="#!" id="criarpdfdesk" class="center-align hide-on-large-only modal-close waves-effect waves-light btn">Criar PDF</button>
+                      </div>
+                    </div>
 
                 </div>
 
@@ -293,7 +266,7 @@
 
                   <!-- Matéria questão -->
 
-                  <p id="materiaquest" style:"color: purple;"> Matemática - Trigonometria</p>
+                  <p id="materiaquest" style:"color: purple;"> Matéria - Tema</p>
                   <!-- Conteudo questão -->
                   <p id="conteudoquest2"><?php echo $row['Enunciado'] ?></p>
                 </div>
@@ -332,7 +305,7 @@
 
                     <div class="col s9">
                     <!-- Matéria questão -->
-                    <p id="materiafavori" style:"color: purple;"> Matemática - Trigonometria</p>
+                    <p id="materiafavori" style:"color: purple;"> Matéria - Tema</p>
 
                     <!-- Conteudo questão -->
                     <p id="conteudofavori2"><?php echo $row['Enunciado'] ?></p>
@@ -403,10 +376,27 @@
 
               <!-- Modal Trigger -->
               <div class="col l9">
-              <a class="waves-effect waves-light btn modal-trigger center-align" id="botao1desk" href="#modal1desk"> PDF </a>
+              <a class="waves-effect waves-light btn modal-trigger center-align" target="_blank" id="botao1desk" onclick="return gerarPdfDesk(<?php echo $row['ID_Documento']?>);" href="../Classes/TCPDF/PDF.php"> PDF </a>
+
+              <script async=false>
+                function gerarPdfDesk(id) {
+                  <?php $u->conectar(); ?>
+                     $.ajax({
+                     method: "GET",
+                     url:'../Classes/PDF.php',
+                     data: { id: id},
+                     complete: function (response) {
+                       alert(response.responseText);
+                     return true;},
+                     error: function () {
+                       alert('Erro');}
+                     });
+                     return true;
+                }
+              </script>
 
               <!-- Modal Structure -->
-              <div id="modal1desk" class="modal">
+              <!--<div id="modal1desk" class="modal">
 
                 <div class="modal-content">
                   <h4 id="gerarpdf2" class="center-align" >Gerar PDF</h4>
@@ -435,15 +425,22 @@
                      </form>
 
                 </div>
-                <div class="modal-footer">
-                  <a href="#!" id="btn1salvar2" class="modal-close waves-effect waves-green btn-flat">Salvar</a>
+                <div class="center-align">
+                  <button href="#!" id="btn1salvar2" class="modal-close waves-effect waves-light btn">Salvar opções</button>
                 </div>
-              </div>
+
+                <div>
+                  <h4 id="gerarpdf3" class="hide-on-med-and-down center-align">Aperte no botão abaixo para gerar o PDF</h4>
+                  <div class="center-align">
+                    <button href="#!" id="criarpdf" class="hide-on-med-and-down center-align modal-close waves-effect waves-light btn">Criar PDF</button>
+                  </div>
+                </div>
+              </div> -->
 
               <!-- Modal Trigger 2 -->
               <a href="#erro-modal-desk" class="waves-effect waves-light btn modal-trigger center-align hide-on-med-and-down" id="botão2desk" href="#modal2desk" >Moodle</a>
 
-          <!-- Modal Structure SÍMBOLOS -->
+          <!-- Modal Structure -->
           <div class="modal-content">
             <div id="erro-modal-desk" class="modal hide-on-med-and-down">
               <a><img class= "responsive-img modal-close" id="btn_fechar_modal_erro_desk" src ="../images/fechar.png"></a>
@@ -456,7 +453,7 @@
                 <div class="modal-content">
 
                   <form action="#">
-                    <p class="center-align" id="XML2"> Deseja baixar o documento em formato XML? </p>
+                    <p class="center-align" id="XML2"> Deseja baixar o docunto em formato XML? </p>
                     <p>
                       <label>
                         <input class="with-gap" name="group1" type="radio"  />
@@ -498,24 +495,24 @@
       <!-- Fim títulos -->
 
       <!-- Minhas questões salvos -->
-      <?php
-        $results = $s->listAll();
-        foreach($results as $row){ ?>
         <div class="row hide-on-med-and-down">
+          <?php
+            $results = $s->listAll();
+            foreach($results as $row){ ?>
           <div class="col l4">
             <div class="card white">
               <div class="card-content black-text" id="backgroundcard2">
 
                 <!-- Matéria questão -->
 
-                <p id="materiaquest2" style:"color: purple;"> Matemática - Trigonometria</p>
+                <p id="materiaquest2" style:"color: purple;"> Matéria - Tema</p>
                 <!-- Conteudo questão -->
                 <p id="conteudoquest2"><?php echo $row['Enunciado'] ?></p>
               </div>
             </div>
           </div>
-        </div>
-      <?php } ?>
+        <?php } ?>
+      </div>
     </div>
 
     <!-- FAVORITADOS COMPUTADOR-->
@@ -530,36 +527,36 @@
       <!-- Fim títulos -->
 
       <!-- Favoritos salvos desktop -->
-      <?php
-        $results = $s->listAllFavoritos();
-        foreach($results as $row){ ?>
+
       <div class="row hide-on-med-and-down">
+        <?php
+          $results = $s->listAllFavoritos();
+          foreach($results as $row){ ?>
+          <div class="col l4">
+            <div class="card white" id="cardfavoritos2">
+              <div class="card-content black-text" id="backgroundcard2" style="padding-bottom: 2%; padding-top: -1%;">
 
-        <div class="col l4">
-          <div class="card white" id="cardfavoritos2">
-            <div class="card-content black-text" id="backgroundcard2" style="padding-bottom: 2%; padding-top: -1%;">
+                <img class="responsive-img" id="favoritarimg2" src="../images/favoritar.png">
 
-              <img class="responsive-img" id="favoritarimg2" src="../images/favoritar.png">
+                <div class="row">
+                  <div class="col l3">
+                    <img class="responsive-img" id="iconeimg2" src="../images/icone.png">
+                  </div>
 
-              <div class="row">
-                <div class="col l3">
-                  <img class="responsive-img" id="iconeimg2" src="../images/icone.png">
-                </div>
+                    <div class="col l9">
+                    <!-- Matéria questão -->
+                    <p id="materiafavori2" style:"color: purple;"> Matéria - Tema</p>
 
-                  <div class="col l9">
-                  <!-- Matéria questão -->
-                  <p id="materiafavori2" style:"color: purple;"> Matemática - Trigonometria</p>
-
-                  <!-- Conteudo questão -->
-                  <p id="conteudofavori2"><?php echo $row['Enunciado'] ?></p>
+                    <!-- Conteudo questão -->
+                    <p id="conteudofavori2"><?php echo $row['Enunciado']; ?></p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          <?php } ?>
         </div>
-      <?php } ?>
-    </div>
+      </div>
 
 
 

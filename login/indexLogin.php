@@ -147,7 +147,7 @@
       <!-- Modal Structure SÍMBOLOS -->
       <div class="modal-content">
         <div id="erro-modal-desk" class="modal hide-on-med-and-down">
-          <a><img class= "responsive-img modal-close" id="btn_fechar_modal_erro-desk" src ="../images/fechar.png"></a>
+          <a><img class= "responsive-img modal-close" id="btn_fechar_modal_erro-desk" src ="../images/fechar.png" style="float:right; width: 7%;"></a>
           <h6><img class="responsive-img align-center" id="img_erro-desk" src ="../images/manutencao.png"><p>Funcionalidade em desenvolvimento</p></h6>
         </div>
       </div>
