@@ -528,23 +528,18 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        padding-top: 2%;
-        padding-bottom: -2%;
     }
 
     .button-group > button {
       background-color: transparent;
-      padding-top: 2%;
-      padding-bottom: 2%;
       box-shadow: 0px 1.5px 3px rgba(0, 0, 0, 0.3);
       border: none;
     }
 
     .buttonClicked {
-        background-color: #9785D3 !important;
-        box-shadow: 0px 1.5px 3px rgba(0, 0, 0, 0.3);
-        color: white!important;
-        padding-bottom: 2%!important;
+      background-color: #9785D3 !important;
+      box-shadow: 0px 1.5px 3px rgba(0, 0, 0, 0.3);
+      color: white!important;
     }
   /*FINAL DOS CÓDIGOS DAS CORES DOS BOTÕES QUE MUDAM*/
 
