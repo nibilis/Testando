@@ -154,9 +154,9 @@ header('Content-Type: text/html; charset=UTF-8');
           ?><div id="msgErro"><p>Senhas incoerentes/ou incorretas</p></div><?php
         }
       }
-      else {
-        ?><div id="msgErro"></div><?php
-      }
+      //else {
+        ?><!--<div id="msgErro"></div>--><?php
+      //}
   }
   else{
     ?><div id="msgErro"><p>Preencha todos os campos! &nbsp</p></div><?php

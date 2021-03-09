@@ -39,7 +39,7 @@
         }
         else
         {
-          echo "Erro: ".$u->msgErro;
+          //echo "Erro: ".$u->msgErro;
         }}
       else
       {

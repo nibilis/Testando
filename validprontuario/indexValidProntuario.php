@@ -74,24 +74,24 @@
       if($u->msgErro == ""){
           if($c->validprontuario($nome, $prontuario, $CPF))
           {
-            echo "Cadastrado com sucesso!";
+            //echo "Cadastrado com sucesso!";
             if($c->verification($CPF, $prontuario)){
-              echo "CPF existente";
+              //echo "CPF existente";
             }
             else{
-              echo "";
+              //echo "";
             }
           }
           else{
-            echo "CPF ja cadastrado";
+            //echo "CPF ja cadastrado";
           }
       }
       else {
-        echo "Erro: ".$u->msgErro;
+        //echo "Erro: ".$u->msgErro;
       }
   }
   else{
-    echo "Preencha todos os campos";
+    //echo "Preencha todos os campos";
   }
 }
 ?>

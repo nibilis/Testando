@@ -151,9 +151,24 @@
                 <!-- Botões -->
 
                 <!-- Modal Trigger -->
-                <a class="hide-on-large-only waves-effect waves-light btn modal-trigger" id="botao1" href="#modal1"> PDF </a>
+                <a class="waves-light btn modal-trigger center-align" target="_blank" id="botao1desk" onclick="return gerarPdfCel(<?php echo $row['ID_Documento']?>);" href="../Classes/TCPDF/PDF.php"> PDF </a>
 
-                <!-- Modal Structure 
+                <script async=false>
+                  function gerarPdfCel(id) {
+                    <?php $u->conectar(); ?>
+                       $.ajax({
+                       method: "GET",
+                       url:'../Classes/PDF.php',
+                       data: { id: id},
+                       
+                       error: function () {
+                         alert('Erro');}
+                       });
+                       return true;
+                  }
+                </script>
+
+                <!-- Modal Structure
                 <div id="modal1" class="modal">
                   <div class="hide-on-large-only modal-content">
                     <h4 id="gerarpdf" class="hide-on-large-only center-align" >Gerar PDF</h4>
@@ -197,7 +212,7 @@
 
 
 
-                    <a href="#erro-modal" class="waves-effect waves-light btn modal-trigger hide-on-large-only" id="botão2" href="#modal2">Moodle</a>
+                    <a href="#erro-modal" class="waves-light btn modal-trigger hide-on-large-only" id="botão2" href="#modal2">Moodle</a>
 
                 <!-- Modal Structure SÍMBOLOS -->
                 <div class="modal-content">

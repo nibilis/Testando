@@ -498,7 +498,7 @@
                   ?><a id="btn_salvar" class="hide-on-large-only waves-effect waves-light btn"  href="../Classes/NovoDocumento.php" name="action">Salvar</a><?php
                 }
                 else{
-                  ?><a id="btn_salvar" class="hide-on-large-only waves-effect waves-light btn" type="submit" name="action">Criar</a><?php
+                  ?><button id="btn_salvar" class="hide-on-large-only waves-effect waves-light btn" type="submit" name="action">Criar</button><?php
                 }
               ?>
               <!--<img class= "responsive-img" id = "seta_direita" src ="../images/seta_direita.png">-->

@@ -622,26 +622,26 @@ header('Content-Type: text/html; charset=UTF-8');
               if($alt1!=""){
                 if($q->cadastrarQuestaoAlternativa($materia, $tema, $enunciado, 0, $alt1, $alt2, $alt3, $alt4, $alt5, $correta, $dificuldade, $privacidade, $_SESSION['ID_Usuario']))
                 {
-                  echo "Cadastrado com sucesso!";
+                  //echo "Cadastrado com sucesso!";
                 }
               }
               else{
-                echo "Preencha as alternativas";
+                //echo "Preencha as alternativas";
               }
             }
           else {
             if($q->cadastrarQuestaoDissertativa($materia, $tema, $enunciado, 1, $resposta, 1, $dificuldade, $privacidade, $_SESSION['ID_Usuario']))
             {
-              echo "Cadastrado com sucesso!";
+              //echo "Cadastrado com sucesso!";
             }
           }
         }
         else {
-          echo "Erro: ".$u->msgErro;
+          //echo "Erro: ".$u->msgErro;
         }
     }
     else{
-      echo "Preencha todos os campos";
+      //echo "Preencha todos os campos";
     }
   }
   ?>

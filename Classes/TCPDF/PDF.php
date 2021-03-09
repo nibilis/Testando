@@ -122,7 +122,7 @@ if (isset($_SESSION['documento'])){
 
 //verificando se o usuário quer gabarito ou não
 
-if ($_SESSION["gabarito"]==1){
+
 
   //adicionando a página do gabarito
   $pdf->addPage();
@@ -156,7 +156,7 @@ if ($_SESSION["gabarito"]==1){
       }
     }
   }
-}
+
 
 //$pdf->writeHTMLCell(0, 0, '', '', $html, 0, 1, 0, true, '', true);
 

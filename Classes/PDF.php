@@ -13,9 +13,15 @@ Class PDF{
     $id = $_GET['id'];
   }
 
+  $sql = $pdo->prepare("SELECT Nome_Documento FROM documento WHERE ID_Documento = :d");
+  $sql->bindValue(":d", $id);
+  $sql->execute();
+  $aux = $sql->fetch();
+
+  $_SESSION['nome_documento'] = $aux['Nome_Documento'];
   $_SESSION['documento'] = $id;
 
-  echo "$id";
+  echo "PDF gerado!";
 
   return true;
   }
