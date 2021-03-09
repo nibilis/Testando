@@ -10,6 +10,13 @@ $u = new DataBase;
 //Criando um documento PDF
 $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
 
+$sql = $pdo->prepare("SELECT Nome_Documento FROM documento WHERE ID_Documento = :d");
+$sql->bindValue(":d", $id);
+$sql->execute();
+$aux = $sql->fetch();
+
+$_SESSION['nome_documento'] = $aux['Nome_Documento'];
+
 //Colocando informações no documento
 $pdf->SetCreator($_SESSION["NickName"]);
 $pdf->SetAuthor($_SESSION["NickName"]);
