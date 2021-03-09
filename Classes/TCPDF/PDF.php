@@ -7,6 +7,8 @@ require_once('config/tcpdf_config.php');
 require_once'../DataBase.php';
 $u = new DataBase;
 
+global $pdo;
+
 //Criando um documento PDF
 $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
 
