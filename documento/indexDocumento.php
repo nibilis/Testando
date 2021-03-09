@@ -60,11 +60,11 @@
                  <ul id="links_menucel">
                    <li><a id="perfil" class=" waves-effect center-align" href="../perfil/indexPerfil.php">Perfil</a></li>
                    <li><div id="divider" class="divider"></div></li>
-                   <li><a id="question" class=" waves-effect center-align" href="../addquestao/indexQuestao.html">Adicionar Questão</a></li>
+                   <li><a id="question" class=" waves-effect center-align" href="../addquestao/indexQuestao.php">Adicionar Questão</a></li>
                    <li><div id="divider" class="divider"></div></li>
                    <li><a id="document" class="waves-effect center-align" href="../documento/indexDocumento.php">Adicionar Documento</a></li>
                    <li><div id="divider" class="divider"></div></li>
-                   <li><a id="saves" class="waves-effect center-align" href="../salvos/indexSalvos">Salvos</a></li>
+                   <li><a id="saves" class="waves-effect center-align" href="../salvos/indexSalvos.php">Salvos</a></li>
                    <li><div id="divider" class="divider"></div></li>
                    <a id="sair" href="../login/indexLogin.php"><i class="material-icons" id="sair2">exit_to_app</i> Sair </a>
                  </ul>
