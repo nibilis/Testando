@@ -153,7 +153,7 @@
                 <!-- Modal Trigger -->
                 <a class="hide-on-large-only waves-effect waves-light btn modal-trigger" id="botao1" href="#modal1"> PDF </a>
 
-                <!-- Modal Structure -->
+                <!-- Modal Structure 
                 <div id="modal1" class="modal">
                   <div class="hide-on-large-only modal-content">
                     <h4 id="gerarpdf" class="hide-on-large-only center-align" >Gerar PDF</h4>
@@ -193,7 +193,7 @@
 
                 </div>
 
-                <!-- Modal Trigger 2 -->
+                 Modal Trigger 2 -->
 
 
 
