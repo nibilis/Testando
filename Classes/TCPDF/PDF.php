@@ -9,15 +9,17 @@ $u = new DataBase;
 
 global $pdo;
 
+$u->conectar();
+$sql = $pdo->prepare("SELECT Nome_Documento FROM documento WHERE ID_Documento = :d");
+$sql->bindValue(":d", $_SESSION['id_documento']);
+$sql->execute();
+if($sql->rowCount() > 0){
+  $dado = $sql->fetch();
+  $_SESSION['nome_documento'] = $dado['Nome_Documento'];
+}
+
 //Criando um documento PDF
 $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
-
-$sql = $pdo->prepare("SELECT Nome_Documento FROM documento WHERE ID_Documento = :d");
-$sql->bindValue(":d", $id);
-$sql->execute();
-$aux = $sql->fetch();
-
-$_SESSION['nome_documento'] = $aux['Nome_Documento'];
 
 //Colocando informações no documento
 $pdf->SetCreator($_SESSION["NickName"]);
@@ -88,9 +90,9 @@ global $pdo;
 $i = 0;
 $letra = 65;
 
-if (isset($_SESSION['documento'])){
+if (isset($_SESSION['id_documento'])){
 
-  $idDocumento = $_SESSION['documento'];
+  $idDocumento = $_SESSION['id_documento'];
 
   //Buscar as questões cadastradas em um documento
   $sql = $pdo->prepare("SELECT * FROM questao as q INNER JOIN questao_documento as qd ON qd.Documento_ID_Documento = :d AND q.ID_Questao_ = qd.Questao_ID_Questao_");
@@ -150,9 +152,9 @@ if (isset($_SESSION['documento'])){
   global $pdo;
   $i = 0;
 
-  if (isset($_SESSION['documento'])){
+  if (isset($_SESSION['id_documento'])){
 
-    $idDocumento = $_SESSION['documento'];
+    $idDocumento = $_SESSION['id_documento'];
 
     $sql = $pdo->prepare("SELECT Texto FROM alternativa as alt INNER JOIN questao as q ON alt.Questao_ID_Questao_ = q.ID_Questao_ AND q.ID_Questao_ IN (SELECT Questao_ID_Questao_ FROM questao_documento WHERE Documento_ID_Documento = :d) WHERE Correta = 1");
     $sql->bindValue(":d", $idDocumento);
@@ -160,7 +162,7 @@ if (isset($_SESSION['documento'])){
     if($sql->rowCount() > 0){
       while($m = $sql->fetch()){
       $i++;
-      $html =" <p style=text-align: justify;><b>" .$i.". ". "</b>" .$m['Texto']."</br></br></p>";
+      $html ="<br> <p style=text-align: justify;><b>" .$i.". ". "</b>" .$m['Texto']."</br></br></p>";
       $pdf->writeHTMLCell(0, 0, '', '', $html, 0, 1, 0, true, '', true);
       }
     }
