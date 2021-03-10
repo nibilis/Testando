@@ -460,7 +460,7 @@
               <div class="row">
                 <div class="input-field">
                   <?php
-                    if($_SESSION['nome_documento']==""){
+                    if(isset($_SESSION['nome_documento'])){
                       ?> <p id="documento-nome-php"><?php echo $_SESSION['nome_documento'];?><p> <?php
                     }
                     else{
