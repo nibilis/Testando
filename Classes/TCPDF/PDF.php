@@ -9,6 +9,8 @@ $u = new DataBase;
 
 global $pdo;
 
+$_SESSION['id_documento']=18;
+
 $u->conectar();
 $sql = $pdo->prepare("SELECT Nome_Documento FROM documento WHERE ID_Documento = :d");
 $sql->bindValue(":d", $_SESSION['id_documento']);
