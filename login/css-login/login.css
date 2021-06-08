@@ -1,0 +1,626 @@
+/* RESET DA PÁGINA */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Definições gerais (melhor não mexer)*/
+body {
+  height: 100vh;
+  background-size: auto 100vh;
+}
+
+a {
+  height: 50%;
+  justify-content: center;
+  align-content: center;
+}
+
+/* modal */
+
+
+/*MODAL ERRO CEL*/
+
+  div#erro-modal.modal.open {
+    border-radius: 15px 15px;
+    border: #7C6FBF 5px solid;
+    padding: 15px;
+    width: 80%;
+    height: 25%;
+  }
+
+  #btn_fechar_modal_erro {
+    width: 12%;
+    margin-left: 90%!important;
+    margin-top: -1%!important;
+  }
+
+  #erro-modal h6 {
+    display: grid;
+    gap: 0.5em;
+    grid-template-columns: 20% 70%;
+    margin-left: -3%;
+  }
+
+  #erro-modal p {
+    font-family: 'Muli';
+    font-size: 110%;
+    text-align: center;
+    line-height: 150%;
+    margin-left: 11%;
+}
+
+  #img_erro{
+    max-width: 55px;
+    max-height: 55px;
+    width: auto;
+    height: auto;
+    margin-left: 20%;
+  }
+
+  @media (min-width: 400px) {
+    #img_erro {
+      margin-left: 45%;
+    }
+}
+
+
+/*MODAL ERRO DESK*/
+
+  div#erro-modal-desk.modal.open {
+    border-radius: 15px 15px;
+    border: #7C6FBF 5px solid;
+    padding: 15px;
+    width: 30%;
+    height: 25%;
+  }
+
+  #btn_fechar_modal_erro_desk {
+    width: 12%;
+    margin-left: 90%!important;
+    margin-top: -1%!important;
+  }
+
+  #erro-modal-desk h6 {
+    display: grid;
+    gap: 0.5em;
+    grid-template-columns: 20% 70%;
+    margin-left: -3%;
+  }
+
+  #erro-modal-desk p {
+    font-family: 'Muli';
+    font-size: 120%;
+    text-align: center;
+    line-height: 150%;
+    margin-left: 6.7%;
+  }
+
+  #img_erro_desk {
+    max-width: 55px;
+    max-height: 55px;
+    width: auto;
+    height: auto;
+    margin-left: 20%;
+  }
+
+  @media (min-width: 1300px) {
+    #btn_fechar_modal_erro_desk {
+      width: 7%;
+      margin-right: -92% !important;
+    }
+
+    div#erro-modal-desk.modal.open {
+      width: 25%;
+      height: 20%!important;
+
+    }
+
+    #img_erro_desk {
+      margin-left: 40%!important;
+    }
+}
+/*Começo da primeira parte*/
+
+#div {
+  margin-bottom: 0;
+}
+
+#degrade h1{
+  font-family: 'Muli';
+  color: white;
+  font-size: 230%;
+  margin-top:80%;
+}
+
+#btnCadastresepc {
+  border-radius: 100px;
+  border-color: #FFBC2B;
+  border-style: solid;
+  font-family: Muli;
+  color: #FFBC2B;
+  text-transform: none;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 0.5%;
+  height: 50px;
+}
+
+#logo {
+  margin-top: 5%;
+  width: 45%;
+}
+
+#logopc {
+  margin-top: 8%;
+  margin-left: 10%;
+  margin-bottom: 5%;
+  width: 25%!important;
+}
+
+#cadeado {
+  width: 40%;
+  justify-content: center;
+  margin-top: 33%;
+  float:right;
+}
+
+#cadeadopc {
+  width: 25%;
+  justify-content: center;
+  float:right;
+  margin-top: 15%;
+}
+
+
+#prontuario{
+  width: 60vw;
+}
+
+#user {
+  width: 40%;
+  justify-content: center;
+  margin-top: 33%;
+  float:right;
+}
+
+#userpc {
+  width: 25%;
+  justify-content: center;
+  margin-top: 15%;
+  float:right;
+}
+
+#senha{
+  width: 60vw;
+}
+
+#login{
+  margin-top: 5%;
+}
+
+#loginpc{
+  margin-top: 4%;
+  margin-left: 7%;
+}
+
+#checkboxpc{
+  margin-top: 0%;
+  margin-left: 10%;
+}
+
+#btnLogin {
+  border-radius: 20px;
+  font-family: Muli;
+  color: white;
+  text-transform: uppercase;
+  font-size: 100%;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+#btnLoginpc {
+  border-radius: 25px;
+  font-family: Muli;
+  text-transform: uppercase;
+  font-size: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+  width
+}
+
+#esqsenha{
+  margin-top: 3%;
+}
+
+#esqsenhapc{
+  margin-top: 2%;
+  margin-left: 4%;
+}
+
+#btnEsqsenha{
+  margin-top: 3%;
+  color:#8D8989;
+}
+
+/*MODAL ERRO CEL*/
+
+div#erro-modal.modal.open {
+  border-radius: 15px 15px;
+  border: #7C6FBF 5px solid;
+  padding: 15px;
+  width: 80%;
+  height: 25%;
+}
+
+#btn_fechar_modal_erro {
+  width: 12%;
+  margin-left: 90%!important;
+  margin-top: -1%!important;
+}
+
+#erro-modal h6 {
+  display: grid;
+  gap: 0.5em;
+  grid-template-columns: 20% 70%;
+  margin-left: -3%;
+}
+
+#erro-modal p {
+  font-family: 'Muli';
+  font-size: 110%;
+  text-align: center;
+  line-height: 150%;
+  margin-left: 11%;
+  color: black;
+}
+
+#img_erro{
+  max-width: 55px;
+  max-height: 55px;
+  width: auto;
+  height: auto;
+  margin-left: 20%;
+}
+
+@media (min-width: 400px) {
+  #img_erro {
+    margin-left: 45%;
+  }
+}
+
+/*MODAL ERRO DESK*/
+
+div#erro-modal-desk.modal.open {
+  border-radius: 15px 15px;
+  border: #7C6FBF 5px solid;
+  padding: 15px;
+  width: 30%;
+  height: 20%;
+}
+
+#btn_fechar_modal_erro_desk {
+  width: 12%;
+  margin-left: 90%!important;
+  margin-top: -1%!important;
+}
+
+#erro-modal-desk h6 {
+  display: grid;
+  gap: 0.5em;
+  grid-template-columns: 20% 70%;
+  margin-left: -3%;
+}
+
+#erro-modal-desk p {
+  font-family: 'Muli';
+  font-size: 120%;
+  text-align: center;
+  line-height: 150%;
+  margin-left: 6.7%;
+  color: black;
+}
+
+#img_erro_desk {
+  max-width: 55px;
+  max-height: 55px;
+  width: auto;
+  height: auto;
+  margin-left: 20%;
+}
+
+@media (min-width: 1440px) {
+  #btn_fechar_modal_erro_desk {
+    width: 9%;
+    margin-left: 92%!important;
+  }
+
+  div#erro-modal-desk.modal.open {
+    width: 25%;
+  }
+
+  #img_erro_desk {
+    margin-left: 40%!important;
+  }
+}
+
+@media (min-width: 500px){
+  #cadeado {
+    width: 27%;
+    justify-content: center;
+    margin-top: 20%;
+    float:right;
+  }
+
+  #prontuario{
+    width: 60vw;
+  }
+
+  #user {
+    width: 27%;
+    justify-content: center;
+    margin-top: 20%;
+    float:right;
+  }
+
+  #senha{
+    width: 60vw;
+  }
+
+}
+
+/*Começo da segunda parte*/
+#divRoxa {
+  width: 100vw;
+}
+
+#texto{
+  font-size: 150%;
+  color: white;
+  font-family: Muli;
+  justify-content: center;
+  align-content: center;
+}
+
+#btnCadastrese{
+  border-radius: 20px;
+  font-family: Muli;
+  text-transform: none;
+  font-size: 20px;
+}
+
+#boldire {
+  width: 20%;
+  margin-left: 83%;
+}
+
+#bolesq {
+  width: 20%;
+  margin-left: -86%;
+}
+
+}
+
+@media (max-width: 450px){
+  #boldire {
+    width: 20%;
+    margin-left: 65.3%;
+  }
+}
+
+@media (min-width: 300px){
+  #msgErro{
+    position: absolute;
+    right: 20%;
+    top: 26%;
+  }
+
+  p{
+    font-size: 0.8em;
+    font-family: Muli;
+    color: #e31b36;
+  }
+}
+
+@media (min-width: 400px){
+  #msgErro{
+    position: absolute;
+    right: 28%;
+    top: 28%;
+  }
+
+  #boldire {
+    width: 20%;
+    margin-left: 82.6%;
+  }
+}
+
+/*Computador*/
+
+@media (min-width: 1160px) {
+
+  #degrade h1{
+    font-family: Muli;
+    color: white;
+    font-size: 230%;
+    margin-top:60%;
+    margin-bottom: 10%;
+  }
+
+  #btnCadastresepc {
+    border-radius: 100px;
+    border-color: #FFBC2B;
+    border-style: solid;
+    font-family: Muli;
+    color: #FFBC2B;
+    text-transform: none;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+    font-size: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+    height: 50px;
+  }
+
+  #logopc {
+    margin-top: 6%;
+    margin-left: 10%;
+    margin-bottom: 4%;
+    width: 30%;
+  }
+
+  #cadeadopc {
+    width: 15%;
+    justify-content: center;
+    margin-top: 15%;
+    float:right;
+  }
+
+  #userpc {
+    width: 15%;
+    justify-content: center;
+    margin-top: 15%;
+    float:right;
+  }
+
+  #loginpc{
+    margin-top: 2%;
+    margin-left: 7%;
+  }
+
+  #checkboxpc{
+    margin-top: 0%;
+    margin-left: 10%;
+  }
+
+  #btnLoginpc {
+    border-radius: 40px 40px!important;
+    font-family: Muli;
+    text-transform: uppercase;
+  font-size: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  #esqsenhapc{
+    margin-top: 2%;
+
+    margin-left: 7%;
+  }
+}
+
+
+@media (min-width: 990px)  {
+#degrade{
+  height: 100vh;
+  width: 40%;
+  float: left;
+  background: #8579C3;
+}
+
+  #logo {
+    margin-top: 5%;
+    width: 20%;
+    float: right;
+    margin-right: 22%;
+  }
+
+  #cadeado {
+    width: 20%;
+    justify-content: center;
+    margin-top: 0%;
+    float:right;
+  }
+
+  #prontuario{
+    width: 60vw;
+  }
+
+  #user {
+    width:20%;
+    justify-content: center;
+    margin-top: 0%;
+    float:right;
+  }
+
+  #senha{
+    width: 60vw;
+  }
+
+  #login{
+    margin-top: 5%;
+  }
+
+  #btnLogin {
+    border-radius: 20px;
+    font-family: Muli;
+    text-transform: uppercase;
+font-size: 100%;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  #esqsenha{
+    margin-top: 3%;
+  }
+
+  #btnEsqsenha{
+    margin-top: 3%;
+    color:#8D8989;
+  }
+}
+
+  @media (min-width: 1000px){
+    #senha{
+    width: 31.5vw;
+    }
+
+    #msgErro{
+      position: absolute;
+      top: 40%;
+      right: 19%;
+    }
+
+    p{
+      font-size: 1em;
+      color: #e31b36;
+      font-family: Muli;
+    }
+
+}
+
+@media (min-width:1600px){
+
+  #user {
+    width: 18%;
+    justify-content: center;
+    margin-top: -5%;
+  }
+
+  #userpc {
+    width: 17%;
+    justify-content: center;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    float:right;
+  }
+
+  #cadeadopc {
+    width: 18%;
+    justify-content: center;
+    float:left;
+  }
+
+#cadeado1920 {
+  width: 18%;
+  justify-content: center;
+  float:left;
+  margin-left: -37%;
+  margin-top: 2%;
+}
+}

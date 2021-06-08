@@ -1,0 +1,1761 @@
+/* RESET DA PÁGINA */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* rodapé */
+
+  #gabarito, #add_questoes { display: none; }
+
+  #documento1 {display: block;}
+
+  #documento1:checked, #gabarito:checked, #add_questoes:checked { z-index: auto; }
+
+  .documento1, .gabarito, .add_questoes { display: none; }
+
+  #rodape {
+    background-color: white;
+    height: 11%;
+    box-shadow: 0px 0px 10px 1px gray;
+  }
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
+   #rodape ul{
+    display: grid;
+    gap: 3em;
+    grid-template-columns: 25% 25% 25%;
+    margin-left: -2%;
+    margin-top: -2.5%;
+  }
+
+  @media (min-width: 400px){
+
+    /*RESPONSIVIDADE rodape*/
+    #rodape ul {
+      margin-left: 4%;
+      margin-top: -0.5%;
+    }
+  }
+
+  /* fim rodapé */
+
+  /*FORMATAÇÃO CELULAR*/
+
+#titulodoc{
+  margin-top: -1%;
+  margin-bottom: 3%;
+  font-family: "Muli";
+  color: #414141;
+  font-size: 220%;
+}
+
+#btnresposta{
+  box-shadow: none;
+}
+
+#respostaimg{
+  size:50%;
+}
+
+#tituloquest{
+  margin-top: 10%;
+  margin-bottom: 3%;
+  font-family: "Muli";
+  color: #414141;
+  font-size: 175%;
+}
+
+#titulofavori{
+  margin-top: -1%;
+  margin-bottom: 3%;
+  font-family: "Muli";
+  color: #414141;
+  font-size: 220%;
+}
+
+#documentonome{
+  font-family: "Muli";
+  color: #414141;
+  font-size: 130%;
+  margin-right:10%;
+}
+
+#materiaquest{
+  font-family: "Muli";
+  color: #7C6FBF;
+  font-size: 90%;
+  margin-bottom: 2%;
+}
+
+#materiafavori{
+  font-family: "Muli";
+  color: #7C6FBF;
+  font-size: 98%;
+  margin-bottom: 2%;
+}
+
+
+#conteudoquest{
+  font-family: "Muli";
+  color: #414141;
+  font-size: 110%;
+}
+
+#conteudofavori{
+  font-family: "Muli";
+  color: #414141;
+  font-size: 110%;
+}
+
+#favoritarimg{
+  width: 10%;
+  margin-top: -13%;
+  margin-left: -5%;
+  float: left;
+}
+
+#documentoimg{
+  width: 100%;
+}
+
+#backgroundcard{
+  background-color: white;
+  color:white;
+
+}
+
+#modal1{
+  border-radius: 15px 15px;
+  border: 5px solid #7C6FBF;
+}
+
+div#modal1.modal.open {
+  width: 25%;
+  height: 20%!important;
+}
+
+#modal2{
+  border-radius: 15px 15px;
+  border: 5px solid #7C6FBF;
+}
+
+#botao1
+{
+  font-family: "muli";
+  color: #EC0000;
+  background-color: white;
+  margin-top: 6%;
+  margin-left: 5%;
+  border-radius: 15px 15px;
+  border: #7C6FBF ;
+}
+
+#botão2
+{
+  font-family: "muli";
+  background-color: white;
+  color: #DF6C08;
+  margin-top: 6%;
+  margin-left: 2%;
+  border-radius: 15px 15px;
+  border: #7C6FBF ;
+
+}
+
+#gerarpdf
+{
+  font-family: "muli";
+  font-size: 180%;
+  color: #414141;
+  margin-bottom: 7%;
+}
+
+#btn1salvar
+{
+  font-family: "muli";
+  color: #414141;
+}
+
+#labelversoes
+{
+  font-family: "muli";
+  font-size: 105%;
+}
+
+#btn2salvar
+{
+  font-family: "muli";
+  color: #414141;
+}
+
+#gerargabarito
+{
+  margin-top: -6%;
+  font-family: "muli";
+  color: #717175;
+  font-size: 130%;
+  margin-bottom: 2%;
+}
+
+#gerarpdf3cel {
+  margin-top: 10%;
+  margin-bottom: 10%;
+  font-family: "muli";
+  font-size: 120%;
+  color: #717171;
+}
+
+#criarpdfdesk {
+  font-size: 75%;
+  font-family: 'Muli';
+  width: 20%;
+  height: 6%;
+  padding-top: 0.7% !important;
+  background-color: #FFBC2B;
+  border-radius: 40px 40px;
+  margin-bottom: 10%;
+}
+
+#btn1salvar2desk {
+  font-size: 75%;
+  font-family: 'Muli';
+  width: 30%;
+  height: 6%;
+  padding-top: 0.7% !important;
+  background-color: #FFBC2B;
+  border-radius: 40px 40px;
+}
+
+#XML
+{
+  margin-top: 7%;
+  font-family: "muli";
+  color: #717175;
+  font-size: 130%;
+  margin-bottom: 2%;
+}
+
+#modo
+{
+  font-family: "muli";
+  color: #717175;
+  font-size: 98%;
+}
+
+/*MODAL ERRO CEL*/
+
+  div#erro-modal.modal.open {
+    border-radius: 15px 15px;
+    border: #7C6FBF 5px solid;
+    padding: 15px;
+    width: 80%;
+    height: 25%;
+  }
+
+  #btn_fechar_modal_erro {
+    width: 12%;
+    margin-left: 90%!important;
+    margin-top: -1%!important;
+  }
+
+  #erro-modal h6 {
+    display: grid;
+    gap: 0.5em;
+    grid-template-columns: 20% 70%;
+    margin-left: -3%;
+  }
+
+  #erro-modal p {
+    font-family: 'Muli';
+    font-size: 110%;
+    text-align: center;
+    line-height: 150%;
+    margin-left: 11%;
+}
+
+  #img_erro {
+    max-width: 55px;
+    max-height: 55px;
+    width: auto;
+    height: auto;
+    margin-left: 20%;
+  }
+
+  @media (min-width: 400px) {
+    #img_erro {
+      margin-left: 45%;
+    }
+  }
+
+/*FINAL FOPRMATAÇÃO CELULAR*/
+
+
+/*MODAL ERRO DESK*/
+
+  div#erro-modal-desk.modal.open {
+    border-radius: 15px 15px;
+    border: #7C6FBF 5px solid;
+    padding: 15px;
+    width: 30%;
+    height: 25%;
+  }
+
+  #btn_fechar_modal_erro_desk {
+    width: 12%;
+    margin-left: 90%!important;
+    margin-top: -1%!important;
+  }
+
+  #erro-modal-desk h6 {
+    display: grid;
+    gap: 0.5em;
+    grid-template-columns: 20% 70%;
+    margin-left: -3%;
+  }
+
+  #erro-modal-desk p {
+    font-family: 'Muli';
+    font-size: 120%;
+    text-align: center;
+    line-height: 150%;
+    margin-left: 6.7%;
+  }
+
+  #img_erro_desk {
+    max-width: 55px;
+    max-height: 55px;
+    width: auto;
+    height: auto;
+    margin-left: 20%;
+  }
+
+  @media (min-width: 1440px) {
+    #btn_fechar_modal_erro_desk {
+      width: 9%;
+      margin-left: 92%!important;
+    }
+
+    div#erro-modal-desk.modal.open {
+      width: 25%;
+    }
+
+    #img_erro_desk {
+      margin-left: 40%!important;
+    }
+}
+
+
+/*MODAL ERRO CEL*/
+
+  div#erro-modal.modal.open {
+    border-radius: 15px 15px;
+    border: #7C6FBF 5px solid;
+    padding: 15px;
+    width: 80%;
+    height: 25%;
+  }
+
+  #btn_fechar_modal_erro {
+    width: 12%;
+    margin-left: 90%!important;
+    margin-top: -1%!important;
+  }
+
+  #erro-modal h6 {
+    display: grid;
+    gap: 0.5em;
+    grid-template-columns: 20% 70%;
+    margin-left: -3%;
+  }
+
+  #erro-modal p {
+    font-family: 'Muli';
+    font-size: 110%;
+    text-align: center;
+    line-height: 150%;
+    margin-left: 11%;
+}
+
+  #img_erro{
+    max-width: 55px;
+    max-height: 55px;
+    width: auto;
+    height: auto;
+    margin-left: 20%;
+  }
+
+  @media (min-width: 400px) {
+    #img_erro {
+      margin-left: 45%;
+    }
+}
+
+
+
+/* FORMATAÇÃO COMPUTADOR*/
+
+/* rodapé */
+
+  #gabarito2, #add_questoes2 { display: none; }
+
+  #documento2 {display: block;}
+
+  #documento2:checked, #gabarito2:checked, #add_questoes2:checked { z-index: auto; }
+
+  .documento2, .gabarito2, .add_questoes2 { display: none; }
+
+  #rodape2 {
+    background-color: white;
+    height: 11%;
+  }
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
+   #rodape2 ul{
+    display: grid;
+    gap: 3em;
+    grid-template-columns: 25% 25% 25%;
+    margin-left: -2%;
+    margin-top: -2.5%;
+  }
+
+  @media (min-width: 400px){
+
+    /*RESPONSIVIDADE rodape*/
+    #rodape2 ul {
+      margin-left: 4%;
+      margin-top: -0.5%;
+    }
+  }
+
+  #row23{
+    margin-top: 3%;
+    background-color: white;
+    box-shadow: none;
+  }
+
+  #nav-mobile{
+    background-color: white;
+    box-shadow: none;
+  }
+
+  /* fim rodapé */
+
+  #btn-documento2{
+    text-transform: capitalize;
+    font-family: "Muli";
+    font-size: 150%;
+  }
+
+  #btn-add_questoes2{
+    text-transform: capitalize;
+    font-family: "Muli";
+    font-size: 150%;
+  }
+
+  #btn-gabarito2{
+    text-transform: capitalize;
+    font-family: "Muli";
+    font-size: 150%;
+  }
+
+  div#modal1desk.modal.open {
+    width: 40%;
+    height: 60%!important;
+  }
+
+  #gerarpdf3 {
+    margin-top: 10%;
+    margin-bottom: 10%;
+    font-family: "muli";
+    font-size: 120%;
+    color: #717171;
+  }
+
+  #criarpdf {
+    font-size: 75%;
+    font-family: 'Muli';
+    width: 20%;
+    height: 6%;
+    padding-top: 0.7% !important;
+    background-color: #FFBC2B;
+    border-radius: 40px 40px;
+    margin-bottom: 10%;
+  }
+
+  #btn1salvar2 {
+    font-size: 75%;
+    font-family: 'Muli';
+    width: 30%;
+    height: 6%;
+    padding-top: 0.7% !important;
+    background-color: #FFBC2B;
+    border-radius: 40px 40px;
+  }
+
+  #materiafavori2{
+    font-family: "Muli";
+    color: #7C6FBF;
+    font-size: 100%;
+  }
+  #conteudofavori2{
+    font-family: "Muli";
+    color: #414141;
+    font-size: 130%;
+  }
+
+  #favoritarimg2{
+    width: 6%;
+    float: left;
+  }
+
+  #iconeimg2{
+    width: 60%;
+  }
+
+  #documento2{
+    margin-top: 2%;
+  }
+
+  #gabarito2{
+    margin-top: 2%;
+  }
+
+  #add_questoes2{
+    margin-top: 2%;
+  }
+
+  #titulodoc2{
+
+    font-family: "Muli";
+    color: #414141;
+    font-size: 250%;
+  }
+  #tituloquest2{
+
+    font-family: "Muli";
+    color: #414141;
+    font-size: 175%;
+  }
+
+  #titulofavori2{
+
+    font-family: "Muli";
+    color: #414141;
+    font-size: 220%;
+  }
+
+  #materiaquest2{
+    font-family: "Muli";
+    color: #7C6FBF;
+    font-size: 100%;
+    margin-bottom: 2%;
+  }
+
+  #conteudoquest2{
+    font-family: "Muli";
+    color: #414141;
+    font-size: 130%;
+  }
+
+  #modal1desk{
+    border-radius: 15px 15px;
+    border: 5px solid #7C6FBF;
+  }
+
+  #modal2desk {
+    border-radius: 15px 15px;
+    border: 5px solid #7C6FBF;
+  }
+
+  #botao1desk
+  {
+    font-size: 100%;
+    font-family: "muli";
+    color: #EC0000;
+    background-color: white;
+    border-radius: 15px 15px;
+    border: #7C6FBF ;
+    margin-top: 6.5%;
+    float: left;
+  }
+
+  #botão2desk
+  {
+    font-size: 100%;
+    font-family: "muli";
+    background-color: white;
+    color: #DF6C08;
+    border-radius: 15px 15px;
+    border: #7C6FBF ;
+    margin-top: 6.5%;
+    float: right;
+
+  }
+
+  #documentoimg2{
+    width: 100%;
+    float: right;
+  }
+
+  #documentonome2{
+    font-family: "Muli";
+    color: #414141;
+    font-size: 180%;
+    margin-right:10%;
+  }
+
+
+  #gerargabarito2
+  {
+    margin-top: -6%;
+    font-family: "muli";
+    color: #717175;
+    font-size: 130%;
+    margin-bottom: 2%;
+  }
+
+  #XML2
+  {
+    margin-top: 7%;
+    font-family: "muli";
+    color: #717175;
+    font-size: 130%;
+    margin-bottom: 5%;
+  }
+
+  /*MODAL ERRO DESK*/
+
+  div#erro-modal-desk.modal.open {
+    border-radius: 15px 15px;
+    border: #7C6FBF 5px solid;
+    padding: 15px;
+    width: 30%;
+    height: 25%;
+  }
+
+  #btn_fechar_modal_erro_desk {
+    width: 12%;
+    margin-left: 90%!important;
+    margin-top: -1%!important;
+  }
+
+  #erro-modal-desk h6 {
+    display: grid;
+    gap: 0.5em;
+    grid-template-columns: 20% 70%;
+    margin-left: -3%;
+  }
+
+  #erro-modal-desk p {
+    font-family: 'Muli';
+    font-size: 120%;
+    text-align: center;
+    line-height: 150%;
+    margin-left: 6.7%;
+  }
+
+  #img_erro_desk {
+    max-width: 55px;
+    max-height: 55px;
+    width: auto;
+    height: auto;
+    margin-left: 20%;
+  }
+
+  @media (min-width: 1440px) {
+    #btn_fechar_modal_erro_desk {
+      width: 9%;
+      margin-left: 92%!important;
+    }
+
+    div#erro-modal-desk.modal.open {
+      width: 25%;
+    }
+
+    #img_erro_desk {
+      margin-left: 40%!important;
+    }
+}
+
+  @media (min-width: 1024px){
+
+    #btn-documento2{
+      text-transform: capitalize;
+      font-family: "Muli";
+      font-size: 145%;
+      width: 130%;
+      margin-left: 45%;
+    }
+
+    #btn-add_questoes2{
+      text-transform: capitalize;
+      font-family: "Muli";
+      font-size: 150%;
+      width: 130%;
+      margin-left: 15%;
+    }
+
+    #btn-gabarito2{
+      text-transform: capitalize;
+      font-family: "Muli";
+      font-size: 150%;
+      width: 130%;
+      margin-left: 25%;
+    }
+
+    #materiafavori2{
+      margin-top: 2%;
+      font-family: "Muli";
+      color: #7C6FBF;
+      font-size: 100%;
+      margin-bottom: 2%;
+    }
+
+    #conteudofavori2{
+      font-family: "Muli";
+      color: #414141;
+      font-size: 130%;
+    }
+
+    #favoritarimg2{
+      width: 10%;
+      margin-top: -13%;
+      margin-left: -3%;
+      float: left;
+    }
+
+    #iconeimg2{
+      width: 100%;
+      margin-top: 25%;
+    }
+
+    #documentoimg2{
+      margin-top: 16%;
+      width: 200%;
+    }
+
+    #documentonome2{
+      font-family: "Muli";
+      color: #414141;
+      font-size: 150%;
+      margin-right:10%;
+    }
+
+    #botao1desk
+    {
+      font-size:70%;
+      font-family: "muli";
+      color: #EC0000;
+      background-color: white;
+      border-radius: 15px 15px;
+      border: #7C6FBF ;
+      margin-left: 10%;
+    }
+
+    #botão2desk
+    {
+      font-size: 70%;
+      font-family: "muli";
+      background-color: white;
+      color: #DF6C08;
+      border-radius: 15px 15px;
+      border: #7C6FBF ;
+      margin-right: 10%;
+    }
+
+  }
+
+  @media (min-width: 1280px){
+
+    #btn-documento2{
+      text-transform: capitalize;
+      font-family: "Muli";
+      font-size: 145%;
+      width: 130%;
+      margin-left: 95%;
+    }
+
+    #btn-add_questoes2{
+      text-transform: capitalize;
+      font-family: "Muli";
+      font-size: 150%;
+      width: 130%;
+      margin-left: -10%;
+    }
+
+    #btn-gabarito2{
+      text-transform: capitalize;
+      font-family: "Muli";
+      font-size: 150%;
+      width: 130%;
+      margin-left: 45%;
+    }
+
+
+    #favoritarimg2{
+      width: 10%;
+      margin-top: -10%;
+      margin-left: -3%;
+      float: left;
+    }
+
+    #iconeimg2{
+      width: 100%;
+      margin-top: 15%;
+    }
+
+    #botao1desk
+    {
+      font-size:70%;
+      font-family: "muli";
+      color: #EC0000;
+      background-color: white;
+      border-radius: 15px 15px;
+      border: #7C6FBF ;
+      margin-left: 15%;
+    }
+
+    #botão2desk
+    {
+      font-size: 70%;
+      font-family: "muli";
+      background-color: white;
+      color: #DF6C08;
+      border-radius: 15px 15px;
+      border: #7C6FBF ;
+      margin-right: 15%;
+    }
+
+  }
+
+  @media (min-width: 1366px){
+
+    #btn-documento2{
+      text-transform: capitalize;
+      font-family: "Muli";
+      font-size: 145%;
+      width: 130%;
+      margin-left: 95%;
+    }
+
+    #btn-add_questoes2{
+      text-transform: capitalize;
+      font-family: "Muli";
+      font-size: 150%;
+      width: 130%;
+      margin-left: -10%;
+    }
+
+    #btn-gabarito2{
+      text-transform: capitalize;
+      font-family: "Muli";
+      font-size: 150%;
+      width: 130%;
+      margin-left: 45%;
+    }
+
+    #botao1desk
+    {
+      font-size:70%;
+      font-family: "muli";
+      color: #EC0000;
+      background-color: white;
+      border-radius: 15px 15px;
+      border: #7C6FBF ;
+      margin-left: 20%;
+    }
+
+    #botão2desk
+    {
+      font-size: 70%;
+      font-family: "muli";
+      background-color: white;
+      color: #DF6C08;
+      border-radius: 15px 15px;
+      border: #7C6FBF ;
+      margin-right: 20%;
+    }
+
+  }
+
+  @media (min-width: 1600px){
+
+    #btn-documento2{
+      text-transform: capitalize;
+      font-family: "Muli";
+      font-size: 145%;
+      width: 130%;
+      margin-left: 145%;
+    }
+
+    #btn-add_questoes2{
+      text-transform: capitalize;
+      font-family: "Muli";
+      font-size: 150%;
+      width: 130%;
+      margin-left: -10%;
+    }
+
+    #btn-gabarito2{
+      text-transform: capitalize;
+      font-family: "Muli";
+      font-size: 150%;
+      width: 130%;
+      margin-left: 70%;
+    }
+
+    #favoritarimg2{
+      width: 10%;
+      margin-top: -10%;
+      margin-left: -3%;
+      float: left;
+    }
+
+    #iconeimg2{
+      width: 100%;
+      margin-top: 0%;
+    }
+    #documentoimg2{
+      margin-top: 1%;
+      width: 200%;
+    }
+
+    #botao1desk
+    {
+      font-size:80%;
+      font-family: "muli";
+      color: #EC0000;
+      background-color: white;
+      border-radius: 15px 15px;
+      border: #7C6FBF ;
+      margin-left: 23%;
+    }
+
+    #botão2desk
+    {
+      font-size: 80%;
+      font-family: "muli";
+      background-color: white;
+      color: #DF6C08;
+      border-radius: 15px 15px;
+      border: #7C6FBF ;
+      margin-right: 23%;
+    }
+
+  }
+
+  @media (min-width: 1680px){
+
+    #btn-documento2{
+      text-transform: capitalize;
+      font-family: "Muli";
+      font-size: 145%;
+      width: 130%;
+      margin-left: 145%;
+    }
+
+    #btn-add_questoes2{
+      text-transform: capitalize;
+      font-family: "Muli";
+      font-size: 150%;
+      width: 130%;
+      margin-left: -10%;
+    }
+
+    #btn-gabarito2{
+      text-transform: capitalize;
+      font-family: "Muli";
+      font-size: 150%;
+      width: 130%;
+      margin-left: 70%;
+    }
+
+    #documentoimg2{
+      margin-top: 1%;
+      width: 200%;
+    }
+
+    #botao1desk
+    {
+      font-size:95%;
+      font-family: "muli";
+      color: #EC0000;
+      background-color: white;
+      border-radius: 15px 15px;
+      border: #7C6FBF ;
+      margin-left: 23%;
+    }
+
+    #botão2desk
+    {
+      font-size: 95%;
+      font-family: "muli";
+      background-color: white;
+      color: #DF6C08;
+      border-radius: 15px 15px;
+      border: #7C6FBF ;
+      margin-right: 23%;
+    }
+
+  }
+
+  @media (min-width: 1920px){
+
+    #btn-documento2{
+      text-transform: capitalize;
+      font-family: "Muli";
+      font-size: 145%;
+      width: 130%;
+      margin-left: 185%;
+    }
+
+    #btn-add_questoes2{
+      text-transform: capitalize;
+      font-family: "Muli";
+      font-size: 150%;
+      width: 130%;
+      margin-left: -20%;
+    }
+
+    #btn-gabarito2{
+      text-transform: capitalize;
+      font-family: "Muli";
+      font-size: 150%;
+      width: 130%;
+      margin-left: 90%;
+    }
+
+    #favoritarimg2{
+      width: 8%;
+      margin-top: -8%;
+      margin-left: -3%;
+      float: left;
+    }
+
+    #iconeimg2{
+      width: 80%;
+      margin-top: 0%;
+    }
+  }
+  /*FINAL FORMATAÇÃO COMPUTADOR*/
+
+
+/*Dashboard para o computador*/
+
+#retanguloroxo {
+  -webkit-filter: drop-shadow(12px 12px 8px rgba(0, 0, 0, 0.3));
+}
+
+#nav-pc{
+  margin-right: 27%;
+  font-family: 'muli';
+  margin-top: 5.5%;
+  height: 50%;
+}
+
+#questao{
+  margin-top: -3.25%;
+  line-height: 25px;
+  text-align: center;
+  font-size: 19px;
+  position: absolute;
+  margin-left: -44%;
+
+}
+
+#documento{
+  margin-top: -3.25%;
+  line-height:25px;
+  text-align: center;
+  font-size: 19px;
+  position: absolute;
+  margin-left: -27.6%;
+}
+
+#salvos{
+  margin-top: -3.75%;
+  text-align: center;
+  font-size: 20px;
+  position: absolute;
+  margin-left: -10%;
+}
+
+#linha1{
+  height: 65%;
+  margin-top: -4%;
+  position: absolute;
+  margin-left: -30%;
+}
+
+#linha2{
+  height: 65%;
+  margin-top: -4%;
+  position: absolute;
+  margin-left: -13%;
+}
+
+#perfil_pequeno {
+  margin-left: 85%;
+  margin-top: -8%;
+  color: white;
+  position: absolute;
+  font-family: 'Muli';
+  font-size: 20px;
+}
+
+#foto_perfil_pequeno {
+  width: 45%;
+  margin-left: -60%;
+  position: absolute;
+}
+
+#dashboardpc{
+  background-color: #8579C3;
+  height: 150%;
+}
+
+#logopc{
+  width: 8%;
+  margin-top: 0.745%;
+  margin-bottom: 1%;
+  margin-left: 2%;
+}
+
+#nomelogopc {
+  position: absolute;
+  width: 14%;
+  margin-top: 3%;
+  margin-bottom: 5.5%;
+}
+
+@media (min-width: 1200px)
+{
+  #perfil1 {
+    width: 6%;
+    height: 70%;
+    position: absolute;
+    margin-left: 7%;
+    margin-top: -3.5%;
+  }
+
+  #nome {
+    position: absolute;
+    width: 10%;
+    margin-top: -1.5%;
+    margin-bottom: 5.5%;
+    margin-left: 15%;
+  }
+
+  #logopc {
+    width: 6%;
+    margin-top: 0%;
+    margin-bottom: 2%;
+    margin-left: 2%;
+  }
+
+  #nomelogopc {
+    width: 10%;
+    margin-top: 3%;
+    margin-bottom:5%;
+  }
+
+  #questao{
+    line-height:25px;
+    text-align: center;
+    font-size: 20px;
+    position: absolute;
+    margin-left: -43%;
+
+  }
+
+  #documento{
+    line-height: 25px;
+    text-align: center;
+    font-size: 20px;
+    position: absolute;
+    margin-left: -26%;
+  }
+
+  #salvos{
+    text-align: center;
+    font-size: 20px;
+    position: absolute;
+    margin-left: -8%;
+  }
+
+  #linha1{
+    margin-top: -3%;
+    position: absolute;
+    margin-left: -30%;
+  }
+
+  #linha2{
+    margin-top: -3%;
+    position: absolute;
+    margin-left: -11%;
+  }
+
+  #perfil_pequeno {
+    margin-left: 85%;
+    margin-top: -6.5%!important;
+    color: white;
+    position: absolute;
+    font-family: 'Muli';
+    font-size: 20px;
+  }
+
+  #foto_perfil_pequeno {
+    width: 45%;
+    margin-left: -60%;
+    position: absolute;
+  }
+
+}
+
+@media (min-width: 1100px)
+{
+  #nav-pc{
+    margin-right: 27%;
+    font-family: 'muli';
+    margin-top: 4.7%;
+    height: 50%;
+}
+    #logopc {
+      width: 8%;
+      margin-top: 0.5%;
+      margin-bottom: 1%;
+      margin-left: 2%;
+    }
+
+    #nomelogopc {
+      width: 12%;
+      margin-top: 3%;
+      margin-bottom:5%;
+    }
+
+    #questao{
+      line-height:25px;
+      text-align: center;
+      font-size: 20px;
+      position: absolute;
+      margin-left: -45%;
+
+    }
+
+    #documento{
+      line-height:25px;
+      text-align: center;
+      font-size: 20px;
+      position: absolute;
+      margin-left: -27%;
+    }
+
+    #salvos{
+      text-align: center;
+      font-size: 20px;
+      position: absolute;
+      margin-left: -6%;
+    }
+
+    #linha1{
+      margin-top: -3%;
+      position: absolute;
+      margin-left: -31%;
+    }
+
+    #linha2{
+      margin-top: -3%;
+      position: absolute;
+      margin-left: -10%;
+    }
+
+    #perfil_pequeno {
+      margin-left: 85%;
+      margin-top: -7%;
+      color: white;
+      position: absolute;
+      font-family: 'Muli';
+      font-size: 20px;
+    }
+
+    #foto_perfil_pequeno {
+      width: 45%;
+      margin-left: -60%;
+      position: absolute;
+      margin-top: -2%;
+    }
+}
+
+@media (min-width: 1300px)
+{
+  #logopc{
+    width: 6%;
+    margin-top: 0.6%;
+    margin-bottom: 1%;
+    margin-left: 2%;
+  }
+
+  #nomelogopc {
+    position: absolute;
+    width: 10%;
+    margin-top: 2.5%;
+    margin-bottom: 5.5%;
+  }
+
+  #nav-pc{
+    margin-right: 33%;
+    font-family: 'muli';
+    margin-top: 4.0%;
+    height: 50%;
+  }
+
+  #questao{
+    line-height:25px;
+    text-align: center;
+    font-size: 20px;
+    position: absolute;
+    margin-left: -42%;
+    margin-top: -2.5%;
+  }
+
+  #documento{
+    line-height:25px;
+    text-align: center;
+    font-size: 20px;
+    position: absolute;
+    margin-left: -23%;
+    margin-top: -2.5%;
+  }
+
+  #salvos{
+    text-align: center;
+    font-size: 20px;
+    position: absolute;
+    margin-left: -4%;
+    margin-top: -2.5%;
+  }
+
+  #linha1{
+    margin-top: -2.5%;
+    position: absolute;
+    margin-left: -28%;
+    width: 0.2%;
+  }
+
+  #linha2{
+    margin-top: -2.5%;
+    position: absolute;
+    margin-left: -8%;
+    width: 0.2%;
+  }
+
+  #perfil_pequeno {
+    margin-left: 85%;
+    margin-top: -6%!important;
+    color: white;
+    position: absolute;
+    font-family: 'Muli';
+    font-size: 20px;
+  }
+
+  #foto_perfil_pequeno {
+    width: 45%;
+    margin-left: -60%;
+    margin-top: 1%!important;
+    position: absolute;
+  }
+}
+
+@media (min-width: 1600px)
+{
+  #nav-pc{
+    margin-right: 34%;
+    font-family: 'muli';
+    margin-top: 3.5%;
+    height: 50%;
+  }
+
+  #logopc{
+    width: 5.5%;
+    margin-top: 0.4%;
+    margin-bottom: 1%;
+    margin-left: 2%;
+  }
+
+  #nomelogopc {
+    width: 9%;
+    margin-top: 2%;
+    margin-bottom:4.5%;
+  }
+
+  #questao{
+    line-height:25px;
+    text-align: center;
+    font-size: 25px;
+    position: absolute;
+    margin-left: -40%;
+
+  }
+
+  #documento{
+    line-height:25px;
+    text-align: center;
+    font-size: 25px;
+    position: absolute;
+    margin-left: -23%;
+  }
+
+  #salvos{
+    text-align: center;
+    font-size: 25px;
+    position: absolute;
+    margin-left: -4.5%;
+  }
+
+  #linha1{
+    margin-top: -2.5%;
+    position: absolute;
+    margin-left: -27%;
+  }
+
+  #linha2{
+    margin-top: -2.5%;
+    position: absolute;
+    margin-left: -9%;
+  }
+
+  #perfil_pequeno {
+    margin-left: 85%;
+    margin-top: -5%!important;
+    color: white;
+    position: absolute;
+    font-family: 'Muli';
+    font-size: 25px;
+  }
+
+  #foto_perfil_pequeno {
+    width: 45%;
+    margin-left: -60%;
+    margin-top: -5%!important;
+    position: absolute;
+    margin-top: -2%;
+  }
+}
+
+@media (min-width: 1800px)
+{
+  #nav-pc{
+    margin-right: 34%;
+    font-family: 'muli';
+    margin-top: 3.5%;
+    height: 50%;
+  }
+
+  #logopc{
+    width: 5%;
+    margin-top: 0.1%;
+    margin-bottom: 1%;
+    margin-left: 2%;
+  }
+
+  #nomelogopc {
+    width: 8%;
+    margin-top: 1.6%;
+    margin-bottom:4.5%;
+  }
+
+  #questao{
+    line-height:25px;
+    text-align: center;
+    font-size: 25px;
+    position: absolute;
+    margin-left: -39%;
+
+  }
+
+  #documento{
+    line-height:25px;
+    text-align: center;
+    font-size: 25px;
+    position: absolute;
+    margin-left: -23.5%;
+  }
+
+  #salvos{
+    text-align: center;
+    font-size: 25px;
+    position: absolute;
+    margin-left: -5.5%;
+  }
+
+  #linha1{
+    margin-top: -2.5%;
+    position: absolute;
+    margin-left: -28%;
+  }
+
+  #linha2{
+    margin-top: -2.5%;
+    position: absolute;
+    margin-left: -10%;
+  }
+
+  #perfil_pequeno {
+    margin-left: 85%;
+    margin-top: -4.3%!important;
+    color: white;
+    position: absolute;
+    font-family: 'Muli';
+    font-size: 25px;
+  }
+
+  #foto_perfil_pequeno {
+    width: 45%;
+    margin-left: -60%;
+    margin-top: -5.5%!important;
+    position: absolute;
+    margin-top: -2%;
+  }
+}
+
+@media (min-width: 1920px)
+{
+  #nav-pc{
+    margin-right: 34%;
+    font-family: 'muli';
+    margin-top: 3.5%;
+    height: 50%;
+  }
+
+  #logopc{
+    width: 5%;
+    margin-top: 0.1%;
+    margin-bottom: 1%;
+    margin-left: 2%;
+  }
+
+  #nomelogopc {
+    width: 8%;
+    margin-top: 1.6%;
+    margin-bottom:4.5%;
+  }
+
+  #questao{
+    line-height:25px;
+    text-align: center;
+    font-size: 25px;
+    position: absolute;
+    margin-left: -39%;
+
+  }
+
+  #documento{
+    line-height:25px;
+    text-align: center;
+    font-size: 25px;
+    position: absolute;
+    margin-left: -23.5%;
+  }
+
+  #salvos{
+    text-align: center;
+    font-size: 25px;
+    position: absolute;
+    margin-left: -5.5%;
+  }
+
+  #linha1{
+    width: 0.1%;
+    margin-top: -2.5%;
+    position: absolute;
+    margin-left: -28%;
+  }
+
+  #linha2{
+    width: 0.1%;
+    margin-top: -2.5%;
+    position: absolute;
+    margin-left: -10%;
+  }
+
+  #perfil_pequeno {
+    margin-left: 85%;
+    margin-top: -4%!important;
+    color: white;
+    position: absolute;
+    font-family: 'Muli';
+    font-size: 25px;
+  }
+
+  #foto_perfil_pequeno {
+    width: 45%;
+    margin-left: -60%;
+    position: absolute;
+    margin-top: -2%;
+  }
+}
+
+/*Dashboard para o computador final*/
+
+/*Dashboard para o celular*/
+#dashboardcel{
+background-color: #8579C3;
+width: 100%;
+height: 10%;
+margin-left: 0%;
+}
+
+a {
+border-radius: 10px 10px;
+}
+
+#logocel{
+  width: 80%;
+  float: right;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  margin-right: -30%;
+}
+
+#nomelogocel {
+  width: 100%;
+  float: right;
+  margin-top: 25%;
+  margin-bottom: 25%;
+  margin-right: -40%;
+}
+
+.material-icons {
+  color: white;
+  margin-top: 56%;
+  margin-bottom: 54%;
+  margin-left: 35%;
+  font-size: 80px;
+}
+
+#logo {
+  width: 60%;
+  position: absolute;
+  margin-left: 13%;
+  margin-top: 15%
+}
+
+#links_menucel {
+  position: absolute;
+  margin-top: 100%;
+}
+
+#divider {
+  margin-left: 0%;
+  width: 100%;
+  margin-top: 0px;
+}
+
+#saves,
+#document,
+#question,
+#perfil {
+  font-family: 'Muli';
+  font-size: 120%;
+  height: 5%;
+  width: 100%;
+  padding-left: 0%;
+  padding-right: 0%;
+}
+
+#amarelo_pequeno {
+  position: absolute;
+  margin-left: -8%;
+  margin-top: -8%;
+}
+
+#roxo {
+  position: absolute;
+  margin-left: 81.5%;
+  margin-top: 60%;
+}
+
+#roxo_claro {
+  position: absolute;
+  margin-left: -10%;
+  margin-top: 200%;
+}
+
+#amarelo_grande {
+  position: absolute;
+  margin-left: 62%;
+  margin-top: 240%;
+  width: 30%;
+}
+
+#sair {
+  font-family: 'Muli';
+  font-size: 100%;
+  position: absolute;
+  margin-top: 15%;
+  color: #DD636E;
+  margin-left: 50%;
+}
+
+#sair2 {
+  color: #DD636E;
+  margin-left: -100%;
+  margin-top: 40%;
+  position: absolute;
+
+}
+
+
+@media (min-width: 400px){
+
+  #logo {
+    width: 60%;
+    position: absolute;
+    margin-left: 13%;
+    margin-top: 30%
+  }
+
+  #links_menucel {
+    position: absolute;
+    margin-top: 100%;
+  }
+
+  #saves,
+  #document,
+  #question,
+  #perfil {
+    font-family: 'Muli';
+    line-height: 400%;
+    font-size: 120%;
+    height: 5%;
+    width: 100%;
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+
+  #roxo_claro {
+    position: absolute;
+    margin-left: -10%;
+    margin-top: 240%;
+  }
+
+  #amarelo_grande {
+    position: absolute;
+    margin-left: 62%;
+    margin-top: 280%;
+  }
+}
+
+/*Dashboard para o CELULAR FINAL*/
