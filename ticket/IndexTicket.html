@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testando</title>
+    <link rel="stylesheet" href="css-Ticket/Ticket.css">
+    <!-- Materialize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Muli:wght@700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../images/favicon (1).ico" >
+  </head>
+
+  <body>
+
+    <!-- DASHBOARD COMPUTADOR -->
+    <nav class="hide-on-med-and-down navbar-fixed" id="retanguloroxo">
+      <div class="nav-wrapper hide-on-med-and-down" id="dashboardpc">
+
+         <img class= "responsive-img" id = "logopc" src ="../images/logo.png">
+         <img class= "responsive-img" id = "nomelogopc" src ="../images/TestandoNome.png"> </a>
+
+        <ul id="nav-pc" class=" right">
+        </ul>
+
+      </div>
+    </nav>
+
+
+
+    <!-- FORMULÁRIO COMPUTADOR -->
+
+    <div class="row hide-on-med-and-down" id="form">
+          <h1 id="Ticket"> Envie um ticket</h1>
+
+          <div class="input-field col l8 center-align" style= "font-family: 'Muli';">
+            <select>
+              <option value="" disabled selected>Escolha uma solicitação</option>
+              <option value="1">Informações pessoais incorretas</option>
+              <option value="2">Questões não estão sendo salvas</option>
+              <option value="3">Foto de perfil não está aparecendo</option>
+              <option value="4">Outro</option>
+            </select>
+            <label style= "font-family: 'Muli'; color:black;">Tipo de solicitação</label>
+          </div>
+
+          <div class="input-field col l8 center-align">
+            <input placeholder="Escolha o título" id="titulopc" type="text" class="validate">
+            <label for="first_name" style= "font-family: 'Muli'; color:black;">Título</label>
+          </div>
+
+          <div class="input-field col l8 center-align">
+            <textarea placeholder="Descreva sua solicitação" id="textarea1" class="materialize-textarea"></textarea>
+            <label for="textarea1" style= "font-family: 'Muli'; color:black;">Descrição</label>
+          </div>
+
+          <div class="input-field col l8 center-align" style= "font-family: 'Muli'; color:black;">
+            <form action="#" style= "font-family: 'Muli'; color:black;">
+              <div class="file-field input-field">
+                <div class="btn" style= "font-family: 'Muli'; color:white; background-color:#FFBC2B;">
+                  <span >Arquivo</span>
+                  <input type="file" multiple>
+                </div>
+                <div class="file-path-wrapper">
+                  <input class="file-path validate" type="text" placeholder="Anexar arquivo">
+                </div>
+              </div>
+            </form>
+            </div>
+
+            <div class="col l8 center-align" id = "Enviar">
+                <a href="../perfil/indexPerfil.php" class="waves-effect waves-light btn yellow darken-2 hoverable" id = "btnEnviar">Enviar</a>
+            </div>
+
+    </div>
+
+
+    <!-- DASHBOARD CELULAR -->
+
+    <nav class="hide-on-med-and-up navbar-fixed" id="retanguloroxo">
+      <div class="nav-wrapper hide-on-med-and-up" id="dashboardcel">
+        <img class= "responsive-img" id = "nomelogocel" src ="../images/TestandoNome.png">
+         <img class= "responsive-img" id = "logocel" src ="../images/logo.png">
+        <ul id="nav-cel" class="right">
+        </ul>
+
+      </div>
+    </nav>
+
+    <!-- FORMULÁRIO CELULAR -->
+
+    <div class="row hide-on-med-and-up" id="formcel">
+          <h1 id="Ticketcel"> Envie um ticket</h1>
+
+          <div class="input-field col s11 center-align" id="solicitação" style= "font-family: 'Muli'; color:black;">
+            <select>
+              <option value="" disabled selected>Escolha uma solicitação</option>
+              <option value="1">Não consigo me cadastrar no sistema</option>
+              <option value="2">Meu documento não está salvando minhas questões</option>
+              <option value="3">Minha foto de perfil não está aparecendo</option>
+              <option value="4">Outro</option>
+            </select>
+            <label style= "font-family: 'Muli'; color:black;">Tipo de solicitação</label>
+          </div>
+
+          <div class="input-field col s11 center-align">
+            <input placeholder="Escolha o título" id="titulo" type="text" class="validate">
+            <label for="titulo" style= "font-family: 'Muli'; color:black;">Título</label>
+          </div>
+
+          <div class="input-field col s11 center-align">
+            <textarea placeholder="Descreva sua solicitação" id="descrição" class="materialize-textarea"></textarea>
+            <label for="textarea1" style= "font-family: 'Muli'; color:black;">Descrição</label>
+          </div>
+
+          <div class="input-field col s11 center-align" id="arquivo">
+            <form action="#">
+              <div class="file-field input-field">
+                <div class="btn" style= "font-family: 'Muli'; color:white; background-color:#FFBC2B;">
+                  <span>Arquivo</span>
+                  <input type="file" multiple>
+                </div>
+                <div class="file-path-wrapper">
+                  <input class="file-path validate" type="text" placeholder="Anexar arquivo">
+                </div>
+              </div>
+            </form>
+            </div>
+
+            <div class="col s11 center-align" id = "Enviarcel">
+                <a href="https://www.youtube.com/watch?v=m2B6ayYla3g" class="waves-effect waves-light btn yellow darken-2 hoverable" id = "btnEnviarce">Enviar</a>
+            </div>
+
+    </div>
+
+    <a id="sair" class="hide-on-med-and-up" href="../perfil/indexPerfil.php" style=" width: 7%; height: 3%; float: left; margin-top: -180%; margin-left: 1%;"><img class= "responsive-img" id = "xis" src ="../images/fechar.png"></a>
+
+    <a id="sair" class="hide-on-small-only" href="../perfil/indexPerfil.php" style=" width: 3%; float: left; margin-top: -42%; margin-left: 1%;"><img class= "responsive-img" id = "xis" src ="../images/fechar.png"></a>
+
+    <!-- JQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- JavaScript Materialize compilado e minificado -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+
+    $(document).ready(function(){
+    $('select').formSelect();
+  });
+
+  </script>
+
+  </body>
+
+</html>
