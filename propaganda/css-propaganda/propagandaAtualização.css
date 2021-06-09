@@ -1,0 +1,58 @@
+/* RESET DA PÁGINA */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+/*CÓDIGO GERAL DO SITE (tanto para pc quanto celular)*/
+
+/*corpo*/
+body {
+  background: linear-gradient(to bottom, #9684D3, #9785D3, #9785D3, #9785D3, #9785D3, #9785D3, #E3C7E3, #E3C7E3, #E3C7E3, #E3C7E3, #F8E197, #F8E197, #F8E197, #F8E197, #F8E197, #F8E197, #F8E197, #F8E197, #E3C7E3, #E3C7E3, #9684D3, #9785D3, #9785D3);
+  height: 340vh;
+  width: auto;
+  font-size: 30px;
+}
+
+/*CÓDIGO GERAL P/ CELULAR*/
+
+/*imagem da logo p/ celular*/
+#img_logo {
+  width: 30%;
+  margin-top: 4%;
+  margin-left: 4%;
+  -webkit-filter: drop-shadow(12px 12px 8px rgba(0, 0, 0, 0.16));
+}
+
+#login {
+  color: white;
+  float: right;
+  width: 12%;
+  height: 3em;
+  font-size: 70%;
+  border-radius: 40px 40px;
+}
+
+#cadastre_se {
+  color: white;
+  float: right;
+  width: 18%;
+  height: 3em;
+  font-size: 70%;
+  border-radius: 40px 40px;
+}
+
+
+/*RESPONSIVIDADE CELULAR*/
+
+
+
+
+/*CÓDIGO GERAL P/ COMPUTADOR*/
+
+
+
+
+/*RESPONSIVIDADE COMPUTADOR*/
