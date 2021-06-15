@@ -1,0 +1,1588 @@
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body { height:  100vh; }
+
+/*CÓDIGOS QUE ATINGEM O SITE INTEIRO*/
+  #btn-alternativa,
+   #btn-dissertativa{ /*mobile*/
+    width: 35%;
+    color: black;
+    border-radius: 40px 40px;
+    text-transform: capitalize;
+    font-family: 'Muli';
+    font-size: 75%;
+    border-color: black;
+    border-width: 6px;
+    /*top: / right: / bottom: / left:*/
+    padding: 3.5% 0% 3.5% 0%;
+    margin-top: 23%;
+    margin-bottom: 10%;
+  }
+
+  #btn-alternativa { /*mobile*/
+    margin-left: 7%;
+    margin-right: 3%;
+  }
+
+  #btn-alterna-desk,
+   #btn-dissert-desk{ /*desktop*/
+    width: 100% !important;
+    font-family: 'Muli'!important;
+    color: black;
+    border-radius: 40px 40px !important;
+    border-width: 6px !important;
+    border-color: black;
+    /*top: / right: / bottom: / left:*/
+    margin: 20% -15% 2% 30%;
+    padding-top: 2%;
+    padding-bottom: 6%;
+    font-size: 100%;
+    text-transform: capitalize !important;
+  }
+
+  #btn-alterna-desk { margin-left: 45%;} /*desktop*/
+
+  #campo1, #campo2, #campo3, #campo4 {
+    margin-left: 15%;
+    width: 78%;
+  }
+
+  #campo4{
+    margin-bottom: 10%;
+    font-size: 20%;
+  }
+
+  #divimagem{
+  left: 18%;
+  width: 71.5%;
+  margin-top: -4%;
+  text-transform: capitalize;
+  }
+
+  #simbolodiv p { /*mobile*/
+    position: absolute;
+    margin-top: -13.5%;
+    margin-left: 80%;
+    font-size: 65%;
+  }
+
+  #simbolodiv-desk p{ /*desktop*/
+    position: absolute;
+    margin-top: -12.5%;
+    margin-left: 80%;
+    font-size: 105%;
+    color: #9e9e9e;
+  }
+
+  #simbolodiv a { /*mobile*/
+    margin-top: -15%;
+    margin-left: 74%;
+  }
+
+  #simbolodiv-desk a { /*desktop*/
+    margin-top: -14%;
+    margin-left: 83%;
+  }
+
+  #simbolo { width: 30%; }
+
+  div #simbolo1.modal.open, div #simbolo2.modal.open{
+    border-radius: 15px 15px;
+    border: #7C6FBF 5px solid;
+  }
+/* CÓDIGOS QUE ATINGEM O SITE INTEIRO FINAL */
+
+/*MODAL ERRO DESK*/
+
+  div#erro-modal-desk.modal.open {
+    border-radius: 15px 15px;
+    border: #7C6FBF 5px solid;
+    padding: 15px;
+    width: 30%;
+    height: 25%;
+  }
+
+  #btn_fechar_modal_erro_desk {
+    width: 12%;
+    margin-left: 90%!important;
+    margin-top: -1%!important;
+  }
+
+  #erro-modal-desk h6 {
+    display: grid;
+    gap: 0.5em;
+    grid-template-columns: 20% 70%;
+    margin-left: -3%;
+  }
+
+  #erro-modal-desk p {
+    font-family: 'Muli';
+    font-size: 120%;
+    text-align: center;
+    line-height: 150%;
+    margin-left: 6.7%;
+  }
+
+  #img_erro_desk {
+    max-width: 55px;
+    max-height: 55px;
+    width: auto;
+    height: auto;
+    margin-left: 20%;
+  }
+
+  @media (min-width: 1440px) {
+    #btn_fechar_modal_erro_desk {
+      width: 9%;
+      margin-left: 92%!important;
+    }
+
+    div#erro-modal-desk.modal.open {
+      width: 25%;
+    }
+
+    #img_erro_desk {
+      margin-left: 40%!important;
+    }
+}
+
+
+/*MODAL ERRO CEL*/
+
+  div#erro-modal.modal.open {
+    border-radius: 15px 15px;
+    border: #7C6FBF 5px solid;
+    padding: 15px;
+    width: 80%;
+    height: 25%;
+  }
+
+  #btn_fechar_modal_erro {
+    width: 12%;
+    margin-left: 90%!important;
+    margin-top: -1%!important;
+  }
+
+  #erro-modal h6 {
+    display: grid;
+    gap: 0.5em;
+    grid-template-columns: 20% 70%;
+    margin-left: -3%;
+  }
+
+  #erro-modal p {
+    font-family: 'Muli';
+    font-size: 110%;
+    text-align: center;
+    line-height: 150%;
+    margin-left: 11%;
+}
+
+  #img_erro{
+    max-width: 55px;
+    max-height: 55px;
+    width: auto;
+    height: auto;
+    margin-left: 20%;
+  }
+
+  @media (min-width: 400px) {
+    #img_erro {
+      margin-left: 45%;
+    }
+}
+
+/*CÓDIGOS DO JAVASCRIPT*/
+/*DEGRADE MOBILE*/
+  .degrade, .degrade2, .degrade3 {
+    position: absolute;
+    width: 10%;
+    margin-top: -5.5% !important;
+    float: left;
+    background: linear-gradient(to bottom, #D0C7FC, #8F83CD, #7C6FBF);
+  }
+
+  .degrade { height: 100%; }
+
+  .degrade2 {
+    display: none;
+    height: 170% !important;
+  }
+
+  .degrade3 {
+    display: none;
+    height: 185% !important;
+  }
+
+  /*DEGRADE DESKTOP*/
+  .degrade4, .degrade5, .degrade6 {
+    position: absolute;
+    width: 10%;
+    float: left;
+    background: linear-gradient(to bottom, #D0C7FC, #8F83CD, #7C6FBF);
+  }
+
+  .degrade5 {
+    display: none;
+    height: 140%;
+  }
+
+  .degrade6 {
+    display: none;
+    height: 180%;
+  }
+  #alternativa, #dissertativa, #alternativa-desk, #dissertativa-desk { display: none; }
+
+  #alternativa:checked, #dissertativa:checked, #alternativa-desk:checked, #dissertativa-desk:checked{ z-index: auto; }
+
+  .alternativa, .dissertativa, .alternativa-desk, .dissertativa-desk { display: none; }
+  /*CÓDIGOS DO JAVASCRIPT FINAL*/
+
+  /*CAMPOS QUE MUDAM DISSERTATIVA*/
+  #label_resposta { margin-left: 18%; }
+
+  #respostadissertativa /*mobile*/
+  {
+    width: 70%;
+    margin-left: 8%;
+  }
+
+  #respostadissert-desk { /*desktop*/
+    width: 78%;
+    margin-left: 15.7%;
+    margin-top: -2%;
+  }
+
+  #radio_button_dificil2{ /*mobile*/
+    display: grid;
+    gap: 1.5em;
+    grid-template-columns: 20% 25% 10%;
+    margin-top: 10%;
+    margin-left: 16%;
+    }
+
+    #label_dificuldade { /*mobile*/
+      margin-left: 15%;
+      margin-top: -13%;
+    }
+
+    #dificuldade-desk div{ /*desktop*/
+      display: grid;
+      gap: 2em;
+      grid-template-columns: 22.5% 20% 20% 20%;
+      margin-left: 18.9%;
+      }
+
+    #radio_button_priv2 { /* mobile */
+      display: grid;
+      gap: 1em;
+      grid-template-columns: 30%;
+      margin-top: 3%;
+      margin-left: 17%;
+    }
+
+    #label_privacidade { /* mobile */
+      margin-left: 18.5%;
+      margin-top: -12%;
+    }
+
+    #priv_public-desk div{ /*desktop*/
+        display:  grid;
+        gap: 0.16em;
+        grid-template-columns: 20% 15% 15%;
+        margin-left: 17.3%;
+    }
+
+    #privado_desk { /*desktop*/
+        margin-left: 27%;
+    }
+
+    #btn_salvar { /*mobile*/
+      font-size: 75%;
+      padding-top: 0.5%;
+      padding-bottom: 10%;
+      font-family: 'Muli';
+      width: 30%;
+      background-color: #FFBC2B;
+      border-radius: 40px 40px;
+      margin-top: 10%;
+      margin-left: 39%;
+    }
+
+    #btn_salvar-desk2 { /*desktop*/
+      background-color: #FFBC2B;
+      border-radius: 40px 40px;
+      font-size: 90%;
+      font-family: 'Muli';
+      margin-left: 45%;
+      margin-top: 4%;
+      margin-bottom: 5%;
+      width: 10%;
+    }
+  /*FINAL DOS CAMPOS QUE MUDAM DISSERTATIVA*/
+
+  /*CAMPOS QUE MUDAM ALTERNATIVA*/
+  #adicionarCampo { margin-left: 18%; } /*mobile*/
+
+  #adicionarCampo_desk { margin-left: 16%; } /*destop*/
+
+  #alternativa_campo, .conteudoIndividual {/*mobile*/
+    margin-left: 18%;
+    width: 72%;
+    margin-top: -10%;
+  }
+
+  #alternativa_campo_desk, .conteudoIndividual_desk {/*desktop*/
+    margin-left: 16%;
+    width: 80%;
+    margin-top: -5%;
+  }
+
+    #label_resposta2 { /*mobile*/
+      margin-left: -40%;
+      margin-top: 13%;
+      position: absolute;
+    }
+
+    #label_resposta2_desk { /*desktop*/
+      margin-left: -13%;
+      margin-top: 5%;
+      position: absolute;
+    }
+
+    #respostaalternativa { /*mobile*/
+      width: 72%;
+      margin-left: 18%;
+      margin-top: 13%;
+      text-transform: uppercase;
+    }
+
+    #respostaalternativa_desk { /*desktop*/
+      width: 75%;
+      margin-left: 16%;
+      margin-top: 5%;
+      text-transform: uppercase;
+    }
+
+    #radio_button_dificil { /*mobile*/
+      display: grid;
+      gap: 3em;
+      grid-template-columns: 13% 16% 10%;
+      margin-top: 10%;
+      margin-left: 16%;
+      margin-bottom: 7%;
+      }
+
+    #radio_button_dificil_desk { /*desktop*/
+      display: grid;
+      gap: 3em;
+      grid-template-columns: 17% 20% 20%;
+      margin-top: 7%;
+      margin-left: 17%;
+    }
+
+    #label_dificuldade2 { /*mobile*/
+      margin-left: 15%;
+      margin-top: -10%;
+    }
+
+    #label_dificuldade-desk2 { /*desktop*/
+      margin-left: 18%;
+    }
+
+    #radio_button_priv { /*mobile*/
+      display: grid;
+      gap: 1em;
+      grid-template-columns: 30%;
+      margin-top: 5%;
+      margin-left: 16%;
+    }
+
+    #radio_button_priv_desk { /*mobile*/
+      display: grid;
+      gap: 3em;
+      grid-template-columns: 30%;
+      margin-top: 14%;
+      margin-left: 14.8%;
+    }
+
+    #label_privacidade2 { /*mobile*/
+      width: 150%;
+      margin-left: 18%;
+    }
+
+    #btn_salvar-desk{ /*desktop*/
+      background-color: #FFBC2B;
+      border-radius: 40px 40px;
+      font-size: 90%;
+      font-family: 'Muli';
+      margin-left: 45%;
+      margin-top: 5%;
+      width: 15%;
+    }
+  /*FINAL DOS CAMPOS QUE MUDAM ALTERNATIVA*/
+
+  /*MODAL ERRO DESK*/
+
+    div#erro-modal-desk.modal.open {
+      border-radius: 15px 15px;
+      border: #7C6FBF 5px solid;
+      padding: 15px;
+      width: 30%;
+      height: 20%;
+    }
+
+    #btn_fechar_modal_erro_desk {
+      width: 12%;
+      margin-left: 90%!important;
+      margin-top: -1%!important;
+    }
+
+    #erro-modal-desk h6 {
+      display: grid;
+      gap: 0.5em;
+      grid-template-columns: 20% 70%;
+      margin-left: -3%;
+    }
+
+    #erro-modal-desk p {
+      font-family: 'Muli';
+      font-size: 120%;
+      text-align: center;
+      line-height: 150%;
+      margin-left: 6.7%;
+    }
+
+    #img_erro_desk {
+      max-width: 55px;
+      max-height: 55px;
+      width: auto;
+      height: auto;
+      margin-left: 20%;
+    }
+
+    @media (min-width: 1440px) {
+      #btn_fechar_modal_erro_desk {
+        width: 9%;
+        margin-left: 92%!important;
+      }
+
+      div#erro-modal-desk.modal.open {
+        width: 25%;
+      }
+
+      #img_erro_desk {
+        margin-left: 40%!important;
+      }
+  }
+
+
+/*MODAL ERRO CEL*/
+
+  div#erro-modal.modal.open {
+    border-radius: 15px 15px;
+    border: #7C6FBF 5px solid;
+    padding: 15px;
+    width: 80%;
+    height: 25%;
+  }
+
+  #btn_fechar_modal_erro {
+    width: 12%;
+    margin-left: 90%!important;
+    margin-top: -1%!important;
+  }
+
+  #erro-modal h6 {
+    display: grid;
+    gap: 0.5em;
+    grid-template-columns: 20% 70%;
+    margin-left: -3%;
+  }
+
+  #erro-modal p {
+    font-family: 'Muli';
+    font-size: 110%;
+    text-align: center;
+    line-height: 150%;
+    margin-left: 11%;
+}
+
+  #img_erro{
+    max-width: 55px;
+    max-height: 55px;
+    width: auto;
+    height: auto;
+    margin-left: 20%;
+  }
+
+  @media (min-width: 400px) {
+    #img_erro {
+      margin-left: 45%;
+    }
+}
+
+  /*CÓDIGOS DAS CORES DOS BOTÕES QUE MUDAM*/
+    .button-group{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .button-group > button {
+      background-color: transparent;
+      box-shadow: 0px 1.5px 3px rgba(0, 0, 0, 0.3);
+      border: none;
+    }
+
+    .buttonClicked {
+      background-color: #9785D3 !important;
+      box-shadow: 0px 1.5px 3px rgba(0, 0, 0, 0.3);
+      color: white!important;
+    }
+  /*FINAL DOS CÓDIGOS DAS CORES DOS BOTÕES QUE MUDAM*/
+
+  /*MUDAR CORES DAS BORDAS DO TEXTAREA E DO INPUT*/
+  .select-wrapper input.select-dropdown:focus {
+    border-bottom: 1px solid rgba(0, 0, 0, 1)!important;
+  }
+
+  #textarea1{ color: black; }
+
+  textarea .materialize-textarea {
+    font-family: 'Muli';
+    font-size: 8%;
+    color: black;
+  }
+
+  textarea:focus:not([readonly]) {
+    border-bottom: 1px solid rgba(0, 0, 0, 3)!important;
+    box-shadow: 0 0.1px 0 0 rgba(0, 0, 0, 3)!important;
+  }
+  /*FINAL DAS CORES DAS BORDAS DO TEXTAREA E DO INPUT*/
+
+  /*CÓDIGOS PARA MUDAR A FORMATAÇÃO DAS CORES DOS CAMPOS DO MATERIALIZE*/
+  .select-dropdown li.optgroup>span {
+      color: rgba(0,0,0,0.4)!important;
+  }
+
+  .dropdown-content li>span {
+    color: #7C6FBF!important;
+  }
+
+  .select-dropdown li.disabled>span {
+    color: rgba(0,0,0,0.4)!important;
+  }
+
+  .select-wrapper input.select-dropdown {
+    color: #d1d1d1;
+  }
+  /*CÓDIGOS PARA MUDAR A FORMATAÇÃO DAS CORES DOS CAMPOS DO MATERIALIZE FINAL*/
+
+
+  /*FORMATAÇÃO CELULAR*/
+  @media (min-width: 320px){ /* 320px X 480px */
+    body h2{
+      font-size: 190%;
+      position: absolute;
+      font-family: 'Muli';
+      left: 23.5%;
+      top: 12%;
+      margin-top: 5%;
+      margin-left: -8%;
+    }
+
+    .degrade{
+      width: 10%;
+      float: left;
+      margin-top: -8%;
+      background: linear-gradient(to bottom, #D0C7FC, #8F83CD, #7C6FBF);
+      height: 122%;
+    }
+
+    .degrade2 {
+      display: none;
+      height: 197% !important;
+    }
+
+    .degrade3 {
+      display: none;
+      height: 215% !important;
+    }
+    }
+
+  @media (min-width: 360px){ /* 360px X 640px - Moto G4 e Galaxy S5 */
+    .degrade{
+      width: 10%;
+      float: left;
+      margin-top: -5.6%;
+      background: linear-gradient(to bottom, #D0C7FC, #8F83CD, #7C6FBF);
+      height: 108%;
+    }
+
+    .degrade2 { height: 166.5% !important; }
+    .degrade3 { height: 211% !important; }
+  }
+
+  @media (min-width: 375px){ /*375px X 640px*/
+    .degrade{
+      width: 10%;
+      float: left;
+      background: linear-gradient(to bottom, #D0C7FC, #8F83CD, #7C6FBF);
+      height: 100%;
+    }
+
+    .degrade2 { height: 157% !important; }
+    .degrade3 { height: 200% !important; }
+
+    .button-group { margin-top: -2%; }
+  }
+
+  @media (min-width: 411px){
+    .degrade{
+      width: 10%;
+      float: left;
+      margin-top: -5% ;
+      background: linear-gradient(to bottom, #D0C7FC, #8F83CD, #7C6FBF);
+      height: 100%;
+    }
+
+    .degrade2 {
+      display: none;
+      height: 160% !important;
+    }
+
+    .degrade3 {
+      display: none;
+      height: 170% !important;
+    }
+  }
+
+  @media (min-width: 414px){
+    .degrade{
+      width: 10%;
+      float: left;
+      margin-top: -4.9%;
+      background: linear-gradient(to bottom, #D0C7FC, #8F83CD, #7C6FBF);
+      height: 100%;
+    }
+
+    .degrade2 {
+      display: none;
+      height: 155% !important;
+    }
+
+    .degrade3 {
+      display: none;
+      height: 166% !important;
+    }
+  }
+  /*FINAL DA FORMATAÇÃO CELULAR*/
+
+
+  /*FORMATAÇÃO COMPUTADOR*/
+  @media (min-width: 1024px) { /* 1024px X 768px*/
+    body h2{
+      font-size: 190%;
+      position: absolute;
+      font-family: 'Muli';
+      left: 23.5%;
+      top: 12%;
+      margin-top: 5%;
+      margin-left: -8%;
+    }
+
+    h2 { margin-left: 120%; }
+
+    .button-group{ margin-top: 1%; }
+
+    .degrade4 {
+      width: 10%;
+      float: left;
+      margin-top: -2.5%;
+      background: linear-gradient(to bottom, #D0C7FC, #8F83CD, #7C6FBF);
+      height: 100%;
+    }
+
+    .degrade5 {
+      display: none;
+      height: 132% !important;
+    }
+
+    .degrade6 {
+      display: none;
+      height: 200% !important;
+    }
+
+    #simbolodiv p {
+      margin-left: 80%;
+      font-size: 95%;
+      color: #FFC300;
+    }
+
+    #simbolodiv a { margin-left: 5%; }
+
+    #divimagem{
+    left: 18%;
+    width: 63%;
+    margin-top: -9.5%;
+    margin-left: -2%;
+    text-transform: capitalize;
+    }
+
+    #inputimg { width: 60%; }
+
+    #dificuldade-desk div { margin-left: 18.2%; }
+    #priv_public-desk div { margin-left: 16.8%; }
+  }
+
+    @media (min-width: 1280px) { /*1280px X 800px*/
+      .degrade4{
+        width: 10%;
+        float: left;
+        margin-top: -0.5%;
+        background: linear-gradient(to bottom, #D0C7FC, #8F83CD, #7C6FBF);
+        height: 105.5%;
+      }
+
+      .degrade5 {
+        display: none;
+        height: 142% !important;
+      }
+
+      .degrade6 {
+        display: none;
+        height: 206.5% !important;
+      }
+
+      #label_resposta2_desk { margin-left: -10.5% }
+
+      #radio_button_priv_desk { margin-top: 12.5%; }
+
+      #simbolodiv p {
+        margin-top: -12%;
+        position: absolute;
+        margin-left: 88%;
+        font-size: 65%;
+      }
+
+      #simbolodiv a {
+        margin-top: -19.6%;
+        margin-left: 85%;
+      }
+
+      #divimagem{
+      left: 18%;
+      width: 63%;
+      margin-top: -10%;
+      margin-left: -2%;
+      text-transform: capitalize;
+      }
+
+      #dificuldade-desk div { margin-left: 16.8%; }
+      #priv_public-desk div {
+        margin-left: 16.8%;
+        grid-template-columns: 18.5% 15.5% 15%;
+      }
+
+      #btn_salvar-desk { margin-top: 3%; }
+    }
+
+
+    @media (min-width: 1366px){ /*1366px X 768px*/
+      .degrade4{
+        width: 10%;
+        float: left;
+        margin-top: -0.5%;
+        background: linear-gradient(to bottom, #D0C7FC, #8F83CD, #7C6FBF);
+        height: 110%;
+      }
+
+      .degrade5 {
+        display: none;
+        height: 148.5% !important;
+      }
+
+      .degrade6 {
+        display: none;
+        height: 217.5% !important;
+      }
+
+      #label_resposta2_desk { margin-left: -10% }
+
+      #dificuldade-desk div { margin-left: 16%; }
+      #priv_public-desk div { margin-left: 16.5%; }
+    }
+
+    @media (min-width: 1440px){ /*1440px X 900px*/
+
+      #nome-dashboard{
+        margin-top: 5%;
+      }
+
+      .degrade4{
+        width: 10%;
+        float: left;
+        margin-top: -0.5%;
+        background: linear-gradient(to bottom, #D0C7FC, #8F83CD, #7C6FBF);
+        height: 120%;
+      }
+
+      .degrade5 {
+        display: none;
+        height: 160% !important;
+      }
+
+      .degrade6 {
+        display: none;
+        height: 220% !important;
+      }
+
+      #label_resposta2_desk { margin-left: -9.5% }
+
+      #priv_public-desk div {
+        margin-left: 16.8%;
+        grid-template-columns: 17.5% 15.4% 15%;
+      }
+    }
+
+    @media (min-width: 1600px)
+    { /*1600px X 900px*/
+
+      .degrade4{
+        width: 10%;
+        float: left;
+        margin-top: -0.5%;
+        background: linear-gradient(to bottom, #D0C7FC, #8F83CD, #7C6FBF);
+        height: 102%;
+      }
+
+      .degrade5 {
+        display: none;
+        height: 135% !important;
+      }
+
+      .degrade6 {
+        display: none;
+        height: 197% !important;
+      }
+
+      #label_resposta2_desk { margin-left: -8.5% }
+
+      #dificuldade-desk div { margin-left: 15%; }
+      #priv_public-desk div {
+        margin-left: 16.5%;
+        grid-template-columns: 16.5% 15.5% 15%;
+      }
+    }
+  /*FINAL DA FORMATAÇÃO COMPUTADOR*/
+
+
+  /*DASHBOARD CELULAR COMEÇO*/
+  #dashboardcel{
+  background-color: #8579C3;
+  width: 100%;
+  height: 10%;
+  margin-left: 0%;
+  }
+
+  a {
+  border-radius: 10px 10px;
+  }
+
+  #logocel{
+    width: 80%;
+    float: right;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    margin-right: -30%;
+  }
+
+  #nomelogocel {
+    width: 100%;
+    float: right;
+    margin-top: 25%;
+    margin-bottom: 25%;
+    margin-right: -40%;
+  }
+
+  .material-icons {
+    color: white;
+    margin-top: 56%;
+    margin-bottom: 54%;
+    margin-left: 35%;
+    font-size: 80px;
+  }
+
+  #logo {
+    width: 60%;
+    position: absolute;
+    margin-left: 13%;
+    margin-top: 15%
+  }
+
+  #links_menucel {
+    position: absolute;
+    margin-top: 100%;
+  }
+
+  #divider {
+    margin-left: 0%;
+    width: 100%;
+    margin-top: 0px;
+  }
+
+  #saves,
+  #document,
+  #question,
+  #perfil {
+    font-family: 'Muli';
+    font-size: 120%;
+    height: 5%;
+    width: 100%;
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+
+  #amarelo_pequeno {
+    position: absolute;
+    margin-left: -8%;
+    margin-top: -8%;
+  }
+
+  #roxo {
+    position: absolute;
+    margin-left: 81.5%;
+    margin-top: 60%;
+  }
+
+  #roxo_claro {
+    position: absolute;
+    margin-left: -10%;
+    margin-top: 200%;
+  }
+
+  #amarelo_grande {
+    position: absolute;
+    margin-left: 62%;
+    margin-top: 240%;
+    width: 30%;
+  }
+
+  #sair {
+    font-family: 'Muli';
+    font-size: 100%;
+    position: absolute;
+    margin-top: 15%;
+    color: #DD636E;
+    margin-left: 50%;
+  }
+
+  #sair2 {
+    color: #DD636E;
+    margin-left: -100%;
+    margin-top: 40%;
+    position: absolute;
+
+  }
+
+
+  @media (min-width: 400px){
+
+    #logo {
+      width: 60%;
+      position: absolute;
+      margin-left: 13%;
+      margin-top: 30%
+    }
+
+    #links_menucel {
+      position: absolute;
+      margin-top: 100%;
+    }
+
+    #saves,
+    #document,
+    #question,
+    #perfil {
+      font-family: 'Muli';
+      line-height: 400%;
+      font-size: 120%;
+      height: 5%;
+      width: 100%;
+      padding-left: 0%;
+      padding-right: 0%;
+    }
+
+    #roxo_claro {
+      position: absolute;
+      margin-left: -10%;
+      margin-top: 240%;
+    }
+
+    #amarelo_grande {
+      position: absolute;
+      margin-left: 62%;
+      margin-top: 280%;
+    }
+  }
+  /*DASHBOARD CELULAR FINAL*/
+
+  /*DASHBOARD COMPUTADOR COMEÇO*/
+  #retanguloroxo {
+    -webkit-filter: drop-shadow(12px 12px 8px rgba(0, 0, 0, 0.3));
+  }
+
+  #nav-pc{
+    margin-right: 27%;
+    font-family: 'muli';
+    margin-top: 5.5%;
+    height: 50%;
+  }
+
+  #questao{
+    margin-top: -3.25%;
+    line-height: 25px;
+    text-align: center;
+    font-size: 19px;
+    position: absolute;
+    margin-left: -44%;
+  }
+
+  #documento{
+    margin-top: -3.25%;
+    line-height:25px;
+    text-align: center;
+    font-size: 19px;
+    position: absolute;
+    margin-left: -27.6%;
+  }
+
+  #salvos{
+    margin-top: -3.75%;
+    text-align: center;
+    font-size: 20px;
+    position: absolute;
+    margin-left: -10%;
+  }
+
+  #linha1{
+    height: 65%;
+    margin-top: -4%;
+    position: absolute;
+    margin-left: -30%;
+  }
+
+  #linha2{
+    height: 65%;
+    margin-top: -4%;
+    position: absolute;
+    margin-left: -13%;
+  }
+
+  #perfil_pequeno {
+    margin-left: 85%;
+    margin-top: -8%;
+    color: white;
+    position: absolute;
+    font-family: 'Muli';
+    font-size: 20px;
+  }
+
+  #foto_perfil_pequeno {
+    width: 45%;
+    margin-left: -60%;
+    position: absolute;
+  }
+
+  #dashboardpc{
+    background-color: #8579C3;
+    height: 150%;
+  }
+
+  #logopc{
+    width: 8%;
+    margin-top: 0.745%;
+    margin-bottom: 1%;
+    margin-left: 2%;
+  }
+
+  #nomelogopc {
+    position: absolute;
+    width: 14%;
+    margin-top: 3%;
+    margin-bottom: 5.5%;
+  }
+
+  @media (min-width: 1200px)
+  {
+    #perfil1 {
+      width: 6%;
+      height: 70%;
+      position: absolute;
+      margin-left: 7%;
+      margin-top: -3.5%;
+    }
+
+    #nome {
+      position: absolute;
+      width: 10%;
+      margin-top: -1.5%;
+      margin-bottom: 5.5%;
+      margin-left: 15%;
+    }
+
+    #logopc {
+      width: 6%;
+      margin-top: 0%;
+      margin-bottom: 2%;
+      margin-left: 2%;
+    }
+
+    #nomelogopc {
+      width: 10%;
+      margin-top: 3%;
+      margin-bottom:5%;
+    }
+
+    #questao{
+      line-height:25px;
+      text-align: center;
+      font-size: 20px;
+      position: absolute;
+      margin-left: -43%;
+
+    }
+
+    #documento{
+      line-height: 25px;
+      text-align: center;
+      font-size: 20px;
+      position: absolute;
+      margin-left: -26%;
+    }
+
+    #salvos{
+      text-align: center;
+      font-size: 20px;
+      position: absolute;
+      margin-left: -8%;
+    }
+
+    #linha1{
+      margin-top: -3%;
+      position: absolute;
+      margin-left: -30%;
+    }
+
+    #linha2{
+      margin-top: -3%;
+      position: absolute;
+      margin-left: -11%;
+    }
+
+    #perfil_pequeno {
+      margin-left: 85%;
+      margin-top: -6.5%!important;
+      color: white;
+      position: absolute;
+      font-family: 'Muli';
+      font-size: 20px;
+    }
+
+    #foto_perfil_pequeno {
+      width: 45%;
+      margin-left: -60%;
+      position: absolute;
+    }
+
+  }
+
+  @media (min-width: 1100px)
+  {
+    #nav-pc{
+      margin-right: 27%;
+      font-family: 'muli';
+      margin-top: 4.7%;
+      height: 50%;
+  }
+      #logopc {
+        width: 8%;
+        margin-top: 0.5%;
+        margin-bottom: 1%;
+        margin-left: 2%;
+      }
+
+      #nomelogopc {
+        width: 12%;
+        margin-top: 3%;
+        margin-bottom:5%;
+      }
+
+      #questao{
+        line-height:25px;
+        text-align: center;
+        font-size: 20px;
+        position: absolute;
+        margin-left: -45%;
+
+      }
+
+      #documento{
+        line-height:25px;
+        text-align: center;
+        font-size: 20px;
+        position: absolute;
+        margin-left: -27%;
+      }
+
+      #salvos{
+        text-align: center;
+        font-size: 20px;
+        position: absolute;
+        margin-left: -6%;
+      }
+
+      #linha1{
+        margin-top: -3%;
+        position: absolute;
+        margin-left: -31%;
+      }
+
+      #linha2{
+        margin-top: -3%;
+        position: absolute;
+        margin-left: -10%;
+      }
+
+      #perfil_pequeno {
+        margin-left: 85%;
+        margin-top: -7%;
+        color: white;
+        position: absolute;
+        font-family: 'Muli';
+        font-size: 20px;
+      }
+
+      #foto_perfil_pequeno {
+        width: 45%;
+        margin-left: -60%;
+        position: absolute;
+        margin-top: -2%;
+      }
+  }
+
+  @media (min-width: 1300px)
+  {
+    #logopc{
+      width: 6%;
+      margin-top: 0.6%;
+      margin-bottom: 1%;
+      margin-left: 2%;
+    }
+
+    #nomelogopc {
+      position: absolute;
+      width: 10%;
+      margin-top: 2.5%;
+      margin-bottom: 5.5%;
+    }
+
+    #nav-pc{
+      margin-right: 33%;
+      font-family: 'muli';
+      margin-top: 4.0%;
+      height: 50%;
+    }
+
+    #questao{
+      line-height:25px;
+      text-align: center;
+      font-size: 20px;
+      position: absolute;
+      margin-left: -42%;
+      margin-top: -2.5%;
+    }
+
+    #documento{
+      line-height:25px;
+      text-align: center;
+      font-size: 20px;
+      position: absolute;
+      margin-left: -23%;
+      margin-top: -2.5%;
+    }
+
+    #salvos{
+      text-align: center;
+      font-size: 20px;
+      position: absolute;
+      margin-left: -4%;
+      margin-top: -2.5%;
+    }
+
+    #linha1{
+      margin-top: -2.5%;
+      position: absolute;
+      margin-left: -28%;
+      width: 0.2%;
+    }
+
+    #linha2{
+      margin-top: -2.5%;
+      position: absolute;
+      margin-left: -8%;
+      width: 0.2%;
+    }
+
+    #perfil_pequeno {
+      margin-left: 85%;
+      margin-top: -6%!important;
+      color: white;
+      position: absolute;
+      font-family: 'Muli';
+      font-size: 20px;
+    }
+
+    #foto_perfil_pequeno {
+      width: 45%;
+      margin-left: -60%;
+      margin-top: 1%!important;
+      position: absolute;
+    }
+  }
+
+  @media (min-width: 1600px)
+  {
+    #nav-pc{
+      margin-right: 34%;
+      font-family: 'muli';
+      margin-top: 3.5%;
+      height: 50%;
+    }
+
+    #logopc{
+      width: 5.5%;
+      margin-top: 0.4%;
+      margin-bottom: 1%;
+      margin-left: 2%;
+    }
+
+    #nomelogopc {
+      width: 9%;
+      margin-top: 2%;
+      margin-bottom:4.5%;
+    }
+
+    #questao{
+      line-height:25px;
+      text-align: center;
+      font-size: 25px;
+      position: absolute;
+      margin-left: -40%;
+
+    }
+
+    #documento{
+      line-height:25px;
+      text-align: center;
+      font-size: 25px;
+      position: absolute;
+      margin-left: -23%;
+    }
+
+    #salvos{
+      text-align: center;
+      font-size: 25px;
+      position: absolute;
+      margin-left: -4.5%;
+    }
+
+    #linha1{
+      margin-top: -2.5%;
+      position: absolute;
+      margin-left: -27%;
+    }
+
+    #linha2{
+      margin-top: -2.5%;
+      position: absolute;
+      margin-left: -9%;
+    }
+
+    #perfil_pequeno {
+      margin-left: 85%;
+      margin-top: -5%!important;
+      color: white;
+      position: absolute;
+      font-family: 'Muli';
+      font-size: 25px;
+    }
+
+    #foto_perfil_pequeno {
+      width: 45%;
+      margin-left: -60%;
+      margin-top: -5%!important;
+      position: absolute;
+      margin-top: -2%;
+    }
+  }
+
+  @media (min-width: 1800px)
+  {
+    #nav-pc{
+      margin-right: 34%;
+      font-family: 'muli';
+      margin-top: 3.5%;
+      height: 50%;
+    }
+
+    #logopc{
+      width: 5%;
+      margin-top: 0.1%;
+      margin-bottom: 1%;
+      margin-left: 2%;
+    }
+
+    #nomelogopc {
+      width: 8%;
+      margin-top: 1.6%;
+      margin-bottom:4.5%;
+    }
+
+    #questao{
+      line-height:25px;
+      text-align: center;
+      font-size: 25px;
+      position: absolute;
+      margin-left: -39%;
+
+    }
+
+    #documento{
+      line-height:25px;
+      text-align: center;
+      font-size: 25px;
+      position: absolute;
+      margin-left: -23.5%;
+    }
+
+    #salvos{
+      text-align: center;
+      font-size: 25px;
+      position: absolute;
+      margin-left: -5.5%;
+    }
+
+    #linha1{
+      margin-top: -2.5%;
+      position: absolute;
+      margin-left: -28%;
+    }
+
+    #linha2{
+      margin-top: -2.5%;
+      position: absolute;
+      margin-left: -10%;
+    }
+
+    #perfil_pequeno {
+      margin-left: 85%;
+      margin-top: -4.3%!important;
+      color: white;
+      position: absolute;
+      font-family: 'Muli';
+      font-size: 25px;
+    }
+
+    #foto_perfil_pequeno {
+      width: 45%;
+      margin-left: -60%;
+      margin-top: -5.5%!important;
+      position: absolute;
+      margin-top: -2%;
+    }
+  }
+
+  @media (min-width: 1920px)
+  {
+    #nav-pc{
+      margin-right: 34%;
+      font-family: 'muli';
+      margin-top: 3.5%;
+      height: 50%;
+    }
+
+    #logopc{
+      width: 5%;
+      margin-top: 0.1%;
+      margin-bottom: 1%;
+      margin-left: 2%;
+    }
+
+    #nomelogopc {
+      width: 8%;
+      margin-top: 1.6%;
+      margin-bottom:4.5%;
+    }
+
+    #questao{
+      line-height:25px;
+      text-align: center;
+      font-size: 25px;
+      position: absolute;
+      margin-left: -39%;
+
+    }
+
+    #documento{
+      line-height:25px;
+      text-align: center;
+      font-size: 25px;
+      position: absolute;
+      margin-left: -23.5%;
+    }
+
+    #salvos{
+      text-align: center;
+      font-size: 25px;
+      position: absolute;
+      margin-left: -5.5%;
+    }
+
+    #linha1{
+      width: 0.1%;
+      margin-top: -2.5%;
+      position: absolute;
+      margin-left: -28%;
+    }
+
+    #linha2{
+      width: 0.1%;
+      margin-top: -2.5%;
+      position: absolute;
+      margin-left: -10%;
+    }
+
+
+    #perfil_pequeno {
+      margin-left: 85%;
+      margin-top: -4%!important;
+      color: white;
+      position: absolute;
+      font-family: 'Muli';
+      font-size: 25px;
+    }
+
+    #foto_perfil_pequeno {
+      width: 45%;
+      margin-left: -60%;
+      position: absolute;
+      margin-top: -2%;
+    }
+  }
+  /*DASHBOARD COMPUTADOR FINAL*/
