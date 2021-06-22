@@ -1,5 +1,163 @@
+/*Inicialização CSS*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+/*Inicialização CSS final*/
+
+/*Responsividade celular*/
+/*Responsividade celular final*/
+
+/*Responsividade computador*/
+/*Responsividade computador final*/
+
+/*Dashboard celular*/
+#dashboardcel{
+background-color: #8579C3;
+width: 100%;
+height: 10%;
+margin-left: 0%;
+}
+
+a {
+border-radius: 10px 10px;
+}
+
+#logocel{
+  width: 80%;
+  float: right;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  margin-right: -30%;
+}
+
+#nomelogocel {
+  width: 100%;
+  float: right;
+  margin-top: 25%;
+  margin-bottom: 25%;
+  margin-right: -40%;
+}
+
+.material-icons {
+  color: white;
+  margin-top: 56%;
+  margin-bottom: 54%;
+  margin-left: 35%;
+  font-size: 80px;
+}
+
+#logo {
+  width: 60%;
+  position: absolute;
+  margin-left: 13%;
+  margin-top: 15%
+}
+
+#links_menucel {
+  position: absolute;
+  margin-top: 100%;
+}
+
+#divider {
+  margin-left: 0%;
+  width: 100%;
+  margin-top: 0px;
+}
+
+#saves,
+#document,
+#question,
+#perfil {
+  font-family: 'Muli';
+  font-size: 120%;
+  height: 5%;
+  width: 100%;
+  padding-left: 0%;
+  padding-right: 0%;
+}
+
+#amarelo_pequeno {
+  position: absolute;
+  margin-left: -8%;
+  margin-top: -8%;
+}
+
+#roxo {
+  position: absolute;
+  margin-left: 81.5%;
+  margin-top: 60%;
+}
+
+#roxo_claro {
+  position: absolute;
+  margin-left: -10%;
+  margin-top: 200%;
+}
+
+#amarelo_grande {
+  position: absolute;
+  margin-left: 62%;
+  margin-top: 240%;
+  width: 30%;
+}
+
+#sair {
+  font-family: 'Muli';
+  font-size: 100%;
+  position: absolute;
+  margin-top: 15%;
+  color: #DD636E;
+  margin-left: 50%;
+}
+
+#sair2 {
+  color: #DD636E;
+  margin-left: -100%;
+  margin-top: 40%;
+  position: absolute;
+
+}
+
+
+@media (min-width: 400px){
+
+  #logo {
+    width: 60%;
+    position: absolute;
+    margin-left: 13%;
+    margin-top: 30%
+  }
+
+  #links_menucel {
+    position: absolute;
+    margin-top: 100%;
+  }
+
+  #saves,
+  #document,
+  #question,
+  #perfil {
+    font-family: 'Muli';
+    line-height: 400%;
+    font-size: 120%;
+    height: 5%;
+    width: 100%;
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+
+  #roxo_claro {
+    position: absolute;
+    margin-left: -10%;
+    margin-top: 240%;
+  }
+
+  #amarelo_grande {
+    position: absolute;
+    margin-left: 62%;
+    margin-top: 280%;
+  }
+}
+/*Dashboard celular final*/

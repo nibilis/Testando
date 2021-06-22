@@ -7,7 +7,7 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Testando</title>
-      <link rel="stylesheet" href="./css-addquestaoATT/addquestaoATT.css">
+      <link rel="stylesheet" href="./css-addquestao/addquestaoATT.css">
       <link rel="shortcut icon" href="../images/favicon (1).ico" >
       <!-- Inicialização -->
 
@@ -25,19 +25,108 @@
 
       </head>
 
+      <header>
+      </header>
+
       <body>
 
-        <!-- Dashboard -->
-        
-        <!-- Dashboard -->
+        <!-- Dashboard celular -->
+        <div class= "row hide-on-large-only" id= "dashboardcel">
+          <div class="col s2">
+            <ul id="slide-out" class="hide-on-large-only sidenav" style="width:200px;">
+              <li><div class="user-view">
+                  <!-- Botão do menu sanduiche -->
+                  <div class="sanduiche">
 
+                  <!-- Logo do dashboard -->
+                  <img src="../images/logoTestandoNome.png" id="logo">
+                  <!-- Logo do dashboard final-->
 
+                  <ul id="slide-out" class="sidenavClose">
+                    <li><a class="sidenav-close" href="#!" style="position: absolute;"><i class="material-icons" style="position: absolute; margin-left: 160%;font-size: 220%;">menu</i></a></li>
+                  </ul>
 
-      <!-- JQuery CDN -->
+                  <a href="#" data-target="slide-out" class="sidenav-trigger"></a>
+
+                  <!-- Bolinhas coloridas do menu -->
+                  <img src="../images/circulo_amarelo_pequeno.png" id="amarelo_pequeno">
+                  <img src="../images/circulo_roxo.png" id="roxo">
+                  <img src="../images/circulo_roxo_claro.png" id="roxo_claro">
+                  <img src="../images/circulo_amarelo_grande.png" id="amarelo_grande">
+                  <!-- Bolinhas coloridas do menu final-->
+
+                  <!-- Links dentro do menu -->
+                  <ul id="links_menucel">
+
+                    <!-- Link da tela perfil -->
+                    <li><a id="perfil" class=" waves-effect center-align" href="../perfil/indexPerfil.php">Perfil</a></li>
+                    <!-- Link da tela perfil final -->
+
+                    <li><div id="divider" class="divider"></div></li>
+
+                    <!-- Link da tela adicionar questão -->
+                    <li><a id="question" class=" waves-effect center-align" href="../addquestao/indexQuestao.php">Adicionar Questão</a></li>
+                    <!-- Link da tela adicionar questão final-->
+
+                    <li><div id="divider" class="divider"></div></li>
+
+                    <!-- Link da tela adicionar documento -->
+                    <li><a id="document" class="waves-effect center-align" href="../documento/indexDocumento.php">Adicionar Documento</a></li>
+                    <!-- Link da tela adicionar documento final -->
+
+                    <li><div id="divider" class="divider"></div></li>
+
+                    <!-- Link da tela de salvos -->
+                    <li><a id="saves" class="waves-effect center-align" href="../salvos/indexSalvos.php">Salvos</a></li>
+                    <!-- Link da tela de salvos final -->
+
+                    <li><div id="divider" class="divider"></div></li>
+
+                    <!-- Link do botão de sair do site -->
+                    <a id="sair" href="../login/indexLogin.php"><i class="material-icons" id="sair2">exit_to_app</i> Sair </a>
+                    <!-- Link do botão de sair do site final-->
+
+                  </ul>
+                  <!-- Links dentro do menu final-->
+
+                </div>
+                <!-- Botão do menu sanduiche final-->
+              </div>
+            </ul>
+            <a href="#" data-target="slide-out" class="menu sidenav-trigger"><i class=" material-icons" style="font-size: 220%;">menu</i></a>
+          </div>
+
+          <div class="col s1">
+          </div>
+          <div class="col s1">
+          </div>
+          <div class="col s4" >
+            <img class= "responsive-img" id = "nomelogocel" src ="../images/TestandoNome.png">
+          </div>
+          <div class="col s3">
+            <img class= "responsive-img" id = "logocel" src ="../images/logo.png">
+          </div>
+
+        </div>
+        <!-- Dashboard celular final -->
+
+        <!-- Dashboard computador  -->
+        <!-- Dashboard computador final -->
+
+      <!-- JQuery CDN Inicialização -->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <!-- JQuery CDN Inicialização final -->
 
-      <!-- JavaScript Materialize compilado e minificado -->
+      <!-- JavaScript Materialize Inicialização compilado e minificado -->
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <!-- JavaScript Materialize Inicialização compilado e minificado final-->
+
+      <!-- JavaScript inicialização dashboard celular -->
+      <script>
+        $(document).ready(function(){
+          $('.sidenav').sidenav();});
+      </script>
+      <!-- JavaScript inicialização dashboard celular final-->
 
     </body>
 
