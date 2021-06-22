@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang = "pt-br" >
+
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Font web de ícones -->
+        <link href = "https://fonts.googleapis.com/icon?family=Material+Icons" rel = "stylesheet">
+        <link href = "https://fonts.googleapis.com/css2?family=Muli:wght@700&display=swap" rel = "stylesheet">
+
+        <!-- CSS compilado e minificado -->
+        <link type = "text/css" rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" media = "screen"/>
+        <link rel = "stylesheet" href = "css-cadastro/cadastro.css">
+
+        <!--ícone no navegador-->
+        <link rel = "shortcut icon" href = "../images/favicon (1).ico" >
+        <meta name = "theme-color" content = "black">
+        <title>Testando</title>
+    </head>
+
+    <header>
+
+    </header>
+
+    <body>
+
+      <div class = "row">
+        <div class = "linha_lateral col s1 l1"></div>
+
+        <!-- LOGO -->
+        <div class = "logo">
+            <img class = "img-logo responsive-img" src = "../images/LogoTestandoNome.png">
+        </div>
+
+        <!-- SAIR -->
+        <a id = "sair" class = "hide-on-small-only" href = "../propaganda/index.html" style = "float: right; margin-top: -17%; margin-right: 1%;">
+          <img class = "responsive-img" id = "xis" src = "../images/fechar.png">
+        </a>
+
+        <a id = "sair2" class = "hide-on-large-only" href = "../propaganda/index.html" style = "float: right; width:7%; margin-top: -38%; margin-right: 3%;">
+          <img class= "responsive-img" id = "xis" src = "../images/fechar.png">
+        </a>
+
+        <!-- CAMPOS -->
+        <form method = "post">
+
+            <div class = "input-field col s10 l8" id = "nome" >
+              <input class = "flow-text validate" placeholder = "Como se chama?" id = "first_name" type = "text" style = "color:black; font-family: 'Muli';" name="nome">
+            </div>
+
+            <div class = "input-field col s10 l8" id = "cpf" >
+              <input class = "flow-text validate" placeholder = "CPF" id = "numero" type = "text" name = "CPF" maxlength= "14" onkeydown="javascript: fMasc( this, mCPF );">
+            </div>
+
+            <div class="input-field col s10 l4" id="materia">
+              <select id="materiafonte" name="materia">
+
+                  <option>Matéria que leciona</option>
+
+              </select>
+            </div>
+
+        </form>
+
+      </div>
+      
+
+      <!-- JAVASCRIPT -->
+
+      <!-- Mascara para o CPF -->
+      <script type="text/javascript">
+        function fMasc(objeto,mascara)
+        {
+        	 obj = objeto
+        	 masc = mascara
+        	 setTimeout("fMascEx()",1)
+        }
+
+        function fMascEx()
+        {
+        	 obj.value = masc(obj.value)
+        }
+
+        function mCPF(cpf)
+        {
+        		cpf = cpf.replace(/\D/g,"")
+        		cpf = cpf.replace(/(\d{3})(\d)/,"$1.$2")
+        		cpf = cpf.replace(/(\d{3})(\d)/,"$1.$2")
+        		cpf = cpf.replace(/(\d{3})(\d{1,2})$/,"$1-$2")
+        		return cpf
+        }
+      </script>
+
+    </body>
+
+</html>
