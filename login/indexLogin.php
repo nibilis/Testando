@@ -164,7 +164,7 @@
 
       <!-- ESQUECEU SUA SENHA? -->
       <div class="col  s12 center-align hide-on-large-only" id= "esqsenha" style="height: 5%; margin-bottom:4%;">
-          <a href="#erro-modal" class="waves-effect waves-light modal-trigger" id = "btnEsqsenha">Esqueceu sua senha?</a>
+          <a href="indexEsqueceuSenha.php" class="waves-effect waves-light modal-trigger" id = "btnEsqsenha">Esqueceu sua senha?</a>
       </div>
 
       <!-- MODAL ERRO -->
@@ -177,15 +177,7 @@
 
       <!-- ESQUECEU SUA SENHA? DESK-->
       <div class="col l6 center-align hide-on-med-and-down" id= "esqsenhapc" style="height: 5%; margin-top:0%;">
-          <a href="#erro-modal-desk" class="waves-effect waves-light modal-trigger" id = "btnEsqsenha">Esqueceu sua senha?</a>
-      </div>
-
-      <!--MODAL ERRO DESK-->
-      <div class="modal-content">
-        <div id="erro-modal-desk" class="modal hide-on-med-and-down">
-          <a><img class= "responsive-img modal-close" id="btn_fechar_modal_erro_desk" src ="../images/fechar.png"></a>
-          <h6><img class="responsive-img align-center" id="img_erro_desk" src ="../images/manutencao.png"><p>Funcionalidade em desenvolvimento</p></h6>
-        </div>
+          <a href="indexEsqueceuSenha.php" class="waves-effect waves-light modal-trigger" id = "btnEsqsenha">Esqueceu sua senha?</a>
       </div>
 
     </form>
