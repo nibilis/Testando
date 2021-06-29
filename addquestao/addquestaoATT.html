@@ -93,28 +93,47 @@
                 <!-- Botão do menu sanduiche final-->
               </div>
             </ul>
+
+            <!-- Deslize do menu sanduiche-->
             <a href="#" data-target="slide-out" class="menu sidenav-trigger"><i class=" material-icons" style="font-size: 220%;">menu</i></a>
+            <!-- Deslize do menu sanduiche final-->
           </div>
 
           <div class="col s1">
           </div>
           <div class="col s1">
           </div>
+
+          <!-- Logo do testando(nome)-->
           <div class="col s4" >
             <img class= "responsive-img" id = "nomelogocel" src ="../images/TestandoNome.png">
           </div>
+          <!-- Logo do testando(nome) final-->
+
+          <!-- Logo do testando(imagem)-->
           <div class="col s3">
             <img class= "responsive-img" id = "logocel" src ="../images/logo.png">
           </div>
+          <!-- Logo do testando(imagem) final-->
 
         </div>
         <!-- Dashboard celular final -->
 
-        <!-- Dashboard computador  -->
-        <!-- Dashboard computador final -->
+        <!-- Título -->
+        <h1 id="tituloAQ"> Adicionar Questão </h1>
+        <!-- Título final -->
+
+        <!-- Botões alternativa e dissertativa-->
+            <div id="divConteudo">
+                Conteudo
+            </div>
+
+            <button id="btnDissertativa" type="button">Questão Dissertativa</button>
+        <!-- Botões alternativa e dissertativa final-->
 
       <!-- JQuery CDN Inicialização -->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="http://code.jquery.com/jquery-latest.min.js"></script>
       <!-- JQuery CDN Inicialização final -->
 
       <!-- JavaScript Materialize Inicialização compilado e minificado -->
@@ -127,6 +146,18 @@
           $('.sidenav').sidenav();});
       </script>
       <!-- JavaScript inicialização dashboard celular final-->
+
+      <!-- JavaScript botões alternativa e dissertativa-->
+      <script type="text/javascript">
+          $(document).ready(function (e) {
+              $("#divConteudo").hide();
+
+              $("#btnDissertativa").click(function (e) {
+                  $("#divConteudo").toggle();
+              });
+          });
+      </script>
+      <!-- JavaScript botões alternativa e dissertativa final-->
 
     </body>
 

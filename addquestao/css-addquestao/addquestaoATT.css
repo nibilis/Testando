@@ -6,11 +6,13 @@
 }
 /*Inicialização CSS final*/
 
-/*Responsividade celular*/
-/*Responsividade celular final*/
-
 /*Responsividade computador*/
 /*Responsividade computador final*/
+
+/*CELULAR*/
+
+/*Responsividade celular*/
+/*Responsividade celular final*/
 
 /*Dashboard celular*/
 #dashboardcel{
@@ -161,3 +163,15 @@ border-radius: 10px 10px;
   }
 }
 /*Dashboard celular final*/
+
+/*Estilização celular*/
+
+/*Título celular*/
+#tituloAQ{
+  font-family: "Muli";
+  font-size: 170%;
+  color: #413F3F;
+}
+/*Título celualr final*/
+
+/*Estilização celular final*/
