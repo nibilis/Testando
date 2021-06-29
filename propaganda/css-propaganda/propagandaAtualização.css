@@ -67,7 +67,7 @@ body {
   font-size: 2.7em;
 }
 
-/*SEÇÃO 2*/
+/*SEÇÃO 2 - Parte roxa*/
 /*seção que abrange a seção 2*/
 #texto-secao2roxo{
   margin-top: 5em;
@@ -76,7 +76,7 @@ body {
 #conjuntoroxo{
   width: 45%;
 }
-/* Retângulozinho roxo que antecede a frase */
+/*Retângulozinho roxo que antecede a frase*/
 #roxo {
   width: 2.5%;
   margin-top: 14%;
@@ -100,11 +100,12 @@ body {
   font-family: 'Muli';
   line-height: 1.3em;
   font-size: 1.3em;
-  margin-left: 20%;
+  float: right;
+  margin-right: 6%;
   margin-top: -13%;
-  width: 80%;
+  width: 70%;
 }
-
+/*Botão comece já seção roxa*/
 #comeceja a {
   text-decoration: none;
   border-radius: 80px 80px;
@@ -117,6 +118,57 @@ body {
   padding-bottom: 2%;
   padding-left: 6.5%;
   margin-top: 4%;
+  width: 30%;
+}
+
+/*SEÇÃO 2 - Parte amarela*/
+/*seção que abrange a seção 2*/
+#conjuntoamarelo {
+  float: right;
+  width: 45%;
+}
+/*Retângulozinho roxo que antecede a frase*/
+#amarelo{
+  float: left;
+  width: 2.5%;
+  margin-left: 6%;
+  margin-top: 15%;
+}
+/*frase depois do retângulozinho*/
+#texto-secao2amarelo h4 {
+  font-family: 'Muli';
+  font-size: 1.5em;
+  margin-left: 11%;
+  padding-top: 15%;
+  color: #393838;
+  width: 41%;
+}
+/*frase abaixo do retângulozinho*/
+#texto-secao2amarelo h5 {
+  color: #707070;
+  font-family: 'Muli';
+  line-height: 1.3em;
+  font-size: 1.3em;
+  width: 75%;
+  margin-top: 9.5%;
+  margin-left: 7%;
+  position: absolute;
+}
+/*Botão comece já seção amarela*/
+#comeceja2 a {
+  text-decoration: none;
+  border-radius: 80px 80px;
+  color: white;
+  font-family: 'Muli';
+  font-size: 1em;
+  border-style: none;
+  margin-left: 36%;
+  margin-top: 15%;
+  margin-bottom: 10%;
+  padding-left: 6.5%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  background-color: #9684D3;
   width: 30%;
 }
 
