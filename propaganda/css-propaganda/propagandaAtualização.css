@@ -15,18 +15,33 @@ body {
   width: auto;
   font-size: 30px;
 }
+/*BOTÕES COMECE JÁ*/
+  a {
+  text-decoration: none;
+  border-radius: 80px 80px;
+  color: white;
+  font-family: 'Muli';
+  font-size: 1em;
+  border-style: none;
+  margin-left: 36%;
+  margin-top: 10%;
+  padding-left: 6.5%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  width: 30%;
+}
 
 /*CÓDIGO GERAL P/ CELULAR*/
 
 /*SEÇÃO 1*/
 /*imagem da logo p/ celular*/
-#img-logo {
+.img-logo {
   width: 60%;
   margin-left: 11%;
   -webkit-filter: drop-shadow(12px 12px 8px rgba(0, 0, 0, 0.16));
 }
 /*botão login*/
-#login {
+.login {
   color: white;
   float: right;
   width: 100%;
@@ -38,7 +53,7 @@ body {
   margin-top: 10%;
 }
 /*botão cadastre-se*/
-#cadastre-se {
+.cadastre-se {
   color: white;
   float: right;
   width: 100%;
@@ -50,41 +65,42 @@ body {
   margin-top: 10%;
 }
 /*grid da logo com os botões*/
-#grid-secao-1 {
+.grid-secao-1 {
   display: grid;
   gap: 1.5em;
   grid-template-columns: 45% 20% 20%;
   margin-top: 7%;
+  margin-right: 5%;
 }
 /*frases da seção 1*/
-#frases-secao-1 {
+.frases-secao-1 {
   margin-left: 7%;
   color: white;
   margin-right: 7%;
 }
 /*frase principal da seção 1*/
-#secao-1 h1{
+.secao-1 h1{
   font-size: 2.7em;
 }
 
 /*SEÇÃO 2 - Parte roxa*/
 /*seção que abrange a seção 2*/
-#texto-secao2roxo{
+.texto-secao2roxo{
   margin-top: 5em;
 }
 /*imagem*/
-#conjuntoroxo{
+.conjuntoroxo{
   width: 45%;
 }
 /*Retângulozinho roxo que antecede a frase*/
-#roxo {
+.roxo {
   width: 2.5%;
   margin-top: 14%;
   margin-left: 2%;
   float: right;
 }
 /*frase depois do retângulozinho*/
-#texto-secao2roxo h4 {
+.texto-secao2roxo h4 {
   font-family: 'Muli';
   float: right;
   margin-left: 2%;
@@ -95,7 +111,7 @@ body {
   color: #393838;
 }
 /*frase abaixo do retângulozinho*/
-#texto-secao2roxo h5 {
+.texto-secao2roxo p {
   color: #707070;
   font-family: 'Muli';
   line-height: 1.3em;
@@ -105,37 +121,22 @@ body {
   margin-top: -13%;
   width: 70%;
 }
-/*Botão comece já seção roxa*/
-#comeceja a {
-  text-decoration: none;
-  border-radius: 80px 80px;
-  color: white;
-  font-family: 'Muli';
-  font-size: 1em;
-  border-style: none;
-  margin-left: 35%;
-  padding-top: 2%;
-  padding-bottom: 2%;
-  padding-left: 6.5%;
-  margin-top: 4%;
-  width: 30%;
-}
 
 /*SEÇÃO 2 - Parte amarela*/
 /*seção que abrange a seção 2*/
-#conjuntoamarelo {
+.conjuntoamarelo {
   float: right;
   width: 45%;
 }
 /*Retângulozinho roxo que antecede a frase*/
-#amarelo{
+.amarelo{
   float: left;
   width: 2.5%;
   margin-left: 6%;
   margin-top: 15%;
 }
 /*frase depois do retângulozinho*/
-#texto-secao2amarelo h4 {
+.texto-secao2amarelo h4 {
   font-family: 'Muli';
   font-size: 1.5em;
   margin-left: 11%;
@@ -144,7 +145,7 @@ body {
   width: 41%;
 }
 /*frase abaixo do retângulozinho*/
-#texto-secao2amarelo h5 {
+.texto-secao2amarelo p {
   color: #707070;
   font-family: 'Muli';
   line-height: 1.3em;
@@ -155,21 +156,42 @@ body {
   position: absolute;
 }
 /*Botão comece já seção amarela*/
-#comeceja2 a {
-  text-decoration: none;
-  border-radius: 80px 80px;
-  color: white;
+.comeceja2 a {
+  background-color: #9684D3;
+  margin-top: 20%;
+}
+
+/*SEÇÃO 3*/
+.branco1 img,
+.branco2 img,
+.branco3 img{
+  width: 30%;
+  /* superior | direita | inferior | esquerda */
+  margin: -10% 0% 0% 7%;
+}
+.white{
+  /* superior | direita | inferior | esquerda */
+  margin: 20% 10% 1% 10%;
+}
+.white h1{
+  text-align: center;
+  font-size: 1.7em;
   font-family: 'Muli';
+}
+.white p{
+  text-align: center;
+  color: #707070;
+  font-size: 1.4em;
+  font-family: 'Muli';
+}
+
+.parteamarela a{
   font-size: 1em;
-  border-style: none;
-  margin-left: 36%;
-  margin-top: 15%;
-  margin-bottom: 10%;
-  padding-left: 6.5%;
   padding-top: 2%;
   padding-bottom: 2%;
+  width: 35%;
   background-color: #9684D3;
-  width: 30%;
+  margin: 7% 0% 7% 32%;
 }
 
 
