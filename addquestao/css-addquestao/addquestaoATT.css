@@ -6,27 +6,25 @@
 }
 /*Inicialização CSS final*/
 
-/*Responsividade computador*/
-/*Responsividade computador final*/
-
-/*CELULAR*/
-
-/*Responsividade celular*/
-/*Responsividade celular final*/
-
 /*Dashboard celular*/
-#dashboardcel{
-background-color: #8579C3;
-width: 100%;
-height: 10%;
-margin-left: 0%;
+
+.row{
+  margin-left: 0%;
+  margin-bottom: 0%!important;
+}
+
+.dashboardcel{
+  background-color: #8579C3;
+  width: 100%;
+  height: 10%;
+  margin-left: 0%;
 }
 
 a {
 border-radius: 10px 10px;
 }
 
-#logocel{
+.logocel{
   width: 80%;
   float: right;
   margin-top: 10%;
@@ -34,7 +32,7 @@ border-radius: 10px 10px;
   margin-right: -30%;
 }
 
-#nomelogocel {
+.nomelogocel {
   width: 100%;
   float: right;
   margin-top: 25%;
@@ -50,28 +48,28 @@ border-radius: 10px 10px;
   font-size: 80px;
 }
 
-#logo {
+.logo {
   width: 60%;
   position: absolute;
   margin-left: 13%;
   margin-top: 15%
 }
 
-#links_menucel {
+.links_menucel {
   position: absolute;
   margin-top: 100%;
 }
 
-#divider {
+.divider {
   margin-left: 0%;
   width: 100%;
   margin-top: 0px;
 }
 
-#saves,
-#document,
-#question,
-#perfil {
+.saves,
+.document,
+.question,
+.perfil {
   font-family: 'Muli';
   font-size: 120%;
   height: 5%;
@@ -80,32 +78,32 @@ border-radius: 10px 10px;
   padding-right: 0%;
 }
 
-#amarelo_pequeno {
+.amarelo_pequeno {
   position: absolute;
   margin-left: -8%;
   margin-top: -8%;
 }
 
-#roxo {
+.roxo {
   position: absolute;
   margin-left: 81.5%;
   margin-top: 60%;
 }
 
-#roxo_claro {
+.roxo_claro {
   position: absolute;
   margin-left: -10%;
   margin-top: 200%;
 }
 
-#amarelo_grande {
+.amarelo_grande {
   position: absolute;
   margin-left: 62%;
   margin-top: 240%;
   width: 30%;
 }
 
-#sair {
+.sair {
   font-family: 'Muli';
   font-size: 100%;
   position: absolute;
@@ -114,7 +112,7 @@ border-radius: 10px 10px;
   margin-left: 50%;
 }
 
-#sair2 {
+.sair2 {
   color: #DD636E;
   margin-left: -100%;
   margin-top: 40%;
@@ -125,22 +123,22 @@ border-radius: 10px 10px;
 
 @media (min-width: 400px){
 
-  #logo {
+  .logo {
     width: 60%;
     position: absolute;
     margin-left: 13%;
     margin-top: 30%
   }
 
-  #links_menucel {
+  .links_menucel {
     position: absolute;
     margin-top: 100%;
   }
 
-  #saves,
-  #document,
-  #question,
-  #perfil {
+  .saves,
+  .document,
+  .question,
+  .perfil {
     font-family: 'Muli';
     line-height: 400%;
     font-size: 120%;
@@ -150,13 +148,13 @@ border-radius: 10px 10px;
     padding-right: 0%;
   }
 
-  #roxo_claro {
+  .roxo_claro {
     position: absolute;
     margin-left: -10%;
     margin-top: 240%;
   }
 
-  #amarelo_grande {
+  .amarelo_grande {
     position: absolute;
     margin-left: 62%;
     margin-top: 280%;
@@ -167,11 +165,47 @@ border-radius: 10px 10px;
 /*Estilização celular*/
 
 /*Título celular*/
-#tituloAQ{
+.tituloAQ{
   font-family: "Muli";
   font-size: 170%;
   color: #413F3F;
 }
 /*Título celualr final*/
 
+/*Linha lateral*/
+.lateralcel{
+  margin-left: -14.8%;
+}
+/*Linha lateral final*/
+
 /*Estilização celular final*/
+
+/*----------------------------------------------------------------------------------*/
+
+/*Responsividade computador*/
+
+/*computador 1280x800*/
+/*computador 1280x800 final*/
+
+/*computador 1366x768*/
+/*computador 1366x768 final*/
+
+/*computador 1920x1080*/
+/*computador 1920x1080 final*/
+
+/*Responsividade computador final*/
+
+/*CELULAR*/
+
+/*Responsividade celular*/
+
+/*celular 360x680*/
+/*celular 360x680 final*/
+
+/*celular 375x667*/
+/*celular 375x667 final*/
+
+/*celular 414x896*/
+/*celular 414x896 final*/
+
+/*Responsividade celular final*/
