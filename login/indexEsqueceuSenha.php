@@ -30,7 +30,7 @@
       </nav>
     </header> -->
 
-    <form class="login-form" method="post">
+    <form action="indexEsqueceuSenha.php" class="login-form" method="post">
 		<h2 class="form-title">Mudança de Senha</h2>
     <div class="input-field col  l4 center-align hide-on-med-and-down">
       <input placeholder="E-mail" id="Email" type="email" name="email">
