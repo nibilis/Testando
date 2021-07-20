@@ -1,3 +1,5 @@
+<?php require_once "../Classes/ControleDadosUsuario.php"; ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>

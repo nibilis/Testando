@@ -1,10 +1,11 @@
-<?php 
+<?php
 require_once'DataBase.php';
 $u = new DataBase;
 
 $email = "";
 $name = "";
 $errors = array();
+$con = mysqli_connect("localhost","root","","testando");
 
     /*if user click verification code submit button
     if(isset($_POST['check'])){
@@ -36,31 +37,31 @@ $errors = array();
     //Caso o usuário clique no botão enviar da tela de mudança de senha
     if(isset($_POST['email'])){
         $u->conectar();
-        $email = mysqli_real_escape_string($pdo, $_POST['email']);
-        $check_email = "SELECT * FROM usuario_professor WHERE email='$email'";
+        $email = mysqli_real_escape_string($con, $_POST['email']);
+        $check_email = "SELECT * FROM usuario_professor WHERE Email='$email'";
         $run_sql = mysqli_query($con, $check_email);
         if(mysqli_num_rows($run_sql) > 0){
-            $code = rand(999999, 111111);
-            $insert_code = "UPDATE usertable SET code = $code WHERE email = '$email'";
-            $run_query =  mysqli_query($con, $insert_code);
+            $codigo = rand(999999, 111111);
+            $insert_codigo = "UPDATE usuario_professor SET Codigo = $codigo WHERE email = '$email'";
+            $run_query =  mysqli_query($con, $insert_codigo);
             if($run_query){
-                $subject = "Password Reset Code";
-                $message = "Your password reset code is $code";
-                $sender = "From: shahiprem7890@gmail.com";
-                if(mail($email, $subject, $message, $sender)){
-                    $info = "We've sent a passwrod reset otp to your email - $email";
+                $assunto = "Código para mudança de senha";
+                $mensagem = "O seu código para mudar a senha é: $codigo";
+                $remetente = "De: EquipeTestando@gmail.com";
+                if(mail($email, $assunto, $mensagem, $remetente)){
+                    $info = "Nós enviamos um código para o seu e-mail. - $email";
                     $_SESSION['info'] = $info;
                     $_SESSION['email'] = $email;
-                    header('location: reset-code.php');
+                    header('location: ../login/indexCodigoSenha.php');
                     exit();
                 }else{
-                    $errors['otp-error'] = "Failed while sending code!";
+                    echo "Erro ao enviar o código.";
                 }
             }else{
-                $errors['db-error'] = "Something went wrong!";
+                echo "Algo deu errado :(";
             }
         }else{
-            $errors['email'] = "This email address does not exist!";
+            echo "Esse endereço de email não existe.";
         }
     }
 
@@ -84,7 +85,7 @@ $errors = array();
     }
 
     //if user click change password button
-    
+
     if(isset($_POST['change-password'])){
         $_SESSION['info'] = "";
         $password = mysqli_real_escape_string($con, $_POST['password']);
