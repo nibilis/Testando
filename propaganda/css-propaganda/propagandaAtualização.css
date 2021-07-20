@@ -10,8 +10,8 @@
 
 /*corpo*/
 body {
-  background: linear-gradient(to bottom, #9684D3, #9785D3, #b49fd9, #E3C7E3, #E3C7E3, #ead1c6, #F8E197, #F8E197, #F8E197, #F8E197, #F8E197, #F8E197, #F8E197, #F8E197, #E3C7E3, #E3C7E3, #9684D3, #9684D3);
-  height: 340vh;
+  background: linear-gradient(to bottom, #9684D3, #9785D3, #b49fd9, #E3C7E3, #ead1c6, #F8E197, #F8E197, #F8E197, #F8E197, #F8E197, #F8E197, #F8E197, #F8E197, #F8E197, #E3C7E3, #E3C7E3, #9684D3, #9684D3);
+  height: 400vh;
   width: auto;
   font-size: 30px;
 }
@@ -162,36 +162,38 @@ body {
 }
 
 /*SEÇÃO 3*/
+/*as 3 imagens dos quadrados brancos*/
 .branco1 img,
 .branco2 img,
 .branco3 img{
   width: 30%;
   /* superior | direita | inferior | esquerda */
-  margin: -10% 0% 0% 7%;
+  margin: -10% 0% 0% 1%;
 }
+/*os quadrados brancos*/
 .white{
   /* superior | direita | inferior | esquerda */
   margin: 20% 10% 1% 10%;
+  padding: 0% 2% 7% 2%;
 }
+/*título dos quadrados brancos*/
 .white h1{
   text-align: center;
   font-size: 1.7em;
   font-family: 'Muli';
 }
+/*texto dos quadrados brancos*/
 .white p{
   text-align: center;
   color: #707070;
-  font-size: 1.4em;
+  font-size: 1.3em;
   font-family: 'Muli';
 }
-
+/*botão comece já roxo*/
 .parteamarela a{
-  font-size: 1em;
-  padding-top: 2%;
-  padding-bottom: 2%;
-  width: 35%;
+  padding-right: 6%;
   background-color: #9684D3;
-  margin: 7% 0% 7% 32%;
+  margin-bottom: 10%;
 }
 
 
