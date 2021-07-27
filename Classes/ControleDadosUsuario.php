@@ -4,11 +4,13 @@ $u = new DataBase;
 
 $email = "";
 $name = "";
-$errors = array();
+$erros = array();
 $con = mysqli_connect("localhost","root","","testando");
 
-    /*if user click verification code submit button
-    if(isset($_POST['check'])){
+session_start();
+
+    //Caso o usuário clique no botão "enviar" na tela de inserir o código
+    /*if(isset($_POST['check'])){
         $_SESSION['info'] = "";
         $otp_code = mysqli_real_escape_string($con, $_POST['otp']);
         $check_code = "SELECT * FROM usertable WHERE code = $otp_code";
@@ -27,10 +29,10 @@ $con = mysqli_connect("localhost","root","","testando");
                 header('location: home.php');
                 exit();
             }else{
-                $errors['otp-error'] = "Failed while updating code!";
+                $erros['otp-error'] = "Failed while updating code!";
             }
         }else{
-            $errors['otp-error'] = "You've entered incorrect code!";
+            $erros['otp-error'] = "You've entered incorrect code!";
         }
     }*/
 
@@ -48,7 +50,8 @@ $con = mysqli_connect("localhost","root","","testando");
                 $assunto = "Código para mudança de senha";
                 $mensagem = "O seu código para mudar a senha é: $codigo";
                 $remetente = "De: EquipeTestando@gmail.com";
-                if(mail($email, $assunto, $mensagem, $remetente)){
+                //if(mail($email, $assunto, $mensagem, $remetente)){
+                if(isset($email)){
                     $info = "Nós enviamos um código para o seu e-mail. - $email";
                     $_SESSION['info'] = $info;
                     $_SESSION['email'] = $email;
@@ -80,7 +83,7 @@ $con = mysqli_connect("localhost","root","","testando");
             header('location: new-password.php');
             exit();
         }else{
-            $errors['otp-error'] = "You've entered incorrect code!";
+            $erros['otp-error'] = "You've entered incorrect code!";
         }
     }
 
@@ -91,7 +94,7 @@ $con = mysqli_connect("localhost","root","","testando");
         $password = mysqli_real_escape_string($con, $_POST['password']);
         $cpassword = mysqli_real_escape_string($con, $_POST['cpassword']);
         if($password !== $cpassword){
-            $errors['password'] = "Confirm password not matched!";
+            $erros['password'] = "Confirm password not matched!";
         }else{
             $code = 0;
             $email = $_SESSION['email']; //getting this email using session
@@ -103,7 +106,7 @@ $con = mysqli_connect("localhost","root","","testando");
                 $_SESSION['info'] = $info;
                 header('Location: password-changed.php');
             }else{
-                $errors['db-error'] = "Failed to change your password!";
+                $erros['db-error'] = "Failed to change your password!";
             }
         }
     }*/
