@@ -135,14 +135,30 @@
         <!-- Título final -->
 
         <!-- Botões alternativa e dissertativa-->
-            <div id="divConteudo">
-                Conteudo
+
+        <div class="row">
+
+            <div class="col s6">
+            <button href="#alternativa" id="btnDissertativa" type="button" value="ok" target="_self" class="waves-effect waves-light btn ">Questão alternativa</button>
             </div>
 
-            <button id="btnDissertativa" type="button">Questão Dissertativa</button>
+            <div class="col s6">
+            <button href="#dissertativa" id="btnAlternativa" type="button" value="ok" target="_self" class="waves-effect waves-light btn ">Questão dissertativa</button>
+            </div>
+
+            <div id="divConteudo">
+                Conteudo 1
+            </div>
+
+            <div id="divConteudo2">
+                Conteudo 2
+            </div>
+        </div>
+
         <!-- Botões alternativa e dissertativa final-->
         </div>
         </div>
+
 
 
       <!-- JQuery CDN Inicialização -->
@@ -168,6 +184,16 @@
 
               $("#btnDissertativa").click(function (e) {
                   $("#divConteudo").toggle();
+              });
+          });
+      </script>
+
+      <script type="text/javascript">
+          $(document).ready(function (e) {
+              $("#divConteudo2").hide();
+
+              $("#btnAlternativa").click(function (e) {
+                  $("#divConteudo2").toggle();
               });
           });
       </script>
