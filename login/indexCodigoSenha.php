@@ -20,7 +20,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-4 offset-md-4 form">
-        <form action="user-otp.php" method="POST" autocomplete="off">
+        <form action="indexCodigoSenha.php" method="POST" autocomplete="off">
           <h2 class="text-center">Verificação do Código</h2>
             <?php
               if(isset($_SESSION['info'])){

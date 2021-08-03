@@ -10,33 +10,31 @@ $con = mysqli_connect("localhost","root","","testando");
 session_start();
 
     //Caso o usuário clique no botão "enviar" na tela de inserir o código
-    /*if(isset($_POST['check'])){
+    if(isset($_POST['check'])){
         $_SESSION['info'] = "";
-        $otp_code = mysqli_real_escape_string($con, $_POST['otp']);
-        $check_code = "SELECT * FROM usertable WHERE code = $otp_code";
-        $code_res = mysqli_query($con, $check_code);
-        if(mysqli_num_rows($code_res) > 0){
-            $fetch_data = mysqli_fetch_assoc($code_res);
-            $fetch_code = $fetch_data['code'];
-            $email = $fetch_data['email'];
-            $code = 0;
-            $status = 'verified';
-            $update_otp = "UPDATE usertable SET code = $code, status = '$status' WHERE code = $fetch_code";
-            $update_res = mysqli_query($con, $update_otp);
-            if($update_res){
-                $_SESSION['name'] = $name;
+        $codigo_otp = mysqli_real_escape_string($con, $_POST['codigo']);
+        $check_codigo = "SELECT * FROM usuario_professor WHERE codigo = $codigo_otp";
+        $run_sql = mysqli_query($con, $check_codigo);
+        if(mysqli_num_rows($run_sql) > 0){
+            $fetch_dados = mysqli_fetch_assoc($run_sql);
+            $fetch_codigo = $fetch_dados['Codigo'];
+            $email = $fetch_dados['Email'];
+            $codigo = 0;
+            $update_otp = "UPDATE usuario_professor SET Codigo = $codigo WHERE Codigo = $fetch_codigo";
+            $update_sql = mysqli_query($con, $update_otp);
+            if($update_sql){
                 $_SESSION['email'] = $email;
-                header('location: home.php');
+                header('location: ../login/indexLogin.php');
                 exit();
             }else{
-                $erros['otp-error'] = "Failed while updating code!";
+                $erros['otp-erro'] = "Falha ao atualizar o código!";
             }
         }else{
-            $erros['otp-error'] = "You've entered incorrect code!";
+            $erros['otp-erro'] = "Você inseriu o código errado!";
         }
-    }*/
+    }
 
-    //Caso o usuário clique no botão enviar da tela de mudança de senha
+    //Caso o usuário clique no botão enviar no formulario da tela de "esqueceu sua senha"
     if(isset($_POST['email'])){
         $u->conectar();
         $email = mysqli_real_escape_string($con, $_POST['email']);
@@ -88,7 +86,6 @@ session_start();
     }
 
     //if user click change password button
-
     if(isset($_POST['change-password'])){
         $_SESSION['info'] = "";
         $password = mysqli_real_escape_string($con, $_POST['password']);
