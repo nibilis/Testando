@@ -27,8 +27,8 @@
   <div class="container">
     <div class="row">
       <div class="col-md-4 offset-md-4 form">
-        <form action="indexCodigoSenha.php" method="POST" autocomplete="off">
-          <h2 class="text-center">Verificação do Código</h2>
+        <form action="indexNovaSenha.php" method="POST" autocomplete="off">
+          <h2 class="text-center">Nova Senha</h2>
             <?php
               if(isset($_SESSION['info'])){
             ?>
@@ -42,20 +42,23 @@
               if(count($erros) > 0){
             ?>
               <div class="alert alert-danger text-center">
-              <?php
+            <?php
                 foreach($erros as $mostrarErros){
                   echo $mostrarErros;
                 }
-              ?>
+            ?>
               </div>
             <?php
               }
             ?>
             <div class="form-group">
-              <input class="form-control" type="number" name="codigo" placeholder="Insira o código enviado" required>
+              <input class="form-control" type="password" name="senha" placeholder="Crie uma nova senha" required>
             </div>
             <div class="form-group">
-              <input class="form-control button" type="submit" name="check" value="Verificar">
+              <input class="form-control" type="password" name="csenha" placeholder="Confirme sua senha" required>
+            </div>
+            <div class="form-group">
+              <input class="form-control button" type="submit" name="mudar-senha" value="Mudar">
             </div>
           </form>
         </div>
