@@ -196,6 +196,70 @@ body {
   margin-bottom: 10%;
 }
 
+/*SEÇÃO 4 CELULAR*/
+.logo-sombra { width: 30%; }
+.bolinhas-esquerda1 { width: 35%; }
+
+.bolinhas-direita1 {
+  width: 30%;
+  float: right;
+}
+
+.bolinhas-direita2{float: right;}
+
+.textobolinhas h1{
+  color: #635963;
+  font-family: 'Muli';
+  font-size: 1.7em;
+  margin: 10% 0% 5% 8%;
+}
+
+.quadradoamarelotutorial{
+  -webkit-filter: drop-shadow(-10px -10px 8px rgba(0, 0, 0, 0.2));
+  width: 450px;
+  height: 350px;
+  border: 7px solid whitesmoke;
+  margin-left: 15%;
+}
+
+.quadradoroxotutorial{
+ -webkit-filter: drop-shadow(12px 12px 8px rgba(0, 0, 0, 0.3));
+ width: 450px;
+ height: 350px;
+ border: 7px solid whitesmoke;
+ /* superior | direita | inferior | esquerda */
+ margin: -25% 0% 0% 42%;
+ background-color: #7C70BF;
+}
+
+.tutorial h1{
+ color: whitesmoke;
+ font-family: 'Muli';
+ font-size: 1.2em;
+ margin-left: 4%;
+ position: relative;
+}
+
+.bolinhas-esquerda2, .bolinhas-direita2 {
+ width: 25%;
+}
+
+.secao4 a{
+ font-size: 1em;
+ width: 30%;
+ margin-left: 9%;
+ margin-top: -10%;
+ padding-top: 2%;
+ padding-bottom: 2%;
+}
+
+.video-container{
+ -webkit-filter: drop-shadow(8px 12px 8px rgba(0, 0, 0, 0.3));
+ width: 60vw;
+ left: 20%;
+ margin-top: -20%;
+}
+
 
 /*RESPONSIVIDADE CELULAR*/
 
