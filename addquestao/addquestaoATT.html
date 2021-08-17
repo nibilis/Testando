@@ -30,10 +30,15 @@
 
       <body>
 
+        <!-- Dashboard CELULAR -->
+
+
+          <!-- Dashboard CELULAR FINAL -->
+
         <!-- Dashboard celular -->
         <div class= "dashboardcel row hide-on-large-only">
           <div class="col s2">
-            <ul class="slide-out hide-on-large-only sidenav" style="width:200px;">
+            <ul id="slide-out" class="hide-on-large-only sidenav" style="width:200px;">
               <li><div class="user-view">
 
                   <!-- Botão do menu sanduiche -->
@@ -43,7 +48,7 @@
                   <img src="../images/logoTestandoNome.png" class="logo">
                   <!-- Logo do dashboard final-->
 
-                  <ul class="slide-out sidenavClose">
+                  <ul id="slide-out" class="sidenavClose">
                     <li><a class="sidenav-close" href="#!" style="position: absolute;"><i class="material-icons" style="position: absolute; margin-left: 160%;font-size: 220%;">menu</i></a></li>
                   </ul>
 
@@ -60,31 +65,31 @@
                   <ul class="links_menucel">
 
                     <!-- Link da tela perfil -->
-                    <li><a class="perfil waves-effect center-align" href="../perfil/indexPerfil.php">Perfil</a></li>
+                    <li><a class="perfil waves-effect center-align" href="#">Perfil</a></li>
                     <!-- Link da tela perfil final -->
 
                     <li><div class="divider"></div></li>
 
                     <!-- Link da tela adicionar questão -->
-                    <li><a class="question waves-effect center-align" href="../addquestao/indexQuestao.php">Adicionar Questão</a></li>
+                    <li><a class="question waves-effect center-align" href="#">Adicionar Questão</a></li>
                     <!-- Link da tela adicionar questão final-->
 
                     <li><div class="divider"></div></li>
 
                     <!-- Link da tela adicionar documento -->
-                    <li><a class="document waves-effect center-align" href="../documento/indexDocumento.php">Adicionar Documento</a></li>
+                    <li><a class="document waves-effect center-align" href="#">Adicionar Documento</a></li>
                     <!-- Link da tela adicionar documento final -->
 
                     <li><div class="divider"></div></li>
 
                     <!-- Link da tela de salvos -->
-                    <li><a class="saves waves-effect center-align" href="../salvos/indexSalvos.php">Salvos</a></li>
+                    <li><a class="saves waves-effect center-align" href="#">Salvos</a></li>
                     <!-- Link da tela de salvos final -->
 
                     <li><div class="divider"></div></li>
 
                     <!-- Link do botão de sair do site -->
-                    <a class="sair" href="../login/indexLogin.php"><i class="sair2 material-icons">exit_to_app</i> Sair </a>
+                    <a class="sair" href="#"><i class="sair2 material-icons">exit_to_app</i> Sair </a>
                     <!-- Link do botão de sair do site final-->
 
                   </ul>
@@ -134,54 +139,36 @@
         <h1 class="tituloAQ center-align"> Adicionar Questão </h1>
         <!-- Título final -->
 
-        <!-- Botões alternativa e dissertativa-->
 
-        <div class="row">
-
-            <div class="col s6">
-            <button href="#alternativa" id="btnDissertativa" type="button" value="ok" target="_self" class="waves-effect waves-light btn ">Questão alternativa</button>
-            </div>
-
-            <div class="col s6">
-            <button href="#dissertativa" id="btnAlternativa" type="button" value="ok" target="_self" class="waves-effect waves-light btn ">Questão dissertativa</button>
-            </div>
-
-            <div id="divConteudo">
-                Conteudo 1
-            </div>
-
-            <div id="divConteudo2">
-                Conteudo 2
-            </div>
-        </div>
-
-        <!-- Botões alternativa e dissertativa final-->
-
-        <!-- Formulário CELULAR-->
+        <!-- Grid formulário -->
         <div class="row hide-on-large-only" id= "grid">
 
-          <p class="button-group">
-            <button href="#alternativa" id="btn-alternativa" value="ok" target="_self" class="waves-effect waves-light transparent">Alternativa</button>
-            <button href="#dissertativa" id="btn-dissertativa" value="ok" target="_self" class="waves-effect waves-light transparent">Dissertativa</button>
+          <!-- Botões alternativa e dissertativa -->
+          <p class="button-group center align">
+            <button href="#alternativa" id="btn-alternativa" value="ok" target="_self" class="waves-effect waves-light transparent center align">Questão alternativa</button>
+            <button href="#dissertativa" id="btn-dissertativa" value="ok" target="_self" class="waves-effect waves-light transparent center align">Questão dissertativa</button>
           </p>
+          <!-- Botões alternativa e dissertativa final-->
 
+          <!-- Formulário CELULAR-->
           <form method="POST">
           <div class="items">
 
+            <!-- COMEÇO alternativa -->
+            <div id="alternativa" class="alternativa">
+            </div>
+            <!-- FIM - alternativa-->
 
-        <!-- COMEÇO alternativa -->
-        <div id="alternativa" class="alternativa" style="margin-top: -5%;">
-        </div>
-        <!-- FIM - alternativa-->
+            <!-- COMEÇO - dissertativa -->
+            <div id="dissertativa" class="dissertativa">
+            </div>
+            <!-- FIM - dissertativa -->
 
-        <!-- COMEÇO - dissertativa -->
-        <div id="dissertativa" class="dissertativa">
-        </div>
-        <!-- FIM - dissertativa -->
-
-        </div>
-        </form>
-      </div>
+          </div>
+          </form>
+          <!-- Formulário CELULAR final-->
+          </div>
+          <!-- Grid formulário final-->
 
         <!--Final do formulário de CELULAR-->
 
@@ -199,7 +186,7 @@
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
       <!-- JavaScript Materialize Inicialização compilado e minificado final-->
 
-      <!--CÓDIGO BOTÃO ALTERNATIVA/DISSERTATIVA (mobile - JavaScript)-->
+      <!--Botões alternativa e dissertativa (celular)-->
       <script>
           var btn1 = document.getElementById('btn-dissertativa');
           var alternativa = document.querySelector('.alternativa');
@@ -241,9 +228,9 @@
          }
        });
       </script>
-      <!--FINAL CÓDIGO BOTÃO ALTERNATIVA/DISSERTATIVA (mobile - JavaScript)-->
+      <!--Final Botões alternativa e dissertativa (celular)-->
 
-      <!--TRANSIÇÃO COR BOTÃO ALTERNATIVA E DISSERTATIVA-->
+      <!--Transição de cor botões alternativa e dissertativa -->
       <script>
       let myButton = document.querySelectorAll('.button-group > button');
 
@@ -260,7 +247,7 @@
           }
       }
       </script>
-      <!--FINAL TRANSIÇÃO COR BOTÃO ALTERNATIVA E DISSERTATIVA-->
+      <!--Final Transição de cor botões alternativa e dissertativa -->
 
       <!-- JavaScript inicialização dashboard celular -->
       <script>
@@ -269,27 +256,13 @@
       </script>
       <!-- JavaScript inicialização dashboard celular final-->
 
-      <!-- JavaScript botões alternativa e dissertativa-->
-      <script type="text/javascript">
-          $(document).ready(function (e) {
-              $("#divConteudo").hide();
-
-              $("#btnDissertativa").click(function (e) {
-                  $("#divConteudo").toggle();
-              });
-          });
+      <!-- MODAL -->
+      <script>
+      $(document).ready(function(){
+      $('.modal').modal();
+      });
       </script>
-
-      <script type="text/javascript">
-          $(document).ready(function (e) {
-              $("#divConteudo2").hide();
-
-              $("#btnAlternativa").click(function (e) {
-                  $("#divConteudo2").toggle();
-              });
-          });
-      </script>
-      <!-- JavaScript botões alternativa e dissertativa final-->
+      <!--final MODAL -->
 
     </body>
 
