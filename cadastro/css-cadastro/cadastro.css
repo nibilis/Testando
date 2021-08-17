@@ -5,7 +5,49 @@
     text-decoration: none;
   }
 
+  .linha-lateral{
+    background-color: #7C6FBF;
+    height: 100vh;
+    width: 40%;
+  }
+
   ::-webkit-input-placeholder {
     color: rgb(122, 121, 121); 
     font-family: 'Muli';
+}
+
+.select-wrapper input.select-dropdown:focus {
+  border-bottom: 1px solid rgba(0, 0, 0, 1)!important;
+}
+
+textarea .materialize-textarea {
+  font-family: 'Muli';
+  font-size: 8%;
+  color: black;
+}
+
+textarea:focus:not([readonly]) {
+  border-bottom: 1px solid rgba(0, 0, 0, 3)!important;
+  box-shadow: 0 0.1px 0 0 rgba(0, 0, 0, 3)!important;
+}
+
+.select-dropdown li.optgroup>span {
+  color: rgba(0,0,0,0.4)!important;
+}
+
+.dropdown-content li>span {
+color: #7C6FBF!important;
+}
+
+.select-dropdown li.disabled>span {
+color: rgba(0,0,0,0.4)!important;
+}
+
+.select-wrapper input.select-dropdown {
+color: #d1d1d1;
+}
+
+.input-field{
+  background-color: antiquewhite;
+  border-left: 50%;
 }
