@@ -11,7 +11,7 @@
 /*corpo*/
 body {
   background: linear-gradient(to bottom, #9684D3, #9785D3, #b49fd9, #E3C7E3, #ead1c6, #F8E197, #F8E197, #F8E197, #F8E197, #F8E197, #F8E197, #F8E197, #F8E197, #F8E197, #E3C7E3, #E3C7E3, #9684D3, #9684D3);
-  height: 400vh;
+  height: 417vh;
   width: auto;
   font-size: 30px;
 }
@@ -20,7 +20,7 @@ body {
   text-decoration: none;
   border-radius: 80px 80px;
   color: white;
-  font-family: 'Muli';
+  font-family: 'Muli', sans-serif;
   font-size: 1em;
   border-style: none;
   margin-left: 36%;
@@ -47,7 +47,7 @@ body {
   width: 100%;
   height: 3em;
   font-size: 70%;
-  font-family: 'Muli';
+  font-family: 'Muli', sans-serif;
   border-radius: 40px 40px;
   padding-top: 6%;
   margin-top: 10%;
@@ -59,7 +59,7 @@ body {
   width: 100%;
   height: 3em;
   font-size: 70%;
-  font-family: 'Muli';
+  font-family: 'Muli', sans-serif;
   border-radius: 40px 40px;
   padding-top: 6%;
   margin-top: 10%;
@@ -101,7 +101,7 @@ body {
 }
 /*frase depois do retângulozinho*/
 .texto-secao2roxo h4 {
-  font-family: 'Muli';
+  font-family: 'Muli', sans-serif;
   float: right;
   margin-left: 2%;
   margin-right: 10%;
@@ -113,7 +113,7 @@ body {
 /*frase abaixo do retângulozinho*/
 .texto-secao2roxo p {
   color: #707070;
-  font-family: 'Muli';
+  font-family: 'Muli', sans-serif;
   line-height: 1.3em;
   font-size: 1.3em;
   float: right;
@@ -137,7 +137,7 @@ body {
 }
 /*frase depois do retângulozinho*/
 .texto-secao2amarelo h4 {
-  font-family: 'Muli';
+  font-family: 'Muli', sans-serif;
   font-size: 1.5em;
   margin-left: 11%;
   padding-top: 15%;
@@ -147,7 +147,7 @@ body {
 /*frase abaixo do retângulozinho*/
 .texto-secao2amarelo p {
   color: #707070;
-  font-family: 'Muli';
+  font-family: 'Muli', sans-serif;
   line-height: 1.3em;
   font-size: 1.3em;
   width: 75%;
@@ -180,14 +180,14 @@ body {
 .white h1{
   text-align: center;
   font-size: 1.7em;
-  font-family: 'Muli';
+  font-family: 'Muli', sans-serif;
 }
 /*texto dos quadrados brancos*/
 .white p{
   text-align: center;
   color: #707070;
   font-size: 1.3em;
-  font-family: 'Muli';
+  font-family: 'Muli', sans-serif;
 }
 /*botão comece já roxo*/
 .parteamarela a{
@@ -197,32 +197,46 @@ body {
 }
 
 /*SEÇÃO 4 CELULAR*/
+/*sombra da logo*/
 .logo-sombra { width: 30%; }
-.bolinhas-esquerda1 { width: 35%; }
-
+/*bolinha colorida que fica na esquerda superior*/
+.bolinhas-esquerda1 {
+  width: 35%;
+  float: left;
+}
+/*bolinha colorida que fica na direita superior*/
 .bolinhas-direita1 {
   width: 30%;
   float: right;
 }
-
-.bolinhas-direita2{float: right;}
-
-.textobolinhas h1{
+/*bolinha colorida que fica na direita inferior*/
+.bolinhas-direita2 {
+  float: right;
+  width: 25%;
+}
+/*bolinha colorida que fica na esquerda inferior*/
+.bolinhas-esquerda2 {
+  width: 20%;
+  margin-top: -15%;
+  margin-bottom: 10%;
+}
+/*texto: Não sabe por onde começar?*/
+.textobolinhas h1 {
   color: #635963;
-  font-family: 'Muli';
+  font-family: 'Muli', sans-serif;
   font-size: 1.7em;
   margin: 10% 0% 5% 8%;
 }
-
-.quadradoamarelotutorial{
+/*Quadrado amarelo do tutorial "Não se preocupe"*/
+.quadradoamarelotutorial {
   -webkit-filter: drop-shadow(-10px -10px 8px rgba(0, 0, 0, 0.2));
   width: 450px;
   height: 350px;
   border: 7px solid whitesmoke;
   margin-left: 15%;
 }
-
-.quadradoroxotutorial{
+/*Quadrado roxo do tutorial "Veja o tutorial abaixo:"*/
+.quadradoroxotutorial {
  -webkit-filter: drop-shadow(12px 12px 8px rgba(0, 0, 0, 0.3));
  width: 450px;
  height: 350px;
@@ -231,35 +245,63 @@ body {
  margin: -25% 0% 0% 42%;
  background-color: #7C70BF;
 }
-
-.tutorial h1{
- color: whitesmoke;
- font-family: 'Muli';
+/*Textos dentro dos quadrados de tutorial"*/
+.tutorial h1 {
+ color: white;
+ font-family: 'Muli', sans-serif;
  font-size: 1.2em;
  margin-left: 4%;
  position: relative;
 }
-
-.bolinhas-esquerda2, .bolinhas-direita2 {
- width: 25%;
-}
-
-.secao4 a{
- font-size: 1em;
- width: 30%;
- margin-left: 9%;
+/*Todos os links que estão dentro da section secao4 -> "botão comece-já"*/
+.secao4 a {
+ margin-left: 4%;
  margin-top: -10%;
- padding-top: 2%;
- padding-bottom: 2%;
+ padding-left: 0;
 }
-
-.video-container{
+/*Div do botão "comece-já"*/
+.btn-comece-ja {
+  width: 100%;
+}
+/*Vídeo de tutorial*/
+.video-container {
  -webkit-filter: drop-shadow(8px 12px 8px rgba(0, 0, 0, 0.3));
  width: 60vw;
  left: 20%;
  margin-top: -20%;
 }
 
+/*SEÇÃO 5 CELULAR*/
+.rodape {
+  border-top: white solid;
+  font-family: 'Muli', sans-serif;
+  color: white;
+  display: grid;
+  grid-template-columns: 26% 31% 39%;
+  padding-top: 3%;
+  padding-left: 5%;
+}
+
+ .cont, .aj, .saib{
+  border-left: white dotted;
+}
+
+.ajuda { padding: 0 10% 0 10%; }
+
+.contatos, .ajuda, .saibasobre {
+  font-size: 1.2em;
+  text-align: center;
+  margin-bottom: 2%;
+}
+
+.saibasobre { padding: 0 10% 0 10%; }
+
+
+.pcontatos, .pajuda, .psaibasobre {
+  font-size: 0.65em;
+  text-align: center;
+  margin-top: 9%;
+}
 
 /*RESPONSIVIDADE CELULAR*/
 
