@@ -6,6 +6,74 @@
 }
 /*Inicialização CSS final*/
 
+/*----------------------------------------------------------------------------------------*/
+
+/*Botões alternativa e dissertativa*/
+#btn-alternativa,
+ #btn-dissertativa{ /*mobile*/
+  width: 35%;
+  color: black;
+  border-radius: 40px 40px;
+  text-transform: capitalize;
+  font-family: 'Muli';
+  font-size: 85%;
+  border-color: black;
+  border-width: 2px;
+  /*top: / right: / bottom: / left:*/
+  padding: 2.5% 0% 2.5% 0%;
+  background-color: white;
+}
+
+#btn-alternativa {
+  margin-right: 5%;
+}
+
+/*Transição de cor dos botões alternativa e dissertativa*/
+.buttonClicked{
+  background-color: #7C6FBF!important;
+  color: white!important;
+}
+/*Transição de cor dos botões alternativa e dissertativa final*/
+
+/*Botões alternativa e dissertativa final*/
+
+/*----------------------------------------------------------------------------------------*/
+
+/*Estilização celular*/
+
+/*Título celular*/
+.tituloAQ{
+  font-family: "Muli";
+  font-size: 170%;
+  color: #413F3F;
+}
+/*Título celualr final*/
+
+/*Linha lateral*/
+.lateralcel{
+  width: 100%;
+  height:50em;
+  background: linear-gradient(to bottom, #D0C7FC, #8F83CD, #7C6FBF);
+}
+/*Linha lateral final*/
+
+.alternativa{
+}
+/*Estilização celular final*/
+
+/*----------------------------------------------------------------------------------------*/
+
+/*Formulário celular */
+
+.materia{
+  margin-top: 12%!important;
+  width: 80%;
+}
+
+/*Formulário celular final*/
+
+/*----------------------------------------------------------------------------------------*/
+
 /*Dashboard celular*/
 
 .row{
@@ -160,55 +228,7 @@ a {border-radius: 10px 10px;
 }
 /*Dashboard celular final*/
 
-/*Botões alternativa e dissertativa*/
-#btn-alternativa,
- #btn-dissertativa{ /*mobile*/
-  width: 35%;
-  color: black;
-  border-radius: 40px 40px;
-  text-transform: capitalize;
-  font-family: 'Muli';
-  font-size: 85%;
-  border-color: black;
-  border-width: 2px;
-  /*top: / right: / bottom: / left:*/
-  padding: 2.5% 0% 2.5% 0%;
-  background-color: white;
-}
-
-#btn-alternativa {
-  margin-right: 5%;
-}
-
-/*Transição de cor dos botões alternativa e dissertativa*/
-.buttonClicked{
-  background-color: #7C6FBF!important;
-  color: white!important;
-}
-/*Transição de cor dos botões alternativa e dissertativa final*/
-/*Botões alternativa e dissertativa final*/
-
-/*Estilização celular*/
-
-/*Título celular*/
-.tituloAQ{
-  font-family: "Muli";
-  font-size: 170%;
-  color: #413F3F;
-}
-/*Título celualr final*/
-
-/*Linha lateral*/
-.lateralcel{
-  width: 100%;
-  height:50em;
-  background: linear-gradient(to bottom, #D0C7FC, #8F83CD, #7C6FBF);
-}
-/*Linha lateral final*/
-
-/*Estilização celular final*/
-
-/*----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
 
 /*Responsividade computador*/
 
@@ -223,7 +243,7 @@ a {border-radius: 10px 10px;
 
 /*Responsividade computador final*/
 
-/*CELULAR*/
+/*----------------------------------------------------------------------------------------*/
 
 /*Responsividade celular*/
 

@@ -139,12 +139,8 @@
         <h1 class="tituloAQ center-align"> Adicionar Questão </h1>
         <!-- Título final -->
 
-
-        <!-- Grid formulário -->
-        <div class="row hide-on-large-only" id= "grid">
-
           <!-- Botões alternativa e dissertativa -->
-          <p class="button-group center align">
+          <p class="button-group center-align">
             <button href="#alternativa" id="btn-alternativa" value="ok" target="_self" class="waves-effect waves-light transparent center align">Questão alternativa</button>
             <button href="#dissertativa" id="btn-dissertativa" value="ok" target="_self" class="waves-effect waves-light transparent center align">Questão dissertativa</button>
           </p>
@@ -155,7 +151,51 @@
           <div class="items">
 
             <!-- COMEÇO alternativa -->
-            <div id="alternativa" class="alternativa">
+            <div id="alternativa" class="alternativa center-align">
+
+            <!-- Matéria -->
+            <div class="materia input-field col s12 center-align" style="width: 90%;">
+                <select class="Itens-materia">
+                  <option value="" disabled selected>Escolha uma matéria</option>
+                  <option value="1">Option 1</option>
+                  <option value="2">Option 2</option>
+                  <option value="3">Option 3</option>
+                </select>
+                <label>Matéria</label>
+            </div>
+            <!-- Matéria -->
+
+            <!-- Tema -->
+            <div class="tema input-field col s12" style="width: 90%;">
+                <select class="Itens-tema">
+                  <option value="" disabled selected>Escolha um tema</option>
+                  <option value="1">Option 1</option>
+                  <option value="2">Option 2</option>
+                  <option value="3">Option 3</option>
+                </select>
+                <label>Tema</label>
+            </div>
+            <!-- Tema -->
+
+            <!-- Subtema -->
+            <div class="subtema input-field col s12" style="width: 90%;">
+                <select class="Itens-subtema">
+                  <option value="" disabled selected>Escolha um subtema</option>
+                  <option value="1">Option 1</option>
+                  <option value="2">Option 2</option>
+                  <option value="3">Option 3</option>
+                </select>
+                <label>Subtema</label>
+            </div>
+            <!-- Subtema -->
+
+            <!-- Enunciado -->
+            <div class="input-field col s12" style="width: 90%;">
+              <span style="float:left;">Enunciado</span>
+              <input placeholder="Escreva seu enunciado" id="textarea1" class="materialize-textarea" >
+            </div>
+            <!-- Enunciado -->
+
             </div>
             <!-- FIM - alternativa-->
 
@@ -167,8 +207,6 @@
           </div>
           </form>
           <!-- Formulário CELULAR final-->
-          </div>
-          <!-- Grid formulário final-->
 
         <!--Final do formulário de CELULAR-->
 
@@ -185,6 +223,15 @@
       <!-- JavaScript Materialize Inicialização compilado e minificado -->
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
       <!-- JavaScript Materialize Inicialização compilado e minificado final-->
+
+      <!--Inicialização campo matéria-->
+      <script>
+        $(document).ready(function(){
+          $('select').formSelect();
+        });
+      </script>
+      <!--Inicialização campo matéria-->
+
 
       <!--Botões alternativa e dissertativa (celular)-->
       <script>
