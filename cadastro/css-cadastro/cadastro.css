@@ -5,13 +5,23 @@
     text-decoration: none;
   }
 
-  .linha-lateral{
+body { height: 100vh;}
+
+/* LINHA LATERAL ROXA */
+.linha-lateral {
     background-color: #7C6FBF;
     height: 100vh;
     width: 40%;
   }
 
-  ::-webkit-input-placeholder {
+/* LOGO */
+.img-logo {
+  /* topo | direita | inferior | esquerda */
+  margin: 3% 0% 0% 23%;
+}
+
+/* PLACEHOLDER */
+::-webkit-input-placeholder {
     color: rgb(122, 121, 121); 
     font-family: 'Muli';
 }
@@ -35,19 +45,69 @@ textarea:focus:not([readonly]) {
   color: rgba(0,0,0,0.4)!important;
 }
 
-.dropdown-content li>span {
-color: #7C6FBF!important;
-}
+/*.dropdown-content li>span {
+  color: #6fbfb8!important;
+}*/
 
 .select-dropdown li.disabled>span {
-color: rgba(0,0,0,0.4)!important;
+  color: rgba(0,0,0,0.4)!important;
 }
 
 .select-wrapper input.select-dropdown {
-color: #d1d1d1;
+  color: #d1d1d1;
 }
 
-.input-field{
-  background-color: antiquewhite;
-  border-left: 50%;
+/* CAMPOS */
+.distance { margin-bottom: -1%; }
+
+.centro { margin-left: 3% !important; }
+
+.cadastro{
+  height: 3em;
+  font-size: 90%;
+  font-family: 'Muli';
+  border-radius: 40px 40px;
+  margin-top: 3%;
+}
+
+/* RESOLUÇÃO 360x780 */
+@media (min-height: 700px) {
+  .distance { margin-bottom: 2%; }
+
+  /* PLACEHOLDER */
+  ::-webkit-input-placeholder {
+  font-size: 110%;
+  }
+
+  /* LOGO */
+  .img-logo {
+  /* topo | direita | inferior | esquerda */
+  margin: 4% 0% 1% 23%;
+  }
+
+  .cadastro {
+    font-size: 100%;
+    margin-top: 15%;
+  }
+}
+
+/* RESOLUÇÃO 414x896 */
+@media (min-height: 800px) {
+  .distance { margin-bottom: 3%; }
+
+  /* PLACEHOLDER */
+  ::-webkit-input-placeholder {
+    font-size: 130%;
+  }
+
+  /* LOGO */
+  .img-logo {
+    /* topo | direita | inferior | esquerda */
+    margin: 6% 0% 1% 23%;
+    }
+
+  /* BOTÃO */
+  .cadastro {
+    width: 40%;
+  }
 }

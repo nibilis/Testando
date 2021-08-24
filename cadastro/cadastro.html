@@ -25,14 +25,13 @@
       </header>
 
       <!-- CÓDIGO P/ O CELULAR-->
-
       <div class = "row">
 
         <!-- LINHA LATERAL ROXA-->
         <div class = "linha-lateral col s1 l1"></div>
 
         <!-- LOGO -->
-        <img class = "img-logo responsive-img" src = "../images/LogoTestandoNome.png" width="45%">
+        <img class = "img-logo responsive-img" src = "../images/LogoTestandoNome.png" width="40%">
 
         <!-- SAIR -->
         <a class = "hide-on-small-only" href = "../propaganda/index.html" style = "float: right; margin-top: -17%; margin-right: 1%;">
@@ -40,17 +39,20 @@
         </a>
 
         <!-- CAMPOS -->
-        <form method = "post">
+        <form method = "post" class="center-align">
 
-            <div class = "input-field col s10 l8">
+            <!-- COMO SE CHAMA? -->
+            <div class = "input-field col s10 l8 distance centro">
               <input class = "flow-text validate" placeholder = "Como se chama?"  type = "text" name = "nome">
             </div>
 
-            <div class = "input-field col s10 l8">
+            <!-- CPF -->
+            <div class = "input-field col s10 l8 distance centro">
               <input class = "flow-text validate" placeholder = "CPF" type = "text" name = "CPF" maxlength= "14" onkeydown="javascript: fMasc( this, mCPF );">
             </div>
 
-            <div class = "input-field col s10 l4">
+            <!-- MATÉRIA -->
+            <div class = "input-field col s10 l4 distance centro">
               <select name = "materia">
 
                   <option value = "" disabled selected>Matéria que leciona</option>
@@ -64,55 +66,55 @@
               </select>
             </div>
 
+            <!-- E-MAIL -->
+            <div class="input-field col s10 l8 distance centro">
+              <!-- <input class="flow-text" id="email" placeholder="E-mail" type="email" class="validate" style="font-size: 75%;">
+               <label data-error="E-mail inválido" for="email"></label>-->
+                <input class="flow-text validate" placeholder="E-mail" type="email" name="email">
+            </div>
+
             <!-- ESTADO -->
-            <div class = "input-field col s10 l4">
+            <div class = "input-field col s10 l4 centro">
 
               <select name = "estado">
                   <option value = "" disabled selected > Selecione o seu estado </option>
-                  <?php
-                  $u->conectar();
-                  $results = $est->listAll();
-                  foreach($results as $row){ ?>
-
-                  <option value="<?php echo $row['Sigla'] ?>"> <?php echo $row['Nome'] ?> </option> <?php } ?>
+                  <option value = "2"> Opção 2 </option>
+                  <option value = "3"> Opção 3 </option>
+                  <option value = "4"> Opção 4 </option>
               </select>
               <label>Estado</label>
 
             </div>
 
             <!-- CIDADE -->
-            <div class = "input-field col s10 l4">
+            <div class = "input-field col s10 l4 centro">
 
               <select name = "cidade">
-                 <option value = "" disabled selected > Selecione a sua cidade </option>
-                <?php
-                $u->conectar();
-                $results = $city->listAll();
-            
-                foreach($results as $row){ ?>
-                <option value = "<?php echo $row['Cod'] ?>"> <?php echo $row['Nome'] ?> </option> <?php } ?>
+                <option value = "" disabled selected> Selecione a sua cidade </option>
+                <option value = "2"> Opção 2 </option>
+                <option value = "3"> Opção 3 </option>
+                <option value = "4"> Opção 4 </option>
               </select>
               <label>Cidade</label>
 
             </div>
 
-            <div class = "input-field col s9 l8">
-              <input class = "flow-text validate" placeholder = "Endereço" type = "text" name = "endereço">
-            </div>
-        
-            <div class = "input-field col s9 l8">
+            <!-- SENHA -->
+            <div class = "input-field col s9 l8 distance centro">
               <input class = "flow-text validate" placeholder = "Senha" type = "password" name = "senha">
             </div>
         
-            <div class = "input-field col s9 l8">
+            <!-- CONFIRMAÇÃO DE SENHA -->
+            <div class = "input-field col s9 l8 centro">
               <input class = "flow-text validate" placeholder = "Confirmação de senha" type = "password" name = "confSenha">
-          </div>
-        
-          <div>
-              <button class = "cadastro flow-text waves-effect yellow darken-2 waves-light hoverable" type = "submit" >Cadastrar</button>
           </div>
 
         </form>
+        
+        <!-- BOTÃO -->
+        <div class="center-align">
+          <button class = "cadastro flow-text waves-effect yellow darken-2 waves-light hoverable btn" type = "submit">Cadastrar</button>
+        </div>
 
       </div>
       
@@ -141,6 +143,14 @@
         		cpf = cpf.replace(/(\d{3})(\d{1,2})$/,"$1-$2")
         		return cpf
         }
+      </script>
+
+      <!-- CAMPOS CIDADE E ESTADO -->
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('select');
+            var instances = M.FormSelect.init(elems, options);
+        });
       </script>
 
     </body>
