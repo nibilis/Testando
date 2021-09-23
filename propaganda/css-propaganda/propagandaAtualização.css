@@ -9,6 +9,9 @@
 /*CÓDIGO GERAL DO SITE (tanto para pc quanto celular)*/
 
 /*corpo*/
+
+
+
 body {
   background: linear-gradient(to bottom, #9684D3, #9785D3, #b49fd9, #E3C7E3, #ead1c6, #F8E197, #F8E197, #F8E197, #F8E197, #F8E197, #F8E197, #F8E197, #F8E197, #F8E197, #E3C7E3, #E3C7E3, #9684D3, #9684D3);
   height: 417vh;
