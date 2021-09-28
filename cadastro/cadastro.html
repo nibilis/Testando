@@ -39,42 +39,36 @@
         </a>
 
         <!-- CAMPOS -->
-        <form method = "post" class="center-align">
+        <form method = "POST" class="center-align">
 
             <!-- COMO SE CHAMA? -->
-            <div class = "input-field col s10 l8 distance centro">
+            <div class = "input-field col s10 l5 distance centro">
               <input class = "flow-text validate" placeholder = "Como se chama?"  type = "text" name = "nome">
             </div>
 
             <!-- CPF -->
-            <div class = "input-field col s10 l8 distance centro">
+            <div class = "input-field col s10 l5 distance centro">
               <input class = "flow-text validate" placeholder = "CPF" type = "text" name = "CPF" maxlength= "14" onkeydown="javascript: fMasc( this, mCPF );">
             </div>
 
+            <!-- E-MAIL -->
+            <div class="input-field col s10 l5 distance centro">
+              <input class="flow-text validate" placeholder="E-mail" type="email" name="email">
+            </div>
+
             <!-- MATÉRIA -->
-            <div class = "input-field col s10 l4 distance centro">
-              <select name = "materia">
+           
+              <select name = "materia" class = "input-field col s10 l5 distance centro">
 
                   <option value = "" disabled selected>Matéria que leciona</option>
-                  < ?php
-                    $u->conectar();
-                    $results = $m->listAll();
-                    foreach($results as $row){ ?
-                  >
-                  <option value = "<?php echo $row['ID_Materia'] ?>"> <?php echo $row['Nome'] ?> </option> <?php } ?>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
 
               </select>
-            </div>
-
-            <!-- E-MAIL -->
-            <div class="input-field col s10 l8 distance centro">
-              <!-- <input class="flow-text" id="email" placeholder="E-mail" type="email" class="validate" style="font-size: 75%;">
-               <label data-error="E-mail inválido" for="email"></label>-->
-                <input class="flow-text validate" placeholder="E-mail" type="email" name="email">
-            </div>
 
             <!-- ESTADO -->
-            <div class = "input-field col s10 l4 centro">
+            <div class = "input-field col s10 l5 centro">
 
               <select name = "estado">
                   <option value = "" disabled selected > Selecione o seu estado </option>
@@ -87,7 +81,7 @@
             </div>
 
             <!-- CIDADE -->
-            <div class = "input-field col s10 l4 centro">
+            <div class = "input-field col s10 l5 centro">
 
               <select name = "cidade">
                 <option value = "" disabled selected> Selecione a sua cidade </option>
@@ -100,12 +94,12 @@
             </div>
 
             <!-- SENHA -->
-            <div class = "input-field col s10 l8 distance centro">
+            <div class = "input-field col s10 l5 distance centro">
               <input class = "flow-text validate" placeholder = "Senha" type = "password" name = "senha">
             </div>
         
             <!-- CONFIRMAÇÃO DE SENHA -->
-            <div class = "input-field col s10 l8 centro">
+            <div class = "input-field col s10 l5 centro">
               <input class = "flow-text validate" placeholder = "Confirmação de senha" type = "password" name = "confSenha">
           </div>
 
@@ -121,37 +115,44 @@
 
       <!-- JAVASCRIPT -->
 
-      <!-- Mascara para o CPF -->
-      <script type="text/javascript">
-        function fMasc(objeto,mascara)
-        {
-        	 obj = objeto
-        	 masc = mascara
-        	 setTimeout("fMascEx()",1)
-        }
+        <!-- Mascara para o CPF -->
+        <script type="text/javascript">
+          function fMasc(objeto,mascara)
+          {
+            obj = objeto
+            masc = mascara
+            setTimeout("fMascEx()",1)
+          }
 
-        function fMascEx()
-        {
-        	 obj.value = masc(obj.value)
-        }
+          function fMascEx()
+          {
+            obj.value = masc(obj.value)
+          }
 
-        function mCPF(cpf)
-        {
-        		cpf = cpf.replace(/\D/g,"")
-        		cpf = cpf.replace(/(\d{3})(\d)/,"$1.$2")
-        		cpf = cpf.replace(/(\d{3})(\d)/,"$1.$2")
-        		cpf = cpf.replace(/(\d{3})(\d{1,2})$/,"$1-$2")
-        		return cpf
-        }
-      </script>
+          function mCPF(cpf)
+          {
+              cpf = cpf.replace(/\D/g,"")
+              cpf = cpf.replace(/(\d{3})(\d)/,"$1.$2")
+              cpf = cpf.replace(/(\d{3})(\d)/,"$1.$2")
+              cpf = cpf.replace(/(\d{3})(\d{1,2})$/,"$1-$2")
+              return cpf
+          }
+        </script>
 
-      <!-- CAMPOS CIDADE E ESTADO -->
-      <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var elems = document.querySelectorAll('select');
-            var instances = M.FormSelect.init(elems, options);
+        <!--INICIALIZAÇÃO DOS CAMPOS "CIDADE" E "ESTADO"-->
+        <script>
+          $(document).ready(function(){
+            $('select').formSelect();
+          });
+        </script>
+
+        <!-- INICIALIZAÇÃO DO CAMPO "MATERIAS QUE LECIONA" -->
+        <script>
+        $('#materia').chips({
+          placeholder:'Matérias que leciona',
+          secondaryPlaceholder:'+Matéria',
         });
-      </script>
+        </script>
 
     </body>
 

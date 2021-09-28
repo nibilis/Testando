@@ -116,12 +116,24 @@ textarea:focus:not([readonly]) {
 
 /* RESOLUÇÃO 1024x768 */
 @media (min-width: 1024px) {
+  .distance { margin-bottom: 1%; }
+
+  /* PLACEHOLDER */
+  ::-webkit-input-placeholder {
+    font-size: 110%;
+  }
+
   /* LOGO */
   .img-logo {
     /* topo | direita | inferior | esquerda */
-    margin: 3% 0% 1% 23%;
-
+    margin: 3% 0% 2% 32%;
     width: 20%;
-    }
+  }
   
+  /* BOTÃO */
+  .cadastro {
+    width: 25%;
+    padding-bottom: 2%;
+    margin-left: -7%;
+  }
 }
