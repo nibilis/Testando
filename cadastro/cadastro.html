@@ -4,6 +4,7 @@
     <head>
         <meta charset = "UTF-8">
         <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+
         <!-- Font web de ícones -->
         <link href = "https://fonts.googleapis.com/icon?family=Material+Icons" rel = "stylesheet">
         <link href = "https://fonts.googleapis.com/css2?family=Muli:wght@700&display=swap" rel = "stylesheet">
@@ -11,6 +12,9 @@
         <!-- CSS compilado e minificado -->
         <link type = "text/css" rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" media = "screen"/>
         <link rel = "stylesheet" href = "../cadastro/css-cadastro/cadastro.css">
+
+        <!-- JavaScript Materialize compilado e minificado -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
         <!--ícone no navegador-->
         <link rel = "shortcut icon" href = "../images/favicon (1).ico" >
@@ -57,7 +61,6 @@
             </div>
 
             <!-- MATÉRIA -->
-           
               <select name = "materia" class = "input-field col s10 l5 distance centro">
 
                   <option value = "" disabled selected>Matéria que leciona</option>
@@ -148,10 +151,10 @@
 
         <!-- INICIALIZAÇÃO DO CAMPO "MATERIAS QUE LECIONA" -->
         <script>
-        $('#materia').chips({
-          placeholder:'Matérias que leciona',
-          secondaryPlaceholder:'+Matéria',
-        });
+          document.addEventListener('DOMContentLoaded', function() {
+          var elems = document.querySelectorAll('select');
+          var instances = M.FormSelect.init(elems, options);
+          });
         </script>
 
     </body>
