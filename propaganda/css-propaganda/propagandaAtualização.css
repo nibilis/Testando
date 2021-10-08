@@ -10,8 +10,6 @@
 
 /*corpo*/
 
-
-
 body {
   background: linear-gradient(to bottom, #9684D3, #9785D3, #b49fd9, #E3C7E3, #ead1c6, #F8E197, #F8E197, #F8E197, #F8E197, #F8E197, #F8E197, #F8E197, #F8E197, #F8E197, #E3C7E3, #E3C7E3, #9684D3, #9684D3);
   height: 417vh;
@@ -306,14 +304,61 @@ body {
   margin-top: 9%;
 }
 
-/*RESPONSIVIDADE CELULAR*/
-
-
-
-
-/*CÓDIGO GERAL P/ COMPUTADOR*/
-
-
-
 
 /*RESPONSIVIDADE COMPUTADOR*/
+
+/*SEÇÃO 1*/
+@media (min-width: 1024px) {
+  /*imagem da logo*/
+  .img-logo {
+    width: 20%;
+  }
+  /*imagem da logo p/ celular*/
+  .img-nome-logo {
+    width: 30%;
+    margin-bottom: 6%;
+  }
+
+  /*botão login*/
+  .login {
+
+  }
+  /*botão cadastre-se*/
+  .cadastre-se {
+    
+  }
+  /*grid da logo com os botões*/
+  .teste {
+    width: 150%;
+    margin-top: -10%;
+  }
+
+  .teste2 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 5%;
+    width: 150%;
+    margin: -10% 0% 0% 60%;
+  }
+
+  /*frases da seção 1*/
+  .frases-secao-1 {
+    display: grid;
+    grid-template-columns: 50% 100%;
+  }
+  /*frase principal da seção 1*/
+  .secao-1 h1 { 
+    font-size: 2em;
+  }
+  .secao-1 h3 {
+     margin-top: -5%;
+     width: 120%;
+     font-size: 1em;
+  } 
+
+  .imagem-ilustrativa {
+    width: 25%;
+    margin-left: 20%;
+  }
+
+}

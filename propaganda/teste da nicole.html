@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang = "pt-br" >
+
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Font web de ícones -->
+        <link href = "https://fonts.googleapis.com/icon?family=Material+Icons" rel = "stylesheet">
+        <link href = "https://fonts.googleapis.com/css2?family=Muli:wght@700&display=swap" rel = "stylesheet">
+
+        <!-- CSS compilado e minificado -->
+        <link type = "text/css" rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" media = "screen"/>
+        <link rel = "stylesheet" href = "../cadastro/css-cadastro/cadastro.css">
+
+        <!--ícone no navegador-->
+        <link rel = "shortcut icon" href = "../images/favicon (1).ico" >
+        <meta name = "theme-color" content = "black">
+        <title>Testando</title>
+    </head>
+
+    <body>
+
+      <header>
+
+      </header>
+
+      <!-- CÓDIGO P/ O CELULAR-->
+      <div class = "row">
+
+        <!-- LINHA LATERAL ROXA-->
+        <div class = "linha-lateral col s1 l1"></div>
+
+        <!-- LOGO -->
+        <img class = "img-logo responsive-img" src = "../images/LogoTestandoNome.png" width="40%">
+
+        <!-- SAIR -->
+        <a class = "hide-on-small-only" href = "../propaganda/index.html" style = "float: right; margin-top: -17%; margin-right: 1%;">
+          <img class = "responsive-img" src = "../images/fechar.png">
+        </a>
+
+        <!-- CAMPOS -->
+        <form method = "POST" class="center-align">
+
+            <!-- COMO SE CHAMA? -->
+            <div class = "input-field col s10 l5 distance centro">
+              <input class = "flow-text validate" placeholder = "Como se chama?"  type = "text" name = "nome">
+            </div>
+
+            <!-- CPF -->
+            <div class = "input-field col s10 l5 distance centro">
+              <input class = "flow-text validate" placeholder = "CPF" type = "text" name = "CPF" maxlength= "14" onkeydown="javascript: fMasc( this, mCPF );">
+            </div>
+
+            <!-- E-MAIL -->
+            <div class="input-field col s10 l5 distance centro">
+              <input class="flow-text validate" placeholder="E-mail" type="email" name="email">
+            </div>
+
+            <!-- MATÉRIA -->
+            <div class = "input-field col s10 l5 distance centro">
+              <select name = "materia">
+
+                  <option value = "" disabled selected>Matéria que leciona</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+
+              </select>
+            </div>
+
+            <!-- ESTADO -->
+            <div class = "input-field col s10 l5 centro">
+
+              <select name = "estado">
+                  <option value = "" disabled selected > Selecione o seu estado </option>
+                  <option value = "2"> Opção 2 </option>
+                  <option value = "3"> Opção 3 </option>
+                  <option value = "4"> Opção 4 </option>
+              </select>
+              <label>Estado</label>
+
+            </div>
+
+            <!-- CIDADE -->
+            <div class = "input-field col s10 l5 centro">
+
+              <select name = "cidade">
+                <option value = "" disabled selected> Selecione a sua cidade </option>
+                <option value = "2"> Opção 2 </option>
+                <option value = "3"> Opção 3 </option>
+                <option value = "4"> Opção 4 </option>
+              </select>
+              <label>Cidade</label>
+
+            </div>
+
+            <!-- SENHA -->
+            <div class = "input-field col s10 l5 distance centro">
+              <input class = "flow-text validate" placeholder = "Senha" type = "password" name = "senha">
+            </div>
+        
+            <!-- CONFIRMAÇÃO DE SENHA -->
+            <div class = "input-field col s10 l5 centro">
+              <input class = "flow-text validate" placeholder = "Confirmação de senha" type = "password" name = "confSenha">
+          </div>
+
+        </form>
+        
+        <!-- BOTÃO -->
+        <div class="center-align">
+          <button class = "cadastro flow-text waves-effect yellow darken-2 waves-light hoverable btn" type = "submit">Cadastrar</button>
+        </div>
+
+      </div>
+      
+
+      <!-- JAVASCRIPT -->
+
+      <!--INICIALIZAÇÃO DOS CAMPOS "CIDADE" E "ESTADO"-->
+      <script>
+        $(document).ready(function(){
+          $('select').formSelect();
+        });
+      </script>
+
+      <!-- INICIALIZAÇÃO DO CAMPO "MATERIAS QUE LECIONA" -->
+      <script>
+      $('#materia').chips({
+        placeholder:'Matérias que leciona',
+        secondaryPlaceholder:'+Matéria',
+      });
+      </script>
+
+        
+    </body>
+
+</html>
