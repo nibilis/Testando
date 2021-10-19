@@ -321,11 +321,17 @@ body {
 
   /*botão login*/
   .login {
-
+    height: 30%;
+    width: 60%;
+    font-size: 60%;
+    padding-bottom: 23%;
   }
   /*botão cadastre-se*/
   .cadastre-se {
-    
+    height: 30%;
+    width: 90%;
+    font-size: 60%;
+    padding-bottom: 23%;
   }
   /*grid da logo com os botões*/
   .teste {
@@ -361,4 +367,38 @@ body {
     margin-left: 20%;
   }
 
+  /*SEÇÃO 2*/
+  /*imagem*/
+  .conjuntoroxo{
+    width: 35%;
+  }
+  /*Retângulozinho roxo que antecede a frase*/
+  .roxo {
+    width: 2.5%;
+    margin-top: 14%;
+    margin-left: 2%;
+    float: right;
+  }
+  /*frase depois do retângulozinho*/
+  .texto-secao2roxo h4 {
+    font-family: 'Muli', sans-serif;
+    float: right;
+    margin-left: 2%;
+    margin-right: 10%;
+    margin-top: 14%;
+    width: 36%;
+    font-size: 1.5em;
+    color: #393838;
+  }
+  /*frase abaixo do retângulozinho*/
+  .texto-secao2roxo p {
+    color: #707070;
+    font-family: 'Muli', sans-serif;
+    line-height: 1.3em;
+    font-size: 1.3em;
+    float: right;
+    margin-right: 6%;
+    margin-top: -13%;
+    width: 70%;
+  }
 }
