@@ -45,10 +45,6 @@ textarea:focus:not([readonly]) {
   color: rgba(0,0,0,0.4)!important;
 }
 
-/*.dropdown-content li>span {
-  color: #6fbfb8!important;
-}*/
-
 .select-dropdown li.disabled>span {
   color: rgba(0,0,0,0.4)!important;
 }
