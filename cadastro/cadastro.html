@@ -13,6 +13,9 @@
         <link type = "text/css" rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" media = "screen"/>
         <link rel = "stylesheet" href = "../cadastro/css-cadastro/cadastro.css">
 
+        <!-- JQuery CDN -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
         <!-- JavaScript Materialize compilado e minificado -->
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
@@ -61,14 +64,15 @@
             </div>
 
             <!-- MATÉRIA -->
-              <select multiple name = "materia" class = "input-field col s10 l5 distance centro">
-
-                  <option value = "" disabled selected>Matéria que leciona</option>
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-
+            <div name = "materia" class = "input-field col s10 l5 distance centro">
+              <select multiple>
+                  <option>Portugês</option>
+                  <option>Matemática</option>
+                  <option>Geografia</option>
               </select>
+
+              <label>Matérias que leciona</label>
+            </div>
 
             <!-- ESTADO -->
             <div class = "input-field col s10 l5 centro">
