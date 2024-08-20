@@ -15,7 +15,7 @@ Este repositório contém o código-fonte de um site desenvolvido em PHP para aj
 - **MySQL**: Banco de dados utilizado para armazenar as questões e informações dos professores.
 - **FPDF**: Biblioteca PHP usada para gerar o PDF da prova.
 
-## Authors
+## Desenvolvedores
 - Julia Costa
 - Nicolas Henriques
 - Nicole Rodrigues
